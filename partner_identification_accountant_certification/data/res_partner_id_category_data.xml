@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+<record model="res.partner.id_category" id="partner_identification_accountant_cpa">
+    <field name="name">Certified Public Accountant (CPA)</field>
+    <field name="code">accountant_cpa</field>
+</record>
+
+<record model="res.partner.id_category" id="partner_identification_accountant_cfa">
+    <field name="name">Certified Financial Analyst (CFA)</field>
+    <field name="code">accountant_cfa</field>
+</record>
+
+<record model="res.partner.id_category" id="partner_identification_accountant_cma">
+    <field name="name">Certified Management Accountant (CMA)</field>
+    <field name="code">accountant_cma</field>
+</record>
+
+<record model="res.partner.id_category" id="partner_identification_accountant_ea">
+    <field name="name">Enrolled Agent (EA)</field>
+    <field name="code">accountant_ea</field>
+</record>
+
+<record model="res.partner.id_category" id="partner_identification_accountant_cia">
+    <field name="name">Certified Internal Auditor (CIA)</field>
+    <field name="code">accountant_cia</field>
+</record>
+
+<record model="res.partner.id_category" id="partner_identification_accountant_cisa">
+    <field name="name">Certified Information Systems Auditor (CISA)</field>
+    <field name="code">accountant_cisa</field>
+</record>
+
+<record model="res.partner.id_category" id="partner_identification_accountant_cfe">
+    <field name="name">Certified Fraud Examiner (CFE)</field>
+    <field name="code">accountant_cfe</field>
+</record>
+
+<record model="res.partner.id_category" id="partner_identification_accountant_cgap">
+    <field name="name">Certified Government Audition Professional (CGAP)</field>
+    <field name="code">accountant_cgap</field>
+</record>
+
+<record model="res.partner.id_category" id="partner_identification_accountant_cba">
+    <field name="name">Certified Bank Auditor (CBA)</field>
+    <field name="code">accountant_cba</field>
+</record>
+
+</data>
+</openerp>
