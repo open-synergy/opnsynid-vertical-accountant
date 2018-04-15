@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 OpenSynergy Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+<data>
+
+<record id="convert_product_to_service_form" model="ir.ui.view">
+    <field name="name">Convert Product To Accountant Service</field>
+    <field name="model">accountant.convert_product_to_service</field>
+    <field name="arch" type="xml">
+        <form>
+            <group name="group_1" colspan="4" col="2" string="Products to Convert">
+                <field name="product_ids" nolabel="1" col="2"/>
+            </group>
+            <footer>
+                <button name="action_convert"
+                        type="object"
+                        string="Convert"
+                        class="oe_highlight"/>
+                or
+                <button special="cancel"
+                        string="Cancel"/>
+            </footer>
+        </form>
+    </field>
+</record>
+
+<record id="convert_product_to_service_action" model="ir.actions.act_window">
+    <field name="name">Convert Product To Accountant Service</field>
+    <field name="res_model">accountant.convert_product_to_service</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+</record>
+
+<menuitem 
+    id="convert_product_to_service_menu"
+    name="Convert Product To Service"
+    parent="accountant_configuration_menu"
+    action="convert_product_to_service_action"
+    sequence="2"/>
+
+</data>
+</openerp>
