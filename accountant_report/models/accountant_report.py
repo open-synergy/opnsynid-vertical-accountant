@@ -161,6 +161,12 @@ class AccountantReport(models.Model):
             ],
         },
     )
+    total_asset = fields.Float(
+        string="Total Asset",
+        )
+    total_net_profit = fields.Float(
+        string="Total Net Profit",
+        )
     date_end = fields.Date(
         string=_("Date End"),
         required=True,
