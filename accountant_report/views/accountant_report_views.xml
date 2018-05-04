@@ -29,6 +29,8 @@
                         <field name="assurance" invisible="1"/>
                         <field name="service_id" domain="[('assurance','=',assurance)]"/>
                         <field name="date"/>
+                        <field name="total_net_profit"/>
+                        <field name="total_asset"/>
                         <field name="signing_accountant_id" domain="[('id', 'in', allowed_signing_accountant_ids[0][2])]"/>
                         <field name="opinion_required"/>
                         <field name="report_opinion_id" domain="[('id', 'in', allowed_opinion_ids[0][2])]" attrs="{'required':[('opinion_required','=',True)]}"/>
@@ -71,6 +73,8 @@
             <field name="signing_accountant_id"/>
             <field name="service_id"/>
             <field name="report_opinion_id"/>
+            <field name="total_net_profit"/>
+            <field name="total_asset"/>
             <field name="state"/>
         </tree>
     </field>
