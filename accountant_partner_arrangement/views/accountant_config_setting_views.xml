@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 OpenSynergy Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+
+<record id="accountant_config_setting_view_form" model="ir.ui.view">
+    <field name="name">accountant.config_setting form</field>
+    <field name="model">accountant.config_setting</field>
+    <field name="inherit_id" ref="accountant_app.accountant_config_setting_view_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//form" position="inside">
+            <separator string="Accountant Partner Arrangement"/>
+            <group name="accountant_partner_arrangement_config">
+                <label for="id" string="General"/>
+                <div>
+                    <div>
+                        <label for="id" string="Sequence" class="oe_inline"/>
+                        <field name="accountant_partner_arrangement_sequence_id" class="oe_inline" domain="[('code','=','accountant.partner_arrangement')]"/>
+                    </div>
+                </div>
+            </group>
+            <group name="accountant_partner_arrangement_group_config">
+                <label for="id" string="Allowed Groups"/>
+                <div>
+                    <div>
+                        <label for="id" string="To Confirm" class="oe_inline"/>
+                        <field name="accountant_partner_arrangement_confirm_grp_ids" widget="many2many_tags" class="oe_inline"/>
+                    </div>
+                    <div>
+                        <label for="id" string="To Validate" class="oe_inline"/>
+                        <field name="accountant_partner_arrangement_valid_grp_ids" widget="many2many_tags" class="oe_inline"/>
+                    </div>
+                    <div>
+                        <label for="id" string="To Cancel" class="oe_inline"/>
+                        <field name="accountant_partner_arrangement_cancel_grp_ids" widget="many2many_tags" class="oe_inline"/>
+                    </div>
+                    <div>
+                        <label for="id" string="To Restart" class="oe_inline"/>
+                        <field name="accountant_partner_arrangement_restart_grp_ids" widget="many2many_tags" class="oe_inline"/>
+                    </div>
+                </div>
+            </group>
+        </xpath>
+    </field>
+</record>
+
+</data>
+</openerp>
