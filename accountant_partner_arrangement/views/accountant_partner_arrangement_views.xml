@@ -25,10 +25,11 @@
                             domain="[('commercial_partner_id.id','=',company_id.partner_id.id)]"/>
                         <field name="date"/>
                     </group>
-                    <group name="group_1_1" colspan="1" col="2">
-                    </group>
                 </group>
                 <notebook>
+                    <page name="partner" string="Partner(s)">
+                        <field name="partner_ids" nolabel="1" colspan="4"/>
+                    </page>
                     <page name="page_note" string="Note">
                         <field name="note" colspan="4" nolabel="1"/>
                     </page>
