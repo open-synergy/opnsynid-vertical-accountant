@@ -46,7 +46,7 @@ class ResCompany(models.Model):
     def _get_partner_arrangement_button_policy_map(self):
         return [
             ("confirm_ok",
-                "accountant_partner_arrangement_change_confirm_grp_ids"),
+                "accountant_partner_arrangement_confirm_grp_ids"),
             ("valid_ok", "accountant_partner_arrangement_valid_grp_ids"),
             ("cancel_ok", "accountant_partner_arrangement_cancel_grp_ids"),
             ("restart_ok", "accountant_partner_arrangement_restart_grp_ids"),
