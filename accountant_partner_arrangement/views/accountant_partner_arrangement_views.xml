@@ -28,7 +28,8 @@
                 </group>
                 <notebook>
                     <page name="partner" string="Partner(s)">
-                        <field name="partner_ids" nolabel="1" colspan="4"/>
+                        <field name="partner_ids" nolabel="1" colspan="4" 
+                            domain="[('commercial_partner_id.id','=',company_id.partner_id.id)]"/>
                     </page>
                     <page name="page_note" string="Note">
                         <field name="note" colspan="4" nolabel="1"/>
