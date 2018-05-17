@@ -23,7 +23,7 @@
                     <form>
                         <group name="group_1" colspan="4" col="2">
                             <field name="signing_accountant_id"/>
-                            <field name="sequence_id" domain="[('code','=','kap.lap_akhir')]"/>
+                            <field name="sequence_id" domain="[('code','=','accountant.report')]"/>
                             <field name="confirm_grp_ids" widget="many2many_tags"/>
                             <field name="valid_grp_ids" widget="many2many_tags"/>
                             <field name="cancel_grp_ids" widget="many2many_tags"/>

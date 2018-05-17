@@ -36,6 +36,7 @@ class ResConfig(models.TransientModel):
         column1="company_id",
         column2="group_id",
         company_id="company_id.accountant_report_cancel_grp_ids",
+        related="company_id.accountant_report_cancel_grp_ids",
     )
     accountant_report_restart_grp_ids = fields.Many2many(
         string="Allowed To Restart Accountant Report",
@@ -44,4 +45,5 @@ class ResConfig(models.TransientModel):
         column1="company_id",
         column2="group_id",
         company_id="company_id.accountant_report_restart_grp_ids",
+        related="company_id.accountant_report_restart_grp_ids",
     )
