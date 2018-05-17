@@ -21,15 +21,13 @@
                 <group name="group_1" colspan="4" col="2">
                     <group name="group_1_1" colspan="1" col="2">
                         <field name="company_id" groups="base.group_multi_company"/>
-                        <field name="managing_partner_id"
-                            domain="[('commercial_partner_id.id','=',company_id.partner_id.id)]"/>
+                        <field name="managing_partner_id"/>
                         <field name="date"/>
                     </group>
                 </group>
                 <notebook>
                     <page name="partner" string="Partner(s)">
-                        <field name="partner_ids" nolabel="1" colspan="4" 
-                            domain="[('commercial_partner_id.id','=',company_id.partner_id.id)]"/>
+                        <field name="partner_ids" nolabel="1" colspan="4"/>
                     </page>
                     <page name="page_note" string="Note">
                         <field name="note" colspan="4" nolabel="1"/>
