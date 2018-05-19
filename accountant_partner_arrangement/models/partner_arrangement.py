@@ -238,3 +238,35 @@ class PartnerArrangement(models.Model):
             if report.state != "draft" and not force_unlink:
                 raise UserError(_("You can only delete data with draft state"))
         _super.unlink()
+
+    @api.onchange("company_id")
+    def onchange_managing_partner_id(self):
+        value = {
+            "managing_partner_id": False,
+        }
+        domain = {
+            "managing_partner_id": [("id", "=", 0)],
+        }
+        if self.company_id:
+            partner = self.company_id.partner_id
+            domain["managing_partner_id"] = [
+                ("commercial_partner_id.id", "=", partner.id),
+                ("is_company", "=", False),
+            ]
+        return {"value": value, "domain": domain}
+
+    @api.onchange("company_id")
+    def onchange_partner_ids(self):
+        value = {
+            "partner_ids": [(6, 0, [])],
+        }
+        domain = {
+            "partner_ids": [("id", "=", 0)],
+        }
+        if self.company_id:
+            partner = self.company_id.partner_id
+            domain["partner_ids"] = [
+                ("commercial_partner_id.id", "=", partner.id),
+                ("is_company", "=", False),
+            ]
+        return {"value": value, "domain": domain}

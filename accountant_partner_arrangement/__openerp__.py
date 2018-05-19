@@ -4,7 +4,7 @@
 
 {
     "name": "Accountant Firm Partner Arrangement",
-    "version": "8.0.1.5.0",
+    "version": "8.0.1.5.1",
     "author": "OpenSynergy Indonesia",
     "website": "https://opensynergy-indonesia.com",
     "license": "AGPL-3",
