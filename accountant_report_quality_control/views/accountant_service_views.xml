@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+<record id="accountant_service_view_form" model="ir.ui.view">
+    <field name="name">accountant.service form</field>
+    <field name="model">accountant.service</field>
+    <field name="inherit_id" ref="accountant_report.accountant_service_view_form"/>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//page[@name='page_opinion']" position="after">
+                <page name="qc" string="Quality Control">
+                    <field name="qc_question_ids" nolabel="1" colspan="4">
+                        <tree>
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="type"/>
+                            <field name="min_value"/>
+                            <field name="max_value"/>
+                            <field name="qc_value_ids"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+</data>
+</openerp>
