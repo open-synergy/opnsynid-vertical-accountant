@@ -14,3 +14,4 @@
 # To provide both the URL and a branch, use:
 
 partner-contact https://github.com/OCA/partner-contact 8.0
+operating-unit https://github.com/OCA/operating-unit 8.0
