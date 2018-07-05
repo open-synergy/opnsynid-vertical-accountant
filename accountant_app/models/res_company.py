@@ -7,3 +7,4 @@ from openerp import models
 
 class ResCompany(models.Model):
     _inherit = "res.company"
+
