@@ -4,7 +4,7 @@
 
 {
     "name": "Accountant Report to Project Link",
-    "version": "8.0.1.0.0",
+    "version": "8.0.1.1.0",
     "author": "OpenSynergy Indonesia",
     "website": "https://opensynergy-indonesia.com",
     "license": "AGPL-3",
@@ -14,6 +14,7 @@
     ],
     "data": [
         "views/accountant_report_views.xml",
+        "views/project_project_views.xml",
     ],
     "installable": True,
 }

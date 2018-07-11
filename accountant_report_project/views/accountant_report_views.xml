@@ -40,5 +40,25 @@
         </xpath>
     </field>
 </record>
+
+<record id="accountant_assurance_report_by_project_action" model="ir.actions.act_window">
+    <field name="name">Accountant Assurance Report By Project</field>
+    <field name="res_model">accountant.report</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+    <field name="search_view_id" ref="accountant_report_view_search"/>
+    <field name="domain">[('assurance','=',True),('project_id','=',active_id)]</field>
+    <field name="context">{'default_assurance':True, 'default_project_id':active_id}</field>
+</record>
+
+<record id="accountant_non_assurance_report_by_project_action" model="ir.actions.act_window">
+    <field name="name">Accountant Non-Assurance Report By Project</field>
+    <field name="res_model">accountant.report</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+    <field name="search_view_id" ref="accountant_report_view_search"/>
+    <field name="domain">[('assurance','=',False),('project_id','=',active_id)]</field>
+    <field name="context">{'default_assurance':False, 'default_project_id':active_id}</field>
+</record>
 </data>
 </openerp>
