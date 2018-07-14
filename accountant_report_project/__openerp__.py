@@ -4,7 +4,7 @@
 
 {
     "name": "Accountant Report to Project Link",
-    "version": "8.0.1.1.0",
+    "version": "8.0.1.2.0",
     "author": "OpenSynergy Indonesia",
     "website": "https://opensynergy-indonesia.com",
     "license": "AGPL-3",
