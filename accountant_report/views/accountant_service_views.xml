@@ -7,9 +7,15 @@
     <field name="inherit_id" ref="accountant_app.accountant_service_view_form"/>
     <field name="arch" type="xml">
         <xpath expr="//field[@name='assurance']" position="after">
+            <field name="service_code"/>
+            <field name="sequence_creation_method"/>
             <field name="opinion_required"/>
         </xpath>
         <xpath expr="//page[@name='page_description']" position="before">
+            <page name="sequence_code" string="Python Code">
+                <label for="sequence_python_code"/>
+                <field name="sequence_python_code"/>
+            </page>
             <page name="page_signing" string="Signing Partner">
                 <field name="signing_accountant_ids" colspan="4" nolabel="1">
                     <tree>

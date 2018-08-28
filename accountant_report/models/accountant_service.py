@@ -3,11 +3,30 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from openerp import models, fields, api
+from openerp.exceptions import Warning as UserError
+from openerp.tools.translate import _
+from openerp.tools.safe_eval import safe_eval as eval
 
 
 class AccountantService(models.Model):
     _inherit = "accountant.service"
 
+    # TODO: Here or other module?
+    service_code = fields.Char(
+        string="Code",
+    )
+    sequence_creation_method = fields.Selection(
+        string="Sequence Creation Method",
+        selection=[
+            ("standard", "Standard"),
+            ("code", "Python Code"),
+        ],
+        required=True,
+        default="standard",
+    )
+    sequence_python_code = fields.Text(
+        string="Python Code for Custom Sequence Generation",
+    )
     allowed_opinion_ids = fields.Many2many(
         string="Allowed Opinion",
         comodel_name="accountant.report_opinion",
@@ -56,19 +75,45 @@ class AccountantService(models.Model):
         column2="group_id",
     )
 
-    @api.model
-    def _get_sequence(self, service_id, signing_accountant_id):
-        obj_service = self.env["accountant.service"]
+    @api.multi
+    def _get_localdict(self, report):
+        self.ensure_one()
+        return {
+            "env": self.env,
+            "service": self,
+            "report": report,
+        }
+
+    @api.multi
+    def _compute_sequence(self, report):
+        self.ensure_one()
+        result = ""
+        localdict = self._get_localdict(report)
+        try:
+            eval(self.sequence_python_code,
+                 localdict, mode="exec", nocopy=True)
+            result = localdict["result"]
+        except:
+            raise UserError(_("Error in report sequence computation"))
+        return result
+
+    @api.multi
+    def _get_sequence(self, signing_accountant):
         obj_signing = self.env["accountant.report_signing_partner"]
 
         result = False
-        service = obj_service.browse([service_id])[0]
-        sequence_signing = obj_signing._get_sequence(
-            service_id, signing_accountant_id)
+        sequence_signing = False
+        criteria = [
+            ("service_id", "=", self.id),
+            ("signing_accountant_id", "=", signing_accountant.id),
+        ]
+        signs = obj_signing.search(criteria, limit=1)
+        if len(signs) > 0:
+            sequence_signing = signs[0]._get_sequence()
         if sequence_signing:
             result = sequence_signing
-        elif service.sequence_id:
-            result = service.sequence_id
+        elif self.sequence_id:
+            result = self.sequence_id
         return result
 
     @api.multi
@@ -156,19 +201,11 @@ class AccountantReportSigningPartner(models.Model):
         column2="group_id",
     )
 
-    @api.model
-    def _get_sequence(self, service_id, signing_accountant_id):
-        obj_signing = self.env["accountant.report_signing_partner"]
+    @api.multi
+    def _get_sequence(self):
         result = False
-
-        criteria = [
-            ("service_id", "=", service_id),
-            ("signing_accountant_id", "=", signing_accountant_id),
-        ]
-        signings = obj_signing.search(criteria, limit=1)
-
-        if len(signings) > 0 and signings[0].sequence_id:
-            result = signings[0].sequence_id
+        if self.sequence_id:
+            result = self.sequence_id
 
         return result
 
