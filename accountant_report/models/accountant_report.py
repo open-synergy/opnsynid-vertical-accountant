@@ -163,10 +163,10 @@ class AccountantReport(models.Model):
     )
     total_asset = fields.Float(
         string="Total Asset",
-        )
+    )
     total_net_profit = fields.Float(
         string="Total Net Profit",
-        )
+    )
     date_end = fields.Date(
         string=_("Date End"),
         required=True,
@@ -299,22 +299,17 @@ class AccountantReport(models.Model):
         }
         return result
 
-    @api.model
-    def _prepare_create_data(self, values):
-        name = values.get("name", False)
-        if not name or name == "/":
-            values["name"] = self._create_sequence(
-                values["service_id"],
-                values["signing_accountant_id"])
-        return values
+    @api.multi
+    def _prepare_create_data(self):
+        return {
+            "name": self._create_sequence(),
+        }
 
-    @api.model
-    def _get_sequence(self, service_id, signing_accountant_id):
-        obj_service = self.env[
-            "accountant.service"]
+    @api.multi
+    def _get_sequence(self):
+        self.ensure_one()
         company = self.env.user.company_id
-        sequence_kategori = obj_service._get_sequence(
-            service_id, signing_accountant_id)
+        sequence_kategori = self.service_id._get_sequence()
 
         if sequence_kategori:
             result = sequence_kategori
@@ -325,17 +320,21 @@ class AccountantReport(models.Model):
                 "accountant_report.sequence_accountant_report")
         return result
 
-    @api.model
-    def _create_sequence(self, service_id, signing_accountant_id):
-        name = self.env["ir.sequence"].\
-            next_by_id(self._get_sequence(
-                service_id, signing_accountant_id).id) or "/"
-        return name
+    @api.multi
+    def _create_sequence(self):
+        self.ensure_one()
+        if self.service_id.sequence_creation_method == "standard":
+            result = self.env["ir.sequence"].\
+                next_by_id(self._get_sequence().id) or "/"
+        else:
+            result = self.service_id._compute_sequence(self)
+        return result
 
     @api.model
     def create(self, values):
-        new_values = self._prepare_create_data(values)
-        return super(AccountantReport, self).create(new_values)
+        report = super(AccountantReport, self).create(values)
+        report.write(report._prepare_create_data())
+        return report
 
     @api.multi
     def _get_button_policy(self, policy_field):
