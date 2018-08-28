@@ -21,13 +21,13 @@ class ResConfig(models.TransientModel):
     )
     module_accountant_partner_arrangement = fields.Boolean(
         string="Partner Arrangement",
-        )
+    )
     module_accountant_report = fields.Boolean(
         string="Accountant Report",
-        )
+    )
     module_accountant_report_quality_control = fields.Boolean(
         string="Quality Control on Accountant Report",
-        )
+    )
     module_accountant_report_project = fields.Boolean(
         string="Integrate Accountant Report - Project",
-        )
+    )
