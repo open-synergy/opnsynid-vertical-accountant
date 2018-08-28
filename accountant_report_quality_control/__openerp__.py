@@ -4,7 +4,7 @@
 
 {
     "name": "Quality Control for Accountant Report",
-    "version": "8.0.1.0.0",
+    "version": "8.0.1.0.1",
     "author": "OpenSynergy Indonesia",
     "website": "https://opensynergy-indonesia.com",
     "license": "AGPL-3",

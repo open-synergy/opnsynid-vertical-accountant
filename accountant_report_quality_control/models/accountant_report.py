@@ -14,7 +14,7 @@ class AccountantReport(models.Model):
     @api.depends(
         "qc_question_ids", "qc_question_ids.success",
     )
-    def _get_qc_result(self):
+    def _compute_qc_result(self):
         for report in self:
             result = True
             if report.qc_question_ids:
@@ -25,7 +25,7 @@ class AccountantReport(models.Model):
 
     qc_pass = fields.Boolean(
         string="QC Passed?",
-        compute="_get_qc_result",
+        compute="_compute_qc_result",
         store=True,
     )
     qc_question_ids = fields.One2many(

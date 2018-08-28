@@ -13,7 +13,7 @@ class AccountantReportQcQuestion(models.Model):
     @api.depends(
         "possible_qc_value_ids", "min_value", "max_value",
         "question_type")
-    def _get_valid_values(self):
+    def _compute_valid_values(self):
         for qc in self:
             if qc.question_type == "qualitative":
                 qc.valid_values = ", ".join(
@@ -26,7 +26,7 @@ class AccountantReportQcQuestion(models.Model):
         "question_type", "max_value", "min_value",
         "quantitative_value", "qualitative_value_id",
         "possible_qc_value_ids")
-    def _get_result(self):
+    def _compute_result(self):
         for qc in self:
             if qc.question_type == "qualitative":
                 qc.success = qc.qualitative_value_id.ok
@@ -84,12 +84,12 @@ class AccountantReportQcQuestion(models.Model):
     )
     valid_values = fields.Char(
         string="Valid Values",
-        compute="_get_valid_values",
+        compute="_compute_valid_values",
         store=True,
     )
     success = fields.Boolean(
         string="Success?",
-        compute="_get_result",
+        compute="_compute_result",
         store=True,
     )
     notes = fields.Text(
