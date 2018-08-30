@@ -309,7 +309,8 @@ class AccountantReport(models.Model):
     def _get_sequence(self):
         self.ensure_one()
         company = self.env.user.company_id
-        sequence_kategori = self.service_id._get_sequence()
+        sequence_kategori = self.service_id._get_sequence(
+            self.signing_accountant_id)
 
         if sequence_kategori:
             result = sequence_kategori
