@@ -4,7 +4,7 @@
 
 {
     "name": "Manage Accountant Report",
-    "version": "8.0.1.3.0",
+    "version": "8.0.1.3.1",
     "author": "OpenSynergy Indonesia",
     "website": "https://opensynergy-indonesia.com",
     "license": "AGPL-3",
