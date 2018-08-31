@@ -1,5 +1,5 @@
 language: python
-sudo: false
+sudo: true
 cache:
   apt: true
   directories:
@@ -73,6 +73,7 @@ virtualenv:
 #  - gem install compass --pre
 
 install:
+  - sudo pip install openupgradelib
   - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - sed -i 's/manifest_required_author\=.*/manifest_required_author="OpenSynergy Indonesia"/g' ${HOME}/maintainer-quality-tools/travis/cfg/travis_run_pylint_pr.cfg      
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
