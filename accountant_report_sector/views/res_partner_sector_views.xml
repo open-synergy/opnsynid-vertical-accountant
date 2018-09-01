@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+<record id="res_partner_sector_view_tree" model="ir.ui.view">
+    <field name="name">res.partner.sector tree</field>
+    <field name="model">res.partner.sector</field>
+    <field name="inherit_id" ref="partner_sector.res_partner_sector_tree_view"/>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='parent_id']" position="after">
+                <field name="accountant_service_code"/>
+            </xpath>
+        </data>
+    </field>
+</record>
+</data>
+</openerp>
