@@ -13,6 +13,6 @@
 #
 # To provide both the URL and a branch, use:
 
-partner-contact https://github.com/OCA/partner-contact 8.0
+partner-contact https://github.com/open-synergy/partner-contact 8.0-dev
 operating-unit https://github.com/OCA/operating-unit 8.0
 opnsynid-partner-contact https://github.com/open-synergy/opnsynid-partner-contact 8.0
