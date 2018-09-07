@@ -3,7 +3,6 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from openerp import models, fields
-from openerp.tools.translate import _
 
 
 class AccountantReportOpinion(models.Model):
@@ -11,26 +10,26 @@ class AccountantReportOpinion(models.Model):
     _description = "Opini Laporan Akhir"
 
     name = fields.Char(
-        string=_("Opinion"),
+        string="Opinion",
         required=True,
         translate=False,
         readonly=False,
     )
     description = fields.Text(
-        string=_("Description"),
+        string="Description",
         required=False,
         translate=False,
         readonly=False,
     )
     active = fields.Boolean(
-        string=_("Active"),
+        string="Active",
         required=False,
         translate=False,
         readonly=False,
         default=True,
     )
     code = fields.Char(
-        string=_("Code"),
+        string="Code",
         required=True,
         translate=False,
         readonly=False,
