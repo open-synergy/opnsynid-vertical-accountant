@@ -73,7 +73,7 @@ class AccountantReport(models.Model):
                 (6, 0, report.service_id.allowed_opinion_ids.ids)]
 
     name = fields.Char(
-        string=_("# Report"),
+        string="# Report",
         required=True,
         translate=False,
         default=lambda self: self._default_name(),
@@ -86,7 +86,7 @@ class AccountantReport(models.Model):
         },
     )
     company_id = fields.Many2one(
-        string=_("Company"),
+        string="Company",
         comodel_name="res.company",
         required=True,
         translate=False,
@@ -99,7 +99,7 @@ class AccountantReport(models.Model):
         },
     )
     signing_accountant_id = fields.Many2one(
-        string=_("Signing Accountant"),
+        string="Signing Accountant",
         required=True,
         translate=False,
         comodel_name="res.partner",
@@ -111,7 +111,7 @@ class AccountantReport(models.Model):
         },
     )
     partner_id = fields.Many2one(
-        string=_("Customer"),
+        string="Customer",
         required=True,
         translate=False,
         readonly=True,
@@ -123,7 +123,7 @@ class AccountantReport(models.Model):
         },
     )
     service_id = fields.Many2one(
-        string=_("Accountant Service"),
+        string="Accountant Service",
         required=True,
         translate=False,
         readonly=True,
@@ -140,7 +140,7 @@ class AccountantReport(models.Model):
         readonly=True,
     )
     date = fields.Date(
-        string=_("Date"),
+        string="Date",
         required=True,
         translate=False,
         readonly=True,
@@ -151,7 +151,7 @@ class AccountantReport(models.Model):
         },
     )
     date_start = fields.Date(
-        string=_("Date Start"),
+        string="Date Start",
         required=True,
         translate=False,
         readonly=True,
@@ -168,7 +168,7 @@ class AccountantReport(models.Model):
         string="Total Net Profit",
     )
     date_end = fields.Date(
-        string=_("Date End"),
+        string="Date End",
         required=True,
         translate=False,
         readonly=True,
@@ -182,7 +182,7 @@ class AccountantReport(models.Model):
         string="Assurance",
     )
     report_opinion_id = fields.Many2one(
-        string=_("Report Opinion"),
+        string="Report Opinion",
         required=False,
         translate=False,
         readonly=True,
@@ -194,7 +194,7 @@ class AccountantReport(models.Model):
         },
     )
     note = fields.Text(
-        string=_("Note"),
+        string="Note",
     )
     allowed_signing_accountant_ids = fields.Many2many(
         string="Allowed Signing Partner",
@@ -209,7 +209,7 @@ class AccountantReport(models.Model):
         store=False,
     )
     state = fields.Selection(
-        string=_("State"),
+        string="State",
         required=True,
         translate=False,
         readonly=True,
