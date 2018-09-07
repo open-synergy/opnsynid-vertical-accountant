@@ -47,7 +47,7 @@ class PartnerArrangement(models.Model):
                     )
 
     name = fields.Char(
-        string=_("# Partner Arrangement"),
+        string="# Partner Arrangement",
         required=True,
         translate=False,
         default=lambda self: self._default_name(),
@@ -60,7 +60,7 @@ class PartnerArrangement(models.Model):
         },
     )
     company_id = fields.Many2one(
-        string=_("Company"),
+        string="Company",
         comodel_name="res.company",
         required=True,
         translate=False,
@@ -73,7 +73,7 @@ class PartnerArrangement(models.Model):
         },
     )
     managing_partner_id = fields.Many2one(
-        string=_("Managing Partner"),
+        string="Managing Partner",
         required=True,
         translate=False,
         comodel_name="res.partner",
@@ -95,7 +95,7 @@ class PartnerArrangement(models.Model):
         },
     )
     date = fields.Date(
-        string=_("Arrangement Date"),
+        string="Arrangement Date",
         required=True,
         translate=False,
         readonly=True,
@@ -106,10 +106,10 @@ class PartnerArrangement(models.Model):
         },
     )
     note = fields.Text(
-        string=_("Note"),
+        string="Note",
     )
     state = fields.Selection(
-        string=_("State"),
+        string="State",
         required=True,
         translate=False,
         readonly=True,
