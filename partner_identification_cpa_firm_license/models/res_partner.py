@@ -11,7 +11,7 @@ class ResPartner(models.Model):
     cpa_firm_license = fields.Char(
         string="CPA Firm License",
         compute=lambda s: s._compute_identification(
-            "cpa_firm_license", "accountant_cpa_firm"),
+            "cpa_firm_license", "cpa_firm_lic"),
         search=lambda s, *a: s._search_identification(
-            "accountant_cpa_firm", *a),
+            "cpa_firm_lic", *a),
     )
