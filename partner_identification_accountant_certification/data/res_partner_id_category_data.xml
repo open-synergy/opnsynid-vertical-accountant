@@ -46,5 +46,10 @@
     <field name="code">accountant_cba</field>
 </record>
 
+<record model="res.partner.id_category" id="partner_identification_accountant_ca">
+    <field name="name">Certified Accountant (CA)</field>
+    <field name="code">accountant_ca</field>
+</record>
+
 </data>
 </openerp>
