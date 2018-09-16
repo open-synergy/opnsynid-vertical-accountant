@@ -71,3 +71,10 @@ class ResPartner(models.Model):
         search=lambda s, *a: s._search_identification(
             "accountant_cba", *a),
     )
+    accountant_ca_license = fields.Char(
+        string="Certified Accountant (CA) License",
+        compute=lambda s: s._compute_identification(
+            "accountant_ca_license", "accountant_ca"),
+        search=lambda s, *a: s._search_identification(
+            "accountant_ca", *a),
+    )
