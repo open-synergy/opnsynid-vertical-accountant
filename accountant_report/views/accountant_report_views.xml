@@ -14,10 +14,16 @@
                 <field name="state" widget="statusbar" statusbar_visible="draft,confirm,valid"/>
             </header>
             <sheet>
-                <label for="name"/>
-                <h1>
-                    <field name="name"/>
-                </h1>
+                <div class="oe_right oe_button_box" style="width: 300px;" name="buttons">
+                </div>
+                <div class="oe_left" style="width: 500px;">
+                    <div class="oe_title" style="width: 500px;">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                </div>
                 <group name="group_1" colspan="4" col="2">
                     <group name="group_1_1" colspan="1" col="2">
                         <field name="company_id" groups="base.group_multi_company"/>
@@ -134,20 +140,20 @@
     <field name="context">{'default_assurance':False}</field>
 </record>
 
-<menuitem 
+<menuitem
     id="accountant_report_menu"
     name="Accountant Report"
     parent="accountant_app.accountant_main_menu"
     sequence="1"/>
 
-<menuitem 
+<menuitem
     id="accountant_assurance_report_menu"
     name="Assurance"
     parent="accountant_report_menu"
     action="accountant_assurance_report_action"
     sequence="1"/>
 
-<menuitem 
+<menuitem
     id="accountant_non_assurance_report_menu"
     name="Non-Assurance"
     parent="accountant_report_menu"
