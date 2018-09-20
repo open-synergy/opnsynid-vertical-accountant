@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+<record id="project_project_view_form" model="ir.ui.view">
+    <field name="name">project.project form</field>
+    <field name="model">project.project</field>
+    <field name="inherit_id" ref="project.edit_project"/>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//notebook" position="inside">
+                <page name="accountant_service" string="Accountant Service">
+                    <group name="accountant_service_1" colspan="4" col="2">
+                        <group name="accountant_service_1_1" colspan="1" col="2">
+                            <field name="accountant_service_id"/>
+                        </group>
+                        <group name="accountant_service_1_2" colspan="1" col="2">
+
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="project_project_view_search" model="ir.ui.view">
+    <field name="name">project.project search</field>
+    <field name="model">project.project</field>
+    <field name="inherit_id" ref="project.view_project_project_filter"/>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//filter[@name='message_unread']" position="after">
+                <filter name="accountant_service" string="Accountant Service" domain="[('accountant_service_id','!=', False)]"/>
+            </xpath>
+            <xpath expr="//filter[@name='Parent']" position="after">
+                <filter name="group_accountant_service" string="Accountant Service" context="{'group_by':'accountant_service_id'}"/>
+            </xpath>
+        </data>
+    </field>
+</record>
+</data>
+</openerp>
