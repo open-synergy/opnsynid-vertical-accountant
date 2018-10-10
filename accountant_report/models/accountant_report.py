@@ -328,8 +328,11 @@ class AccountantReport(models.Model):
                 self.name == "/":
             result = self.env["ir.sequence"].\
                 next_by_id(self._get_sequence().id) or "/"
-        else:
+        elif self.service_id.sequence_creation_method != "standard" and \
+                self.name == "/":
             result = self.service_id._compute_sequence(self)
+        else:
+            result = self.name
         return result
 
     @api.model
