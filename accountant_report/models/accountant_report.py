@@ -324,7 +324,8 @@ class AccountantReport(models.Model):
     @api.multi
     def _create_sequence(self):
         self.ensure_one()
-        if self.service_id.sequence_creation_method == "standard":
+        if self.service_id.sequence_creation_method == "standard" and \
+                self.name == "/":
             result = self.env["ir.sequence"].\
                 next_by_id(self._get_sequence().id) or "/"
         else:
