@@ -35,8 +35,9 @@
                         <field name="assurance" invisible="1"/>
                         <field name="service_id" domain="[('assurance','=',assurance)]"/>
                         <field name="date"/>
-                        <field name="total_net_profit"/>
-                        <field name="total_asset"/>
+                        <field name="report_currency_id"/>
+                        <field name="total_net_profit" widget="monetary" options="{'currency_field':'report_currency_id'}"/>
+                        <field name="total_asset" widget="monetary" options="{'currency_field':'report_currency_id'}"/>
                         <field name="signing_accountant_id" domain="[('id', 'in', allowed_signing_accountant_ids[0][2])]"/>
                         <field name="opinion_required"/>
                         <field name="report_opinion_id" domain="[('id', 'in', allowed_opinion_ids[0][2])]" attrs="{'required':[('opinion_required','=',True)]}"/>
@@ -79,6 +80,7 @@
             <field name="signing_accountant_id"/>
             <field name="service_id"/>
             <field name="report_opinion_id"/>
+            <field name="report_currency_id"/>
             <field name="total_net_profit"/>
             <field name="total_asset"/>
             <field name="state"/>
@@ -98,6 +100,7 @@
             <field name="date_end"/>
             <field name="signing_accountant_id"/>
             <field name="service_id"/>
+            <field name="report_currency_id"/>
             <field name="report_opinion_id"/>
             <field name="state"/>
             <group name="group_state" string="State">
@@ -113,6 +116,7 @@
                 <filter name="grp_date_day" string="Date by Day" context="{'group_by':'date:day'}"/>
                 <filter name="grp_signing_partner" string="Signing Accountant" context="{'group_by':'signing_accountant_id'}"/>
                 <filter name="grp_service" string="Service" context="{'group_by':'service_id'}"/>
+                <filter name="grp_currency" string="Report Currency" context="{'group_by':'report_currency_id'}"/>
                 <filter name="grp_opinion" string="Report Opinion" context="{'group_by':'report_opinion_id'}"/>
                 <filter name="grp_state" string="State" context="{'group_by':'state'}"/>
             </group>

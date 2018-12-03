@@ -161,11 +161,33 @@ class AccountantReport(models.Model):
             ],
         },
     )
+    report_currency_id = fields.Many2one(
+        string="Currency",
+        comodel_name="res.currency",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     total_asset = fields.Float(
         string="Total Asset",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
     )
     total_net_profit = fields.Float(
         string="Total Net Profit",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
     )
     date_end = fields.Date(
         string="Date End",
