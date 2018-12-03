@@ -13,5 +13,34 @@
         </data>
     </field>
 </record>
+
+<record id="accountant_report_view_tree" model="ir.ui.view">
+    <field name="name">accountant.report tree</field>
+    <field name="model">accountant.report</field>
+    <field name="inherit_id" ref="accountant_report.accountant_report_view_tree"/>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="operating_unit_id" groups="operating_unit.group_multi_operating_unit"/>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="accountant_report_view_search" model="ir.ui.view">
+    <field name="name">accountant.report search</field>
+    <field name="model">accountant.report</field>
+    <field name="inherit_id" ref="accountant_report.accountant_report_view_search"/>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="operating_unit_id" groups="operating_unit.group_multi_operating_unit"/>
+            </xpath>
+            <xpath expr="//filter[@name='grp_partner']" position="after">
+                <filter name="grp_ou" string="Operating Unit" context="{'group_by':'operating_unit_id'}" groups="operating_unit.group_multi_operating_unit"/>
+            </xpath>
+        </data>
+    </field>
+</record>
 </data>
 </openerp>
