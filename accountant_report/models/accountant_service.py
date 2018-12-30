@@ -34,8 +34,18 @@ class AccountantService(models.Model):
         column1="service_id",
         column2="opini_id",
     )
+    allowed_method_ids = fields.Many2many(
+        string="Allowed Methods",
+        comodel_name="accountant.report_method",
+        relation="rel_accountant_service_2_method",
+        column1="method_id",
+        column2="opini_id",
+    )
     opinion_required = fields.Boolean(
         string="Opinion Required",
+    )
+    method_required = fields.Boolean(
+        string="Method Required",
     )
     sequence_id = fields.Many2one(
         string="Sequence",
