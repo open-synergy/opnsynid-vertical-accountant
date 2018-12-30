@@ -9,7 +9,7 @@
         <xpath expr="//field[@name='assurance']" position="after">
             <field name="service_code"/>
             <field name="sequence_creation_method"/>
-            <field name="opinion_required"/>
+
         </xpath>
         <xpath expr="//page[@name='page_description']" position="before">
             <page name="sequence_code" string="Python Code">
@@ -39,8 +39,17 @@
 
                 </field>
             </page>
-            <page name="page_opinion" string="Opini">
+            <page name="page_opinion" string="Opinions">
+                <group name="opinion_1" colspan="4" col="2">
+                    <field name="opinion_required"/>
+                </group>
                 <field name="allowed_opinion_ids" nolabel="1" colspan="4"/>
+            </page>
+            <page name="method" string="Methods">
+                <group name="method_1" colspan="4" col="2">
+                    <field name="method_required"/>
+                </group>
+                <field name="allowed_method_ids" nolabel="1" colspan="4"/>
             </page>
             <page name="page_policy" string="Policy">
                 <group name="group_policy_1" colspan="4" col="2">

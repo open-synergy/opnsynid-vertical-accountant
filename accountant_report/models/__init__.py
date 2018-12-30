@@ -3,6 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from . import accountant_report
+from . import accountant_report_method
 from . import accountant_report_opinion
 from . import accountant_service
 from . import res_company

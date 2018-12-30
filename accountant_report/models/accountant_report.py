@@ -72,6 +72,15 @@ class AccountantReport(models.Model):
             report.allowed_opinion_ids = [
                 (6, 0, report.service_id.allowed_opinion_ids.ids)]
 
+    @api.multi
+    @api.depends(
+        "service_id",
+    )
+    def _compute_method(self):
+        for report in self:
+            report.allowed_method_ids = [
+                (6, 0, report.service_id.allowed_method_ids.ids)]
+
     name = fields.Char(
         string="# Report",
         required=True,
@@ -139,6 +148,11 @@ class AccountantReport(models.Model):
         related="service_id.opinion_required",
         readonly=True,
     )
+    method_required = fields.Boolean(
+        string="Method Required",
+        related="service_id.method_required",
+        readonly=True,
+    )
     date = fields.Date(
         string="Date",
         required=True,
@@ -161,9 +175,63 @@ class AccountantReport(models.Model):
             ],
         },
     )
+    subsequent_num = fields.Integer(
+        string="Subsequent Job Num.",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    information_based = fields.Selection(
+        string="Information Based On",
+        selection=[
+            ("yearly", "Yearly Financial Report"),
+            ("interim", "Interim Financial Report"),
+        ],
+        default="yearly",
+    )
+    restatement_id = fields.Many2one(
+        string="Restatement Report",
+        comodel_name="accountant.report",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     report_currency_id = fields.Many2one(
-        string="Currency",
+        string="Client Currency",
         comodel_name="res.currency",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    revenue = fields.Float(
+        string="Revenue",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    ebit = fields.Float(
+        string="EBIT",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    tax_expense = fields.Float(
+        string="Tax Expense",
         readonly=True,
         states={
             "draft": [
@@ -180,8 +248,26 @@ class AccountantReport(models.Model):
             ],
         },
     )
+    total_liability = fields.Float(
+        string="Total Liability",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     total_net_profit = fields.Float(
         string="Total Net Profit",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    total_net_profit_oci = fields.Float(
+        string="Total Net Profit & OCI",
         readonly=True,
         states={
             "draft": [
@@ -204,11 +290,23 @@ class AccountantReport(models.Model):
         string="Assurance",
     )
     report_opinion_id = fields.Many2one(
-        string="Report Opinion",
+        string="Opinion",
         required=False,
         translate=False,
         readonly=True,
         comodel_name="accountant.report_opinion",
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    method_id = fields.Many2one(
+        string="Method",
+        required=False,
+        translate=False,
+        readonly=True,
+        comodel_name="accountant.report_method",
         states={
             "draft": [
                 ("readonly", False),
@@ -228,6 +326,12 @@ class AccountantReport(models.Model):
         string="Allowed Opinion",
         comodel_name="accountant.report_opinion",
         compute="_compute_opinion",
+        store=False,
+    )
+    allowed_method_ids = fields.Many2many(
+        string="Allowed Methods",
+        comodel_name="accountant.report_method",
+        compute="_compute_method",
         store=False,
     )
     state = fields.Selection(
@@ -393,6 +497,11 @@ class AccountantReport(models.Model):
         "service_id")
     def onchange_report_opinion_id(self):
         self.report_opinion_id = False
+
+    @api.onchange(
+        "service_id")
+    def onchange_method_id(self):
+        self.method_id = False
 
     @api.multi
     def unlink(self):

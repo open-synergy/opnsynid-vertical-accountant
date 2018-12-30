@@ -34,10 +34,12 @@
                     <group name="group_1_1" colspan="1" col="2">
                         <field name="assurance" invisible="1"/>
                         <field name="service_id" domain="[('assurance','=',assurance)]"/>
+                        <field name="subsequent_num"/>
+                        <field name="restatement_id"/>
+                        <field name="method_required"/>
+                        <field name="allowed_method_ids" widget="many2many_tags" invisible="1"/>
+                        <field name="method_id" domain="[('id', 'in', allowed_method_ids[0][2])]" attrs="{'required':[('method_required','=',True)]}"/>
                         <field name="date"/>
-                        <field name="report_currency_id"/>
-                        <field name="total_net_profit" widget="monetary" options="{'currency_field':'report_currency_id'}"/>
-                        <field name="total_asset" widget="monetary" options="{'currency_field':'report_currency_id'}"/>
                         <field name="signing_accountant_id" domain="[('id', 'in', allowed_signing_accountant_ids[0][2])]"/>
                         <field name="opinion_required"/>
                         <field name="report_opinion_id" domain="[('id', 'in', allowed_opinion_ids[0][2])]" attrs="{'required':[('opinion_required','=',True)]}"/>
@@ -46,6 +48,19 @@
                     </group>
                 </group>
                 <notebook>
+                    <page name="client" string="Client Informations">
+                        <group name="client_1" colspan="4" col="2">
+                            <field name="information_based"/>
+                            <field name="report_currency_id"/>
+                            <field name="revenue" widget="monetary" options="{'currency_field':'report_currency_id'}"/>
+                            <field name="total_asset" widget="monetary" options="{'currency_field':'report_currency_id'}"/>
+                            <field name="total_liability" widget="monetary" options="{'currency_field':'report_currency_id'}"/>
+                            <field name="ebit" widget="monetary" options="{'currency_field':'report_currency_id'}"/>
+                            <field name="tax_expense" widget="monetary" options="{'currency_field':'report_currency_id'}"/>
+                            <field name="total_net_profit" widget="monetary" options="{'currency_field':'report_currency_id'}"/>
+                            <field name="total_net_profit_oci" widget="monetary" options="{'currency_field':'report_currency_id'}"/>
+                        </group>
+                    </page>
                     <page name="page_note" string="Note">
                         <field name="note" colspan="4" nolabel="1"/>
                     </page>
@@ -80,9 +95,7 @@
             <field name="signing_accountant_id"/>
             <field name="service_id"/>
             <field name="report_opinion_id"/>
-            <field name="report_currency_id"/>
-            <field name="total_net_profit"/>
-            <field name="total_asset"/>
+            <field name="method_id"/>
             <field name="state"/>
         </tree>
     </field>
@@ -102,6 +115,7 @@
             <field name="service_id"/>
             <field name="report_currency_id"/>
             <field name="report_opinion_id"/>
+            <field name="method_id"/>
             <field name="state"/>
             <group name="group_state" string="State">
                 <filter name="filter_draft" string="Draft" domain="[('state','=','draft')]"/>
@@ -118,6 +132,7 @@
                 <filter name="grp_service" string="Service" context="{'group_by':'service_id'}"/>
                 <filter name="grp_currency" string="Report Currency" context="{'group_by':'report_currency_id'}"/>
                 <filter name="grp_opinion" string="Report Opinion" context="{'group_by':'report_opinion_id'}"/>
+                <filter name="grp_method" string="Method" context="{'group_by':'method_id'}"/>
                 <filter name="grp_state" string="State" context="{'group_by':'state'}"/>
             </group>
         </search>

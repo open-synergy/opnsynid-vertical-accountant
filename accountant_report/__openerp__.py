@@ -4,7 +4,7 @@
 # pylint: disable=locally-disabled, manifest-required-author
 {
     "name": "Manage Accountant Report",
-    "version": "8.0.1.5.0",
+    "version": "8.0.1.6.0",
     "author": "OpenSynergy Indonesia",
     "website": "https://opensynergy-indonesia.com",
     "license": "AGPL-3",
@@ -17,6 +17,7 @@
         "data/ir_sequence_data.xml",
         "views/accountant_config_setting_views.xml",
         "views/accountant_report_opinion_views.xml",
+        "views/accountant_report_method_views.xml",
         "views/accountant_service_views.xml",
         "views/accountant_report_views.xml",
     ],
