@@ -11,6 +11,7 @@ class AccountantReport(models.Model):
     _name = "accountant.report"
     _description = "Accountant Report"
     _inherit = "mail.thread"
+    _order = "date desc, id"
 
     @api.model
     def _default_name(self):
