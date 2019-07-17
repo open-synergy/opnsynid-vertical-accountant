@@ -42,6 +42,7 @@
                         <field name="date"/>
                         <field name="signing_accountant_id" domain="[('id', 'in', allowed_signing_accountant_ids[0][2])]"/>
                         <field name="opinion_required"/>
+                        <field name="date_opinion"/>
                         <field name="report_opinion_id" domain="[('id', 'in', allowed_opinion_ids[0][2])]" attrs="{'required':[('opinion_required','=',True)]}"/>
                         <field name="allowed_signing_accountant_ids" widget="many2many_tags" invisible="1"/>
                         <field name="allowed_opinion_ids" widget="many2many_tags" invisible="1"/>

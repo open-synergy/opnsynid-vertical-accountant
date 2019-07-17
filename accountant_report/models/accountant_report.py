@@ -165,6 +165,18 @@ class AccountantReport(models.Model):
             ],
         },
     )
+    date_opinion = fields.Date(
+        string="Opinion Date",
+        required=False,
+        translate=False,
+        readonly=True,
+        states={
+            "confirm": [
+                ("readonly", False),
+                ("required", True)
+            ],
+        },
+    )
     date_start = fields.Date(
         string="Date Start",
         required=True,
