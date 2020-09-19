@@ -406,6 +406,7 @@ class AccountantReport(models.Model):
     def _prepare_valid_data(self):
         self.ensure_one()
         result = {
+            "name": self._create_sequence(),
             "state": "valid",
         }
         return result
@@ -429,7 +430,6 @@ class AccountantReport(models.Model):
     @api.multi
     def _prepare_create_data(self):
         return {
-            "name": self._create_sequence(),
         }
 
     @api.multi
@@ -512,3 +512,14 @@ class AccountantReport(models.Model):
             if report.state != "draft" and not force_unlink:
                 raise UserError(_("You can only delete data with draft state"))
         _super.unlink()
+
+    @api.multi
+    def name_get(self):
+        result = []
+        for move in self:
+            if move.name == '/':
+                name = '*' + str(move.id)
+            else:
+                name = move.name
+            result.append((move.id, name))
+        return result
