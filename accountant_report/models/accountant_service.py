@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright 2018 OpenSynergy Indonesia
+# Copyright 2020 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from openerp import models, fields, api
@@ -103,7 +104,7 @@ class AccountantService(models.Model):
             eval(self.sequence_python_code,
                  localdict, mode="exec", nocopy=True)
             result = localdict["result"]
-        except:
+        except:  # noqa: E722
             raise UserError(_("Error in report sequence computation"))
         return result
 
