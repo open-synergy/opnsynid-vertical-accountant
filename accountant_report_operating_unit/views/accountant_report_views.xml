@@ -9,6 +9,7 @@
         <data>
             <xpath expr="//field[@name='company_id']" position="after">
                 <field name="operating_unit_id" groups="operating_unit.group_multi_operating_unit"/>
+                <field name="operating_unit_partner_id" groups="operating_unit.group_multi_operating_unit"/>
             </xpath>
         </data>
     </field>
@@ -22,6 +23,7 @@
         <data>
             <xpath expr="//field[@name='display_name']" position="after">
                 <field name="operating_unit_id" groups="operating_unit.group_multi_operating_unit"/>
+                <field name="operating_unit_partner_id" groups="operating_unit.group_multi_operating_unit"/>
             </xpath>
         </data>
     </field>
@@ -35,9 +37,11 @@
         <data>
             <xpath expr="//field[@name='name']" position="after">
                 <field name="operating_unit_id" groups="operating_unit.group_multi_operating_unit"/>
+                <field name="operating_unit_partner_id" groups="operating_unit.group_multi_operating_unit"/>
             </xpath>
             <xpath expr="//filter[@name='grp_partner']" position="after">
                 <filter name="grp_ou" string="Operating Unit" context="{'group_by':'operating_unit_id'}" groups="operating_unit.group_multi_operating_unit"/>
+                <filter name="grp_oup" string="Operating Unit Partner" context="{'group_by':'operating_unit_partner_id'}" groups="operating_unit.group_multi_operating_unit"/>
             </xpath>
         </data>
     </field>

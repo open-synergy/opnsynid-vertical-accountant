@@ -5,7 +5,7 @@
 
 {
     "name": "Operating Unit for Accountant Report",
-    "version": "8.0.1.3.0",
+    "version": "8.0.1.4.0",
     "author": "PT. Simetri Sinergi Indonesia,OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",

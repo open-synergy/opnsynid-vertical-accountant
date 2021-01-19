@@ -18,3 +18,9 @@ class AccountantReport(models.Model):
         comodel_name="operating.unit",
         default=lambda self: self._default_operating_unit_id(),
     )
+    operating_unit_partner_id = fields.Many2one(
+        string="Operating Unit Partner",
+        comodel_name="res.partner",
+        related="operating_unit_id.partner_id",
+        store=True,
+    )
