@@ -5,16 +5,18 @@
 # pylint: disable=locally-disabled, manifest-required-author
 {
     "name": "Manage Accountant Report",
-    "version": "8.0.1.8.0",
+    "version": "8.0.2.0.0",
     "author": "PT. Simetri Sinergi Indonesia,OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
     "depends": [
         "accountant_app",
+        "web_readonly_bypass",
     ],
     "data": [
         "security/ir.model.access.csv",
         "security/ir_module_category_data.xml",
+        "security/res_groups_data.xml",
         "data/ir_sequence_data.xml",
         "views/accountant_config_setting_views.xml",
         "views/accountant_report_opinion_views.xml",

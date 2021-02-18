@@ -509,8 +509,14 @@ class AccountantReport(models.Model):
         _super = super(AccountantReport, self)
         force_unlink = self._context.get("force_unlink", False)
         for report in self:
-            if report.state != "draft" and not force_unlink:
-                raise UserError(_("You can only delete data with draft state"))
+            if (
+                report.state != "draft" or
+                report.name != "/" and not
+                force_unlink
+            ):
+                msg_warning = _("You can only delete data with draft state "
+                                "and name is equal to '/'")
+                raise UserError(msg_warning)
         _super.unlink()
 
     @api.multi
