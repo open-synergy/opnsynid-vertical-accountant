@@ -5,7 +5,7 @@
 # pylint: disable=locally-disabled, manifest-required-author
 {
     "name": "Manage Accountant Report",
-    "version": "8.0.2.0.0",
+    "version": "8.0.2.0.1",
     "author": "PT. Simetri Sinergi Indonesia,OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
