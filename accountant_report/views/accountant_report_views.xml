@@ -100,7 +100,8 @@
     <field name="model">accountant.report</field>
     <field name="arch" type="xml">
         <tree>
-            <field name="display_name" string="# Report"/>
+            <field name="id"/>
+            <field name="name"/>
             <field name="partner_id"/>
             <field name="date"/>
             <field name="date_start"/>
