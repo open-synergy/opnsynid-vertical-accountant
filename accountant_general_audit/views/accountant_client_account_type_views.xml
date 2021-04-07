@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+<data>
+
+    <record id="accountant_client_account_type_view_search" model="ir.ui.view">
+        <field name="name">accountant.client_account_type form</field>
+        <field name="model">accountant.client_account_type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="code" />
+            </search>
+        </field>
+    </record>
+
+    <record id="accountant_client_account_type_view_tree" model="ir.ui.view">
+        <field name="name">accountant.client_account_type tree</field>
+        <field name="model">accountant.client_account_type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="code" />
+                <field name="sequence" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="accountant_client_account_type_view_form" model="ir.ui.view">
+        <field name="name">accountant.client_account_type form</field>
+        <field name="model">accountant.client_account_type</field>
+        <field name="arch" type="xml">
+            <form>
+                <header />
+                <sheet>
+                    <div
+                            class="oe_right oe_button_box"
+                            style="width: 300px;"
+                            name="buttons"
+                        />
+                    <group name="group_1" colspan="4" col="2">
+                        <field name="name" />
+                        <field name="code" />
+                        <field name="active" />
+                        <field name="sequence" />
+                        <field name="description" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="accountant_client_account_type_action" model="ir.actions.act_window">
+        <field name="name">Account Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.client_account_type</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="accountant_client_account_type_menu"
+            name="Account Type"
+            parent="accountant_configuration_general_audit_menu"
+            action="accountant_client_account_type_action"
+            sequence="2"
+        />
+
+
+</data>
+</openerp>
