@@ -99,6 +99,18 @@ class AccountantClientTrialBalance(models.Model):
         inverse_name="trial_balance_id",
         copy=True,
     )
+    standard_detail_ids = fields.One2many(
+        string="Standard Detail",
+        comodel_name="accountant.client_trial_balance_standard_detail",
+        inverse_name="trial_balance_id",
+        readonly=True,
+    )
+    summary_ids = fields.One2many(
+        string="Standard Detail",
+        comodel_name="accountant.client_trial_balance_detail_summary",
+        inverse_name="trial_balance_id",
+        readonly=True,
+    )
     state = fields.Selection(
         string="State",
         selection=[

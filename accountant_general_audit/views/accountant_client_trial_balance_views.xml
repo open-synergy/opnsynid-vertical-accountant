@@ -244,10 +244,9 @@
                         </group>
                     </group>
                     <notebook colspan="4">
-                        <!-- DETAIL  -->
                         <page string="Detail" name="details">
                             <field name="detail_ids" colspan="1" col="2" nolabel="1">
-                                <tree string="Detail" editable="bottom">
+                                <tree editable="bottom">
                                     <field name="sequence" widget="handle" />
                                     <field name="code" />
                                     <field name="name" />
@@ -255,16 +254,22 @@
                                     <field name="previous_balance" />
                                     <field name="balance" />
                                 </tree>
-                                <form string="Detail">
-                                    <group name="group_detail" colspan="2" col="2">
-                                        <field name="name" />
-                                        <field name="code" />
-                                        <field name="sequence" />
-                                        <field name="type_id" />
-                                        <field name="previous_balance" />
-                                        <field name="balance" />
-                                    </group>
-                                </form>
+                            </field>
+                        </page>
+                        <page string="Standard Detail" name="standard_details">
+                            <field
+                                    name="standard_detail_ids"
+                                    colspan="1"
+                                    col="2"
+                                    nolabel="1"
+                                >
+                                <tree>
+                                    <field name="sequence" invisible="1" />
+                                    <field name="code" />
+                                    <field name="name" />
+                                    <field name="previous_balance" />
+                                    <field name="balance" />
+                                </tree>
                             </field>
                         </page>
                         <page string="Reviews" name="tier_validation">
