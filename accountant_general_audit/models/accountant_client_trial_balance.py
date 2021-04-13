@@ -3,6 +3,8 @@
 # Copyright 2021 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+from datetime import datetime
+
 from openerp import _, api, fields, models
 from openerp.exceptions import Warning as UserError
 
@@ -24,6 +26,14 @@ class AccountantClientTrialBalance(models.Model):
     @api.model
     def _default_company_id(self):
         return self.env.user.company_id.id
+
+    @api.model
+    def _default_currency_id(self):
+        return self.env.user.company_id.currency_id.id
+
+    @api.model
+    def _default_date(self):
+        return datetime.now().strftime("%Y-%m-%d")
 
     @api.multi
     @api.depends(
@@ -65,6 +75,7 @@ class AccountantClientTrialBalance(models.Model):
     date_start = fields.Date(
         string="Start Date",
         required=True,
+        default=lambda self: self._default_date(),
         readonly=True,
         states={
             "draft": [
@@ -75,6 +86,38 @@ class AccountantClientTrialBalance(models.Model):
     date_end = fields.Date(
         string="End Date",
         required=True,
+        default=lambda self: self._default_date(),
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    previous_date_start = fields.Date(
+        string="Previous Start Date",
+        required=False,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    previous_date_end = fields.Date(
+        string="Previous End Date",
+        required=False,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    currency_id = fields.Many2one(
+        string="Currency",
+        comodel_name="res.currency",
+        default=lambda self: self._default_currency_id(),
         readonly=True,
         states={
             "draft": [

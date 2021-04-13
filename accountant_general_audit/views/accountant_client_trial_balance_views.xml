@@ -237,10 +237,13 @@
                                     domain="[('parent_id','=',False)]"
                                 />
                             <field name="account_type_set_id" />
+                            <field name="currency_id" />
                         </group>
                         <group name="group_1_2">
                             <field name="date_start" />
                             <field name="date_end" />
+                            <field name="previous_date_start" />
+                            <field name="previous_date_end" />
                         </group>
                     </group>
                     <notebook colspan="4">
