@@ -237,6 +237,11 @@
                                     domain="[('parent_id','=',False)]"
                                 />
                             <field name="account_type_set_id" />
+                            <field
+                                    name="allowed_type_ids"
+                                    widget="many2many_tags"
+                                    invisible="1"
+                                />
                             <field name="currency_id" />
                         </group>
                         <group name="group_1_2">
@@ -253,7 +258,10 @@
                                     <field name="sequence" widget="handle" />
                                     <field name="code" />
                                     <field name="name" />
-                                    <field name="type_id" />
+                                    <field
+                                            name="type_id"
+                                            domain="[('id','in',parent.allowed_type_ids[0][2])]"
+                                        />
                                     <field name="previous_balance" />
                                     <field name="balance" />
                                 </tree>
