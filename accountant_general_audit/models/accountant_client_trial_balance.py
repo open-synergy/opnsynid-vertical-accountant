@@ -25,6 +25,10 @@ class AccountantClientTrialBalance(models.Model):
     def _default_company_id(self):
         return self.env.user.company_id.id
 
+    @api.model
+    def _default_currency_id(self):
+        return self.env.user.company_id.currency_id.id
+
     @api.multi
     @api.depends(
         "account_type_set_id",
@@ -82,6 +86,38 @@ class AccountantClientTrialBalance(models.Model):
             ],
         },
     )
+    previous_date_start = fields.Date(
+        string="Previous Start Date",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    previous_date_end = fields.Date(
+        string="Previous End Date",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    currency_id = fields.Many2one(
+        string="Currency",
+        comodel_name="res.currency",
+        default=lambda self: self._default_currency_id(),
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     account_type_set_id = fields.Many2one(
         string="Accoount Type Set",
         comodel_name="accountant.client_account_type_set",
@@ -92,6 +128,29 @@ class AccountantClientTrialBalance(models.Model):
                 ("readonly", False),
             ],
         },
+    )
+
+    @api.multi
+    @api.depends(
+        "account_type_set_id",
+    )
+    def _compute_account_type_ids(self):
+        obj_type_set = self.env["accountant.client_account_type_set"]
+        for document in self:
+            result = []
+            criteria = []
+            if document.account_type_set_id:
+                criteria.append(
+                    ("detail_ids", "in", document.account_type_set_id.id),
+                )
+                result = obj_type_set.search(criteria).detail_ids
+        document.allowed_type_ids = result
+
+    allowed_type_ids = fields.Many2many(
+        string="Allowed Account Type",
+        comodel_name="accountant.client_account_type",
+        compute="_compute_account_type_ids",
+        store=False,
     )
     detail_ids = fields.One2many(
         string="Detail",
