@@ -3,21 +3,65 @@
 # Copyright 2021 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import fields, models, tools
+from datetime import datetime
+
+from openerp import api, fields, models
+from openerp.tools.safe_eval import safe_eval as eval
 
 
 class AccountantClientTrialBalanceStandardDetail(models.Model):
     _name = "accountant.client_trial_balance_standard_detail"
     _description = "Accountant Client Trial Balance Standard Detail"
     _order = "sequence, trial_balance_id, id"
-    _auto = False
 
-    name = fields.Char(
-        string="Name",
-        required=True,
+    @api.depends(
+        "trial_balance_id",
+        "trial_balance_id.date_start",
+        "trial_balance_id.date_end",
+        "trial_balance_id.previous_date_start",
+        "trial_balance_id.previous_date_end",
+        "trial_balance_id.balance_date_start",
+        "trial_balance_id.balance_date_end",
+        "type_id",
+        "trial_balance_id.detail_ids",
+        "trial_balance_id.detail_ids.type_id",
+        "trial_balance_id.detail_ids.previous_balance",
+        "trial_balance_id.detail_ids.balance",
     )
-    code = fields.Char(
-        string="Code",
+    @api.multi
+    def _compute_balance(self):
+        obj_detail = self.env["accountant.client_trial_balance_detail"]
+        for document in self:
+            previous_balance = balance = extrapolation_balance = 0.0
+
+            criteria = [
+                ("trial_balance_id", "=", document.trial_balance_id.id),
+                ("type_id", "=", document.type_id.id),
+            ]
+            for detail in obj_detail.search(criteria):
+                previous_balance += detail.previous_balance
+                balance += detail.balance
+            localdict = document._get_localdict(
+                previous_balance,
+                balance,
+            )
+            try:
+                eval(
+                    document.type_id.extrapolation_python_code,
+                    localdict,
+                    mode="exec",
+                    nocopy=True,
+                )
+                extrapolation_balance = localdict["result"]
+            except Exception:
+                extrapolation_balance = 7.0
+            document.previous_balance = previous_balance
+            document.balance = balance
+            document.extrapolation_balance = extrapolation_balance
+
+    type_id = fields.Many2one(
+        string="Account Type",
+        comodel_name="accountant.client_account_type",
         required=True,
     )
     sequence = fields.Integer(
@@ -27,11 +71,21 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
     )
     previous_balance = fields.Float(
         string="Previous Balance",
-        required=True,
+        required=False,
+        compute="_compute_balance",
+        store=True,
     )
     balance = fields.Float(
         string="Balance",
-        required=True,
+        required=False,
+        compute="_compute_balance",
+        store=True,
+    )
+    extrapolation_balance = fields.Float(
+        string="Extrapolation Balance",
+        required=False,
+        compute="_compute_balance",
+        store=True,
     )
     trial_balance_id = fields.Many2one(
         string="Trial Balance",
@@ -39,67 +93,25 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         required=True,
     )
 
-    def _select(self):
-        select_str = """
-        SELECT
-            row_number() OVER() as id,
-            d.name AS name,
-            d.code AS code,
-            d.sequence AS sequence,
-            COALESCE(e.previous_balance, 1.0) AS previous_balance,
-            COALESCE(e.balance, 1.0) AS balance,
-            a.id AS trial_balance_id
-        """
-        return select_str
-
-    def _from(self):
-        from_str = """
-        accountant_client_trial_balance AS a
-        """
-        return from_str
-
-    def _where(self):
-        where_str = """
-        WHERE 1 = 1
-        """
-        return where_str
-
-    def _join(self):
-        join_str = """
-        JOIN accountant_client_account_type_set AS b ON
-            a.account_type_set_id = b.id
-        JOIN rel_accountant_type_set_2_account_type AS c ON
-            b.id = c.account_client_type_set_id
-        JOIN accountant_client_account_type AS d ON
-            c.account_client_type_id = d.id
-        RIGHT JOIN accountant_client_trial_balance_detail_summary AS e ON
-            a.id = e.trial_balance_id AND
-            d.id = e.type_id
-        """
-        return join_str
-
-    def _group_by(self):
-        group_str = """
-        """
-        return group_str
-
-    def init(self, cr):
-        tools.drop_view_if_exists(cr, self._table)
-        # pylint: disable=locally-disabled, sql-injection
-        cr.execute(
-            """CREATE or REPLACE VIEW %s as (
-            %s
-            FROM %s
-            %s
-            %s
-            %s
-        )"""
-            % (
-                self._table,
-                self._select(),
-                self._from(),
-                self._join(),
-                self._where(),
-                self._group_by(),
-            )
-        )
+    def _get_localdict(self, previous_balance, balance):
+        self.ensure_one()
+        tb = self.trial_balance_id
+        date_start = datetime.strptime(tb.date_start, "%Y-%m-%d")
+        date_end = datetime.strptime(tb.date_end, "%Y-%m-%d")
+        previous_date_start = datetime.strptime(tb.previous_date_start, "%Y-%m-%d")
+        previous_date_end = datetime.strptime(tb.previous_date_end, "%Y-%m-%d")
+        balance_date_start = datetime.strptime(tb.balance_date_start, "%Y-%m-%d")
+        balance_date_end = datetime.strptime(tb.balance_date_end, "%Y-%m-%d")
+        return {
+            "env": self.env,
+            "document": self,
+            "previous_balance": previous_balance,
+            "balance": balance,
+            "datetime": datetime,
+            "date_start": date_start,
+            "date_end": date_end,
+            "previous_date_start": previous_date_start,
+            "previous_date_end": previous_date_end,
+            "balance_date_start": balance_date_start,
+            "balance_date_end": balance_date_end,
+        }

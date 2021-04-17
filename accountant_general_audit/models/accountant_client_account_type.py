@@ -31,3 +31,8 @@ class AccountantClientAccountType(models.Model):
     description = fields.Text(
         string="Description",
     )
+    extrapolation_python_code = fields.Text(
+        string="Python Code for Extrapolation",
+        required=True,
+        default="result = document.balance",
+    )

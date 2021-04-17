@@ -47,6 +47,7 @@
                         <field name="active" />
                         <field name="sequence" />
                         <field name="description" />
+                        <field name="extrapolation_python_code" />
                     </group>
                 </sheet>
             </form>

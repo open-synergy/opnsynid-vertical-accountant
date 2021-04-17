@@ -86,6 +86,26 @@ class AccountantClientTrialBalance(models.Model):
             ],
         },
     )
+    balance_date_start = fields.Date(
+        string="Balance Start Date",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    balance_date_end = fields.Date(
+        string="Balance End Date",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     previous_date_start = fields.Date(
         string="Previous Start Date",
         required=True,
@@ -161,12 +181,6 @@ class AccountantClientTrialBalance(models.Model):
     standard_detail_ids = fields.One2many(
         string="Standard Detail",
         comodel_name="accountant.client_trial_balance_standard_detail",
-        inverse_name="trial_balance_id",
-        readonly=True,
-    )
-    summary_ids = fields.One2many(
-        string="Standard Detail",
-        comodel_name="accountant.client_trial_balance_detail_summary",
         inverse_name="trial_balance_id",
         readonly=True,
     )
@@ -299,6 +313,24 @@ class AccountantClientTrialBalance(models.Model):
             "cancel_date": False,
             "cancel_user_id": False,
         }
+
+    @api.onchange("account_type_set_id")
+    def onchange_standard_detail_ids(self):
+        self.update({"standard_detail_ids": [(5, 0, 0)]})
+        if self.account_type_set_id:
+            result = []
+            for detail in self.account_type_set_id.detail_ids:
+                result.append(
+                    (
+                        0,
+                        0,
+                        {
+                            "sequence": detail.sequence,
+                            "type_id": detail.id,
+                        },
+                    )
+                )
+            self.update({"standard_detail_ids": result})
 
     @api.multi
     def unlink(self):

@@ -41,4 +41,5 @@ class AccountantClientTrialBalanceDetail(models.Model):
         string="Trial Balance",
         comodel_name="accountant.client_trial_balance",
         required=True,
+        ondelete="cascade",
     )
