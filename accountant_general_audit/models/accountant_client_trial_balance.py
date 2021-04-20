@@ -367,3 +367,31 @@ class AccountantClientTrialBalance(models.Model):
         _super.restart_validation()
         for record in self:
             record.request_validation()
+
+    @api.constrains("date_start", "date_end")
+    def _check_date_start_end(self):
+        strWarning = _("Date end must be greater than date start")
+        if self.date_start and self.date_end:
+            if self.date_end < self.date_start:
+                raise UserError(strWarning)
+
+    @api.constrains("balance_date_start", "balance_date_end")
+    def _check_balance_date_start_end(self):
+        strWarning = _("Balance Date end must be greater than Balance date start")
+        if self.balance_date_start and self.balance_date_end:
+            if self.balance_date_end < self.balance_date_start:
+                raise UserError(strWarning)
+
+    @api.constrains("previous_date_start", "previous_date_end")
+    def _check_previous_date_start_end(self):
+        strWarning = _("Previous Date end must be greater than Previous date start")
+        if self.previous_date_start and self.previous_date_end:
+            if self.previous_date_end < self.previous_date_start:
+                raise UserError(strWarning)
+
+    @api.constrains("balance_date_start", "previous_date_end")
+    def _check_previous_balance_date(self):
+        strWarning = _("Previous Date end must be greater than Balance date start")
+        if self.balance_date_start and self.previous_date_end:
+            if self.previous_date_end < self.balance_date_start:
+                raise UserError(strWarning)
