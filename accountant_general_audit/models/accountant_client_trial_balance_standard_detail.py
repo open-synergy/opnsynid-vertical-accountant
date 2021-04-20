@@ -54,7 +54,7 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
                 )
                 extrapolation_balance = localdict["result"]
             except Exception:
-                extrapolation_balance = 7.0
+                extrapolation_balance = 0.0
             document.previous_balance = previous_balance
             document.balance = balance
             document.extrapolation_balance = extrapolation_balance
