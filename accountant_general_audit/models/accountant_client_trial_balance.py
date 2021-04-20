@@ -183,6 +183,14 @@ class AccountantClientTrialBalance(models.Model):
         comodel_name="accountant.client_trial_balance_standard_detail",
         inverse_name="trial_balance_id",
         readonly=True,
+        copy=True,
+    )
+    computation_ids = fields.One2many(
+        string="Computation",
+        comodel_name="accountant.client_trial_balance_computation",
+        inverse_name="trial_balance_id",
+        readonly=True,
+        copy=True,
     )
     state = fields.Selection(
         string="State",
@@ -332,6 +340,23 @@ class AccountantClientTrialBalance(models.Model):
                 )
             self.update({"standard_detail_ids": result})
 
+    @api.onchange("account_type_set_id")
+    def onchange_computation_ids(self):
+        self.update({"computation_ids": [(5, 0, 0)]})
+        if self.account_type_set_id:
+            result = []
+            for detail in self.account_type_set_id.computation_ids:
+                result.append(
+                    (
+                        0,
+                        0,
+                        {
+                            "computation_item_id": detail.computation_id.id,
+                        },
+                    )
+                )
+            self.update({"computation_ids": result})
+
     @api.multi
     def unlink(self):
         strWarning = _("You can only delete data on draft state")
@@ -367,3 +392,41 @@ class AccountantClientTrialBalance(models.Model):
         _super.restart_validation()
         for record in self:
             record.request_validation()
+
+    @api.constrains("date_start", "date_end")
+    def _check_date_start_end(self):
+        for record in self:
+            if record.date_start and record.date_end:
+                strWarning = _("Date end must be greater than date start")
+                if record.date_end < record.date_start:
+                    raise UserError(strWarning)
+
+    @api.constrains("balance_date_start", "balance_date_end")
+    def _check_balance_date_start_end(self):
+        for record in self:
+            if record.balance_date_start and record.balance_date_end:
+                strWarning = _(
+                    "Balance Date end must be greater than Balance date start"
+                )
+                if record.balance_date_end < record.balance_date_start:
+                    raise UserError(strWarning)
+
+    @api.constrains("previous_date_start", "previous_date_end")
+    def _check_previous_date_start_end(self):
+        for record in self:
+            if record.previous_date_start and record.previous_date_end:
+                strWarning = _(
+                    "Previous Date end must be greater than Previous date start"
+                )
+                if record.previous_date_end < record.previous_date_start:
+                    raise UserError(strWarning)
+
+    @api.constrains("balance_date_start", "previous_date_end")
+    def _check_previous_balance_date(self):
+        for record in self:
+            if record.balance_date_start and record.previous_date_end:
+                strWarning = _(
+                    "Balance date start must be greater than previous balance date end"
+                )
+                if record.previous_date_end >= record.balance_date_start:
+                    raise UserError(strWarning)

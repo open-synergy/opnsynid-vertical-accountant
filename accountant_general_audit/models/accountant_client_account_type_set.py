@@ -32,6 +32,13 @@ class AccountantClientAccountTypeSet(models.Model):
         column1="account_client_type_set_id",
         column2="account_client_type_id",
     )
+    computation_ids = fields.One2many(
+        string="Computation",
+        comodel_name="accountant.client_account_type_computation_item",
+        inverse_name="account_type_set_id",
+        copy=True,
+    )
+
     trial_balance_sequence_id = fields.Many2one(
         string="Trial Balance Sequence",
         comodel_name="ir.sequence",

@@ -285,6 +285,19 @@
                                 </tree>
                             </field>
                         </page>
+                        <page string="Computation" name="computations">
+                            <field
+                                    name="computation_ids"
+                                    colspan="1"
+                                    col="2"
+                                    nolabel="1"
+                                >
+                                <tree>
+                                    <field name="computation_item_id" />
+                                    <field name="amount" />
+                                </tree>
+                            </field>
+                        </page>
                         <page string="Reviews" name="tier_validation">
                             <group name="tier_validation_1" colspan="4" col="2">
                                 <field

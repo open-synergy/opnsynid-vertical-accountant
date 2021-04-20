@@ -58,6 +58,20 @@
                                 <field name="detail_ids" nolabel="1" colspan="2" />
                             </group>
                         </page>
+                        <page string="Computation" name="computation">
+                            <field
+                                    name="computation_ids"
+                                    colspan="1"
+                                    col="2"
+                                    nolabel="1"
+                                >
+                                <tree editable="bottom">
+                                    <!-- <field name="account_type_set_id" /> -->
+                                    <field name="computation_id" />
+                                    <field name="phyton_code" />
+                                </tree>
+                            </field>
+                        </page>
                         <page name="page_workflow" string="Workflow">
                             <group
                                     name="workflow"
