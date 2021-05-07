@@ -8,10 +8,11 @@
         <form>
             <header>
                 <button name="action_confirm" type="object" string="Confirm" class="oe_highlight" attrs="{'invisible':['|',('state','!=','draft'),('confirm_ok','=',False)]}"/>
-                <button name="action_valid" type="object" string="Valid" class="oe_highlight" attrs="{'invisible':['|',('state','!=','confirm'),('valid_ok','=',False)]}"/>
-                <button name="action_cancel" type="object" string="Cancel" attrs="{'invisible':['|',('state','not in',['draft','confirm','valid']),('cancel_ok','=',False)]}"/>
+                <button name="action_finalize" type="object" string="Finalization" class="oe_highlight" attrs="{'invisible':['|',('state','!=','confirm'),('finalize_ok','=',False)]}"/>
+                <button name="action_valid" type="object" string="Valid" class="oe_highlight" attrs="{'invisible':['|',('state','!=','finalize'),('valid_ok','=',False)]}"/>
+                <button name="action_cancel" type="object" string="Cancel" attrs="{'invisible':['|',('state','not in',['draft','confirm','finalize','valid']),('cancel_ok','=',False)]}"/>
                 <button name="action_restart" type="object" string="Restart" attrs="{'invisible':['|',('state','!=','cancel'),('restart_ok','=',False)]}"/>
-                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,valid"/>
+                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,finalize,valid"/>
             </header>
             <sheet>
                 <div class="oe_right oe_button_box" style="width: 300px;" name="buttons">
@@ -68,6 +69,7 @@
                     <page name="page_policy" string="Policy" groups="base.group_system">
                         <group name="group_policy_1" colspan="4" col="2">
                             <field name="confirm_ok"/>
+                            <field name="finalize_ok"/>
                             <field name="valid_ok"/>
                             <field name="cancel_ok"/>
                             <field name="restart_ok"/>
