@@ -22,6 +22,7 @@
                         <field name="signing_accountant_id"/>
                         <field name="sequence_id"/>
                         <field name="confirm_grp_ids"/>
+                        <field name="finalize_grp_ids"/>
                         <field name="valid_grp_ids"/>
                         <field name="cancel_grp_ids"/>
                         <field name="restart_grp_ids"/>
@@ -31,6 +32,7 @@
                             <field name="signing_accountant_id"/>
                             <field name="sequence_id" domain="[('code','=','accountant.report')]"/>
                             <field name="confirm_grp_ids" widget="many2many_tags"/>
+                            <field name="finalize_grp_ids" widget="many2many_tags"/>
                             <field name="valid_grp_ids" widget="many2many_tags"/>
                             <field name="cancel_grp_ids" widget="many2many_tags"/>
                             <field name="restart_grp_ids" widget="many2many_tags"/>
@@ -54,6 +56,7 @@
             <page name="page_policy" string="Policy">
                 <group name="group_policy_1" colspan="4" col="2">
                     <field name="confirm_grp_ids" widget="many2many_tags"/>
+                    <field name="finalize_grp_ids" widget="many2many_tags"/>
                     <field name="valid_grp_ids" widget="many2many_tags"/>
                     <field name="cancel_grp_ids" widget="many2many_tags"/>
                     <field name="restart_grp_ids" widget="many2many_tags"/>

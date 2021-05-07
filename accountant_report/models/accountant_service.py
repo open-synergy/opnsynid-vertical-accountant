@@ -64,6 +64,13 @@ class AccountantService(models.Model):
         column1="service_id",
         column2="group_id",
     )
+    finalize_grp_ids = fields.Many2many(
+        string="Allowed To Finalization",
+        comodel_name="res.groups",
+        relation="rel_accountant_service_allowed_finalize_groups",
+        column1="service_id",
+        column2="group_id",
+    )
     valid_grp_ids = fields.Many2many(
         string="Allowed To Validate",
         comodel_name="res.groups",
@@ -131,6 +138,7 @@ class AccountantService(models.Model):
     def _mapped_policy_field(self):
         pairs = {
             "accountant_report_confirm_grp_ids": "confirm_grp_ids",
+            "accountant_report_finalize_grp_ids": "finalize_grp_ids",
             "accountant_report_valid_grp_ids": "valid_grp_ids",
             "accountant_report_cancel_grp_ids": "cancel_grp_ids",
             "accountant_report_restart_grp_ids": "restart_grp_ids",
@@ -187,6 +195,13 @@ class AccountantReportSigningPartner(models.Model):
         string="Allowed To Confirm",
         comodel_name="res.groups",
         relation="rel_signing_partner_allowed_confirm_groups",
+        column1="signing_id",
+        column2="group_id",
+    )
+    finalize_grp_ids = fields.Many2many(
+        string="Allowed To Finalization",
+        comodel_name="res.groups",
+        relation="rel_signing_partner_allowed_finalize_groups",
         column1="signing_id",
         column2="group_id",
     )
