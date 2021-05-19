@@ -67,6 +67,6 @@ class AccountantReport(models.Model):
         "qc_pass", "state"
     )
     def _check_qc_pass(self):
-        if self.state == "valid" and not self.qc_pass:
+        if self.state == "finalize" and not self.qc_pass:
             warning_msg = _("Report does not pass qc check")
             raise UserError(warning_msg)
