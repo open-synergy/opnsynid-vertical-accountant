@@ -8,7 +8,7 @@
     "name": "Accountant General Audit Materiality Analysis",
     "version": "8.0.1.0.0",
     "author": "PT Simetri Sinergi Indonesia",
-    "website": "https://simetri-sinergi.id/",
+    "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
     "depends": [
         "base_sequence_configurator",
