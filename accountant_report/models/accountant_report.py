@@ -31,16 +31,18 @@ class AccountantReport(models.Model):
         for report in self:
             if self.env.user.id == SUPERUSER_ID:
                 report.confirm_ok = report.valid_ok = report.cancel_ok = \
-                    report.restart_ok = True
+                    report.restart_ok = report.finalize_ok = True
                 continue
 
             if not report.service_id:
-                report.confirm_ok = report.valid_ok = \
-                    report.cancel_ok = report.restart_ok = False
+                report.confirm_ok = report.valid_ok = report.cancel_ok = \
+                    report.restart_ok = report.finalize_ok = False
                 continue
 
             report.confirm_ok = report._get_button_policy(
                 "accountant_report_confirm_grp_ids")
+            report.finalize_ok = report._get_button_policy(
+                "accountant_report_finalize_grp_ids")
             report.valid_ok = report._get_button_policy(
                 "accountant_report_valid_grp_ids")
             report.cancel_ok = report._get_button_policy(
@@ -343,6 +345,7 @@ class AccountantReport(models.Model):
         selection=[
             ("draft", "Draft"),
             ("confirm", "Waiting for Approval"),
+            ("finalize", "Finalization"),
             ("valid", "Valid"),
             ("cancel", "Cancel"),
         ],
@@ -351,6 +354,12 @@ class AccountantReport(models.Model):
     )
     confirm_ok = fields.Boolean(
         string="Can Confirm",
+        compute="_compute_policy",
+        store=False,
+        readonly=True,
+    )
+    finalize_ok = fields.Boolean(
+        string="Can Finalization",
         compute="_compute_policy",
         store=False,
         readonly=True,
@@ -380,6 +389,11 @@ class AccountantReport(models.Model):
             report.write(self._prepare_confirm_data())
 
     @api.multi
+    def action_finalize(self):
+        for report in self:
+            report.write(self._prepare_finalize_data())
+
+    @api.multi
     def action_valid(self):
         for report in self:
             report.write(self._prepare_valid_data())
@@ -403,10 +417,18 @@ class AccountantReport(models.Model):
         return result
 
     @api.multi
-    def _prepare_valid_data(self):
+    def _prepare_finalize_data(self):
         self.ensure_one()
         result = {
             "name": self._create_sequence(),
+            "state": "finalize",
+        }
+        return result
+
+    @api.multi
+    def _prepare_valid_data(self):
+        self.ensure_one()
+        result = {
             "state": "valid",
         }
         return result
