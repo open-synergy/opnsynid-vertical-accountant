@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+<data>
+<record
+            id="base_sequence_accountant_client_materiality_analysis"
+            model="base.sequence_configurator"
+        >
+    <field
+                name="model_id"
+                ref="accountant_general_audit_materiality_analysis.model_accountant_client_materiality_analysis"
+            />
+    <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.client_materiality_analysis'),('name','=','name')]"
+            />
+    <field
+                name="fallback_sequence_id"
+                ref="accountant_general_audit_materiality_analysis.sequence_accountant_client_materiality_analysis"
+            />
+</record>
+
+</data>
+</openerp>

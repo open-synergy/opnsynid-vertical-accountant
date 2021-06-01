@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+accountant_client_materiality_analysis_employee,accountant.client_materiality_analysis - user,model_accountant_client_materiality_analysis,base.group_user,1,1,1,1
+accountant_client_materiality_analysis_all,accountant.client_materiality_analysis - all,model_accountant_client_materiality_analysis,,1,0,0,0
+accountant_client_materiality_analysis_detail_employee,accountant.client_materiality_analysis_detail - user,model_accountant_client_materiality_analysis_detail,base.group_user,1,1,1,1
+accountant_client_materiality_analysis_detail_all,accountant.client_materiality_analysis_detail - all,model_accountant_client_materiality_analysis_detail,,1,0,0,0
