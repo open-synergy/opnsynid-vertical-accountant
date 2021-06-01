@@ -2,7 +2,7 @@
 # Copyright 2018 OpenSynergy Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, fields, api, SUPERUSER_ID
+from openerp import api, fields, models
 from openerp.exceptions import Warning as UserError
 from openerp.tools.translate import _
 
@@ -10,8 +10,15 @@ from openerp.tools.translate import _
 class PartnerArrangement(models.Model):
     _name = "accountant.partner_arrangement"
     _description = "Partner Arrangement"
-    _inherit = "mail.thread"
+    _inherit = [
+        "mail.thread",
+        "tier.validation",
+        "base.workflow_policy_object",
+        "base.cancel.reason_common",
+    ]
     _order = "date desc"
+    _state_from = ["draft", "confirm"]
+    _state_to = ["valid"]
 
     @api.model
     def _default_name(self):
@@ -20,31 +27,6 @@ class PartnerArrangement(models.Model):
     @api.model
     def _default_company_id(self):
         return self.env.user.company_id.id
-
-    @api.multi
-    @api.depends(
-        "state",
-        "company_id",
-    )
-    def _compute_policy(self):
-        for arrangement in self:
-            if self.env.user.id == SUPERUSER_ID:
-                arrangement.confirm_ok = arrangement.valid_ok = \
-                    arrangement.cancel_ok = \
-                    arrangement.restart_ok = True
-                continue
-
-            if arrangement.company_id:
-                company = arrangement.company_id
-                for policy in company.\
-                        _get_partner_arrangement_button_policy_map():
-                    setattr(
-                        arrangement,
-                        policy[0],
-                        company.
-                        _get_partner_arrangement_button_policy(
-                            policy[1]),
-                    )
 
     name = fields.Char(
         string="# Partner Arrangement",
@@ -146,21 +128,59 @@ class PartnerArrangement(models.Model):
         store=False,
         readonly=True,
     )
+    restart_approval_ok = fields.Boolean(
+        string="Can Restart Approval",
+        compute="_compute_policy",
+    )
+    confirm_date = fields.Datetime(
+        string="Confirmation Date",
+        readonly=True,
+        copy=False,
+    )
+    confirm_user_id = fields.Many2one(
+        string="Confirmed By",
+        comodel_name="res.users",
+        readonly=True,
+        copy=False,
+    )
+    valid_date = fields.Datetime(
+        string="Validation Date",
+        readonly=True,
+        copy=False,
+    )
+    valid_user_id = fields.Many2one(
+        string="Valid By",
+        comodel_name="res.users",
+        readonly=True,
+        copy=False,
+    )
+    cancel_date = fields.Datetime(
+        string="Cancel Date",
+        readonly=True,
+        copy=False,
+    )
+    cancel_user_id = fields.Many2one(
+        string="Cancelled By",
+        comodel_name="res.users",
+        readonly=True,
+        copy=False,
+    )
 
     @api.multi
     def action_confirm(self):
         for arrangement in self:
-            arrangement.write(self._prepare_confirm_data())
+            arrangement.write(arrangement._prepare_confirm_data())
+            arrangement.request_validation()
 
     @api.multi
     def action_valid(self):
         for arrangement in self:
-            arrangement.write(self._prepare_valid_data())
+            arrangement.write(arrangement._prepare_valid_data())
 
     @api.multi
     def action_cancel(self):
         for arrangement in self:
-            arrangement.write(self._prepare_cancel_data())
+            arrangement.write(arrangement._prepare_cancel_data())
 
     @api.multi
     def action_restart(self):
@@ -172,14 +192,19 @@ class PartnerArrangement(models.Model):
         self.ensure_one()
         result = {
             "state": "confirm",
+            "confirm_date": fields.Datetime.now(),
+            "confirm_user_id": self.env.user.id,
         }
         return result
 
     @api.multi
     def _prepare_valid_data(self):
         self.ensure_one()
+        # "name": sequence,
         result = {
             "state": "valid",
+            "valid_date": fields.Datetime.now(),
+            "valid_user_id": self.env.user.id,
         }
         return result
 
@@ -188,6 +213,8 @@ class PartnerArrangement(models.Model):
         self.ensure_one()
         result = {
             "state": "cancel",
+            "cancel_date": fields.Datetime.now(),
+            "cancel_user_id": self.env.user.id,
         }
         return result
 
@@ -196,6 +223,12 @@ class PartnerArrangement(models.Model):
         self.ensure_one()
         result = {
             "state": "draft",
+            "confirm_date": False,
+            "confirm_user_id": False,
+            "valid_date": False,
+            "valid_user_id": False,
+            "cancel_date": False,
+            "cancel_user_id": False,
         }
         return result
 
@@ -216,13 +249,15 @@ class PartnerArrangement(models.Model):
         else:
             result = self.env.ref(
                 "accountant_partner_arrangement.sequence_accountant_"
-                "partner_arrangement")
+                "partner_arrangement"
+            )
         return result
 
     @api.model
     def _create_sequence(self, company_id):
-        name = self.env["ir.sequence"].\
-            next_by_id(self._get_sequence(company_id).id) or "/"
+        name = (
+            self.env["ir.sequence"].next_by_id(self._get_sequence(company_id).id) or "/"
+        )
         return name
 
     @api.model
@@ -238,6 +273,21 @@ class PartnerArrangement(models.Model):
             if report.state != "draft" and not force_unlink:
                 raise UserError(_("You can only delete data with draft state"))
         _super.unlink()
+
+    @api.multi
+    def validate_tier(self):
+        _super = super(PartnerArrangement, self)
+        _super.validate_tier()
+        for record in self:
+            if record.validated:
+                record.action_valid()
+
+    @api.multi
+    def restart_validation(self):
+        _super = super(PartnerArrangement, self)
+        _super.restart_validation()
+        for record in self:
+            record.request_validation()
 
     @api.onchange("company_id")
     def onchange_managing_partner_id(self):

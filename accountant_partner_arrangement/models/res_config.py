@@ -2,7 +2,7 @@
 # Copyright 2018 OpenSynergy Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, fields
+from openerp import fields, models
 
 
 class ResConfig(models.TransientModel):
@@ -46,4 +46,9 @@ class ResConfig(models.TransientModel):
         column2="group_id",
         company_id="company_id.accountant_partner_arrangement_restart_grp_ids",
         related="company_id.accountant_partner_arrangement_restart_grp_ids",
+    )
+    accountant_partner_arrangement_restart_approval_grp_ids = fields.Many2many(
+        string="Allowed To Restart Approval Accountant Firm Partner Arrangement",
+        comodel_name="res.groups",
+        related="company_id.accountant_partner_arrangement_restart_approval_grp_ids",
     )

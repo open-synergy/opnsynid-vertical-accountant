@@ -2,7 +2,7 @@
 # Copyright 2018 OpenSynergy Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, fields, api
+from openerp import fields, models
 
 
 class ResCompany(models.Model):
@@ -41,31 +41,10 @@ class ResCompany(models.Model):
         column1="company_id",
         column2="group_id",
     )
-
-    @api.model
-    def _get_partner_arrangement_button_policy_map(self):
-        return [
-            ("confirm_ok",
-                "accountant_partner_arrangement_confirm_grp_ids"),
-            ("valid_ok", "accountant_partner_arrangement_valid_grp_ids"),
-            ("cancel_ok", "accountant_partner_arrangement_cancel_grp_ids"),
-            ("restart_ok", "accountant_partner_arrangement_restart_grp_ids"),
-        ]
-
-    @api.multi
-    def _get_partner_arrangement_button_policy(self, policy_field):
-        self.ensure_one()
-        result = False
-        button_group_ids = []
-        user = self.env.user
-        group_ids = user.groups_id.ids
-
-        button_group_ids += getattr(
-            self, policy_field).ids
-
-        if not button_group_ids:
-            result = True
-        else:
-            if (set(button_group_ids) & set(group_ids)):
-                result = True
-        return result
+    accountant_partner_arrangement_restart_approval_grp_ids = fields.Many2many(
+        string="Allowed To Restart Approval Accountant Firm Partner Arrangement",
+        comodel_name="res.groups",
+        relation="rel_partner_arrangement_restart_approval_groups",
+        column1="company_id",
+        column2="group_id",
+    )
