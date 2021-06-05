@@ -2,7 +2,7 @@
 # Copyright 2018-2019 OpenSynergy Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, fields
+from openerp import fields, models
 
 
 class AccountantReport(models.Model):
@@ -19,6 +19,16 @@ class AccountantReport(models.Model):
     )
     main_report_attachment_id = fields.Many2one(
         string="Main Report Attachment",
+        comodel_name="ir.attachment",
+        readonly=True,
+        states={
+            "finalize": [
+                ("readonly", False),
+            ],
+        },
+    )
+    draft_report_attachment_id = fields.Many2one(
+        string="Draft Report Attachment",
         comodel_name="ir.attachment",
         readonly=True,
         states={
