@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <!-- Copyright 2019 OpenSynergy Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <openerp>
@@ -6,11 +6,31 @@
 <record id="accountant_report_view_form" model="ir.ui.view">
     <field name="name">accountant.report form</field>
     <field name="model">accountant.report</field>
-    <field name="inherit_id" ref="accountant_report.accountant_report_view_form"/>
+    <field name="inherit_id" ref="accountant_report.accountant_report_view_form" />
     <field name="arch" type="xml">
         <data>
             <xpath expr="//field[@name='report_opinion_id']" position="after">
-                <field name="main_report_attachment_id" domain="[('res_model','=','accountant.report'),('res_id','=',id)]"/>
+                <field
+                            name="draft_report_attachment_id"
+                            domain="[
+                        ('res_model','=','accountant.report'),
+                        ('res_id','=',id),
+                        ]"
+                        />
+                <field
+                            name="main_report_attachment_id"
+                            domain="[
+                        ('res_model','=','accountant.report'),
+                        ('res_id','=',id),
+                        ]"
+                        />
+            </xpath>
+            <xpath expr="//page[@string='Policy']" position="after">
+                <page name="Attachement" string="Attachments">
+                    <tree string="Variants" editable="bottom">
+                        <field name="attachment_ids" />
+                    </tree>
+                </page>
             </xpath>
         </data>
     </field>
