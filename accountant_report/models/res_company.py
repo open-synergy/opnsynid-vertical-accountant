@@ -42,3 +42,10 @@ class ResCompany(models.Model):
         column1="company_id",
         column2="group_id",
     )
+    accountant_report_finalize_grp_ids = fields.Many2many(
+        string="Allowed To Finalize Accountant Report",
+        comodel_name="res.groups",
+        relation="rel_accountant_report_allowed_finalize_groups",
+        column1="company_id",
+        column2="group_id",
+    )

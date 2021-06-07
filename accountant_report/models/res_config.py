@@ -36,7 +36,6 @@ class ResConfig(models.TransientModel):
         relation="rel_accountant_report_allowed_cancel_groups",
         column1="company_id",
         column2="group_id",
-        company_id="company_id.accountant_report_cancel_grp_ids",
         related="company_id.accountant_report_cancel_grp_ids",
     )
     accountant_report_restart_grp_ids = fields.Many2many(
@@ -45,6 +44,13 @@ class ResConfig(models.TransientModel):
         relation="rel_accountant_report_allowed_restart_groups",
         column1="company_id",
         column2="group_id",
-        company_id="company_id.accountant_report_restart_grp_ids",
         related="company_id.accountant_report_restart_grp_ids",
+    )
+    accountant_report_finalize_grp_ids = fields.Many2many(
+        string="Allowed To Finalize Accountant Report",
+        comodel_name="res.groups",
+        relation="rel_accountant_report_allowed_finalize_groups",
+        column1="company_id",
+        column2="group_id",
+        related="company_id.accountant_report_finalize_grp_ids",
     )
