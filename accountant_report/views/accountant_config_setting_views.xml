@@ -40,6 +40,10 @@
                         <label for="id" string="To Restart" class="oe_inline"/>
                         <field name="accountant_report_restart_grp_ids" widget="many2many_tags" class="oe_inline"/>
                     </div>
+                    <div>
+                        <label for="id" string="To Finalize" class="oe_inline"/>
+                        <field name="accountant_report_finalize_grp_ids" widget="many2many_tags" class="oe_inline"/>
+                    </div>
                 </div>
             </group>
         </xpath>
