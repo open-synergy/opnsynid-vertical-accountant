@@ -2,7 +2,7 @@
 # Copyright 2018 OpenSynergy Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, fields, api, SUPERUSER_ID
+from openerp import api, fields, models
 from openerp.exceptions import Warning as UserError
 from openerp.tools.translate import _
 
@@ -10,7 +10,11 @@ from openerp.tools.translate import _
 class AccountantReport(models.Model):
     _name = "accountant.report"
     _description = "Accountant Report"
-    _inherit = "mail.thread"
+    _inherit = [
+        "mail.thread",
+        "base.workflow_policy_object",
+        "base.cancel.reason_common",
+    ]
     _order = "date desc, id"
 
     @api.model
@@ -22,41 +26,16 @@ class AccountantReport(models.Model):
         return self.env.user.company_id.id
 
     @api.multi
-    @api.depends(
-        "state",
-        "company_id",
-        "service_id",
-    )
     def _compute_policy(self):
-        for report in self:
-            if self.env.user.id == SUPERUSER_ID:
-                report.confirm_ok = report.valid_ok = report.cancel_ok = \
-                    report.restart_ok = report.finalize_ok = True
-                continue
-
-            if not report.service_id:
-                report.confirm_ok = report.valid_ok = report.cancel_ok = \
-                    report.restart_ok = report.finalize_ok = False
-                continue
-
-            report.confirm_ok = report._get_button_policy(
-                "accountant_report_confirm_grp_ids")
-            report.finalize_ok = report._get_button_policy(
-                "accountant_report_finalize_grp_ids")
-            report.valid_ok = report._get_button_policy(
-                "accountant_report_valid_grp_ids")
-            report.cancel_ok = report._get_button_policy(
-                "accountant_report_cancel_grp_ids")
-            report.restart_ok = report._get_button_policy(
-                "accountant_report_restart_grp_ids")
+        _super = super(AccountantReport, self)
+        _super._compute_policy()
 
     @api.multi
     @api.depends(
         "service_id",
     )
     def _compute_signing_partner(self):
-        obj_signing = self.env[
-            "accountant.report_signing_partner"]
+        obj_signing = self.env["accountant.report_signing_partner"]
         for report in self:
             result = []
             criteria = [
@@ -73,7 +52,8 @@ class AccountantReport(models.Model):
     def _compute_opinion(self):
         for report in self:
             report.allowed_opinion_ids = [
-                (6, 0, report.service_id.allowed_opinion_ids.ids)]
+                (6, 0, report.service_id.allowed_opinion_ids.ids)
+            ]
 
     @api.multi
     @api.depends(
@@ -82,7 +62,8 @@ class AccountantReport(models.Model):
     def _compute_method(self):
         for report in self:
             report.allowed_method_ids = [
-                (6, 0, report.service_id.allowed_method_ids.ids)]
+                (6, 0, report.service_id.allowed_method_ids.ids)
+            ]
 
     name = fields.Char(
         string="# Report",
@@ -352,11 +333,33 @@ class AccountantReport(models.Model):
         default="draft",
         copy=False,
     )
+    confirm_date = fields.Datetime(
+        string="Confirmation Date",
+        readonly=True,
+        copy=False,
+    )
+    confirm_user_id = fields.Many2one(
+        string="Confirmed By",
+        comodel_name="res.users",
+        readonly=True,
+        copy=False,
+    )
     confirm_ok = fields.Boolean(
         string="Can Confirm",
         compute="_compute_policy",
         store=False,
         readonly=True,
+    )
+    finalize_date = fields.Datetime(
+        string="Finalization Date",
+        readonly=True,
+        copy=False,
+    )
+    finalize_user_id = fields.Many2one(
+        string="Finalized By",
+        comodel_name="res.users",
+        readonly=True,
+        copy=False,
     )
     finalize_ok = fields.Boolean(
         string="Can Finalization",
@@ -364,11 +367,33 @@ class AccountantReport(models.Model):
         store=False,
         readonly=True,
     )
+    valid_date = fields.Datetime(
+        string="Validation Date",
+        readonly=True,
+        copy=False,
+    )
+    valid_user_id = fields.Many2one(
+        string="Validated By",
+        comodel_name="res.users",
+        readonly=True,
+        copy=False,
+    )
     valid_ok = fields.Boolean(
         string="Can Validate",
         compute="_compute_policy",
         store=False,
         readonly=True,
+    )
+    cancel_date = fields.Datetime(
+        string="Cancelation Date",
+        readonly=True,
+        copy=False,
+    )
+    cancel_user_id = fields.Many2one(
+        string="Canceled By",
+        comodel_name="res.users",
+        readonly=True,
+        copy=False,
     )
     cancel_ok = fields.Boolean(
         string="Can Cancel",
@@ -413,6 +438,8 @@ class AccountantReport(models.Model):
         self.ensure_one()
         result = {
             "state": "confirm",
+            "confirm_date": fields.Datetime.now(),
+            "confirm_user_id": self.env.user.id,
         }
         return result
 
@@ -422,6 +449,8 @@ class AccountantReport(models.Model):
         result = {
             "name": self._create_sequence(),
             "state": "finalize",
+            "finalize_date": fields.Datetime.now(),
+            "finalize_user_id": self.env.user.id,
         }
         return result
 
@@ -430,6 +459,8 @@ class AccountantReport(models.Model):
         self.ensure_one()
         result = {
             "state": "valid",
+            "valid_date": fields.Datetime.now(),
+            "valid_user_id": self.env.user.id,
         }
         return result
 
@@ -438,6 +469,8 @@ class AccountantReport(models.Model):
         self.ensure_one()
         result = {
             "state": "cancel",
+            "cancel_date": fields.Datetime.now(),
+            "cancel_user_id": self.env.user.id,
         }
         return result
 
@@ -446,39 +479,43 @@ class AccountantReport(models.Model):
         self.ensure_one()
         result = {
             "state": "draft",
+            "confirm_date": False,
+            "confirm_user_id": False,
+            "cancel_date": False,
+            "cancel_user_id": False,
+            "finalize_date": False,
+            "finalize_user_id": False,
+            "valid_date": False,
+            "valid_user_id": False,
         }
         return result
 
     @api.multi
     def _prepare_create_data(self):
-        return {
-        }
+        return {}
 
     @api.multi
     def _get_sequence(self):
         self.ensure_one()
         company = self.env.user.company_id
-        sequence_kategori = self.service_id._get_sequence(
-            self.signing_accountant_id)
+        sequence_kategori = self.service_id._get_sequence(self.signing_accountant_id)
 
         if sequence_kategori:
             result = sequence_kategori
         elif company.accountant_report_sequence_id:
             result = company.accountant_report_sequence_id
         else:
-            result = self.env.ref(
-                "accountant_report.sequence_accountant_report")
+            result = self.env.ref("accountant_report.sequence_accountant_report")
         return result
 
     @api.multi
     def _create_sequence(self):
         self.ensure_one()
-        if self.service_id.sequence_creation_method == "standard" and \
-                self.name == "/":
-            result = self.env["ir.sequence"].\
-                next_by_id(self._get_sequence().id) or "/"
-        elif self.service_id.sequence_creation_method != "standard" and \
-                self.name == "/":
+        if self.service_id.sequence_creation_method == "standard" and self.name == "/":
+            result = self.env["ir.sequence"].next_by_id(self._get_sequence().id) or "/"
+        elif (
+            self.service_id.sequence_creation_method != "standard" and self.name == "/"
+        ):
             result = self.service_id._compute_sequence(self)
         else:
             result = self.name
@@ -499,30 +536,27 @@ class AccountantReport(models.Model):
         group_ids = user.groups_id.ids
 
         button_group_ids = self.service_id._get_button_policy(
-            policy_field, self.signing_accountant_id)
+            policy_field, self.signing_accountant_id
+        )
 
-        button_group_ids += getattr(
-            self.company_id, policy_field).ids
+        button_group_ids += getattr(self.company_id, policy_field).ids
 
         if not button_group_ids:
             result = True
         else:
-            if (set(button_group_ids) & set(group_ids)):
+            if set(button_group_ids) & set(group_ids):
                 result = True
         return result
 
-    @api.onchange(
-        "service_id")
+    @api.onchange("service_id")
     def onchange_signing_accountant_id(self):
         self.signing_accountant_id = False
 
-    @api.onchange(
-        "service_id")
+    @api.onchange("service_id")
     def onchange_report_opinion_id(self):
         self.report_opinion_id = False
 
-    @api.onchange(
-        "service_id")
+    @api.onchange("service_id")
     def onchange_method_id(self):
         self.method_id = False
 
@@ -531,13 +565,11 @@ class AccountantReport(models.Model):
         _super = super(AccountantReport, self)
         force_unlink = self._context.get("force_unlink", False)
         for report in self:
-            if (
-                report.state != "draft" or
-                report.name != "/" and not
-                force_unlink
-            ):
-                msg_warning = _("You can only delete data with draft state "
-                                "and name is equal to '/'")
+            if report.state != "draft" or report.name != "/" and not force_unlink:
+                msg_warning = _(
+                    "You can only delete data with draft state "
+                    "and name is equal to '/'"
+                )
                 raise UserError(msg_warning)
         _super.unlink()
 
@@ -545,8 +577,8 @@ class AccountantReport(models.Model):
     def name_get(self):
         result = []
         for move in self:
-            if move.name == '/':
-                name = '*' + str(move.id)
+            if move.name == "/":
+                name = "*" + str(move.id)
             else:
                 name = move.name
             result.append((move.id, name))
