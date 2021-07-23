@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+<data>
+
+    <menuitem
+            id="accountant_general_audit_menu"
+            name="General Audit"
+            sequence="50"
+            parent="accountant_app.accountant_main_menu"
+        />
+
+    <menuitem
+            id="accountant_configuration_general_audit_menu"
+            name="General Audit"
+            sequence="10"
+            parent="accountant_app.accountant_configuration_menu"
+        />
+
+</data>
+</openerp>
