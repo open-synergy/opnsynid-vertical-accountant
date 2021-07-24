@@ -12,5 +12,7 @@ from . import (
     accountant_client_trial_balance_computation,
     accountant_client_account_type_computation_item,
     accountant_trial_balance_computation_item,
+    accountant_financial_accounting_standard,
+    accountant_general_audit,
     tier_definition,
 )

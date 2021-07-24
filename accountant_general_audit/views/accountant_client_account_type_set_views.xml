@@ -43,6 +43,7 @@
                         <field name="code" />
                         <field name="active" />
                         <field name="trial_balance_sequence_id" />
+                        <field name="accountant_general_audit_sequence_id" />
                     </group>
                     <notebook>
                         <page
@@ -74,8 +75,8 @@
                         </page>
                         <page name="page_workflow" string="Workflow">
                             <group
-                                    name="workflow"
-                                    string="Workflow"
+                                    name="workflow_trial_balance"
+                                    string="Accountant Trial Balance"
                                     colspan="4"
                                     col="2"
                                 >
@@ -93,6 +94,29 @@
                                     />
                                 <field
                                         name="accountant_type_set_restart_grp_ids"
+                                        widget="many2many_tags"
+                                    />
+                            </group>
+                            <group
+                                    name="workflow_general_audit"
+                                    string="Accountant General Audit"
+                                    colspan="4"
+                                    col="2"
+                                >
+                                <field
+                                        name="accountant_general_audit_confirm_grp_ids"
+                                        widget="many2many_tags"
+                                    />
+                                <field
+                                        name="accountant_general_audit_restart_validation_grp_ids"
+                                        widget="many2many_tags"
+                                    />
+                                <field
+                                        name="accountant_general_audit_cancel_grp_ids"
+                                        widget="many2many_tags"
+                                    />
+                                <field
+                                        name="accountant_general_audit_restart_grp_ids"
                                         widget="many2many_tags"
                                     />
                             </group>
