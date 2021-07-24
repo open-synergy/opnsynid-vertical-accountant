@@ -44,6 +44,11 @@ class AccountantClientAccountTypeSet(models.Model):
         comodel_name="ir.sequence",
         company_dependent=True,
     )
+    accountant_general_audit_sequence_id = fields.Many2one(
+        string="Accountant General Audit Sequence",
+        comodel_name="ir.sequence",
+        company_dependent=True,
+    )
     accountant_type_set_confirm_grp_ids = fields.Many2many(
         string="Allow To Confirm Account Type Set",
         comodel_name="res.groups",
@@ -69,6 +74,35 @@ class AccountantClientAccountTypeSet(models.Model):
         string="Allow To Restart Account Type Set",
         comodel_name="res.groups",
         relation="rel_accountant_type_set_restart_trial_balance",
+        column1="account_type_set_id",
+        column2="group_id",
+    )
+    # general Audit
+    accountant_general_audit_confirm_grp_ids = fields.Many2many(
+        string="Allow To Confirm Accountant General Audit",
+        comodel_name="res.groups",
+        relation="rel_accountant_type_set_confirm_general_audit",
+        column1="account_type_set_id",
+        column2="group_id",
+    )
+    accountant_general_audit_restart_validation_grp_ids = fields.Many2many(
+        string="Allow To Restart Validation Accountant General Audit",
+        comodel_name="res.groups",
+        relation="rel_accountant_type_set_restart_validation_general_audit",
+        column1="account_type_set_id",
+        column2="group_id",
+    )
+    accountant_general_audit_cancel_grp_ids = fields.Many2many(
+        string="Allow To Cancel Accountant General Audit",
+        comodel_name="res.groups",
+        relation="rel_accountant_type_set_cancel_general_audit",
+        column1="account_type_set_id",
+        column2="group_id",
+    )
+    accountant_general_audit_restart_grp_ids = fields.Many2many(
+        string="Allow To Restart Accountant General Audit",
+        comodel_name="res.groups",
+        relation="rel_accountant_type_set_restart_general_audit",
         column1="account_type_set_id",
         column2="group_id",
     )

@@ -6,7 +6,7 @@
 
 {
     "name": "Accountant General Audit",
-    "version": "8.0.2.1.0",
+    "version": "8.0.2.2.0",
     "author": "PT. Simetri Sinergi Indonesia, OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
@@ -33,6 +33,8 @@
         "views/accountant_client_account_type_views.xml",
         "views/accountant_client_trial_balance_views.xml",
         "views/accountant_trial_balance_computation_item_views.xml",
+        "views/accountant_financial_accounting_standard_views.xml",
+        "views/accountant_general_audit_views.xml",
     ],
     "installable": True,
 }
