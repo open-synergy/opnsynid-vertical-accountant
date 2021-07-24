@@ -35,5 +35,35 @@
                 name="sequence_computation_code"
             >result = document.account_type_set_id.trial_balance_sequence_id</field>
     </record>
+
+    <record
+            id="base_sequence_accountant_general_audit"
+            model="base.sequence_configurator"
+        >
+        <field
+                name="model_id"
+                ref="accountant_general_audit.model_accountant_general_audit"
+            />
+        <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.general_audit'),('name','=','name')]"
+            />
+        <field
+                name="fallback_sequence_id"
+                ref="accountant_general_audit.sequence_accountant_general_audit"
+            />
+    </record>
+
+    <record
+            id="base_sequence_accountant_general_audit_line"
+            model="base.sequence_configurator_line"
+        >
+        <field name="generator_id" ref="base_sequence_accountant_general_audit" />
+        <field name="sequence" eval="1" />
+        <field
+                name="sequence_computation_code"
+            >result = document.account_type_set_id.accountant_general_audit_sequence_id</field>
+    </record>
+
 </data>
 </openerp>
