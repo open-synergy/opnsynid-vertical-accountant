@@ -8,7 +8,7 @@ from openerp import fields, models
 
 class AccountantFinancialAccountingStandard(models.Model):
     _name = "accountant.financial_accounting_standard"
-    _description = "Accountant Financial Accounting Standard"
+    _description = "Financial Accounting Standard"
 
     name = fields.Char(
         string="Name",

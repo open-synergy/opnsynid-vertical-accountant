@@ -13,6 +13,27 @@
         />
 
     <menuitem
+            id="accountant_risk_assessment_menu"
+            name="Risk Assessment"
+            sequence="3"
+            parent="accountant_general_audit_menu"
+        />
+
+    <menuitem
+            id="accountant_risk_response_menu"
+            name="Risk Response"
+            sequence="4"
+            parent="accountant_general_audit_menu"
+        />
+
+    <menuitem
+            id="accountant_reporting_menu"
+            name="Reporting"
+            sequence="5"
+            parent="accountant_general_audit_menu"
+        />
+
+    <menuitem
             id="accountant_configuration_general_audit_menu"
             name="General Audit"
             sequence="10"
