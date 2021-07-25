@@ -5,33 +5,42 @@
 <openerp>
 <data>
 
-    <record id="accountant_client_account_type_view_search" model="ir.ui.view">
-        <field name="name">accountant.client_account_type form</field>
-        <field name="model">accountant.client_account_type</field>
+    <record
+            id="accountant_general_audit_index_a1101_status_view_search"
+            model="ir.ui.view"
+        >
+        <field name="name">accountant.general_audit_index_a1101_status form</field>
+        <field name="model">accountant.general_audit_index_a1101_status</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
                 <field name="code" />
+                <field name="sequence" />
             </search>
         </field>
     </record>
 
-    <record id="accountant_client_account_type_view_tree" model="ir.ui.view">
-        <field name="name">accountant.client_account_type tree</field>
-        <field name="model">accountant.client_account_type</field>
+    <record
+            id="accountant_general_audit_index_a1101_status_view_tree"
+            model="ir.ui.view"
+        >
+        <field name="name">accountant.general_audit_index_a1101_status tree</field>
+        <field name="model">accountant.general_audit_index_a1101_status</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="sequence" widget="handle" />
                 <field name="name" />
                 <field name="code" />
-                <field name="sequence" />
+                <field name="sequence" widget="handle" />
             </tree>
         </field>
     </record>
 
-    <record id="accountant_client_account_type_view_form" model="ir.ui.view">
-        <field name="name">accountant.client_account_type form</field>
-        <field name="model">accountant.client_account_type</field>
+    <record
+            id="accountant_general_audit_index_a1101_status_view_form"
+            model="ir.ui.view"
+        >
+        <field name="name">accountant.general_audit_index_a1101_status form</field>
+        <field name="model">accountant.general_audit_index_a1101_status</field>
         <field name="arch" type="xml">
             <form>
                 <header />
@@ -44,30 +53,30 @@
                     <group name="group_1" colspan="4" col="2">
                         <field name="name" />
                         <field name="code" />
-                        <field name="active" />
                         <field name="sequence" />
-                        <field name="description" />
-                        <field name="extrapolation_python_code" />
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
-    <record id="accountant_client_account_type_action" model="ir.actions.act_window">
-        <field name="name">Account Type</field>
+    <record
+            id="accountant_general_audit_index_a1101_status_action"
+            model="ir.actions.act_window"
+        >
+        <field name="name">General Audit Index A1101 Status</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">accountant.client_account_type</field>
+        <field name="res_model">accountant.general_audit_index_a1101_status</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem
-            id="accountant_client_account_type_menu"
-            name="Account Type"
-            parent="accountant_configuration_general_audit_menu"
-            action="accountant_client_account_type_action"
-            sequence="2"
+            id="accountant_general_audit_index_a1101_status_menu"
+            name="Index A1101 Status"
+            parent="accountant_general_audit.accountant_configuration_general_audit_menu"
+            action="accountant_general_audit_index_a1101_status_action"
+            sequence="5"
         />
 
 
