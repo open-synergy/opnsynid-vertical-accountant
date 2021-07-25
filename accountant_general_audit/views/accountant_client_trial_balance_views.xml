@@ -371,7 +371,7 @@
             name="Trial Balance"
             parent="accountant_general_audit_menu"
             action="accountant_client_trial_balance_action"
-            sequence="0"
+            sequence="2"
         />
 
 

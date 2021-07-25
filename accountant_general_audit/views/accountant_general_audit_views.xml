@@ -49,11 +49,6 @@
                         />
                 </group>
                 <separator />
-                <filter
-                        string="New Mail"
-                        name="message_unread"
-                        domain="[('message_unread','=',True)]"
-                    />
                 <group name="group" string="Group By">
                     <filter
                             name="grp_company"
@@ -106,7 +101,6 @@
         <field name="model">accountant.general_audit</field>
         <field name="arch" type="xml">
             <tree
-                    fonts="bold:message_unread==True"
                     colors="red:date_start and (date_start&lt;current_date) and (state in ('confirm','valid'));blue:state == 'draft';grey:state == 'cancel';"
                 >
                 <field name="message_unread" invisible="1" />
@@ -325,7 +319,7 @@
             name="General Audit"
             parent="accountant_general_audit_menu"
             action="accountant_general_audit_action"
-            sequence="2"
+            sequence="1"
         />
 
 

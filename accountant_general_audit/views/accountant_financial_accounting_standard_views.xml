@@ -68,7 +68,7 @@
 
     <menuitem
             id="accountant_financial_accounting_standard_menu"
-            name="Accountant Financial Accounting Standard"
+            name="Financial Accounting Standard"
             parent="accountant_configuration_general_audit_menu"
             action="accountant_financial_accounting_standard_action"
             sequence="3"
