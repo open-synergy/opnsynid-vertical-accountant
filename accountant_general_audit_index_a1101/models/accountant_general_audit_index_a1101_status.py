@@ -6,9 +6,9 @@
 from openerp import fields, models
 
 
-class AccountantClientAccountType(models.Model):
-    _name = "accountant.client_account_type"
-    _description = "Accountant Client Account Type"
+class AccountantGeneralAuditIndexA1101Status(models.Model):
+    _name = "accountant.general_audit_index_a1101_status"
+    _description = "Accountant General Audit IndexA1101 Status"
     _order = "sequence, id"
 
     name = fields.Char(
@@ -23,16 +23,4 @@ class AccountantClientAccountType(models.Model):
         string="Sequence",
         required=True,
         default=5,
-    )
-    active = fields.Boolean(
-        string="Active",
-        default=True,
-    )
-    description = fields.Text(
-        string="Description",
-    )
-    extrapolation_python_code = fields.Text(
-        string="Python Code for Extrapolation",
-        required=True,
-        default="result = document.balance",
     )

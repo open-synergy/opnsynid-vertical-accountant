@@ -5,16 +5,16 @@
 <openerp>
 <data>
 
-    <record id="accountant_client_trial_balance_view_search" model="ir.ui.view">
-        <field name="name">accountant.client_trial_balance form</field>
-        <field name="model">accountant.client_trial_balance</field>
+    <record id="accountant_general_audit_index_a1101_view_search" model="ir.ui.view">
+        <field name="name">accountant.general_audit_index_a1101 form</field>
+        <field name="model">accountant.general_audit_index_a1101</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
-                <field name="partner_id" />
-                <field name="date_start" />
-                <field name="date_end" />
+                <field name="general_audit_id" />
                 <field name="account_type_set_id" />
+                <field name="partner_id" />
+                <field name="status_id" />
                 <field name="company_id" groups="base.group_multi_company" />
                 <group name="dom_state" string="State">
                     <filter
@@ -66,63 +66,42 @@
                             context="{'group_by':'partner_id'}"
                         />
                     <filter
-                            name="grp_account_type_set"
-                            string="Account Type Set"
-                            context="{'group_by':'account_type_set_id'}"
+                            name="grp_trial_balance"
+                            string="Trial Balance"
+                            context="{'group_by':'trial_balance_id'}"
                         />
                     <filter
                             name="grp_state"
                             string="State"
                             context="{'group_by':'state'}"
                         />
-                    <filter
-                            name="grp_date_start_year"
-                            string="Start Date by Year"
-                            context="{'group_by':'date_start:year'}"
-                        />
-                    <filter
-                            name="grp_date_start_month"
-                            string="Start Date by Month"
-                            context="{'group_by':'date_start:month'}"
-                        />
-                    <filter
-                            name="grp_date_start_week"
-                            string="Start Date by Week"
-                            context="{'group_by':'date_start:week'}"
-                        />
-                    <filter
-                            name="grp_date_start_day"
-                            string="Start Date by Day"
-                            context="{'group_by':'date_start:day'}"
-                        />
                 </group>
             </search>
         </field>
     </record>
 
-    <record id="accountant_client_trial_balance_view_tree" model="ir.ui.view">
-        <field name="name">accountant.client_trial_balance tree</field>
-        <field name="model">accountant.client_trial_balance</field>
+    <record id="accountant_general_audit_index_a1101_view_tree" model="ir.ui.view">
+        <field name="name">accountant.general_audit_index_a1101 tree</field>
+        <field name="model">accountant.general_audit_index_a1101</field>
         <field name="arch" type="xml">
             <tree
                     fonts="bold:message_unread==True"
-                    colors="red:date_start and (date_start&lt;current_date) and (state in ('confirm','valid'));blue:state == 'draft';grey:state == 'cancel';"
+                    colors="red:(state in ('confirm','valid'));blue:state == 'draft';grey:state == 'cancel';"
                 >
                 <field name="message_unread" invisible="1" />
                 <field name="name" />
+                <field name="general_audit_id" />
+                <field name="account_type_set_id" />
                 <field name="company_id" groups="base.group_multi_company" />
                 <field name="partner_id" />
-                <field name="date_start" />
-                <field name="date_end" />
-                <field name="account_type_set_id" />
                 <field name="state" />
             </tree>
         </field>
     </record>
 
-    <record id="accountant_client_trial_balance_view_form" model="ir.ui.view">
-        <field name="name">accountant.client_trial_balance form</field>
-        <field name="model">accountant.client_trial_balance</field>
+    <record id="accountant_general_audit_index_a1101_view_form" model="ir.ui.view">
+        <field name="name">accountant.general_audit_index_a1101 form</field>
+        <field name="model">accountant.general_audit_index_a1101</field>
         <field name="arch" type="xml">
             <form>
                 <header>
@@ -144,7 +123,7 @@
                     <button
                             name="restart_validation"
                             string="Restart Validation"
-                            attrs="{'invisible': ['|','|','|',('review_ids', '=', []),('rejected','=',False),('state','not in',['confirm']),('restart_approval_ok','=',False)]}"
+                            attrs="{'invisible': ['|','|','|',('review_ids', '=', []),('rejected','=',False),('state','not in',['confirm']),('restart_validation_ok','=',False)]}"
                             type="object"
                         />
                     <button
@@ -183,7 +162,9 @@
                      ('rejected', '=', True), ('review_ids', '=', [])]}"
                         style="margin-bottom:0px;"
                     >
-                    <p><i class="fa fa-info-circle" />This trial balance needs to be
+                    <p><i
+                                class="fa fa-info-circle"
+                            />This General Audit Index A1101 needs to be
                         validated.
                         <button
                                 name="validate_tier"
@@ -228,6 +209,8 @@
                     </div>
                     <group name="group_1" colspan="4" col="2">
                         <group name="group_1_1" colspan="1" col="2">
+                            <field name="general_audit_id" />
+                            <field name="account_type_set_id" />
                             <field
                                     name="company_id"
                                     groups="base.group_multi_company"
@@ -236,73 +219,25 @@
                                     name="partner_id"
                                     domain="[('parent_id','=',False)]"
                                 />
-                            <field name="account_type_set_id" />
-                            <field
-                                    name="allowed_type_ids"
-                                    widget="many2many_tags"
-                                    invisible="1"
-                                />
-                            <field name="currency_id" />
-                        </group>
-                        <group name="group_1_2">
-                            <field name="date_start" />
-                            <field name="date_end" />
-                            <field name="previous_date_start" />
-                            <field name="previous_date_end" />
-                            <field name="balance_date_start" />
-                            <field name="balance_date_end" />
+                            <field name="status_id" />
                         </group>
                     </group>
                     <notebook colspan="4">
-                        <page string="Detail" name="details">
-                            <field name="detail_ids" colspan="1" col="2" nolabel="1">
-                                <tree editable="bottom">
-                                    <field name="sequence" widget="handle" />
-                                    <field name="code" />
-                                    <field name="name" />
-                                    <field
-                                            name="type_id"
-                                            domain="[('id','in',parent.allowed_type_ids[0][2])]"
-                                        />
-                                    <field name="previous_balance" />
-                                    <field name="balance" />
-                                </tree>
-                            </field>
-                        </page>
-                        <page string="Standard Detail" name="standard_details">
-                            <field
-                                    name="standard_detail_ids"
-                                    colspan="1"
-                                    col="2"
-                                    nolabel="1"
-                                >
-                                <tree>
-                                    <field name="sequence" invisible="1" />
-                                    <field name="type_id" />
-                                    <field name="previous_balance" />
-                                    <field name="balance" />
-                                    <field name="extrapolation_balance" />
-                                </tree>
-                            </field>
-                        </page>
-                        <page string="Computation" name="computations">
-                            <field
-                                    name="computation_ids"
-                                    colspan="1"
-                                    col="2"
-                                    nolabel="1"
-                                >
-                                <tree>
-                                    <field name="computation_item_id" />
-                                    <field name="amount" />
-                                </tree>
-                            </field>
+                        <page name="question" string="Question">
+                            <group name="grup_question" colspan="4" col="2">
+                                <field name="question_1a" />
+                                <field name="question_1b" />
+                                <field name="question_2" />
+                                <field name="question_3" />
+                                <field name="question_4" />
+                                <field name="question_5" />
+                            </group>
                         </page>
                         <page string="Reviews" name="tier_validation">
                             <group name="tier_validation_1" colspan="4" col="2">
                                 <field
                                         name="definition_id"
-                                        groups="account_general_audit.accountant_client_trial_balance_multiple_approval_setting_group"
+                                        groups="account_general_audit.accountant_general_audit_index_a1101_multiple_approval_setting_group"
                                     />
                                 <field
                                         name="reviewer_partner_ids"
@@ -316,12 +251,12 @@
                         <page
                                 name="policy"
                                 string="Policies"
-                                groups="account_general_audit.accountant_client_trial_balance_workflow_policy_setting_group"
+                                groups="accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_workflow_policy_setting_group"
                             >
                             <group name="policy_1" colspan="4" col="2">
                                 <field name="confirm_ok" />
                                 <field name="valid_ok" />
-                                <field name="restart_approval_ok" />
+                                <field name="restart_validation_ok" />
                                 <field name="cancel_ok" />
                                 <field name="restart_ok" />
                             </group>
@@ -352,10 +287,13 @@
         </field>
     </record>
 
-    <record id="accountant_client_trial_balance_action" model="ir.actions.act_window">
-        <field name="name">Trial Balance</field>
+    <record
+            id="accountant_general_audit_index_a1101_action"
+            model="ir.actions.act_window"
+        >
+        <field name="name">General Audit Index A1101</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">accountant.client_trial_balance</field>
+        <field name="res_model">accountant.general_audit_index_a1101</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="context">{
@@ -367,11 +305,11 @@
     </record>
 
     <menuitem
-            id="accountant_client_trial_balance_menu"
-            name="Trial Balance"
-            parent="accountant_general_audit_menu"
-            action="accountant_client_trial_balance_action"
-            sequence="0"
+            id="accountant_general_audit_index_a1101_menu"
+            name="General Audit Index A1101"
+            parent="accountant_general_audit.accountant_general_audit_menu"
+            action="accountant_general_audit_index_a1101_action"
+            sequence="3"
         />
 
 
