@@ -13,16 +13,12 @@ class AccountantGeneralAuditIndexA1101(models.Model):
     _inherit = [
         "mail.thread",
         "tier.validation",
+        "base.sequence_document",
         "base.workflow_policy_object",
         "base.cancel.reason_common",
-        # "ir.needaction_mixin",
     ]
     _state_from = ["draft", "confirm"]
     _state_to = ["valid"]
-
-    # @api.model
-    # def _default_company_id(self):
-    #     return self.env.user.company_id.id
 
     @api.multi
     @api.depends(
@@ -44,33 +40,43 @@ class AccountantGeneralAuditIndexA1101(models.Model):
             ],
         },
     )
-    trial_balance_id = fields.Many2one(
-        string="Trial Balance",
-        comodel_name="accountant.client_trial_balance",
+    general_audit_id = fields.Many2one(
+        string="General Audit",
+        comodel_name="accountant.general_audit",
         required=True,
         states={
             "draft": [
                 ("readonly", False),
             ],
         },
+    )
+    account_type_set_id = fields.Many2one(
+        string="Accoount Type Set",
+        comodel_name="accountant.client_account_type_set",
+        related="general_audit_id.account_type_set_id",
+        readonly=True,
+        store=False,
     )
     company_id = fields.Many2one(
         string="Company",
         comodel_name="res.company",
         required=True,
         readonly=True,
-        related=trial_balance_id.company_id,
+        related="general_audit_id.company_id",
     )
     partner_id = fields.Many2one(
         string="Partner",
         comodel_name="res.partner",
-        related=trial_balance_id.partner_id,
+        related="general_audit_id.partner_id",
         required=True,
         readonly=True,
     )
-    question_1a = fields.Text(
+    question_1a = fields.Selection(
         string="Question 1a",
-        # required=True,
+        selection=[
+            ("yes", "Yes"),
+            ("no", "No"),
+        ],
         readonly=True,
         states={
             "draft": [
@@ -78,9 +84,12 @@ class AccountantGeneralAuditIndexA1101(models.Model):
             ],
         },
     )
-    question_1b = fields.Text(
+    question_1b = fields.Selection(
         string="Question 1b",
-        # required=True,
+        selection=[
+            ("yes", "Yes"),
+            ("no", "No"),
+        ],
         readonly=True,
         states={
             "draft": [
@@ -88,9 +97,12 @@ class AccountantGeneralAuditIndexA1101(models.Model):
             ],
         },
     )
-    question_2 = fields.Text(
+    question_2 = fields.Selection(
         string="Question 2",
-        # required=True,
+        selection=[
+            ("yes", "Yes"),
+            ("no", "No"),
+        ],
         readonly=True,
         states={
             "draft": [
@@ -98,9 +110,12 @@ class AccountantGeneralAuditIndexA1101(models.Model):
             ],
         },
     )
-    question_3 = fields.Text(
+    question_3 = fields.Selection(
         string="Question 3",
-        # required=True,
+        selection=[
+            ("yes", "Yes"),
+            ("no", "No"),
+        ],
         readonly=True,
         states={
             "draft": [
@@ -108,9 +123,12 @@ class AccountantGeneralAuditIndexA1101(models.Model):
             ],
         },
     )
-    question_4 = fields.Text(
+    question_4 = fields.Selection(
         string="Question 4",
-        # required=True,
+        selection=[
+            ("yes", "Yes"),
+            ("no", "No"),
+        ],
         readonly=True,
         states={
             "draft": [
@@ -118,9 +136,12 @@ class AccountantGeneralAuditIndexA1101(models.Model):
             ],
         },
     )
-    question_5 = fields.Text(
+    question_5 = fields.Selection(
         string="Question 5",
-        # required=True,
+        selection=[
+            ("yes", "Yes"),
+            ("no", "No"),
+        ],
         readonly=True,
         states={
             "draft": [
@@ -129,7 +150,7 @@ class AccountantGeneralAuditIndexA1101(models.Model):
         },
     )
     status_id = fields.Many2one(
-        string="Trial Balance",
+        string="Status",
         comodel_name="accountant.general_audit_index_a1101_status",
         required=True,
         states={
@@ -155,8 +176,8 @@ class AccountantGeneralAuditIndexA1101(models.Model):
         string="Can Confirm",
         compute="_compute_policy",
     )
-    restart_approval_ok = fields.Boolean(
-        string="Can Restart Approval",
+    restart_validation_ok = fields.Boolean(
+        string="Can Restart Validation",
         compute="_compute_policy",
     )
     valid_ok = fields.Boolean(

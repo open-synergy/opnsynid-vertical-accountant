@@ -4,10 +4,10 @@
 <openerp>
 <data>
 <record
-            id="accountant_client_trial_balance_usability_module_category"
+            id="accountant_general_audit_index_a1101_usability_module_category"
             model="ir.module.category"
         >
-    <field name="name">Accountant Trial Balance Usability</field>
+    <field name="name">Accountant General Audit Index A1101 Usability</field>
     <field name="sequence">5</field>
 
 </record>
