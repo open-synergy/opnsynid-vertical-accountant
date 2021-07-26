@@ -29,7 +29,7 @@
             />
         <field
                 name="python_code"
-            >result = document.account_type_set_id.accountant_general_audit_index_a1101_confirm_grp_ids.ids</field>
+            >result = document.account_type_set_id.accountant_general_audit_confirm_grp_ids.ids</field>
     </record>
 
     <record
@@ -46,7 +46,7 @@
             />
         <field
                 name="python_code"
-            >result = document.account_type_set_id.accountant_general_audit_index_a1101_restart_validation_grp_ids.ids</field>
+            >result = document.account_type_set_id.accountant_general_audit_restart_validation_grp_ids.ids</field>
     </record>
 
     <record
@@ -63,7 +63,7 @@
             />
         <field
                 name="python_code"
-            >result = document.account_type_set_id.accountant_general_audit_index_a1101_cancel_grp_ids.ids</field>
+            >result = document.account_type_set_id.accountant_general_audit_cancel_grp_ids.ids</field>
     </record>
 
     <record
@@ -80,7 +80,7 @@
             />
         <field
                 name="python_code"
-            >result = document.account_type_set_id.accountant_general_audit_index_a1101_restart_grp_ids.ids</field>
+            >result = document.account_type_set_id.accountant_general_audit_restart_grp_ids.ids</field>
     </record>
 
 </data>
