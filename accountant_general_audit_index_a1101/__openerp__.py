@@ -27,6 +27,7 @@
         "data/ir_sequence_data.xml",
         "data/base_sequence_configurator_data.xml",
         "data/base_workflow_policy_data.xml",
+        "views/accountant_client_account_type_set_views.xml",
         "views/accountant_general_audit_index_a1101_views.xml",
         "views/accountant_general_audit_index_a1101_status_views.xml",
     ],
