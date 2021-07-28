@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2020 OpenSynergy Indonesia
+     Copyright 2020 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<openerp>
+<data>
+    <record id="seq_type_accountant_general_audit_index_a1104" model="ir.sequence.type">
+        <field name="name">Accountant General Audit Index A1104</field>
+        <field name="code">AGAI1104</field>
+    </record>
+</data>
+
+<data noupdate="1">
+    <record id="base_sequence_accountant_general_audit_index_a1104" model="ir.sequence">
+        <field name="name">Accountant General Audit Index A1104</field>
+        <field name="code">AGAI1104</field>
+        <field name="padding">4</field>
+        <field name="prefix">AGAI04/%(year)s/</field>
+        <field eval="1" name="number_next" />
+        <field eval="1" name="number_increment" />
+    </record>
+</data>
+
+</openerp>
