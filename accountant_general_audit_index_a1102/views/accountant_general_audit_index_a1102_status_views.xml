@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+<data>
+
+    <record
+            id="accountant_general_audit_index_a1102_status_view_search"
+            model="ir.ui.view"
+        >
+        <field name="name">accountant.general_audit_index_a1102_status form</field>
+        <field name="model">accountant.general_audit_index_a1102_status</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="code" />
+                <field name="sequence" />
+                <field name="note" />
+            </search>
+        </field>
+    </record>
+
+    <record
+            id="accountant_general_audit_index_a1102_status_view_tree"
+            model="ir.ui.view"
+        >
+        <field name="name">accountant.general_audit_index_a1102_status tree</field>
+        <field name="model">accountant.general_audit_index_a1102_status</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="code" />
+                <field name="sequence" widget="handle" />
+                <field name="note" />
+            </tree>
+        </field>
+    </record>
+
+    <record
+            id="accountant_general_audit_index_a1102_status_view_form"
+            model="ir.ui.view"
+        >
+        <field name="name">accountant.general_audit_index_a1102_status form</field>
+        <field name="model">accountant.general_audit_index_a1102_status</field>
+        <field name="arch" type="xml">
+            <form>
+                <header />
+                <sheet>
+                    <div
+                            class="oe_right oe_button_box"
+                            style="width: 300px;"
+                            name="buttons"
+                        />
+                    <group name="group_1" colspan="4" col="2">
+                        <field name="name" />
+                        <field name="code" />
+                        <field name="sequence" />
+                        <field name="note" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record
+            id="accountant_general_audit_index_a1102_status_action"
+            model="ir.actions.act_window"
+        >
+        <field name="name">General Audit Index A1102 Status</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.general_audit_index_a1102_status</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="accountant_general_audit_index_a1102_status_menu"
+            name="Index A1102 Status"
+            parent="accountant_general_audit.accountant_configuration_general_audit_menu"
+            action="accountant_general_audit_index_a1102_status_action"
+            sequence="6"
+        />
+
+
+</data>
+</openerp>
