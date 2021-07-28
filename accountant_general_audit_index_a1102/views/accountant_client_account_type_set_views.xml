@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<openerp>
+<data>
+    <record id="accountant_client_account_type_set_view_form" model="ir.ui.view">
+        <field name="name">accountant.client_account_type_set form</field>
+        <field name="model">accountant.client_account_type_set</field>
+        <field
+                name="inherit_id"
+                ref="accountant_general_audit.accountant_client_account_type_set_view_form"
+            />
+        <field name="arch" type="xml">
+            <xpath
+                    expr="//field[@name='accountant_general_audit_sequence_id']"
+                    position="after"
+                >
+                <field name="index_a1102_sequence_id" />
+            </xpath>
+        </field>
+    </record>
+</data>
+</openerp>
