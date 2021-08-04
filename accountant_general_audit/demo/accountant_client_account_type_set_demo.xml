@@ -7,6 +7,10 @@
     <record id="demo_trading_set" model="accountant.client_account_type_set">
         <field name="name">Trading &amp; Service</field>
         <field name="code">T001</field>
+        <field
+                name="detail_ids"
+                eval="[(6, 0, [ref('acc_type_t001'),ref('acc_type_t002'),ref('acc_type_t003'),ref('acc_type_t004'),ref('acc_type_t005'),ref('acc_type_t006'),ref('acc_type_t007'),ref('acc_type_t008'),ref('acc_type_t009'),ref('acc_type_t010'),ref('acc_type_t011'),ref('acc_type_t012'),ref('acc_type_t013'),ref('acc_type_t014'),ref('acc_type_t015'),ref('acc_type_t016'),ref('acc_type_t017'),ref('acc_type_t018'),ref('acc_type_t019'),ref('acc_type_t020'),ref('acc_type_t021'),ref('acc_type_t022'),ref('acc_type_t023'),ref('acc_type_t024'),ref('acc_type_t025'),ref('acc_type_t026'),ref('acc_type_t027'),ref('acc_type_t028'),ref('acc_type_t029'),ref('acc_type_t030'),ref('acc_type_t031'),ref('acc_type_t032'),ref('acc_type_t033'),ref('acc_type_t034'),ref('acc_type_t035'),ref('acc_type_t036'),ref('acc_type_t037'),ref('acc_type_t038'),ref('acc_type_t039'),ref('acc_type_t040'),ref('acc_type_t041'),ref('acc_type_t042'),ref('acc_type_t043')])]"
+            />
     </record>
 </data>
 </openerp>
