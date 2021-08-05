@@ -155,15 +155,11 @@ class AccountantClientTrialBalance(models.Model):
         "account_type_set_id",
     )
     def _compute_account_type_ids(self):
-        obj_type_set = self.env["accountant.client_account_type_set"]
         for document in self:
             result = []
-            criteria = []
             if document.account_type_set_id:
-                criteria.append(
-                    ("detail_ids", "in", document.account_type_set_id.id),
-                )
-                result = obj_type_set.search(criteria).detail_ids
+                type_set = document.account_type_set_id
+                result = type_set.detail_ids
         document.allowed_type_ids = result
 
     allowed_type_ids = fields.Many2many(

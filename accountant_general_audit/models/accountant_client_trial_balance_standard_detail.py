@@ -54,7 +54,7 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
                 )
                 extrapolation_balance = localdict["result"]
             except Exception:
-                extrapolation_balance = 0.0
+                extrapolation_balance = 7.0
             document.previous_balance = previous_balance
             document.balance = balance
             document.extrapolation_balance = extrapolation_balance
@@ -96,12 +96,30 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
     def _get_localdict(self, previous_balance, balance):
         self.ensure_one()
         tb = self.trial_balance_id
-        date_start = datetime.strptime(tb.date_start, "%Y-%m-%d")
-        date_end = datetime.strptime(tb.date_end, "%Y-%m-%d")
-        previous_date_start = datetime.strptime(tb.previous_date_start, "%Y-%m-%d")
-        previous_date_end = datetime.strptime(tb.previous_date_end, "%Y-%m-%d")
-        balance_date_start = datetime.strptime(tb.balance_date_start, "%Y-%m-%d")
-        balance_date_end = datetime.strptime(tb.balance_date_end, "%Y-%m-%d")
+        date_start = (
+            tb.date_start and datetime.strptime(tb.date_start, "%Y-%m-%d") or False
+        )
+        date_end = tb.date_end and datetime.strptime(tb.date_end, "%Y-%m-%d") or False
+        previous_date_start = (
+            tb.previous_date_start
+            and datetime.strptime(tb.previous_date_start, "%Y-%m-%d")
+            or False
+        )
+        previous_date_end = (
+            tb.previous_date_end
+            and datetime.strptime(tb.previous_date_end, "%Y-%m-%d")
+            or False
+        )
+        balance_date_start = (
+            tb.balance_date_start
+            and datetime.strptime(tb.balance_date_start, "%Y-%m-%d")
+            or False
+        )
+        balance_date_end = (
+            tb.balance_date_end
+            and datetime.strptime(tb.balance_date_end, "%Y-%m-%d")
+            or False
+        )
         return {
             "env": self.env,
             "document": self,
