@@ -1,0 +1,416 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2020 OpenSynergy Indonesia
+     Copyright 2020 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<openerp>
+<data noupdate="1">
+    <record id="acc_type_t001" model="accountant.client_account_type">
+        <field name="name">Cash and Cash Equivalent</field>
+        <field name="code">T001</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t002" model="accountant.client_account_type">
+        <field name="name">Long Term Investment</field>
+        <field name="code">T002</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t003" model="accountant.client_account_type">
+        <field name="name">Account Receivable</field>
+        <field name="code">T003</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t004" model="accountant.client_account_type">
+        <field name="name">Third Party Receivable</field>
+        <field name="code">T004</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t005" model="accountant.client_account_type">
+        <field name="name">Other Receivable</field>
+        <field name="code">T005</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t006" model="accountant.client_account_type">
+        <field name="name">Inventory</field>
+        <field name="code">T006</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t007" model="accountant.client_account_type">
+        <field name="name">Prepaid Tax</field>
+        <field name="code">T007</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t008" model="accountant.client_account_type">
+        <field name="name">Prepaid Expense</field>
+        <field name="code">T008</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t009" model="accountant.client_account_type">
+        <field name="name">Long Term Investment</field>
+        <field name="code">T009</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t010" model="accountant.client_account_type">
+        <field name="name">Fixed Asset</field>
+        <field name="code">T010</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t011" model="accountant.client_account_type">
+        <field name="name">Right of Use Asset</field>
+        <field name="code">T011</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t012" model="accountant.client_account_type">
+        <field name="name">Intangible Asset</field>
+        <field name="code">T012</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t013" model="accountant.client_account_type">
+        <field name="name">Other Asset</field>
+        <field name="code">T013</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t014" model="accountant.client_account_type">
+        <field name="name">Deffered Expense</field>
+        <field name="code">T013</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t015" model="accountant.client_account_type">
+        <field name="name">Account Payable</field>
+        <field name="code">T015</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t016" model="accountant.client_account_type">
+        <field name="name">Tax Payable</field>
+        <field name="code">T016</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t017" model="accountant.client_account_type">
+        <field name="name">Other Payable</field>
+        <field name="code">T017</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t018" model="accountant.client_account_type">
+        <field name="name">Accrue Expense</field>
+        <field name="code">T018</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t019" model="accountant.client_account_type">
+        <field name="name">Bank Loan</field>
+        <field name="code">T019</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t020" model="accountant.client_account_type">
+        <field name="name">Lease</field>
+        <field name="code">T020</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t021" model="accountant.client_account_type">
+        <field name="name">Other Long Term Payable</field>
+        <field name="code">T021</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t022" model="accountant.client_account_type">
+        <field name="name">Stock</field>
+        <field name="code">T022</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t023" model="accountant.client_account_type">
+        <field name="name">Additional Paid-In Capital</field>
+        <field name="code">T023</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t024" model="accountant.client_account_type">
+        <field name="name">Capital Reserves</field>
+        <field name="code">T024</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t025" model="accountant.client_account_type">
+        <field name="name">Opening Balance</field>
+        <field name="code">T025</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+delta_balance = interim_balance - previous_balance
+result = previous_balance + (365.0/delta_days) * delta_balance</field>
+    </record>
+
+    <record id="acc_type_t026" model="accountant.client_account_type">
+        <field name="name">Current Earning</field>
+        <field name="code">T026</field>
+        <field name="extrapolation_python_code">result = interim_balance</field>
+    </record>
+
+    <record id="acc_type_t027" model="accountant.client_account_type">
+        <field name="name">Opening Other Comprehensive Income</field>
+        <field name="code">T027</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t028" model="accountant.client_account_type">
+        <field name="name">Current Other Comprehensive Income</field>
+        <field name="code">T028</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t029" model="accountant.client_account_type">
+        <field name="name">Goods Sales</field>
+        <field name="code">T029</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t030" model="accountant.client_account_type">
+        <field name="name">Service Sales</field>
+        <field name="code">T030</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t031" model="accountant.client_account_type">
+        <field name="name">Interest Income</field>
+        <field name="code">T031</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t032" model="accountant.client_account_type">
+        <field name="name">Other Income</field>
+        <field name="code">T032</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t033" model="accountant.client_account_type">
+        <field name="name">Other Comprehensive Income - A</field>
+        <field name="code">T033</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t034" model="accountant.client_account_type">
+        <field name="name">Other Comprehensive Income - B</field>
+        <field name="code">T034</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t035" model="accountant.client_account_type">
+        <field name="name">Cost of Goods Sold</field>
+        <field name="code">T035</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t036" model="accountant.client_account_type">
+        <field name="name">Cost of Service</field>
+        <field name="code">T036</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t037" model="accountant.client_account_type">
+        <field name="name">Human Resource Expense</field>
+        <field name="code">T037</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t038" model="accountant.client_account_type">
+        <field name="name">General and Administrative Expense</field>
+        <field name="code">T038</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t039" model="accountant.client_account_type">
+        <field name="name">Depreciation and Amortization Expense</field>
+        <field name="code">T039</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t040" model="accountant.client_account_type">
+        <field name="name">Interest Expense</field>
+        <field name="code">T040</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t041" model="accountant.client_account_type">
+        <field name="name">Other Expense</field>
+        <field name="code">T041</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t042" model="accountant.client_account_type">
+        <field name="name">Current Tax</field>
+        <field name="code">T042</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+
+    <record id="acc_type_t043" model="accountant.client_account_type">
+        <field name="name">Deffered Tax</field>
+        <field name="code">T043</field>
+        <field
+                name="extrapolation_python_code"
+            >delta_days = (interim_date_end - previous_date_end).days
+result = (365.0/delta_days) * interim_balance</field>
+    </record>
+</data>
+</openerp>

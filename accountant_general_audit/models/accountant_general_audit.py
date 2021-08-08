@@ -37,6 +37,16 @@ class AccountantGeneralAudit(models.Model):
         _super = super(AccountantGeneralAudit, self)
         _super._compute_policy()
 
+    @api.multi
+    @api.depends(
+        "trial_balance_ids",
+    )
+    def _compute_trial_balance_id(self):
+        for document in self:
+            document.trial_balance_id = False
+            if len(document.trial_balance_ids) > 0:
+                document.trial_balance_id = document.trial_balance_ids[0]
+
     name = fields.Char(
         string="# Document",
         default="/",
@@ -86,8 +96,8 @@ class AccountantGeneralAudit(models.Model):
             ],
         },
     )
-    balance_date_start = fields.Date(
-        string="Balance Start Date",
+    interim_date_start = fields.Date(
+        string="Interim Start Date",
         required=True,
         readonly=True,
         states={
@@ -96,8 +106,8 @@ class AccountantGeneralAudit(models.Model):
             ],
         },
     )
-    balance_date_end = fields.Date(
-        string="Balance End Date",
+    interim_date_end = fields.Date(
+        string="Interim End Date",
         required=True,
         readonly=True,
         states={
@@ -172,6 +182,19 @@ class AccountantGeneralAudit(models.Model):
         default="draft",
         required=True,
         readonly=True,
+    )
+    trial_balance_ids = fields.Many2many(
+        string="Trial Balance",
+        comodel_name="accountant.client_trial_balance",
+        relation="rel_general_audit_2_trial_balance",
+        column1="general_audit_id",
+        column2="trial_balance_id",
+    )
+    trial_balance_id = fields.Many2one(
+        string="# Trial Balance",
+        comodel_name="accountant.client_trial_balance",
+        compute="_compute_trial_balance_id",
+        store=True,
     )
     confirm_ok = fields.Boolean(
         string="Can Confirm",
@@ -334,14 +357,14 @@ class AccountantGeneralAudit(models.Model):
                 if record.date_end < record.date_start:
                     raise UserError(strWarning)
 
-    @api.constrains("balance_date_start", "balance_date_end")
-    def _check_balance_date_start_end(self):
+    @api.constrains("interim_date_start", "interim_date_end")
+    def _check_interim_date_start_end(self):
         for record in self:
-            if record.balance_date_start and record.balance_date_end:
+            if record.interim_date_start and record.interim_date_end:
                 strWarning = _(
-                    "Balance Date end must be greater than Balance date start"
+                    "Interim Date end must be greater than Interim Date start"
                 )
-                if record.balance_date_end < record.balance_date_start:
+                if record.interim_date_end < record.interim_date_start:
                     raise UserError(strWarning)
 
     @api.constrains("previous_date_start", "previous_date_end")
@@ -354,12 +377,12 @@ class AccountantGeneralAudit(models.Model):
                 if record.previous_date_end < record.previous_date_start:
                     raise UserError(strWarning)
 
-    @api.constrains("balance_date_start", "previous_date_end")
-    def _check_previous_balance_date(self):
+    @api.constrains("interim_date_start", "previous_date_end")
+    def _check_previous_interim_date(self):
         for record in self:
-            if record.balance_date_start and record.previous_date_end:
+            if record.interim_date_start and record.previous_date_end:
                 strWarning = _(
-                    "Balance date start must be greater than previous balance date end"
+                    "Interim Date start must be greater than previous Interim Date end"
                 )
-                if record.previous_date_end >= record.balance_date_start:
+                if record.previous_date_end >= record.interim_date_start:
                     raise UserError(strWarning)

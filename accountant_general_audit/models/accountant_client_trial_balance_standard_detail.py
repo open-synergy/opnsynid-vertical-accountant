@@ -20,19 +20,20 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         "trial_balance_id.date_end",
         "trial_balance_id.previous_date_start",
         "trial_balance_id.previous_date_end",
-        "trial_balance_id.balance_date_start",
-        "trial_balance_id.balance_date_end",
+        "trial_balance_id.interim_date_start",
+        "trial_balance_id.interim_date_end",
         "type_id",
         "trial_balance_id.detail_ids",
         "trial_balance_id.detail_ids.type_id",
         "trial_balance_id.detail_ids.previous_balance",
         "trial_balance_id.detail_ids.balance",
+        "trial_balance_id.detail_ids.interim_balance",
     )
     @api.multi
     def _compute_balance(self):
         obj_detail = self.env["accountant.client_trial_balance_detail"]
         for document in self:
-            previous_balance = balance = extrapolation_balance = 0.0
+            previous_balance = balance = interim_balance = extrapolation_balance = 0.0
 
             criteria = [
                 ("trial_balance_id", "=", document.trial_balance_id.id),
@@ -41,9 +42,11 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
             for detail in obj_detail.search(criteria):
                 previous_balance += detail.previous_balance
                 balance += detail.balance
+                interim_balance += detail.interim_balance
             localdict = document._get_localdict(
                 previous_balance,
                 balance,
+                interim_balance,
             )
             try:
                 eval(
@@ -91,9 +94,10 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         string="Trial Balance",
         comodel_name="accountant.client_trial_balance",
         required=True,
+        ondelete="cascade",
     )
 
-    def _get_localdict(self, previous_balance, balance):
+    def _get_localdict(self, previous_balance, balance, interim_balance):
         self.ensure_one()
         tb = self.trial_balance_id
         date_start = (
@@ -110,26 +114,27 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
             and datetime.strptime(tb.previous_date_end, "%Y-%m-%d")
             or False
         )
-        balance_date_start = (
-            tb.balance_date_start
-            and datetime.strptime(tb.balance_date_start, "%Y-%m-%d")
+        interim_date_start = (
+            tb.interim_date_start
+            and datetime.strptime(tb.interim_date_start, "%Y-%m-%d")
             or False
         )
-        balance_date_end = (
-            tb.balance_date_end
-            and datetime.strptime(tb.balance_date_end, "%Y-%m-%d")
+        interim_date_end = (
+            tb.interim_date_end
+            and datetime.strptime(tb.interim_date_end, "%Y-%m-%d")
             or False
         )
         return {
             "env": self.env,
             "document": self,
             "previous_balance": previous_balance,
+            "interim_balance": interim_balance,
             "balance": balance,
             "datetime": datetime,
             "date_start": date_start,
             "date_end": date_end,
             "previous_date_start": previous_date_start,
             "previous_date_end": previous_date_end,
-            "balance_date_start": balance_date_start,
-            "balance_date_end": balance_date_end,
+            "interim_date_start": interim_date_start,
+            "interim_date_end": interim_date_end,
         }

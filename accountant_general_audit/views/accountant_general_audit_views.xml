@@ -241,11 +241,21 @@
                             <field name="date_end" />
                             <field name="previous_date_start" />
                             <field name="previous_date_end" />
-                            <field name="balance_date_start" />
-                            <field name="balance_date_end" />
+                            <field name="interim_date_start" />
+                            <field name="interim_date_end" />
                         </group>
                     </group>
                     <notebook colspan="4">
+                        <page name="link" string="Links">
+                            <group name="link1" colspan="4" col="2">
+                                <field
+                                        name="trial_balance_ids"
+                                        invisible="1"
+                                        widget="many2many_tags"
+                                    />
+                                <field name="trial_balance_id" />
+                            </group>
+                        </page>
                         <page string="Reviews" name="tier_validation">
                             <group name="tier_validation_1" colspan="4" col="2">
                                 <field
