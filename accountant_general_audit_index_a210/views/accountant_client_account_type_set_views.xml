@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+<data>
+    <record id="accountant_client_account_type_set_view_form" model="ir.ui.view">
+        <field name="name">accountant.client_account_type_set form</field>
+        <field name="model">accountant.client_account_type_set</field>
+        <field
+                name="inherit_id"
+                ref="accountant_general_audit.accountant_client_account_type_set_view_form"
+            />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//notebook" position="inside">
+                    <page name="index_a210" string="Index 210">
+                        <group
+                                name="index_a210_1"
+                                colspan="4"
+                                col="2"
+                                string="Python Computation"
+                            >
+                            <field
+                                    name="total_asset_python_code"
+                                    string="Total Asset"
+                                />
+                            <field name="net_asset_python_code" string="Net Asset" />
+                            <field name="revenue_python_code" string="Revenue" />
+                            <field
+                                    name="cost_of_revenue_python_code"
+                                    string="Cost of Revenue"
+                                />
+                            <field name="ebt_python_code" string="EBT" />
+                            <field name="ebitda_python_code" string="EBITDA" />
+                            <field
+                                    name="total_liability_python_code"
+                                    string="Total Liability"
+                                />
+                        </group>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+</data>
+</openerp>
