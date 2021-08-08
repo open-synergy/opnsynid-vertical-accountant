@@ -70,7 +70,7 @@
             id="accountant_general_audit_index_a1101_status_action"
             model="ir.actions.act_window"
         >
-        <field name="name">Index A1101 Status</field>
+        <field name="name">Index A.110.1 Status</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">accountant.general_audit_index_a1101_status</field>
         <field name="view_type">form</field>
@@ -79,7 +79,7 @@
 
     <menuitem
             id="accountant_general_audit_index_a1101_status_menu"
-            name="Index A1101 Status"
+            name="Index A.110.1 Status"
             parent="accountant_general_audit.accountant_configuration_general_audit_menu"
             action="accountant_general_audit_index_a1101_status_action"
             sequence="5"

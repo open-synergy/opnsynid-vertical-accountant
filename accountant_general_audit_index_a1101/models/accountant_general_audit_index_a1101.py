@@ -9,7 +9,7 @@ from openerp.exceptions import Warning as UserError
 
 class AccountantGeneralAuditIndexA1101(models.Model):
     _name = "accountant.general_audit_index_a1101"
-    _description = "Accountant General Audit Index A1101"
+    _description = "Accountant General Audit Index A.110.1"
     _inherit = [
         "mail.thread",
         "tier.validation",
@@ -28,6 +28,26 @@ class AccountantGeneralAuditIndexA1101(models.Model):
         _super = super(AccountantGeneralAuditIndexA1101, self)
         _super._compute_policy()
 
+    @api.multi
+    @api.depends(
+        "general_audit_ids",
+    )
+    def _compute_general_audit_id(self):
+        for document in self:
+            document.general_audit_id = False
+            if len(document.general_audit_ids) > 0:
+                document.general_audit_id = document.general_audit_ids[0]
+
+    @api.multi
+    @api.depends(
+        "general_audit_id",
+    )
+    def _inverse_general_audit(self):
+        for document in self:
+            if not document.general_audit_id:
+                continue
+            document.general_audit_ids = [(6, 0, [document.general_audit_id.id])]
+
     name = fields.Char(
         string="# Document",
         default="/",
@@ -43,12 +63,22 @@ class AccountantGeneralAuditIndexA1101(models.Model):
     general_audit_id = fields.Many2one(
         string="# General Audit",
         comodel_name="accountant.general_audit",
-        required=True,
+        store=True,
+        compute="_compute_general_audit_id",
+        inverse="_inverse_general_audit",
+        readonly=True,
         states={
             "draft": [
                 ("readonly", False),
             ],
         },
+    )
+    general_audit_ids = fields.Many2many(
+        string="General Audits",
+        comodel_name="accountant.general_audit",
+        relation="rel_general_audit_2_index_a1101",
+        column1="index_a1101_id",
+        column2="general_audit_id",
     )
     date_start = fields.Date(
         string="Start Date",
@@ -59,6 +89,30 @@ class AccountantGeneralAuditIndexA1101(models.Model):
     date_end = fields.Date(
         string="End Date",
         related="general_audit_id.date_end",
+        readonly=True,
+        store=True,
+    )
+    interim_date_start = fields.Date(
+        string="Interim Start Date",
+        related="general_audit_id.interim_date_start",
+        readonly=True,
+        store=True,
+    )
+    interim_date_end = fields.Date(
+        string="Interim End Date",
+        related="general_audit_id.interim_date_end",
+        readonly=True,
+        store=True,
+    )
+    previous_date_start = fields.Date(
+        string="Previous Start Date",
+        related="general_audit_id.previous_date_start",
+        readonly=True,
+        store=True,
+    )
+    previous_date_end = fields.Date(
+        string="Previous End Date",
+        related="general_audit_id.previous_date_end",
         readonly=True,
         store=True,
     )

@@ -130,9 +130,9 @@
                 <field name="company_id" groups="base.group_multi_company" />
                 <field name="display_name" string="# Document" />
                 <field name="general_audit_id" />
+                <field name="partner_id" />
                 <field name="date_start" />
                 <field name="date_end" />
-                <field name="partner_id" />
                 <field name="account_type_set_id" />
                 <field name="status_id" />
                 <field name="state" />
@@ -250,8 +250,12 @@
                     </div>
                     <group name="group_1" colspan="4" col="2">
                         <group name="group_1_1" colspan="1" col="2">
-                            <field name="general_audit_id" />
-                            <field name="account_type_set_id" />
+                            <field name="general_audit_id" required="1" />
+                            <field
+                                    name="general_audit_ids"
+                                    widget="many2many_tags"
+                                    invisible="1"
+                                />
                             <field
                                     name="company_id"
                                     groups="base.group_multi_company"
@@ -260,12 +264,16 @@
                                     name="partner_id"
                                     domain="[('parent_id','=',False)]"
                                 />
-                            <field name="date_start" />
-                            <field name="date_end" />
-
+                            <field name="account_type_set_id" />
+                            <field name="user_id" />
                         </group>
                         <group name="group_1_2" colspan="1" col="2">
-                            <field name="user_id" />
+                            <field name="date_start" />
+                            <field name="date_end" />
+                            <field name="previous_date_start" />
+                            <field name="previous_date_end" />
+                            <field name="interim_date_start" />
+                            <field name="interim_date_end" />
                         </group>
                     </group>
                     <notebook colspan="4">
@@ -359,7 +367,7 @@
             id="accountant_general_audit_index_a1101_action"
             model="ir.actions.act_window"
         >
-        <field name="name">General Audit Index A1101</field>
+        <field name="name">General Audit Index A.110.1</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">accountant.general_audit_index_a1101</field>
         <field name="view_type">form</field>
@@ -374,7 +382,7 @@
 
     <menuitem
             id="accountant_general_audit_index_a1101_menu"
-            name="Index A1101"
+            name="Index A.110.1"
             parent="accountant_general_audit.accountant_risk_assessment_menu"
             action="accountant_general_audit_index_a1101_action"
             sequence="1"
