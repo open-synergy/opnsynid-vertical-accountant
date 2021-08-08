@@ -11,6 +11,7 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
+                <field name="general_audit_id" />
                 <field name="partner_id" />
                 <field name="date_start" />
                 <field name="date_end" />
@@ -105,11 +106,10 @@
         <field name="model">accountant.client_trial_balance</field>
         <field name="arch" type="xml">
             <tree
-                    fonts="bold:message_unread==True"
                     colors="red:date_start and (date_start&lt;current_date) and (state in ('confirm','valid'));blue:state == 'draft';grey:state == 'cancel';"
                 >
-                <field name="message_unread" invisible="1" />
                 <field name="name" />
+                <field name="general_audit_id" />
                 <field name="company_id" groups="base.group_multi_company" />
                 <field name="partner_id" />
                 <field name="date_start" />
@@ -229,6 +229,12 @@
                     <group name="group_1" colspan="4" col="2">
                         <group name="group_1_1" colspan="1" col="2">
                             <field
+                                    name="general_audit_ids"
+                                    invisible="1"
+                                    widget="many2many_tags"
+                                />
+                            <field name="general_audit_id" required="1" />
+                            <field
                                     name="company_id"
                                     groups="base.group_multi_company"
                                 />
@@ -249,8 +255,8 @@
                             <field name="date_end" />
                             <field name="previous_date_start" />
                             <field name="previous_date_end" />
-                            <field name="balance_date_start" />
-                            <field name="balance_date_end" />
+                            <field name="interim_date_start" />
+                            <field name="interim_date_end" />
                         </group>
                     </group>
                     <notebook colspan="4">
@@ -264,8 +270,9 @@
                                             name="type_id"
                                             domain="[('id','in',parent.allowed_type_ids[0][2])]"
                                         />
-                                    <field name="previous_balance" />
                                     <field name="balance" />
+                                    <field name="interim_balance" />
+                                    <field name="previous_balance" />
                                 </tree>
                             </field>
                         </page>
@@ -294,7 +301,9 @@
                                 >
                                 <tree>
                                     <field name="computation_item_id" />
+                                    <field name="amount_previous" />
                                     <field name="amount" />
+                                    <field name="amount_extrapolation" />
                                 </tree>
                             </field>
                         </page>

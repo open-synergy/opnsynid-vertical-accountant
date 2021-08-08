@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2020 OpenSynergy Indonesia
+     Copyright 2020 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<openerp>
+<data>
+    <record id="computation_item_001" model="accountant.trial_balance_computation_item">
+        <field name="name">Total Asset</field>
+        <field name="code">T001</field>
+    </record>
+
+    <record id="computation_item_002" model="accountant.trial_balance_computation_item">
+        <field name="name">Net Asset</field>
+        <field name="code">T002</field>
+    </record>
+
+    <record id="computation_item_003" model="accountant.trial_balance_computation_item">
+        <field name="name">Revenue</field>
+        <field name="code">T003</field>
+    </record>
+
+    <record id="computation_item_004" model="accountant.trial_balance_computation_item">
+        <field name="name">Cost of Revenue</field>
+        <field name="code">T004</field>
+    </record>
+
+    <record id="computation_item_005" model="accountant.trial_balance_computation_item">
+        <field name="name">EBT</field>
+        <field name="code">T005</field>
+    </record>
+
+    <record id="computation_item_006" model="accountant.trial_balance_computation_item">
+        <field name="name">EBITDA</field>
+        <field name="code">T006</field>
+    </record>
+
+    <record id="computation_item_007" model="accountant.trial_balance_computation_item">
+        <field name="name">Total Liability</field>
+        <field name="code">T007</field>
+    </record>
+</data>
+</openerp>

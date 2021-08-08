@@ -32,6 +32,10 @@ class AccountantClientTrialBalanceDetail(models.Model):
         string="Balance",
         required=True,
     )
+    interim_balance = fields.Float(
+        string="Interim Balance",
+        required=True,
+    )
     type_id = fields.Many2one(
         string="Account Type",
         comodel_name="accountant.client_account_type",

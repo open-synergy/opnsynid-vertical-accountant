@@ -37,6 +37,26 @@ class AccountantClientTrialBalance(models.Model):
         _super = super(AccountantClientTrialBalance, self)
         _super._compute_policy()
 
+    @api.multi
+    @api.depends(
+        "general_audit_id",
+    )
+    def _inverse_general_audit(self):
+        for document in self:
+            if not document.general_audit_id:
+                continue
+            document.general_audit_ids = [(6, 0, [document.general_audit_id.id])]
+
+    @api.multi
+    @api.depends(
+        "general_audit_ids",
+    )
+    def _compute_general_audit_id(self):
+        for document in self:
+            document.general_audit_id = False
+            if len(document.general_audit_ids) > 0:
+                document.general_audit_id = document.general_audit_ids[0]
+
     name = fields.Char(
         string="# Document",
         default="/",
@@ -49,105 +69,88 @@ class AccountantClientTrialBalance(models.Model):
             ],
         },
     )
+    general_audit_id = fields.Many2one(
+        string="# General Audit",
+        comodel_name="accountant.general_audit",
+        store=True,
+        compute="_compute_general_audit_id",
+        inverse="_inverse_general_audit",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    general_audit_ids = fields.Many2many(
+        string="General Audits",
+        comodel_name="accountant.general_audit",
+        relation="rel_general_audit_2_trial_balance",
+        column1="trial_balance_id",
+        column2="general_audit_id",
+    )
     company_id = fields.Many2one(
         string="Company",
         comodel_name="res.company",
-        required=True,
-        default=lambda self: self._default_company_id(),
+        related="general_audit_id.company_id",
+        store=True,
+        readonly=True,
     )
     partner_id = fields.Many2one(
         string="Partner",
         comodel_name="res.partner",
-        required=True,
+        related="general_audit_id.partner_id",
+        store=True,
         readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
     )
     date_start = fields.Date(
         string="Start Date",
-        required=True,
+        related="general_audit_id.date_start",
+        store=True,
         readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
     )
     date_end = fields.Date(
         string="End Date",
-        required=True,
+        related="general_audit_id.date_end",
+        store=True,
         readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
     )
-    balance_date_start = fields.Date(
-        string="Balance Start Date",
-        required=True,
+    interim_date_start = fields.Date(
+        string="Interim Start Date",
+        related="general_audit_id.interim_date_start",
+        store=True,
         readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
     )
-    balance_date_end = fields.Date(
-        string="Balance End Date",
-        required=True,
+    interim_date_end = fields.Date(
+        string="Interim End Date",
+        related="general_audit_id.interim_date_end",
+        store=True,
         readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
     )
     previous_date_start = fields.Date(
         string="Previous Start Date",
-        required=True,
+        related="general_audit_id.previous_date_start",
+        store=True,
         readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
     )
     previous_date_end = fields.Date(
         string="Previous End Date",
-        required=True,
+        related="general_audit_id.previous_date_end",
+        store=True,
         readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
     )
     currency_id = fields.Many2one(
         string="Currency",
         comodel_name="res.currency",
-        default=lambda self: self._default_currency_id(),
-        required=True,
+        related="general_audit_id.currency_id",
+        store=True,
         readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
     )
     account_type_set_id = fields.Many2one(
         string="Accoount Type Set",
-        comodel_name="accountant.client_account_type_set",
-        required=True,
+        related="general_audit_id.account_type_set_id",
+        store=True,
         readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
     )
 
     @api.multi
@@ -397,14 +400,14 @@ class AccountantClientTrialBalance(models.Model):
                 if record.date_end < record.date_start:
                     raise UserError(strWarning)
 
-    @api.constrains("balance_date_start", "balance_date_end")
-    def _check_balance_date_start_end(self):
+    @api.constrains("interim_date_start", "interim_date_end")
+    def _check_interim_date_start_end(self):
         for record in self:
-            if record.balance_date_start and record.balance_date_end:
+            if record.interim_date_start and record.interim_date_end:
                 strWarning = _(
                     "Balance Date end must be greater than Balance date start"
                 )
-                if record.balance_date_end < record.balance_date_start:
+                if record.interim_date_end < record.interim_date_start:
                     raise UserError(strWarning)
 
     @api.constrains("previous_date_start", "previous_date_end")
@@ -417,12 +420,12 @@ class AccountantClientTrialBalance(models.Model):
                 if record.previous_date_end < record.previous_date_start:
                     raise UserError(strWarning)
 
-    @api.constrains("balance_date_start", "previous_date_end")
-    def _check_previous_balance_date(self):
+    @api.constrains("interim_date_start", "previous_date_end")
+    def _check_previous_interim_date(self):
         for record in self:
-            if record.balance_date_start and record.previous_date_end:
+            if record.interim_date_start and record.previous_date_end:
                 strWarning = _(
                     "Balance date start must be greater than previous balance date end"
                 )
-                if record.previous_date_end >= record.balance_date_start:
+                if record.previous_date_end >= record.interim_date_start:
                     raise UserError(strWarning)
