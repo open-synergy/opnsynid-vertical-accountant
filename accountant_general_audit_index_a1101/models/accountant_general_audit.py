@@ -21,14 +21,14 @@ class AccountantGeneralAudit(models.Model):
 
     index_a1101_ids = fields.Many2many(
         string="Trial Balance",
-        comodel_name="accountant.general_audit_index_a210",
+        comodel_name="accountant.general_audit_index_a1101",
         relation="rel_general_audit_2_index_a1101",
         column1="general_audit_id",
         column2="index_a1101_id",
     )
     index_a1101_id = fields.Many2one(
         string="# Index A.110.1",
-        comodel_name="accountant.general_audit_index_a210",
+        comodel_name="accountant.general_audit_index_a1101",
         compute="_compute_index_a1101_id",
         store=True,
     )

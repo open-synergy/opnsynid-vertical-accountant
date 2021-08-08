@@ -126,7 +126,6 @@
             <tree
                     colors="red:(state in ('confirm','valid'));blue:state == 'draft';grey:state == 'cancel';"
                 >
-                <field name="message_unread" invisible="1" />
                 <field name="company_id" groups="base.group_multi_company" />
                 <field name="display_name" string="# Document" />
                 <field name="general_audit_id" />
