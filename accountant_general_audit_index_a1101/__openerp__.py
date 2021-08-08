@@ -5,8 +5,8 @@
 # pylint: disable=locally-disabled, manifest-required-author/
 
 {
-    "name": "General Audit Index A1101",
-    "version": "8.0.1.0.0",
+    "name": "General Audit Index A.110.1",
+    "version": "8.0.1.1.0",
     "author": "PT. Simetri Sinergi Indonesia, OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
@@ -24,6 +24,7 @@
         "data/accountant_general_audit_index_a1101_status_data.xml",
         "views/accountant_client_account_type_set_views.xml",
         "views/accountant_general_audit_index_a1101_views.xml",
+        "views/accountant_general_audit_views.xml",
         "views/accountant_general_audit_index_a1101_status_views.xml",
     ],
     "installable": True,

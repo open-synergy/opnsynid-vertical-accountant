@@ -4,10 +4,7 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <openerp>
 <data>
-    <record
-            id="base_sequence_accountant_general_audit_index_a1101"
-            model="base.sequence_configurator"
-        >
+    <record id="sequence_config_index_a1101" model="base.sequence_configurator">
         <field
                 name="model_id"
                 ref="accountant_general_audit_index_a1101.model_accountant_general_audit_index_a1101"
@@ -23,13 +20,10 @@
     </record>
 
     <record
-            id="base_sequence_accountant_general_audit_index_a1101_line"
+            id="sequence_config_line_index_a1101"
             model="base.sequence_configurator_line"
         >
-        <field
-                name="generator_id"
-                ref="base_sequence_accountant_general_audit_index_a1101"
-            />
+        <field name="generator_id" ref="sequence_config_index_a1101" />
         <field name="sequence" eval="1" />
         <field
                 name="sequence_computation_code"
