@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+<data>
+    <record id="accountant_client_account_type_set_view_form" model="ir.ui.view">
+        <field name="name">accountant.client_account_type_set form</field>
+        <field name="model">accountant.client_account_type_set</field>
+        <field
+                name="inherit_id"
+                ref="accountant_general_audit.accountant_client_account_type_set_view_form"
+            />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//notebook" position="inside">
+                    <page name="index_a2101" string="Index A.210.1">
+                        <group name="index_a2101" colspan="4" col="2">
+                            <field name="index_a2101_sequence_id" />
+                        </group>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+</data>
+</openerp>
