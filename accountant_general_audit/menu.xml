@@ -40,5 +40,19 @@
             parent="accountant_app.accountant_configuration_menu"
         />
 
+    <menuitem
+            id="accountant_configuration_trial_balance_menu"
+            name="Trial Balance"
+            sequence="101"
+            parent="accountant_configuration_general_audit_menu"
+        />
+
+    <menuitem
+            id="accountant_configuration_index_status_menu"
+            name="Index Status"
+            sequence="102"
+            parent="accountant_configuration_general_audit_menu"
+        />
+
 </data>
 </openerp>

@@ -5,12 +5,9 @@
 <openerp>
 <data>
 
-    <record
-            id="accountant_financial_accounting_standard_view_search"
-            model="ir.ui.view"
-        >
-        <field name="name">accountant.financial_accounting_standard form</field>
-        <field name="model">accountant.financial_accounting_standard</field>
+    <record id="accountant_client_account_group_view_search" model="ir.ui.view">
+        <field name="name">accountant.client_account_group form</field>
+        <field name="model">accountant.client_account_group</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
@@ -19,20 +16,22 @@
         </field>
     </record>
 
-    <record id="accountant_financial_accounting_standard_view_tree" model="ir.ui.view">
-        <field name="name">accountant.financial_accounting_standard tree</field>
-        <field name="model">accountant.financial_accounting_standard</field>
+    <record id="accountant_client_account_group_view_tree" model="ir.ui.view">
+        <field name="name">accountant.client_account_group tree</field>
+        <field name="model">accountant.client_account_group</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="sequence" widget="handle" />
                 <field name="name" />
                 <field name="code" />
+                <field name="sequence" />
             </tree>
         </field>
     </record>
 
-    <record id="accountant_financial_accounting_standard_view_form" model="ir.ui.view">
-        <field name="name">accountant.financial_accounting_standard form</field>
-        <field name="model">accountant.financial_accounting_standard</field>
+    <record id="accountant_client_account_group_view_form" model="ir.ui.view">
+        <field name="name">accountant.client_account_group form</field>
+        <field name="model">accountant.client_account_group</field>
         <field name="arch" type="xml">
             <form>
                 <header />
@@ -46,6 +45,7 @@
                         <field name="name" />
                         <field name="code" />
                         <field name="active" />
+                        <field name="sequence" />
                         <field name="description" />
                     </group>
                 </sheet>
@@ -53,23 +53,20 @@
         </field>
     </record>
 
-    <record
-            id="accountant_financial_accounting_standard_action"
-            model="ir.actions.act_window"
-        >
-        <field name="name">Financial Accounting Standard</field>
+    <record id="accountant_client_account_group_action" model="ir.actions.act_window">
+        <field name="name">Account Group</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">accountant.financial_accounting_standard</field>
+        <field name="res_model">accountant.client_account_group</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem
-            id="accountant_financial_accounting_standard_menu"
-            name="Financial Accounting Standard"
-            parent="accountant_configuration_general_audit_menu"
-            action="accountant_financial_accounting_standard_action"
-            sequence="1"
+            id="accountant_client_account_group_menu"
+            name="Account Group"
+            parent="accountant_configuration_trial_balance_menu"
+            action="accountant_client_account_group_action"
+            sequence="2"
         />
 
 

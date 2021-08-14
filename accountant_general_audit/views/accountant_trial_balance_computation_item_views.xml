@@ -26,7 +26,7 @@
             <tree>
                 <field name="name" />
                 <field name="code" />
-                <field name="description" />
+                <field name="category" />
             </tree>
         </field>
     </record>
@@ -46,9 +46,15 @@
                     <group name="group_1" colspan="4" col="2">
                         <field name="name" />
                         <field name="code" />
+                        <field name="category" />
                         <field name="active" />
                         <field name="description" />
                     </group>
+                    <notebook>
+                        <page name="python_code" string="Default Python Code">
+                            <field name="python_code" />
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -67,10 +73,10 @@
 
     <menuitem
             id="accountant_trial_balance_computation_item_menu"
-            name="Trial Balance Computation Item"
-            parent="accountant_configuration_general_audit_menu"
+            name="Computation Item"
+            parent="accountant_configuration_trial_balance_menu"
             action="accountant_trial_balance_computation_item_action"
-            sequence="3"
+            sequence="4"
         />
 
 </data>

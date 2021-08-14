@@ -5,6 +5,7 @@
 
 from . import (
     accountant_client_account_type_set,
+    accountant_client_account_group,
     accountant_client_account_type,
     accountant_client_trial_balance,
     accountant_client_trial_balance_detail,

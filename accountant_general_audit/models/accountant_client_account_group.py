@@ -6,9 +6,9 @@
 from openerp import fields, models
 
 
-class AccountantClientAccountType(models.Model):
-    _name = "accountant.client_account_type"
-    _description = "Accountant Client Account Type"
+class AccountantClientAccountGroup(models.Model):
+    _name = "accountant.client_account_group"
+    _description = "Accountant Client Account Group"
     _order = "sequence, id"
 
     name = fields.Char(
@@ -17,11 +17,6 @@ class AccountantClientAccountType(models.Model):
     )
     code = fields.Char(
         string="Code",
-        required=True,
-    )
-    group_id = fields.Many2one(
-        string="Account Group",
-        comodel_name="accountant.client_account_group",
         required=True,
     )
     sequence = fields.Integer(
@@ -35,9 +30,4 @@ class AccountantClientAccountType(models.Model):
     )
     description = fields.Text(
         string="Description",
-    )
-    extrapolation_python_code = fields.Text(
-        string="Python Code for Extrapolation",
-        required=True,
-        default="result = document.balance",
     )

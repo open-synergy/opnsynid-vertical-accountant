@@ -12,6 +12,14 @@
             <search>
                 <field name="name" />
                 <field name="code" />
+                <field name="group_id" />
+                <group name="group_1" string="Group By...">
+                    <filter
+                            name="grp_group"
+                            string="Account Group"
+                            context="{'group_by':'group_id'}"
+                        />
+                </group>
             </search>
         </field>
     </record>
@@ -24,7 +32,7 @@
                 <field name="sequence" widget="handle" />
                 <field name="name" />
                 <field name="code" />
-                <field name="sequence" />
+                <field name="group_id" />
             </tree>
         </field>
     </record>
@@ -44,6 +52,7 @@
                     <group name="group_1" colspan="4" col="2">
                         <field name="name" />
                         <field name="code" />
+                        <field name="group_id" />
                         <field name="active" />
                         <field name="sequence" />
                         <field name="description" />
@@ -65,9 +74,9 @@
     <menuitem
             id="accountant_client_account_type_menu"
             name="Account Type"
-            parent="accountant_configuration_general_audit_menu"
+            parent="accountant_configuration_trial_balance_menu"
             action="accountant_client_account_type_action"
-            sequence="2"
+            sequence="3"
         />
 
 

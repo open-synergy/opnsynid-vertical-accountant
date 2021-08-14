@@ -248,12 +248,40 @@
                     <notebook colspan="4">
                         <page name="link" string="Links">
                             <group name="link1" colspan="4" col="2">
-                                <field
-                                        name="trial_balance_ids"
-                                        invisible="1"
-                                        widget="many2many_tags"
-                                    />
-                                <field name="trial_balance_id" />
+                                <group
+                                        name="link_1_1"
+                                        colspan="1"
+                                        col="2"
+                                        string="Risk Assesment"
+                                    >
+                                </group>
+                                <group
+                                        name="link_1_2"
+                                        colspan="1"
+                                        col="2"
+                                        string="Risk Response"
+                                    >
+                                </group>
+                                <group
+                                        name="link_1_3"
+                                        colspan="1"
+                                        col="2"
+                                        string="Reporting"
+                                    >
+                                </group>
+                                <group
+                                        name="link_1_4"
+                                        colspan="1"
+                                        col="2"
+                                        string="Other"
+                                    >
+                                    <field
+                                            name="trial_balance_ids"
+                                            invisible="1"
+                                            widget="many2many_tags"
+                                        />
+                                    <field name="trial_balance_id" />
+                                </group>
                             </group>
                         </page>
                         <page string="Reviews" name="tier_validation">
