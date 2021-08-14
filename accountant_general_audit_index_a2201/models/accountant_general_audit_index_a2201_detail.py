@@ -63,7 +63,7 @@ class AccountantGeneralAuditIndexA2201Detail(models.Model):
         for document in self:
             percentage = percentage_extrapolation = percentage_previous = 0.0
             bottom_line = document.type_id.bottom_line_id
-            tb = document.general_audit_id.trial_balance_id
+            tb = document.index_a2201_id.general_audit_id.trial_balance_id
             if bottom_line and tb:
                 criteria = [
                     ("computation_item_id", "=", bottom_line.id),

@@ -79,8 +79,8 @@
 
     <menuitem
             id="accountant_general_audit_index_a2201_status_menu"
-            name="Index A.220.1 Status"
-            parent="accountant_general_audit.accountant_configuration_general_audit_menu"
+            name="A.220.1"
+            parent="accountant_general_audit.accountant_configuration_index_status_menu"
             action="accountant_general_audit_index_a2201_status_action"
             sequence="2201"
         />
