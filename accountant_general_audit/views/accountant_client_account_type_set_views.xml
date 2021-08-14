@@ -151,7 +151,7 @@
     <menuitem
             id="accountant_client_account_type_set_menu"
             name="Account Type Set"
-            parent="accountant_configuration_general_audit_menu"
+            parent="accountant_configuration_trial_balance_menu"
             action="accountant_client_account_type_set_action"
             sequence="1"
         />

@@ -3,6 +3,8 @@ accountant_client_account_type_set_employee,accountant.client_account_type_set -
 accountant_client_account_type_set_all,accountant_client_account_type_set - all,model_accountant_client_account_type_set,,1,0,0,0
 accountant_client_account_type_employee,accountant.client_account_type - user,model_accountant_client_account_type,base.group_user,1,1,1,1
 accountant_client_account_type_all,accountant_client_account_type - all,model_accountant_client_account_type,,1,0,0,0
+accountant_client_account_group_employee,accountant.client_account_group - user,model_accountant_client_account_group,base.group_user,1,1,1,1
+accountant_client_account_group_all,accountant_client_account_group - all,model_accountant_client_account_group,,1,0,0,0
 accountant_client_trial_balance_employee,accountant.client_trial_balance - user,model_accountant_client_trial_balance,base.group_user,1,1,1,1
 accountant_client_trial_balance_all,accountant_client_trial_balance - all,model_accountant_client_trial_balance,,1,0,0,0
 accountant_client_trial_balance_detail_employee,accountant.client_trial_balance_detail_ - user,model_accountant_client_trial_balance_detail,base.group_user,1,1,1,1

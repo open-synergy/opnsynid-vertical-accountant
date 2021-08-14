@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2020 OpenSynergy Indonesia
+     Copyright 2020 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<openerp>
+<data noupdate="1">
+    <record id="acc_group_t001" model="accountant.client_account_group">
+        <field name="name">Current Asset</field>
+        <field name="code">T001</field>
+    </record>
+
+    <record id="acc_group_t002" model="accountant.client_account_group">
+        <field name="name">Non Current Asset</field>
+        <field name="code">T002</field>
+    </record>
+
+    <record id="acc_group_t003" model="accountant.client_account_group">
+        <field name="name">Short Term Liability</field>
+        <field name="code">T003</field>
+    </record>
+
+    <record id="acc_group_t004" model="accountant.client_account_group">
+        <field name="name">Long Term Liability</field>
+        <field name="code">T004</field>
+    </record>
+
+    <record id="acc_group_t005" model="accountant.client_account_group">
+        <field name="name">Equity</field>
+        <field name="code">T005</field>
+    </record>
+
+    <record id="acc_group_t006" model="accountant.client_account_group">
+        <field name="name">Retained Earning</field>
+        <field name="code">T006</field>
+    </record>
+
+    <record id="acc_group_t007" model="accountant.client_account_group">
+        <field name="name">Retained Other Comprehensive Income</field>
+        <field name="code">T007</field>
+    </record>
+
+    <record id="acc_group_t008" model="accountant.client_account_group">
+        <field name="name">Main Revenue</field>
+        <field name="code">T008</field>
+    </record>
+
+    <record id="acc_group_t009" model="accountant.client_account_group">
+        <field name="name">Other Revenue</field>
+        <field name="code">T009</field>
+    </record>
+
+    <record id="acc_group_t010" model="accountant.client_account_group">
+        <field name="name">Other Comprehensive Income</field>
+        <field name="code">T010</field>
+    </record>
+
+    <record id="acc_group_t011" model="accountant.client_account_group">
+        <field name="name">Cost of Revenue</field>
+        <field name="code">T011</field>
+    </record>
+
+    <record id="acc_group_t012" model="accountant.client_account_group">
+        <field name="name">Operating Expense</field>
+        <field name="code">T012</field>
+    </record>
+
+    <record id="acc_group_t013" model="accountant.client_account_group">
+        <field name="name">Other Expense</field>
+        <field name="code">T013</field>
+    </record>
+
+    <record id="acc_group_t014" model="accountant.client_account_group">
+        <field name="name">Tax Expense</field>
+        <field name="code">T014</field>
+    </record>
+</data>
+</openerp>
