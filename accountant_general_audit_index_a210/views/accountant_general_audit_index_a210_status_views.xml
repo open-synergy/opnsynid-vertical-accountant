@@ -79,10 +79,10 @@
 
     <menuitem
             id="accountant_general_audit_index_a210_status_menu"
-            name="Index A.210 Status"
-            parent="accountant_general_audit.accountant_configuration_general_audit_menu"
+            name="A.210"
+            parent="accountant_general_audit.accountant_configuration_index_status_menu"
             action="accountant_general_audit_index_a210_status_action"
-            sequence="5"
+            sequence="210"
         />
 
 
