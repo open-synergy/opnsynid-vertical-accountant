@@ -304,6 +304,10 @@
                                     </tree>
                                 </field>
                             </group>
+                            <group name="materiality_3" colspan="4" col="2">
+                                <field name="status_id" />
+                                <field name="conclusion" />
+                            </group>
                         </page>
                         <page string="Reviews" name="tier_validation">
                             <group name="tier_validation_1" colspan="4" col="2">
