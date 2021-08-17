@@ -13,7 +13,7 @@
             />
         <field name="arch" type="xml">
             <data>
-                <xpath expr="//group[@name='link1']" position="inside">
+                <xpath expr="//group[@name='link_1_1']" position="inside">
                     <field
                             name="index_a2101_ids"
                             invisible="1"
