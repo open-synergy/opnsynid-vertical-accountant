@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+<data>
+
+    <record id="accountant_general_audit_index_a11021_view_search" model="ir.ui.view">
+        <field name="name">accountant.general_audit_index_a11021 form</field>
+        <field name="model">accountant.general_audit_index_a11021</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="id" />
+                <field name="name" />
+                <field name="general_audit_id" />
+                <field name="account_type_set_id" />
+                <field name="partner_id" />
+                <field name="status_id" />
+                <field name="user_id" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="currency_id" groups="base.group_multi_currency" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <group name="dom_state" string="State">
+                    <filter
+                            name="dom_draft"
+                            string="Draft"
+                            domain="[('state','=','draft')]"
+                        />
+                    <filter
+                            name="dom_confirm"
+                            string="Waiting for Approval"
+                            domain="[('state','=','confirm')]"
+                        />
+                    <filter
+                            name="dom_valid"
+                            string="Valid"
+                            domain="[('state','=','valid')]"
+                        />
+                    <filter
+                            name="dom_cancel"
+                            string="Cancel"
+                            domain="[('state','=','cancel')]"
+                        />
+                    <filter
+                            name="needs_review"
+                            string="Needs my Review"
+                            domain="
+                                    [
+                                    ('reviewer_ids','in',uid),
+                                    ('state', 'not in', ['won', 'cancel', 'lost'])
+                                    ]"
+                        />
+                </group>
+                <separator />
+                <group name="group" string="Group By">
+                    <filter
+                            name="grp_company"
+                            string="Company"
+                            context="{'group_by':'company_id'}"
+                            groups="base.group_multi_company"
+                        />
+                    <filter
+                            name="grp_partner"
+                            string="Partner"
+                            context="{'group_by':'partner_id'}"
+                        />
+                    <filter
+                            name="grp_state"
+                            string="State"
+                            context="{'group_by':'state'}"
+                        />
+                    <filter
+                            name="grp_status_id"
+                            string="Status"
+                            context="{'group_by':'status_id'}"
+                        />
+                    <filter
+                            name="grp_date_start_year"
+                            string="Date Start by Year"
+                            context="{'group_by':'date_start:year'}"
+                        />
+                    <filter
+                            name="grp_date_start_month"
+                            string="Date Start by Month"
+                            context="{'group_by':'date_start:month'}"
+                        />
+                    <filter
+                            name="grp_date_start_week"
+                            string="Date Start by Week"
+                            context="{'group_by':'date_start:week'}"
+                        />
+                    <filter
+                            name="grp_date_start_day"
+                            string="Date Start by Day"
+                            context="{'group_by':'date_start:day'}"
+                        />
+                    <filter
+                            name="grp_date_end_year"
+                            string="Date End by Year"
+                            context="{'group_by':'date_end:year'}"
+                        />
+                    <filter
+                            name="grp_date_end_month"
+                            string="Date End by Month"
+                            context="{'group_by':'date_end:month'}"
+                        />
+                    <filter
+                            name="grp_date_end_week"
+                            string="Date End by Week"
+                            context="{'group_by':'date_end:week'}"
+                        />
+                    <filter
+                            name="grp_date_end_day"
+                            string="Date End by Day"
+                            context="{'group_by':'date_end:day'}"
+                        />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_index_a11021_view_tree" model="ir.ui.view">
+        <field name="name">accountant.general_audit_index_a11021 tree</field>
+        <field name="model">accountant.general_audit_index_a11021</field>
+        <field name="arch" type="xml">
+            <tree
+                    colors="red:(state in ('confirm','valid'));blue:state == 'draft';grey:state == 'cancel';"
+                >
+                <field name="display_name" string="# Document" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="currency_id" groups="base.group_multi_currency" />
+                <field name="general_audit_id" />
+                <field name="partner_id" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="account_type_set_id" />
+                <field name="status_id" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_index_a11021_view_form" model="ir.ui.view">
+        <field name="name">accountant.general_audit_index_a11021 form</field>
+        <field name="model">accountant.general_audit_index_a11021</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                            name="action_confirm"
+                            type="object"
+                            string="Confirm"
+                            class="oe_highlight"
+                            confirm="Confirm. Are you sure?"
+                            attrs="{'invisible':['|',('state','!=','draft'),('confirm_ok','=',False)]}"
+                        />
+                    <button
+                            name="request_validation"
+                            string="Request Validation"
+                            attrs="{'invisible': ['|','|',('need_validation', '!=', True),('rejected','=',True),('state','not in',['confirm'])]}"
+                            class="oe_highlight"
+                            type="object"
+                        />
+                    <button
+                            name="restart_validation"
+                            string="Restart Validation"
+                            attrs="{'invisible': ['|','|','|',('review_ids', '=', []),('rejected','=',False),('state','not in',['confirm']),('restart_validation_ok','=',False)]}"
+                            type="object"
+                        />
+                    <button
+                            name="%(base_print_policy.base_print_document_action)d"
+                            string="Print"
+                            type="action"
+                            icon="gtk-print"
+                        />
+                    <button
+                            name="%(base_cancel_reason.base_cancel_reason_wizard_action)d"
+                            type="action"
+                            string="Cancel"
+                            attrs="{'invisible':['|',('state','=','cancel'),('cancel_ok','=',False)]}"
+                            confirm="Cancel. Are you sure?"
+                        />
+                    <button
+                            name="action_restart"
+                            type="object"
+                            string="Restart"
+                            confirm="Restart. Are you sure?"
+                            attrs="{'invisible':['|',('state','!=','cancel'),('restart_ok','=',False)]}"
+                        />
+                    <field
+                            name="state"
+                            widget="statusbar"
+                            statusbar_visible="draft,confirm,done"
+                        />
+                </header>
+                <field name="need_validation" invisible="1" />
+                <field name="validated" invisible="1" />
+                <field name="rejected" invisible="1" />
+                <div
+                        class="alert alert-warning"
+                        attrs="{'invisible': ['|', '|', '|',
+                     ('validated', '=', True), ('state', 'not in', ['confirm']),
+                     ('rejected', '=', True), ('review_ids', '=', [])]}"
+                        style="margin-bottom:0px;"
+                    >
+                    <p><i
+                                class="fa fa-info-circle"
+                            />This General Audit Index A11021 needs to be
+                        validated.
+                        <button
+                                name="validate_tier"
+                                string="Validate"
+                                attrs="{'invisible': [('review_ids', '=', [])]}"
+                                type="object"
+                                class="oe_inline oe_button btn-success"
+                                icon="terp-check"
+                            />
+                        <button
+                                name="reject_tier"
+                                string="Reject"
+                                type="object"
+                                class="btn-icon btn-danger"
+                                icon="terp-gtk-stop"
+                            />
+                    </p>
+                </div>
+                <sheet>
+                    <div
+                            class="oe_right oe_button_box"
+                            style="width: 300px;"
+                            name="buttons"
+                        >
+                    </div>
+                    <div class="oe_left" style="width: 500px;">
+                        <div class="oe_title" style="width: 500px;">
+                            <label for="name" class="oe_edit_only" />
+                            <h1>
+                              <field name="name" class="oe_edit_only" />
+                              <field name="display_name" class="oe_read_only" />
+                            </h1>
+                            <label for="title" class="oe_edit_only" />
+                            <h2 attrs="{'invisible': [('state', '!=', 'cancel')]}">
+                                <label
+                                        for="cancel_reason_id"
+                                        string="Cancellation reason:"
+                                    />
+                                <field name="cancel_reason_id" class="oe_inline" />
+                            </h2>
+                        </div>
+                    </div>
+                    <group name="group_1" colspan="4" col="2">
+                        <group name="group_1_1" colspan="1" col="2">
+                            <field name="general_audit_id" required="1" />
+                            <field
+                                    name="general_audit_ids"
+                                    widget="many2many_tags"
+                                    invisible="1"
+                                />
+                            <field
+                                    name="company_id"
+                                    groups="base.group_multi_company"
+                                />
+                            <field
+                                    name="currency_id"
+                                    groups="base.group_multi_currency"
+                                />
+                            <field
+                                    name="partner_id"
+                                    domain="[('parent_id','=',False)]"
+                                />
+                            <field name="account_type_set_id" />
+                            <field name="user_id" />
+                        </group>
+                        <group name="group_1_2" colspan="1" col="2">
+                            <field name="date_start" />
+                            <field name="date_end" />
+                            <field name="previous_date_start" />
+                            <field name="previous_date_end" />
+                            <field name="interim_date_start" />
+                            <field name="interim_date_end" />
+                        </group>
+                    </group>
+                    <notebook colspan="4">
+                        <page name="question" string="Question">
+                            <notebook colspan="4">
+                                <page name="question_01" string="Profil Pengguna Jasa">
+                                    <group
+                                            name="question_01_a"
+                                            string="Politically Exposed Person (PEP)"
+                                            colspan="1"
+                                            col="2"
+                                        >
+                                        <field
+                                                name="question_1_a_1"
+                                                string="Pejabat negara"
+                                            />
+                                        <field
+                                                name="question_1_a_2"
+                                                string="Pimpinan instansi pemerintah setingkat atau setara eselon I"
+                                            />
+                                        <field
+                                                name="question_1_a_3"
+                                                string="Pejabat yang memiliki fungsi strategis"
+                                            />
+                                        <field
+                                                name="question_1_a_4"
+                                                string="Pejabat yang berdasarkan ketentuan kementerian yang membidangi urusan ......"
+                                                help="Pejabat yang berdasarkan ketentuan kementerian yang membidangi urusan aparatur negara dan reformasi birokrasi diwajibkan menyampaikan Laporan Harta Kekayaan Penyelenggara Negara"
+                                            />
+                                        <field
+                                                name="question_1_a_5"
+                                                string="Pengurus partai politik atau anggota partai politik"
+                                            />
+                                    </group>
+                                    <group
+                                            name="question_01_b"
+                                            string="Pihak yang terkait Politically Exposed Person (PEP)"
+                                            colspan="4"
+                                            col="2"
+                                        >
+                                        <field
+                                                name="question_1_b_1"
+                                                string="Keluarga inti PEP tek anggota keluarga sampai dengan derajat kedua"
+                                            />
+                                        <field
+                                                name="question_1_b_2"
+                                                string="Perusahan yang dimiliki, dikelola, dan/ atau dikendalikan oleh PEP"
+                                            />
+                                        <field
+                                                name="question_1_b_3"
+                                                string="Pihak-pihak yang secara umum dan diketahui publik mempunyai hubungan dekat dengan PEP"
+                                            />
+                                    </group>
+                                    <group
+                                            name="question_01_c"
+                                            string="Pejabat, pegawai, petugas, dan setiap orang yang bekerja dalam bidang pelayanan publik khususnya di bidang"
+                                            colspan="4"
+                                            col="2"
+                                        >
+                                        <field
+                                                name="question_1_c"
+                                                string="perizinan, pengadaan dan penyaluran barang dan jasa publik, penerimaan negara atau daerah"
+                                            />
+                                    </group>
+                                    <group
+                                            name="question_01_d"
+                                            string="pejabat, pegawai, atau setiap orang yang bekerja untuk dan atas nama"
+                                            colspan="4"
+                                            col="2"
+                                        >
+                                        <field
+                                                name="question_1_d"
+                                                string=" penyedia jasa keuangan;"
+                                            />
+                                    </group>
+                                    <group
+                                            name="question_01_e"
+                                            string="Orang atau entitas yang namanya tercantum dalam daftar"
+                                            colspan="4"
+                                            col="2"
+                                        >
+                                        <field
+                                                name="question_1_e"
+                                                string=" terduga teroris dan organisasi teroris yang dikeluarkan oleh pemerintah;"
+                                            />
+                                    </group>
+                                    <group
+                                            name="question_01_f"
+                                            string="Orang atau entitas yang namanya tercantum dalam sanction list"
+                                            colspan="4"
+                                            col="2"
+                                        >
+                                        <field
+                                                name="question_1_f"
+                                                string="yang dikeluarkan oleh organisasi internasional; dan/ atau"
+                                            />
+                                    </group>
+                                    <group
+                                            name="question_01_g"
+                                            string="Profesi tertentu diantaranya advokat, kurator, notaris, Pejabat Pembuat Akta Tanah, akuntan, akuntan publik, perencana keuangan, atau konsultan pajak, "
+                                            colspan="4"
+                                            col="2"
+                                        >
+                                        <field
+                                                name="question_1_g"
+                                                string="termasuk karyawan yang bekerja pada kantor profesi tersebut diatas"
+                                            />
+                                    </group>
+                                </page>
+                                <page name="question_02" string="Negara">
+                                    <group
+                                            name="question_2_1"
+                                            string="Apakah pengguna jasa akuntan publik melakukan transaksi dari dan/atau ditujukan ke"
+                                            colspan="4"
+                                            col="2"
+                                        >
+                                        <field
+                                                name="question_2_1_a"
+                                                string="Negara asing yang dinyatakan belum memadai dalam melaksanakan rekomendasi Financial Action Task Force ..."
+                                                help="Negara asing yang dinyatakan belum memadai dalam melaksanakan rekomendasi Financial Action Task Force di bidang pencegahan dan pemberantasan tindak pidana pencucian uang dan pendanaan terorisme berdasarkan hasil evaluasi (mutual assessment);"
+                                            />
+                                        <field
+                                                name="question_2_1_b"
+                                                string="Negara asing yang diketahui secara luas sebagai tempat penghasil dan pusat perdagangan narkoba"
+                                            />
+                                        <field
+                                                name="question_2_1_c"
+                                                string="Negara asing yang memiliki tingkat tata kelola kepemerintahan yang rendah atau dibawah 50 (lima puluh) ..."
+                                                help="Negara asing yang memiliki tingkat tata kelola kepemerintahan yang rendah atau dibawah 50 (lima puluh) berdasarkan worldwide governance indicators terkini yang diterbitkan oleh WorldBank;"
+                                            />
+                                        <field
+                                                name="question_2_1_d"
+                                                string="Negara asing yang diidentifikasi sebagai tax haven antara lain berdasarkan data dari Organisation for ..."
+                                                help="Negara asing yang diidentifikasi sebagai tax haven antara lain berdasarkan data dari Organisation for Economic Cooperation and Development; atau"
+                                            />
+                                        <field
+                                                name="question_2_1_e"
+                                                string="Negara asing yang dikenal memiliki indeks persepsi korupsi yang rendah atau indeks dibawah 40 (empat puluh) ..."
+                                                help="Negara asing yang dikenal memiliki indeks persepsi korupsi yang rendah atau indeks dibawah 40 (empat puluh) berdasarkan transparency international"
+                                            />
+                                    </group>
+                                </page>
+                                <page name="question_03" string="Bisnis">
+                                    <group
+                                            name="question_3_1"
+                                            string="Apakah kategori bisnis pengguna jasa akuntan publik sebagai berikut :"
+                                            colspan="4"
+                                            col="2"
+                                        >
+                                        <field
+                                                name="question_3_a"
+                                                string="Usaha penukaran valuta asing non bank"
+                                            />
+                                        <field
+                                                name="question_3_b"
+                                                string="Usaha penyelenggara transfer dana non bank"
+                                            />
+                                        <field
+                                                name="question_3_c"
+                                                string="Usaha agen perjalanan"
+                                            />
+                                        <field
+                                                name="question_3_d"
+                                                string="Usaha yang berbasis tunai, diantaranya minimarket, jasa pengelola parkir, Stasiun Pengisian Bahan Bakar Umum (SPBU)"
+                                            />
+                                        <field
+                                                name="question_3_e"
+                                                string="Usaha investasi berbasis emas atau logam mulia"
+                                            />
+                                        <field
+                                                name="question_3_f"
+                                                string="Usaha di bidang pengelolaan hasil hutan atau kehutanan"
+                                            />
+                                        <field
+                                                name="question_3_g"
+                                                string="Usaha di bidang jasa pengangkutan atau pengapalan (freight forwarding)"
+                                            />
+                                        <field
+                                                name="question_3_h"
+                                                string="Usaha di bidang properti"
+                                            />
+                                        <field
+                                                name="question_3_i"
+                                                string="Usaha di bidang perdagangan kendaraan bermotor yang merupakan barang mewah"
+                                            />
+                                        <field
+                                                name="question_3_j"
+                                                string="Usaha di bidang perdagangan permata dan perhiasan atau logam mulia"
+                                            />
+                                        <field
+                                                name="question_3_k"
+                                                string="Usaha di bidang perdagangan barang seni dan antik"
+                                            />
+                                        <field
+                                                name="question_3_l"
+                                                string="Koperasi yang melakukan kegiatan simpan pinjam dengan nilai aset Rp1.000.000.000 (satu milyar rupiah) atau lebih"
+                                            />
+                                        <field
+                                                name="question_3_m"
+                                                string="Usaha perdagangan ekspor/impor di bidang sumber daya alam hayati dan non hayati spt minyak, mineral dan batu bara"
+                                            />
+                                    </group>
+                                </page>
+                                <page name="question_04" string="Produk dan/atau Jasa">
+                                    <group
+                                            name="question_4_1"
+                                            string="Apakah kategori produk dan/atau jasa pengguna jasa akuntan publik sebagai berikut :"
+                                            colspan="4"
+                                            col="2"
+                                        >
+                                        <field
+                                                name="question_4_a"
+                                                string="Transfer dana (wire transfer);"
+                                            />
+                                        <field
+                                                name="question_4_b"
+                                                string="Instrumen pembayaran lain (bearer negotiable instruments) diantaranya bilyet giro, warkat atas bawa berupa cek..."
+                                                help="Instrumen pembayaran lain (bearer negotiable instruments) diantaranya bilyet giro, warkat atas bawa berupa cek, cek pelawat, surat sanggup bayar, dan sertifikat deposito;"
+                                            />
+                                        <field
+                                                name="question_4_c"
+                                                string="layanan cross border correspondent banking antara lain payable through account;"
+                                            />
+                                        <field
+                                                name="question_4_d"
+                                                string="Electronic banking termasuk internet banking, phone banking, mobile banking, sms banking"
+                                            />
+                                        <field
+                                                name="question_4_e"
+                                                string="Layanan prima (private banking) atau wealth managemen"
+                                            />
+                                        <field
+                                                name="question_4_f"
+                                                string="Penitipan dengan pengelolaan (trust)"
+                                            />
+                                        <field
+                                                name="question_4_g"
+                                                string="Alat pembayaran menggunakan kartu antara lain kartu kredit, kartu atm, kartu debit"
+                                            />
+                                        <field
+                                                name="question_4_h"
+                                                string="Kontrak pengelolaan dana (discretionary fund)"
+                                            />
+                                        <field name="question_4_i" string="Custodian" />
+                                        <field
+                                                name="question_4_j"
+                                                string="Non deposit account services antara lain unit link, reksadana, safe deposit box, obligasi, surat utang negara"
+                                            />
+                                        <field name="question_4_k" string="E-money" />
+                                        <field
+                                                name="question_4_l"
+                                                string="Produk komoditi berjangka"
+                                            />
+                                        <field
+                                                name="question_4_m"
+                                                string="Gadai emas"
+                                            />
+                                    </group>
+                                </page>
+                                <page name="analisa" string="Analisa">
+                                    <group name="analisa" colspan="4" col="2">
+                                        <field name="status_id" />
+                                        <field name="conclusion" />
+                                    </group>
+                                </page>
+                            </notebook>
+                        </page>
+                        <page string="Reviews" name="tier_validation">
+                            <group name="tier_validation_1" colspan="4" col="2">
+                                <field
+                                        name="definition_id"
+                                        groups="account_general_audit.accountant_general_audit_index_a11021_multiple_approval_setting_group"
+                                    />
+                                <field
+                                        name="reviewer_partner_ids"
+                                        widget="many2many_tags"
+                                    />
+                            </group>
+                            <group name="tier_validation_2" colspan="4" col="2">
+                                <field name="review_ids" readonly="1" />
+                            </group>
+                        </page>
+                        <page
+                                name="policy"
+                                string="Policies"
+                                groups="accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_workflow_policy_setting_group"
+                            >
+                            <group name="policy_1" colspan="4" col="2">
+                                <field name="confirm_ok" />
+                                <field name="valid_ok" />
+                                <field name="restart_validation_ok" />
+                                <field name="cancel_ok" />
+                                <field name="restart_ok" />
+                            </group>
+                        </page>
+                        <page name="log" string="Logs">
+                            <group name="group_log" colspan="4" col="3">
+                                <group name="group_log_1" colspan="4" col="3">
+                                    <field name="confirm_date" string="Confirmation" />
+                                    <field name="confirm_user_id" nolabel="1" />
+                                    <field name="valid_date" string="Validation" />
+                                    <field name="valid_user_id" nolabel="1" />
+                                    <field name="cancel_date" string="Cancellation" />
+                                    <field name="cancel_user_id" nolabel="1" />
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field
+                            name="message_follower_ids"
+                            widget="mail_followers"
+                            groups="base.group_user"
+                        />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record
+            id="accountant_general_audit_index_a11021_action"
+            model="ir.actions.act_window"
+        >
+        <field name="name">General Audit Index A.1102.1</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.general_audit_index_a11021</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{
+            'readonly_by_pass': True,
+            'search_default_dom_draft':1,
+            'search_default_dom_confirm':1,
+            }
+        </field>
+    </record>
+
+    <menuitem
+            id="accountant_general_audit_index_a11021_menu"
+            name="Index A.1102.1"
+            parent="accountant_general_audit.accountant_risk_assessment_menu"
+            action="accountant_general_audit_index_a11021_action"
+            sequence="11021"
+        />
+
+
+</data>
+</openerp>
