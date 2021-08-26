@@ -1,0 +1,1221 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* accountant_general_audit_index_a11021
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_tree
+#: field:accountant.general_audit_index_a11021,name:0
+msgid "# Document"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,general_audit_id:0
+msgid "# General Audit"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit,index_a11021_id:0
+msgid "# Index A.1102.1"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,account_type_set_id:0
+msgid "Accoount Type Set"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: model:ir.model,name:accountant_general_audit_index_a11021.model_accountant_client_account_type_set
+msgid "Accountant Client Account Type Set"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: model:ir.model,name:accountant_general_audit_index_a11021.model_accountant_general_audit
+msgid "Accountant General Audit"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: model:ir.model,name:accountant_general_audit_index_a11021.model_accountant_general_audit_index_a11021
+msgid "Accountant General Audit Index A.1102.1"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: model:ir.model,name:accountant_general_audit_index_a11021.model_accountant_general_audit_index_a11021_status
+msgid "Accountant General Audit Index A.1102.1 Status"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: model:ir.module.category,name:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_usability_module_category
+msgid "Accountant General Audit Index A.1102.1 Usability"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,active_reviewer_ids:0
+msgid "Active Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Alat pembayaran menggunakan kartu antara lain kartu kredit, kartu atm, kartu debit"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Analisa"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Apakah kategori bisnis pengguna jasa akuntan publik sebagai berikut :"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Apakah kategori produk dan/atau jasa pengguna jasa akuntan publik sebagai berikut :"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Apakah pengguna jasa akuntan publik melakukan transaksi dari dan/atau ditujukan ke"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Bisnis"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,cancel_ok:0
+msgid "Can Cancel"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,confirm_ok:0
+msgid "Can Confirm"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,restart_ok:0
+msgid "Can Restart"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,restart_validation_ok:0
+msgid "Can Restart Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,valid_ok:0
+msgid "Can Valid"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+msgid "Cancel"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,cancel_date:0
+msgid "Cancel Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,cancel_reason_id:0
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Cancel. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Cancellation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Cancellation reason:"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: selection:accountant.general_audit_index_a11021,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,cancel_user_id:0
+msgid "Cancelled By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021_status,code:0
+msgid "Code"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+#: field:accountant.general_audit_index_a11021,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,conclusion:0
+msgid "Conclusion"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Confirm. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Confirmation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,confirm_date:0
+msgid "Confirmation Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,confirm_user_id:0
+msgid "Confirmed By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,create_uid:0
+#: field:accountant.general_audit_index_a11021_status,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,create_date:0
+#: field:accountant.general_audit_index_a11021_status,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,currency_id:0
+msgid "Currency"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Custodian"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+msgid "Date End by Day"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+msgid "Date End by Month"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+msgid "Date End by Week"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+msgid "Date End by Year"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+msgid "Date Start by Day"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+msgid "Date Start by Month"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+msgid "Date Start by Week"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+msgid "Date Start by Year"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: help:accountant.general_audit_index_a11021,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,definition_id:0
+msgid "Definition"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,display_name:0
+#: field:accountant.general_audit_index_a11021_status,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+#: selection:accountant.general_audit_index_a11021,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "E-money"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Electronic banking termasuk internet banking, phone banking, mobile banking, sms banking"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,date_end:0
+msgid "End Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Gadai emas"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: model:ir.actions.act_window,name:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_action
+msgid "General Audit Index A.1102.1"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: model:ir.actions.act_window,name:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_status_action
+msgid "General Audit Index A.1102.1 Status"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,general_audit_ids:0
+msgid "General Audits"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: help:accountant.general_audit_index_a11021,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,id:0
+#: field:accountant.general_audit_index_a11021_status,id:0
+msgid "ID"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: help:accountant.general_audit_index_a11021,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: model:ir.ui.menu,name:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_menu
+msgid "Index A.1102.1"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: model:ir.ui.menu,name:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_status_menu
+msgid "Index A.1102.1 Status"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.client_account_type_set,index_a11021_sequence_id:0
+msgid "Index A11021 Sequence"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Instrumen pembayaran lain (bearer negotiable instruments) diantaranya bilyet giro, warkat atas bawa berupa cek, cek pelawat, surat sanggup bayar, dan sertifikat deposito;"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Instrumen pembayaran lain (bearer negotiable instruments) diantaranya bilyet giro, warkat atas bawa berupa cek..."
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,interim_date_end:0
+msgid "Interim End Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,interim_date_start:0
+msgid "Interim Start Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Keluarga inti PEP tek anggota keluarga sampai dengan derajat kedua"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Kontrak pengelolaan dana (discretionary fund)"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Koperasi yang melakukan kegiatan simpan pinjam dengan nilai aset Rp1.000.000.000 (satu milyar rupiah) atau lebih"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,__last_update:0
+#: field:accountant.general_audit_index_a11021_status,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,write_uid:0
+#: field:accountant.general_audit_index_a11021_status,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,write_date:0
+#: field:accountant.general_audit_index_a11021_status,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Layanan prima (private banking) atau wealth managemen"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Logs"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: help:accountant.general_audit_index_a11021,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021_status,name:0
+msgid "Name"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,need_validation:0
+msgid "Need Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+msgid "Needs my Review"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Negara"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Negara asing yang diidentifikasi sebagai tax haven antara lain berdasarkan data dari Organisation for ..."
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Negara asing yang diidentifikasi sebagai tax haven antara lain berdasarkan data dari Organisation for Economic Cooperation and Development; atau"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Negara asing yang dikenal memiliki indeks persepsi korupsi yang rendah atau indeks dibawah 40 (empat puluh) ..."
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Negara asing yang dikenal memiliki indeks persepsi korupsi yang rendah atau indeks dibawah 40 (empat puluh) berdasarkan transparency international"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Negara asing yang diketahui secara luas sebagai tempat penghasil dan pusat perdagangan narkoba"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Negara asing yang dinyatakan belum memadai dalam melaksanakan rekomendasi Financial Action Task Force ..."
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Negara asing yang dinyatakan belum memadai dalam melaksanakan rekomendasi Financial Action Task Force di bidang pencegahan dan pemberantasan tindak pidana pencucian uang dan pendanaan terorisme berdasarkan hasil evaluasi (mutual assessment);"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Negara asing yang memiliki tingkat tata kelola kepemerintahan yang rendah atau dibawah 50 (lima puluh) ..."
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Negara asing yang memiliki tingkat tata kelola kepemerintahan yang rendah atau dibawah 50 (lima puluh) berdasarkan worldwide governance indicators terkini yang diterbitkan oleh WorldBank;"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,next_reviewer_ids:0
+msgid "Next Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: selection:accountant.general_audit_index_a11021,question_1_a_1:0
+#: selection:accountant.general_audit_index_a11021,question_1_a_2:0
+#: selection:accountant.general_audit_index_a11021,question_1_a_3:0
+#: selection:accountant.general_audit_index_a11021,question_1_a_4:0
+#: selection:accountant.general_audit_index_a11021,question_1_a_5:0
+#: selection:accountant.general_audit_index_a11021,question_1_b_1:0
+#: selection:accountant.general_audit_index_a11021,question_1_b_2:0
+#: selection:accountant.general_audit_index_a11021,question_1_b_3:0
+#: selection:accountant.general_audit_index_a11021,question_1_c:0
+#: selection:accountant.general_audit_index_a11021,question_1_d:0
+#: selection:accountant.general_audit_index_a11021,question_1_e:0
+#: selection:accountant.general_audit_index_a11021,question_1_f:0
+#: selection:accountant.general_audit_index_a11021,question_1_g:0
+#: selection:accountant.general_audit_index_a11021,question_2_1_a:0
+#: selection:accountant.general_audit_index_a11021,question_2_1_b:0
+#: selection:accountant.general_audit_index_a11021,question_2_1_c:0
+#: selection:accountant.general_audit_index_a11021,question_2_1_d:0
+#: selection:accountant.general_audit_index_a11021,question_2_1_e:0
+#: selection:accountant.general_audit_index_a11021,question_2_2:0
+#: selection:accountant.general_audit_index_a11021,question_3_a:0
+#: selection:accountant.general_audit_index_a11021,question_3_b:0
+#: selection:accountant.general_audit_index_a11021,question_3_c:0
+#: selection:accountant.general_audit_index_a11021,question_3_d:0
+#: selection:accountant.general_audit_index_a11021,question_3_e:0
+#: selection:accountant.general_audit_index_a11021,question_3_f:0
+#: selection:accountant.general_audit_index_a11021,question_3_g:0
+#: selection:accountant.general_audit_index_a11021,question_3_h:0
+#: selection:accountant.general_audit_index_a11021,question_3_i:0
+#: selection:accountant.general_audit_index_a11021,question_3_j:0
+#: selection:accountant.general_audit_index_a11021,question_3_k:0
+#: selection:accountant.general_audit_index_a11021,question_3_l:0
+#: selection:accountant.general_audit_index_a11021,question_3_m:0
+#: selection:accountant.general_audit_index_a11021,question_4_a:0
+#: selection:accountant.general_audit_index_a11021,question_4_b:0
+#: selection:accountant.general_audit_index_a11021,question_4_c:0
+#: selection:accountant.general_audit_index_a11021,question_4_d:0
+#: selection:accountant.general_audit_index_a11021,question_4_e:0
+#: selection:accountant.general_audit_index_a11021,question_4_f:0
+#: selection:accountant.general_audit_index_a11021,question_4_g:0
+#: selection:accountant.general_audit_index_a11021,question_4_h:0
+#: selection:accountant.general_audit_index_a11021,question_4_i:0
+#: selection:accountant.general_audit_index_a11021,question_4_j:0
+#: selection:accountant.general_audit_index_a11021,question_4_k:0
+#: selection:accountant.general_audit_index_a11021,question_4_l:0
+#: selection:accountant.general_audit_index_a11021,question_4_m:0
+msgid "No"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Non deposit account services antara lain unit link, reksadana, safe deposit box, obligasi, surat utang negara"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021_status,note:0
+msgid "Note"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Orang atau entitas yang namanya tercantum dalam daftar"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Orang atau entitas yang namanya tercantum dalam sanction list"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+#: field:accountant.general_audit_index_a11021,partner_id:0
+msgid "Partner"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Pejabat negara"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Pejabat yang berdasarkan ketentuan kementerian yang membidangi urusan ......"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Pejabat yang berdasarkan ketentuan kementerian yang membidangi urusan aparatur negara dan reformasi birokrasi diwajibkan menyampaikan Laporan Harta Kekayaan Penyelenggara Negara"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Pejabat yang memiliki fungsi strategis"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Pejabat, pegawai, petugas, dan setiap orang yang bekerja dalam bidang pelayanan publik khususnya di bidang"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Pengurus partai politik atau anggota partai politik"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Penitipan dengan pengelolaan (trust)"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Perusahan yang dimiliki, dikelola, dan/ atau dikendalikan oleh PEP"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Pihak yang terkait Politically Exposed Person (PEP)"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Pihak-pihak yang secara umum dan diketahui publik mempunyai hubungan dekat dengan PEP"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Pimpinan instansi pemerintah setingkat atau setara eselon I"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Policies"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Politically Exposed Person (PEP)"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,previous_date_end:0
+msgid "Previous End Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,previous_date_start:0
+msgid "Previous Start Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Print"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Produk dan/atau Jasa"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Produk komoditi berjangka"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Profesi tertentu diantaranya advokat, kurator, notaris, Pejabat Pembuat Akta Tanah, akuntan, akuntan publik, perencana keuangan, atau konsultan pajak,"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Profil Pengguna Jasa"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Question"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_a_1:0
+msgid "Question 1A1"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_a_2:0
+msgid "Question 1A2"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_a_3:0
+msgid "Question 1A3"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_a_4:0
+msgid "Question 1A4"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_a_5:0
+msgid "Question 1A5"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_b_1:0
+msgid "Question 1B1"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_b_2:0
+msgid "Question 1B2"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_b_3:0
+msgid "Question 1B3"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_c:0
+msgid "Question 1C"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_d:0
+msgid "Question 1D"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_e:0
+msgid "Question 1E"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_f:0
+msgid "Question 1F"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_1_g:0
+msgid "Question 1G"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_2_1_a:0
+msgid "Question 21A"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_2_1_b:0
+msgid "Question 21B"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_2_1_c:0
+msgid "Question 21C"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_2_1_d:0
+msgid "Question 21D"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_2_1_e:0
+msgid "Question 21E"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_2_2:0
+msgid "Question 22"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_a:0
+msgid "Question 3a"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_b:0
+msgid "Question 3b"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_c:0
+msgid "Question 3c"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_d:0
+msgid "Question 3d"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_e:0
+msgid "Question 3e"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_f:0
+msgid "Question 3f"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_g:0
+msgid "Question 3g"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_h:0
+msgid "Question 3h"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_i:0
+msgid "Question 3i"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_j:0
+msgid "Question 3j"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_k:0
+msgid "Question 3k"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_l:0
+msgid "Question 3l"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_3_m:0
+msgid "Question 3m"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_a:0
+msgid "Question 4a"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_b:0
+msgid "Question 4b"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_c:0
+msgid "Question 4c"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_d:0
+msgid "Question 4d"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_e:0
+msgid "Question 4e"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_f:0
+msgid "Question 4f"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_g:0
+msgid "Question 4g"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_h:0
+msgid "Question 4h"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_i:0
+msgid "Question 4i"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_j:0
+msgid "Question 4j"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_k:0
+msgid "Question 4k"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_l:0
+msgid "Question 4l"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,question_4_m:0
+msgid "Question 4m"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Reject"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,rejected:0
+msgid "Rejected"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Request Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,user_id:0
+msgid "Responsible"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Restart"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Restart Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Restart. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,reviewer_partner_ids:0
+msgid "Review Partners"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,reviewer_ids:0
+msgid "Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Reviews"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021_status,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: model:res.groups,name:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_multiple_approval_setting_group
+msgid "Show Multiple Approval Setting"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: model:res.groups,name:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_workflow_policy_setting_group
+msgid "Show Workflow Policy Info"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,date_start:0
+msgid "Start Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+#: field:accountant.general_audit_index_a11021,state:0
+msgid "State"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+#: field:accountant.general_audit_index_a11021,status_id:0
+msgid "Status"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "This General Audit Index A11021 needs to be\n"
+"                        validated."
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Transfer dana (wire transfer);"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit,index_a11021_ids:0
+msgid "Trial Balance"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha agen perjalanan"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha di bidang jasa pengangkutan atau pengapalan (freight forwarding)"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha di bidang pengelolaan hasil hutan atau kehutanan"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha di bidang perdagangan barang seni dan antik"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha di bidang perdagangan kendaraan bermotor yang merupakan barang mewah"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha di bidang perdagangan permata dan perhiasan atau logam mulia"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha di bidang properti"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha investasi berbasis emas atau logam mulia"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha penukaran valuta asing non bank"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha penyelenggara transfer dana non bank"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha perdagangan ekspor/impor di bidang sumber daya alam hayati dan non hayati spt minyak, mineral dan batu bara"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Usaha yang berbasis tunai, diantaranya minimarket, jasa pengelola parkir, Stasiun Pengisian Bahan Bakar Umum (SPBU)"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+#: selection:accountant.general_audit_index_a11021,state:0
+msgid "Valid"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,valid_user_id:0
+msgid "Valid By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Validate"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,validated:0
+msgid "Validated"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,valid_date:0
+msgid "Validation Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: field:accountant.general_audit_index_a11021,review_ids:0
+msgid "Validations"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_search
+#: selection:accountant.general_audit_index_a11021,state:0
+msgid "Waiting for Approval"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: selection:accountant.general_audit_index_a11021,question_1_a_1:0
+#: selection:accountant.general_audit_index_a11021,question_1_a_2:0
+#: selection:accountant.general_audit_index_a11021,question_1_a_3:0
+#: selection:accountant.general_audit_index_a11021,question_1_a_4:0
+#: selection:accountant.general_audit_index_a11021,question_1_a_5:0
+#: selection:accountant.general_audit_index_a11021,question_1_b_1:0
+#: selection:accountant.general_audit_index_a11021,question_1_b_2:0
+#: selection:accountant.general_audit_index_a11021,question_1_b_3:0
+#: selection:accountant.general_audit_index_a11021,question_1_c:0
+#: selection:accountant.general_audit_index_a11021,question_1_d:0
+#: selection:accountant.general_audit_index_a11021,question_1_e:0
+#: selection:accountant.general_audit_index_a11021,question_1_f:0
+#: selection:accountant.general_audit_index_a11021,question_1_g:0
+#: selection:accountant.general_audit_index_a11021,question_2_1_a:0
+#: selection:accountant.general_audit_index_a11021,question_2_1_b:0
+#: selection:accountant.general_audit_index_a11021,question_2_1_c:0
+#: selection:accountant.general_audit_index_a11021,question_2_1_d:0
+#: selection:accountant.general_audit_index_a11021,question_2_1_e:0
+#: selection:accountant.general_audit_index_a11021,question_2_2:0
+#: selection:accountant.general_audit_index_a11021,question_3_a:0
+#: selection:accountant.general_audit_index_a11021,question_3_b:0
+#: selection:accountant.general_audit_index_a11021,question_3_c:0
+#: selection:accountant.general_audit_index_a11021,question_3_d:0
+#: selection:accountant.general_audit_index_a11021,question_3_e:0
+#: selection:accountant.general_audit_index_a11021,question_3_f:0
+#: selection:accountant.general_audit_index_a11021,question_3_g:0
+#: selection:accountant.general_audit_index_a11021,question_3_h:0
+#: selection:accountant.general_audit_index_a11021,question_3_i:0
+#: selection:accountant.general_audit_index_a11021,question_3_j:0
+#: selection:accountant.general_audit_index_a11021,question_3_k:0
+#: selection:accountant.general_audit_index_a11021,question_3_l:0
+#: selection:accountant.general_audit_index_a11021,question_3_m:0
+#: selection:accountant.general_audit_index_a11021,question_4_a:0
+#: selection:accountant.general_audit_index_a11021,question_4_b:0
+#: selection:accountant.general_audit_index_a11021,question_4_c:0
+#: selection:accountant.general_audit_index_a11021,question_4_d:0
+#: selection:accountant.general_audit_index_a11021,question_4_e:0
+#: selection:accountant.general_audit_index_a11021,question_4_f:0
+#: selection:accountant.general_audit_index_a11021,question_4_g:0
+#: selection:accountant.general_audit_index_a11021,question_4_h:0
+#: selection:accountant.general_audit_index_a11021,question_4_i:0
+#: selection:accountant.general_audit_index_a11021,question_4_j:0
+#: selection:accountant.general_audit_index_a11021,question_4_k:0
+#: selection:accountant.general_audit_index_a11021,question_4_l:0
+#: selection:accountant.general_audit_index_a11021,question_4_m:0
+msgid "Yes"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: code:addons/accountant_general_audit_index_a11021/models/accountant_general_audit_index_a11021.py:951
+#, python-format
+msgid "You can only delete data on draft state"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "layanan cross border correspondent banking antara lain payable through account;"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "pejabat, pegawai, atau setiap orang yang bekerja untuk dan atas nama"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "penyedia jasa keuangan;"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "perizinan, pengadaan dan penyaluran barang dan jasa publik, penerimaan negara atau daerah"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "terduga teroris dan organisasi teroris yang dikeluarkan oleh pemerintah;"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "termasuk karyawan yang bekerja pada kantor profesi tersebut diatas"
+msgstr ""
+
+#. module: accountant_general_audit_index_a11021
+#: view:accountant.general_audit_index_a11021:accountant_general_audit_index_a11021.accountant_general_audit_index_a11021_view_form
+msgid "yang dikeluarkan oleh organisasi internasional; dan/ atau"
+msgstr ""
+
