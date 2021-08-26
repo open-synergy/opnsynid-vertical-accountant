@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* accountant_report_document
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: accountant_report_document
+#: model:ir.model,name:accountant_report_document.model_accountant_report
+msgid "Accountant Report"
+msgstr ""
+
+#. module: accountant_report_document
+#: view:accountant.report:accountant_report_document.accountant_report_view_form
+#: field:accountant.report,attachment_ids:0
+msgid "Attachments"
+msgstr ""
+
+#. module: accountant_report_document
+#: field:accountant.report,draft_report_attachment_id:0
+msgid "Draft Report Attachment"
+msgstr ""
+
+#. module: accountant_report_document
+#: field:accountant.report,main_report_attachment_id:0
+msgid "Main Report Attachment"
+msgstr ""
+
+#. module: accountant_report_document
+#: view:accountant.report:accountant_report_document.accountant_report_view_form
+msgid "Variants"
+msgstr ""
+
