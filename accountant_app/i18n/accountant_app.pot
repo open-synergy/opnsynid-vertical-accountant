@@ -1,0 +1,621 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* accountant_app
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: accountant_app
+#: field:accountant.service,product_variant_count:0
+msgid "# of Product Variants"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,description_sale:0
+msgid "A description of the Product that you want to communicate to your customers. This description will be copied to every Sale Order, Delivery Order and Customer Invoice/Refund"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,description_purchase:0
+msgid "A description of the Product that you want to communicate to your suppliers. This description will be copied to every Purchase Order, Receipt and Supplier Invoice/Refund."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,description:0
+msgid "A precise description of the Product, used only for internal information purposes."
+msgstr ""
+
+#. module: accountant_app
+#: model:ir.actions.act_window,name:accountant_app.accountant_config_setting_action
+msgid "Accountant Configuration"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,module_accountant_report:0
+msgid "Accountant Report"
+msgstr ""
+
+#. module: accountant_app
+#: model:ir.actions.act_window,name:accountant_app.accountant_service_action
+#: model:ir.model,name:accountant_app.model_accountant_service
+#: model:ir.ui.menu,name:accountant_app.accountant_main_menu
+#: model:ir.ui.menu,name:accountant_app.accountant_service_menu
+msgid "Accountant Service"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,active:0
+msgid "Active"
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.config_setting:accountant_app.accountant_config_setting_view_form
+msgid "Apply"
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.service:accountant_app.accountant_service_view_search
+msgid "Assurance"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,assurance:0
+msgid "Assurance Service?"
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.service:accountant_app.accountant_service_view_search
+msgid "Assurance?"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,attribute_value_ids:0
+msgid "Attributes"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,list_price:0
+msgid "Base price to compute the customer price. Sometimes called the catalog price."
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,image:0
+msgid "Big-sized image"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,rental:0
+msgid "Can be Rent"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,sale_ok:0
+msgid "Can be Sold"
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.config_setting:accountant_app.accountant_config_setting_view_form
+#: view:accountant.convert_product_to_service:accountant_app.convert_product_to_service_form
+msgid "Cancel"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,uos_coeff:0
+msgid "Coefficient to convert default Unit of Measure to Unit of Sale\n"
+" uos = uom * coeff"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,color:0
+msgid "Color Index"
+msgstr ""
+
+#. module: accountant_app
+#: model:ir.model,name:accountant_app.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,company_id:0
+#: field:accountant.service,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: accountant_app
+#: model:ir.ui.menu,name:accountant_app.accountant_config_setting_menu
+#: model:ir.ui.menu,name:accountant_app.accountant_configuration_menu
+msgid "Configuration"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,type:0
+msgid "Consumable are product where you don't manage stock, a service is a non-material product provided by a company or an individual."
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.convert_product_to_service:accountant_app.convert_product_to_service_form
+msgid "Convert"
+msgstr ""
+
+#. module: accountant_app
+#: model:ir.actions.act_window,name:accountant_app.convert_product_to_service_action
+#: model:ir.model,name:accountant_app.model_accountant_convert_product_to_service
+msgid "Convert Product To Accountant Service"
+msgstr ""
+
+#. module: accountant_app
+#: model:ir.ui.menu,name:accountant_app.convert_product_to_service_menu
+msgid "Convert Product To Service"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,standard_price:0
+msgid "Cost Price"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,standard_price:0
+msgid "Cost price of the product template used for standard stock valuation in accounting and used as a base price on purchase orders. Expressed in the default unit of measure of the product."
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,create_uid:0
+#: field:accountant.convert_product_to_service,create_uid:0
+#: field:accountant.service,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,create_date:0
+#: field:accountant.convert_product_to_service,create_date:0
+#: field:accountant.service,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,partner_ref:0
+msgid "Customer ref"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,uom_id:0
+msgid "Default Unit of Measure used for all stock operation."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,uom_po_id:0
+msgid "Default Unit of Measure used for purchase orders. It must be in the same category than the default unit of measure."
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.service:accountant_app.accountant_service_view_form
+#: field:accountant.service,description:0
+msgid "Description"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,display_name:0
+#: field:accountant.convert_product_to_service,display_name:0
+#: field:accountant.service,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,ean13:0
+msgid "EAN13 Barcode"
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.config_setting:accountant_app.accountant_config_setting_view_form
+msgid "Feature"
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.config_setting:accountant_app.accountant_config_setting_view_form
+msgid "Feature & Integration"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,packaging_ids:0
+msgid "Gives the different ways to package the same product. This has no impact on the picking order and is mainly used if you use the EDI module."
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,weight:0
+msgid "Gross Weight"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,id:0
+#: field:accountant.convert_product_to_service,id:0
+#: field:accountant.service,id:0
+msgid "ID"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,active:0
+msgid "If unchecked, it will allow you to hide the product without removing it."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,image:0
+msgid "Image of the product variant (Big-sized image of product template if false). It is automatically resized as a 1024x1024px image, with aspect ratio preserved."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,image_medium:0
+msgid "Image of the product variant (Medium-sized image of product template if false)."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,image_small:0
+msgid "Image of the product variant (Small-sized image of product template if false)."
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,module_accountant_report_project:0
+msgid "Integrate Accountant Report - Project"
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.config_setting:accountant_app.accountant_config_setting_view_form
+msgid "Integration"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,categ_id:0
+msgid "Internal Category"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,code:0
+#: field:accountant.service,default_code:0
+msgid "Internal Reference"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,ean13:0
+msgid "International Article Number used for product identification."
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,is_product_variant:0
+msgid "Is product variant"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,__last_update:0
+#: field:accountant.convert_product_to_service,__last_update:0
+#: field:accountant.service,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,write_uid:0
+#: field:accountant.convert_product_to_service,write_uid:0
+#: field:accountant.service,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,write_date:0
+#: field:accountant.convert_product_to_service,write_date:0
+#: field:accountant.service,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,packaging_ids:0
+msgid "Logistical Units"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,seller_id:0
+msgid "Main Supplier"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,seller_id:0
+msgid "Main Supplier who has highest priority in Supplier List."
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,mes_type:0
+msgid "Measure Type"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,image_medium:0
+msgid "Medium-sized image"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,name:0
+msgid "Name"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,weight_net:0
+msgid "Net Weight"
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.service:accountant_app.accountant_service_view_search
+msgid "Non-Assurance"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,module_accountant_partner_arrangement:0
+msgid "Partner Arrangement"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,price:0
+msgid "Price"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,pricelist_id:0
+msgid "Pricelist"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,attribute_line_ids:0
+msgid "Product Attributes"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,product_id:0
+msgid "Product Link"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,product_manager:0
+msgid "Product Manager"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,product_tmpl_id:0
+msgid "Product Template"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,type:0
+msgid "Product Type"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.convert_product_to_service,product_ids:0
+msgid "Product to Convert"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,product_variant_ids:0
+msgid "Products"
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.convert_product_to_service:accountant_app.convert_product_to_service_form
+msgid "Products to Convert"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,lst_price:0
+msgid "Public Price"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,description_purchase:0
+msgid "Purchase Description"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,uom_po_id:0
+msgid "Purchase Unit of Measure"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.config_setting,module_accountant_report_quality_control:0
+msgid "Quality Control on Accountant Report"
+msgstr ""
+
+#. module: accountant_app
+#: model:ir.ui.menu,name:accountant_app.accountant_report_menu
+msgid "Report"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,description_sale:0
+msgid "Sale Description"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,list_price:0
+msgid "Sale Price"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,categ_id:0
+msgid "Select category for the current product"
+msgstr ""
+
+#. module: accountant_app
+#: code:addons/accountant_app/wizards/convert_product_to_service.py:39
+#, python-format
+msgid "Service already exist"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,image_small:0
+msgid "Small-sized image"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,uos_id:0
+msgid "Specify a unit of measure here if invoicing is made in another unit of measure than inventory. Keep empty to use the default unit of measure."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,sale_ok:0
+msgid "Specify if the product can be selected in a sales order line."
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,state:0
+msgid "Status"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,seller_ids:0
+msgid "Supplier"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,seller_delay:0
+msgid "Supplier Lead Time"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,seller_qty:0
+msgid "Supplier Quantity"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,name_template:0
+msgid "Template Name"
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,weight:0
+msgid "The gross weight in Kg."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,weight_net:0
+msgid "The net weight in Kg."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,volume:0
+msgid "The volume in m3."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,image_variant:0
+msgid "This field holds the image used as image for the product variant, limited to 1024x1024px."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,seller_qty:0
+msgid "This is minimum quantity to purchase from Main Supplier."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,seller_delay:0
+msgid "This is the average delay in days between the purchase order confirmation and the receipts for this product and for the default supplier. It is used by the scheduler to order requests based on reordering delays."
+msgstr ""
+
+#. module: accountant_app
+#: help:accountant.service,price_extra:0
+msgid "This is the sum of the extra price of all attributes"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,uom_id:0
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,uos_coeff:0
+msgid "Unit of Measure -> UOS Coeff"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,uos_id:0
+msgid "Unit of Sale"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,price_extra:0
+msgid "Variant Extra Price"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,image_variant:0
+msgid "Variant Image"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,volume:0
+msgid "Volume"
+msgstr ""
+
+#. module: accountant_app
+#: field:accountant.service,warranty:0
+msgid "Warranty"
+msgstr ""
+
+#. module: accountant_app
+#: view:accountant.config_setting:accountant_app.accountant_config_setting_view_form
+#: view:accountant.convert_product_to_service:accountant_app.convert_product_to_service_form
+msgid "or"
+msgstr ""
+
