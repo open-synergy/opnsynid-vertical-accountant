@@ -1,0 +1,788 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* accountant_general_audit_index_a210
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_tree
+#: field:accountant.general_audit_index_a210,name:0
+msgid "# Document"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,general_audit_id:0
+msgid "# General Audit"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit,index_a210_id:0
+msgid "# Index A.210"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: model:ir.ui.menu,name:accountant_general_audit_index_a210.accountant_general_audit_index_a210_status_menu
+msgid "A.210"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,account_type_set_id:0
+msgid "Accoount Type Set"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: model:ir.model,name:accountant_general_audit_index_a210.model_accountant_client_account_type_set
+msgid "Accountant Client Account Type Set"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: model:ir.model,name:accountant_general_audit_index_a210.model_accountant_general_audit
+msgid "Accountant General Audit"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: model:ir.model,name:accountant_general_audit_index_a210.model_accountant_general_audit_index_a210
+msgid "Accountant General Audit Index A.210"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: model:ir.module.category,name:accountant_general_audit_index_a210.accountant_general_audit_index_a210_usability_module_category
+msgid "Accountant General Audit Index A.210 Usability"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,active_reviewer_ids:0
+msgid "Active Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,base_amount:0
+msgid "Base Amount"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,cancel_ok:0
+msgid "Can Cancel"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,confirm_ok:0
+msgid "Can Confirm"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,restart_ok:0
+msgid "Can Restart"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,restart_validation_ok:0
+msgid "Can Restart Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,valid_ok:0
+msgid "Can Valid"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+msgid "Cancel"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,cancel_date:0
+msgid "Cancel Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,cancel_reason_id:0
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Cancel. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Cancellation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Cancellation reason:"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: selection:accountant.general_audit_index_a210,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,cancel_user_id:0
+msgid "Cancelled By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210_status,code:0
+msgid "Code"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+#: field:accountant.general_audit_index_a210,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,conclusion:0
+msgid "Conclusion"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Confirm. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Confirmation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,confirm_date:0
+msgid "Confirmation Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,confirm_user_id:0
+msgid "Confirmed By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Consideration"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Conslusion"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.client_account_type_set:accountant_general_audit_index_a210.accountant_client_account_type_set_view_form
+#: selection:accountant.general_audit_index_a210,base_amount:0
+#: field:accountant.general_audit_index_a210,cost_of_revenue:0
+msgid "Cost of Revenue"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,create_uid:0
+#: field:accountant.general_audit_index_a210_status,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,create_date:0
+#: field:accountant.general_audit_index_a210_status,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+msgid "Date End by Day"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+msgid "Date End by Month"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+msgid "Date End by Week"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+msgid "Date End by Year"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+msgid "Date Start by Day"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+msgid "Date Start by Month"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+msgid "Date Start by Week"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+msgid "Date Start by Year"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: help:accountant.general_audit_index_a210,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,definition_id:0
+msgid "Definition"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210_status:accountant_general_audit_index_a210.accountant_general_audit_index_a210_status_view_form
+#: field:accountant.general_audit_index_a210_status,description:0
+msgid "Description"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,display_name:0
+#: field:accountant.general_audit_index_a210_status,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+#: selection:accountant.general_audit_index_a210,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.client_account_type_set:accountant_general_audit_index_a210.accountant_client_account_type_set_view_form
+#: selection:accountant.general_audit_index_a210,base_amount:0
+#: field:accountant.general_audit_index_a210,ebitda:0
+msgid "EBITDA"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.client_account_type_set:accountant_general_audit_index_a210.accountant_client_account_type_set_view_form
+#: selection:accountant.general_audit_index_a210,base_amount:0
+#: field:accountant.general_audit_index_a210,ebt:0
+msgid "EBT"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,date_end:0
+msgid "End Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Extrapolation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,cost_of_revenue_extrapolation:0
+msgid "Extrapolation Cost of Revenue"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,ebitda_extrapolation:0
+msgid "Extrapolation EBITDA"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,ebt_extrapolation:0
+msgid "Extrapolation EBT"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,net_asset_extrapolation:0
+msgid "Extrapolation Net Asset"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,overall_materiality_extrapolation:0
+msgid "Extrapolation Overall Materiality"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,performance_materiality_extrapolation:0
+msgid "Extrapolation Performance Materiality"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,revenue_extrapolation:0
+msgid "Extrapolation Revenue"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,tolerable_misstatement_extrapolation:0
+msgid "Extrapolation Tolerable Misstatement"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,total_asset_extrapolation:0
+msgid "Extrapolation Total Asset"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,total_liability_extrapolation:0
+msgid "Extrapolation Total Liability"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: model:ir.actions.act_window,name:accountant_general_audit_index_a210.accountant_general_audit_index_a210_action
+msgid "General Audit Index A.210"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,general_audit_ids:0
+msgid "General Audits"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: help:accountant.general_audit_index_a210,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,id:0
+#: field:accountant.general_audit_index_a210_status,id:0
+msgid "ID"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: help:accountant.general_audit_index_a210,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.client_account_type_set:accountant_general_audit_index_a210.accountant_client_account_type_set_view_form
+msgid "Index 210"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: model:ir.ui.menu,name:accountant_general_audit_index_a210.accountant_general_audit_index_a210_menu
+msgid "Index A.210"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: model:ir.actions.act_window,name:accountant_general_audit_index_a210.accountant_general_audit_index_a210_status_action
+#: model:ir.model,name:accountant_general_audit_index_a210.model_accountant_general_audit_index_a210_status
+msgid "Index A.210 Status"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,interim_date_end:0
+msgid "Interim End Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,interim_date_start:0
+msgid "Interim Start Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,__last_update:0
+#: field:accountant.general_audit_index_a210_status,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,write_uid:0
+#: field:accountant.general_audit_index_a210_status,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,write_date:0
+#: field:accountant.general_audit_index_a210_status,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Logs"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Materiality"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: help:accountant.general_audit_index_a210,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210_status,name:0
+msgid "Name"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,need_validation:0
+msgid "Need Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+msgid "Needs my Review"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.client_account_type_set:accountant_general_audit_index_a210.accountant_client_account_type_set_view_form
+#: selection:accountant.general_audit_index_a210,base_amount:0
+#: field:accountant.general_audit_index_a210,net_asset:0
+msgid "Net Asset"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,next_reviewer_ids:0
+msgid "Next Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: selection:accountant.general_audit_index_a210,base_amount:0
+#: field:accountant.general_audit_index_a210,other_base_amount:0
+msgid "Other Base Amount"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+#: field:accountant.general_audit_index_a210,overall_materiality:0
+msgid "Overall Materiality"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,overall_materiality_consideration:0
+msgid "Overall Materiality Consideration"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,overall_materiality_percentage:0
+msgid "Overall Materiality Percentage"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+#: field:accountant.general_audit_index_a210,partner_id:0
+msgid "Partner"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Percentage"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+#: field:accountant.general_audit_index_a210,performance_materiality:0
+msgid "Performance Materiality"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,performance_materiality_percentage:0
+msgid "Performance Materiality Percentage"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,performance_materiality_consideration:0
+msgid "Performence Materiality Consideration"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Policies"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,previous_date_end:0
+msgid "Previous End Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,previous_date_start:0
+msgid "Previous Start Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Print"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.client_account_type_set,cost_of_revenue_python_code:0
+msgid "Python Code for Cost of Revenue"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.client_account_type_set,ebitda_python_code:0
+msgid "Python Code for EBITDA"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.client_account_type_set,ebt_python_code:0
+msgid "Python Code for EBT"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.client_account_type_set,net_asset_python_code:0
+msgid "Python Code for Net Asset"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.client_account_type_set,revenue_python_code:0
+msgid "Python Code for Revenue"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.client_account_type_set,total_asset_python_code:0
+msgid "Python Code for Total Asset"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.client_account_type_set,total_liability_python_code:0
+msgid "Python Code for Total Liability"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.client_account_type_set:accountant_general_audit_index_a210.accountant_client_account_type_set_view_form
+msgid "Python Computation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Reject"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,rejected:0
+msgid "Rejected"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Request Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,user_id:0
+msgid "Responsible"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Restart"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Restart Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Restart. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.client_account_type_set:accountant_general_audit_index_a210.accountant_client_account_type_set_view_form
+#: selection:accountant.general_audit_index_a210,base_amount:0
+#: field:accountant.general_audit_index_a210,revenue:0
+msgid "Revenue"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,reviewer_partner_ids:0
+msgid "Review Partners"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,reviewer_ids:0
+msgid "Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Reviews"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210_status,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: model:res.groups,name:accountant_general_audit_index_a210.accountant_general_audit_index_a210_multiple_approval_setting_group
+msgid "Show Multiple Approval Setting"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: model:res.groups,name:accountant_general_audit_index_a210.accountant_general_audit_index_a210_workflow_policy_setting_group
+msgid "Show Workflow Policy Info"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,date_start:0
+msgid "Start Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+#: field:accountant.general_audit_index_a210,state:0
+msgid "State"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+#: field:accountant.general_audit_index_a210,status_id:0
+msgid "Status"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "This General Audit Index A1101 needs to be\n"
+"                        validated."
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+#: field:accountant.general_audit_index_a210,tolerable_misstatement:0
+msgid "Tolerable Misstatement"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,tolerable_misstatement_consideration:0
+msgid "Tolerable Misstatement Consideration"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,tolerable_misstatement_percentage:0
+msgid "Tolerable Misstatement Percentage"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.client_account_type_set:accountant_general_audit_index_a210.accountant_client_account_type_set_view_form
+#: selection:accountant.general_audit_index_a210,base_amount:0
+#: field:accountant.general_audit_index_a210,total_asset:0
+msgid "Total Asset"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.client_account_type_set:accountant_general_audit_index_a210.accountant_client_account_type_set_view_form
+#: selection:accountant.general_audit_index_a210,base_amount:0
+#: field:accountant.general_audit_index_a210,total_liability:0
+msgid "Total Liability"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit,index_a210_ids:0
+msgid "Trial Balance"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+#: selection:accountant.general_audit_index_a210,state:0
+msgid "Valid"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,valid_user_id:0
+msgid "Valid By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Validate"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,validated:0
+msgid "Validated"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,valid_date:0
+msgid "Validation Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: field:accountant.general_audit_index_a210,review_ids:0
+msgid "Validations"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_search
+#: selection:accountant.general_audit_index_a210,state:0
+msgid "Waiting for Approval"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: view:accountant.general_audit_index_a210:accountant_general_audit_index_a210.accountant_general_audit_index_a210_view_form
+msgid "Year End"
+msgstr ""
+
+#. module: accountant_general_audit_index_a210
+#: code:addons/accountant_general_audit_index_a210/models/accountant_general_audit_index_a210.py:753
+#, python-format
+msgid "You can only delete data on draft state"
+msgstr ""
+
