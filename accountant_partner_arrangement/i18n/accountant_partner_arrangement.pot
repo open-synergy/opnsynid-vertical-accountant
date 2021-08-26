@@ -1,0 +1,497 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* accountant_partner_arrangement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,name:0
+msgid "# Partner Arrangement"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:res.company,accountant_partner_arrangement_sequence_id:0
+msgid "Accountant Firm Partner Arrangement Sequence"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.config_setting:accountant_partner_arrangement.accountant_config_setting_view_form
+msgid "Accountant Partner Arrangement"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,active_reviewer_ids:0
+msgid "Active Reviewers"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.config_setting:accountant_partner_arrangement.accountant_config_setting_view_form
+msgid "Allowed Groups"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.config_setting,accountant_partner_arrangement_cancel_grp_ids:0
+#: field:res.company,accountant_partner_arrangement_cancel_grp_ids:0
+msgid "Allowed To Cancel Accountant Firm Partner Arrangement"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.config_setting,accountant_partner_arrangement_confirm_grp_ids:0
+#: field:res.company,accountant_partner_arrangement_confirm_grp_ids:0
+msgid "Allowed To Confirm Accountant Firm Partner Arrangement"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.config_setting,accountant_partner_arrangement_restart_grp_ids:0
+#: field:res.company,accountant_partner_arrangement_restart_grp_ids:0
+msgid "Allowed To Restart Accountant Firm Partner Arrangement"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.config_setting,accountant_partner_arrangement_restart_approval_grp_ids:0
+#: field:res.company,accountant_partner_arrangement_restart_approval_grp_ids:0
+msgid "Allowed To Restart Approval Accountant Firm Partner Arrangement"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.config_setting,accountant_partner_arrangement_valid_grp_ids:0
+#: field:res.company,accountant_partner_arrangement_valid_grp_ids:0
+msgid "Allowed To Validate Accountant Firm Partner Arrangement"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,date:0
+msgid "Arrangement Date"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,cancel_ok:0
+msgid "Can Cancel"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,confirm_ok:0
+msgid "Can Confirm"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,restart_ok:0
+msgid "Can Restart"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,restart_approval_ok:0
+msgid "Can Restart Approval"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,valid_ok:0
+msgid "Can Validate"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_search
+#: selection:accountant.partner_arrangement,state:0
+msgid "Cancel"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,cancel_date:0
+msgid "Cancel Date"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,cancel_reason_id:0
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Cancel. Are you sure?"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Cancellation"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Cancellation reason:"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,cancel_user_id:0
+msgid "Cancelled By"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: model:ir.model,name:accountant_partner_arrangement.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Confirm. Are you sure?"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Confirmation"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,confirm_date:0
+msgid "Confirmation Date"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,confirm_user_id:0
+msgid "Confirmed By"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_search
+msgid "Date by Day"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_search
+msgid "Date by Month"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_search
+msgid "Date by Year"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: help:accountant.partner_arrangement,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,definition_id:0
+msgid "Definition"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Done"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_search
+#: selection:accountant.partner_arrangement,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.config_setting:accountant_partner_arrangement.accountant_config_setting_view_form
+msgid "General"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_search
+msgid "Group By.."
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: help:accountant.partner_arrangement,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,id:0
+msgid "ID"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: help:accountant.partner_arrangement,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Logs"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_search
+#: field:accountant.partner_arrangement,managing_partner_id:0
+msgid "Managing Partner"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: help:accountant.partner_arrangement,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,need_validation:0
+msgid "Need Validation"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,next_reviewer_ids:0
+msgid "Next Reviewers"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+#: field:accountant.partner_arrangement,note:0
+msgid "Note"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: model:ir.actions.act_window,name:accountant_partner_arrangement.accountant_partner_arrangement_action
+#: model:ir.model,name:accountant_partner_arrangement.model_accountant_partner_arrangement
+#: model:ir.ui.menu,name:accountant_partner_arrangement.accountant_partner_arrangement_menu
+msgid "Partner Arrangement"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: model:ir.module.category,name:accountant_partner_arrangement.partner_arrangement_usability_module_category
+msgid "Partner Arrangement Usability"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Partner(s)"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,partner_ids:0
+msgid "Partners"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Policy"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Print"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Reject"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,rejected:0
+msgid "Rejected"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Request Validation"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Restart"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Restart Validation"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Restart. Are you sure?"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,reviewer_partner_ids:0
+msgid "Review Partners"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,reviewer_ids:0
+msgid "Reviewers"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Reviews"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.config_setting:accountant_partner_arrangement.accountant_config_setting_view_form
+msgid "Sequence"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.config_setting,accountant_partner_arrangement_sequence_id:0
+msgid "Sequence Accountant Firm Partner Arrangement"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: model:res.groups,name:accountant_partner_arrangement.partner_arrangement_multiple_approval_setting_group
+msgid "Show Multiple Approval Setting"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: model:res.groups,name:accountant_partner_arrangement.partner_arrangement_workflow_policy_setting_group
+msgid "Show Workflow Policy Info"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_search
+#: field:accountant.partner_arrangement,state:0
+msgid "State"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "This appointment needs to be\n"
+"                    validated."
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.config_setting:accountant_partner_arrangement.accountant_config_setting_view_form
+msgid "To Cancel"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.config_setting:accountant_partner_arrangement.accountant_config_setting_view_form
+msgid "To Confirm"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.config_setting:accountant_partner_arrangement.accountant_config_setting_view_form
+msgid "To Restart"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.config_setting:accountant_partner_arrangement.accountant_config_setting_view_form
+msgid "To Restart Approval"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_search
+#: selection:accountant.partner_arrangement,state:0
+msgid "Valid"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,valid_user_id:0
+msgid "Valid By"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_form
+msgid "Validate"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,validated:0
+msgid "Validated"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,valid_date:0
+msgid "Validation Date"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: field:accountant.partner_arrangement,review_ids:0
+msgid "Validations"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: view:accountant.partner_arrangement:accountant_partner_arrangement.accountant_partner_arrangement_view_search
+#: selection:accountant.partner_arrangement,state:0
+msgid "Waiting for Approval"
+msgstr ""
+
+#. module: accountant_partner_arrangement
+#: code:addons/accountant_partner_arrangement/models/partner_arrangement.py:274
+#, python-format
+msgid "You can only delete data with draft state"
+msgstr ""
+
