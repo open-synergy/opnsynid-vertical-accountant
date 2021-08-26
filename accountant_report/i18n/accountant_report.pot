@@ -1,0 +1,653 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* accountant_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: accountant_report
+#: field:accountant.report,name:0
+msgid "# Report"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.config_setting:accountant_report.accountant_config_setting_view_form
+#: model:ir.model,name:accountant_report.model_accountant_report
+#: model:ir.ui.menu,name:accountant_report.accountant_report_menu
+msgid "Accountant Report"
+msgstr ""
+
+#. module: accountant_report
+#: model:ir.model,name:accountant_report.model_accountant_report_method
+#: model:ir.ui.menu,name:accountant_report.accountant_report_method_menu
+msgid "Accountant Report Method"
+msgstr ""
+
+#. module: accountant_report
+#: model:ir.actions.act_window,name:accountant_report.accountant_report_opinion_action
+#: model:ir.ui.menu,name:accountant_report.accountant_report_opinion_menu
+msgid "Accountant Report Opinion"
+msgstr ""
+
+#. module: accountant_report
+#: field:res.company,accountant_report_sequence_id:0
+msgid "Accountant Report Sequence"
+msgstr ""
+
+#. module: accountant_report
+#: model:ir.model,name:accountant_report.model_accountant_report_signing_partner
+msgid "Accountant Report Signing Partner"
+msgstr ""
+
+#. module: accountant_report
+#: model:ir.module.category,name:accountant_report.modul_category_accountant_report Usability
+msgid "Accountant Report Usability"
+msgstr ""
+
+#. module: accountant_report
+#: model:ir.actions.act_window,name:accountant_report.accountant_report_method_action
+msgid "Accountant Report method"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,service_id:0
+#: field:accountant.report_signing_partner,service_id:0
+#: model:ir.model,name:accountant_report.model_accountant_service
+msgid "Accountant Service"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report_method,active:0
+#: field:accountant.report_opinion,active:0
+msgid "Active"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.config_setting:accountant_report.accountant_config_setting_view_form
+msgid "Allowed Groups"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,allowed_method_ids:0
+#: field:accountant.service,allowed_method_ids:0
+msgid "Allowed Methods"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,allowed_opinion_ids:0
+#: field:accountant.service,allowed_opinion_ids:0
+msgid "Allowed Opinion"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,allowed_signing_accountant_ids:0
+msgid "Allowed Signing Partner"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report_signing_partner,cancel_grp_ids:0
+#: field:accountant.service,cancel_grp_ids:0
+msgid "Allowed To Cancel"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.config_setting,accountant_report_cancel_grp_ids:0
+#: field:res.company,accountant_report_cancel_grp_ids:0
+msgid "Allowed To Cancel Accountant Report"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report_signing_partner,confirm_grp_ids:0
+#: field:accountant.service,confirm_grp_ids:0
+msgid "Allowed To Confirm"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.config_setting,accountant_report_confirm_grp_ids:0
+#: field:res.company,accountant_report_confirm_grp_ids:0
+msgid "Allowed To Confirm Accountant Report"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report_signing_partner,finalize_grp_ids:0
+#: field:accountant.service,finalize_grp_ids:0
+msgid "Allowed To Finalization"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.config_setting,accountant_report_finalize_grp_ids:0
+#: field:res.company,accountant_report_finalize_grp_ids:0
+msgid "Allowed To Finalize Accountant Report"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report_signing_partner,restart_grp_ids:0
+#: field:accountant.service,restart_grp_ids:0
+msgid "Allowed To Restart"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.config_setting,accountant_report_restart_grp_ids:0
+#: field:res.company,accountant_report_restart_grp_ids:0
+msgid "Allowed To Restart Accountant Report"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report_signing_partner,valid_grp_ids:0
+#: field:accountant.service,valid_grp_ids:0
+msgid "Allowed To Validate"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.config_setting,accountant_report_valid_grp_ids:0
+#: field:res.company,accountant_report_valid_grp_ids:0
+msgid "Allowed To Validate Accountant Report"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,assurance:0
+#: model:ir.ui.menu,name:accountant_report.accountant_assurance_report_menu
+msgid "Assurance"
+msgstr ""
+
+#. module: accountant_report
+#: model:ir.actions.act_window,name:accountant_report.accountant_assurance_report_action
+msgid "Assurance Report"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,cancel_ok:0
+msgid "Can Cancel"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,confirm_ok:0
+msgid "Can Confirm"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,finalize_ok:0
+msgid "Can Finalization"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,restart_ok:0
+msgid "Can Restart"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,valid_ok:0
+msgid "Can Validate"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_form
+#: view:accountant.report:accountant_report.accountant_report_view_search
+#: selection:accountant.report,state:0
+msgid "Cancel"
+msgstr ""
+
+#. module: accountant_report
+#: model:res.groups,name:accountant_report.group_accountant_report_change_number
+msgid "Change Accountant Report Number"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,report_currency_id:0
+msgid "Client Currency"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_form
+msgid "Client Informations"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report_method,code:0
+#: field:accountant.report_opinion,code:0
+#: field:accountant.service,service_code:0
+msgid "Code"
+msgstr ""
+
+#. module: accountant_report
+#: model:ir.model,name:accountant_report.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,create_uid:0
+#: field:accountant.report_method,create_uid:0
+#: field:accountant.report_opinion,create_uid:0
+#: field:accountant.report_signing_partner,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,create_date:0
+#: field:accountant.report_method,create_date:0
+#: field:accountant.report_opinion,create_date:0
+#: field:accountant.report_signing_partner,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+#: field:accountant.report,partner_id:0
+msgid "Customer"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,date:0
+msgid "Date"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,date_end:0
+msgid "Date End"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,date_start:0
+msgid "Date Start"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+msgid "Date by Day"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+msgid "Date by Month"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+msgid "Date by Year"
+msgstr ""
+
+#. module: accountant_report
+#: help:accountant.report,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report_method,description:0
+#: field:accountant.report_opinion,description:0
+msgid "Description"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,display_name:0
+#: field:accountant.report_method,display_name:0
+#: field:accountant.report_opinion,display_name:0
+#: field:accountant.report_signing_partner,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+#: selection:accountant.report,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,ebit:0
+msgid "EBIT"
+msgstr ""
+
+#. module: accountant_report
+#: code:addons/accountant_report/models/accountant_service.py:115
+#, python-format
+msgid "Error in report sequence computation"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_readonly_form
+msgid "False"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_form
+#: selection:accountant.report,state:0
+msgid "Finalization"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.config_setting:accountant_report.accountant_config_setting_view_form
+msgid "General"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+msgid "Group By.."
+msgstr ""
+
+#. module: accountant_report
+#: help:accountant.report,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,id:0
+#: field:accountant.report_method,id:0
+#: field:accountant.report_opinion,id:0
+#: field:accountant.report_signing_partner,id:0
+msgid "ID"
+msgstr ""
+
+#. module: accountant_report
+#: help:accountant.report,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,information_based:0
+msgid "Information Based On"
+msgstr ""
+
+#. module: accountant_report
+#: selection:accountant.report,information_based:0
+msgid "Interim Financial Report"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,__last_update:0
+#: field:accountant.report_method,__last_update:0
+#: field:accountant.report_opinion,__last_update:0
+#: field:accountant.report_signing_partner,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,write_uid:0
+#: field:accountant.report_method,write_uid:0
+#: field:accountant.report_opinion,write_uid:0
+#: field:accountant.report_signing_partner,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,write_date:0
+#: field:accountant.report_method,write_date:0
+#: field:accountant.report_opinion,write_date:0
+#: field:accountant.report_signing_partner,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: accountant_report
+#: help:accountant.report,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+#: field:accountant.report,method_id:0
+#: field:accountant.report_method,name:0
+msgid "Method"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,method_required:0
+#: field:accountant.service,method_required:0
+msgid "Method Required"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.service:accountant_report.accountant_service_view_form
+msgid "Methods"
+msgstr ""
+
+#. module: accountant_report
+#: model:ir.ui.menu,name:accountant_report.accountant_non_assurance_report_menu
+msgid "Non-Assurance"
+msgstr ""
+
+#. module: accountant_report
+#: model:ir.actions.act_window,name:accountant_report.accountant_non_assurance_report_action
+msgid "Non-Assurance Report"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_form
+#: field:accountant.report,note:0
+msgid "Note"
+msgstr ""
+
+#. module: accountant_report
+#: model:ir.model,name:accountant_report.model_accountant_report_opinion
+msgid "Opini Laporan Akhir"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,report_opinion_id:0
+#: field:accountant.report_opinion,name:0
+msgid "Opinion"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,opinion_required:0
+#: field:accountant.service,opinion_required:0
+msgid "Opinion Required"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.service:accountant_report.accountant_service_view_form
+msgid "Opinions"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_form
+#: view:accountant.service:accountant_report.accountant_service_view_form
+msgid "Policy"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.service:accountant_report.accountant_service_view_form
+#: selection:accountant.service,sequence_creation_method:0
+msgid "Python Code"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.service,sequence_python_code:0
+msgid "Python Code for Custom Sequence Generation"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+msgid "Report Currency"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+msgid "Report Opinion"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_form
+msgid "Restart"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,restatement_id:0
+msgid "Restatement Report"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,revenue:0
+msgid "Revenue"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.config_setting:accountant_report.accountant_config_setting_view_form
+#: field:accountant.report_signing_partner,sequence_id:0
+#: field:accountant.service,sequence_id:0
+msgid "Sequence"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.config_setting,accountant_report_sequence_id:0
+msgid "Sequence Accountant Report"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.service,sequence_creation_method:0
+msgid "Sequence Creation Method"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+msgid "Service"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+#: field:accountant.report,signing_accountant_id:0
+msgid "Signing Accountant"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report_signing_partner,signing_accountant_id:0
+#: view:accountant.service:accountant_report.accountant_service_view_form
+#: field:accountant.service,signing_accountant_ids:0
+msgid "Signing Partner"
+msgstr ""
+
+#. module: accountant_report
+#: selection:accountant.service,sequence_creation_method:0
+msgid "Standard"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+#: field:accountant.report,state:0
+msgid "State"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,subsequent_num:0
+msgid "Subsequent Job Num."
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,tax_expense:0
+msgid "Tax Expense"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.config_setting:accountant_report.accountant_config_setting_view_form
+msgid "To Cancel"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.config_setting:accountant_report.accountant_config_setting_view_form
+msgid "To Confirm"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.config_setting:accountant_report.accountant_config_setting_view_form
+msgid "To Finalize"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.config_setting:accountant_report.accountant_config_setting_view_form
+msgid "To Restart"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.config_setting:accountant_report.accountant_config_setting_view_form
+msgid "To Validate"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,total_asset:0
+msgid "Total Asset"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,total_liability:0
+msgid "Total Liability"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,total_net_profit:0
+msgid "Total Net Profit"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,total_net_profit_oci:0
+msgid "Total Net Profit & OCI"
+msgstr ""
+
+#. module: accountant_report
+#: field:accountant.report,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_form
+#: view:accountant.report:accountant_report.accountant_report_view_search
+#: selection:accountant.report,state:0
+msgid "Valid"
+msgstr ""
+
+#. module: accountant_report
+#: view:accountant.report:accountant_report.accountant_report_view_search
+#: selection:accountant.report,state:0
+msgid "Waiting for Approval"
+msgstr ""
+
+#. module: accountant_report
+#: selection:accountant.report,information_based:0
+msgid "Yearly Financial Report"
+msgstr ""
+
+#. module: accountant_report
+#: code:addons/accountant_report/models/accountant_report.py:539
+#, python-format
+msgid "You can only delete data with draft state and name is equal to '/'"
+msgstr ""
+
