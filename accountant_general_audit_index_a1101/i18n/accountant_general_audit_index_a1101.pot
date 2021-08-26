@@ -1,0 +1,645 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* accountant_general_audit_index_a1101
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_tree
+#: field:accountant.general_audit_index_a1101,name:0
+msgid "# Document"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,general_audit_id:0
+msgid "# General Audit"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit,index_a1101_id:0
+msgid "# Index A.110.1"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,account_type_set_id:0
+msgid "Accoount Type Set"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: model:ir.model,name:accountant_general_audit_index_a1101.model_accountant_client_account_type_set
+msgid "Accountant Client Account Type Set"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: model:ir.model,name:accountant_general_audit_index_a1101.model_accountant_general_audit
+msgid "Accountant General Audit"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: model:ir.model,name:accountant_general_audit_index_a1101.model_accountant_general_audit_index_a1101
+msgid "Accountant General Audit Index A.110.1"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: model:ir.module.category,name:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_usability_module_category
+msgid "Accountant General Audit Index A1101 Usability"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,active_reviewer_ids:0
+msgid "Active Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Apakah opini auditor periode lalu (jika ada)menyatakan opini selain wajartanpa pengecualian?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Apakah terdapat isu mengenai kelangsungan usaha yang tersaji pada catatan atas laporan keuangan sebelumnya?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Apakah terdapat isu mengenai kelangsungan usaha yang tersaji pada opini auditor sebelumnya?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Apakah terdapat isu mengenai kerugian yang berkelanjutan?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Apakah terdapat isu mengenai penyajian kembali (restated) atas laporan keuangan?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Apakah terdapat isu mengenai restrukturisasi keuangan?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,cancel_ok:0
+msgid "Can Cancel"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,confirm_ok:0
+msgid "Can Confirm"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,restart_ok:0
+msgid "Can Restart"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,restart_validation_ok:0
+msgid "Can Restart Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,valid_ok:0
+msgid "Can Valid"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+msgid "Cancel"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,cancel_date:0
+msgid "Cancel Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,cancel_reason_id:0
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Cancel. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Cancellation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Cancellation reason:"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: selection:accountant.general_audit_index_a1101,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,cancel_user_id:0
+msgid "Cancelled By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101_status,code:0
+msgid "Code"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+#: field:accountant.general_audit_index_a1101,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,conclusion:0
+msgid "Conclusion"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Confirm. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Confirmation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,confirm_date:0
+msgid "Confirmation Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,confirm_user_id:0
+msgid "Confirmed By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,create_uid:0
+#: field:accountant.general_audit_index_a1101_status,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,create_date:0
+#: field:accountant.general_audit_index_a1101_status,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+msgid "Date End by Day"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+msgid "Date End by Month"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+msgid "Date End by Week"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+msgid "Date End by Year"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+msgid "Date Start by Day"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+msgid "Date Start by Month"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+msgid "Date Start by Week"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+msgid "Date Start by Year"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: help:accountant.general_audit_index_a1101,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,definition_id:0
+msgid "Definition"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101_status:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_status_view_form
+#: field:accountant.general_audit_index_a1101_status,description:0
+msgid "Description"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,display_name:0
+#: field:accountant.general_audit_index_a1101_status,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+#: selection:accountant.general_audit_index_a1101,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,date_end:0
+msgid "End Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: model:ir.actions.act_window,name:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_action
+msgid "General Audit Index A.110.1"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,general_audit_ids:0
+msgid "General Audits"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: help:accountant.general_audit_index_a1101,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,id:0
+#: field:accountant.general_audit_index_a1101_status,id:0
+msgid "ID"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: help:accountant.general_audit_index_a1101,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: model:ir.ui.menu,name:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_menu
+msgid "Index A.110.1"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: model:ir.actions.act_window,name:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_status_action
+#: model:ir.ui.menu,name:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_status_menu
+msgid "Index A.110.1 Status"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.client_account_type_set,index_a1101_sequence_id:0
+msgid "Index A1101 Sequence"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: model:ir.model,name:accountant_general_audit_index_a1101.model_accountant_general_audit_index_a1101_status
+msgid "Index A1101 Status"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,interim_date_end:0
+msgid "Interim End Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,interim_date_start:0
+msgid "Interim Start Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,__last_update:0
+#: field:accountant.general_audit_index_a1101_status,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,write_uid:0
+#: field:accountant.general_audit_index_a1101_status,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,write_date:0
+#: field:accountant.general_audit_index_a1101_status,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Logs"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: help:accountant.general_audit_index_a1101,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101_status,name:0
+msgid "Name"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,need_validation:0
+msgid "Need Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+msgid "Needs my Review"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,next_reviewer_ids:0
+msgid "Next Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: selection:accountant.general_audit_index_a1101,question_1a:0
+#: selection:accountant.general_audit_index_a1101,question_1b:0
+#: selection:accountant.general_audit_index_a1101,question_2:0
+#: selection:accountant.general_audit_index_a1101,question_3:0
+#: selection:accountant.general_audit_index_a1101,question_4:0
+#: selection:accountant.general_audit_index_a1101,question_5:0
+msgid "No"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+#: field:accountant.general_audit_index_a1101,partner_id:0
+msgid "Partner"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Policies"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,previous_date_end:0
+msgid "Previous End Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,previous_date_start:0
+msgid "Previous Start Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Print"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Question"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,question_1a:0
+msgid "Question 1a"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,question_1b:0
+msgid "Question 1b"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,question_2:0
+msgid "Question 2"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,question_3:0
+msgid "Question 3"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,question_4:0
+msgid "Question 4"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,question_5:0
+msgid "Question 5"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Reject"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,rejected:0
+msgid "Rejected"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Request Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,user_id:0
+msgid "Responsible"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Restart"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Restart Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Restart. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,reviewer_partner_ids:0
+msgid "Review Partners"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,reviewer_ids:0
+msgid "Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Reviews"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101_status,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: model:res.groups,name:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_multiple_approval_setting_group
+msgid "Show Multiple Approval Setting"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: model:res.groups,name:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_workflow_policy_setting_group
+msgid "Show Workflow Policy Info"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,date_start:0
+msgid "Start Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+#: field:accountant.general_audit_index_a1101,state:0
+msgid "State"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+#: field:accountant.general_audit_index_a1101,status_id:0
+msgid "Status"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "This General Audit Index A1101 needs to be\n"
+"                        validated."
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit,index_a1101_ids:0
+msgid "Trial Balance"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+#: selection:accountant.general_audit_index_a1101,state:0
+msgid "Valid"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,valid_user_id:0
+msgid "Valid By"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Validate"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,validated:0
+msgid "Validated"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_form
+msgid "Validation"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,valid_date:0
+msgid "Validation Date"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: field:accountant.general_audit_index_a1101,review_ids:0
+msgid "Validations"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: view:accountant.general_audit_index_a1101:accountant_general_audit_index_a1101.accountant_general_audit_index_a1101_view_search
+#: selection:accountant.general_audit_index_a1101,state:0
+msgid "Waiting for Approval"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: selection:accountant.general_audit_index_a1101,question_1a:0
+#: selection:accountant.general_audit_index_a1101,question_1b:0
+#: selection:accountant.general_audit_index_a1101,question_2:0
+#: selection:accountant.general_audit_index_a1101,question_3:0
+#: selection:accountant.general_audit_index_a1101,question_4:0
+#: selection:accountant.general_audit_index_a1101,question_5:0
+msgid "Yes"
+msgstr ""
+
+#. module: accountant_general_audit_index_a1101
+#: code:addons/accountant_general_audit_index_a1101/models/accountant_general_audit_index_a1101.py:378
+#, python-format
+msgid "You can only delete data on draft state"
+msgstr ""
+
