@@ -1,0 +1,1040 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* accountant_general_audit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,name:0
+#: field:accountant.general_audit,name:0
+msgid "# Document"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,general_audit_id:0
+msgid "# General Audit"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.general_audit,trial_balance_id:0
+msgid "# Trial Balance"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,account_type_set_id:0
+#: field:accountant.general_audit,account_type_set_id:0
+msgid "Accoount Type Set"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_account_type:accountant_general_audit.accountant_client_account_type_view_search
+#: field:accountant.client_account_type,group_id:0
+#: model:ir.actions.act_window,name:accountant_general_audit.accountant_client_account_group_action
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_client_account_group_menu
+msgid "Account Group"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_account_type_set:accountant_general_audit.accountant_client_account_type_set_view_form
+#: field:accountant.client_trial_balance_detail,type_id:0
+#: field:accountant.client_trial_balance_standard_detail,type_id:0
+#: model:ir.actions.act_window,name:accountant_general_audit.accountant_client_account_type_action
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_client_account_type_menu
+msgid "Account Type"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_computation_item,account_type_set_id:0
+#: field:accountant.client_account_type_set,name:0
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+#: model:ir.actions.act_window,name:accountant_general_audit.accountant_client_account_type_set_action
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_client_account_type_set_menu
+msgid "Account Type Set"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_account_type_set:accountant_general_audit.accountant_client_account_type_set_view_form
+msgid "Account Types"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.model,name:accountant_general_audit.model_accountant_client_account_group
+msgid "Accountant Client Account Group"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.model,name:accountant_general_audit.model_accountant_client_account_type
+msgid "Accountant Client Account Type"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.model,name:accountant_general_audit.model_accountant_client_account_type_computation_item
+msgid "Accountant Client Account Type Computation Item"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.model,name:accountant_general_audit.model_accountant_client_account_type_set
+msgid "Accountant Client Account Type Set"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.model,name:accountant_general_audit.model_accountant_client_trial_balance
+msgid "Accountant Client Trial Balance"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.model,name:accountant_general_audit.model_accountant_client_trial_balance_computation
+msgid "Accountant Client Trial Balance Computation"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.model,name:accountant_general_audit.model_accountant_client_trial_balance_detail
+msgid "Accountant Client Trial Balance Detail"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.model,name:accountant_general_audit.model_accountant_client_trial_balance_standard_detail
+msgid "Accountant Client Trial Balance Standard Detail"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.model,name:accountant_general_audit.model_accountant_general_audit
+msgid "Accountant General Audit"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_set,accountant_general_audit_sequence_id:0
+msgid "Accountant General Audit Sequence"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.module.category,name:accountant_general_audit.accountant_general_audit_usability_module_category
+msgid "Accountant General Audit Usability"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.model,name:accountant_general_audit.model_accountant_trial_balance_computation_item
+msgid "Accountant Trial Balance Computation Item"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.module.category,name:accountant_general_audit.accountant_client_trial_balance_usability_module_category
+msgid "Accountant Trial Balance Usability"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,active:0
+#: field:accountant.client_account_type,active:0
+#: field:accountant.client_account_type_set,active:0
+#: field:accountant.financial_accounting_standard,active:0
+#: field:accountant.trial_balance_computation_item,active:0
+msgid "Active"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,active_reviewer_ids:0
+#: field:accountant.general_audit,active_reviewer_ids:0
+msgid "Active Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit
+#: selection:accountant.trial_balance_computation_item,category:0
+msgid "Activity Ratio"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_set,accountant_type_set_cancel_grp_ids:0
+msgid "Allow To Cancel Account Type Set"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_set,accountant_general_audit_cancel_grp_ids:0
+msgid "Allow To Cancel Accountant General Audit"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_set,accountant_type_set_confirm_grp_ids:0
+msgid "Allow To Confirm Account Type Set"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_set,accountant_general_audit_confirm_grp_ids:0
+msgid "Allow To Confirm Accountant General Audit"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_set,accountant_type_set_restart_grp_ids:0
+msgid "Allow To Restart Account Type Set"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_set,accountant_general_audit_restart_grp_ids:0
+msgid "Allow To Restart Accountant General Audit"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_set,accountant_type_set_restart_approval_grp_ids:0
+msgid "Allow To Restart Approval Account Type Set"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_set,accountant_general_audit_restart_validation_grp_ids:0
+msgid "Allow To Restart Validation Accountant General Audit"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,allowed_type_ids:0
+msgid "Allowed Account Type"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance_computation,amount:0
+msgid "Amount"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance_computation,amount_extrapolation:0
+msgid "Amount Extrapolation"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance_computation,amount_previous:0
+msgid "Amount Previous"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance_detail,balance:0
+#: field:accountant.client_trial_balance_standard_detail,balance:0
+msgid "Balance"
+msgstr ""
+
+#. module: accountant_general_audit
+#: code:addons/accountant_general_audit/models/accountant_client_trial_balance.py:407
+#, python-format
+msgid "Balance Date end must be greater than Balance date start"
+msgstr ""
+
+#. module: accountant_general_audit
+#: code:addons/accountant_general_audit/models/accountant_client_trial_balance.py:427
+#, python-format
+msgid "Balance date start must be greater than previous balance date end"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,cancel_ok:0
+#: field:accountant.general_audit,cancel_ok:0
+msgid "Can Cancel"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,confirm_ok:0
+#: field:accountant.general_audit,confirm_ok:0
+msgid "Can Confirm"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,restart_ok:0
+#: field:accountant.general_audit,restart_ok:0
+msgid "Can Restart"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,restart_approval_ok:0
+msgid "Can Restart Approval"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.general_audit,restart_validation_ok:0
+msgid "Can Restart Validation"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,valid_ok:0
+#: field:accountant.general_audit,valid_ok:0
+msgid "Can Valid"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+msgid "Cancel"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,cancel_date:0
+#: field:accountant.general_audit,cancel_date:0
+msgid "Cancel Date"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,cancel_reason_id:0
+#: field:accountant.general_audit,cancel_reason_id:0
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Cancel. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Cancellation"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Cancellation reason:"
+msgstr ""
+
+#. module: accountant_general_audit
+#: selection:accountant.client_trial_balance,state:0
+#: selection:accountant.general_audit,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,cancel_user_id:0
+#: field:accountant.general_audit,cancel_user_id:0
+msgid "Cancelled By"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.trial_balance_computation_item,category:0
+msgid "Category"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,code:0
+#: field:accountant.client_account_type,code:0
+#: field:accountant.client_account_type_set,code:0
+#: field:accountant.client_trial_balance_detail,code:0
+#: field:accountant.financial_accounting_standard,code:0
+#: field:accountant.trial_balance_computation_item,code:0
+msgid "Code"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: field:accountant.client_trial_balance,company_id:0
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+#: field:accountant.general_audit,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_computation_item,computation_id:0
+#: view:accountant.client_account_type_set:accountant_general_audit.accountant_client_account_type_set_view_form
+#: field:accountant.client_account_type_set,computation_ids:0
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: field:accountant.client_trial_balance,computation_ids:0
+msgid "Computation"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance_computation,computation_item_id:0
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_trial_balance_computation_item_menu
+msgid "Computation Item"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Confirm. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Confirmation"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,confirm_date:0
+#: field:accountant.general_audit,confirm_date:0
+msgid "Confirmation Date"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,confirm_user_id:0
+#: field:accountant.general_audit,confirm_user_id:0
+msgid "Confirmed By"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,create_uid:0
+#: field:accountant.client_account_type,create_uid:0
+#: field:accountant.client_account_type_computation_item,create_uid:0
+#: field:accountant.client_account_type_set,create_uid:0
+#: field:accountant.client_trial_balance,create_uid:0
+#: field:accountant.client_trial_balance_computation,create_uid:0
+#: field:accountant.client_trial_balance_detail,create_uid:0
+#: field:accountant.client_trial_balance_standard_detail,create_uid:0
+#: field:accountant.financial_accounting_standard,create_uid:0
+#: field:accountant.general_audit,create_uid:0
+#: field:accountant.trial_balance_computation_item,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,create_date:0
+#: field:accountant.client_account_type,create_date:0
+#: field:accountant.client_account_type_computation_item,create_date:0
+#: field:accountant.client_account_type_set,create_date:0
+#: field:accountant.client_trial_balance,create_date:0
+#: field:accountant.client_trial_balance_computation,create_date:0
+#: field:accountant.client_trial_balance_detail,create_date:0
+#: field:accountant.client_trial_balance_standard_detail,create_date:0
+#: field:accountant.financial_accounting_standard,create_date:0
+#: field:accountant.general_audit,create_date:0
+#: field:accountant.trial_balance_computation_item,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,currency_id:0
+#: field:accountant.general_audit,currency_id:0
+msgid "Currency"
+msgstr ""
+
+#. module: accountant_general_audit
+#: code:addons/accountant_general_audit/models/accountant_client_trial_balance.py:399
+#: code:addons/accountant_general_audit/models/accountant_general_audit.py:356
+#, python-format
+msgid "Date end must be greater than date start"
+msgstr ""
+
+#. module: accountant_general_audit
+#: help:accountant.client_trial_balance,message_last_post:0
+#: help:accountant.general_audit,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.trial_balance_computation_item:accountant_general_audit.accountant_trial_balance_computation_item_view_form
+#: field:accountant.trial_balance_computation_item,python_code:0
+msgid "Default Python Code"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,definition_id:0
+#: field:accountant.general_audit,definition_id:0
+msgid "Definition"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,description:0
+#: field:accountant.client_account_type,description:0
+#: view:accountant.client_account_type_set:accountant_general_audit.accountant_client_account_type_set_view_form
+#: field:accountant.client_account_type_set,description:0
+#: field:accountant.financial_accounting_standard,description:0
+#: field:accountant.trial_balance_computation_item,description:0
+msgid "Description"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_set,detail_ids:0
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: field:accountant.client_trial_balance,detail_ids:0
+msgid "Detail"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,display_name:0
+#: field:accountant.client_account_type,display_name:0
+#: field:accountant.client_account_type_computation_item,display_name:0
+#: field:accountant.client_account_type_set,display_name:0
+#: field:accountant.client_trial_balance,display_name:0
+#: field:accountant.client_trial_balance_computation,display_name:0
+#: field:accountant.client_trial_balance_detail,display_name:0
+#: field:accountant.client_trial_balance_standard_detail,display_name:0
+#: field:accountant.financial_accounting_standard,display_name:0
+#: field:accountant.general_audit,display_name:0
+#: field:accountant.trial_balance_computation_item,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: selection:accountant.client_trial_balance,state:0
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+#: selection:accountant.general_audit,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,date_end:0
+#: field:accountant.general_audit,date_end:0
+msgid "End Date"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance_standard_detail,extrapolation_balance:0
+msgid "Extrapolation Balance"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.general_audit,financial_accounting_standard_id:0
+#: model:ir.actions.act_window,name:accountant_general_audit.accountant_financial_accounting_standard_action
+#: model:ir.model,name:accountant_general_audit.model_accountant_financial_accounting_standard
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_financial_accounting_standard_menu
+msgid "Financial Accounting Standard"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,message_follower_ids:0
+#: field:accountant.general_audit,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_account_type_set:accountant_general_audit.accountant_client_account_type_set_view_form
+#: model:ir.actions.act_window,name:accountant_general_audit.accountant_general_audit_action
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_configuration_general_audit_menu
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_general_audit_menu
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_general_audit_sub_menu
+msgid "General Audit"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,general_audit_ids:0
+msgid "General Audits"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_account_type:accountant_general_audit.accountant_client_account_type_view_search
+msgid "Group By..."
+msgstr ""
+
+#. module: accountant_general_audit
+#: help:accountant.client_trial_balance,message_summary:0
+#: help:accountant.general_audit,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,id:0
+#: field:accountant.client_account_type,id:0
+#: field:accountant.client_account_type_computation_item,id:0
+#: field:accountant.client_account_type_set,id:0
+#: field:accountant.client_trial_balance,id:0
+#: field:accountant.client_trial_balance_computation,id:0
+#: field:accountant.client_trial_balance_detail,id:0
+#: field:accountant.client_trial_balance_standard_detail,id:0
+#: field:accountant.financial_accounting_standard,id:0
+#: field:accountant.general_audit,id:0
+#: field:accountant.trial_balance_computation_item,id:0
+msgid "ID"
+msgstr ""
+
+#. module: accountant_general_audit
+#: help:accountant.client_trial_balance,message_unread:0
+#: help:accountant.general_audit,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_configuration_index_status_menu
+msgid "Index Status"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance_detail,interim_balance:0
+msgid "Interim Balance"
+msgstr ""
+
+#. module: accountant_general_audit
+#: code:addons/accountant_general_audit/models/accountant_general_audit.py:364
+#, python-format
+msgid "Interim Date end must be greater than Interim Date start"
+msgstr ""
+
+#. module: accountant_general_audit
+#: code:addons/accountant_general_audit/models/accountant_general_audit.py:384
+#, python-format
+msgid "Interim Date start must be greater than previous Interim Date end"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,interim_date_end:0
+#: field:accountant.general_audit,interim_date_end:0
+msgid "Interim End Date"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,interim_date_start:0
+#: field:accountant.general_audit,interim_date_start:0
+msgid "Interim Start Date"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,message_is_follower:0
+#: field:accountant.general_audit,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,message_last_post:0
+#: field:accountant.general_audit,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,__last_update:0
+#: field:accountant.client_account_type,__last_update:0
+#: field:accountant.client_account_type_computation_item,__last_update:0
+#: field:accountant.client_account_type_set,__last_update:0
+#: field:accountant.client_trial_balance,__last_update:0
+#: field:accountant.client_trial_balance_computation,__last_update:0
+#: field:accountant.client_trial_balance_detail,__last_update:0
+#: field:accountant.client_trial_balance_standard_detail,__last_update:0
+#: field:accountant.financial_accounting_standard,__last_update:0
+#: field:accountant.general_audit,__last_update:0
+#: field:accountant.trial_balance_computation_item,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,write_uid:0
+#: field:accountant.client_account_type,write_uid:0
+#: field:accountant.client_account_type_computation_item,write_uid:0
+#: field:accountant.client_account_type_set,write_uid:0
+#: field:accountant.client_trial_balance,write_uid:0
+#: field:accountant.client_trial_balance_computation,write_uid:0
+#: field:accountant.client_trial_balance_detail,write_uid:0
+#: field:accountant.client_trial_balance_standard_detail,write_uid:0
+#: field:accountant.financial_accounting_standard,write_uid:0
+#: field:accountant.general_audit,write_uid:0
+#: field:accountant.trial_balance_computation_item,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,write_date:0
+#: field:accountant.client_account_type,write_date:0
+#: field:accountant.client_account_type_computation_item,write_date:0
+#: field:accountant.client_account_type_set,write_date:0
+#: field:accountant.client_trial_balance,write_date:0
+#: field:accountant.client_trial_balance_computation,write_date:0
+#: field:accountant.client_trial_balance_detail,write_date:0
+#: field:accountant.client_trial_balance_standard_detail,write_date:0
+#: field:accountant.financial_accounting_standard,write_date:0
+#: field:accountant.general_audit,write_date:0
+#: field:accountant.trial_balance_computation_item,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Links"
+msgstr ""
+
+#. module: accountant_general_audit
+#: selection:accountant.trial_balance_computation_item,category:0
+msgid "Liquidity Ratio"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Logs"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,message_ids:0
+#: field:accountant.general_audit,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: accountant_general_audit
+#: help:accountant.client_trial_balance,message_ids:0
+#: help:accountant.general_audit,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,name:0
+#: field:accountant.client_account_type,name:0
+#: field:accountant.client_trial_balance_detail,name:0
+#: field:accountant.financial_accounting_standard,name:0
+#: field:accountant.trial_balance_computation_item,name:0
+msgid "Name"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,need_validation:0
+#: field:accountant.general_audit,need_validation:0
+msgid "Need Validation"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+msgid "Needs my Review"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+msgid "New Mail"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,next_reviewer_ids:0
+#: field:accountant.general_audit,next_reviewer_ids:0
+msgid "Next Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Other"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: field:accountant.client_trial_balance,partner_id:0
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+#: field:accountant.general_audit,partner_id:0
+msgid "Partner"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_computation_item,phyton_code:0
+msgid "Phyton Code"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Policies"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance_detail,previous_balance:0
+#: field:accountant.client_trial_balance_standard_detail,previous_balance:0
+msgid "Previous Balance"
+msgstr ""
+
+#. module: accountant_general_audit
+#: code:addons/accountant_general_audit/models/accountant_client_trial_balance.py:417
+#: code:addons/accountant_general_audit/models/accountant_general_audit.py:374
+#, python-format
+msgid "Previous Date end must be greater than Previous date start"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,previous_date_end:0
+#: field:accountant.general_audit,previous_date_end:0
+msgid "Previous End Date"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,previous_date_start:0
+#: field:accountant.general_audit,previous_date_start:0
+msgid "Previous Start Date"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Print"
+msgstr ""
+
+#. module: accountant_general_audit
+#: selection:accountant.trial_balance_computation_item,category:0
+msgid "Profitability Ratio"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type,extrapolation_python_code:0
+msgid "Python Code for Extrapolation"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Reject"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,rejected:0
+#: field:accountant.general_audit,rejected:0
+msgid "Rejected"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_reporting_menu
+msgid "Reporting"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Request Validation"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Restart"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Restart Validation"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Restart. Are you sure?"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,reviewer_partner_ids:0
+#: field:accountant.general_audit,reviewer_partner_ids:0
+msgid "Review Partners"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,reviewer_ids:0
+#: field:accountant.general_audit,reviewer_ids:0
+msgid "Reviewers"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Reviews"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Risk Assesment"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_risk_assessment_menu
+msgid "Risk Assessment"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_risk_response_menu
+msgid "Risk Response"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_group,sequence:0
+#: field:accountant.client_account_type,sequence:0
+#: view:accountant.client_account_type_set:accountant_general_audit.accountant_client_account_type_set_view_form
+#: field:accountant.client_trial_balance_detail,sequence:0
+#: field:accountant.client_trial_balance_standard_detail,sequence:0
+#: field:accountant.trial_balance_computation_item,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:res.groups,name:accountant_general_audit.accountant_client_trial_balance_multiple_approval_setting_group
+#: model:res.groups,name:accountant_general_audit.accountant_general_audit_multiple_approval_setting_group
+msgid "Show Multiple Approval Setting"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:res.groups,name:accountant_general_audit.accountant_client_trial_balance_workflow_policy_setting_group
+#: model:res.groups,name:accountant_general_audit.accountant_general_audit_workflow_policy_setting_group
+msgid "Show Workflow Policy Info"
+msgstr ""
+
+#. module: accountant_general_audit
+#: selection:accountant.trial_balance_computation_item,category:0
+msgid "Solvency Ratio"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: field:accountant.client_trial_balance,standard_detail_ids:0
+msgid "Standard Detail"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,date_start:0
+#: field:accountant.general_audit,date_start:0
+msgid "Start Date"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+msgid "Start Date by Day"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+msgid "Start Date by Month"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+msgid "Start Date by Week"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+msgid "Start Date by Year"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: field:accountant.client_trial_balance,state:0
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+#: field:accountant.general_audit,state:0
+msgid "State"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,message_summary:0
+#: field:accountant.general_audit,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "This General Audit needs to be\n"
+"                        validated."
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+msgid "This trial balance needs to be\n"
+"                        validated."
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_account_type_set:accountant_general_audit.accountant_client_account_type_set_view_form
+#: field:accountant.client_trial_balance_computation,trial_balance_id:0
+#: field:accountant.client_trial_balance_detail,trial_balance_id:0
+#: field:accountant.client_trial_balance_standard_detail,trial_balance_id:0
+#: field:accountant.general_audit,trial_balance_ids:0
+#: model:ir.actions.act_window,name:accountant_general_audit.accountant_client_trial_balance_action
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_client_trial_balance_menu
+#: model:ir.ui.menu,name:accountant_general_audit.accountant_configuration_trial_balance_menu
+msgid "Trial Balance"
+msgstr ""
+
+#. module: accountant_general_audit
+#: model:ir.actions.act_window,name:accountant_general_audit.accountant_trial_balance_computation_item_action
+msgid "Trial Balance Computation Item"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_account_type_set,trial_balance_sequence_id:0
+msgid "Trial Balance Sequence"
+msgstr ""
+
+#. module: accountant_general_audit
+#: selection:accountant.trial_balance_computation_item,category:0
+msgid "Trial Balance Summary"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,message_unread:0
+#: field:accountant.general_audit,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: selection:accountant.client_trial_balance,state:0
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+#: selection:accountant.general_audit,state:0
+msgid "Valid"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,valid_user_id:0
+#: field:accountant.general_audit,valid_user_id:0
+msgid "Valid By"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Validate"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,validated:0
+#: field:accountant.general_audit,validated:0
+msgid "Validated"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_form
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_form
+msgid "Validation"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,valid_date:0
+#: field:accountant.general_audit,valid_date:0
+msgid "Validation Date"
+msgstr ""
+
+#. module: accountant_general_audit
+#: field:accountant.client_trial_balance,review_ids:0
+#: field:accountant.general_audit,review_ids:0
+msgid "Validations"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_trial_balance:accountant_general_audit.accountant_client_trial_balance_view_search
+#: selection:accountant.client_trial_balance,state:0
+#: view:accountant.general_audit:accountant_general_audit.accountant_general_audit_view_search
+#: selection:accountant.general_audit,state:0
+msgid "Waiting for Approval"
+msgstr ""
+
+#. module: accountant_general_audit
+#: view:accountant.client_account_type_set:accountant_general_audit.accountant_client_account_type_set_view_form
+msgid "Workflow"
+msgstr ""
+
+#. module: accountant_general_audit
+#: code:addons/accountant_general_audit/models/accountant_client_trial_balance.py:361
+#: code:addons/accountant_general_audit/models/accountant_general_audit.py:318
+#, python-format
+msgid "You can only delete data on draft state"
+msgstr ""
+
