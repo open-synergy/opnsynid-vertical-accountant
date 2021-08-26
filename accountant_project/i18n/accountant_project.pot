@@ -1,0 +1,27 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* accountant_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: accountant_project
+#: view:project.project:accountant_project.project_project_view_form
+#: view:project.project:accountant_project.project_project_view_search
+#: field:project.project,accountant_service_id:0
+msgid "Accountant Service"
+msgstr ""
+
+#. module: accountant_project
+#: model:ir.model,name:accountant_project.model_project_project
+msgid "Project"
+msgstr ""
+
