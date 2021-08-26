@@ -1,0 +1,220 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* accountant_report_quality_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,accountant_report_id:0
+#: model:ir.model,name:accountant_report_quality_control.model_accountant_report
+msgid "Accountant Report"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: model:ir.model,name:accountant_report_quality_control.model_accountant_report_qc_question
+msgid "Accountant Report QC Question"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.service_qc_question,accountant_service_id:0
+#: model:ir.model,name:accountant_report_quality_control.model_accountant_service
+msgid "Accountant Service"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: model:ir.model,name:accountant_report_quality_control.model_accountant_service_qc_question
+msgid "Accountant Service QC Question"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: model:ir.model,name:accountant_report_quality_control.model_accountant_service_qc_question_value
+msgid "Accountant Service QC Question Value"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.service_qc_question_value,active:0
+msgid "Active"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: view:accountant.service_qc_question:accountant_report_quality_control.accountant_service_qc_question_view_form
+msgid "Answer"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.service_qc_question_value,ok:0
+msgid "Correct Answer"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,create_uid:0
+#: field:accountant.service_qc_question,create_uid:0
+#: field:accountant.service_qc_question_value,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,create_date:0
+#: field:accountant.service_qc_question,create_date:0
+#: field:accountant.service_qc_question_value,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.service_qc_question_value,description:0
+msgid "Description"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,display_name:0
+#: field:accountant.service_qc_question,display_name:0
+#: field:accountant.service_qc_question_value,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,id:0
+#: field:accountant.service_qc_question,id:0
+#: field:accountant.service_qc_question_value,id:0
+msgid "ID"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,__last_update:0
+#: field:accountant.service_qc_question,__last_update:0
+#: field:accountant.service_qc_question_value,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,write_uid:0
+#: field:accountant.service_qc_question,write_uid:0
+#: field:accountant.service_qc_question_value,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,write_date:0
+#: field:accountant.service_qc_question,write_date:0
+#: field:accountant.service_qc_question_value,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,max_value:0
+#: field:accountant.service_qc_question,max_value:0
+msgid "Max. Value"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,min_value:0
+#: field:accountant.service_qc_question,min_value:0
+msgid "Min. Value"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,notes:0
+#: field:accountant.service_qc_question,notes:0
+msgid "Notes"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,possible_qc_value_ids:0
+msgid "Posible Values"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report,qc_pass:0
+msgid "QC Passed?"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: selection:accountant.report_qc_question,question_type:0
+#: selection:accountant.service_qc_question,type:0
+msgid "Qualitative"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,qualitative_value_id:0
+msgid "Qualitative Value"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: view:accountant.report:accountant_report_quality_control.accountant_report_view_form
+#: view:accountant.service:accountant_report_quality_control.accountant_service_view_form
+msgid "Quality Control"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: selection:accountant.report_qc_question,question_type:0
+#: selection:accountant.service_qc_question,type:0
+msgid "Quantitative"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,quantitative_value:0
+msgid "Quantitative Value"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,name:0
+#: field:accountant.service_qc_question,name:0
+#: field:accountant.service_qc_question_value,question_id:0
+msgid "Question"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report,qc_question_ids:0
+#: field:accountant.service,qc_question_ids:0
+msgid "Questions"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: code:addons/accountant_report_quality_control/models/accountant_report.py:71
+#, python-format
+msgid "Report does not pass qc check"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,sequence:0
+#: field:accountant.service_qc_question,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,success:0
+msgid "Success?"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,question_type:0
+#: field:accountant.service_qc_question,type:0
+msgid "Type"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,uom_id:0
+#: field:accountant.service_qc_question,uom_id:0
+msgid "UoM"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.report_qc_question,valid_values:0
+msgid "Valid Values"
+msgstr ""
+
+#. module: accountant_report_quality_control
+#: field:accountant.service_qc_question,qc_value_ids:0
+#: field:accountant.service_qc_question_value,name:0
+msgid "Value"
+msgstr ""
+
