@@ -122,7 +122,7 @@ repos:
           - --exit-zero
         verbose: true
         additional_dependencies: &pylint_deps
-          - ssi-pylint-odoo==3.5.0.dev2
+          - pylint-odoo==3.5.0
       - id: pylint
         name: pylint with mandatory checks
         args:
