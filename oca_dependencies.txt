@@ -16,5 +16,5 @@
 partner-contact https://github.com/open-synergy/partner-contact 8.0-dev
 operating-unit https://github.com/OCA/operating-unit 8.0
 opnsynid-partner-contact https://github.com/open-synergy/opnsynid-partner-contact 8.0
-opnsynid-server-tools https://github.com/open-synergy/opnsynid-server-tools 8.0
+server-tools https://github.com/open-synergy/server-tools 8.0-pin-unidecode
 oca-web https://github.com/OCA/web 8.0
