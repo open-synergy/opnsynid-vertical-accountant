@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <openerp>
 <data>
 <record id="accountant_service_view_tree" model="ir.ui.view">
@@ -6,9 +6,9 @@
     <field name="model">accountant.service</field>
     <field name="arch" type="xml">
         <tree>
-            <field name="name"/>
-            <field name="default_code"/>
-            <field name="assurance"/>
+            <field name="name" />
+            <field name="default_code" />
+            <field name="assurance" />
         </tree>
     </field>
 </record>
@@ -19,14 +19,14 @@
     <field name="arch" type="xml">
         <form>
             <group name="group_1" colspan="4" col="2">
-                <field name="name"/>
-                <field name="default_code"/>
-                <field name="active"/>
-                <field name="assurance"/>
+                <field name="name" />
+                <field name="default_code" />
+                <field name="active" />
+                <field name="assurance" />
             </group>
             <notebook>
                 <page name="page_description" string="Description">
-                    <field name="description" colspan="4" nolabel="1"/>
+                    <field name="description" colspan="4" nolabel="1" />
                 </page>
             </notebook>
         </form>
@@ -38,11 +38,19 @@
     <field name="model">accountant.service</field>
     <field name="arch" type="xml">
         <search>
-            <field name="name"/>
-            <field name="default_code"/>
+            <field name="name" />
+            <field name="default_code" />
             <group name="group_assurance" string="Assurance?">
-                <filter name="filter_assurance" string="Assurance" domain="[('assurance','=',True)]"/>
-                <filter name="filter_non_assurance" string="Non-Assurance" domain="[('assurance','=',False)]"/>
+                <filter
+                            name="filter_assurance"
+                            string="Assurance"
+                            domain="[('assurance','=',True)]"
+                        />
+                <filter
+                            name="filter_non_assurance"
+                            string="Non-Assurance"
+                            domain="[('assurance','=',False)]"
+                        />
             </group>
         </search>
     </field>
@@ -53,14 +61,15 @@
     <field name="res_model">accountant.service</field>
     <field name="view_type">form</field>
     <field name="view_mode">tree,form</field>
-    <field name="search_view_id" ref="accountant_service_view_search"/>
+    <field name="search_view_id" ref="accountant_service_view_search" />
 </record>
 
-<menuitem 
-    id="accountant_service_menu"
-    name="Accountant Service"
-    parent="accountant_configuration_menu"
-    action="accountant_service_action"
-    sequence="1"/>
+<menuitem
+            id="accountant_service_menu"
+            name="Accountant Service"
+            parent="accountant_configuration_menu"
+            action="accountant_service_action"
+            sequence="1"
+        />
 </data>
 </openerp>

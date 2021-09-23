@@ -5,7 +5,9 @@
 
 from openerp import _, api, fields, models
 from openerp.exceptions import Warning as UserError
-from openerp.tools.safe_eval import safe_eval as eval
+from openerp.tools.safe_eval import (  # pylint: disable=redefined-builtin
+    safe_eval as eval,
+)
 
 
 class AccountantGeneralAuditIndexA210(models.Model):

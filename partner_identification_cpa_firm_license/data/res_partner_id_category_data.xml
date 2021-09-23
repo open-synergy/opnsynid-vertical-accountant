@@ -1,7 +1,10 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <openerp>
 <data>
-<record model="res.partner.id_category" id="partner_identification_accountant_cpa_firm_license">
+<record
+            model="res.partner.id_category"
+            id="partner_identification_accountant_cpa_firm_license"
+        >
     <field name="name">CPA Firm License</field>
     <field name="code">cpa_firm_lic</field>
 </record>

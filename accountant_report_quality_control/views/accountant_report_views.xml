@@ -1,28 +1,36 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <openerp>
 <data>
 <record id="accountant_report_view_form" model="ir.ui.view">
     <field name="name">accountant.report form</field>
     <field name="model">accountant.report</field>
-    <field name="inherit_id" ref="accountant_report.accountant_report_view_form"/>
+    <field name="inherit_id" ref="accountant_report.accountant_report_view_form" />
     <field name="arch" type="xml">
         <data>
             <xpath expr="//page[@name='page_note']" position="before">
                 <page name="qc" string="Quality Control">
                     <group name="qc1" colspan="4" col="2">
-                        <field name="qc_pass"/>
+                        <field name="qc_pass" />
                     </group>
                     <field name="qc_question_ids" nolabel="1" colspan="4">
                         <tree editable="top" create="false" delete="false">
                             <field name="name" />
                             <field name="question_type" />
-                            <field name="possible_qc_value_ids" invisible="1" widget="many2many_tags"/>
-                            <field name="qualitative_value_id"
-                                    attrs="{'readonly': [('question_type', '=', 'quantitative')]}" />
-                            <field name="quantitative_value"
-                                    attrs="{'readonly': [('question_type', '=', 'qualitative')]}" />
-                            <field name="valid_values"/>
-                            <field name="success"/>
+                            <field
+                                        name="possible_qc_value_ids"
+                                        invisible="1"
+                                        widget="many2many_tags"
+                                    />
+                            <field
+                                        name="qualitative_value_id"
+                                        attrs="{'readonly': [('question_type', '=', 'quantitative')]}"
+                                    />
+                            <field
+                                        name="quantitative_value"
+                                        attrs="{'readonly': [('question_type', '=', 'qualitative')]}"
+                                    />
+                            <field name="valid_values" />
+                            <field name="success" />
                         </tree>
                     </field>
                 </page>

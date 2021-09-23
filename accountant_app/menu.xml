@@ -1,29 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2016 OpenSynergy Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-
 <openerp>
 <data>
 
-<menuitem 
-    id="accountant_main_menu"
-    name="Accountant Service"
-    sequence="20"
-    />
+<menuitem id="accountant_main_menu" name="Accountant Service" sequence="20" />
 
-<menuitem 
-    id="accountant_report_menu"
-    name="Report"
-    sequence="98"
-    parent="accountant_main_menu"
-    />
+<menuitem
+            id="accountant_report_menu"
+            name="Report"
+            sequence="98"
+            parent="accountant_main_menu"
+        />
 
-<menuitem 
-    id="accountant_configuration_menu"
-    name="Configuration"
-    sequence="99"
-    parent="accountant_main_menu"
-    />
+<menuitem
+            id="accountant_configuration_menu"
+            name="Configuration"
+            sequence="99"
+            parent="accountant_main_menu"
+        />
 
 </data>
 </openerp>

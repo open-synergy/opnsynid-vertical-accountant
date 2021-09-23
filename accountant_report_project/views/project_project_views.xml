@@ -1,22 +1,36 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <openerp>
 <data>
 <record id="project_project_view_form" model="ir.ui.view">
     <field name="name">project.project form</field>
     <field name="model">project.project</field>
-    <field name="inherit_id" ref="project.edit_project"/>
+    <field name="inherit_id" ref="project.edit_project" />
     <field name="arch" type="xml">
         <data>
             <xpath expr="//div[@name='buttons']" position="inside">
-                <button class="oe_inline oe_stat_button" type="action"
-                    name="%(accountant_assurance_report_by_project_action)d"
-                    icon="fa-files-o">
-                    <field name="assurance_report_count" string="Assurance Report" widget="statinfo"/>
+                <button
+                            class="oe_inline oe_stat_button"
+                            type="action"
+                            name="%(accountant_assurance_report_by_project_action)d"
+                            icon="fa-files-o"
+                        >
+                    <field
+                                name="assurance_report_count"
+                                string="Assurance Report"
+                                widget="statinfo"
+                            />
                 </button>
-                <button class="oe_inline oe_stat_button" type="action"
-                    name="%(accountant_non_assurance_report_by_project_action)d"
-                    icon="fa-files-o">
-                    <field name="non_assurance_report_count" string="Non-Assurance Report" widget="statinfo"/>
+                <button
+                            class="oe_inline oe_stat_button"
+                            type="action"
+                            name="%(accountant_non_assurance_report_by_project_action)d"
+                            icon="fa-files-o"
+                        >
+                    <field
+                                name="non_assurance_report_count"
+                                string="Non-Assurance Report"
+                                widget="statinfo"
+                            />
                 </button>
             </xpath>
         </data>
@@ -26,14 +40,30 @@
 <record id="project_project_view_search" model="ir.ui.view">
     <field name="name">project.project search</field>
     <field name="model">project.project</field>
-    <field name="inherit_id" ref="project.view_project_project_filter"/>
+    <field name="inherit_id" ref="project.view_project_project_filter" />
     <field name="arch" type="xml">
         <data>
             <xpath expr="//filter[@name='message_unread']" position="after">
-                <filter name="assurance_report_exist" string="Assurance Report Exists" domain="[('assurance_report_ids','!=', False)]"/>
-                <filter name="non_assurance_report_exist" string="Non-Assurance Report Exists" domain="[('non_assurance_report_ids','!=', False)]"/>
-                <filter name="assurance_report_not_exist" string="Assurance Report Not Exists" domain="[('assurance_report_ids','=', False)]"/>
-                <filter name="non_assurance_report_not_exist" string="Non-Assurance Report Not Exists" domain="[('non_assurance_report_ids','=', False)]"/>
+                <filter
+                            name="assurance_report_exist"
+                            string="Assurance Report Exists"
+                            domain="[('assurance_report_ids','!=', False)]"
+                        />
+                <filter
+                            name="non_assurance_report_exist"
+                            string="Non-Assurance Report Exists"
+                            domain="[('non_assurance_report_ids','!=', False)]"
+                        />
+                <filter
+                            name="assurance_report_not_exist"
+                            string="Assurance Report Not Exists"
+                            domain="[('assurance_report_ids','=', False)]"
+                        />
+                <filter
+                            name="non_assurance_report_not_exist"
+                            string="Non-Assurance Report Not Exists"
+                            domain="[('non_assurance_report_ids','=', False)]"
+                        />
             </xpath>
         </data>
     </field>

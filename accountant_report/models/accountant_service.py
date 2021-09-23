@@ -3,10 +3,12 @@
 # Copyright 2020 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, fields, api
+from openerp import api, fields, models
 from openerp.exceptions import Warning as UserError
+from openerp.tools.safe_eval import (  # pylint: disable=redefined-builtin
+    safe_eval as eval,
+)
 from openerp.tools.translate import _
-from openerp.tools.safe_eval import safe_eval as eval
 
 
 class AccountantService(models.Model):
@@ -108,8 +110,7 @@ class AccountantService(models.Model):
         result = ""
         localdict = self._get_localdict(report)
         try:
-            eval(self.sequence_python_code,
-                 localdict, mode="exec", nocopy=True)
+            eval(self.sequence_python_code, localdict, mode="exec", nocopy=True)
             result = localdict["result"]
         except:  # noqa: E722
             raise UserError(_("Error in report sequence computation"))
@@ -149,8 +150,7 @@ class AccountantService(models.Model):
     def _get_button_policy(self, policy_field, signing_accountant_id):
         self.ensure_one()
         button_group_ids = []
-        obj_signing = self.env[
-            "accountant.report_signing_partner"]
+        obj_signing = self.env["accountant.report_signing_partner"]
         criteria = [
             ("service_id", "=", self.id),
             ("signing_accountant_id", "=", signing_accountant_id.id),
@@ -162,13 +162,11 @@ class AccountantService(models.Model):
 
         ttd = signings[0]
 
-        policy_field = self._mapped_policy_field().get(
-            policy_field, False)
+        policy_field = self._mapped_policy_field().get(policy_field, False)
 
         button_group_ids = ttd._get_button_policy(policy_field)
 
-        button_group_ids += getattr(
-            self, policy_field).ids
+        button_group_ids += getattr(self, policy_field).ids
 
         return button_group_ids
 
@@ -240,7 +238,6 @@ class AccountantReportSigningPartner(models.Model):
         self.ensure_one()
         button_group_ids = []
 
-        button_group_ids += getattr(
-            self, policy_field).ids
+        button_group_ids += getattr(self, policy_field).ids
 
         return button_group_ids

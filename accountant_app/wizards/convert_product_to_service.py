@@ -2,7 +2,7 @@
 # Copyright 2018 OpenSynergy Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, fields, api
+from openerp import api, fields, models
 from openerp.exceptions import Warning as UserError
 from openerp.tools.translate import _
 
@@ -37,8 +37,7 @@ class ConvertProductToService(models.TransientModel):
         for product in self.product_ids:
             if not self._check_product(product):
                 raise UserError(_("Service already exist"))
-            obj_service.create(
-                self._prepare_service_data(product))
+            obj_service.create(self._prepare_service_data(product))
 
     @api.model
     def _check_product(self, product):

@@ -4,7 +4,9 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from openerp import api, fields, models
-from openerp.tools.safe_eval import safe_eval as eval
+from openerp.tools.safe_eval import (  # pylint: disable=redefined-builtin
+    safe_eval as eval,
+)
 
 
 class AccountantClientTrialBalanceComputation(models.Model):
