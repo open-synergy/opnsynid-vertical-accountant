@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+<data>
+
+    <record id="accountant_relevant_regulation_view_search" model="ir.ui.view">
+        <field name="name">accountant.relevant_regulation form</field>
+        <field name="model">accountant.relevant_regulation</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="code" />
+                <field name="sequence" />
+            </search>
+        </field>
+    </record>
+
+    <record id="accountant_relevant_regulation_view_tree" model="ir.ui.view">
+        <field name="name">accountant.relevant_regulation tree</field>
+        <field name="model">accountant.relevant_regulation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="code" />
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="accountant_relevant_regulation_view_form" model="ir.ui.view">
+        <field name="name">accountant.relevant_regulation form</field>
+        <field name="model">accountant.relevant_regulation</field>
+        <field name="arch" type="xml">
+            <form>
+                <header />
+                <sheet>
+                    <div
+                            class="oe_right oe_button_box"
+                            style="width: 300px;"
+                            name="buttons"
+                        />
+                    <group name="group_1" colspan="4" col="2">
+                        <field name="name" />
+                        <field name="code" />
+                        <field name="sequence" />
+                    </group>
+                    <notebook>
+                        <page name="description" string="Description">
+                            <field name="description" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="accountant_relevant_regulation_action" model="ir.actions.act_window">
+        <field name="name">Relevant Regulation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.relevant_regulation</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="accountant_relevant_regulation_menu"
+            name="Relevant Regulation"
+            parent="accountant_general_audit.accountant_configuration_general_audit_menu"
+            action="accountant_relevant_regulation_action"
+            sequence="201"
+        />
+
+
+</data>
+</openerp>
