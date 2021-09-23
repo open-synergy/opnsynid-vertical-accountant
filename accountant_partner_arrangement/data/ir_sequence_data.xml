@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <openerp>
 <data>
 
@@ -7,15 +7,15 @@
     <field name="code">accountant.partner_arrangement</field>
 </record>
 </data>
-    
+
 <data noupdate="1">
 <record id="sequence_accountant_partner_arrangement" model="ir.sequence">
     <field name="name">Accountant Partner Arrangement</field>
     <field name="code">accountant.partner_arrangement</field>
     <field name="padding">5</field>
     <field name="prefix">ARR/%(year)s/</field>
-    <field eval="1" name="number_next"/>
-    <field eval="1" name="number_increment"/>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
 </record>
 </data>
 </openerp>

@@ -1,41 +1,44 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <openerp>
 <data>
 <record id="accountant_service_view_form" model="ir.ui.view">
     <field name="name">accountant.service form</field>
     <field name="model">accountant.service</field>
-    <field name="inherit_id" ref="accountant_app.accountant_service_view_form"/>
+    <field name="inherit_id" ref="accountant_app.accountant_service_view_form" />
     <field name="arch" type="xml">
         <xpath expr="//field[@name='assurance']" position="after">
-            <field name="service_code"/>
-            <field name="sequence_creation_method"/>
+            <field name="service_code" />
+            <field name="sequence_creation_method" />
 
         </xpath>
         <xpath expr="//page[@name='page_description']" position="before">
             <page name="sequence_code" string="Python Code">
-                <label for="sequence_python_code"/>
-                <field name="sequence_python_code"/>
+                <label for="sequence_python_code" />
+                <field name="sequence_python_code" />
             </page>
             <page name="page_signing" string="Signing Partner">
                 <field name="signing_accountant_ids" colspan="4" nolabel="1">
                     <tree>
-                        <field name="signing_accountant_id"/>
-                        <field name="sequence_id"/>
-                        <field name="confirm_grp_ids"/>
-                        <field name="finalize_grp_ids"/>
-                        <field name="valid_grp_ids"/>
-                        <field name="cancel_grp_ids"/>
-                        <field name="restart_grp_ids"/>
+                        <field name="signing_accountant_id" />
+                        <field name="sequence_id" />
+                        <field name="confirm_grp_ids" />
+                        <field name="finalize_grp_ids" />
+                        <field name="valid_grp_ids" />
+                        <field name="cancel_grp_ids" />
+                        <field name="restart_grp_ids" />
                     </tree>
                     <form>
                         <group name="group_1" colspan="4" col="2">
-                            <field name="signing_accountant_id"/>
-                            <field name="sequence_id" domain="[('code','=','accountant.report')]"/>
-                            <field name="confirm_grp_ids" widget="many2many_tags"/>
-                            <field name="finalize_grp_ids" widget="many2many_tags"/>
-                            <field name="valid_grp_ids" widget="many2many_tags"/>
-                            <field name="cancel_grp_ids" widget="many2many_tags"/>
-                            <field name="restart_grp_ids" widget="many2many_tags"/>
+                            <field name="signing_accountant_id" />
+                            <field
+                                        name="sequence_id"
+                                        domain="[('code','=','accountant.report')]"
+                                    />
+                            <field name="confirm_grp_ids" widget="many2many_tags" />
+                            <field name="finalize_grp_ids" widget="many2many_tags" />
+                            <field name="valid_grp_ids" widget="many2many_tags" />
+                            <field name="cancel_grp_ids" widget="many2many_tags" />
+                            <field name="restart_grp_ids" widget="many2many_tags" />
                         </group>
                     </form>
 
@@ -43,23 +46,23 @@
             </page>
             <page name="page_opinion" string="Opinions">
                 <group name="opinion_1" colspan="4" col="2">
-                    <field name="opinion_required"/>
+                    <field name="opinion_required" />
                 </group>
-                <field name="allowed_opinion_ids" nolabel="1" colspan="4"/>
+                <field name="allowed_opinion_ids" nolabel="1" colspan="4" />
             </page>
             <page name="method" string="Methods">
                 <group name="method_1" colspan="4" col="2">
-                    <field name="method_required"/>
+                    <field name="method_required" />
                 </group>
-                <field name="allowed_method_ids" nolabel="1" colspan="4"/>
+                <field name="allowed_method_ids" nolabel="1" colspan="4" />
             </page>
             <page name="page_policy" string="Policy">
                 <group name="group_policy_1" colspan="4" col="2">
-                    <field name="confirm_grp_ids" widget="many2many_tags"/>
-                    <field name="finalize_grp_ids" widget="many2many_tags"/>
-                    <field name="valid_grp_ids" widget="many2many_tags"/>
-                    <field name="cancel_grp_ids" widget="many2many_tags"/>
-                    <field name="restart_grp_ids" widget="many2many_tags"/>
+                    <field name="confirm_grp_ids" widget="many2many_tags" />
+                    <field name="finalize_grp_ids" widget="many2many_tags" />
+                    <field name="valid_grp_ids" widget="many2many_tags" />
+                    <field name="cancel_grp_ids" widget="many2many_tags" />
+                    <field name="restart_grp_ids" widget="many2many_tags" />
                 </group>
             </page>
         </xpath>

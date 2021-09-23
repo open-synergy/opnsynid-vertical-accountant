@@ -6,8 +6,11 @@
 def _load_partner_identification_data(cr):
     try:
         from openupgradelib import load_data
+
         load_data(
-            cr, "partner_identification_cpa_firm_license",
-            "/data/res_partner_id_category_data.xml")
-    except:
+            cr,
+            "partner_identification_cpa_firm_license",
+            "/data/res_partner_id_category_data.xml",
+        )
+    except Exception:
         return

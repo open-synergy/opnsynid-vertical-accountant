@@ -1,14 +1,14 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <openerp>
 <data>
 <record id="accountant_report_view_form" model="ir.ui.view">
     <field name="name">accountant.report form</field>
     <field name="model">accountant.report</field>
-    <field name="inherit_id" ref="accountant_report.accountant_report_view_form"/>
+    <field name="inherit_id" ref="accountant_report.accountant_report_view_form" />
     <field name="arch" type="xml">
         <data>
             <xpath expr="//field[@name='partner_id']" position="after">
-                <field name="primary_creditor_id"/>
+                <field name="primary_creditor_id" />
             </xpath>
         </data>
     </field>
@@ -17,11 +17,11 @@
 <record id="accountant_report_view_tree" model="ir.ui.view">
     <field name="name">accountant.report tree</field>
     <field name="model">accountant.report</field>
-    <field name="inherit_id" ref="accountant_report.accountant_report_view_tree"/>
+    <field name="inherit_id" ref="accountant_report.accountant_report_view_tree" />
     <field name="arch" type="xml">
         <data>
             <xpath expr="//field[@name='partner_id']" position="after">
-                <field name="primary_creditor_id"/>
+                <field name="primary_creditor_id" />
             </xpath>
         </data>
     </field>
@@ -30,13 +30,17 @@
 <record id="accountant_report_view_search" model="ir.ui.view">
     <field name="name">accountant.report search</field>
     <field name="model">accountant.report</field>
-    <field name="inherit_id" ref="accountant_report.accountant_report_view_search"/>
+    <field name="inherit_id" ref="accountant_report.accountant_report_view_search" />
     <field name="arch" type="xml">
         <xpath expr="//field[@name='partner_id']" position="after">
-            <field name="primary_creditor_id"/>
+            <field name="primary_creditor_id" />
         </xpath>
         <xpath expr="//filter[@name='grp_partner']" position="after">
-            <filter name="grp_primary_creditor" string="Primary Creditor" context="{'group_by':'primary_creditor_id'}"/>
+            <filter
+                        name="grp_primary_creditor"
+                        string="Primary Creditor"
+                        context="{'group_by':'primary_creditor_id'}"
+                    />
         </xpath>
     </field>
 </record>

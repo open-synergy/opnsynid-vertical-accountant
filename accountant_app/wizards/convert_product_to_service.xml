@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- © 2016 OpenSynergy Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
-
 <openerp>
 <data>
 
@@ -11,16 +10,17 @@
     <field name="arch" type="xml">
         <form>
             <group name="group_1" colspan="4" col="2" string="Products to Convert">
-                <field name="product_ids" nolabel="1" col="2"/>
+                <field name="product_ids" nolabel="1" col="2" />
             </group>
             <footer>
-                <button name="action_convert"
-                        type="object"
-                        string="Convert"
-                        class="oe_highlight"/>
+                <button
+                            name="action_convert"
+                            type="object"
+                            string="Convert"
+                            class="oe_highlight"
+                        />
                 or
-                <button special="cancel"
-                        string="Cancel"/>
+                <button special="cancel" string="Cancel" />
             </footer>
         </form>
     </field>
@@ -34,12 +34,13 @@
     <field name="target">new</field>
 </record>
 
-<menuitem 
-    id="convert_product_to_service_menu"
-    name="Convert Product To Service"
-    parent="accountant_configuration_menu"
-    action="convert_product_to_service_action"
-    sequence="2"/>
+<menuitem
+            id="convert_product_to_service_menu"
+            name="Convert Product To Service"
+            parent="accountant_configuration_menu"
+            action="convert_product_to_service_action"
+            sequence="2"
+        />
 
 </data>
 </openerp>
