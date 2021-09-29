@@ -1,0 +1,13 @@
+# Do NOT update manually; changes here will be overwritten by Copier
+_commit: v1.2.4
+_src_path: https://github.com/open-synergy/ssi-addons-repo-template.git
+dependency_installation_mode: OCA
+generate_requirements_txt: true
+include_wkhtmltopdf: true
+odoo_version: 8.0
+rebel_module_groups: []
+repo_description: null
+repo_name: opnsynid-vertical-accountant
+repo_slug: opnsynid-vertical-accountant
+travis_apt_packages: []
+travis_apt_sources: []
