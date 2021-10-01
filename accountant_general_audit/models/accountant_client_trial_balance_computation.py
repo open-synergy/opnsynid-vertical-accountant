@@ -88,3 +88,8 @@ class AccountantClientTrialBalanceComputation(models.Model):
             "env": self.env,
             "document": self,
         }
+
+    @api.multi
+    def action_recompute(self):
+        for record in self:
+            record._compute_amount()

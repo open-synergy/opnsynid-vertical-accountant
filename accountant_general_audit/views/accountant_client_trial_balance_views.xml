@@ -126,6 +126,8 @@
         <field name="arch" type="xml">
             <form>
                 <header>
+
+
                     <button
                             name="action_confirm"
                             type="object"
@@ -261,6 +263,14 @@
                     </group>
                     <notebook colspan="4">
                         <page string="Detail" name="details">
+                            <group name="detail_1">
+                                <button
+                                        name="%(accountant_import_trial_balance_detail_action)d"
+                                        type="action"
+                                        string="Import Detail"
+                                        states="draft"
+                                    />
+                            </group>
                             <field name="detail_ids" colspan="1" col="2" nolabel="1">
                                 <tree editable="bottom">
                                     <field name="sequence" widget="handle" />
@@ -293,6 +303,14 @@
                             </field>
                         </page>
                         <page string="Computation" name="computations">
+                            <group name="computation_1">
+                                <button
+                                        name="action_recompute"
+                                        string="Recompute"
+                                        type="object"
+                                        states="draft"
+                                    />
+                            </group>
                             <field
                                     name="computation_ids"
                                     colspan="1"
@@ -304,6 +322,12 @@
                                     <field name="amount_previous" />
                                     <field name="amount" />
                                     <field name="amount_extrapolation" />
+                                    <button
+                                            name="action_recompute"
+                                            string="Recompute"
+                                            type="object"
+                                            icon="gtk-execute"
+                                        />
                                 </tree>
                             </field>
                         </page>
