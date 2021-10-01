@@ -280,6 +280,11 @@ class AccountantClientTrialBalance(models.Model):
             record.write(record._prepare_restart_data())
 
     @api.multi
+    def action_recompute(self):
+        for record in self:
+            record.computation_ids.action_recompute()
+
+    @api.multi
     def _prepare_confirm_data(self):
         self.ensure_one()
         return {

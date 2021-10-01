@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+<data>
+
+<record id="accountant_import_trial_balance_detail_view_form" model="ir.ui.view">
+    <field name="name">accountant.import_trial_balance_detail - form</field>
+    <field name="model">accountant.import_trial_balance_detail</field>
+    <field name="arch" type="xml">
+        <form>
+            <group name="main" colspan="2" col="2">
+                <field name="trial_balance_id" />
+                <field name="data" />
+            </group>
+            <footer>
+                <button
+                            string="Import"
+                            name="button_import"
+                            type="object"
+                            class="oe_highlight"
+                        />
+                or
+                <button string="Cancel" class="oe_link" special="cancel" />
+            </footer>
+        </form>
+    </field>
+</record>
+
+<record
+            id="accountant_import_trial_balance_detail_action"
+            model="ir.actions.act_window"
+        >
+    <field name="name">Import Trial Balance Detail</field>
+    <field name="res_model">accountant.import_trial_balance_detail</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="accountant_import_trial_balance_detail_view_form" />
+    <field name="target">new</field>
+</record>
+
+
+</data>
+</openerp>
