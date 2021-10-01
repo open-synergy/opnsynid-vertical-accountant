@@ -3,7 +3,7 @@
 # Copyright 2021 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import fields, models
+from openerp import api, fields, models
 
 
 class AccountantClientAccountTypeComputationItem(models.Model):
@@ -24,3 +24,13 @@ class AccountantClientAccountTypeComputationItem(models.Model):
         string="Phyton Code",
         default="result = 0.0",
     )
+
+    # TODO: Does not work, why?
+    @api.onchange(
+        "computation_id",
+    )
+    def onchange_phyton_code(self):
+        self.python_code = "result = 0.0"
+        if self.computation_id:
+            computation = self.computation_id
+            self.python_code = computation.python_code

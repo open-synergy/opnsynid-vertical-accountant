@@ -76,6 +76,17 @@ class AccountantGeneralAudit(models.Model):
             ],
         },
     )
+    sector_id = fields.Many2one(
+        string="Sector",
+        comodel_name="res.partner.sector",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     date_start = fields.Date(
         string="Start Date",
         required=True,
@@ -162,6 +173,48 @@ class AccountantGeneralAudit(models.Model):
     financial_accounting_standard_id = fields.Many2one(
         string="Financial Accounting Standard",
         comodel_name="accountant.financial_accounting_standard",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    user_id = fields.Many2one(
+        string="Responsible",
+        comodel_name="res.users",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    accountant_id = fields.Many2one(
+        string="Accountant",
+        comodel_name="res.partner",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    num_of_consecutive_audit_firm = fields.Integer(
+        string="Num. of Consecutive Audit (Firm)",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    num_of_consecutive_audit_accountant = fields.Integer(
+        string="Num. of Consecutive Audit (Accountant)",
         required=True,
         readonly=True,
         states={
@@ -348,6 +401,14 @@ class AccountantGeneralAudit(models.Model):
         _super.restart_validation()
         for record in self:
             record.request_validation()
+
+    @api.onchange(
+        "partner_id",
+    )
+    def onchange_sector_id(self):
+        self.sector_id = False
+        if self.partner_id:
+            self.sector_id = self.partner_id.sector_id
 
     @api.constrains("date_start", "date_end")
     def _check_date_start_end(self):
