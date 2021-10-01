@@ -234,13 +234,17 @@
                                 />
                             <field
                                     name="partner_id"
-                                    domain="[('parent_id','=',False)]"
+                                    domain="[('parent_id','=',False),('company_id','=',True)]"
                                 />
+                            <field name="sector_id" />
                             <field name="account_type_set_id" />
                             <field name="financial_accounting_standard_id" />
                             <field name="currency_id" />
                             <field name="user_id" />
-                            <field name="accountant_id" />
+                            <field
+                                    name="accountant_id"
+                                    domain="[('parent_id','=',False),('company_id','=',False)]"
+                                />
                             <field name="num_of_consecutive_audit_firm" />
                             <field name="num_of_consecutive_audit_accountant" />
                         </group>
