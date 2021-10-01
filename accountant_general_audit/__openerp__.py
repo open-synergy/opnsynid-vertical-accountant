@@ -6,7 +6,7 @@
 
 {
     "name": "Accountant General Audit",
-    "version": "8.0.2.8.0",
+    "version": "8.0.3.0.0",
     "author": "PT. Simetri Sinergi Indonesia, OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
@@ -19,6 +19,7 @@
         "base_custom_information",
         "accountant_app",
         "web_readonly_bypass",
+        "partner_sector",
     ],
     "data": [
         "security/ir.model.access.csv",

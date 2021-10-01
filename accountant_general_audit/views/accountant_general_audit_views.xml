@@ -16,6 +16,8 @@
                 <field name="date_end" />
                 <field name="account_type_set_id" />
                 <field name="financial_accounting_standard_id" />
+                <field name="user_id" />
+                <field name="accountant_id" />
                 <field name="company_id" groups="base.group_multi_company" />
                 <group name="dom_state" string="State">
                     <filter
@@ -111,6 +113,8 @@
                 <field name="date_end" />
                 <field name="account_type_set_id" />
                 <field name="financial_accounting_standard_id" />
+                <field name="user_id" />
+                <field name="accountant_id" />
                 <field name="state" />
             </tree>
         </field>
@@ -235,6 +239,10 @@
                             <field name="account_type_set_id" />
                             <field name="financial_accounting_standard_id" />
                             <field name="currency_id" />
+                            <field name="user_id" />
+                            <field name="accountant_id" />
+                            <field name="num_of_consecutive_audit_firm" />
+                            <field name="num_of_consecutive_audit_accountant" />
                         </group>
                         <group name="group_1_2">
                             <field name="date_start" />
