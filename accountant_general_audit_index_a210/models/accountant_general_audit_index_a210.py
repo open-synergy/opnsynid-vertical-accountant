@@ -230,58 +230,20 @@ class AccountantGeneralAuditIndexA210(models.Model):
 
     @api.multi
     @api.depends(
-        "total_asset",
-        "total_asset_extrapolation",
-        "net_asset",
-        "net_asset_extrapolation",
-        "revenue",
-        "revenue_extrapolation",
-        "cost_of_revenue",
-        "cost_of_revenue_extrapolation",
-        "ebt",
-        "ebt_extrapolation",
-        "ebitda",
-        "ebitda_extrapolation",
-        "total_liability",
-        "total_liability_extrapolation",
+        "base_computation_amount",
+        "base_computation_extrapolation_amount",
         "other_base_amount",
-        "base_amount",
         "performance_materiality_percentage",
         "overall_materiality_percentage",
     )
     def _compute_materiality(self):
         for document in self:
-            base_amount = base_amount_extrapolation = 0.0
-            if document.base_amount == "total_asset":
-                base_amount = document.total_asset
-                base_amount_extrapolation = document.total_asset_extrapolation
-            elif document.base_amount == "net_asset":
-                base_amount = document.net_asset
-                base_amount_extrapolation = document.net_asset_extrapolation
-            elif document.base_amount == "revenue":
-                base_amount = document.revenue
-                base_amount_extrapolation = document.revenue_extrapolation
-            elif document.base_amount == "cost_of_revenue":
-                base_amount = document.cost_of_revenue
-                base_amount_extrapolation = document.cost_of_revenue_extrapolation
-            elif document.base_amount == "ebt":
-                base_amount = document.ebt
-                base_amount_extrapolation = document.ebt_extrapolation
-            elif document.base_amount == "ebitda":
-                base_amount = document.ebitda
-                base_amount_extrapolation = document.ebitda_extrapolation
-            elif document.base_amount == "total_liability":
-                base_amount = document.total_liability
-                base_amount_extrapolation = document.total_liability_extrapolation
-            elif document.base_amount == "other_base_amount":
-                base_amount = document.other_base_amount
-                base_amount_extrapolation = document.other_base_amount
             document.overall_materiality = (
                 document.overall_materiality_percentage / 100.00
-            ) * base_amount
+            ) * document.base_computation_amount
             document.overall_materiality_extrapolation = (
                 document.overall_materiality_percentage / 100.00
-            ) * base_amount_extrapolation
+            ) * document.base_computation_extrapolation_amount
             document.performance_materiality = (
                 document.performance_materiality_percentage / 100.00
             ) * document.overall_materiality
@@ -294,6 +256,42 @@ class AccountantGeneralAuditIndexA210(models.Model):
             document.tolerable_misstatement_extrapolation = (
                 document.tolerable_misstatement_percentage / 100.00
             ) * document.performance_materiality_extrapolation
+
+    @api.depends(
+        "general_audit_id",
+        "computation_item_id",
+        "other_amount_ok",
+        "other_base_amount",
+    )
+    def _compute_base(self):
+        obj_tb_computation = self.env["accountant.client_trial_balance_computation"]
+        for document in self:
+            tb_computation_item_id = False
+            base_computation_amount = base_computation_extrapolation_amount = 0.0
+            if document.general_audit_id and document.computation_item_id:
+                criteria = [
+                    (
+                        "trial_balance_id.general_audit_id.id",
+                        "=",
+                        document.general_audit_id.id,
+                    ),
+                    ("computation_item_id.id", "=", document.computation_item_id.id),
+                ]
+                computations = obj_tb_computation.search(criteria)
+                if len(computations) > 0:
+                    tb_computation_item_id = computations[0]
+                    base_computation_amount = tb_computation_item_id.amount
+                    base_computation_extrapolation_amount = (
+                        tb_computation_item_id.amount_extrapolation
+                    )
+            if document.other_amount_ok:
+                base_computation_amount = document.other_base_amount
+                base_computation_extrapolation_amount = document.other_base_amount
+            document.tb_computation_item_id = tb_computation_item_id
+            document.base_computation_amount = base_computation_amount
+            document.base_computation_extrapolation_amount = (
+                base_computation_extrapolation_amount
+            )
 
     name = fields.Char(
         string="# Document",
@@ -394,106 +392,9 @@ class AccountantGeneralAuditIndexA210(models.Model):
         readonly=True,
         store=True,
     )
-    total_asset = fields.Float(
-        string="Total Asset",
-        required=False,
-        readonly=True,
-        compute="_compute_total_asset",
-        store=True,
-    )
-    total_asset_extrapolation = fields.Float(
-        string="Extrapolation Total Asset",
-        required=False,
-        readonly=True,
-        compute="_compute_total_asset",
-        store=True,
-    )
-    net_asset = fields.Float(
-        string="Net Asset",
-        required=False,
-        readonly=True,
-        compute="_compute_net_asset",
-        store=True,
-    )
-    net_asset_extrapolation = fields.Float(
-        string="Extrapolation Net Asset",
-        required=False,
-        readonly=True,
-        compute="_compute_net_asset",
-        store=True,
-    )
-    revenue = fields.Float(
-        string="Revenue",
-        required=False,
-        readonly=True,
-        compute="_compute_revenue",
-        store=True,
-    )
-    revenue_extrapolation = fields.Float(
-        string="Extrapolation Revenue",
-        required=False,
-        readonly=True,
-        compute="_compute_revenue",
-        store=True,
-    )
-    cost_of_revenue = fields.Float(
-        string="Cost of Revenue",
-        required=False,
-        readonly=True,
-        compute="_compute_cost_of_revenue",
-        store=True,
-    )
-    cost_of_revenue_extrapolation = fields.Float(
-        string="Extrapolation Cost of Revenue",
-        required=False,
-        readonly=True,
-        compute="_compute_cost_of_revenue",
-        store=True,
-    )
-    ebt = fields.Float(
-        string="EBT",
-        required=False,
-        readonly=True,
-        compute="_compute_ebt",
-        store=True,
-    )
-    ebt_extrapolation = fields.Float(
-        string="Extrapolation EBT",
-        required=False,
-        readonly=True,
-        compute="_compute_ebt",
-        store=True,
-    )
-    ebitda = fields.Float(
-        string="EBITDA",
-        required=False,
-        readonly=True,
-        compute="_compute_ebitda",
-        store=True,
-    )
-    ebitda_extrapolation = fields.Float(
-        string="Extrapolation EBITDA",
-        required=False,
-        readonly=True,
-        compute="_compute_ebitda",
-        store=True,
-    )
-    total_liability = fields.Float(
-        string="Total Liability",
-        required=False,
-        readonly=True,
-        compute="_compute_total_liability",
-        store=True,
-    )
-    total_liability_extrapolation = fields.Float(
-        string="Extrapolation Total Liability",
-        compute="_compute_total_liability",
-        store=True,
-    )
-    other_base_amount = fields.Float(
-        string="Other Base Amount",
-        default=0.0,
-        required=True,
+    computation_item_id = fields.Many2one(
+        string="Computation Item To Use",
+        comodel_name="accountant.trial_balance_computation_item",
         readonly=True,
         states={
             "draft": [
@@ -501,18 +402,29 @@ class AccountantGeneralAuditIndexA210(models.Model):
             ],
         },
     )
-    base_amount = fields.Selection(
-        string="Base Amount",
-        selection=[
-            ("total_asset", "Total Asset"),
-            ("net_asset", "Net Asset"),
-            ("revenue", "Revenue"),
-            ("cost_of_revenue", "Cost of Revenue"),
-            ("ebt", "EBT"),
-            ("ebitda", "EBITDA"),
-            ("total_liability", "Total Liability"),
-            ("other_base_amount", "Other Base Amount"),
-        ],
+    tb_computation_item_id = fields.Many2one(
+        string="TB Computation Item",
+        comodel_name="accountant.client_trial_balance_computation",
+        compute="_compute_base",
+        store=True,
+    )
+    base_computation_amount = fields.Float(
+        string="Base Amount for Materiality Computation",
+        compute="_compute_base",
+        store=True,
+    )
+    base_computation_extrapolation_amount = fields.Float(
+        string="Base Extrapolation Amount for Materiality Computation",
+        compute="_compute_base",
+        store=True,
+    )
+    other_amount_ok = fields.Boolean(
+        string="Use Other Amount",
+        default=False,
+    )
+    other_base_amount = fields.Float(
+        string="Other Base Amount",
+        default=0.0,
         required=True,
         readonly=True,
         states={

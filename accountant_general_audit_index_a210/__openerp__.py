@@ -6,7 +6,7 @@
 
 {
     "name": "General Audit Index A.210",
-    "version": "8.0.1.1.0",
+    "version": "8.0.1.2.0",
     "author": "PT. Simetri Sinergi Indonesia, OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
@@ -26,6 +26,7 @@
         "views/accountant_general_audit_index_a210_status_views.xml",
         "views/accountant_general_audit_index_a210_views.xml",
         "views/accountant_general_audit_views.xml",
+        "views/accountant_trial_balance_computation_item_views.xml",
     ],
     "installable": True,
 }

@@ -279,72 +279,13 @@
                     </group>
                     <notebook colspan="4">
                         <page name="materiality" string="Materiality">
-                            <group name="materiality" colspan="4" col="2">
-                                <label for="total_asset" />
-                                <div>
-                                    <field name="total_asset" class="oe_inline" />
-                                    <field
-                                            name="total_asset_extrapolation"
-                                            class="oe_inline"
-                                            nolabel="1"
-                                        />
-                                </div>
-                                <label for="net_asset" />
-                                <div>
-                                    <field name="net_asset" class="oe_inline" />
-                                    <field
-                                            name="net_asset_extrapolation"
-                                            class="oe_inline"
-                                            nolabel="1"
-                                        />
-                                </div>
-                                <label for="revenue" />
-                                <div>
-                                    <field name="revenue" class="oe_inline" />
-                                    <field
-                                            name="revenue_extrapolation"
-                                            class="oe_inline"
-                                            nolabel="1"
-                                        />
-                                </div>
-                                <label for="cost_of_revenue" />
-                                <div>
-                                    <field name="cost_of_revenue" class="oe_inline" />
-                                    <field
-                                            name="cost_of_revenue_extrapolation"
-                                            class="oe_inline"
-                                            nolabel="1"
-                                        />
-                                </div>
-                                <label for="ebt" />
-                                <div>
-                                    <field name="ebt" class="oe_inline" />
-                                    <field
-                                            name="ebt_extrapolation"
-                                            class="oe_inline"
-                                            nolabel="1"
-                                        />
-                                </div>
-                                <label for="ebitda" />
-                                <div>
-                                    <field name="ebitda" class="oe_inline" />
-                                    <field
-                                            name="ebitda_extrapolation"
-                                            class="oe_inline"
-                                            nolabel="1"
-                                        />
-                                </div>
-                                <label for="total_liability" />
-                                <div>
-                                    <field name="total_liability" class="oe_inline" />
-                                    <field
-                                            name="total_liability_extrapolation"
-                                            class="oe_inline"
-                                            nolabel="1"
-                                        />
-                                </div>
+                            <group name="materiality_1" colspan="4" col="2">
+                                <field name="computation_item_id" />
+                                <field name="other_amount_ok" />
                                 <field name="other_base_amount" />
-                                <field name="base_amount" />
+                                <field name="tb_computation_item_id" invisible="1" />
+                                <field name="base_computation_amount" />
+                                <field name="base_computation_extrapolation_amount" />
                             </group>
                             <group
                                     name="materiality_2"
