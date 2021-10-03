@@ -285,27 +285,35 @@
                     </group>
                     <notebook colspan="4">
                         <page name="regulation" string="Regulation">
-                            <field
-                                    name="relevant_regulation_ids"
-                                    context="{'default_index_a2304_id': active_id}"
-                                >
-                                <tree>
-                                    <field name="regulation_id" />
-                                    <field name="compliance" />
-                                    <field
-                                            name="related_accountant_type_ids"
-                                            widget="many2many_tags"
-                                        />
-                                </tree>
-                                <form string="Relevant Regulation">
-                                    <group name="main">
+                            <group name="reg_1" colspan="4" col="2">
+                                <field
+                                        name="relevant_regulation_ids"
+                                        context="{'default_index_a2304_id': active_id}"
+                                        nolabel="1"
+                                        colspan="2"
+                                    >
+                                    <tree>
                                         <field name="regulation_id" />
                                         <field name="compliance" />
-                                        <field name="effect" />
-                                        <field name="related_accountant_type_ids" />
-                                    </group>
-                                </form>
-                            </field>
+                                        <field
+                                                name="related_accountant_type_ids"
+                                                widget="many2many_tags"
+                                            />
+                                    </tree>
+                                    <form string="Relevant Regulation">
+                                        <group name="main">
+                                            <field name="regulation_id" />
+                                            <field name="compliance" />
+                                            <field name="effect" />
+                                            <field name="related_accountant_type_ids" />
+                                        </group>
+                                    </form>
+                                </field>
+                            </group>
+                            <group name="reg_2" colspan="4" col="2">
+                                <field name="status_id" />
+                                <field name="conclusion" />
+                            </group>
                         </page>
                         <page string="Reviews" name="tier_validation">
                             <group name="tier_validation_1" colspan="4" col="2">
