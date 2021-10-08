@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<openerp>
+<data noupdate="1">
+    <record id="client_business_process_001" model="accountant.client_business_process">
+        <field name="code">BP01</field>
+        <field
+                name="name"
+            >Siklus penjualan, piutang usaha dan penerimaannya - (test)</field>
+        <field name="sequence" eval="1" />
+    </record>
+
+    <record id="client_business_process_002" model="accountant.client_business_process">
+        <field name="code">BP02</field>
+        <field
+                name="name"
+            >Siklus pembelian, hutang usaha dan pembayarannya - (test)</field>
+        <field name="sequence" eval="2" />
+    </record>
+
+    <record id="client_business_process_003" model="accountant.client_business_process">
+        <field name="code">BP03</field>
+        <field name="name">Siklus persediaan dan produksi - (test)</field>
+        <field name="sequence" eval="3" />
+    </record>
+
+    <record id="client_business_process_004" model="accountant.client_business_process">
+        <field name="code">BP04</field>
+        <field
+                name="name"
+            >Siklus investasi (surat berharga, entitas anak, aset tetap, dll) - (test)</field>
+        <field name="sequence" eval="4" />
+    </record>
+
+    <record id="client_business_process_005" model="accountant.client_business_process">
+        <field name="code">BP05</field>
+        <field
+                name="name"
+            >Siklus pendanaan (hutang bank, leasing, modal - (test)</field>
+        <field name="sequence" eval="5" />
+    </record>
+
+    <record id="client_business_process_006" model="accountant.client_business_process">
+        <field name="code">BP06</field>
+        <field name="name">Siklus lainnya (penggajian, pajak, lainnya) - (test)</field>
+        <field name="sequence" eval="6" />
+    </record>
+
+</data>
+
+</openerp>
