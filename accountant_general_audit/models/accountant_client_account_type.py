@@ -29,6 +29,15 @@ class AccountantClientAccountType(models.Model):
         required=True,
         default=5,
     )
+    normal_balance = fields.Selection(
+        string="Normal Balance",
+        selection=[
+            ("dr", "Debit"),
+            ("cr", "Credit"),
+        ],
+        required=True,
+        default="dr",
+    )
     active = fields.Boolean(
         string="Active",
         default=True,

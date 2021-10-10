@@ -5,32 +5,38 @@
 <openerp>
 <data>
 
-    <record id="accountant_client_account_group_view_search" model="ir.ui.view">
-        <field name="name">accountant.client_account_group form</field>
-        <field name="model">accountant.client_account_group</field>
+    <record id="accountant_client_account_view_search" model="ir.ui.view">
+        <field name="name">accountant.client_account form</field>
+        <field name="model">accountant.client_account</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
                 <field name="code" />
+                <field name="partner_id" />
+                <field name="type_id" />
+                <field name="normal_balance" />
             </search>
         </field>
     </record>
 
-    <record id="accountant_client_account_group_view_tree" model="ir.ui.view">
-        <field name="name">accountant.client_account_group tree</field>
-        <field name="model">accountant.client_account_group</field>
+    <record id="accountant_client_account_view_tree" model="ir.ui.view">
+        <field name="name">accountant.client_account tree</field>
+        <field name="model">accountant.client_account</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="sequence" widget="handle" />
                 <field name="name" />
                 <field name="code" />
+                <field name="partner_id" />
+                <field name="type_id" />
+                <field name="normal_balance" />
             </tree>
         </field>
     </record>
 
-    <record id="accountant_client_account_group_view_form" model="ir.ui.view">
-        <field name="name">accountant.client_account_group form</field>
-        <field name="model">accountant.client_account_group</field>
+    <record id="accountant_client_account_view_form" model="ir.ui.view">
+        <field name="name">accountant.client_account form</field>
+        <field name="model">accountant.client_account</field>
         <field name="arch" type="xml">
             <form>
                 <header />
@@ -45,27 +51,34 @@
                         <field name="code" />
                         <field name="active" />
                         <field name="sequence" />
-                        <field name="description" />
+                        <field name="partner_id" />
+                        <field name="type_id" />
+                        <field name="normal_balance" />
                     </group>
+                    <notebook>
+                        <page name="description" string="Description">
+                            <field name="description" />
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
     </record>
 
-    <record id="accountant_client_account_group_action" model="ir.actions.act_window">
-        <field name="name">Account Group</field>
+    <record id="accountant_client_account_action" model="ir.actions.act_window">
+        <field name="name">Accounts</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">accountant.client_account_group</field>
+        <field name="res_model">accountant.client_account</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem
-            id="accountant_client_account_group_menu"
-            name="Account Group"
+            id="accountant_client_account_menu"
+            name="Accounts"
             parent="accountant_configuration_trial_balance_menu"
-            action="accountant_client_account_group_action"
-            sequence="1"
+            action="accountant_client_account_action"
+            sequence="3"
         />
 
 
