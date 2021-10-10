@@ -7,6 +7,7 @@
     <record id="acc_type_t001" model="accountant.client_account_type">
         <field name="name">Cash and Cash Equivalent</field>
         <field name="code">T001</field>
+        <field name="normal_balance">dr</field>
         <field name="group_id" ref="acc_group_t001" />
         <field
                 name="extrapolation_python_code"
@@ -19,6 +20,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Long Term Investment</field>
         <field name="code">T002</field>
         <field name="group_id" ref="acc_group_t001" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -30,6 +32,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Account Receivable</field>
         <field name="code">T003</field>
         <field name="group_id" ref="acc_group_t001" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -41,6 +44,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Third Party Receivable</field>
         <field name="code">T004</field>
         <field name="group_id" ref="acc_group_t001" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -52,6 +56,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Other Receivable</field>
         <field name="code">T005</field>
         <field name="group_id" ref="acc_group_t001" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -63,6 +68,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Inventory</field>
         <field name="code">T006</field>
         <field name="group_id" ref="acc_group_t001" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -74,6 +80,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Prepaid Tax</field>
         <field name="code">T007</field>
         <field name="group_id" ref="acc_group_t001" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -85,6 +92,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Prepaid Expense</field>
         <field name="code">T008</field>
         <field name="group_id" ref="acc_group_t001" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -96,6 +104,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Long Term Investment</field>
         <field name="code">T009</field>
         <field name="group_id" ref="acc_group_t002" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -107,6 +116,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Fixed Asset</field>
         <field name="code">T010</field>
         <field name="group_id" ref="acc_group_t002" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -118,6 +128,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Right of Use Asset</field>
         <field name="code">T011</field>
         <field name="group_id" ref="acc_group_t002" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -129,6 +140,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Intangible Asset</field>
         <field name="code">T012</field>
         <field name="group_id" ref="acc_group_t002" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -140,6 +152,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Other Asset</field>
         <field name="code">T013</field>
         <field name="group_id" ref="acc_group_t002" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -151,6 +164,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Deffered Expense</field>
         <field name="code">T013</field>
         <field name="group_id" ref="acc_group_t002" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -162,6 +176,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Account Payable</field>
         <field name="code">T015</field>
         <field name="group_id" ref="acc_group_t003" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -173,6 +188,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Tax Payable</field>
         <field name="code">T016</field>
         <field name="group_id" ref="acc_group_t003" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -184,6 +200,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Other Payable</field>
         <field name="code">T017</field>
         <field name="group_id" ref="acc_group_t003" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -195,6 +212,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Accrue Expense</field>
         <field name="code">T018</field>
         <field name="group_id" ref="acc_group_t003" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -206,6 +224,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Bank Loan</field>
         <field name="code">T019</field>
         <field name="group_id" ref="acc_group_t004" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -217,6 +236,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Lease</field>
         <field name="code">T020</field>
         <field name="group_id" ref="acc_group_t004" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -228,6 +248,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Other Long Term Payable</field>
         <field name="code">T021</field>
         <field name="group_id" ref="acc_group_t004" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -239,6 +260,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Stock</field>
         <field name="code">T022</field>
         <field name="group_id" ref="acc_group_t005" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -250,6 +272,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Additional Paid-In Capital</field>
         <field name="code">T023</field>
         <field name="group_id" ref="acc_group_t005" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -261,6 +284,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Capital Reserves</field>
         <field name="code">T024</field>
         <field name="group_id" ref="acc_group_t005" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -272,6 +296,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Opening Balance</field>
         <field name="code">T025</field>
         <field name="group_id" ref="acc_group_t006" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -283,6 +308,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Current Earning</field>
         <field name="code">T026</field>
         <field name="group_id" ref="acc_group_t006" />
+        <field name="normal_balance">cr</field>
         <field name="extrapolation_python_code">result = interim_balance</field>
     </record>
 
@@ -290,6 +316,7 @@ result = previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="name">Opening Other Comprehensive Income</field>
         <field name="code">T027</field>
         <field name="group_id" ref="acc_group_t007" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -300,6 +327,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Current Other Comprehensive Income</field>
         <field name="code">T028</field>
         <field name="group_id" ref="acc_group_t007" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -310,6 +338,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Goods Sales</field>
         <field name="code">T029</field>
         <field name="group_id" ref="acc_group_t008" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -320,6 +349,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Service Sales</field>
         <field name="code">T030</field>
         <field name="group_id" ref="acc_group_t008" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -330,6 +360,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Interest Income</field>
         <field name="code">T031</field>
         <field name="group_id" ref="acc_group_t009" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -340,6 +371,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Other Income</field>
         <field name="code">T032</field>
         <field name="group_id" ref="acc_group_t009" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -350,6 +382,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Other Comprehensive Income - A</field>
         <field name="code">T033</field>
         <field name="group_id" ref="acc_group_t010" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -360,6 +393,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Other Comprehensive Income - B</field>
         <field name="code">T034</field>
         <field name="group_id" ref="acc_group_t010" />
+        <field name="normal_balance">cr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -370,6 +404,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Cost of Goods Sold</field>
         <field name="code">T035</field>
         <field name="group_id" ref="acc_group_t011" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -380,6 +415,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Cost of Service</field>
         <field name="code">T036</field>
         <field name="group_id" ref="acc_group_t011" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -390,6 +426,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Human Resource Expense</field>
         <field name="code">T037</field>
         <field name="group_id" ref="acc_group_t012" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -400,6 +437,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">General and Administrative Expense</field>
         <field name="code">T038</field>
         <field name="group_id" ref="acc_group_t012" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -410,6 +448,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Depreciation and Amortization Expense</field>
         <field name="code">T039</field>
         <field name="group_id" ref="acc_group_t012" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -420,6 +459,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Interest Expense</field>
         <field name="code">T040</field>
         <field name="group_id" ref="acc_group_t013" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -430,6 +470,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Other Expense</field>
         <field name="code">T041</field>
         <field name="group_id" ref="acc_group_t013" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -440,6 +481,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Current Tax</field>
         <field name="code">T042</field>
         <field name="group_id" ref="acc_group_t014" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days
@@ -450,6 +492,7 @@ result = (365.0/delta_days) * interim_balance</field>
         <field name="name">Deffered Tax</field>
         <field name="code">T043</field>
         <field name="group_id" ref="acc_group_t014" />
+        <field name="normal_balance">dr</field>
         <field
                 name="extrapolation_python_code"
             >delta_days = (interim_date_end - previous_date_end).days

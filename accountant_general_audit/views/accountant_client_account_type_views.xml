@@ -13,6 +13,7 @@
                 <field name="name" />
                 <field name="code" />
                 <field name="group_id" />
+                <field name="normal_balance" />
                 <group name="group_1" string="Group By...">
                     <filter
                             name="grp_group"
@@ -32,6 +33,7 @@
                 <field name="sequence" widget="handle" />
                 <field name="name" />
                 <field name="code" />
+                <field name="normal_balance" />
                 <field name="group_id" />
             </tree>
         </field>
@@ -52,12 +54,19 @@
                     <group name="group_1" colspan="4" col="2">
                         <field name="name" />
                         <field name="code" />
-                        <field name="group_id" />
                         <field name="active" />
                         <field name="sequence" />
-                        <field name="description" />
-                        <field name="extrapolation_python_code" />
+                        <field name="group_id" />
+                        <field name="normal_balance" />
                     </group>
+                    <notebook>
+                        <page name="extrapolation" string="Extrapolation Computation">
+                            <field name="extrapolation_python_code" />
+                        </page>
+                        <page name="description" string="Description">
+                            <field name="description" />
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -76,7 +85,7 @@
             name="Account Type"
             parent="accountant_configuration_trial_balance_menu"
             action="accountant_client_account_type_action"
-            sequence="3"
+            sequence="2"
         />
 
 
