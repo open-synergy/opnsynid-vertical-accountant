@@ -42,6 +42,7 @@
         "views/accountant_trial_balance_computation_item_views.xml",
         "views/accountant_financial_accounting_standard_views.xml",
         "views/accountant_general_audit_views.xml",
+        "views/accountant_client_adjustment_entry_views.xml",
     ],
     "demo": [
         "demo/accountant_financial_accounting_standard_demo.xml",
