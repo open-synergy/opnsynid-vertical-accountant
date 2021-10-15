@@ -274,15 +274,22 @@
                             <field name="detail_ids" colspan="1" col="2" nolabel="1">
                                 <tree editable="bottom">
                                     <field name="sequence" widget="handle" />
-                                    <field name="code" />
-                                    <field name="name" />
+                                    <field
+                                            name="account_id"
+                                            domain="[('partner_id','=',parent.partner_id)]"
+                                        />
                                     <field
                                             name="type_id"
                                             domain="[('id','in',parent.allowed_type_ids[0][2])]"
                                         />
-                                    <field name="balance" />
-                                    <field name="interim_balance" />
-                                    <field name="previous_balance" />
+                                    <field name="interim_balance" string="Interim" />
+                                    <field name="balance" string="Home Statement" />
+                                    <field
+                                            name="adjustment_balance"
+                                            string="Adjustment"
+                                        />
+                                    <field name="audited_balance" string="Audited" />
+                                    <field name="previous_balance" string="Previous" />
                                 </tree>
                             </field>
                         </page>
@@ -296,9 +303,15 @@
                                 <tree>
                                     <field name="sequence" invisible="1" />
                                     <field name="type_id" />
-                                    <field name="previous_balance" />
-                                    <field name="balance" />
-                                    <field name="extrapolation_balance" />
+                                    <field
+                                            name="extrapolation_balance"
+                                            string="Extrapolation"
+                                        />
+                                    <field name="balance" string="Home Statement" />
+                                    <field name="audited_balance" string="Audited" />
+                                    <field name="previous_balance" string="Previous" />
+
+
                                 </tree>
                             </field>
                         </page>
@@ -319,9 +332,13 @@
                                 >
                                 <tree>
                                     <field name="computation_item_id" />
-                                    <field name="amount_previous" />
-                                    <field name="amount" />
-                                    <field name="amount_extrapolation" />
+                                    <field
+                                            name="amount_extrapolation"
+                                            string="Extrapolation"
+                                        />
+                                    <field name="amount" string="Home Statement" />
+                                    <field name="amount_audited" string="Audited" />
+                                    <field name="amount_previous" string="Previous" />
                                     <button
                                             name="action_recompute"
                                             string="Recompute"

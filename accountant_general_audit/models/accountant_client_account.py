@@ -41,6 +41,7 @@ class AccountantClientAccount(models.Model):
         string="Type",
         comodel_name="accountant.client_account_type",
         required=True,
+        ondelete="restrict",
     )
     normal_balance = fields.Selection(
         string="Normal Balance",

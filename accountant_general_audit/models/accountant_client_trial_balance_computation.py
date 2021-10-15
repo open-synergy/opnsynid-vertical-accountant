@@ -20,12 +20,13 @@ class AccountantClientTrialBalanceComputation(models.Model):
         "trial_balance_id.standard_detail_ids.balance",
         "trial_balance_id.standard_detail_ids.previous_balance",
         "trial_balance_id.standard_detail_ids.extrapolation_balance",
+        "trial_balance_id.standard_detail_ids.audited_balance",
     )
     @api.multi
     def _compute_amount(self):
         obj_computation = self.env["accountant.client_account_type_computation_item"]
         for document in self:
-            amount = amount_extrapolation = amount_previous = 0.0
+            amount = amount_extrapolation = amount_previous = amount_audited = 0.0
             criteria = [
                 ("computation_id", "=", document.computation_item_id.id),
                 (
@@ -49,11 +50,15 @@ class AccountantClientTrialBalanceComputation(models.Model):
                     amount = localdict["result"]
                     amount_extrapolation = localdict["result_extrapolation"]
                     amount_previous = localdict["result_previous"]
+                    amount_audited = localdict["result_audited"]
                 except Exception:
-                    amount = amount_extrapolation = amount_previous = 0.0
+                    amount = (
+                        amount_extrapolation
+                    ) = amount_previous = amount_audited = 0.0
             document.amount = amount
             document.amount_extrapolation = amount_extrapolation
             document.amount_previous = amount_previous
+            document.amount_audited = amount_audited
 
     trial_balance_id = fields.Many2one(
         string="Trial Balance",
@@ -67,17 +72,22 @@ class AccountantClientTrialBalanceComputation(models.Model):
         required=True,
     )
     amount = fields.Float(
-        string="Amount",
+        string="Home Statement Amount",
         compute="_compute_amount",
         store=True,
     )
     amount_extrapolation = fields.Float(
-        string="Amount Extrapolation",
+        string="Extrapolation Amount",
         compute="_compute_amount",
         store=True,
     )
     amount_previous = fields.Float(
-        string="Amount Previous",
+        string="Previous Amount",
+        compute="_compute_amount",
+        store=True,
+    )
+    amount_audited = fields.Float(
+        string="Audited Amount",
         compute="_compute_amount",
         store=True,
     )

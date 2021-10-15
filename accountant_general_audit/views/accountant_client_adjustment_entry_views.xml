@@ -265,6 +265,7 @@
                                         />
                                     <field name="debit" />
                                     <field name="credit" />
+                                    <field name="trial_balance_detail_id" />
                                 </tree>
                             </field>
                         </page>
