@@ -30,12 +30,15 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         "trial_balance_id.detail_ids.previous_balance",
         "trial_balance_id.detail_ids.balance",
         "trial_balance_id.detail_ids.interim_balance",
+        "trial_balance_id.detail_ids.audited_balance",
     )
     @api.multi
     def _compute_balance(self):
         obj_detail = self.env["accountant.client_trial_balance_detail"]
         for document in self:
-            previous_balance = balance = interim_balance = extrapolation_balance = 0.0
+            previous_balance = (
+                balance
+            ) = interim_balance = extrapolation_balance = audited_balance = 0.0
 
             criteria = [
                 ("trial_balance_id", "=", document.trial_balance_id.id),
@@ -45,10 +48,12 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
                 previous_balance += detail.previous_balance
                 balance += detail.balance
                 interim_balance += detail.interim_balance
+                audited_balance += detail.audited_balance
             localdict = document._get_localdict(
                 previous_balance,
                 balance,
                 interim_balance,
+                audited_balance,
             )
             try:
                 eval(
@@ -63,6 +68,7 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
             document.previous_balance = previous_balance
             document.balance = balance
             document.extrapolation_balance = extrapolation_balance
+            document.audited_balance = audited_balance
 
     type_id = fields.Many2one(
         string="Account Type",
@@ -81,13 +87,19 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         store=True,
     )
     balance = fields.Float(
-        string="Balance",
+        string="Home Statement Balance",
         required=False,
         compute="_compute_balance",
         store=True,
     )
     extrapolation_balance = fields.Float(
         string="Extrapolation Balance",
+        required=False,
+        compute="_compute_balance",
+        store=True,
+    )
+    audited_balance = fields.Float(
+        string="Audited Balance",
         required=False,
         compute="_compute_balance",
         store=True,
@@ -99,7 +111,9 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         ondelete="cascade",
     )
 
-    def _get_localdict(self, previous_balance, balance, interim_balance):
+    def _get_localdict(
+        self, previous_balance, balance, interim_balance, audited_balance
+    ):
         self.ensure_one()
         tb = self.trial_balance_id
         date_start = (
@@ -131,6 +145,7 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
             "document": self,
             "previous_balance": previous_balance,
             "interim_balance": interim_balance,
+            "audited_balance": audited_balance,
             "balance": balance,
             "datetime": datetime,
             "date_start": date_start,
