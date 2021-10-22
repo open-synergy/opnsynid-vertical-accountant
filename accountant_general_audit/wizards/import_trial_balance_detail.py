@@ -6,7 +6,8 @@ import base64
 import csv
 from tempfile import TemporaryFile
 
-from openerp import api, fields, models
+from openerp import _, api, fields, models
+from openerp.exceptions import Warning as UserError
 
 
 class ImportTrialBalanceDetail(models.TransientModel):
@@ -49,16 +50,29 @@ class ImportTrialBalanceDetail(models.TransientModel):
     @api.multi
     def _prepare_trial_balance_detail(self, row):
         self.ensure_one()
-        obj_type = self.env["accountant.client_account_type"]
-        criteria = [("name", "=", row[2])]
-        account_type = obj_type.search(criteria)[0]
+        account = self._get_account(row[1])
+
         return {
             "trial_balance_id": self.trial_balance_id.id,
-            "code": row[1],
-            "name": row[0],
-            "type_id": account_type.id,
-            "sequence": account_type.sequence,
+            "account_id": account.id,
             "balance": row[3],
             "interim_balance": row[4],
             "previous_balance": row[5],
         }
+
+    @api.multi
+    def _get_account(self, code):
+        self.ensure_one()
+        obj_account = self.env["accountant.client_account"]
+        partner = self.trial_balance_id.partner_id
+        criteria = [
+            ("code", "=", code),
+            ("partner_id.id", "=", partner.id),
+        ]
+        accounts = obj_account.search(criteria)
+        if len(accounts) > 0:
+            result = accounts[0]
+        else:
+            error_message = _("Invalid client account")
+            raise UserError(error_message)
+        return result
