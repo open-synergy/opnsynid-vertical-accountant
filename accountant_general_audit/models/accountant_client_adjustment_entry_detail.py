@@ -3,7 +3,8 @@
 # Copyright 2021 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import api, fields, models
+from openerp import _, api, fields, models
+from openerp.exceptions import Warning as UserError
 
 
 class AccountantClientAdjustmentEntryDetail(models.Model):
@@ -65,3 +66,23 @@ class AccountantClientAdjustmentEntryDetail(models.Model):
         compute="_compute_trial_balance_detail",
         store=True,
     )
+
+    @api.constrains(
+        "credit",
+    )
+    def constrains_credit(self):
+        for record in self:
+            if record.credit:
+                if record.credit < 0:
+                    msg = _("Credit has to be greater or equal than 0")
+                    raise UserError(msg)
+
+    @api.constrains(
+        "debit",
+    )
+    def constrains_debit(self):
+        for record in self:
+            if record.debit:
+                if record.debit < 0:
+                    msg = _("Debit has to be greater or equal than 0")
+                    raise UserError(msg)

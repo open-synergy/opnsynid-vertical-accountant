@@ -258,11 +258,11 @@
                         <page name="detail" string="Details">
                             <field name="detail_ids">
                                 <tree editable="top">
-                                    <field name="name" />
                                     <field
                                             name="account_id"
                                             domain="[('partner_id','=',parent.partner_id)]"
                                         />
+                                    <field name="name" />
                                     <field name="debit" />
                                     <field name="credit" />
                                     <field name="trial_balance_detail_id" />

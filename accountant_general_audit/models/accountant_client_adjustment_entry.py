@@ -3,7 +3,8 @@
 # Copyright 2021 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import api, fields, models
+from openerp import _, api, fields, models
+from openerp.exceptions import Warning as UserError
 
 
 class AccountantClientAdjustmentEntry(models.Model):
@@ -222,3 +223,18 @@ class AccountantClientAdjustmentEntry(models.Model):
         readonly=True,
         copy=False,
     )
+
+    @api.constrains(
+        "state",
+    )
+    def constrains_credit_debit(self):
+        for record in self:
+            if record.state not in ["draft", "cancel"]:
+                total_debit = 0.0
+                total_credit = 0.0
+                for line in self.detail_ids:
+                    total_debit = total_debit + line.debit
+                    total_credit = total_credit + line.credit
+                if total_debit != total_credit:
+                    msg = _("Total Credit and Total Debit must balance")
+                    raise UserError(msg)
