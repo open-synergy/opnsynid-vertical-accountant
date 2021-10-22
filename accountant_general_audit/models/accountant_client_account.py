@@ -63,3 +63,28 @@ class AccountantClientAccount(models.Model):
         self.normal_balance = False
         if self.type_id:
             self.normal_balance = self.type_id.normal_balance
+
+    @api.multi
+    def name_get(self):
+        result = []
+        for rec in self:
+            if rec.code:
+                name = "[{}] {}".format(rec.code, rec.name)
+            else:
+                name = "%s" % (rec.name)
+            result.append((rec.id, name))
+        return result
+
+    @api.model
+    def name_search(self, name="", args=None, operator="ilike", limit=100):
+        res = super(AccountantClientAccount, self).name_search(
+            name=name, args=args, operator=operator, limit=limit
+        )
+        args = list(args or [])
+        if name:
+            criteria = ["|", ("code", operator, name), ("name", operator, name)]
+            criteria = criteria + args
+            account_ids = self.search(criteria, limit=limit)
+            if account_ids:
+                return account_ids.name_get()
+        return res
