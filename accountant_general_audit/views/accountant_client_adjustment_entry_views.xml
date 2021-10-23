@@ -273,7 +273,7 @@
                             <group name="tier_validation_1" colspan="4" col="2">
                                 <field
                                         name="definition_id"
-                                        groups="account_general_audit.accountant_general_audit_multiple_approval_setting_group"
+                                        groups="account_general_audit.accountant_adjustment_entry_multiple_approval_setting_group"
                                     />
                                 <field
                                         name="reviewer_partner_ids"
@@ -291,7 +291,6 @@
                             >
                             <group name="policy_1" colspan="4" col="2">
                                 <field name="confirm_ok" />
-                                <field name="valid_ok" />
                                 <field name="reject_ok" />
                                 <field name="restart_approval_ok" />
                                 <field name="cancel_ok" />
@@ -303,8 +302,6 @@
                                 <group name="group_log_1" colspan="4" col="3">
                                     <field name="confirm_date" string="Confirmation" />
                                     <field name="confirm_user_id" nolabel="1" />
-                                    <field name="valid_date" string="Validation" />
-                                    <field name="valid_user_id" nolabel="1" />
                                     <field name="reject_date" string="Rejection" />
                                     <field name="reject_user_id" nolabel="1" />
                                     <field name="cancel_date" string="Cancellation" />

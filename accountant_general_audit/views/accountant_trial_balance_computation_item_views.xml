@@ -64,7 +64,7 @@
             id="accountant_trial_balance_computation_item_action"
             model="ir.actions.act_window"
         >
-        <field name="name">Trial Balance Computation Item</field>
+        <field name="name">Trial Balance Computation Items</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">accountant.trial_balance_computation_item</field>
         <field name="view_type">form</field>
@@ -73,7 +73,7 @@
 
     <menuitem
             id="accountant_trial_balance_computation_item_menu"
-            name="Computation Item"
+            name="Computation Items"
             parent="accountant_configuration_trial_balance_menu"
             action="accountant_trial_balance_computation_item_action"
             sequence="4"

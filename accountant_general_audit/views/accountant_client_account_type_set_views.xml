@@ -141,7 +141,7 @@
             id="accountant_client_account_type_set_action"
             model="ir.actions.act_window"
         >
-        <field name="name">Account Type Set</field>
+        <field name="name">Account Type Sets</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">accountant.client_account_type_set</field>
         <field name="view_type">form</field>
@@ -150,7 +150,7 @@
 
     <menuitem
             id="accountant_client_account_type_set_menu"
-            name="Account Type Set"
+            name="Account Type Sets"
             parent="accountant_configuration_trial_balance_menu"
             action="accountant_client_account_type_set_action"
             sequence="5"
