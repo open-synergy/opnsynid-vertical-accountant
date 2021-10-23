@@ -212,10 +212,6 @@ class AccountantClientTrialBalance(models.Model):
         string="Can Restart Approval",
         compute="_compute_policy",
     )
-    valid_ok = fields.Boolean(
-        string="Can Valid",
-        compute="_compute_policy",
-    )
     cancel_ok = fields.Boolean(
         string="Can Cancel",
         compute="_compute_policy",
@@ -231,17 +227,6 @@ class AccountantClientTrialBalance(models.Model):
     )
     confirm_user_id = fields.Many2one(
         string="Confirmed By",
-        comodel_name="res.users",
-        readonly=True,
-        copy=False,
-    )
-    valid_date = fields.Datetime(
-        string="Validation Date",
-        readonly=True,
-        copy=False,
-    )
-    valid_user_id = fields.Many2one(
-        string="Valid By",
         comodel_name="res.users",
         readonly=True,
         copy=False,

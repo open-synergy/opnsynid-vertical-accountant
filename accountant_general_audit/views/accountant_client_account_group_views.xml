@@ -53,7 +53,7 @@
     </record>
 
     <record id="accountant_client_account_group_action" model="ir.actions.act_window">
-        <field name="name">Account Group</field>
+        <field name="name">Account Groups</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">accountant.client_account_group</field>
         <field name="view_type">form</field>
@@ -62,7 +62,7 @@
 
     <menuitem
             id="accountant_client_account_group_menu"
-            name="Account Group"
+            name="Account Groups"
             parent="accountant_configuration_trial_balance_menu"
             action="accountant_client_account_group_action"
             sequence="1"

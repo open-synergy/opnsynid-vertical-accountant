@@ -73,7 +73,7 @@
     </record>
 
     <record id="accountant_client_account_type_action" model="ir.actions.act_window">
-        <field name="name">Account Type</field>
+        <field name="name">Account Types</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">accountant.client_account_type</field>
         <field name="view_type">form</field>
@@ -82,7 +82,7 @@
 
     <menuitem
             id="accountant_client_account_type_menu"
-            name="Account Type"
+            name="Account Types"
             parent="accountant_configuration_trial_balance_menu"
             action="accountant_client_account_type_action"
             sequence="2"

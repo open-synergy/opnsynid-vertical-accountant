@@ -15,14 +15,14 @@
     <menuitem
             id="accountant_risk_assessment_menu"
             name="Risk Assessment"
-            sequence="3"
+            sequence="101"
             parent="accountant_general_audit_menu"
         />
 
     <menuitem
             id="accountant_risk_response_menu"
             name="Risk Response"
-            sequence="4"
+            sequence="102"
             parent="accountant_general_audit_menu"
         />
 

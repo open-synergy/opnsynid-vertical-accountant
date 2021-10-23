@@ -370,7 +370,6 @@
                             >
                             <group name="policy_1" colspan="4" col="2">
                                 <field name="confirm_ok" />
-                                <field name="valid_ok" />
                                 <field name="restart_approval_ok" />
                                 <field name="cancel_ok" />
                                 <field name="restart_ok" />
@@ -381,8 +380,6 @@
                                 <group name="group_log_1" colspan="4" col="3">
                                     <field name="confirm_date" string="Confirmation" />
                                     <field name="confirm_user_id" nolabel="1" />
-                                    <field name="valid_date" string="Validation" />
-                                    <field name="valid_user_id" nolabel="1" />
                                     <field name="cancel_date" string="Cancellation" />
                                     <field name="cancel_user_id" nolabel="1" />
                                 </group>
@@ -403,7 +400,7 @@
     </record>
 
     <record id="accountant_client_trial_balance_action" model="ir.actions.act_window">
-        <field name="name">Trial Balance</field>
+        <field name="name">Trial Balances</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">accountant.client_trial_balance</field>
         <field name="view_type">form</field>
@@ -418,7 +415,7 @@
 
     <menuitem
             id="accountant_client_trial_balance_menu"
-            name="Trial Balance"
+            name="Trial Balances"
             parent="accountant_general_audit_menu"
             action="accountant_client_trial_balance_action"
             sequence="2"

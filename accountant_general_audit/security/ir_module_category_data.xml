@@ -18,5 +18,13 @@
         <field name="name">Accountant General Audit Usability</field>
         <field name="sequence">6</field>
     </record>
+
+    <record
+            id="accountant_adjustment_entry_usability_module_category"
+            model="ir.module.category"
+        >
+        <field name="name">Accountant Adjustment Entry Usability</field>
+        <field name="sequence">6</field>
+    </record>
 </data>
 </openerp>

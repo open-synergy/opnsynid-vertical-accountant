@@ -280,17 +280,6 @@ class AccountantGeneralAudit(models.Model):
         readonly=True,
         copy=False,
     )
-    valid_date = fields.Datetime(
-        string="Validation Date",
-        readonly=True,
-        copy=False,
-    )
-    valid_user_id = fields.Many2one(
-        string="Valid By",
-        comodel_name="res.users",
-        readonly=True,
-        copy=False,
-    )
     cancel_date = fields.Datetime(
         string="Cancel Date",
         readonly=True,
