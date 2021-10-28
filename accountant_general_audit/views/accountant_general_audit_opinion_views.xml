@@ -4,37 +4,33 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <openerp>
 <data>
-    <record
-            id="accountant_trial_balance_computation_item_view_search"
-            model="ir.ui.view"
-        >
-        <field name="name">accountant.trial_balance_computation_item form</field>
-        <field name="model">accountant.trial_balance_computation_item</field>
+
+    <record id="accountant_general_audit_opinion_view_search" model="ir.ui.view">
+        <field name="name">accountant.general_audit_opinion form</field>
+        <field name="model">accountant.general_audit_opinion</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
                 <field name="code" />
-                <field name="description" />
             </search>
         </field>
     </record>
 
-    <record id="accountant_trial_balance_computation_item_view_tree" model="ir.ui.view">
-        <field name="name">accountant.trial_balance_computation_item tree</field>
-        <field name="model">accountant.trial_balance_computation_item</field>
+    <record id="accountant_general_audit_opinion_view_tree" model="ir.ui.view">
+        <field name="name">accountant.general_audit_opinion tree</field>
+        <field name="model">accountant.general_audit_opinion</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="sequence" widget="handle" />
                 <field name="name" />
                 <field name="code" />
-                <field name="category" />
             </tree>
         </field>
     </record>
 
-    <record id="accountant_trial_balance_computation_item_view_form" model="ir.ui.view">
-        <field name="name">accountant.trial_balance_computation_item form</field>
-        <field name="model">accountant.trial_balance_computation_item</field>
+    <record id="accountant_general_audit_opinion_view_form" model="ir.ui.view">
+        <field name="name">accountant.general_audit_opinion form</field>
+        <field name="model">accountant.general_audit_opinion</field>
         <field name="arch" type="xml">
             <form>
                 <header />
@@ -48,13 +44,9 @@
                         <field name="name" />
                         <field name="code" />
                         <field name="sequence" />
-                        <field name="category" />
                         <field name="active" />
                     </group>
                     <notebook>
-                        <page name="python_code" string="Default Python Code">
-                            <field name="python_code" />
-                        </page>
                         <page name="description" string="Description">
                             <field name="description" />
                         </page>
@@ -64,24 +56,22 @@
         </field>
     </record>
 
-    <record
-            id="accountant_trial_balance_computation_item_action"
-            model="ir.actions.act_window"
-        >
-        <field name="name">Trial Balance Computation Items</field>
+    <record id="accountant_general_audit_opinion_action" model="ir.actions.act_window">
+        <field name="name">General Audit Opinions</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">accountant.trial_balance_computation_item</field>
+        <field name="res_model">accountant.general_audit_opinion</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem
-            id="accountant_trial_balance_computation_item_menu"
-            name="Computation Items"
-            parent="accountant_configuration_trial_balance_menu"
-            action="accountant_trial_balance_computation_item_action"
-            sequence="4"
+            id="accountant_general_audit_opinion_menu"
+            name="Opinions"
+            parent="accountant_configuration_general_audit_menu"
+            action="accountant_general_audit_opinion_action"
+            sequence="2"
         />
+
 
 </data>
 </openerp>

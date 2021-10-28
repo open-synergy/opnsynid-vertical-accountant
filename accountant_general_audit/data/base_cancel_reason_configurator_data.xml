@@ -25,5 +25,16 @@
             />
             <field name="method_cancel_name">action_cancel</field>
         </record>
+
+        <record
+            id="cancel_reason_accountant_client_adjustment_entry"
+            model="base.cancel.reason_config"
+        >
+            <field
+                name="name"
+                ref="accountant_general_audit.model_accountant_client_adjustment_entry"
+            />
+            <field name="method_cancel_name">action_cancel</field>
+        </record>
     </data>
 </openerp>

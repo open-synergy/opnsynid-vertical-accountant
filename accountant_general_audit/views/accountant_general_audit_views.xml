@@ -12,10 +12,12 @@
             <search>
                 <field name="name" />
                 <field name="partner_id" />
+                <field name="title" />
                 <field name="date_start" />
                 <field name="date_end" />
                 <field name="account_type_set_id" />
                 <field name="financial_accounting_standard_id" />
+                <field name="opinion_id" />
                 <field name="user_id" />
                 <field name="accountant_id" />
                 <field name="company_id" groups="base.group_multi_company" />
@@ -68,6 +70,11 @@
                             string="Account Type Set"
                             context="{'group_by':'account_type_set_id'}"
                         />
+                        <filter
+                            name="grp_opinion"
+                            string="Opinion"
+                            context="{'group_by':'opinion_id'}"
+                        />
                     <filter
                             name="grp_state"
                             string="State"
@@ -102,11 +109,10 @@
         <field name="name">accountant.general_audit tree</field>
         <field name="model">accountant.general_audit</field>
         <field name="arch" type="xml">
-            <tree
-                    colors="red:date_start and (date_start&lt;current_date) and (state in ('confirm','valid'));blue:state == 'draft';grey:state == 'cancel';"
-                >
+            <tree colors="blue:state == 'draft';grey:state == 'cancel';">
                 <field name="message_unread" invisible="1" />
                 <field name="name" />
+                <field name="title" />
                 <field name="company_id" groups="base.group_multi_company" />
                 <field name="partner_id" />
                 <field name="date_start" />
@@ -115,6 +121,7 @@
                 <field name="financial_accounting_standard_id" />
                 <field name="user_id" />
                 <field name="accountant_id" />
+                <field name="opinion_id" />
                 <field name="state" />
             </tree>
         </field>
@@ -170,7 +177,7 @@
                     <field
                             name="state"
                             widget="statusbar"
-                            statusbar_visible="draft,confirm,done"
+                            statusbar_visible="draft,confirm,valid"
                         />
                 </header>
                 <field name="need_validation" invisible="1" />
@@ -216,7 +223,6 @@
                               <field name="name" class="oe_edit_only" />
                               <field name="display_name" class="oe_read_only" />
                             </h1>
-                            <label for="title" class="oe_edit_only" />
                             <h2 attrs="{'invisible': [('state', '!=', 'cancel')]}">
                                 <label
                                         for="cancel_reason_id"
@@ -224,6 +230,10 @@
                                     />
                                 <field name="cancel_reason_id" class="oe_inline" />
                             </h2>
+                            <label for="title" />
+                            <field name="title" nolabel="1" />
+                            <label for="opinion_id" />
+                            <field name="opinion_id" />
                         </div>
                     </div>
                     <group name="group_1" colspan="4" col="2">
@@ -295,6 +305,20 @@
                                     <field name="trial_balance_id" />
                                 </group>
                             </group>
+                        </page>
+                        <page name="worksheet" string="Worksheets">
+                            <group name="worksheet_1" colspan="4" col="2">
+                                <field name="trial_balance_id" />
+                            </group>
+                            <field name="worksheet_ids">
+                                <tree>
+                                    <field name="display_name" string="# Document" />
+                                    <field name="parent_type_id" />
+                                    <field name="user_id" />
+                                    <field name="conclusion_id" />
+                                    <field name="state" />
+                                </tree>
+                            </field>
                         </page>
                         <page string="Reviews" name="tier_validation">
                             <group name="tier_validation_1" colspan="4" col="2">

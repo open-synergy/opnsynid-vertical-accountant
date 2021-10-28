@@ -3,6 +3,7 @@
      Copyright 2020 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
 <openerp>
+<!-- Trial Balance -->
 <data>
     <record id="seq_type_accountant_client_trial_balance" model="ir.sequence.type">
         <field name="name">Accountant Trial Balance</field>
@@ -21,6 +22,7 @@
     </record>
 </data>
 
+<!-- General Audit -->
 <data>
     <record id="seq_type_accountant_general_audit" model="ir.sequence.type">
         <field name="name">Accountant General Audit</field>
@@ -39,4 +41,22 @@
     </record>
 </data>
 
+<!-- Adjustment Entry -->
+<data>
+    <record id="seq_type_accountant_adjustment_entry" model="ir.sequence.type">
+        <field name="name">Accountant Adjustment Entry</field>
+        <field name="code">AAE</field>
+    </record>
+</data>
+
+<data noupdate="1">
+    <record id="sequence_accountant_adjustment_entry" model="ir.sequence">
+        <field name="name">Accountant Adjustment Entry</field>
+        <field name="code">AAE</field>
+        <field name="padding">4</field>
+        <field name="prefix">AAE/%(year)s/</field>
+        <field eval="1" name="number_next" />
+        <field eval="1" name="number_increment" />
+    </record>
+</data>
 </openerp>

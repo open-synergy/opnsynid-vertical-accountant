@@ -45,8 +45,12 @@
                         <field name="code" />
                         <field name="active" />
                         <field name="sequence" />
-                        <field name="description" />
                     </group>
+                    <notebook>
+                        <page name="description" string="Description">
+                            <field name="description" />
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

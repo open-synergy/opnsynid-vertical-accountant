@@ -15,7 +15,7 @@
                 <field name="general_audit_id" />
                 <field name="account_type_set_id" />
                 <field name="partner_id" />
-                <field name="status_id" />
+                <field name="conclusion_id" />
                 <field name="user_id" />
                 <field name="date_start" />
                 <field name="date_end" />
@@ -70,9 +70,9 @@
                             context="{'group_by':'state'}"
                         />
                     <filter
-                            name="grp_status_id"
+                            name="grp_conclusion_id"
                             string="Status"
-                            context="{'group_by':'status_id'}"
+                            context="{'group_by':'conclusion_id'}"
                         />
                     <filter
                             name="grp_date_start_year"
@@ -133,7 +133,7 @@
                 <field name="date_start" />
                 <field name="date_end" />
                 <field name="account_type_set_id" />
-                <field name="status_id" />
+                <field name="conclusion_id" />
                 <field name="state" />
             </tree>
         </field>
@@ -249,12 +249,8 @@
                     </div>
                     <group name="group_1" colspan="4" col="2">
                         <group name="group_1_1" colspan="1" col="2">
-                            <field name="general_audit_id" required="1" />
-                            <field
-                                    name="general_audit_ids"
-                                    widget="many2many_tags"
-                                    invisible="1"
-                                />
+                            <field name="general_audit_id" />
+                            <field name="type_id" />
                             <field
                                     name="company_id"
                                     groups="base.group_multi_company"
@@ -304,7 +300,7 @@
                                     />
                             </group>
                             <group name="question_2" colspan="4" col="2">
-                                <field name="status_id" />
+                                <field name="conclusion_id" />
                                 <field name="conclusion" />
                             </group>
                         </page>
@@ -330,7 +326,6 @@
                             >
                             <group name="policy_1" colspan="4" col="2">
                                 <field name="confirm_ok" />
-                                <field name="valid_ok" />
                                 <field name="restart_validation_ok" />
                                 <field name="cancel_ok" />
                                 <field name="restart_ok" />
@@ -341,8 +336,6 @@
                                 <group name="group_log_1" colspan="4" col="3">
                                     <field name="confirm_date" string="Confirmation" />
                                     <field name="confirm_user_id" nolabel="1" />
-                                    <field name="valid_date" string="Validation" />
-                                    <field name="valid_user_id" nolabel="1" />
                                     <field name="cancel_date" string="Cancellation" />
                                     <field name="cancel_user_id" nolabel="1" />
                                 </group>

@@ -7,9 +7,12 @@ from openerp import _, api, fields, models
 from openerp.exceptions import Warning as UserError
 
 
-class AccountantClientAdjustmentEntry(models.Model):
-    _name = "accountant.client_adjustment_entry"
-    _description = "Accountant Client Adjustment Entry"
+class AccountantGeneralAuditWorksheetMixin(models.AbstractModel):
+    _name = "accountant.general_audit_worksheet_mixin"
+    _description = "Accountant General Audit Worksheet Mixin"
+    _inherits = {
+        "accountant.general_audit_worksheet": "worksheet_id",
+    }
     _inherit = [
         "mail.thread",
         "tier.validation",
@@ -19,151 +22,85 @@ class AccountantClientAdjustmentEntry(models.Model):
     ]
     _state_from = ["draft", "confirm"]
     _state_to = ["valid"]
+    _type_xml_id = False
 
     @api.multi
-    @api.depends(
-        "account_type_set_id",
-    )
-    def _compute_policy(self):
-        _super = super(AccountantClientAdjustmentEntry, self)
-        _super._compute_policy()
+    def _compute_type_id(self):
+        for record in self:
+            if self.worksheet_id:
+                worksheet = self.worksheet_id
+                record.type_id = worksheet.type_id
 
-    name = fields.Char(
-        string="# Document",
-        default="/",
-        required=True,
-        copy=False,
+    worksheet_id = fields.Many2one(
+        string="# Worksheet",
+        comodel_name="accountant.general_audit_worksheet",
         readonly=True,
+    )
+    type_id = fields.Many2one(
+        string="Type",
+        comodel_name="accountant.general_audit_worksheet_type",
+        default=lambda self: self._default_type_id(),
+        readonly=True,
+        required=True,
         states={
             "draft": [
                 ("readonly", False),
             ],
         },
     )
-    general_audit_id = fields.Many2one(
-        string="# General Audit",
-        comodel_name="accountant.general_audit",
-        required=True,
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
+    allowed_conclusion_ids = fields.Many2many(
+        string="Allowed Conculsion",
+        comodel_name="accountant.general_audit_worksheet_conclusion",
+        compute="_compute_allowed_conclusion_ids",
+        store=False,
     )
-    company_id = fields.Many2one(
-        string="Company",
-        comodel_name="res.company",
-        related="general_audit_id.company_id",
-        store=True,
-        readonly=True,
-    )
-    partner_id = fields.Many2one(
-        string="Partner",
-        comodel_name="res.partner",
-        related="general_audit_id.partner_id",
-        store=True,
-        readonly=True,
-    )
+    # Fields related from general audit
     date_start = fields.Date(
         string="Start Date",
-        related="general_audit_id.date_start",
-        store=True,
         readonly=True,
     )
     date_end = fields.Date(
         string="End Date",
-        related="general_audit_id.date_end",
-        store=True,
         readonly=True,
     )
     interim_date_start = fields.Date(
         string="Interim Start Date",
-        related="general_audit_id.interim_date_start",
-        store=True,
         readonly=True,
     )
     interim_date_end = fields.Date(
         string="Interim End Date",
-        related="general_audit_id.interim_date_end",
-        store=True,
         readonly=True,
     )
     previous_date_start = fields.Date(
         string="Previous Start Date",
-        related="general_audit_id.previous_date_start",
-        store=True,
         readonly=True,
     )
     previous_date_end = fields.Date(
         string="Previous End Date",
-        related="general_audit_id.previous_date_end",
-        store=True,
-        readonly=True,
-    )
-    currency_id = fields.Many2one(
-        string="Currency",
-        comodel_name="res.currency",
-        related="general_audit_id.currency_id",
-        store=True,
         readonly=True,
     )
     account_type_set_id = fields.Many2one(
         string="Accoount Type Set",
-        related="general_audit_id.account_type_set_id",
-        store=True,
+        comodel_name="accountant.client_account_type_set",
         readonly=True,
     )
-    adjustment_type = fields.Selection(
-        string="Adjustment Type",
-        selection=[
-            ("propose", "Proposed Adjustment"),
-            ("client", "Client Adjustment"),
-        ],
-        required=True,
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    detail_ids = fields.One2many(
-        string="Details",
-        comodel_name="accountant.client_adjustment_entry_detail",
-        inverse_name="entry_id",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    state = fields.Selection(
-        string="State",
-        selection=[
-            ("draft", "Draft"),
-            ("confirm", "Waiting for Approval"),
-            ("valid", "Valid"),
-            ("reject", "Rejected"),
-            ("cancel", "Cancelled"),
-        ],
-        copy=False,
-        default="draft",
-        required=True,
+    company_id = fields.Many2one(
+        string="Company",
+        comodel_name="res.company",
         readonly=True,
     )
-    # Policy Fields
+    partner_id = fields.Many2one(
+        string="Partner",
+        related="general_audit_id.partner_id",
+    )
+
+    # policy fields
     confirm_ok = fields.Boolean(
         string="Can Confirm",
         compute="_compute_policy",
     )
-    restart_approval_ok = fields.Boolean(
-        string="Can Restart Approval",
-        compute="_compute_policy",
-    )
-    reject_ok = fields.Boolean(
-        string="Can Reject",
+    restart_validation_ok = fields.Boolean(
+        string="Can Restart Validation",
         compute="_compute_policy",
     )
     cancel_ok = fields.Boolean(
@@ -174,7 +111,8 @@ class AccountantClientAdjustmentEntry(models.Model):
         string="Can Restart",
         compute="_compute_policy",
     )
-    # Log Fields
+
+    # log fields
     confirm_date = fields.Datetime(
         string="Confirmation Date",
         readonly=True,
@@ -182,17 +120,6 @@ class AccountantClientAdjustmentEntry(models.Model):
     )
     confirm_user_id = fields.Many2one(
         string="Confirmed By",
-        comodel_name="res.users",
-        readonly=True,
-        copy=False,
-    )
-    reject_date = fields.Datetime(
-        string="Rejection Date",
-        readonly=True,
-        copy=False,
-    )
-    reject_user_id = fields.Many2one(
-        string="Rejected By",
         comodel_name="res.users",
         readonly=True,
         copy=False,
@@ -208,6 +135,44 @@ class AccountantClientAdjustmentEntry(models.Model):
         readonly=True,
         copy=False,
     )
+
+    @api.model
+    def _default_type_id(self):
+        result = False
+        if self._type_xml_id:
+            result = self.env.ref(self._type_xml_id)
+        return result
+
+    @api.multi
+    @api.depends(
+        "general_audit_id",
+    )
+    def _compute_policy(self):
+        _super = super(AccountantGeneralAuditWorksheetMixin, self)
+        _super._compute_policy()
+
+    @api.multi
+    @api.depends(
+        "type_id",
+    )
+    def _compute_allowed_conclusion_ids(self):
+        obj_conslusion = self.env["accountant.general_audit_worksheet_conclusion"]
+        for record in self:
+            result = []
+            if record.type_id:
+                criteria = [
+                    ("type_id", "=", record.type_id.id),
+                ]
+                result = obj_conslusion.search(criteria).ids
+            record.allowed_conclusion_ids = result
+
+    @api.onchange("type_id")
+    def onchange_parent_type_id(self):
+        self.parent_type_id = self.type_id
+
+    @api.onchange("type_id")
+    def onchange_conclusion_id(self):
+        self.conslusion_id = False
 
     @api.multi
     def action_confirm(self):
@@ -274,16 +239,16 @@ class AccountantClientAdjustmentEntry(models.Model):
 
     @api.multi
     def unlink(self):
-        strWarning1 = _("You can only delete data on draft state")
-        strWarning2 = _("You can only delete data without document number")
-        force_unlink = self.env.context.get("force_unlink", False)
+        strWarning = _("You can only delete data on draft state")
+        worksheets = self.env["accountant.general_audit_worksheet"]
         for record in self:
-            if record.state != "draft" and not force_unlink:
-                raise UserError(strWarning1)
-            if record.name != "/" and not force_unlink:
-                raise UserError(strWarning2)
-        _super = super(AccountantClientAdjustmentEntry, self)
+            if record.state != "draft":
+                if not self.env.context.get("force_unlink", False):
+                    raise UserError(strWarning)
+            worksheets += record.worksheet_id
+        _super = super(AccountantGeneralAuditWorksheetMixin, self)
         _super.unlink()
+        worksheets.unlink()
 
     @api.multi
     def name_get(self):
@@ -298,7 +263,7 @@ class AccountantClientAdjustmentEntry(models.Model):
 
     @api.multi
     def validate_tier(self):
-        _super = super(AccountantClientAdjustmentEntry, self)
+        _super = super(AccountantGeneralAuditWorksheetMixin, self)
         _super.validate_tier()
         for record in self:
             if record.validated:
@@ -306,22 +271,7 @@ class AccountantClientAdjustmentEntry(models.Model):
 
     @api.multi
     def restart_validation(self):
-        _super = super(AccountantClientAdjustmentEntry, self)
+        _super = super(AccountantGeneralAuditWorksheetMixin, self)
         _super.restart_validation()
         for record in self:
             record.request_validation()
-
-    @api.constrains(
-        "state",
-    )
-    def constrains_credit_debit(self):
-        for record in self:
-            if record.state not in ["draft", "cancel"]:
-                total_debit = 0.0
-                total_credit = 0.0
-                for line in self.detail_ids:
-                    total_debit = total_debit + line.debit
-                    total_credit = total_credit + line.credit
-                if total_debit != total_credit:
-                    msg = _("Total Credit and Total Debit must balance")
-                    raise UserError(msg)

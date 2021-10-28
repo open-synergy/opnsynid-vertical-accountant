@@ -57,12 +57,16 @@
                         <page string="Sequence" name="sequence">
                             <group name="sequence_1" colspan="4" col="2">
                                 <field
+                                        name="accountant_general_audit_sequence_id"
+                                        string="General Audit"
+                                    />
+                                <field
                                         name="trial_balance_sequence_id"
                                         string="Trial Balance"
                                     />
                                 <field
-                                        name="accountant_general_audit_sequence_id"
-                                        string="General Audit"
+                                        name="adjustment_entry_sequence_id"
+                                        string="Adjustment Entry"
                                     />
                             </group>
                         </page>

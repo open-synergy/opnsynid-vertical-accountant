@@ -152,6 +152,18 @@ class AccountantClientTrialBalance(models.Model):
         store=True,
         readonly=True,
     )
+    # specific fields
+    user_id = fields.Many2one(
+        string="Responsible",
+        comodel_name="res.users",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
 
     @api.multi
     @api.depends(
@@ -176,6 +188,12 @@ class AccountantClientTrialBalance(models.Model):
         comodel_name="accountant.client_trial_balance_detail",
         inverse_name="trial_balance_id",
         copy=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
     )
     standard_detail_ids = fields.One2many(
         string="Standard Detail",
@@ -348,11 +366,14 @@ class AccountantClientTrialBalance(models.Model):
 
     @api.multi
     def unlink(self):
-        strWarning = _("You can only delete data on draft state")
+        strWarning1 = _("You can only delete data on draft state")
+        strWarning2 = _("You can only delete data without document number")
+        force_unlink = self.env.context.get("force_unlink", False)
         for record in self:
-            if record.state != "draft":
-                if not self.env.context.get("force_unlink", False):
-                    raise UserError(strWarning)
+            if record.state != "draft" and not force_unlink:
+                raise UserError(strWarning1)
+            if record.name != "/" and not force_unlink:
+                raise UserError(strWarning2)
         _super = super(AccountantClientTrialBalance, self)
         _super.unlink()
 

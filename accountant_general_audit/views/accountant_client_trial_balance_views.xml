@@ -16,6 +16,7 @@
                 <field name="date_start" />
                 <field name="date_end" />
                 <field name="account_type_set_id" />
+                <field name="user_id" />
                 <field name="company_id" groups="base.group_multi_company" />
                 <group name="dom_state" string="State">
                     <filter
@@ -66,6 +67,11 @@
                             string="Partner"
                             context="{'group_by':'partner_id'}"
                         />
+                        <filter
+                            name="grp_responsible"
+                            string="Responsible"
+                            context="{'group_by':'user_id'}"
+                        />
                     <filter
                             name="grp_account_type_set"
                             string="Account Type Set"
@@ -105,9 +111,7 @@
         <field name="name">accountant.client_trial_balance tree</field>
         <field name="model">accountant.client_trial_balance</field>
         <field name="arch" type="xml">
-            <tree
-                    colors="red:date_start and (date_start&lt;current_date) and (state in ('confirm','valid'));blue:state == 'draft';grey:state == 'cancel';"
-                >
+            <tree colors="blue:state == 'draft';grey:state == 'cancel';">
                 <field name="name" />
                 <field name="general_audit_id" />
                 <field name="company_id" groups="base.group_multi_company" />
@@ -115,6 +119,7 @@
                 <field name="date_start" />
                 <field name="date_end" />
                 <field name="account_type_set_id" />
+                <field name="user_id" />
                 <field name="state" />
             </tree>
         </field>
@@ -172,7 +177,7 @@
                     <field
                             name="state"
                             widget="statusbar"
-                            statusbar_visible="draft,confirm,done"
+                            statusbar_visible="draft,confirm,valid"
                         />
                 </header>
                 <field name="need_validation" invisible="1" />
@@ -251,6 +256,7 @@
                                     invisible="1"
                                 />
                             <field name="currency_id" />
+                            <field name="user_id" />
                         </group>
                         <group name="group_1_2">
                             <field name="date_start" />
