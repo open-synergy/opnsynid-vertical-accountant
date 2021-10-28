@@ -49,6 +49,11 @@ class AccountantClientAccountTypeSet(models.Model):
         comodel_name="ir.sequence",
         company_dependent=True,
     )
+    adjustment_entry_sequence_id = fields.Many2one(
+        string="Adjustment Entry Sequence",
+        comodel_name="ir.sequence",
+        company_dependent=True,
+    )
     accountant_type_set_confirm_grp_ids = fields.Many2many(
         string="Allow To Confirm Account Type Set",
         comodel_name="res.groups",

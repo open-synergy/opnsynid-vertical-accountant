@@ -48,9 +48,16 @@
         />
 
     <menuitem
+            id="accountant_configuration_worksheet_menu"
+            name="Worksheet"
+            sequence="102"
+            parent="accountant_configuration_general_audit_menu"
+        />
+
+    <menuitem
             id="accountant_configuration_index_status_menu"
             name="Index Status"
-            sequence="102"
+            sequence="103"
             parent="accountant_configuration_general_audit_menu"
         />
 

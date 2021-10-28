@@ -13,4 +13,5 @@ class TierDefinition(models.Model):
         res = super(TierDefinition, self)._get_tier_validation_model_names()
         res.append("accountant.client_trial_balance")
         res.append("accountant.general_audit")
+        res.append("accountant.client_adjustment_entry")
         return res

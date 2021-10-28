@@ -59,6 +59,18 @@ class AccountantGeneralAudit(models.Model):
             ],
         },
     )
+    title = fields.Char(
+        string="Title",
+        default="-",
+        required=True,
+        copy=False,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     company_id = fields.Many2one(
         string="Company",
         comodel_name="res.company",
@@ -181,6 +193,16 @@ class AccountantGeneralAudit(models.Model):
             ],
         },
     )
+    opinion_id = fields.Many2one(
+        string="Opinion",
+        comodel_name="accountant.general_audit_opinion",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     user_id = fields.Many2one(
         string="Responsible",
         comodel_name="res.users",
@@ -222,6 +244,12 @@ class AccountantGeneralAudit(models.Model):
                 ("readonly", False),
             ],
         },
+    )
+    worksheet_ids = fields.One2many(
+        string="Worksheets",
+        comodel_name="accountant.general_audit_worksheet",
+        inverse_name="general_audit_id",
+        readonly=True,
     )
     state = fields.Selection(
         string="State",
@@ -357,11 +385,14 @@ class AccountantGeneralAudit(models.Model):
 
     @api.multi
     def unlink(self):
-        strWarning = _("You can only delete data on draft state")
+        strWarning1 = _("You can only delete data on draft state")
+        strWarning2 = _("You can only delete data without document number")
+        force_unlink = self.env.context.get("force_unlink", False)
         for record in self:
-            if record.state != "draft":
-                if not self.env.context.get("force_unlink", False):
-                    raise UserError(strWarning)
+            if record.state != "draft" and not force_unlink:
+                raise UserError(strWarning1)
+            if record.name != "/" and not force_unlink:
+                raise UserError(strWarning2)
         _super = super(AccountantGeneralAudit, self)
         _super.unlink()
 

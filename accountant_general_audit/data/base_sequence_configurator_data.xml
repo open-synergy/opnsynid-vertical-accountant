@@ -58,5 +58,31 @@
             >result = document.account_type_set_id.accountant_general_audit_sequence_id</field>
     </record>
 
+    <!-- Adjustment Entry -->
+    <record id="sequence_config_adjustment_entry" model="base.sequence_configurator">
+        <field
+                name="model_id"
+                ref="accountant_general_audit.model_accountant_client_adjustment_entry"
+            />
+        <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.client_adjustment_entry'),('name','=','name')]"
+            />
+        <field
+                name="fallback_sequence_id"
+                ref="accountant_general_audit.sequence_accountant_adjustment_entry"
+            />
+    </record>
+
+    <record
+            id="sequence_config_line_adjustment_entry"
+            model="base.sequence_configurator_line"
+        >
+        <field name="generator_id" ref="sequence_config_adjustment_entry" />
+        <field name="sequence" eval="1" />
+        <field
+                name="sequence_computation_code"
+            >result = document.account_type_set_id.adjustment_entry_sequence_id</field>
+    </record>
 </data>
 </openerp>
