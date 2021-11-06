@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+<data>
+    <record id="accountant_general_audit_view_form" model="ir.ui.view">
+        <field name="name">accountant.general_audit form</field>
+        <field name="model">accountant.general_audit</field>
+        <field
+                name="inherit_id"
+                ref="accountant_general_audit.accountant_general_audit_view_form"
+            />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//group[@name='link1']" position="inside">
+                    <field
+                            name="index_a2305_ids"
+                            invisible="1"
+                            widget="many2many_tags"
+                        />
+                    <field name="index_a2305_id" />
+                </xpath>
+            </data>
+        </field>
+    </record>
+</data>
+</openerp>
