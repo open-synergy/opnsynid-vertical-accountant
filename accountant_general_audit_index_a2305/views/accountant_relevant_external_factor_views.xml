@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+<data>
+
+    <record id="accountant_relevant_external_factor_view_search" model="ir.ui.view">
+        <field name="name">accountant.relevant_external_factor form</field>
+        <field name="model">accountant.relevant_external_factor</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="code" />
+                <field name="sequence" />
+                <field name="effective_date" />
+                <field name="category_id" />
+                <field name="active" />
+                <field name="description" />
+            </search>
+        </field>
+    </record>
+
+    <record id="accountant_relevant_external_factor_view_tree" model="ir.ui.view">
+        <field name="name">accountant.relevant_external_factor tree</field>
+        <field name="model">accountant.relevant_external_factor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="code" />
+                <field name="active" />
+                <field name="effective_date" />
+                <field name="category_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="accountant_relevant_external_factor_view_form" model="ir.ui.view">
+        <field name="name">accountant.relevant_external_factor form</field>
+        <field name="model">accountant.relevant_external_factor</field>
+        <field name="arch" type="xml">
+            <form>
+                <header />
+                <sheet>
+                    <div
+                            class="oe_right oe_button_box"
+                            style="width: 300px;"
+                            name="buttons"
+                        />
+                    <group name="group_1" colspan="4" col="2">
+                        <group name="group_1_1" colspan="1" col="2">
+                            <field name="name" />
+                            <field name="code" />
+                            <field name="active" />
+                            <field name="sequence" />
+                        </group>
+                        <group name="group_1_2" colspan="1" col="2">
+                            <field name="effective_date" />
+                            <field name="category_id" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="description" string="Description">
+                            <field name="description" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record
+            id="accountant_relevant_external_factor_action"
+            model="ir.actions.act_window"
+        >
+        <field name="name">External Factor</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.relevant_external_factor</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="accountant_relevant_external_factor_menu"
+            name="External Factor"
+            parent="accountant_general_audit.accountant_configuration_general_audit_menu"
+            action="accountant_relevant_external_factor_action"
+            sequence="301"
+        />
+
+
+</data>
+</openerp>
