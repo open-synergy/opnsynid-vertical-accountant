@@ -6,7 +6,7 @@
 
 {
     "name": "General Audit Index A.110.1",
-    "version": "8.0.1.2.0",
+    "version": "8.0.2.0.0",
     "author": "PT. Simetri Sinergi Indonesia, OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
@@ -22,11 +22,8 @@
         "data/base_sequence_configurator_data.xml",
         "data/base_workflow_policy_data.xml",
         "data/accountant_general_audit_worksheet_type_data.xml",
-        "data/accountant_general_audit_index_a1101_status_data.xml",
         "views/accountant_client_account_type_set_views.xml",
         "views/accountant_general_audit_index_a1101_views.xml",
-        # "views/accountant_general_audit_views.xml",
-        "views/accountant_general_audit_index_a1101_status_views.xml",
     ],
     "installable": True,
 }
