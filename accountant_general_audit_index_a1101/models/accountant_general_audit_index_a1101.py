@@ -16,6 +16,43 @@ class AccountantGeneralAuditIndexA1101(models.Model):
 
     type_id = fields.Many2one(
         related="worksheet_id.parent_type_id",
+        store=True,
+    )
+    date_start = fields.Date(
+        related="general_audit_id.date_start",
+        store=True,
+    )
+    date_end = fields.Date(
+        related="general_audit_id.date_end",
+        store=True,
+    )
+    interim_date_start = fields.Date(
+        related="general_audit_id.interim_date_start",
+        store=True,
+    )
+    interim_date_end = fields.Date(
+        related="general_audit_id.interim_date_end",
+        store=True,
+    )
+    previous_date_start = fields.Date(
+        related="general_audit_id.previous_date_start",
+        store=True,
+    )
+    previous_date_end = fields.Date(
+        related="general_audit_id.previous_date_end",
+        store=True,
+    )
+    account_type_set_id = fields.Many2one(
+        related="general_audit_id.account_type_set_id",
+        store=True,
+    )
+    company_id = fields.Many2one(
+        related="general_audit_id.company_id",
+        store=True,
+    )
+    partner_id = fields.Many2one(
+        related="general_audit_id.partner_id",
+        store=True,
     )
     question_1a = fields.Selection(
         string="Question 1a",

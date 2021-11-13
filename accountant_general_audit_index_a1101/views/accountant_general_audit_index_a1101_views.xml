@@ -250,7 +250,8 @@
                     <group name="group_1" colspan="4" col="2">
                         <group name="group_1_1" colspan="1" col="2">
                             <field name="general_audit_id" />
-                            <field name="type_id" />
+                            <field name="type_id" invisible="1" />
+                            <field name="parent_type_id" invisible="1" />
                             <field
                                     name="company_id"
                                     groups="base.group_multi_company"
@@ -300,7 +301,15 @@
                                     />
                             </group>
                             <group name="question_2" colspan="4" col="2">
-                                <field name="conclusion_id" />
+                                <field
+                                        name="allowed_conclusion_ids"
+                                        widget="many2many_tags"
+                                        invisible="1"
+                                    />
+                                <field
+                                        name="conclusion_id"
+                                        domain="[('id','in',allowed_conclusion_ids[0][2])]"
+                                    />
                                 <field name="conclusion" />
                             </group>
                         </page>
