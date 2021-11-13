@@ -15,8 +15,6 @@
             <search>
                 <field name="name" />
                 <field name="code" />
-                <field name="sequence" />
-                <field name="active" />
             </search>
         </field>
     </record>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2020 OpenSynergy Indonesia
+     Copyright 2020 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<openerp>
+<data>
+    <record id="worksheet_type_a2305" model="accountant.general_audit_worksheet_type">
+        <field name="code">A.2305</field>
+        <field name="name">Pemahaman lingkungan bisnis</field>
+        <field name="sequence" eval="2305" />
+        <field
+                name="model_id"
+                search="[('model','=','accountant.general_audit_index_a2305')]"
+            />
+    </record>
+</data>
+
+</openerp>

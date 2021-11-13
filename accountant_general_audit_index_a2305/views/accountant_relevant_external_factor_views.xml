@@ -12,10 +12,8 @@
             <search>
                 <field name="name" />
                 <field name="code" />
-                <field name="sequence" />
                 <field name="effective_date" />
                 <field name="category_id" />
-                <field name="active" />
                 <field name="description" />
             </search>
         </field>

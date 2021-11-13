@@ -15,12 +15,11 @@
                 <field name="general_audit_id" />
                 <field name="account_type_set_id" />
                 <field name="partner_id" />
-                <field name="status_id" />
+                <field name="conclusion_id" />
                 <field name="user_id" />
                 <field name="date_start" />
                 <field name="date_end" />
                 <field name="company_id" groups="base.group_multi_company" />
-                <field name="currency_id" groups="base.group_multi_currency" />
                 <group name="dom_state" string="State">
                     <filter
                             name="dom_draft"
@@ -71,9 +70,9 @@
                             context="{'group_by':'state'}"
                         />
                     <filter
-                            name="grp_status_id"
+                            name="grp_conclusion_id"
                             string="Status"
-                            context="{'group_by':'status_id'}"
+                            context="{'group_by':'conclusion_id'}"
                         />
                     <filter
                             name="grp_date_start_year"
@@ -134,8 +133,7 @@
                 <field name="date_start" />
                 <field name="date_end" />
                 <field name="account_type_set_id" />
-                <field name="currency_id" groups="base.group_multi_currency" />
-                <field name="status_id" />
+                <field name="conclusion_id" />
                 <field name="state" />
             </tree>
         </field>
@@ -191,7 +189,7 @@
                     <field
                             name="state"
                             widget="statusbar"
-                            statusbar_visible="draft,confirm,done"
+                            statusbar_visible="draft,confirm,valid"
                         />
                 </header>
                 <field name="need_validation" invisible="1" />
@@ -251,13 +249,9 @@
                     </div>
                     <group name="group_1" colspan="4" col="2">
                         <group name="group_1_1" colspan="1" col="2">
-                            <field name="general_audit_id" required="1" />
-                            <field
-                                    name="general_audit_ids"
-                                    widget="many2many_tags"
-                                    invisible="1"
-                                />
-
+                            <field name="general_audit_id" />
+                            <field name="type_id" invisible="1" />
+                            <field name="parent_type_id" invisible="1" />
                             <field
                                     name="company_id"
                                     groups="base.group_multi_company"
@@ -267,11 +261,6 @@
                                     domain="[('parent_id','=',False)]"
                                 />
                             <field name="account_type_set_id" />
-                            <field
-                                    name="currency_id"
-                                    groups="base.group_multi_currency"
-                                />
-
                             <field name="user_id" />
                         </group>
                         <group name="group_1_2" colspan="1" col="2">
@@ -303,7 +292,10 @@
                                         <field name="external_factor_id" />
                                         <field name="category_id" />
                                         <field name="impact" />
-                                        <field name="account_type_ids" />
+                                        <field
+                                                name="account_type_ids"
+                                                widget="many2many_tags"
+                                            />
                                     </group>
                                 </form>
                             </field>
@@ -330,7 +322,6 @@
                             >
                             <group name="policy_1" colspan="4" col="2">
                                 <field name="confirm_ok" />
-                                <field name="valid_ok" />
                                 <field name="restart_validation_ok" />
                                 <field name="cancel_ok" />
                                 <field name="restart_ok" />
@@ -341,14 +332,24 @@
                                 <group name="group_log_1" colspan="4" col="3">
                                     <field name="confirm_date" string="Confirmation" />
                                     <field name="confirm_user_id" nolabel="1" />
-                                    <field name="valid_date" string="Validation" />
-                                    <field name="valid_user_id" nolabel="1" />
                                     <field name="cancel_date" string="Cancellation" />
                                     <field name="cancel_user_id" nolabel="1" />
                                 </group>
                             </group>
                         </page>
                     </notebook>
+                    <group name="footer1" string="Conclusion" colspan="4" col="2">
+                        <field
+                                name="allowed_conclusion_ids"
+                                widget="many2many_tags"
+                                invisible="1"
+                            />
+                        <field
+                                name="conclusion_id"
+                                domain="[('id','in',allowed_conclusion_ids[0][2])]"
+                            />
+                        <field name="conclusion" string="Additional Explanation" />
+                    </group>
                 </sheet>
                 <div class="oe_chatter">
                     <field
