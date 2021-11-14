@@ -9,6 +9,7 @@ from openerp import fields, models
 class AccountantGeneralAuditWorksheet(models.Model):
     _name = "accountant.general_audit_worksheet"
     _description = "Accountant General Audit Worksheet"
+    _order = "general_audit_id, parent_type_id, id"
 
     name = fields.Char(
         string="# Document",

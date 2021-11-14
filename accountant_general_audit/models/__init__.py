@@ -15,6 +15,7 @@ from . import (
     accountant_client_account_type_computation_item,
     accountant_trial_balance_computation_item,
     accountant_financial_accounting_standard,
+    accountant_general_audit_worksheet_type_category,
     accountant_general_audit_worksheet_type,
     accountant_general_audit_worksheet_consulsion,
     accountant_general_audit_worksheet,
