@@ -245,6 +245,41 @@ class AccountantGeneralAudit(models.Model):
             ],
         },
     )
+    restatement_option = fields.Selection(
+        string="Restatement Option",
+        selection=[
+            ("no", "Not a restatement"),
+            ("internal", "Restated audit exist in Odoo"),
+            ("external", "Restated audit does not exist in Odoo"),
+        ],
+        required=True,
+        default="no",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    previous_audit_id = fields.Many2one(
+        string="Previous # Audit",
+        comodel_name="accountant.general_audit",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    previous_audit = fields.Char(
+        string="Previous Audit",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     worksheet_ids = fields.One2many(
         string="Worksheets",
         comodel_name="accountant.general_audit_worksheet",

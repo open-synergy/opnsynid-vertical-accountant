@@ -265,6 +265,16 @@
                             <field name="previous_date_end" />
                             <field name="interim_date_start" />
                             <field name="interim_date_end" />
+                            <field name="restatement_option" />
+                            <field
+                                    name="previous_audit_id"
+                                    attrs="{'invisible':[('restatement_option','!=','internal')],'required':[('restatement_option','=','internal')]}"
+                                    domain="[('id','!=',id),('partner_id','=',partner_id),('state','=','valid')]"
+                                />
+                            <field
+                                    name="previous_audit"
+                                    attrs="{'invisible':[('restatement_option','!=','external')],'required':[('restatement_option','=','external')]}"
+                                />
                         </group>
                     </group>
                     <notebook colspan="4">
