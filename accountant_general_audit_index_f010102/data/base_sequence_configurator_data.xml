@@ -4,30 +4,30 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <openerp>
 <data>
-    <record id="seuence_config_index_a1102" model="base.sequence_configurator">
+    <record id="seuence_config_index_f010102" model="base.sequence_configurator">
         <field
                 name="model_id"
-                ref="accountant_general_audit_index_a1102.model_accountant_general_audit_index_a1102"
+                ref="accountant_general_audit_index_f010102.model_accountant_general_audit_index_f010102"
             />
         <field
                 name="sequence_field_id"
-                search="[('model_id.model','=','accountant.general_audit_index_a1102'),('name','=','name')]"
+                search="[('model_id.model','=','accountant.general_audit_index_f010102'),('name','=','name')]"
             />
         <field
                 name="fallback_sequence_id"
-                ref="accountant_general_audit_index_a1102.base_sequence_accountant_general_audit_index_a1102"
+                ref="accountant_general_audit_index_f010102.base_sequence_accountant_general_audit_index_f010102"
             />
     </record>
 
     <record
-            id="seuence_config_line_index_a1102"
+            id="seuence_config_line_index_f010102"
             model="base.sequence_configurator_line"
         >
-        <field name="generator_id" ref="seuence_config_index_a1102" />
+        <field name="generator_id" ref="seuence_config_index_f010102" />
         <field name="sequence" eval="1" />
         <field
                 name="sequence_computation_code"
-            >result = document.account_type_set_id.accountant_general_audit_index_a1102_sequence_id</field>
+            >result = document.account_type_set_id.index_f010102_sequence_id</field>
     </record>
 
 </data>

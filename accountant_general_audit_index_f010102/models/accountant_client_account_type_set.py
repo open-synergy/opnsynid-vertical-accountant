@@ -9,8 +9,8 @@ from openerp import fields, models
 class AccountantClientAccountTypeSet(models.Model):
     _inherit = "accountant.client_account_type_set"
 
-    index_a1102_sequence_id = fields.Many2one(
-        string="Index 1102 Sequence",
+    index_f010102_sequence_id = fields.Many2one(
+        string="Index F.01.01.02 Sequence",
         comodel_name="ir.sequence",
         company_dependent=True,
     )

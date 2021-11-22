@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-======================================
-Accountant General Audit Index A.110.2
-======================================
+=========================================
+Accountant General Audit Index F.01.01.02
+=========================================
 
 
 Installation
@@ -16,7 +16,7 @@ To install this module, you need to:
 2.  Add the path to this repository in your configuration (addons-path)
 3.  Update the module list
 4.  Go to menu *Setting -> Modules -> Local Modules*
-5.  Search For *Accountant General Audit Index A.110.2*
+5.  Search For *Accountant General Audit Index F.01.01.02*
 6.  Install the module
 
 Bug Tracker
