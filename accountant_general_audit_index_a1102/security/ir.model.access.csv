@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-accountant_general_audit_index_a1102_employee,accountant_general_audit_index_a1102 - user,model_accountant_general_audit_index_a1102,base.group_user,1,1,1,1
-accountant_general_audit_index_a1102_all,accountant_general_audit_index_a1102 - all,model_accountant_general_audit_index_a1102,,1,0,0,0
-accountant_general_audit_index_a1102_status_employee,accountant_general_audit_index_a1102_status - user,model_accountant_general_audit_index_a1102_status,base.group_user,1,1,1,1
-accountant_general_audit_index_a1102_status_all,accountant_general_audit_index_a1102_status - all,model_accountant_general_audit_index_a1102_status,,1,0,0,0

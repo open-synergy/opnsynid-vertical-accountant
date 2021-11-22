@@ -11,5 +11,5 @@ class TierDefinition(models.Model):
     @api.model
     def _get_tier_validation_model_names(self):
         res = super(TierDefinition, self)._get_tier_validation_model_names()
-        res.append("accountant.general_audit_index_a1102")
+        res.append("accountant.general_audit_index_f010102")
         return res

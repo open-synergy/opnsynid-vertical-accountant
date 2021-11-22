@@ -5,143 +5,142 @@
 <openerp>
 <data>
 
-    <record id="accountant_general_audit_index_a1102_view_search" model="ir.ui.view">
-        <field name="name">accountant.general_audit_index_a1102 form</field>
-        <field name="model">accountant.general_audit_index_a1102</field>
+    <record id="accountant_general_audit_index_f010102_view_search" model="ir.ui.view">
+        <field name="name">accountant.general_audit_index_f010102 form</field>
+        <field name="model">accountant.general_audit_index_f010102</field>
         <field name="arch" type="xml">
-            <search>
-                <field name="id" />
-                <field name="name" />
-                <field name="general_audit_id" />
-                <field name="account_type_set_id" />
-                <field name="partner_id" />
-                <field name="status_id" />
-                <field name="user_id" />
-                <field name="date_start" />
-                <field name="date_end" />
-                <field name="company_id" groups="base.group_multi_company" />
-                <group name="dom_state" string="State">
-                    <filter
+          <search>
+              <field name="id" />
+              <field name="name" />
+              <field name="general_audit_id" />
+              <field name="account_type_set_id" />
+              <field name="partner_id" />
+              <field name="conclusion_id" />
+              <field name="user_id" />
+              <field name="date_start" />
+              <field name="date_end" />
+              <field name="company_id" groups="base.group_multi_company" />
+              <group name="dom_state" string="State">
+                  <filter
                             name="dom_draft"
                             string="Draft"
                             domain="[('state','=','draft')]"
                         />
-                    <filter
+                  <filter
                             name="dom_confirm"
                             string="Waiting for Approval"
                             domain="[('state','=','confirm')]"
                         />
-                    <filter
+                  <filter
                             name="dom_valid"
                             string="Valid"
                             domain="[('state','=','valid')]"
                         />
-                    <filter
+                  <filter
                             name="dom_cancel"
                             string="Cancel"
                             domain="[('state','=','cancel')]"
                         />
-                    <filter
+                  <filter
                             name="needs_review"
                             string="Needs my Review"
                             domain="
-                                    [
-                                    ('reviewer_ids','in',uid),
-                                    ('state', 'not in', ['won', 'cancel', 'lost'])
-                                    ]"
+                                  [
+                                  ('reviewer_ids','in',uid),
+                                  ('state', 'not in', ['won', 'cancel', 'lost'])
+                                  ]"
                         />
-                </group>
-                <separator />
-                <group name="group" string="Group By">
-                    <filter
+              </group>
+              <separator />
+              <group name="group" string="Group By">
+                  <filter
                             name="grp_company"
                             string="Company"
                             context="{'group_by':'company_id'}"
                             groups="base.group_multi_company"
                         />
-                    <filter
+                  <filter
                             name="grp_partner"
                             string="Partner"
                             context="{'group_by':'partner_id'}"
                         />
-                    <filter
+                  <filter
                             name="grp_state"
                             string="State"
                             context="{'group_by':'state'}"
                         />
-                    <filter
-                            name="grp_status_id"
+                  <filter
+                            name="grp_conclusion_id"
                             string="Status"
-                            context="{'group_by':'status_id'}"
+                            context="{'group_by':'conclusion_id'}"
                         />
-                    <filter
+                  <filter
                             name="grp_date_start_year"
                             string="Date Start by Year"
                             context="{'group_by':'date_start:year'}"
                         />
-                    <filter
+                  <filter
                             name="grp_date_start_month"
                             string="Date Start by Month"
                             context="{'group_by':'date_start:month'}"
                         />
-                    <filter
+                  <filter
                             name="grp_date_start_week"
                             string="Date Start by Week"
                             context="{'group_by':'date_start:week'}"
                         />
-                    <filter
+                  <filter
                             name="grp_date_start_day"
                             string="Date Start by Day"
                             context="{'group_by':'date_start:day'}"
                         />
-                    <filter
+                  <filter
                             name="grp_date_end_year"
                             string="Date End by Year"
                             context="{'group_by':'date_end:year'}"
                         />
-                    <filter
+                  <filter
                             name="grp_date_end_month"
                             string="Date End by Month"
                             context="{'group_by':'date_end:month'}"
                         />
-                    <filter
+                  <filter
                             name="grp_date_end_week"
                             string="Date End by Week"
                             context="{'group_by':'date_end:week'}"
                         />
-                    <filter
+                  <filter
                             name="grp_date_end_day"
                             string="Date End by Day"
                             context="{'group_by':'date_end:day'}"
                         />
-                </group>
-            </search>
-        </field>
+              </group>
+          </search>        </field>
     </record>
 
-    <record id="accountant_general_audit_index_a1102_view_tree" model="ir.ui.view">
-        <field name="name">accountant.general_audit_index_a1102 tree</field>
-        <field name="model">accountant.general_audit_index_a1102</field>
+    <record id="accountant_general_audit_index_f010102_view_tree" model="ir.ui.view">
+        <field name="name">accountant.general_audit_index_f010102 tree</field>
+        <field name="model">accountant.general_audit_index_f010102</field>
         <field name="arch" type="xml">
-            <tree
+          <tree
                     colors="red:(state in ('confirm','valid'));blue:state == 'draft';grey:state == 'cancel';"
                 >
-                <field name="company_id" groups="base.group_multi_company" />
-                <field name="display_name" string="# Document" />
-                <field name="general_audit_id" />
-                <field name="partner_id" />
-                <field name="date_start" />
-                <field name="date_end" />
-                <field name="account_type_set_id" />
-                <field name="status_id" />
-                <field name="state" />
-            </tree>
+              <field name="company_id" groups="base.group_multi_company" />
+              <field name="display_name" string="# Document" />
+              <field name="general_audit_id" />
+              <field name="partner_id" />
+              <field name="date_start" />
+              <field name="date_end" />
+              <field name="account_type_set_id" />
+              <field name="conclusion_id" />
+              <field name="state" />
+          </tree>
         </field>
     </record>
 
-    <record id="accountant_general_audit_index_a1102_view_form" model="ir.ui.view">
-        <field name="name">accountant.general_audit_index_a1102 form</field>
-        <field name="model">accountant.general_audit_index_a1102</field>
+    <record id="accountant_general_audit_index_f010102_view_form" model="ir.ui.view">
+        <field name="name">accountant.general_audit_index_f010102 form</field>
+        <field name="model">accountant.general_audit_index_f010102</field>
         <field name="arch" type="xml">
             <form>
                 <header>
@@ -204,7 +203,7 @@
                     >
                     <p><i
                                 class="fa fa-info-circle"
-                            />This General Audit Index A1101 needs to be
+                            />This General Audit Index F.01.01.02 needs to be
                         validated.
                         <button
                                 name="validate_tier"
@@ -249,12 +248,9 @@
                     </div>
                     <group name="group_1" colspan="4" col="2">
                         <group name="group_1_1" colspan="1" col="2">
-                            <field name="general_audit_id" required="1" />
-                            <field
-                                    name="general_audit_ids"
-                                    widget="many2many_tags"
-                                    invisible="1"
-                                />
+                            <field name="general_audit_id" />
+                            <field name="type_id" invisible="1" />
+                            <field name="parent_type_id" invisible="1" />
                             <field
                                     name="company_id"
                                     groups="base.group_multi_company"
@@ -315,10 +311,6 @@
                                         string="Apakah terdapat alasan yang tidak wajar atas penunjukkan dan penggantian KAP sebelumnya?"
                                     />
                             </group>
-                            <group name="question_2" colspan="4" col="2">
-                                <field name="status_id" />
-                                <field name="conclusion" />
-                            </group>
                         </page>
                         <page string="Reviews" name="tier_validation">
                             <group name="tier_validation_1" colspan="4" col="2">
@@ -342,7 +334,6 @@
                             >
                             <group name="policy_1" colspan="4" col="2">
                                 <field name="confirm_ok" />
-                                <field name="valid_ok" />
                                 <field name="restart_validation_ok" />
                                 <field name="cancel_ok" />
                                 <field name="restart_ok" />
@@ -353,14 +344,24 @@
                                 <group name="group_log_1" colspan="4" col="3">
                                     <field name="confirm_date" string="Confirmation" />
                                     <field name="confirm_user_id" nolabel="1" />
-                                    <field name="valid_date" string="Validation" />
-                                    <field name="valid_user_id" nolabel="1" />
                                     <field name="cancel_date" string="Cancellation" />
                                     <field name="cancel_user_id" nolabel="1" />
                                 </group>
                             </group>
                         </page>
                     </notebook>
+                    <group name="footer1" string="Conclusion" colspan="4" col="2">
+                        <field
+                                name="allowed_conclusion_ids"
+                                widget="many2many_tags"
+                                invisible="1"
+                            />
+                        <field
+                                name="conclusion_id"
+                                domain="[('id','in',allowed_conclusion_ids[0][2])]"
+                            />
+                        <field name="conclusion" string="Additional Explanation" />
+                    </group>
                 </sheet>
                 <div class="oe_chatter">
                     <field
@@ -375,12 +376,12 @@
     </record>
 
     <record
-            id="accountant_general_audit_index_a1102_action"
+            id="accountant_general_audit_index_f010102_action"
             model="ir.actions.act_window"
         >
-        <field name="name">General Audit Index A.110.2</field>
+        <field name="name">General Audit Index F.01.01.02</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">accountant.general_audit_index_a1102</field>
+        <field name="res_model">accountant.general_audit_index_f010102</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="context">{
@@ -392,11 +393,11 @@
     </record>
 
     <menuitem
-            id="accountant_general_audit_index_a1102_menu"
-            name="Index A.110.2"
+            id="accountant_general_audit_index_f010102_menu"
+            name="Index F.01.01.02"
             parent="accountant_general_audit.accountant_risk_assessment_menu"
-            action="accountant_general_audit_index_a1102_action"
-            sequence="1102"
+            action="accountant_general_audit_index_f010102_action"
+            sequence="112"
         />
 
 

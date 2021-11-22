@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+accountant_general_audit_index_f010102_employee,accountant_general_audit_index_f010102 - user,model_accountant_general_audit_index_f010102,base.group_user,1,1,1,1
+accountant_general_audit_index_f010102_all,accountant_general_audit_index_f010102 - all,model_accountant_general_audit_index_f010102,,1,0,0,0

@@ -13,7 +13,7 @@
                     expr="//field[@name='accountant_general_audit_sequence_id']"
                     position="after"
                 >
-                <field name="index_a1102_sequence_id" />
+                <field name="index_f010102_sequence_id" />
             </xpath>
         </field>
     </record>
