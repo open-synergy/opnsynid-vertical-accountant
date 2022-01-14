@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# Copyright 2021 OpenSynergy Indonesia
-# Copyright 2021 PT. Simetri Sinergi Indonesia
+# Copyright 2022 OpenSynergy Indonesia
+# Copyright 2022 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from openerp import _, api, fields, models
@@ -25,27 +25,57 @@ class AccountantReportStakeholderReport(models.AbstractModel):
         default="/",
         required=True,
         copy=False,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
     )
 
     user_id = fields.Many2one(
         string="User",
         comodel_name="res.users",
         required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
     )
 
     date_start = fields.Date(
         string="Start Date",
         required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
     )
     date_end = fields.Date(
         string="End Date",
         required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
     )
 
     type_id = fields.Many2one(
         string="Type",
         comodel_name="accountant.report_stakeholder_report_type",
         required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
     )
 
     accountant_report_ids = fields.Many2many(
@@ -67,6 +97,11 @@ class AccountantReportStakeholderReport(models.AbstractModel):
         copy=False,
         default="draft",
         required=True,
+    )
+
+    confirm_ok = fields.Boolean(
+        string="Can Confirmed",
+        compute="_compute_policy",
     )
 
     valid_ok = fields.Boolean(
@@ -95,6 +130,15 @@ class AccountantReportStakeholderReport(models.AbstractModel):
     )
     confirm_user_id = fields.Many2one(
         string="Confirmed By",
+        comodel_name="res.users",
+    )
+
+    valid_date = fields.Datetime(
+        string="Validation Date",
+        readonly=True,
+    )
+    valid_user_id = fields.Many2one(
+        string="Valid By",
         comodel_name="res.users",
     )
 
@@ -129,6 +173,11 @@ class AccountantReportStakeholderReport(models.AbstractModel):
             record.write(record._prepare_restart_data())
 
     @api.multi
+    def _compute_policy(self):
+        _super = super(AccountantReportStakeholderReport, self)
+        _super._compute_policy()
+
+    @api.multi
     def _prepare_confirm_data(self):
         self.ensure_one()
         return {
@@ -144,6 +193,8 @@ class AccountantReportStakeholderReport(models.AbstractModel):
         return {
             "state": "valid",
             "name": sequence,
+            "valid_date": fields.Datetime.now(),
+            "valid_user_id": self.env.user.id,
         }
 
     @api.multi
@@ -162,6 +213,8 @@ class AccountantReportStakeholderReport(models.AbstractModel):
             "state": "draft",
             "confirm_date": False,
             "confirm_user_id": False,
+            "valid_date": False,
+            "valid_user_id": False,
             "cancel_date": False,
             "cancel_user_id": False,
         }
@@ -201,3 +254,11 @@ class AccountantReportStakeholderReport(models.AbstractModel):
                 name = record.name
             result.append((record.id, name))
         return result
+
+    @api.constrains("date_start", "date_end")
+    def _check_date_start_end(self):
+        for record in self:
+            if record.date_start and record.date_end:
+                strWarning = _("Start Date cannot be greater than End Date")
+                if record.date_start < record.date_end:
+                    raise UserError(strWarning)

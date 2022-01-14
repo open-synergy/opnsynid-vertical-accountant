@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# Copyright 2021 OpenSynergy Indonesia
-# Copyright 2021 PT. Simetri Sinergi Indonesia
+# Copyright 2022 OpenSynergy Indonesia
+# Copyright 2022 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from openerp import fields, models
@@ -35,7 +35,15 @@ class AccountantReportStakeholderReportType(models.Model):
     confirm_grp_ids = fields.Many2many(
         string="Allowed To Confirm",
         comodel_name="res.groups",
-        relation="rel_stakeholder_report_confirm_group",
+        relation="rel_stakeholder_report_type_confirm_group",
+        column1="type_id",
+        column2="group_id",
+    )
+
+    valid_grp_ids = fields.Many2many(
+        string="Allowed To Validate",
+        comodel_name="res.groups",
+        relation="rel_stakeholder_report_type_valid_group",
         column1="type_id",
         column2="group_id",
     )
@@ -43,7 +51,7 @@ class AccountantReportStakeholderReportType(models.Model):
     cancel_grp_ids = fields.Many2many(
         string="Allowed To Cancel",
         comodel_name="res.groups",
-        relation="rel_stakeholder_report_cancel_group",
+        relation="rel_stakeholder_report_type_cancel_group",
         column1="type_id",
         column2="group_id",
     )
@@ -51,7 +59,7 @@ class AccountantReportStakeholderReportType(models.Model):
     restart_grp_ids = fields.Many2many(
         string="Allowed To Restart",
         comodel_name="res.groups",
-        relation="rel_stakeholder_report_restart_group",
+        relation="rel_stakeholder_report_type_restart_group",
         column1="type_id",
         column2="group_id",
     )
@@ -59,7 +67,7 @@ class AccountantReportStakeholderReportType(models.Model):
     restart_validation_grp_ids = fields.Many2many(
         string="Allowed To Restart Validation",
         comodel_name="res.groups",
-        relation="rel_stakeholder_report_restart_validation_group",
+        relation="rel_stakeholder_report_type_restart_validation_group",
         column1="type_id",
         column2="group_id",
     )
