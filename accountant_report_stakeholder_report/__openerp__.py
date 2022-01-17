@@ -11,6 +11,10 @@
     "license": "AGPL-3",
     "depends": [
         "accountant_report",
+        "base_sequence_configurator",
+        "base_multiple_approval",
+        "base_workflow_policy",
+        "base_cancel_reason",
     ],
     "data": [
         "security/ir.model.access.csv",
