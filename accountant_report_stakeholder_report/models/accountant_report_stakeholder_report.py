@@ -7,7 +7,7 @@ from openerp import _, api, fields, models
 from openerp.exceptions import Warning as UserError
 
 
-class AccountantReportStakeholderReport(models.AbstractModel):
+class AccountantReportStakeholderReport(models.Model):
     _name = "accountant.report_stakeholder_report"
     _description = "Accounting Report Stakeholder Report"
     _inherit = [
