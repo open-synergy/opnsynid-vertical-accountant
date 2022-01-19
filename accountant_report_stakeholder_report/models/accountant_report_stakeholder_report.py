@@ -172,6 +172,9 @@ class AccountantReportStakeholderReport(models.Model):
         for record in self:
             record.write(record._prepare_restart_data())
 
+    @api.depends(
+        "type_id",
+    )
     @api.multi
     def _compute_policy(self):
         _super = super(AccountantReportStakeholderReport, self)
@@ -221,11 +224,15 @@ class AccountantReportStakeholderReport(models.Model):
 
     @api.multi
     def unlink(self):
-        strWarning = _("You can only delete data on draft state")
-        for record in self:
-            if record.state != "draft":
+        strWarning1 = _("You can only delete data on draft state")
+        strWarning2 = _("You can not delete data with document number")
+        for document in self:
+            if document.state != "draft":
                 if not self.env.context.get("force_unlink", False):
-                    raise UserError(strWarning)
+                    raise UserError(strWarning1)
+            if document.name != "/":
+                if not self.env.context.get("force_unlink", False):
+                    raise UserError(strWarning2)
         _super = super(AccountantReportStakeholderReport, self)
         _super.unlink()
 

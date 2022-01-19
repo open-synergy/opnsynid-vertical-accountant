@@ -9,7 +9,6 @@ from openerp import fields, models
 class AccountantReportStakeholderReportType(models.Model):
     _name = "accountant.report_stakeholder_report_type"
     _description = "Accounting Report Stakeholder Report Type"
-    _order = "id, name"
 
     name = fields.Char(
         string="Name",
@@ -36,14 +35,6 @@ class AccountantReportStakeholderReportType(models.Model):
         string="Allowed To Confirm",
         comodel_name="res.groups",
         relation="rel_stakeholder_report_type_confirm_group",
-        column1="type_id",
-        column2="group_id",
-    )
-
-    valid_grp_ids = fields.Many2many(
-        string="Allowed To Validate",
-        comodel_name="res.groups",
-        relation="rel_stakeholder_report_type_valid_group",
         column1="type_id",
         column2="group_id",
     )
