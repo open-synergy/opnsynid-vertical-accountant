@@ -131,6 +131,18 @@
                                     />
                                 </group>
                             </page>
+                            <page string="Reviews" name="tier_validation">
+                                <group name="tier_validation_1" colspan="4" col="2">
+                                    <field name="definition_id" />
+                                    <field
+                                        name="reviewer_partner_ids"
+                                        widget="many2many_tags"
+                                    />
+                                </group>
+                                <group name="tier_validation_2" colspan="4" col="2">
+                                    <field name="review_ids" readonly="1" />
+                                </group>
+                            </page>
                             <page
                                 name="page_policy"
                                 string="Policy"
@@ -250,16 +262,6 @@
                 ref="accountant_report_stakeholder_report_view_search"
             />
     </record>
-
-
-    <menuitem
-            id="accountant_report_stakeholder_report_menu"
-            name="Stakeholder Report Form"
-            sequence="1"
-            parent="stakeholder_report_menu"
-            action="accountant_report_stakeholder_report_action"
-        />
-
 
     </data>
 </openerp>
