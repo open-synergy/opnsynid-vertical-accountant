@@ -99,6 +99,7 @@ class AccountantReportStakeholderReport(models.Model):
         required=True,
     )
 
+    # Policy Fields
     confirm_ok = fields.Boolean(
         string="Can Confirmed",
         compute="_compute_policy",
@@ -124,6 +125,7 @@ class AccountantReportStakeholderReport(models.Model):
         compute="_compute_policy",
     )
 
+    # Log Fields
     confirm_date = fields.Datetime(
         string="Confirmation Date",
         readonly=True,

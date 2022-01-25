@@ -20,6 +20,7 @@
         "security/ir.model.access.csv",
         "menu.xml",
         "views/accountant_report_stakeholder_report_type_views.xml",
+        "views/accountant_report_stakeholder_report_views.xml",
     ],
     "installable": True,
 }

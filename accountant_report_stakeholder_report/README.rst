@@ -36,6 +36,7 @@ Contributors
 ------------
 
 * Andhitia Rama <andhitia.r@gmail.com>
+* Michael Viriyananda <viriyananda.michael@gmail.com>
 * Asrul Bastian Yunas <asrulbastianyunas@gmail.com>
 
 Maintainer
