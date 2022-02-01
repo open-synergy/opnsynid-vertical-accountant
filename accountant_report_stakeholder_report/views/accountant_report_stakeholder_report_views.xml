@@ -15,6 +15,7 @@
                             type="object"
                             string="Confirm"
                             class="oe_highlight"
+                            confirm="Confirm Data. Are you sure?"
                             attrs="{'invisible': ['|',('state','!=','draft'),('confirm_ok','=',False)]}"
                         />
                         <button
@@ -23,30 +24,35 @@
                             attrs="{'invisible': ['|','|',('need_validation', '!=', True),('rejected','=',True),('state','not in',['confirm'])]}"
                             class="oe_highlight"
                             type="object"
+                            confirm="Request Validation. Are you sure?"
                         />
                         <button
                             name="restart_validation"
                             string="Restart Validation"
                             attrs="{'invisible': ['|','|','|',('review_ids', '=', []),('rejected','=',False),('state','not in',['confirm']),('restart_approval_ok','=',False)]}"
                             type="object"
+                            confirm="Restart Validation. Are you sure?"
                         />
                         <button
                             name="action_valid"
                             type="object"
                             string="Valid"
                             class="oe_highlight"
+                            confirm="Valid Data. Are you sure?"
                             attrs="{'invisible':['|',('state','!=','confirm'),('valid_ok','=',False)]}"
                         />
                         <button
                             name="action_cancel"
                             type="object"
                             string="Cancel"
+                            confirm="Cancel Data. Are you sure?"
                             attrs="{'invisible':['|',('state','!=','valid'),('cancel_ok','=',False)]}"
                         />
                         <button
                             name="action_restart"
                             type="object"
                             string="Restart"
+                            confirm="Restart Data. Are you sure?"
                             attrs="{'invisible':['|',('state','!=','cancel'),('restart_ok','=',False)]}"
                         />
                         <field
@@ -73,6 +79,7 @@
                                 type="object"
                                 class="oe_inline oe_button btn-success"
                                 icon="terp-check"
+                                confirm="Validate Data. Are you sure?"
                             />
                             <button
                                 name="reject_tier"
@@ -80,6 +87,7 @@
                                 type="object"
                                 class="btn-icon btn-danger"
                                 icon="terp-gtk-stop"
+                                confirm="Reject Data. Are you sure?"
                             />
                         </p>
                     </div>
@@ -108,9 +116,10 @@
                         </div>
                         <div name="header" class="oe_left" style="width: 500px;">
                             <div name="header_1" class="oe_title" style="width: 500px;">
-                                <label for="name" />
+                                <label for="name" class="oe_edit_only" />
                                 <h1>
-                                    <field name="name" />
+                                    <field name="name" class="oe_edit_only" />
+                                    <field name="display_name" class="oe_read_only" />
                                 </h1>
                             </div>
                         </div>
@@ -157,6 +166,14 @@
                             </page>
                         </notebook>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field
+                            name="message_follower_ids"
+                            widget="mail_followers"
+                            groups="base.group_user"
+                        />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
                 </form>
             </field>
         </record>
@@ -167,6 +184,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="id" />
+                    <field name="display_name" />
                     <field name="name" />
                     <field name="user_id" />
                     <field name="date_start" />
@@ -263,5 +281,12 @@
             />
     </record>
 
+    <menuitem
+            id="accountant_report_stakeholder_report_menu"
+            name="Stakeholder Report Form"
+            sequence="1"
+            parent="stakeholder_report_menu"
+            action="accountant_report_stakeholder_report_action"
+        />
     </data>
 </openerp>
