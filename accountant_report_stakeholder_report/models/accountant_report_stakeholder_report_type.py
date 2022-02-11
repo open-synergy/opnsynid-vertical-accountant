@@ -26,10 +26,7 @@ class AccountantReportStakeholderReportType(models.Model):
         ondelete="restrict",
     )
 
-    domain = fields.Text(
-        string="Domain",
-        required=True,
-    )
+    domain = fields.Text(string="Domain", required=True, default="[]")
 
     confirm_grp_ids = fields.Many2many(
         string="Allowed To Confirm",

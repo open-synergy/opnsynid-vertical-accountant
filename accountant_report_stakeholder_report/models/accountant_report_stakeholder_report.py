@@ -66,9 +66,14 @@ class AccountantReportStakeholderReport(models.Model):
         },
     )
 
+    @api.model
+    def _default_type_id(self):
+        return False
+
     type_id = fields.Many2one(
         string="Type",
         comodel_name="accountant.report_stakeholder_report_type",
+        default=lambda self: self._default_type_id(),
         required=True,
         readonly=True,
         states={
@@ -105,11 +110,6 @@ class AccountantReportStakeholderReport(models.Model):
         compute="_compute_policy",
     )
 
-    valid_ok = fields.Boolean(
-        string="Can Valid",
-        compute="_compute_policy",
-    )
-
     cancel_ok = fields.Boolean(
         string="Can Cancel",
         compute="_compute_policy",
@@ -134,16 +134,6 @@ class AccountantReportStakeholderReport(models.Model):
         string="Confirmed By",
         comodel_name="res.users",
     )
-
-    valid_date = fields.Datetime(
-        string="Validation Date",
-        readonly=True,
-    )
-    valid_user_id = fields.Many2one(
-        string="Valid By",
-        comodel_name="res.users",
-    )
-
     cancel_date = fields.Datetime(
         string="Cancel Date",
         readonly=True,
@@ -198,8 +188,6 @@ class AccountantReportStakeholderReport(models.Model):
         return {
             "state": "valid",
             "name": sequence,
-            "valid_date": fields.Datetime.now(),
-            "valid_user_id": self.env.user.id,
         }
 
     @api.multi
@@ -269,5 +257,5 @@ class AccountantReportStakeholderReport(models.Model):
         for record in self:
             if record.date_start and record.date_end:
                 strWarning = _("Start Date cannot be greater than End Date")
-                if record.date_start < record.date_end:
+                if record.date_start >= record.date_end:
                     raise UserError(strWarning)
