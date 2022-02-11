@@ -29,17 +29,9 @@
                         <button
                             name="restart_validation"
                             string="Restart Validation"
-                            attrs="{'invisible': ['|','|','|',('review_ids', '=', []),('rejected','=',False),('state','not in',['confirm']),('restart_approval_ok','=',False)]}"
+                            attrs="{'invisible': ['|','|','|',('review_ids', '=', []),('rejected','=',False),('state','not in',['confirm']),('restart_validation_ok','=',False)]}"
                             type="object"
                             confirm="Restart Validation. Are you sure?"
-                        />
-                        <button
-                            name="action_valid"
-                            type="object"
-                            string="Valid"
-                            class="oe_highlight"
-                            confirm="Valid Data. Are you sure?"
-                            attrs="{'invisible':['|',('state','!=','confirm'),('valid_ok','=',False)]}"
                         />
                         <button
                             name="action_cancel"
@@ -126,7 +118,7 @@
                         <group name="stakeholder" colspan="4" col="2">
                             <group name="stakeholder_1" colspan="1" col="2">
                                 <field name="user_id" />
-                                <field name="type_id" />
+                                <field name="type_id" invisible="1" />
                                 <field name="date_start" />
                                 <field name="date_end" />
                             </group>
@@ -136,7 +128,8 @@
                                 <group name="accountant_1" colspan="4" col="2">
                                     <field
                                         name="accountant_report_ids"
-                                        widget="many2many_tags"
+                                        nolabel="1"
+                                        colspan="2"
                                     />
                                 </group>
                             </page>
@@ -158,7 +151,7 @@
                                 groups="base.group_system"
                             >
                                 <group name="group_policy_1" colspan="4" col="2">
-                                    <field name="valid_ok" />
+                                    <field name="confirm_ok" />
                                     <field name="cancel_ok" />
                                     <field name="restart_ok" />
                                     <field name="restart_validation_ok" />
@@ -280,13 +273,5 @@
                 ref="accountant_report_stakeholder_report_view_search"
             />
     </record>
-
-    <menuitem
-            id="accountant_report_stakeholder_report_menu"
-            name="Stakeholder Report Form"
-            sequence="1"
-            parent="stakeholder_report_menu"
-            action="accountant_report_stakeholder_report_action"
-        />
     </data>
 </openerp>
