@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<openerp>
+<data>
+    <record id="tier_def_01" model="tier.definition">
+        <field name="name">Stakeholder Report OJK - (test)</field>
+        <field
+                name="model_id"
+                search="[('model','=','accountant.report_stakeholder_report_ojk')]"
+            />
+        <field name="python_code">True</field>
+        <field name="validate_sequence" eval="1" />
+    </record>
+
+    <record id="tier_def_review_01" model="tier.definition.review">
+        <field
+                name="definition_id"
+                ref="l10n_id_accountant_report_stakeholder_report_ojk.tier_def_01"
+            />
+        <field name="review_type">group</field>
+        <field name="reviewer_group_ids" eval="[(6,0,[ref('base.group_user')])]" />
+    </record>
+</data>
+</openerp>
