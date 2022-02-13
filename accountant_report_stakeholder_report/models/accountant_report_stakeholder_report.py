@@ -89,6 +89,13 @@ class AccountantReportStakeholderReport(models.Model):
         relation="rel_stakeholder_report_2_accountant_report",
         column1="stakeholder_report_id",
         column2="accountant_report_id",
+        copy=False,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
     )
 
     state = fields.Selection(
