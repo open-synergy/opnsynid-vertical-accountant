@@ -50,7 +50,7 @@
                         <field
                             name="state"
                             widget="statusbar"
-                            statusbar_visible="draft,confirm,valid,cancel"
+                            statusbar_visible="draft,confirm,valid"
                         />
                     </header>
                     <field name="need_validation" invisible="1" />
@@ -177,12 +177,11 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="id" />
-                    <field name="display_name" />
-                    <field name="name" />
+                    <field name="display_name" string="# Document" />
                     <field name="user_id" />
                     <field name="date_start" />
                     <field name="date_end" />
-                    <field name="type_id" />
+                    <field name="type_id" invisible="1" />
                     <field name="state" />
                 </tree>
             </field>
@@ -200,7 +199,6 @@
                     <field name="user_id" />
                     <field name="date_start" />
                     <field name="date_end" />
-                    <field name="type_id" />
                     <field name="state" />
                     <group name="group_state" string="State">
                         <filter
@@ -231,26 +229,6 @@
                             context="{'group_by':'user_id'}"
                         />
                         <filter
-                            name="grp_date_year"
-                            string="Date by Year"
-                            context="{'group_by':'date:year'}"
-                        />
-                        <filter
-                            name="grp_date_month"
-                            string="Date by Month"
-                            context="{'group_by':'date:month'}"
-                        />
-                        <filter
-                            name="grp_date_day"
-                            string="Date by Day"
-                            context="{'group_by':'date:day'}"
-                        />
-                        <filter
-                            name="grp_type"
-                            string="Type"
-                            context="{'group_by':'type_id'}"
-                        />
-                        <filter
                             name="grp_state"
                             string="State"
                             context="{'group_by':'state'}"
@@ -259,19 +237,5 @@
                 </search>
             </field>
         </record>
-
-    <record
-            id="accountant_report_stakeholder_report_action"
-            model="ir.actions.act_window"
-        >
-        <field name="name">Stakeholder Report</field>
-        <field name="res_model">accountant.report_stakeholder_report</field>
-        <field name="view_type">form</field>
-        <field name="view_mode">tree,form</field>
-        <field
-                name="search_view_id"
-                ref="accountant_report_stakeholder_report_view_search"
-            />
-    </record>
     </data>
 </openerp>
