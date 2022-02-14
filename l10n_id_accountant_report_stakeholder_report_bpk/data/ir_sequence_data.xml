@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<openerp>
+<data noupdate="1">
+    <record id="sequence_accountant_report_stakeholder_report_bpk" model="ir.sequence">
+        <field name="name">General Sequence: Accountant Report Stakeholder BPK</field>
+        <field name="padding">6</field>
+        <field name="prefix">STH-BPK/%(y)s/</field>
+        <field eval="1" name="number_increment" />
+    </record>
+</data>
+</openerp>
