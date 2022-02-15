@@ -113,6 +113,13 @@
                                     <field name="name" class="oe_edit_only" />
                                     <field name="display_name" class="oe_read_only" />
                                 </h1>
+                                <h2 attrs="{'invisible': [('state', '!=', 'cancel')]}">
+                                    <label
+                                                for="cancel_reason_id"
+                                                string="Cancellation reason:"
+                                            />
+                                    <field name="cancel_reason_id" class="oe_inline" />
+                                </h2>
                             </div>
                         </div>
                         <group name="stakeholder" colspan="4" col="2">
