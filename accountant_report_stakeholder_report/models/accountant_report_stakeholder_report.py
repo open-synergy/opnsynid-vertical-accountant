@@ -264,5 +264,5 @@ class AccountantReportStakeholderReport(models.Model):
         for record in self:
             if record.date_start and record.date_end:
                 strWarning = _("Start Date cannot be greater than End Date")
-                if record.date_start >= record.date_end:
+                if record.date_start > record.date_end:
                     raise UserError(strWarning)
