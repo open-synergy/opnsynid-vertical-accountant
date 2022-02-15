@@ -34,11 +34,11 @@
                             confirm="Restart Validation. Are you sure?"
                         />
                         <button
-                            name="action_cancel"
-                            type="object"
+                            name="%(base_cancel_reason.base_cancel_reason_wizard_action)d"
+                            type="action"
                             string="Cancel"
-                            confirm="Cancel Data. Are you sure?"
-                            attrs="{'invisible':['|',('state','!=','valid'),('cancel_ok','=',False)]}"
+                            attrs="{'invisible':['|',('state','=','cancel'),('cancel_ok','=',False)]}"
+                            confirm="Cancel data. Are you sure?"
                         />
                         <button
                             name="action_restart"
