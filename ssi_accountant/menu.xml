@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<menuitem
+        id="menu_root_accountant"
+        name="Accountant"
+        web_icon="ssi_accountant,static/description/icon.png"
+    />
+
+<menuitem
+        id="menu_accountant_report"
+        name="Report"
+        parent="menu_root_accountant"
+        sequence="98"
+    />
+
+<menuitem
+        id="menu_accountant_configuration"
+        name="Configuration"
+        parent="menu_root_accountant"
+        sequence="99"
+    />
+</odoo>
