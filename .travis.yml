@@ -6,6 +6,7 @@ cache:
 
 python:
   - "3.6"
+  - "2.7"
 
 addons:
   postgresql: "9.6"
