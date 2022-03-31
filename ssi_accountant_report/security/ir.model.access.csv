@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+accountant_report_opinion,accountant.report_opinion - All,model_accountant_report_opinion,,1,1,1,1
+accountant_report_method,accountant.report_method - All,model_accountant_report_method,,1,1,1,1
+accountant_report,accountant.report - All,model_accountant_report,,1,1,1,1

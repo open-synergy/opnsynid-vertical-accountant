@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <data noupdate="1">
+        <record id="sequence_accountant_report" model="ir.sequence">
+            <field name="name">Accountant Report</field>
+            <field name="code">accountant.report</field>
+            <field name="padding">5</field>
+            <field name="prefix">REP/%(year)s/</field>
+            <field eval="1" name="number_next" />
+            <field eval="1" name="number_increment" />
+        </record>
+    </data>
+</odoo>
