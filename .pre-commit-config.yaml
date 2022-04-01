@@ -46,10 +46,9 @@ repos:
           - --remove-duplicate-keys
           - --remove-unused-variables
   - repo: https://github.com/psf/black
-    rev: 22.1.0
+    rev: 22.3.0
     hooks:
       - id: black
-        additional_dependencies: ["click==8.0.4"]
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v2.1.2
     hooks:
