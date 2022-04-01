@@ -11,6 +11,7 @@
     "license": "LGPL-3",
     "installable": True,
     "depends": [
+        "mail",
         "ssi_accountant",
         "ssi_policy_mixin",
         "ssi_sequence_mixin",
