@@ -3,27 +3,25 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html).
 
 from odoo import api, fields, models
-from odoo.exceptions import Warning as UserError
-from odoo.tools.translate import _
 
 
 class AccountantReport(models.Model):
     _name = "accountant.report"
     _description = "Accountant Report"
     _inherit = [
-        "mixin.policy",
-        "mixin.sequence",
-        "mail.thread",
+        "mixin.transaction_confirm",
+        "mixin.transaction_open",
+        "mixin.transaction_done",
+        "mixin.transaction_cancel",
     ]
     _order = "date desc, id"
-
-    @api.model
-    def _default_name(self):
-        return "/"
-
-    @api.model
-    def _default_company_id(self):
-        return self.env.user.company_id.id
+    _approval_from_state = "draft"
+    _approval_to_state = "valid"
+    _approval_state = "confirm"
+    _after_approved_method = "action_open"
+    _create_sequence_state = "valid"
+    _open_state = "valid"
+    _done_state = "finalize"
 
     @api.depends(
         "service_id",
@@ -48,41 +46,20 @@ class AccountantReport(models.Model):
         res = super(AccountantReport, self)._get_policy_field()
         policy_field = [
             "confirm_ok",
-            "finalize_ok",
-            "valid_ok",
+            "approve_ok",
+            "open_ok",
+            "done_ok",
             "cancel_ok",
+            "reject_ok",
             "restart_ok",
+            "manual_number_ok",
         ]
         res += policy_field
         return res
 
     name = fields.Char(
         string="# Report",
-        required=True,
-        translate=False,
-        default=lambda self: self._default_name(),
-        readonly=True,
-        copy=False,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
     )
-    company_id = fields.Many2one(
-        string="Company",
-        comodel_name="res.company",
-        required=True,
-        translate=False,
-        default=lambda self: self._default_company_id(),
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-
     partner_id = fields.Many2one(
         string="Customer",
         required=True,
@@ -148,90 +125,9 @@ class AccountantReport(models.Model):
             ],
         },
     )
-    information_based = fields.Selection(
-        string="Information Based On",
-        selection=[
-            ("yearly", "Yearly Financial Report"),
-            ("interim", "Interim Financial Report"),
-        ],
-        default="yearly",
-    )
     restatement_id = fields.Many2one(
         string="Restatement Report",
         comodel_name="accountant.report",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    report_currency_id = fields.Many2one(
-        string="Client Currency",
-        comodel_name="res.currency",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    revenue = fields.Float(
-        string="Revenue",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    ebit = fields.Float(
-        string="EBIT",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    tax_expense = fields.Float(
-        string="Tax Expense",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    total_asset = fields.Float(
-        string="Total Asset",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    total_liability = fields.Float(
-        string="Total Liability",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    total_net_profit = fields.Float(
-        string="Total Net Profit",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    total_net_profit_oci = fields.Float(
-        string="Total Net Profit & OCI",
         readonly=True,
         states={
             "draft": [
@@ -253,7 +149,7 @@ class AccountantReport(models.Model):
     assurance = fields.Boolean(
         string="Assurance",
     )
-    report_opinion_id = fields.Many2one(
+    opinion_id = fields.Many2one(
         string="Opinion",
         required=False,
         translate=False,
@@ -277,10 +173,6 @@ class AccountantReport(models.Model):
             ],
         },
     )
-    note = fields.Text(
-        string="Note",
-    )
-
     allowed_opinion_ids = fields.Many2many(
         string="Allowed Opinion",
         comodel_name="accountant.report_opinion",
@@ -301,8 +193,9 @@ class AccountantReport(models.Model):
         selection=[
             ("draft", "Draft"),
             ("confirm", "Waiting for Approval"),
-            ("finalize", "Finalization"),
             ("valid", "Valid"),
+            ("finalize", "Finalization"),
+            ("reject", "Rejected"),
             ("cancel", "Cancel"),
         ],
         default="draft",
@@ -314,128 +207,21 @@ class AccountantReport(models.Model):
         _super._compute_policy()
 
     # Policy Field
-    confirm_ok = fields.Boolean(
-        string="Can Confirm",
-        compute="_compute_policy",
-        readonly=True,
-    )
-    finalize_ok = fields.Boolean(
+    done_ok = fields.Boolean(
         string="Can Finalization",
-        compute="_compute_policy",
-        readonly=True,
     )
-    valid_ok = fields.Boolean(
+    open_ok = fields.Boolean(
         string="Can Validate",
-        compute="_compute_policy",
-        readonly=True,
     )
-    cancel_ok = fields.Boolean(
-        string="Can Cancel",
-        compute="_compute_policy",
-        readonly=True,
-    )
-    restart_ok = fields.Boolean(
-        string="Can Restart",
-        compute="_compute_policy",
-        readonly=True,
-    )
-
-    def _prepare_confirm_data(self):
-        self.ensure_one()
-        result = {
-            "state": "confirm",
-        }
-        return result
-
-    def action_confirm(self):
-        for report in self:
-            report.write(self._prepare_confirm_data())
-
-    def _prepare_finalize_data(self):
-        self.ensure_one()
-        sequence = self._create_sequence()
-        result = {
-            "name": sequence,
-            "state": "finalize",
-        }
-        return result
-
-    def action_finalize(self):
-        for report in self:
-            report.write(self._prepare_finalize_data())
-
-    def _prepare_valid_data(self):
-        self.ensure_one()
-        result = {
-            "state": "valid",
-        }
-        return result
-
-    def action_valid(self):
-        for report in self:
-            report.write(self._prepare_valid_data())
-
-    def _prepare_cancel_data(self):
-        self.ensure_one()
-        result = {
-            "state": "cancel",
-        }
-        return result
-
-    def action_cancel(self):
-        for report in self:
-            report.write(self._prepare_cancel_data())
-
-    def _prepare_restart_data(self):
-        self.ensure_one()
-        result = {
-            "state": "draft",
-        }
-        return result
-
-    def action_restart(self):
-        for report in self:
-            report.write(self._prepare_restart_data())
-
-    def _prepare_create_data(self):
-        return {}
-
-    @api.model
-    def create(self, values):
-        report = super(AccountantReport, self).create(values)
-        report.write(report._prepare_create_data())
-        return report
 
     @api.onchange("service_id")
     def onchange_report_opinion_id(self):
-        self.report_opinion_id = False
+        self.opinion_id = False
         if self.service_id:
-            self.report_opinion_id = self.service_id.allowed_opinion_ids
+            self.opinion_id = self.service_id.allowed_opinion_ids
 
     @api.onchange("service_id")
     def onchange_method_id(self):
         self.method_id = False
         if self.service_id:
             self.method_id = self.service_id.allowed_method_ids
-
-    def unlink(self):
-        _super = super(AccountantReport, self)
-        force_unlink = self._context.get("force_unlink", False)
-        for report in self:
-            if report.state != "draft" or report.name != "/" and not force_unlink:
-                msg_warning = _(
-                    "You can only delete data with draft state "
-                    "and name is equal to '/'"
-                )
-                raise UserError(msg_warning)
-        _super.unlink()
-
-    def name_get(self):
-        result = []
-        for move in self:
-            if move.name == "/":
-                name = "*" + str(move.id)
-            else:
-                name = move.name
-            result.append((move.id, name))
-        return result
