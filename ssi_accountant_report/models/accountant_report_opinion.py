@@ -7,31 +7,12 @@ from odoo import fields, models
 
 class AccountantReportOpinion(models.Model):
     _name = "accountant.report_opinion"
+    _inherit = [
+        "mixin.master_data",
+    ]
     _description = "Accountant Report Opinion"
     _order = "id"
 
     name = fields.Char(
         string="Opinion",
-        required=True,
-        translate=False,
-        readonly=False,
-    )
-    description = fields.Text(
-        string="Description",
-        required=False,
-        translate=False,
-        readonly=False,
-    )
-    active = fields.Boolean(
-        string="Active",
-        required=False,
-        translate=False,
-        readonly=False,
-        default=True,
-    )
-    code = fields.Char(
-        string="Code",
-        required=True,
-        translate=False,
-        readonly=False,
     )
