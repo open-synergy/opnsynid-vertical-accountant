@@ -4,12 +4,135 @@
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
 <odoo>
 
+    <record id="accountant_report_view_search" model="ir.ui.view">
+        <field name="name">accountant.report.search</field>
+        <field name="model">accountant.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="date" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="service_id" />
+                <field name="opinion_id" />
+                <field name="method_id" />
+                <field name="state" />
+                <filter
+                    name="needs_review"
+                    string="Needs my Review"
+                    domain="[('approval_ids','in',uid), ('state', 'not in', ['done', 'cancel'])]"
+                />
+                <group name="group_state" string="State">
+                    <filter
+                        name="grp_draft"
+                        string="Draft"
+                        domain="[('state','=','draft')]"
+                    />
+                    <filter
+                        name="grp_confirm"
+                        string="Waiting for Approval"
+                        domain="[('state','=','confirm')]"
+                    />
+                    <filter
+                        name="grp_valid"
+                        string="Valid"
+                        domain="[('state','=','valid')]"
+                    />
+                    <filter
+                        name="grp_finalize"
+                        string="Finalization"
+                        domain="[('state','=','finalize')]"
+                    />
+                    <filter
+                        name="grp_cancel"
+                        string="Cancel"
+                        domain="[('state','=','cancel')]"
+                    />
+                </group>
+                <group name="group_by" string="Group By..">
+                    <filter
+                        name="grp_partner"
+                        string="Customer"
+                        context="{'group_by':'partner_id'}"
+                    />
+                    <filter
+                        name="grp_date"
+                        string="Date by"
+                        context="{'group_by':'date'}"
+                    />
+                    <filter
+                        name="grp_service"
+                        string="Service"
+                        context="{'group_by':'service_id'}"
+                    />
+                    <filter
+                        name="grp_opinion"
+                        string="Report Opinion"
+                        context="{'group_by':'opinion_id'}"
+                    />
+                    <filter
+                        name="grp_method"
+                        string="Method"
+                        context="{'group_by':'method_id'}"
+                    />
+                    <filter
+                        name="grp_state"
+                        string="State"
+                        context="{'group_by':'state'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="accountant_report_view_tree" model="ir.ui.view">
+        <field name="name">accountant.report.tree</field>
+        <field name="model">accountant.report</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id" optional="hide" />
+                <field name="display_name" string="# Report" decoration-bf="1" />
+                <field name="partner_id" />
+                <field name="date" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="service_id" />
+                <field name="opinion_id" />
+                <field name="method_id" />
+                <field name="activity_ids" widget="list_activity" optional="show" />
+                <field
+                    name="state"
+                    widget="badge"
+                    decoration-info="state == 'draft'"
+                    decoration-success="state == 'finalize'"
+                    decoration-muted="state == 'cancel'"
+                />
+            </tree>
+        </field>
+    </record>
+
     <record id="accountant_report_view_form" model="ir.ui.view">
-        <field name="name">accountant.report form</field>
+        <field name="name">accountant.report.form</field>
         <field name="model">accountant.report</field>
         <field name="arch" type="xml">
             <form>
                 <header>
+                    <button
+                        name="action_approve_approval"
+                        string="Approve"
+                        type="object"
+                        class="oe_highlight"
+                        attrs="{'invisible':[('approve_ok','!=',True)]}"
+                        confirm="Approve data. Are you sure?"
+                    />
+                    <button
+                        name="action_reject_approval"
+                        string="Reject"
+                        type="object"
+                        attrs="{'invisible':[('reject_ok','!=',True)]}"
+                        confirm="Reject data. Are you sure?"
+                    />
                     <button
                         name="action_confirm"
                         type="object"
@@ -19,28 +142,26 @@
                         confirm="Confirm Data. Are you sure?"
                     />
                     <button
-                        name="action_finalize"
-                        type="object"
-                        string="Finalization"
-                        class="oe_highlight"
-                        attrs="{'invisible':[('finalize_ok','=',False)]}"
-                        confirm="Finalization Data. Are you sure?"
-                    />
-                    <button
-                        name="action_valid"
+                        name="action_open"
                         type="object"
                         string="Valid"
                         class="oe_highlight"
-                        attrs="{'invisible':[('valid_ok','=',False)]}"
+                        attrs="{'invisible':[('open_ok','=',False)]}"
                         confirm="Valid Data. Are you sure?"
                     />
                     <button
-                        name="action_cancel"
+                        name="action_done"
                         type="object"
-                        string="Cancel"
+                        string="Finalization"
                         class="oe_highlight"
-                        attrs="{'invisible':[('cancel_ok','=',False)]}"
-                        confirm="Cancel Data. Are you sure?"
+                        attrs="{'invisible':[('done_ok','=',False)]}"
+                        confirm="Finalization Data. Are you sure?"
+                    />
+                    <button
+                        name="%(ssi_transaction_cancel_mixin.base_select_cancel_reason_action)d"
+                        string="Cancel"
+                        type="action"
+                        attrs="{'invisible':[('cancel_ok','!=',True)]}"
                     />
                     <button
                         name="action_restart"
@@ -53,9 +174,12 @@
                     <field
                         name="state"
                         widget="statusbar"
-                        statusbar_visible="draft,confirm,finalize,valid"
+                        statusbar_visible="draft,confirm,valid,finalize"
                     />
                 </header>
+                <field name="need_validation" invisible="1" />
+                <field name="approved" invisible="1" />
+                <field name="rejected" invisible="1" />
                 <sheet>
                     <div
                         class="oe_right oe_button_box"
@@ -65,11 +189,22 @@
                     </div>
                     <div name="header" class="oe_left" style="width: 500px;">
                         <div name="header_1" class="oe_title" style="width: 500px;">
-                            <label for="name" class="oe_edit_only" />
+                            <label for="display_name" string="# Report" />
                             <h1>
-                                <field name="name" class="oe_edit_only" />
+                                <field
+                                    name="name"
+                                    class="oe_edit_only"
+                                    attrs="{'readonly':[('manual_number_ok','=',False)]}"
+                                />
                                 <field name="display_name" class="oe_read_only" />
                             </h1>
+                            <h2 attrs="{'invisible': [('state', '!=', 'cancel')]}">
+                                <label
+                                    for="cancel_reason_id"
+                                    string="Cancellation reason:"
+                                />
+                                <field name="cancel_reason_id" class="oe_inline" />
+                            </h2>
                         </div>
                     </div>
                     <group name="group_1" colspan="4" col="2">
@@ -104,7 +239,7 @@
                             <field name="date" />
                             <field name="opinion_required" />
                             <field
-                                name="report_opinion_id"
+                                name="opinion_id"
                                 domain="[('id', 'in', allowed_opinion_ids[0][2])]"
                                 attrs="{'required':[('opinion_required','=',True)]}"
                             />
@@ -119,189 +254,59 @@
                         <page name="page_note" string="Note">
                             <field name="note" colspan="4" nolabel="1" />
                         </page>
-                        <page name="client" string="Client Informations">
-                            <group name="client_1" colspan="4" col="2">
-                                <field name="information_based" />
-                                <field name="report_currency_id" />
-                                <field
-                                    name="revenue"
-                                    widget="monetary"
-                                    options="{'currency_field':'report_currency_id'}"
-                                />
-                                <field
-                                    name="total_asset"
-                                    widget="monetary"
-                                    options="{'currency_field':'report_currency_id'}"
-                                />
-                                <field
-                                    name="total_liability"
-                                    widget="monetary"
-                                    options="{'currency_field':'report_currency_id'}"
-                                />
-                                <field
-                                    name="ebit"
-                                    widget="monetary"
-                                    options="{'currency_field':'report_currency_id'}"
-                                />
-                                <field
-                                    name="tax_expense"
-                                    widget="monetary"
-                                    options="{'currency_field':'report_currency_id'}"
-                                />
-                                <field
-                                    name="total_net_profit"
-                                    widget="monetary"
-                                    options="{'currency_field':'report_currency_id'}"
-                                />
-                                <field
-                                    name="total_net_profit_oci"
-                                    widget="monetary"
-                                    options="{'currency_field':'report_currency_id'}"
-                                />
-                            </group>
-                        </page>
                         <page
                             name="policy"
                             string="Policies"
                             groups="base.group_system"
                         >
                             <group name="policy_1" colspan="4" col="2">
-                                <field
-                                    name="policy_template_id"
-                                    groups="base.group_system"
-                                />
+                                <field name="policy_template_id" />
                                 <button
                                     name="action_reload_policy_template"
+                                    string="Reload Template Policy"
+                                    class="oe_highlight"
+                                    type="object"
+                                    icon="fa-refresh"
+                                />
+                                <field name="confirm_ok" />
+                                <field name="approve_ok" />
+                                <field name="open_ok" />
+                                <field name="done_ok" />
+                                <field name="cancel_ok" />
+                                <field name="reject_ok" />
+                                <field name="restart_ok" />
+                                <field name="manual_number_ok" />
+                            </group>
+                        </page>
+                        <page string="Approvals" name="multiple_approval">
+                            <group name="multiple_approval_1" colspan="4" col="2">
+                                <field name="approval_template_id" />
+                                <button
+                                    name="action_reload_approval_template"
                                     string="Reload Template"
                                     class="oe_highlight"
                                     type="object"
                                 />
                                 <newLine />
-                                <field name="confirm_ok" />
-                                <field name="finalize_ok" />
-                                <field name="valid_ok" />
-                                <field name="cancel_ok" />
-                                <field name="restart_ok" />
+                                <field
+                                    name="active_approver_partner_ids"
+                                    widget="many2many_tags"
+                                />
                             </group>
+                            <field
+                                name="approval_ids"
+                                attrs="{'invisible':[('approval_ids', '=', [])]}"
+                                nolabel="1"
+                            />
                         </page>
                     </notebook>
                 </sheet>
                 <div class="oe_chatter">
-                    <field
-                        name="message_follower_ids"
-                        widget="mail_followers"
-                        groups="base.group_user"
-                    />
-                    <field name="message_ids" widget="mail_thread" />
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
                 </div>
             </form>
-        </field>
-    </record>
-
-    <record id="accountant_report_view_tree" model="ir.ui.view">
-        <field name="name">accountant.report tree</field>
-        <field name="model">accountant.report</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="id" />
-                <field name="display_name" />
-                <field name="partner_id" />
-                <field name="date" />
-                <field name="date_start" />
-                <field name="date_end" />
-                <field name="service_id" />
-                <field name="report_opinion_id" />
-                <field name="method_id" />
-                <field name="state" />
-            </tree>
-        </field>
-    </record>
-
-    <record id="accountant_report_view_search" model="ir.ui.view">
-        <field name="name">accountant.report search</field>
-        <field name="model">accountant.report</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="name" />
-                <field name="partner_id" />
-                <field name="date" />
-                <field name="date_start" />
-                <field name="date_end" />
-                <field name="service_id" />
-                <field name="report_currency_id" />
-                <field name="report_opinion_id" />
-                <field name="method_id" />
-                <field name="state" />
-                <group name="group_state" string="State">
-                    <filter
-                        name="filter_draft"
-                        string="Draft"
-                        domain="[('state','=','draft')]"
-                    />
-                    <filter
-                        name="filter_confirm"
-                        string="Waiting for Approval"
-                        domain="[('state','=','confirm')]"
-                    />
-                    <filter
-                        name="filter_valid"
-                        string="Valid"
-                        domain="[('state','=','valid')]"
-                    />
-                    <filter
-                        name="filter_cancel"
-                        string="Cancel"
-                        domain="[('state','=','cancel')]"
-                    />
-                </group>
-                <group name="group_by" string="Group By..">
-                    <filter
-                        name="grp_partner"
-                        string="Customer"
-                        context="{'group_by':'partner_id'}"
-                    />
-                    <filter
-                        name="grp_date_year"
-                        string="Date by Year"
-                        context="{'group_by':'date:year'}"
-                    />
-                    <filter
-                        name="grp_date_month"
-                        string="Date by Month"
-                        context="{'group_by':'date:month'}"
-                    />
-                    <filter
-                        name="grp_date_day"
-                        string="Date by Day"
-                        context="{'group_by':'date:day'}"
-                    />
-                    <filter
-                        name="grp_service"
-                        string="Service"
-                        context="{'group_by':'service_id'}"
-                    />
-                    <filter
-                        name="grp_currency"
-                        string="Report Currency"
-                        context="{'group_by':'report_currency_id'}"
-                    />
-                    <filter
-                        name="grp_opinion"
-                        string="Report Opinion"
-                        context="{'group_by':'report_opinion_id'}"
-                    />
-                    <filter
-                        name="grp_method"
-                        string="Method"
-                        context="{'group_by':'method_id'}"
-                    />
-                    <filter
-                        name="grp_state"
-                        string="State"
-                        context="{'group_by':'state'}"
-                    />
-                </group>
-            </search>
         </field>
     </record>
 
