@@ -148,19 +148,19 @@
                         confirm="Confirm Data. Are you sure?"
                     />
                     <button
-                        name="action_valid"
+                        name="action_open"
                         type="object"
                         string="Valid"
                         class="oe_highlight"
-                        attrs="{'invisible':[('valid_ok','=',False)]}"
+                        attrs="{'invisible':[('open_ok','=',False)]}"
                         confirm="Valid Data. Are you sure?"
                     />
                     <button
-                        name="action_finalize"
+                        name="action_done"
                         type="object"
                         string="Finalization"
                         class="oe_highlight"
-                        attrs="{'invisible':[('finalize_ok','=',False)]}"
+                        attrs="{'invisible':[('done_ok','=',False)]}"
                         confirm="Finalization Data. Are you sure?"
                     />
                     <button
@@ -197,7 +197,11 @@
                         <div name="header_1" class="oe_title" style="width: 500px;">
                             <label for="display_name" string="# Report" />
                             <h1>
-                                <field name="name" class="oe_edit_only" />
+                                <field
+                                    name="name"
+                                    class="oe_edit_only"
+                                    attrs="{'readonly':[('manual_number_ok','=',False)]}"
+                                />
                                 <field name="display_name" class="oe_read_only" />
                             </h1>
                             <h2 attrs="{'invisible': [('state', '!=', 'cancel')]}">
@@ -313,11 +317,12 @@
                                 />
                                 <field name="confirm_ok" />
                                 <field name="approve_ok" />
-                                <field name="finalize_ok" />
-                                <field name="valid_ok" />
+                                <field name="open_ok" />
+                                <field name="done_ok" />
                                 <field name="cancel_ok" />
                                 <field name="reject_ok" />
                                 <field name="restart_ok" />
+                                <field name="manual_number_ok" />
                             </group>
                         </page>
                         <page string="Approvals" name="multiple_approval">

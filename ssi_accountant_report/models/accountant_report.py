@@ -8,13 +8,20 @@ from odoo import api, fields, models
 class AccountantReport(models.Model):
     _name = "accountant.report"
     _description = "Accountant Report"
-    _inherit = ["mixin.transaction_confirm", "mixin.transaction_cancel"]
+    _inherit = [
+        "mixin.transaction_confirm",
+        "mixin.transaction_open",
+        "mixin.transaction_done",
+        "mixin.transaction_cancel",
+    ]
     _order = "date desc, id"
     _approval_from_state = "draft"
     _approval_to_state = "valid"
     _approval_state = "confirm"
-    _after_approved_method = "action_valid"
-    _create_sequence_state = False
+    _after_approved_method = "action_open"
+    _create_sequence_state = "finalize"
+    _open_state = "valid"
+    _done_state = "finalize"
 
     @api.depends(
         "service_id",
@@ -40,11 +47,12 @@ class AccountantReport(models.Model):
         policy_field = [
             "confirm_ok",
             "approve_ok",
-            "finalize_ok",
-            "valid_ok",
+            "open_ok",
+            "done_ok",
             "cancel_ok",
             "reject_ok",
             "restart_ok",
+            "manual_number_ok",
         ]
         res += policy_field
         return res
@@ -280,40 +288,12 @@ class AccountantReport(models.Model):
         _super._compute_policy()
 
     # Policy Field
-    finalize_ok = fields.Boolean(
+    done_ok = fields.Boolean(
         string="Can Finalization",
-        compute="_compute_policy",
-        readonly=True,
     )
-    valid_ok = fields.Boolean(
+    open_ok = fields.Boolean(
         string="Can Validate",
-        compute="_compute_policy",
-        readonly=True,
     )
-
-    def _prepare_finalize_data(self):
-        self.ensure_one()
-        sequence = self._create_sequence()
-        result = {
-            "name": sequence,
-            "state": "finalize",
-        }
-        return result
-
-    def action_finalize(self):
-        for report in self:
-            report.write(self._prepare_finalize_data())
-
-    def _prepare_valid_data(self):
-        self.ensure_one()
-        result = {
-            "state": "valid",
-        }
-        return result
-
-    def action_valid(self):
-        for report in self:
-            report.write(self._prepare_valid_data())
 
     def _prepare_create_data(self):
         return {}
