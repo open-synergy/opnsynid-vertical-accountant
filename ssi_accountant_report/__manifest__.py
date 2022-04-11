@@ -15,6 +15,8 @@
         "ssi_accountant",
         "ssi_master_data_mixin",
         "ssi_transaction_confirm_mixin",
+        "ssi_transaction_open_mixin",
+        "ssi_transaction_done_mixin",
         "ssi_transaction_cancel_mixin",
     ],
     "data": [
