@@ -34,11 +34,17 @@
                             confirm="Restart Validation. Are you sure?"
                         />
                         <button
+                            name="%(base_print_policy.base_print_document_action)d"
+                            string="Print"
+                            type="action"
+                            icon="gtk-print"
+                        />
+                        <button
                             name="%(base_cancel_reason.base_cancel_reason_wizard_action)d"
                             type="action"
                             string="Cancel"
                             attrs="{'invisible':['|',('state','=','cancel'),('cancel_ok','=',False)]}"
-                            confirm="Cancel data. Are you sure?"
+                            confirm="Cancel. Are you sure?"
                         />
                         <button
                             name="action_restart"
@@ -115,9 +121,9 @@
                                 </h1>
                                 <h2 attrs="{'invisible': [('state', '!=', 'cancel')]}">
                                     <label
-                                                for="cancel_reason_id"
-                                                string="Cancellation reason:"
-                                            />
+                                        for="cancel_reason_id"
+                                        string="Cancellation reason:"
+                                    />
                                     <field name="cancel_reason_id" class="oe_inline" />
                                 </h2>
                             </div>
