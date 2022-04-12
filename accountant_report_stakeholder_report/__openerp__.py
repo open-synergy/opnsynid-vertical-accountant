@@ -5,7 +5,7 @@
 
 {
     "name": "Stakeholder Report for Accountant Report",
-    "version": "8.0.1.2.0",
+    "version": "8.0.2.0.0",
     "author": "PT. Simetri Sinergi Indonesia, OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
@@ -15,6 +15,7 @@
         "base_multiple_approval",
         "base_workflow_policy",
         "base_cancel_reason",
+        "base_print_policy",
     ],
     "data": [
         "security/ir.model.access.csv",
