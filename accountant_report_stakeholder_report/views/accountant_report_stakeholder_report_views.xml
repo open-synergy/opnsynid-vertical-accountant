@@ -40,6 +40,14 @@
                             icon="gtk-print"
                         />
                         <button
+                            name="action_populate_accountant_report"
+                            type="object"
+                            string="Populate"
+                            confirm="Populate Accountant Reports. Are you sure?"
+                            icon="gtk-execute"
+                            attrs="{'invisible': [('state','not in', ['draft'])]}"
+                        />
+                        <button
                             name="%(base_cancel_reason.base_cancel_reason_wizard_action)d"
                             type="action"
                             string="Cancel"

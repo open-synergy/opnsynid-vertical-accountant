@@ -5,6 +5,7 @@
 
 from openerp import _, api, fields, models
 from openerp.exceptions import Warning as UserError
+from openerp.tools.safe_eval import safe_eval as eval
 
 
 class AccountantReportStakeholderReport(models.Model):
@@ -149,6 +150,53 @@ class AccountantReportStakeholderReport(models.Model):
         string="Cancelled By",
         comodel_name="res.users",
     )
+
+    def _get_localdict(self):
+        self.ensure_one()
+        return {
+            "env": self.env,
+            "document": self,
+        }
+
+    @api.multi
+    def _evaulate_domain_stakeholder_type(self):
+        self.ensure_one()
+        localdict = self._get_localdict()
+        try:
+            eval(self.type_id.domain, localdict, mode="exec", nocopy=True)
+            res = localdict["result"]
+        except Exception:
+            res = False
+        return res
+
+    @api.multi
+    def _prepare_criteria_accountant_report(self):
+        self.ensure_one()
+        criteria = [
+            ("date", ">=", self.date_start),
+            ("date", "<=", self.date_end),
+        ]
+        domain = self._evaulate_domain_stakeholder_type()
+        if domain:
+            criteria += domain
+        return criteria
+
+    @api.multi
+    def get_accountant_report_ids(self):
+        self.ensure_one()
+        result = []
+        obj_accountant_report = self.env["accountant.report"]
+        criteria = self._prepare_criteria_accountant_report()
+        accountant_report_ids = obj_accountant_report.search(criteria)
+        if accountant_report_ids:
+            result = accountant_report_ids.ids
+        return result
+
+    @api.multi
+    def action_populate_accountant_report(self):
+        for record in self:
+            accountant_report_ids = record.get_accountant_report_ids()
+            record.accountant_report_ids = [(6, 0, accountant_report_ids)]
 
     @api.multi
     def action_confirm(self):
