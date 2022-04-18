@@ -187,7 +187,16 @@ class AccountantReport(models.Model):
         },
     )
     subsequent_num = fields.Integer(
-        string="Subsequent Job Num.",
+        string="Accountant Subsequent Job Num.",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    firm_subsequent_num = fields.Integer(
+        string="Firm Subsequent Job Num.",
         readonly=True,
         states={
             "draft": [
