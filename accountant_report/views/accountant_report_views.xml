@@ -78,6 +78,7 @@
                                     name="service_id"
                                     domain="[('assurance','=',assurance)]"
                                 />
+                        <field name="firm_subsequent_num" />
                         <field name="subsequent_num" />
                         <field name="restatement_id" />
                         <field name="method_required" />
