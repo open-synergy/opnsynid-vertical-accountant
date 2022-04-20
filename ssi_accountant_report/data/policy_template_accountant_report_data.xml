@@ -3,9 +3,9 @@
      Copyright 2022 PT. Simetri Sinergi Indonesia
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
 <odoo>
-<data noupdate="0">
+<data noupdate="1">
 <record id="policy_template_accountant_report" model="policy.template">
-    <field name="name">Standard: Accountant Report</field>
+    <field name="name">Standard</field>
     <field name="model_id" ref="ssi_accountant_report.model_accountant_report" />
     <field
                 name="state_field_id"

@@ -45,7 +45,7 @@
 
 
 <record id="accountant_report_method_action" model="ir.actions.act_window">
-    <field name="name">Accountant Report method</field>
+    <field name="name">Accountant Report Methods</field>
         <field name="type">ir.actions.act_window</field>
     <field name="res_model">accountant.report_method</field>
     <field name="view_mode">tree,form</field>
@@ -53,7 +53,7 @@
 
 <menuitem
         id="accountant_report_method_menu"
-        name="Accountant Report Method"
+        name="Accountant Report Methods"
         parent="ssi_accountant.menu_accountant_configuration"
         action="accountant_report_method_action"
         sequence="1"

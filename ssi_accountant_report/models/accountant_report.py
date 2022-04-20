@@ -19,7 +19,7 @@ class AccountantReport(models.Model):
     _approval_to_state = "valid"
     _approval_state = "confirm"
     _after_approved_method = "action_open"
-    _create_sequence_state = "finalize"
+    _create_sequence_state = "valid"
     _open_state = "valid"
     _done_state = "finalize"
 
@@ -125,90 +125,9 @@ class AccountantReport(models.Model):
             ],
         },
     )
-    information_based = fields.Selection(
-        string="Information Based On",
-        selection=[
-            ("yearly", "Yearly Financial Report"),
-            ("interim", "Interim Financial Report"),
-        ],
-        default="yearly",
-    )
     restatement_id = fields.Many2one(
         string="Restatement Report",
         comodel_name="accountant.report",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    currency_id = fields.Many2one(
-        string="Client Currency",
-        comodel_name="res.currency",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    revenue = fields.Float(
-        string="Revenue",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    ebit = fields.Float(
-        string="EBIT",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    tax_expense = fields.Float(
-        string="Tax Expense",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    total_asset = fields.Float(
-        string="Total Asset",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    total_liability = fields.Float(
-        string="Total Liability",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    total_net_profit = fields.Float(
-        string="Total Net Profit",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    total_net_profit_oci = fields.Float(
-        string="Total Net Profit & OCI",
         readonly=True,
         states={
             "draft": [
@@ -294,15 +213,6 @@ class AccountantReport(models.Model):
     open_ok = fields.Boolean(
         string="Can Validate",
     )
-
-    def _prepare_create_data(self):
-        return {}
-
-    @api.model
-    def create(self, values):
-        report = super(AccountantReport, self).create(values)
-        report.write(report._prepare_create_data())
-        return report
 
     @api.onchange("service_id")
     def onchange_report_opinion_id(self):
