@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- Configurator -->
+<record id="accountant_service_group" model="res.groups">
+    <field name="name">Accountant Service</field>
+    <field
+            name="category_id"
+            ref="accountant_configurator_module_category"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<record id="accountant_opinion_group" model="res.groups">
+    <field name="name">Accountant Opinion</field>
+    <field
+            name="category_id"
+            ref="accountant_configurator_module_category"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<record id="accountant_financial_accountant_standard_group" model="res.groups">
+    <field name="name">Financial Accounting Standard</field>
+    <field
+            name="category_id"
+            ref="accountant_configurator_module_category"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+</odoo>
