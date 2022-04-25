@@ -7,4 +7,5 @@ from . import (
     res_config_settings,
     accountant_financial_accounting_standard,
     accountant_service,
+    accountant_opinion,
 )

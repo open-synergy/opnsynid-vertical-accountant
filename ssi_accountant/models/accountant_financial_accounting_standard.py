@@ -7,20 +7,11 @@ from odoo import fields, models
 
 class AccountantFinancialAccountingStandard(models.Model):
     _name = "accountant.financial_accounting_standard"
+    _inherit = [
+        "mixin.master_data",
+    ]
     _description = "Financial Accounting Standard"
 
     name = fields.Char(
-        string="Name",
-        required=True,
-    )
-    code = fields.Char(
-        string="Code",
-        required=True,
-    )
-    active = fields.Boolean(
-        string="Active",
-        default=True,
-    )
-    description = fields.Text(
-        string="Description",
+        string="Financial Accounting Standard",
     )

@@ -1,5 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-accountant_financial_accounting_standard_employee,accountant.financial_accounting_standard - user,model_accountant_financial_accounting_standard,base.group_user,1,1,1,1
+accountant_financial_accounting_standard_configurator,accountant.financial_accounting_standard - configurator,model_accountant_financial_accounting_standard,accountant_financial_accountant_standard_group,1,1,1,1
 accountant_financial_accounting_standard_all,accountant_financial_accounting_standard - all,model_accountant_financial_accounting_standard,,1,0,0,0
-accountant_service_employee,accountant.service - user,model_accountant_service,base.group_user,1,1,1,1
+accountant_service_configurator,accountant.service - configurator,model_accountant_service,accountant_service_group,1,1,1,1
 accountant_service_all,accountant.service - all,model_accountant_service,,1,0,0,0
+accountant_opinion_configurator,accountant.opinion - configurator,model_accountant_opinion,accountant_opinion_group,1,1,1,1
+accountant_opinion_all,accountant.opinion - all,model_accountant_opinion,,1,0,0,0

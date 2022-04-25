@@ -5,13 +5,13 @@
 from odoo import fields, models
 
 
-class AccountantService(models.Model):
-    _name = "accountant.service"
+class AccountantOpinion(models.Model):
+    _name = "accountant.opinion"
     _inherit = [
         "mixin.master_data",
     ]
-    _description = "Accountant Service"
+    _description = "Accountant Opinion"
 
     name = fields.Char(
-        string="Accountant Service",
+        string="Accountant Opinion",
     )
