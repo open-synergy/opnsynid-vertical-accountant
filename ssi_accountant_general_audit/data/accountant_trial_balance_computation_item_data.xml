@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+<data noupdate="1">
+    <record id="computation_item_001" model="accountant.trial_balance_computation_item">
+        <field name="name">Total Asset</field>
+        <field name="code">T001</field>
+        <field name="category">summary</field>
+        <field name="python_code">result = result_extrapolation = result_previous = 0.0
+CURRENT_ASSET_ID = env.ref("accountant_general_audit.acc_group_t001").id
+NON_CURRENT_ASSET_ID = env.ref("accountant_general_audit.acc_group_t002").id
+
+obj_detail = env["accountant.client_trial_balance_standard_detail"]
+
+criteria = [
+    ("type_id.group_id.id", "in", [CURRENT_ASSET_ID, NON_CURRENT_ASSET_ID]),
+    ("trial_balance_id", "=", document.trial_balance_id.id),
+]
+
+for data in obj_detail.search(criteria):
+    result = result + data.balance
+    result_extrapolation = result_extrapolation + data.extrapolation_balance
+    result_previous = result_previous + data.previous_balance</field>
+    </record>
+
+    <record id="computation_item_002" model="accountant.trial_balance_computation_item">
+        <field name="name">Net Asset</field>
+        <field name="code">T002</field>
+        <field name="category">summary</field>
+        <field name="python_code">result = result_extrapolation = result_previous = 0.0
+CURRENT_ASSET_ID = env.ref("accountant_general_audit.acc_group_t001").id
+NON_CURRENT_ASSET_ID = env.ref("accountant_general_audit.acc_group_t002").id
+SHORT_LIABILITY_ID = env.ref("accountant_general_audit.acc_group_t003").id
+LONG_LIABILITY_ID = env.ref("accountant_general_audit.acc_group_t004").id
+
+obj_detail = env["accountant.client_trial_balance_standard_detail"]
+
+criteria = [
+    ("type_id.group_id.id", "in", [CURRENT_ASSET_ID, NON_CURRENT_ASSET_ID, SHORT_LIABILITY_ID, LONG_LIABILITY_ID]),
+    ("trial_balance_id", "=", document.trial_balance_id.id),
+]
+
+for data in obj_detail.search(criteria):
+    result = result + data.balance
+    result_extrapolation = result_extrapolation + data.extrapolation_balance
+    result_previous = result_previous + data.previous_balance</field>
+    </record>
+
+    <record id="computation_item_003" model="accountant.trial_balance_computation_item">
+        <field name="name">Revenue</field>
+        <field name="code">T003</field>
+        <field name="category">summary</field>
+        <field name="python_code">result = result_extrapolation = result_previous = 0.0
+REVENUE_ID = env.ref("accountant_general_audit.acc_group_t008").id
+OTHER_REVENUE_ID = env.ref("accountant_general_audit.acc_group_t009").id
+OCI_ID = env.ref("accountant_general_audit.acc_group_t010").id
+
+
+obj_detail = env["accountant.client_trial_balance_standard_detail"]
+
+criteria = [
+    ("type_id.group_id.id", "in", [REVENUE_ID, OTHER_REVENUE_ID, OCI_ID]),
+    ("trial_balance_id", "=", document.trial_balance_id.id),
+]
+
+for data in obj_detail.search(criteria):
+    result = result + data.balance
+    result_extrapolation = result_extrapolation + data.extrapolation_balance
+    result_previous = result_previous + data.previous_balance</field>
+    </record>
+
+    <record id="computation_item_004" model="accountant.trial_balance_computation_item">
+        <field name="name">Cost of Revenue</field>
+        <field name="code">T004</field>
+        <field name="category">summary</field>
+        <field name="python_code">result = result_extrapolation = result_previous = 0.0
+COR_ID = env.ref("accountant_general_audit.acc_group_t011").id
+
+obj_detail = env["accountant.client_trial_balance_standard_detail"]
+
+criteria = [
+    ("type_id.group_id.id", "in", [COR_ID]),
+    ("trial_balance_id", "=", document.trial_balance_id.id),
+]
+
+for data in obj_detail.search(criteria):
+    result = result + data.balance
+    result_extrapolation = result_extrapolation + data.extrapolation_balance
+    result_previous = result_previous + data.previous_balance</field>
+    </record>
+
+    <record id="computation_item_005" model="accountant.trial_balance_computation_item">
+        <field name="name">EBT</field>
+        <field name="code">T005</field>
+        <field name="category">summary</field>
+        <field name="python_code">result = result_extrapolation = result_previous = 0.0
+REVENUE_ID = env.ref("accountant_general_audit.acc_group_t008").id
+OTHER_REVENUE_ID = env.ref("accountant_general_audit.acc_group_t009").id
+OCI_ID = env.ref("accountant_general_audit.acc_group_t010").id
+COR_ID = env.ref("accountant_general_audit.acc_group_t011").id
+EXPENSE_ID = env.ref("accountant_general_audit.acc_group_t012").id
+OTHER_EXPENSE_ID = env.ref("accountant_general_audit.acc_group_t013").id
+
+obj_detail = env["accountant.client_trial_balance_standard_detail"]
+
+criteria = [
+    ("type_id.group_id.id", "in", [REVENUE_ID, OTHER_REVENUE_ID, OCI_ID]),
+    ("trial_balance_id", "=", document.trial_balance_id.id),
+]
+
+for data in obj_detail.search(criteria):
+    result = result + data.balance
+    result_extrapolation = result_extrapolation + data.extrapolation_balance
+    result_previous = result_previous + data.previous_balance
+
+criteria = [
+    ("type_id.group_id.id", "in", [COR_ID, EXPENSE_ID, OTHER_EXPENSE_ID]),
+    ("trial_balance_id", "=", document.trial_balance_id.id),
+]
+
+for data in obj_detail.search(criteria):
+    result = result - data.balance
+    result_extrapolation = result_extrapolation - data.extrapolation_balance
+    result_previous = result_previous - data.previous_balance</field>
+    </record>
+
+    <record id="computation_item_006" model="accountant.trial_balance_computation_item">
+        <field name="name">EBITDA</field>
+        <field name="code">T006</field>
+        <field name="category">summary</field>
+    </record>
+
+    <record id="computation_item_007" model="accountant.trial_balance_computation_item">
+        <field name="name">Total Liability</field>
+        <field name="code">T007</field>
+        <field name="category">summary</field>
+    </record>
+
+    <record id="computation_item_008" model="accountant.trial_balance_computation_item">
+        <field name="name">EBIT</field>
+        <field name="code">T008</field>
+        <field name="category">summary</field>
+    </record>
+
+    <record id="computation_item_009" model="accountant.trial_balance_computation_item">
+        <field name="name">Working Capital</field>
+        <field name="code">T009</field>
+        <field name="category">summary</field>
+    </record>
+
+    <record id="computation_item_010" model="accountant.trial_balance_computation_item">
+        <field name="name">EAT</field>
+        <field name="code">T010</field>
+        <field name="category">summary</field>
+    </record>
+
+    <record id="computation_item_011" model="accountant.trial_balance_computation_item">
+        <field name="name">Current Ratio</field>
+        <field name="code">T011</field>
+        <field name="category">liquidity</field>
+    </record>
+
+    <record id="computation_item_012" model="accountant.trial_balance_computation_item">
+        <field name="name">Cash Ratio</field>
+        <field name="code">T012</field>
+        <field name="category">liquidity</field>
+    </record>
+
+    <record id="computation_item_013" model="accountant.trial_balance_computation_item">
+        <field name="name">Quick Ratio</field>
+        <field name="code">T013</field>
+        <field name="category">liquidity</field>
+    </record>
+
+    <record id="computation_item_014" model="accountant.trial_balance_computation_item">
+        <field name="name">Inventory Turnover Ratio</field>
+        <field name="code">T014</field>
+        <field name="category">activity</field>
+    </record>
+
+    <record id="computation_item_015" model="accountant.trial_balance_computation_item">
+        <field name="name">Account Receivable Turnover Ratio</field>
+        <field name="code">T015</field>
+        <field name="category">activity</field>
+    </record>
+
+    <record id="computation_item_016" model="accountant.trial_balance_computation_item">
+        <field name="name">Total Assets Turnover Ratio</field>
+        <field name="code">T016</field>
+        <field name="category">activity</field>
+    </record>
+
+    <record id="computation_item_017" model="accountant.trial_balance_computation_item">
+        <field name="name">Working Capital Turnover Ratio</field>
+        <field name="code">T017</field>
+        <field name="category">activity</field>
+    </record>
+
+    <record id="computation_item_018" model="accountant.trial_balance_computation_item">
+        <field name="name">Account Payable Turnover Ratio</field>
+        <field name="code">T018</field>
+        <field name="category">activity</field>
+    </record>
+
+    <record id="computation_item_019" model="accountant.trial_balance_computation_item">
+        <field name="name">Days of Inventory on Hand</field>
+        <field name="code">T019</field>
+        <field name="category">activity</field>
+    </record>
+
+    <record id="computation_item_020" model="accountant.trial_balance_computation_item">
+        <field name="name">Days of Receivable Outstanding</field>
+        <field name="code">T020</field>
+        <field name="category">activity</field>
+    </record>
+
+    <record id="computation_item_021" model="accountant.trial_balance_computation_item">
+        <field name="name">Days of Payable Outstanding</field>
+        <field name="code">T021</field>
+        <field name="category">activity</field>
+    </record>
+
+    <record id="computation_item_022" model="accountant.trial_balance_computation_item">
+        <field name="name">Cash Conversion Cycle</field>
+        <field name="code">T022</field>
+        <field name="category">activity</field>
+    </record>
+
+    <record id="computation_item_023" model="accountant.trial_balance_computation_item">
+        <field name="name">Debt to Equity Ratio</field>
+        <field name="code">T023</field>
+        <field name="category">activity</field>
+    </record>
+
+    <record id="computation_item_024" model="accountant.trial_balance_computation_item">
+        <field name="name">Financial Leverage Ratio</field>
+        <field name="code">T024</field>
+        <field name="category">solvency</field>
+    </record>
+
+    <record id="computation_item_025" model="accountant.trial_balance_computation_item">
+        <field name="name">Interest Coverage Ratio</field>
+        <field name="code">T025</field>
+        <field name="category">solvency</field>
+    </record>
+
+    <record id="computation_item_026" model="accountant.trial_balance_computation_item">
+        <field name="name">Net Profit Margin</field>
+        <field name="code">T026</field>
+        <field name="category">profitability</field>
+    </record>
+
+    <record id="computation_item_027" model="accountant.trial_balance_computation_item">
+        <field name="name">Gross Profit Margin</field>
+        <field name="code">T027</field>
+        <field name="category">profitability</field>
+    </record>
+
+    <record id="computation_item_028" model="accountant.trial_balance_computation_item">
+        <field name="name">ROA</field>
+        <field name="code">T028</field>
+        <field name="category">profitability</field>
+    </record>
+
+    <record id="computation_item_029" model="accountant.trial_balance_computation_item">
+        <field name="name">ROE</field>
+        <field name="code">T029</field>
+        <field name="category">profitability</field>
+    </record>
+</data>
+</odoo>

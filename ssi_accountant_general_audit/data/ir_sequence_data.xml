@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+    <!-- Trial Balance -->
+
+    <data noupdate="1">
+        <record id="sequence_accountant_client_trial_balance" model="ir.sequence">
+            <field name="name">Accountant Trial Balance</field>
+            <field name="code">ATB</field>
+            <field name="padding">4</field>
+            <field name="prefix">ATB/%(year)s/</field>
+            <field eval="1" name="number_next" />
+            <field eval="1" name="number_increment" />
+        </record>
+    </data>
+
+    <!-- General Audit -->
+
+    <data noupdate="1">
+        <record id="sequence_accountant_general_audit" model="ir.sequence">
+            <field name="name">Accountant General Report</field>
+            <field name="code">accountant.general_audit</field>
+            <field name="padding">4</field>
+            <field name="prefix">AGA/%(year)s/</field>
+            <field eval="1" name="number_next" />
+            <field eval="1" name="number_increment" />
+        </record>
+    </data>
+
+    <!-- Adjustment Entry -->
+
+    <data noupdate="1">
+        <record id="sequence_accountant_adjustment_entry" model="ir.sequence">
+            <field name="name">Accountant Adjustment Entry</field>
+            <field name="code">AAE</field>
+            <field name="padding">4</field>
+            <field name="prefix">AAE/%(year)s/</field>
+            <field eval="1" name="number_next" />
+            <field eval="1" name="number_increment" />
+        </record>
+    </data>
+</odoo>

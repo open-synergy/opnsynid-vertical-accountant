@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <!-- General Audit -->
+    <data noupdate="1">
+        <record
+            id="sequence_template_accountant_general_audit"
+            model="sequence.template"
+        >
+            <field name="name">Standard</field>
+            <field
+                name="model_id"
+                ref="ssi_accountant_general_audit.model_accountant_general_audit"
+            />
+            <field name="sequence" eval="100" />
+            <field name="initial_string">/</field>
+            <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.general_audit'),('name','=','name')]"
+            />
+            <field
+                name="date_field_id"
+                search="[('model_id.model','=','accountant.general_audit'),('name','=','date_start')]"
+            />
+            <field name="computation_method">use_python</field>
+            <field name="python_code">result=True</field>
+            <field name="sequence_id" ref="sequence_accountant_general_audit" />
+            <field name="sequence_selection_method">use_sequence</field>
+            <field name="add_custom_prefix" eval="0" />
+            <field name="add_custom_suffix" eval="0" />
+        </record>
+    </data>
+
+    <!-- Trial Balance -->
+    <data noupdate="1">
+        <record
+            id="sequence_template_accountant_trial_balance"
+            model="sequence.template"
+        >
+            <field name="name">Standard</field>
+            <field
+                name="model_id"
+                ref="ssi_accountant_general_audit.model_accountant_client_trial_balance"
+            />
+            <field name="sequence" eval="100" />
+            <field name="initial_string">/</field>
+            <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.client_trial_balance'),('name','=','name')]"
+            />
+            <field
+                name="date_field_id"
+                search="[('model_id.model','=','accountant.client_trial_balance'),('name','=','date_start')]"
+            />
+            <field name="computation_method">use_python</field>
+            <field name="python_code">result=True</field>
+            <field name="sequence_id" ref="sequence_accountant_client_trial_balance" />
+            <field name="sequence_selection_method">use_sequence</field>
+            <field name="add_custom_prefix" eval="0" />
+            <field name="add_custom_suffix" eval="0" />
+        </record>
+    </data>
+
+    <!-- Adjustment Entry -->
+    <data noupdate="1">
+        <record
+            id="sequence_template_accountant_adjustment_entry"
+            model="sequence.template"
+        >
+            <field name="name">Standard</field>
+            <field
+                name="model_id"
+                ref="ssi_accountant_general_audit.model_accountant_client_adjustment_entry"
+            />
+            <field name="sequence" eval="100" />
+            <field name="initial_string">/</field>
+            <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.client_adjustment_entry'),('name','=','name')]"
+            />
+            <field
+                name="date_field_id"
+                search="[('model_id.model','=','accountant.client_adjustment_entry'),('name','=','date_start')]"
+            />
+            <field name="computation_method">use_python</field>
+            <field name="python_code">result=True</field>
+            <field name="sequence_id" ref="sequence_accountant_adjustment_entry" />
+            <field name="sequence_selection_method">use_sequence</field>
+            <field name="add_custom_prefix" eval="0" />
+            <field name="add_custom_suffix" eval="0" />
+        </record>
+    </data>
+</odoo>

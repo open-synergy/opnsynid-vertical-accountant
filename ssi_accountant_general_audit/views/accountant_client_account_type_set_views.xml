@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="accountant_client_account_type_set_view_search" model="ir.ui.view">
+        <field name="name">accountant.trial.balance.computation.item.search</field>
+        <field name="model">accountant.client_account_type_set</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="accountant_client_account_type_set_view_tree" model="ir.ui.view">
+        <field name="name">accountant.trial.balance.computation.item.tree</field>
+        <field name="model">accountant.client_account_type_set</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_tree"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="accountant_client_account_type_set_view_form" model="ir.ui.view">
+        <field name="name">accountant.trial.balance.computation.item.form</field>
+        <field name="model">accountant.client_account_type_set</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_form"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//page[@name='note']" position="after">
+                    <page name="account_type_set" string="Account Types">
+                        <group name="account_type_set_1" colspan="4" col="2">
+                            <field name="detail_ids" nolabel="1" colspan="2" />
+                        </group>
+                    </page>
+                    <page name="computation" string="Computation">
+                        <group name="computation_1" colspan="4" col="2">
+                            <field
+                                name="computation_ids"
+                                colspan="1"
+                                col="2"
+                                nolabel="1"
+                            >
+                                <tree editable="bottom">
+                                    <field name="computation_id" />
+                                    <field name="phyton_code" />
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record
+        id="accountant_client_account_type_set_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Account Type Set</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.client_account_type_set</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="accountant_client_account_type_set_menu"
+        name="Account Type Set"
+        parent="menu_accountant_configuration_trial_balance"
+        action="accountant_client_account_type_set_action"
+        sequence="2"
+    />
+
+</odoo>
