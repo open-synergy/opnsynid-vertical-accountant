@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="demo_IFRS" model="accountant.financial_accounting_standard">
+        <field name="name">IFRS</field>
+        <field name="code">IFRS</field>
+    </record>
+
+    <record id="demo_SAK" model="accountant.financial_accounting_standard">
+        <field name="name">SAK</field>
+        <field name="code">SAK</field>
+    </record>
+
+    <record id="demo_SAKETAP" model="accountant.financial_accounting_standard">
+        <field name="name">SAK ETAP</field>
+        <field name="code">SAK ETAP</field>
+    </record>
+
+    <record id="demo_SAK_Syariah" model="accountant.financial_accounting_standard">
+        <field name="name">SAK Syariah</field>
+        <field name="code">SAK Syariah</field>
+    </record>
+
+    <record id="demo_SAP" model="accountant.financial_accounting_standard">
+        <field name="name">SAP</field>
+        <field name="code">SAP</field>
+    </record>
+
+
+</odoo>

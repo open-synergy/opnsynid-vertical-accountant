@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+<record id="demo_account1" model="accountant.client_account">
+    <field name="name">Petty Cash</field>
+    <field name="code">11010</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="accountant_general_audit.acc_type_t001" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="1" />
+</record>
+
+<record id="demo_account2" model="accountant.client_account">
+    <field name="name">Bank BNI</field>
+    <field name="code">12010</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="accountant_general_audit.acc_type_t001" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="2" />
+</record>
+
+<record id="demo_account3" model="accountant.client_account">
+    <field name="name">Bank BII</field>
+    <field name="code">12020</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="accountant_general_audit.acc_type_t001" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="3" />
+</record>
+
+<record id="demo_account4" model="accountant.client_account">
+    <field name="name">Account Receivable - Goods</field>
+    <field name="code">13021</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="accountant_general_audit.acc_type_t003" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="4" />
+</record>
+
+<record id="demo_account5" model="accountant.client_account">
+    <field name="name">Account Receivable - Service</field>
+    <field name="code">13022</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="accountant_general_audit.acc_type_t003" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="5" />
+</record>
+
+<record id="demo_account6" model="accountant.client_account">
+    <field name="name">Related Party Receivable</field>
+    <field name="code">13027</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="accountant_general_audit.acc_type_t004" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="6" />
+</record>
+
+<record id="demo_account7" model="accountant.client_account">
+    <field name="name">Other Receivable</field>
+    <field name="code">13029</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="accountant_general_audit.acc_type_t005" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="7" />
+</record>
+
+<record id="demo_account8" model="accountant.client_account">
+    <field name="name">Shareholder Receivable</field>
+    <field name="code">13050</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="accountant_general_audit.acc_type_t004" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="8" />
+</record>
+
+<record id="demo_account9" model="accountant.client_account">
+    <field name="name">Employee Receivable</field>
+    <field name="code">13060</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="accountant_general_audit.acc_type_t005" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="9" />
+</record>
+
+<record id="demo_account10" model="accountant.client_account">
+    <field name="name">Inventory - Raw Material</field>
+    <field name="code">14010</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="accountant_general_audit.acc_type_t006" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="10" />
+</record>
+
+<record id="demo_account11" model="accountant.client_account">
+    <field name="name">Inventory - Finished Goods</field>
+    <field name="code">14020</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="accountant_general_audit.acc_type_t006" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="11" />
+</record>
+
+</odoo>
