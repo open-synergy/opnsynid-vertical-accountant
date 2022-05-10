@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+accountant_report_stakeholder_report_type_employee,accountant.report_stakeholder_report_type – user,model_accountant_report_stakeholder_report_type,base.group_user,1,1,1,1
+accountant_report_stakeholder_report_type_all,accountant.report_stakeholder_report_type – all,model_accountant_report_stakeholder_report_type,,1,0,0,0
+accountant_report_stakeholder_report_employee,accountant.report_stakeholder_report – user,model_accountant_report_stakeholder_report,base.group_user,1,1,1,1
+accountant_report_stakeholder_report_all,accountant.report_stakeholder_report – all,model_accountant_report_stakeholder_report,,1,0,0,0

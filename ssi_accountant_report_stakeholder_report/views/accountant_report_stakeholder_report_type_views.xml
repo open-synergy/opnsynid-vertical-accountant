@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record
+        id="accountant_report_stakeholder_report_type_view_search"
+        model="ir.ui.view"
+    >
+        <field name="name">accountant.report.stakeholder.report.type.search</field>
+        <field name="model">accountant.report_stakeholder_report_type</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="accountant_report_stakeholder_report_type_view_tree" model="ir.ui.view">
+        <field name="name">accountant.report.stakeholder.report.type.tree</field>
+        <field name="model">accountant.report_stakeholder_report_type</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_tree"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="accountant_report_stakeholder_report_type_view_form" model="ir.ui.view">
+        <field name="name">accountant.report.stakeholder.report.type.form</field>
+        <field name="model">accountant.report_stakeholder_report_type</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_form"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='code']" position="after">
+                    <field name="domain" />
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record
+        id="accountant_report_stakeholder_report_type_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Stakeholder Report Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.report_stakeholder_report_type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="accountant_report_stakeholder_report_type_menu"
+        name="Stakeholder Report Type"
+        parent="ssi_accountant.menu_accountant_configuration"
+        action="accountant_report_stakeholder_report_type_action"
+        sequence="2"
+    />
+</odoo>
