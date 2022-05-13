@@ -32,7 +32,24 @@
     <field name="inherit_id" ref="ssi_master_data_mixin.mixin_master_data_view_form" />
     <field name="mode">primary</field>
     <field name="arch" type="xml">
-        <data />
+        <data>
+            <xpath expr="//page[@name='note']" position="before">
+                <page name="general" string="General">
+                    <group name="general" colspan="4" col="2">
+                        <group name="general_left" colspan="1" col="2">
+                            <field name="assurance" />
+                            <field
+                                    name="allowed_opinion_ids"
+                                    widget="many2many_tags"
+                                    attrs="{'invisible':[('assurance','=',False)]}"
+                                />
+                        </group>
+                        <group name="general_right" colspan="1" col="2">
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </data>
     </field>
 </record>
 

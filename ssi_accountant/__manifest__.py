@@ -4,7 +4,7 @@
 
 {
     "name": "Accountant",
-    "version": "14.0.2.0.0",
+    "version": "14.0.2.1.0",
     "website": "https://simetri-sinergi.id",
     "author": "OpenSynergy Indonesia, PT. Simetri Sinergi Indonesia",
     "license": "LGPL-3",
@@ -24,5 +24,10 @@
         "views/accountant_financial_accounting_standard_views.xml",
         "views/accountant_service_views.xml",
         "views/accountant_opinion_views.xml",
+    ],
+    "demo": [
+        "demo/accountant_opinion_demo.xml",
+        "demo/accountant_service_demo.xml",
+        "demo/accountant_financial_accounting_standard_demo.xml",
     ],
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<record
+        id="demo_accountant_financial_accounting_standard1"
+        model="accountant.financial_accounting_standard"
+    >
+    <field name="name">IFRS - (test)</field>
+    <field name="code">X001</field>
+</record>
+
+<record
+        id="demo_accountant_financial_accounting_standard2"
+        model="accountant.financial_accounting_standard"
+    >
+    <field name="name">SAK - (test)</field>
+    <field name="code">X002</field>
+</record>
+
+<record
+        id="demo_accountant_financial_accounting_standard3"
+        model="accountant.financial_accounting_standard"
+    >
+    <field name="name">SAK ETAP - (test)</field>
+    <field name="code">X003</field>
+</record>
+
+<record
+        id="demo_accountant_financial_accounting_standard4"
+        model="accountant.financial_accounting_standard"
+    >
+    <field name="name">SAK EMKM - (test)</field>
+    <field name="code">X004</field>
+</record>
+
+<record
+        id="demo_accountant_financial_accounting_standard5"
+        model="accountant.financial_accounting_standard"
+    >
+    <field name="name">SAK Syariah - (test)</field>
+    <field name="code">X005</field>
+</record>
+</odoo>
