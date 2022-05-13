@@ -15,3 +15,13 @@ class AccountantService(models.Model):
     name = fields.Char(
         string="Accountant Service",
     )
+    assurance = fields.Boolean(
+        string="Assurance Service?",
+    )
+    allowed_opinion_ids = fields.Many2many(
+        string="Allowed Opinion",
+        comodel_name="accountant.opinion",
+        relation="rel_accountant_service_2_opinion",
+        column1="service_id",
+        column2="opinion_id",
+    )

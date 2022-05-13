@@ -58,14 +58,8 @@
                             </div>
                         </div>
                     </div>
-                    <div
-                            id="use_general_audit"
-                            class="col-12 col-lg-6 o_setting_box"
-                        >
-                        <div
-                                name="use_general_audit_left"
-                                class="o_setting_left_pane"
-                            >
+                    <div id="use_general_audit" class="col-12 col-lg-6 o_setting_box">
+                        <div name="use_general_audit_left" class="o_setting_left_pane">
                             <field name="module_ssi_general_audit" />
                         </div>
                         <div

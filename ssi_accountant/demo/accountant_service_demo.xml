@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- Assurance -->
+<record id="demo_accountant_service1" model="accountant.service">
+    <field name="name">Historical Audit Service - (test)</field>
+    <field name="code">X001</field>
+    <field name="assurance" eval="1" />
+    <field
+            name="allowed_opinion_ids"
+            eval="[(6, 0, [ref('ssi_accountant.demo_accountant_opinion1'),ref('ssi_accountant.demo_accountant_opinion2'),ref('ssi_accountant.demo_accountant_opinion3'),ref('ssi_accountant.demo_accountant_opinion4')])]"
+        />
+</record>
+
+<record id="demo_accountant_service2" model="accountant.service">
+    <field name="name">Historical Review Service - (test)</field>
+    <field name="code">X002</field>
+    <field name="assurance" eval="1" />
+    <field
+            name="allowed_opinion_ids"
+            eval="[(6, 0, [ref('ssi_accountant.demo_accountant_opinion1'),ref('ssi_accountant.demo_accountant_opinion2'),ref('ssi_accountant.demo_accountant_opinion3'),ref('ssi_accountant.demo_accountant_opinion4')])]"
+        />
+</record>
+
+<record id="demo_accountant_service3" model="accountant.service">
+    <field name="name">Complience Audit/Review - (test)</field>
+    <field name="code">X003</field>
+    <field name="assurance" eval="1" />
+    <field
+            name="allowed_opinion_ids"
+            eval="[(6, 0, [ref('ssi_accountant.demo_accountant_opinion1'),ref('ssi_accountant.demo_accountant_opinion2'),ref('ssi_accountant.demo_accountant_opinion3'),ref('ssi_accountant.demo_accountant_opinion4')])]"
+        />
+</record>
+
+<record id="demo_accountant_service4" model="accountant.service">
+    <field name="name">Internal Control Audit/Review - (test)</field>
+    <field name="code">X004</field>
+    <field name="assurance" eval="1" />
+    <field
+            name="allowed_opinion_ids"
+            eval="[(6, 0, [ref('ssi_accountant.demo_accountant_opinion1'),ref('ssi_accountant.demo_accountant_opinion2'),ref('ssi_accountant.demo_accountant_opinion3'),ref('ssi_accountant.demo_accountant_opinion4')])]"
+        />
+</record>
+
+<record id="demo_accountant_service5" model="accountant.service">
+    <field name="name">Prospective Examination - (test)</field>
+    <field name="code">X005</field>
+    <field name="assurance" eval="1" />
+    <field
+            name="allowed_opinion_ids"
+            eval="[(6, 0, [ref('ssi_accountant.demo_accountant_opinion1'),ref('ssi_accountant.demo_accountant_opinion2'),ref('ssi_accountant.demo_accountant_opinion3'),ref('ssi_accountant.demo_accountant_opinion4')])]"
+        />
+</record>
+
+<!-- Non Assurance -->
+
+<record id="demo_accountant_service6" model="accountant.service">
+    <field name="name">Internal Audit - (test)</field>
+    <field name="code">X006</field>
+    <field name="assurance" eval="0" />
+</record>
+
+<record id="demo_accountant_service7" model="accountant.service">
+    <field name="name">Performance Audit - (test)</field>
+    <field name="code">X007</field>
+    <field name="assurance" eval="0" />
+</record>
+
+<record id="demo_accountant_service8" model="accountant.service">
+    <field name="name">Investigative Audit - (test)</field>
+    <field name="code">X008</field>
+    <field name="assurance" eval="0" />
+</record>
+
+<record id="demo_accountant_service9" model="accountant.service">
+    <field name="name">Financial Due Dilligent - (test)</field>
+    <field name="code">X009</field>
+    <field name="assurance" eval="0" />
+</record>
+
+<record id="demo_accountant_service10" model="accountant.service">
+    <field name="name">Tax Service - (test)</field>
+    <field name="code">X010</field>
+    <field name="assurance" eval="0" />
+</record>
+</odoo>
