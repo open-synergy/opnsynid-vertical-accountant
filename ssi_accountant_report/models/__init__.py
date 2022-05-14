@@ -3,8 +3,8 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html).
 
 from . import (
-    accountant_report,
-    accountant_report_method,
-    accountant_report_opinion,
+    accountant_report_mixin,
+    accountant_assurance_report,
+    accountant_nonassurance_report,
     accountant_service,
 )

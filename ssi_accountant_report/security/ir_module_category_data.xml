@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<record id="assurance_report_workflow_module_category" model="ir.module.category">
+    <field name="name">Assurance Report</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="nonassurance_report_workflow_module_category" model="ir.module.category">
+    <field name="name">Non-Assurance Report</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="assurance_report_data_module_category" model="ir.module.category">
+    <field name="name">Assurance Report</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<record id="nonassurance_report_data_module_category" model="ir.module.category">
+    <field name="name">Non-Assurance Report</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+
+</odoo>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<data noupdate="0">
+<!-- Assurance Report -->
+<record id="policy_template_assurance_report" model="policy.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_report.model_accountant_assurance_report"
+            />
+    <field
+                name="state_field_id"
+                search="[('model_id.model','=','accountant.assurance_report'),('name','=','state')]"
+            />
+    <field name="sequence" eval="100" />
+    <field name="python_code">result=True</field>
+</record>
+
+<record id="policy_template_assurance_report_ready" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_assurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.assurance_report'),('name','=','ready_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.assurance_report'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_report.assurance_report_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<record id="policy_template_nassurance_report_confirm" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_assurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.assurance_report'),('name','=','confirm_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.assurance_report'),('value','=','ready')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_report.assurance_report_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<record id="policy_template_assurance_report_cancel" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_assurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.assurance_report'),('name','=','cancel_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.report'),('value','in',['draft','ready','done'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_report.assurance_report_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<record id="policy_template_assurance_report_restart" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_assurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.assurance_report'),('name','=','restart_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.assurance_report'),('value','in',['cancel','reject'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_report.assurance_report_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<record id="policy_template_assurance_report_reject" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_assurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.assurance_report'),('name','=','reject_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.assurance_report'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<record id="policy_template_assurance_report_approve" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_assurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.assurance_report'),('name','=','approve_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.assurance_report'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<record
+            id="policy_template_assurance_report_manual_number"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_assurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.assurance_report'),('name','=','manual_number_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.assurance_report'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_report.assurance_report_validator_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!-- Non-Assurance Report -->
+<record id="policy_template_nonassurance_report" model="policy.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_report.model_accountant_nonassurance_report"
+            />
+    <field
+                name="state_field_id"
+                search="[('model_id.model','=','accountant.nonassurance_report'),('name','=','state')]"
+            />
+    <field name="sequence" eval="100" />
+    <field name="python_code">result=True</field>
+</record>
+
+<record id="policy_template_nonassurance_report_ready" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_nonassurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.nonassurance_report'),('name','=','ready_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.nonassurance_report'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_report.nonassurance_report_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<record id="policy_template_nonassurance_report_confirm" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_nonassurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.nonassurance_report'),('name','=','confirm_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.nonassurance_report'),('value','=','ready')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_report.nonassurance_report_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<record id="policy_template_nonassurance_report_cancel" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_nonassurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.nonassurance_report'),('name','=','cancel_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.nonassurance_report'),('value','in',['draft','ready','done'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_report.nonassurance_report_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<record id="policy_template_nonassurance_report_restart" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_nonassurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.nonassurance_report'),('name','=','restart_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.nonassurance_report'),('value','in',['cancel','reject'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_report.nonassurance_report_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<record id="policy_template_nonassurance_report_reject" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_nonassurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.nonassurance_report'),('name','=','reject_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.nonassurance_report'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<record id="policy_template_nonassurance_report_approve" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_nonassurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.nonassurance_report'),('name','=','approve_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.nonassurance_report'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<record
+            id="policy_template_nonassurance_report_manual_number"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_nonassurance_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.nonassurance_report'),('name','=','manual_number_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.nonassurance_report'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_report.nonassurance_report_validator_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+</data>
+</odoo>

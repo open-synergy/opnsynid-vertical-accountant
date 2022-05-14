@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-accountant_report_opinion_employee,accountant.report_opinion – user,model_accountant_report_opinion,base.group_user,1,1,1,1
-accountant_report_opinion_all,accountant.report_opinion – all,model_accountant_report_opinion,,1,0,0,0
-accountant_report_method_employee,accountant.report_method – user,model_accountant_report_method,base.group_user,1,1,1,1
-accountant_report_method_all,accountant.report_method – all,model_accountant_report_method,,1,0,0,0
-accountant_report_employee,accountant.report,model_accountant_report,base.group_user,1,1,1,1
-accountant_report_all,accountant.report,model_accountant_report,,1,0,0,0
+accountant_assurance_report_all,accountant.assurance_report - all,model_accountant_assurance_report,,1,0,0,0
+accountant_assurance_report_viewer,accountant.assurance_report - viewer,model_accountant_assurance_report,assurance_report_viewer_group,1,0,0,0
+accountant_assurance_report_user,accountant.assurance_report - user,model_accountant_assurance_report,assurance_report_user_group,1,1,1,1
+accountant_nonassurance_report_all,accountant.nonassurance_report - all,model_accountant_nonassurance_report,,1,0,0,0
+accountant_nonassurance_report_viewer,accountant.nonassurance_report - viewer,model_accountant_nonassurance_report,nonassurance_report_viewer_group,1,0,0,0
+accountant_nonassurance_report_user,accountant.nonassurance_report - user,model_accountant_nonassurance_report,nonassurance_report_user_group,1,1,1,1
