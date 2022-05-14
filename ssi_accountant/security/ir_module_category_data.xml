@@ -4,23 +4,32 @@
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <odoo>
 <record id="accountant_module_category" model="ir.module.category">
+    <field name="name">Accountant</field>
+</record>
+
+<record id="accountant_workflow_module_category" model="ir.module.category">
     <field name="name">Accountant - Workflow</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_module_category" />
 </record>
 
 <record id="accountant_configurator_module_category" model="ir.module.category">
     <field name="name">Accountant - Configurator</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_module_category" />
 </record>
 
 <record id="accountant_data_module_category" model="ir.module.category">
     <field name="name">Accountant - Data Ownership</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_module_category" />
 </record>
 
 <record id="accountant_reporting_module_category" model="ir.module.category">
     <field name="name">Accountant - Reporting</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_module_category" />
 </record>
 
 <record id="accountant_wizard_module_category" model="ir.module.category">
     <field name="name">Accountant - Wizard</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_module_category" />
 </record>
 
 </odoo>
