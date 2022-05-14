@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+  <record id="accountant_nonassurance_report_view_search" model="ir.ui.view">
+    <field name="name">accountant.nonassurance_report - search</field>
+    <field name="model">accountant.nonassurance_report</field>
+    <field
+            name="inherit_id"
+            ref="ssi_accountant_report.accountant_report_mixin_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+        </data>
+    </field>
+</record>
+
+<record id="accountant_nonassurance_report_view_tree" model="ir.ui.view">
+    <field name="name">accountant.nonassurance_report -tree</field>
+    <field name="model">accountant.nonassurance_report</field>
+    <field name="mode">primary</field>
+    <field
+            name="inherit_id"
+            ref="ssi_accountant_report.accountant_report_mixin_view_tree"
+        />
+    <field name="arch" type="xml">
+        <data>
+        </data>
+    </field>
+</record>
+
+<record id="accountant_nonassurance_report_view_form" model="ir.ui.view">
+    <field name="name">accountant.nonassurance_report - form</field>
+    <field name="model">accountant.nonassurance_report</field>
+    <field name="mode">primary</field>
+    <field
+            name="inherit_id"
+            ref="ssi_accountant_report.accountant_report_mixin_view_form"
+        />
+    <field name="arch" type="xml">
+        <data>
+        </data>
+    </field>
+</record>
+
+<record id="accountant_nonassurance_report_action" model="ir.actions.act_window">
+    <field name="name">Non-Assurance Reports</field>
+    <field name="res_model">accountant.nonassurance_report</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+        id="accountant_nonassurance_report_menu"
+        name="Non-Assurances"
+        parent="accountant_report_menu"
+        action="accountant_nonassurance_report_action"
+        sequence="2"
+    />
+
+</odoo>

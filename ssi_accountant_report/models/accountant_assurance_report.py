@@ -5,6 +5,7 @@
 from odoo import models
 
 
-class AccountantService(models.Model):
-    _name = "accountant.service"
-    _inherit = "accountant.service"
+class AccountantAssuranceReport(models.Model):
+    _name = "accountant.assurance_report"
+    _inherit = ["accountant.report_mixin"]
+    _description = "Accountant Assurance Report"

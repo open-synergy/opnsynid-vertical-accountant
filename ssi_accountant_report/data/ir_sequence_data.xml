@@ -3,15 +3,23 @@
      Copyright 2022 PT. Simetri Sinergi Indonesia
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
 <odoo>
+<data noupdate="1">
+<record id="sequence_assurance_report" model="ir.sequence">
+    <field name="name">Assurance Report</field>
+    <field name="code">accountant.assurance_report</field>
+    <field name="padding">5</field>
+    <field name="prefix">AR/%(year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+</record>
 
-    <data noupdate="1">
-        <record id="sequence_accountant_report" model="ir.sequence">
-            <field name="name">Accountant Report</field>
-            <field name="code">accountant.report</field>
-            <field name="padding">5</field>
-            <field name="prefix">REP/%(year)s/</field>
-            <field eval="1" name="number_next" />
-            <field eval="1" name="number_increment" />
-        </record>
-    </data>
+<record id="sequence_nonassurance_report" model="ir.sequence">
+    <field name="name">Non-Assurance Report</field>
+    <field name="code">accountant.nonassurance_report</field>
+    <field name="padding">5</field>
+    <field name="prefix">NAR/%(year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+</record>
+</data>
 </odoo>
