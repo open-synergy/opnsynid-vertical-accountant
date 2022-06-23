@@ -80,7 +80,16 @@
                                 />
                         <field name="firm_subsequent_num" />
                         <field name="subsequent_num" />
-                        <field name="restatement_id" />
+                        <field name="restatement_mode" />
+                        <field
+                                    name="restatement_id"
+                                    attrs="{'invisible': [('restatement_mode','=','manual')]}"
+                                />
+                        <field
+                                    name="restatement_report"
+                                    string="Restatement Report"
+                                    attrs="{'invisible': [('restatement_mode','=','odoo')]}"
+                                />
                         <field name="method_required" />
                         <field
                                     name="allowed_method_ids"
