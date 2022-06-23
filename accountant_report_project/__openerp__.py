@@ -4,7 +4,7 @@
 
 {
     "name": "Accountant Report to Project Link",
-    "version": "8.0.1.2.0",
+    "version": "8.0.1.3.0",
     "author": "PT. Simetri Sinergi Indonesia, OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",

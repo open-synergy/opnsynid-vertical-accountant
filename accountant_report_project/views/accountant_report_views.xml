@@ -10,7 +10,7 @@
             <xpath expr="//field[@name='partner_id']" position="after">
                 <field
                             name="project_id"
-                            domain="[('type','=','contract'),('partner_id','=',partner_id)]"
+                            domain="[('type','!=','view'),('partner_id','=',partner_id)]"
                         />
             </xpath>
         </data>
