@@ -212,9 +212,33 @@ class AccountantReport(models.Model):
         ],
         default="yearly",
     )
+    restatement_mode = fields.Selection(
+        string="Restatement Mode",
+        selection=[
+            ("odoo", "Choose Accountant Report on Odoo"),
+            ("manual", "Manual"),
+        ],
+        default="odoo",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     restatement_id = fields.Many2one(
         string="Restatement Report",
         comodel_name="accountant.report",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    restatement_report = fields.Char(
+        string="Manual Restatement Report",
         readonly=True,
         states={
             "draft": [
