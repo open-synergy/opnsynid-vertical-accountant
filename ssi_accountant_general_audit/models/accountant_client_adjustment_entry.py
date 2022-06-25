@@ -12,7 +12,6 @@ class AccountantClientAdjustmentEntry(models.Model):
     _inherit = [
         "mixin.transaction_confirm",
         "mixin.transaction_cancel",
-        "mixin.transaction_open",
         "mixin.transaction_done",
     ]
 
@@ -20,6 +19,44 @@ class AccountantClientAdjustmentEntry(models.Model):
     _approval_to_state = "done"
     _approval_state = "confirm"
     _after_approved_method = "action_done"
+
+    # Attributes related to add element on view automatically
+    _automatically_insert_view_element = True
+
+    # Attributes related to add element on form view automatically
+    _automatically_insert_multiple_approval_page = True
+
+    _statusbar_visible_label = "draft,confirm,done"
+
+    _policy_field_order = [
+        "confirm_ok",
+        "approve_ok",
+        "reject_ok",
+        "restart_approval_ok",
+        "cancel_ok",
+        "restart_ok",
+        "done_ok",
+        "manual_number_ok",
+    ]
+    _header_button_order = [
+        "action_confirm",
+        "action_approve_approval",
+        "action_reject_approval",
+        "action_done",
+        "%(ssi_transaction_cancel_mixin.base_select_cancel_reason_action)d",
+        "action_restart",
+    ]
+
+    # Attributes related to add element on search view automatically
+    _state_filter_order = [
+        "dom_draft",
+        "dom_confirm",
+        "dom_reject",
+        "dom_open",
+        "dom_done",
+        "dom_cancel",
+    ]
+
     _create_sequence_state = "done"
 
     @api.model
@@ -27,13 +64,13 @@ class AccountantClientAdjustmentEntry(models.Model):
         res = super(AccountantClientAdjustmentEntry, self)._get_policy_field()
         policy_field = [
             "confirm_ok",
-            "open_ok",
             "approve_ok",
             "done_ok",
             "cancel_ok",
             "reject_ok",
             "restart_ok",
             "restart_approval_ok",
+            "manual_number_ok",
         ]
         res += policy_field
         return res

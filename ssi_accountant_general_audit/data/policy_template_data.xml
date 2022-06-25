@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<data noupdate="1">
+<!-- General Audit -->
+<record id="policy_template_general_audit" model="policy.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit.model_accountant_general_audit"
+            />
+    <field
+                name="state_field_id"
+                search="[('model_id.model','=','accountant.general_audit'),('name','=','state')]"
+            />
+    <field name="sequence" eval="100" />
+    <field name="python_code">result=True</field>
+</record>
+
+<!-- General Audit: Start -->
+<record id="policy_template_general_audit_open" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_general_audit" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.general_audit'),('name','=','open_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.general_audit'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_general_audit_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  General Audit: Confirm -->
+<record id="policy_template_nassurance_report_confirm" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_general_audit" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.general_audit'),('name','=','confirm_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.general_audit'),('value','=','open')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_general_audit_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  General Audit: Cancel -->
+<record id="policy_template_general_audit_cancel" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_general_audit" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.general_audit'),('name','=','cancel_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.general_audit'),('value','in',['draft','open','done'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_general_audit_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  General Audit: Restart -->
+<record id="policy_template_general_audit_restart" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_general_audit" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.general_audit'),('name','=','restart_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.general_audit'),('value','in',['cancel','reject'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_general_audit_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  General Audit: Reject -->
+<record id="policy_template_general_audit_reject" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_general_audit" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.general_audit'),('name','=','reject_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.general_audit'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  General Audit: Approve -->
+<record id="policy_template_general_audit_approve" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_general_audit" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.general_audit'),('name','=','approve_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.general_audit'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  General Audit: Manual Number -->
+<record id="policy_template_general_audit_manual_number" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_general_audit" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.general_audit'),('name','=','manual_number_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.general_audit'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_general_audit_validator_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!-- Trial Balance -->
+<record id="policy_template_trial_balance" model="policy.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit.model_accountant_client_trial_balance"
+            />
+    <field
+                name="state_field_id"
+                search="[('model_id.model','=','accountant.client_trial_balance'),('name','=','state')]"
+            />
+    <field name="sequence" eval="100" />
+    <field name="python_code">result=True</field>
+</record>
+
+<!-- Trial Balance: Start -->
+<record id="policy_template_trial_balance_open" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_trial_balance" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_trial_balance'),('name','=','open_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_trial_balance'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_trial_balance_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  Trial Balance: Confirm -->
+<record id="policy_template_trial_balance_confirm" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_trial_balance" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_trial_balance'),('name','=','confirm_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_trial_balance'),('value','=','open')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_trial_balance_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  Trial Balance: Cancel -->
+<record id="policy_template_trial_balance_cancel" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_trial_balance" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_trial_balance'),('name','=','cancel_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_trial_balance'),('value','in',['draft','open','done'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_trial_balance_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  Trial Balance: Restart -->
+<record id="policy_template_trial_balance_restart" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_trial_balance" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_trial_balance'),('name','=','restart_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_trial_balance'),('value','in',['cancel','reject'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_trial_balance_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  Trial Balance: Reject -->
+<record id="policy_template_trial_balance_reject" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_trial_balance" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_trial_balance'),('name','=','reject_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_trial_balance'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  Trial Balance: Approve -->
+<record id="policy_template_trial_balance_approve" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_trial_balance" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_trial_balance'),('name','=','approve_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_trial_balance'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  Trial Balance: Manual Number -->
+<record id="policy_template_trial_balance_manual_number" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_trial_balance" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_trial_balance'),('name','=','manual_number_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_trial_balance'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_trial_balance_validator_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!-- Adjustment Entry -->
+<record id="policy_template_adjustment_entry" model="policy.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit.model_accountant_client_adjustment_entry"
+            />
+    <field
+                name="state_field_id"
+                search="[('model_id.model','=','accountant.client_adjustment_entry'),('name','=','state')]"
+            />
+    <field name="sequence" eval="100" />
+    <field name="python_code">result=True</field>
+</record>
+
+<!--  Adjustment Entry: Confirm -->
+<record id="policy_template_adjustment_entry_confirm" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_adjustment_entry" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_adjustment_entry'),('name','=','confirm_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_adjustment_entry'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_adjustment_entry_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  Adjustment Entry: Cancel -->
+<record id="policy_template_adjustment_entry_cancel" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_adjustment_entry" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_adjustment_entry'),('name','=','cancel_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_adjustment_entry'),('value','in',['draft','done'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_adjustment_entry_user_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  Adjustment Entry: Restart -->
+<record id="policy_template_adjustment_entry_restart" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_adjustment_entry" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_adjustment_entry'),('name','=','restart_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_adjustment_entry'),('value','in',['cancel','reject'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_adjustment_entry_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  Adjustment Entry: Reject -->
+<record id="policy_template_adjustment_entry_reject" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_adjustment_entry" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_adjustment_entry'),('name','=','reject_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_adjustment_entry'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  Adjustment Entry: Approve -->
+<record id="policy_template_adjustment_entry_approve" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_adjustment_entry" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_adjustment_entry'),('name','=','approve_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_adjustment_entry'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  Adjustment Entry: Manual Number -->
+<record
+            id="policy_template_adjustment_entry_manual_number"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_adjustment_entry" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.client_adjustment_entry'),('name','=','manual_number_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant.client_adjustment_entry'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_adjustment_entry_validator_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+</data>
+</odoo>

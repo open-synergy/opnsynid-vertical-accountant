@@ -16,11 +16,53 @@ class AccountantGeneralAudit(models.Model):
         "mixin.transaction_done",
     ]
 
+    # Attributes related to multiple approval
     _approval_from_state = "draft"
     _approval_to_state = "done"
     _approval_state = "confirm"
     _after_approved_method = "action_done"
-    _create_sequence_state = "done"
+
+    # Attributes related to add element on view automatically
+    _automatically_insert_view_element = True
+
+    # Attributes related to add element on form view automatically
+    _automatically_insert_multiple_approval_page = True
+
+    _statusbar_visible_label = "draft,open,confirm,done"
+
+    _policy_field_order = [
+        "open_ok",
+        "confirm_ok",
+        "approve_ok",
+        "reject_ok",
+        "restart_approval_ok",
+        "cancel_ok",
+        "restart_ok",
+        "done_ok",
+        "manual_number_ok",
+    ]
+    _header_button_order = [
+        "action_open",
+        "action_confirm",
+        "action_approve_approval",
+        "action_reject_approval",
+        "action_done",
+        "%(ssi_transaction_cancel_mixin.base_select_cancel_reason_action)d",
+        "action_restart",
+    ]
+
+    # Attributes related to add element on search view automatically
+    _state_filter_order = [
+        "dom_draft",
+        "dom_open",
+        "dom_confirm",
+        "dom_reject",
+        "dom_open",
+        "dom_done",
+        "dom_cancel",
+    ]
+
+    _create_sequence_state = "open"
 
     @api.model
     def _get_policy_field(self):
@@ -34,6 +76,7 @@ class AccountantGeneralAudit(models.Model):
             "reject_ok",
             "restart_ok",
             "restart_approval_ok",
+            "manual_number_ok",
         ]
         res += policy_field
         return res
@@ -178,17 +221,6 @@ class AccountantGeneralAudit(models.Model):
     opinion_id = fields.Many2one(
         string="Opinion",
         comodel_name="accountant.general_audit_opinion",
-        readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    user_id = fields.Many2one(
-        string="Responsible",
-        comodel_name="res.users",
-        required=True,
         readonly=True,
         states={
             "draft": [

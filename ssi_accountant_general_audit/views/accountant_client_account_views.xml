@@ -26,7 +26,11 @@
         />
         <field name="mode">primary</field>
         <field name="arch" type="xml">
-            <data />
+            <data>
+                <xpath expr="//field[@name='code']" position="before">
+                    <field name="sequence" widget="handle" />
+                </xpath>
+            </data>
         </field>
     </record>
 
@@ -62,7 +66,8 @@
         name="Accounts"
         parent="menu_accountant_configuration_trial_balance"
         action="accountant_client_account_action"
-        sequence="2"
+        sequence="3"
+        groups="accountant_client_account_group"
     />
 
 </odoo>

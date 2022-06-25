@@ -32,7 +32,11 @@
         />
         <field name="mode">primary</field>
         <field name="arch" type="xml">
-            <data />
+            <data>
+                <xpath expr="//field[@name='code']" position="before">
+                    <field name="sequence" widget="handle" />
+                </xpath>
+            </data>
         </field>
     </record>
 
@@ -69,10 +73,11 @@
 
     <menuitem
         id="accountant_general_audit_worksheet_conclusion_menu"
-        name="Worksheet Conclusion"
+        name="Conclusions"
         parent="menu_accountant_configuration_worksheet"
         action="accountant_general_audit_worksheet_conclusion_action"
         sequence="2"
+        groups="accountant_general_audit_worksheet_conclusion_group"
     />
 
 </odoo>

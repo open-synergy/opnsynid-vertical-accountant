@@ -7,50 +7,30 @@
     <menuitem
         id="menu_accountant_report_general_audit"
         name="General Audit"
-        parent="ssi_accountant.menu_accountant_report"
+        parent="ssi_accountant.menu_root_accountant"
         sequence="50"
     />
 
-    <!-- <menuitem
-            id="accountant_risk_assessment_menu"
-            name="Risk Assessment"
-            sequence="101"
-            parent="accountant_general_audit_menu"
-        />
-
-    <menuitem
-            id="accountant_risk_response_menu"
-            name="Risk Response"
-            sequence="102"
-            parent="accountant_general_audit_menu"
-        /> -->
-
-    <!-- <menuitem
-            id="accountant_reporting_menu"
-            name="Reporting"
-            sequence="5"
-            parent="accountant_general_audit_menu"
-        /> -->
 
     <menuitem
         id="menu_accountant_configuration_general_audit"
         name="General Audit"
-        sequence="10"
+        sequence="101"
         parent="ssi_accountant.menu_accountant_configuration"
     />
 
     <menuitem
         id="menu_accountant_configuration_trial_balance"
         name="Trial Balance"
-        sequence="101"
-        parent="menu_accountant_configuration_general_audit"
+        sequence="102"
+        parent="ssi_accountant.menu_accountant_configuration"
     />
 
     <menuitem
         id="menu_accountant_configuration_worksheet"
         name="Worksheet"
-        sequence="102"
-        parent="menu_accountant_configuration_general_audit"
+        sequence="103"
+        parent="ssi_accountant.menu_accountant_configuration"
     />
 
 </odoo>

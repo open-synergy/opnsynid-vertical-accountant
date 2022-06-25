@@ -26,7 +26,11 @@
         />
         <field name="mode">primary</field>
         <field name="arch" type="xml">
-            <data />
+            <data>
+                <xpath expr="//field[@name='code']" position="before">
+                    <field name="sequence" widget="handle" />
+                </xpath>
+            </data>
         </field>
     </record>
 
@@ -45,7 +49,7 @@
                     <field name="group_id" />
                     <field name="normal_balance" />
                 </xpath>
-                <xpath expr="//page[@name='note']" position="after">
+                <xpath expr="//page[@name='note']" position="before">
                     <page name="page_computation" string="Computation">
                         <group name="group_computation_1" colspan="4" col="2">
                             <field name="python_code" colspan="4" widget="ace" />
@@ -57,7 +61,7 @@
     </record>
 
     <record id="accountant_client_account_type_action" model="ir.actions.act_window">
-        <field name="name">Account Type</field>
+        <field name="name">Account Types</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">accountant.client_account_type</field>
         <field name="view_mode">tree,form</field>
@@ -65,10 +69,11 @@
 
     <menuitem
         id="accountant_client_account_type_menu"
-        name="Account Type"
+        name="Account Types"
         parent="menu_accountant_configuration_trial_balance"
         action="accountant_client_account_type_action"
         sequence="2"
+        groups="accountant_client_account_type_group"
     />
 
 </odoo>
