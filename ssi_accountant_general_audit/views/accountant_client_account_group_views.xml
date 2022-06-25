@@ -26,7 +26,11 @@
         />
         <field name="mode">primary</field>
         <field name="arch" type="xml">
-            <data />
+            <data>
+                <xpath expr="//field[@name='code']" position="before">
+                    <field name="sequence" widget="handle" />
+                </xpath>
+            </data>
         </field>
     </record>
 
@@ -48,7 +52,7 @@
     </record>
 
     <record id="accountant_client_account_group_action" model="ir.actions.act_window">
-        <field name="name">Account Group</field>
+        <field name="name">Account Groups</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">accountant.client_account_group</field>
         <field name="view_mode">tree,form</field>
@@ -56,10 +60,11 @@
 
     <menuitem
         id="accountant_client_account_group_menu"
-        name="Account Group"
+        name="Account Groups"
         parent="menu_accountant_configuration_trial_balance"
         action="accountant_client_account_group_action"
-        sequence="2"
+        sequence="1"
+        groups="accountant_client_account_group_group"
     />
 
 </odoo>

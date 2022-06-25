@@ -36,7 +36,7 @@ class AccountantClientTrialBalanceComputation(models.Model):
             ]
             computations = obj_computation.search(criteria)
             if len(computations) > 0:
-                python_code = computations[0].phyton_code
+                python_code = computations[0].python_code
 
                 localdict = document._get_localdict()
                 try:

@@ -7,296 +7,80 @@
     <record id="accountant_client_adjustment_entry_view_search" model="ir.ui.view">
         <field name="name">accountant.client_adjustment_entry form</field>
         <field name="model">accountant.client_adjustment_entry</field>
+        <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_search"
+        />
+        <field name="mode">primary</field>
         <field name="arch" type="xml">
-            <search>
-                <field name="name" />
-                <field name="partner_id" />
-                <field name="date_start" />
-                <field name="date_end" />
-                <field name="account_type_set_id" />
-                <field name="general_audit_id" />
-                <field name="adjustment_type" />
-                <field name="company_id" groups="base.group_multi_company" />
-                <field name="state" />
-                <group name="dom_state" string="State">
-                    <filter
-                        name="dom_draft"
-                        string="Draft"
-                        domain="[('state','=','draft')]"
-                    />
-                    <filter
-                        name="dom_open"
-                        string="On Progress"
-                        domain="[('state','=','open')]"
-                    />
-                    <filter
-                        name="dom_confirm"
-                        string="Waiting for Approval"
-                        domain="[('state','=','confirm')]"
-                    />
-                    <filter
-                        name="dom_done"
-                        string="Valid"
-                        domain="[('state','=','done')]"
-                    />
-                    <filter
-                        name="dom_cancel"
-                        string="Cancel"
-                        domain="[('state','=','cancel')]"
-                    />
-                </group>
-                <separator />
-                <group name="group" string="Group By">
-                    <filter
-                        name="grp_company"
-                        string="Company"
-                        context="{'group_by':'company_id'}"
-                        groups="base.group_multi_company"
-                    />
-                    <filter
-                        name="grp_general_audit"
-                        string="# General Audit"
-                        context="{'group_by':'general_audit_id'}"
-                    />
-                    <filter
-                        name="grp_partner"
-                        string="Partner"
-                        context="{'group_by':'partner_id'}"
-                    />
-                    <filter
-                        name="grp_account_type_set"
-                        string="Account Type Set"
-                        context="{'group_by':'account_type_set_id'}"
-                    />
-                    <filter
-                        name="grp_state"
-                        string="State"
-                        context="{'group_by':'state'}"
-                    />
-                    <filter
-                        name="grp_state"
-                        string="State"
-                        context="{'group_by':'state'}"
-                    />
-                    <filter
-                        name="grp_date_start"
-                        string="Start Date by"
-                        context="{'group_by':'date_start'}"
-                    />
-                    <filter
-                        name="grp_date_end"
-                        string="End Date by"
-                        context="{'group_by':'date_end'}"
-                    />
-                </group>
-            </search>
+            <data />
         </field>
     </record>
 
     <record id="accountant_client_adjustment_entry_view_tree" model="ir.ui.view">
         <field name="name">accountant.client_adjustment_entry tree</field>
         <field name="model">accountant.client_adjustment_entry</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_tree"
+        />
         <field name="arch" type="xml">
-            <tree
-                decoration-danger="date_start and (date_start&lt;current_date) and (state in ('confirm','valid'))"
-                decoration-info="state=='draft'"
-                decoration-muted="state=='cancel'"
-            >
-                <field name="id" optional="hide" />
-                <field name="display_name" decoration-bf="1" />
-                <field name="company_id" groups="base.group_multi_company" />
-                <field name="general_audit_id" />
-                <field name="partner_id" />
-                <field name="date_start" />
-                <field name="date_end" />
-                <field name="account_type_set_id" />
-                <field name="adjustment_type" />
-                <field
-                    name="state"
-                    widget="badge"
-                    decoration-info="state == 'draft'"
-                    decoration-success="state == 'done'"
-                    decoration-muted="state == 'cancel'"
-                />
-            </tree>
+            <data>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="general_audit_id" />
+                    <field name="partner_id" />
+                    <field name="date_start" />
+                    <field name="date_end" />
+                    <field name="account_type_set_id" />
+                    <field name="adjustment_type" />
+                </xpath>
+            </data>
         </field>
     </record>
 
     <record id="accountant_client_adjustment_entry_view_form" model="ir.ui.view">
         <field name="name">accountant.client_adjustment_entry form</field>
         <field name="model">accountant.client_adjustment_entry</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_form"
+        />
         <field name="arch" type="xml">
-            <form>
-                <header>
-                    <button
-                        name="action_approve_approval"
-                        string="Approve"
-                        type="object"
-                        class="oe_highlight"
-                        attrs="{'invisible':[('approve_ok','!=',True)]}"
-                        confirm="Approve data. Are you sure?"
-                    />
-                    <button
-                        name="action_reject_approval"
-                        string="Reject"
-                        type="object"
-                        attrs="{'invisible':[('reject_ok','!=',True)]}"
-                        confirm="Reject data. Are you sure?"
-                    />
-                    <button
-                        name="action_confirm"
-                        type="object"
-                        string="Confirm"
-                        class="oe_highlight"
-                        confirm="Confirm. Are you sure?"
-                        attrs="{'invisible':[('confirm_ok','=',False)]}"
-                    />
-                    <button
-                        name="action_open"
-                        type="object"
-                        string="Open"
-                        class="oe_highlight"
-                        attrs="{'invisible':[('open_ok','=',False)]}"
-                        confirm="Open Data. Are you sure?"
-                    />
-                    <button
-                        name="%(ssi_transaction_cancel_mixin.base_select_cancel_reason_action)d"
-                        string="Cancel"
-                        type="action"
-                        attrs="{'invisible':[('cancel_ok','!=',True)]}"
-                    />
-                    <button
-                        name="action_restart"
-                        type="object"
-                        string="Restart"
-                        class="oe_highlight"
-                        attrs="{'invisible':[('restart_ok','=',False)]}"
-                        confirm="Restart Data. Are you sure?"
-                    />
-                    <field
-                        name="state"
-                        widget="statusbar"
-                        statusbar_visible="draft,open,confirm,done"
-                    />
-                </header>
-                <field name="need_validation" invisible="1" />
-                <field name="approved" invisible="1" />
-                <field name="rejected" invisible="1" />
-                <sheet>
-                    <div
-                        class="oe_right oe_button_box"
-                        style="width: 300px;"
-                        name="buttons"
-                    >
-                    </div>
-                    <div name="header" class="oe_left" style="width: 500px;">
-                        <div name="header_1" class="oe_title" style="width: 500px;">
-                            <label for="display_name" />
-                            <h1>
-                              <field name="name" class="oe_edit_only" />
-                              <field name="display_name" class="oe_read_only" />
-                            </h1>
-                            <h2 attrs="{'invisible': [('state', '!=', 'cancel')]}">
-                                <label
-                                    for="cancel_reason_id"
-                                    string="Cancellation reason:"
-                                />
-                                <field name="cancel_reason_id" class="oe_inline" />
-                            </h2>
-
-                        </div>
-                    </div>
-                    <group name="group_1" colspan="4" col="2">
-                        <group name="group_1_1" colspan="1" col="2">
-                            <field name="general_audit_id" />
-                            <field
-                                name="company_id"
-                                groups="base.group_multi_company"
-                            />
-                            <field name="partner_id" />
-                            <field name="account_type_set_id" />
-                            <field name="currency_id" />
-                            <field name="adjustment_type" />
-                        </group>
-                        <group name="group_1_2">
-                            <field name="date_start" />
-                            <field name="date_end" />
-                            <field name="previous_date_start" />
-                            <field name="previous_date_end" />
-                            <field name="interim_date_start" />
-                            <field name="interim_date_end" />
-                        </group>
-                    </group>
-                    <notebook colspan="4">
-                        <page name="page_note" string="Note">
-                            <field name="note" colspan="4" nolabel="1" />
-                        </page>
-                        <page name="detail" string="Details">
-                            <field name="detail_ids">
-                                <tree editable="top">
-                                    <field
-                                        name="account_id"
-                                        domain="[('partner_id','=',parent.partner_id)]"
-                                    />
-                                    <field name="name" />
-                                    <field name="debit" />
-                                    <field name="credit" />
-                                    <field name="trial_balance_detail_id" />
-                                </tree>
-                            </field>
-                        </page>
-                        <page
-                            name="policy"
-                            string="Policies"
-                            groups="base.group_system"
-                        >
-                            <group name="policy_1" colspan="4" col="2">
-                                <field name="policy_template_id" />
-                                <button
-                                    name="action_reload_policy_template"
-                                    type="object"
-                                    string="Reload Template Policy"
-                                    class="oe_highlight"
-                                    icon="fa-refresh"
-                                />
-                                <field name="confirm_ok" />
-                                <field name="approve_ok" />
-                                <field name="open_ok" />
-                                <field name="cancel_ok" />
-                                <field name="reject_ok" />
-                                <field name="restart_ok" />
-                                <field name="restart_approval_ok" />
-                            </group>
-                        </page>
-                        <page string="Approvals" name="multiple_approval">
-                            <group name="multiple_approval_1" colspan="4" col="2">
-                                <field name="approval_template_id" />
-                                <button
-                                    name="action_reload_approval_template"
-                                    string="Reload Template"
-                                    class="oe_highlight"
-                                    type="object"
-                                />
-                                <newLine />
+            <data>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="general_audit_id" />
+                    <field name="partner_id" />
+                    <field name="account_type_set_id" />
+                    <field name="currency_id" />
+                    <field name="adjustment_type" />
+                </xpath>
+                <xpath expr="//group[@name='header_right']" position="inside">
+                    <field name="date_start" />
+                    <field name="date_end" />
+                    <field name="previous_date_start" />
+                    <field name="previous_date_end" />
+                    <field name="interim_date_start" />
+                    <field name="interim_date_end" />
+                </xpath>
+                <xpath expr="//page[@name='note']" position="before">
+                    <page name="detail" string="Details">
+                        <field name="detail_ids">
+                            <tree editable="top">
                                 <field
-                                    name="active_approver_partner_ids"
-                                    widget="many2many_tags"
+                                    name="account_id"
+                                    domain="[('partner_id','=',parent.partner_id)]"
                                 />
-                            </group>
-                            <field
-                                name="approval_ids"
-                                attrs="{'invisible':[('approval_ids', '=', [])]}"
-                                nolabel="1"
-                            />
-                        </page>
-                    </notebook>
-                </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" groups="base.group_user" />
-                    <field name="activity_ids" />
-                    <field name="message_ids" />
-                </div>
-            </form>
+                                <field name="name" />
+                                <field name="debit" />
+                                <field name="credit" />
+                                <field name="trial_balance_detail_id" />
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </data>
         </field>
     </record>
 
@@ -323,6 +107,7 @@
         parent="menu_accountant_report_general_audit"
         action="accountant_client_adjustment_entry_action"
         sequence="3"
+        groups="assurance_adjustment_entry_viewer_group"
     />
 
 

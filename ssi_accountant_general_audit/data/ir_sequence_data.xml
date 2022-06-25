@@ -8,11 +8,12 @@
     <data noupdate="1">
         <record id="sequence_accountant_client_trial_balance" model="ir.sequence">
             <field name="name">Accountant Trial Balance</field>
-            <field name="code">ATB</field>
-            <field name="padding">4</field>
-            <field name="prefix">ATB/%(year)s/</field>
+            <field name="code">accountant.trial_balance</field>
+            <field name="padding">6</field>
+            <field name="prefix">ATB/%(range_year)s/</field>
             <field eval="1" name="number_next" />
             <field eval="1" name="number_increment" />
+            <field name="use_date_range" eval="1" />
         </record>
     </data>
 

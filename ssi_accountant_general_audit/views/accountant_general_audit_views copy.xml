@@ -1,0 +1,394 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="accountant_general_audit_view_search" model="ir.ui.view">
+        <field name="name">accountant.general.audit form</field>
+        <field name="model">accountant.general_audit</field>
+        <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="title" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="account_type_set_id" />
+                <field name="financial_accounting_standard_id" />
+                <field name="opinion_id" />
+                <field name="user_id" />
+                <field name="accountant_id" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="state" />
+                <filter
+                    name="needs_review"
+                    string="Needs my Review"
+                    domain="[('approval_ids','in',uid), ('state', 'not in', ['done', 'cancel'])]"
+                />
+                <group name="dom_state" string="State">
+                    <filter
+                        name="dom_draft"
+                        string="Draft"
+                        domain="[('state','=','draft')]"
+                    />
+                    <filter
+                        name="dom_open"
+                        string="On Progress"
+                        domain="[('state','=','open')]"
+                    />
+                    <filter
+                        name="dom_confirm"
+                        string="Waiting for Approval"
+                        domain="[('state','=','confirm')]"
+                    />
+                    <filter
+                        name="dom_done"
+                        string="Valid"
+                        domain="[('state','=','done')]"
+                    />
+                    <filter
+                        name="dom_cancel"
+                        string="Cancel"
+                        domain="[('state','=','cancel')]"
+                    />
+                </group>
+                <separator />
+                <group name="group" string="Group By">
+                    <filter
+                        name="grp_company"
+                        string="Company"
+                        context="{'group_by':'company_id'}"
+                        groups="base.group_multi_company"
+                    />
+                    <filter
+                        name="grp_partner"
+                        string="Partner"
+                        context="{'group_by':'partner_id'}"
+                    />
+                    <filter
+                        name="grp_account_type_set"
+                        string="Account Type Set"
+                        context="{'group_by':'account_type_set_id'}"
+                    />
+                        <filter
+                        name="grp_opinion"
+                        string="Opinion"
+                        context="{'group_by':'opinion_id'}"
+                    />
+                    <filter
+                        name="grp_state"
+                        string="State"
+                        context="{'group_by':'state'}"
+                    />
+                    <filter
+                        name="grp_date_start"
+                        string="Start Date by"
+                        context="{'group_by':'date_start'}"
+                    />
+                    <filter
+                        name="grp_date_end"
+                        string="End Date by"
+                        context="{'group_by':'date_end'}"
+                    />
+
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_view_tree" model="ir.ui.view">
+        <field name="name">accountant.general.audit tree</field>
+        <field name="model">accountant.general_audit</field>
+        <field name="arch" type="xml">
+            <tree decoration-info="state=='draft'" decoration-muted="state=='cancel'">
+                <field name="id" optional="hide" />
+                <field name="display_name" decoration-bf="1" />
+                <field name="title" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="partner_id" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="account_type_set_id" />
+                <field name="financial_accounting_standard_id" />
+                <field name="user_id" />
+                <field name="accountant_id" />
+                <field name="opinion_id" />
+                <field
+                    name="state"
+                    widget="badge"
+                    decoration-info="state == 'draft'"
+                    decoration-success="state == 'done'"
+                    decoration-muted="state == 'cancel'"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_view_form" model="ir.ui.view">
+        <field name="name">accountant.general.audit form</field>
+        <field name="model">accountant.general_audit</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="action_approve_approval"
+                        string="Approve"
+                        type="object"
+                        class="oe_highlight"
+                        attrs="{'invisible':[('approve_ok','!=',True)]}"
+                        confirm="Approve data. Are you sure?"
+                    />
+                    <button
+                        name="action_reject_approval"
+                        string="Reject"
+                        type="object"
+                        attrs="{'invisible':[('reject_ok','!=',True)]}"
+                        confirm="Reject data. Are you sure?"
+                    />
+                    <button
+                        name="action_confirm"
+                        type="object"
+                        string="Confirm"
+                        class="oe_highlight"
+                        confirm="Confirm. Are you sure?"
+                        attrs="{'invisible':[('confirm_ok','=',False)]}"
+                    />
+                    <button
+                        name="action_open"
+                        type="object"
+                        string="Open"
+                        class="oe_highlight"
+                        attrs="{'invisible':[('open_ok','=',False)]}"
+                        confirm="Open Data. Are you sure?"
+                    />
+                    <button
+                        name="%(ssi_transaction_cancel_mixin.base_select_cancel_reason_action)d"
+                        string="Cancel"
+                        type="action"
+                        attrs="{'invisible':[('cancel_ok','!=',True)]}"
+                    />
+                    <button
+                        name="action_restart"
+                        type="object"
+                        string="Restart"
+                        class="oe_highlight"
+                        attrs="{'invisible':[('restart_ok','=',False)]}"
+                        confirm="Restart Data. Are you sure?"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,open,confirm,done"
+                    />
+                </header>
+                <field name="need_validation" invisible="1" />
+                <field name="approved" invisible="1" />
+                <field name="rejected" invisible="1" />
+                <sheet>
+                    <div
+                        class="oe_right oe_button_box"
+                        style="width: 300px;"
+                        name="buttons"
+                    >
+                    </div>
+                    <div name="header" class="oe_left" style="width: 500px;">
+                        <div name="header_1" class="oe_title" style="width: 500px;">
+                            <label for="display_name" />
+                            <h1>
+                              <field name="name" class="oe_edit_only" />
+                              <field name="display_name" class="oe_read_only" />
+                            </h1>
+                            <h2 attrs="{'invisible': [('state', '!=', 'cancel')]}">
+                                <label
+                                    for="cancel_reason_id"
+                                    string="Cancellation reason:"
+                                />
+                                <field name="cancel_reason_id" class="oe_inline" />
+                            </h2>
+                            <label for="title" />
+                            <field name="title" nolabel="1" />
+                            <label for="opinion_id" />
+                            <field name="opinion_id" />
+                        </div>
+                    </div>
+                    <group name="group_1" colspan="4" col="2">
+                        <group name="group_1_1" colspan="1" col="2">
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                            />
+                            <field
+                                name="partner_id"
+                                domain="[('parent_id','=',False),('is_company','=',True)]"
+                            />
+                            <field name="account_type_set_id" />
+                            <field name="financial_accounting_standard_id" />
+                            <field name="currency_id" />
+                            <field name="user_id" />
+                            <field
+                                name="accountant_id"
+                                domain="[('parent_id','=',False),('is_company','=',False)]"
+                            />
+                            <field name="num_of_consecutive_audit_firm" />
+                            <field name="num_of_consecutive_audit_accountant" />
+                        </group>
+                        <group name="group_1_2">
+                            <field name="date_start" />
+                            <field name="date_end" />
+                            <field name="previous_date_start" />
+                            <field name="previous_date_end" />
+                            <field name="interim_date_start" />
+                            <field name="interim_date_end" />
+                            <field name="restatement_option" />
+                            <field
+                                name="previous_audit_id"
+                                attrs="{'invisible':[('restatement_option','!=','internal')],'required':[('restatement_option','=','internal')]}"
+                                domain="[('id','!=',id),('partner_id','=',partner_id),('state','=','valid')]"
+                            />
+                            <field
+                                name="previous_audit"
+                                attrs="{'invisible':[('restatement_option','!=','external')],'required':[('restatement_option','=','external')]}"
+                            />
+                        </group>
+                    </group>
+                    <notebook colspan="4">
+                        <page name="page_note" string="Note">
+                            <field name="note" colspan="4" nolabel="1" />
+                        </page>
+                        <page name="link" string="Links">
+                            <group name="link1" colspan="4" col="2">
+                                <group
+                                    name="link_1_1"
+                                    colspan="1"
+                                    col="2"
+                                    string="Risk Assesment"
+                                >
+                                </group>
+                                <group
+                                    name="link_1_2"
+                                    colspan="1"
+                                    col="2"
+                                    string="Risk Response"
+                                >
+                                </group>
+                                <group
+                                    name="link_1_3"
+                                    colspan="1"
+                                    col="2"
+                                    string="Reporting"
+                                >
+                                </group>
+                                <group
+                                    name="link_1_4"
+                                    colspan="1"
+                                    col="2"
+                                    string="Other"
+                                >
+                                    <field
+                                        name="trial_balance_ids"
+                                        invisible="1"
+                                        widget="many2many_tags"
+                                    />
+                                    <field name="trial_balance_id" />
+                                </group>
+                            </group>
+                        </page>
+                        <page name="worksheet" string="Worksheets">
+                            <group name="worksheet_1" colspan="4" col="2">
+                                <field name="trial_balance_id" />
+                            </group>
+                            <field name="worksheet_ids">
+                                <tree>
+                                    <field name="display_name" string="# Document" />
+                                    <field name="parent_type_id" />
+                                    <field name="user_id" />
+                                    <field name="conclusion_id" />
+                                    <field name="state" />
+                                </tree>
+                            </field>
+                        </page>
+                        <page
+                            name="policy"
+                            string="Policies"
+                            groups="base.group_system"
+                        >
+                            <group name="policy_1" colspan="4" col="2">
+                                <field name="policy_template_id" />
+                                <button
+                                    name="action_reload_policy_template"
+                                    type="object"
+                                    string="Reload Template Policy"
+                                    class="oe_highlight"
+                                    icon="fa-refresh"
+                                />
+                                <field name="confirm_ok" />
+                                <field name="approve_ok" />
+                                <field name="open_ok" />
+                                <field name="cancel_ok" />
+                                <field name="reject_ok" />
+                                <field name="restart_ok" />
+                                <field name="restart_approval_ok" />
+                            </group>
+                        </page>
+                        <page string="Approvals" name="multiple_approval">
+                            <group name="multiple_approval_1" colspan="4" col="2">
+                                <field name="approval_template_id" />
+                                <button
+                                    name="action_reload_approval_template"
+                                    string="Reload Template"
+                                    class="oe_highlight"
+                                    type="object"
+                                />
+                                <newLine />
+                                <field
+                                    name="active_approver_partner_ids"
+                                    widget="many2many_tags"
+                                />
+                            </group>
+                            <field
+                                name="approval_ids"
+                                attrs="{'invisible':[('approval_ids', '=', [])]}"
+                                nolabel="1"
+                            />
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_action" model="ir.actions.act_window">
+        <field name="name">General Audits</field>
+        <field name="res_model">accountant.general_audit</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{
+            'readonly_by_pass': True,
+            'search_default_dom_draft':1,
+            'search_default_dom_open':1,
+            'search_default_dom_confirm':1,
+            }
+        </field>
+    </record>
+
+    <menuitem
+        id="accountant_general_audit_sub_menu"
+        name="General Audits"
+        parent="menu_accountant_report_general_audit"
+        action="accountant_general_audit_action"
+        sequence="1"
+        groups="assurance_general_audit_viewer_group"
+    />
+
+
+</odoo>

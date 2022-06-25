@@ -40,7 +40,7 @@
         <field name="mode">primary</field>
         <field name="arch" type="xml">
             <data>
-                <xpath expr="//page[@name='note']" position="after">
+                <xpath expr="//page[@name='note']" position="before">
                     <page name="account_type_set" string="Account Types">
                         <group name="account_type_set_1" colspan="4" col="2">
                             <field name="detail_ids" nolabel="1" colspan="2" />
@@ -56,7 +56,7 @@
                             >
                                 <tree editable="bottom">
                                     <field name="computation_id" />
-                                    <field name="phyton_code" />
+                                    <field name="python_code" />
                                 </tree>
                             </field>
                         </group>
@@ -70,7 +70,7 @@
         id="accountant_client_account_type_set_action"
         model="ir.actions.act_window"
     >
-        <field name="name">Account Type Set</field>
+        <field name="name">Account Type Sets</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">accountant.client_account_type_set</field>
         <field name="view_mode">tree,form</field>
@@ -78,10 +78,11 @@
 
     <menuitem
         id="accountant_client_account_type_set_menu"
-        name="Account Type Set"
+        name="Account Type Sets"
         parent="menu_accountant_configuration_trial_balance"
         action="accountant_client_account_type_set_action"
-        sequence="2"
+        sequence="4"
+        groups="accountant_client_account_type_set_group"
     />
 
 </odoo>

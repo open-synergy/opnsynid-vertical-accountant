@@ -28,7 +28,7 @@ class AccountantClientAccountTypeComputationItem(models.Model):
         comodel_name="accountant.trial_balance_computation_item",
         required=True,
     )
-    phyton_code = fields.Text(
+    python_code = fields.Text(
         string="Python Code",
         default="result = 0.0",
     )
@@ -36,8 +36,8 @@ class AccountantClientAccountTypeComputationItem(models.Model):
     @api.onchange(
         "computation_id",
     )
-    def onchange_phyton_code(self):
-        self.phyton_code = "result = 0.0"
+    def onchange_python_code_code(self):
+        self.python_code_code = "result = 0.0"
         if self.computation_id:
             computation = self.computation_id
-            self.phyton_code = computation.python_code
+            self.python_code_code = computation.python_code

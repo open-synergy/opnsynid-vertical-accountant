@@ -29,7 +29,11 @@
         />
         <field name="mode">primary</field>
         <field name="arch" type="xml">
-            <data />
+            <data>
+                <xpath expr="//field[@name='code']" position="before">
+                    <field name="sequence" widget="handle" />
+                </xpath>
+            </data>
         </field>
     </record>
 
@@ -47,10 +51,15 @@
                     <field name="sequence" />
                     <field name="category" />
                 </xpath>
-                <xpath expr="//page[@name='note']" position="after">
+                <xpath expr="//page[@name='note']" position="before">
                     <page name="page_computation" string="Computation">
                         <group name="group_computation_1" colspan="4" col="2">
-                            <field name="python_code" colspan="4" widget="ace" />
+                            <field
+                                name="python_code"
+                                colspan="2"
+                                widget="ace"
+                                nolabel="1"
+                            />
                         </group>
                     </page>
                 </xpath>
@@ -62,7 +71,7 @@
         id="accountant_trial_balance_computation_item_action"
         model="ir.actions.act_window"
     >
-        <field name="name">Computation Item</field>
+        <field name="name">Computation Items</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">accountant.trial_balance_computation_item</field>
         <field name="view_mode">tree,form</field>
@@ -70,10 +79,11 @@
 
     <menuitem
         id="accountant_trial_balance_computation_item_menu"
-        name="Computation Item"
+        name="Computation Items"
         parent="menu_accountant_configuration_trial_balance"
         action="accountant_trial_balance_computation_item_action"
-        sequence="2"
+        sequence="5"
+        groups="accountant_trial_balance_computation_item_group"
     />
 
 </odoo>
