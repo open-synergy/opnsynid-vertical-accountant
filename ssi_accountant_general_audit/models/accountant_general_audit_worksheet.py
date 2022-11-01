@@ -9,6 +9,7 @@ class AccountantGeneralAuditWorksheet(models.Model):
     _name = "accountant.general_audit_worksheet"
     _description = "Accountant General Audit Worksheet"
     _inherit = [
+        "mixin.transaction_open",
         "mixin.transaction_confirm",
         "mixin.transaction_cancel",
         "mixin.transaction_done",
@@ -19,19 +20,20 @@ class AccountantGeneralAuditWorksheet(models.Model):
     _approval_to_state = "done"
     _approval_state = "confirm"
     _after_approved_method = "action_done"
-    _create_sequence_state = False
-
-    _done_state = "valid"
+    _create_sequence_state = "open"
 
     @api.model
     def _get_policy_field(self):
         res = super(AccountantGeneralAuditWorksheet, self)._get_policy_field()
         policy_field = [
+            "open_ok",
             "confirm_ok",
             "approve_ok",
             "done_ok",
             "cancel_ok",
             "reject_ok",
+            "restart_ok",
+            "manual_number_ok",
         ]
         res += policy_field
         return res
@@ -51,21 +53,60 @@ class AccountantGeneralAuditWorksheet(models.Model):
             ],
         },
     )
+    # Fields related from general audit
+    date_start = fields.Date(
+        string="Start Date",
+        related="general_audit_id.date_start",
+        readonly=True,
+        store=True,
+    )
+    date_end = fields.Date(
+        string="End Date",
+        related="general_audit_id.date_end",
+        readonly=True,
+        store=True,
+    )
+    interim_date_start = fields.Date(
+        string="Interim Start Date",
+        related="general_audit_id.interim_date_start",
+        readonly=True,
+        store=True,
+    )
+    interim_date_end = fields.Date(
+        string="Interim End Date",
+        related="general_audit_id.interim_date_end",
+        readonly=True,
+        store=True,
+    )
+    previous_date_start = fields.Date(
+        string="Previous Start Date",
+        related="general_audit_id.previous_date_start",
+        readonly=True,
+        store=True,
+    )
+    previous_date_end = fields.Date(
+        string="Previous End Date",
+        related="general_audit_id.previous_date_end",
+        readonly=True,
+        store=True,
+    )
+    account_type_set_id = fields.Many2one(
+        string="Accoount Type Set",
+        comodel_name="accountant.client_account_type_set",
+        related="general_audit_id.account_type_set_id",
+        readonly=True,
+        store=True,
+    )
+    partner_id = fields.Many2one(
+        string="Partner",
+        related="general_audit_id.partner_id",
+        store=True,
+    )
     parent_type_id = fields.Many2one(
         string="Type",
         comodel_name="accountant.general_audit_worksheet_type",
         required=False,
         readonly=True,
-        states={
-            "draft": [
-                ("readonly", False),
-            ],
-        },
-    )
-    user_id = fields.Many2one(
-        string="Responsible",
-        comodel_name="res.users",
-        required=True,
         states={
             "draft": [
                 ("readonly", False),
@@ -94,8 +135,9 @@ class AccountantGeneralAuditWorksheet(models.Model):
         string="State",
         selection=[
             ("draft", "Draft"),
+            ("open", "In Progress"),
             ("confirm", "Waiting for Approval"),
-            ("valid", "Valid"),
+            ("done", "Done"),
             ("reject", "Rejected"),
             ("cancel", "Cancelled"),
         ],
@@ -103,9 +145,4 @@ class AccountantGeneralAuditWorksheet(models.Model):
         default="draft",
         required=True,
         readonly=True,
-    )
-
-    # Policy Field
-    done_ok = fields.Boolean(
-        string="Can Valid",
     )

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<data>
+<record
+            id="worksheet_type_category_pe"
+            model="accountant.general_audit_worksheet_type_category"
+        >
+    <field name="name">Pre-engagement</field>
+    <field name="code">PE</field>
+    <field name="sequence" eval="10" />
+</record>
+
+<record
+            id="worksheet_type_category_ra"
+            model="accountant.general_audit_worksheet_type_category"
+        >
+    <field name="name">Risk Assesment</field>
+    <field name="code">RA</field>
+    <field name="sequence" eval="20" />
+</record>
+
+<record
+            id="worksheet_type_category_rr"
+            model="accountant.general_audit_worksheet_type_category"
+        >
+    <field name="name">Risk Responses</field>
+    <field name="code">RE</field>
+    <field name="sequence" eval="30" />
+</record>
+
+<record
+            id="worksheet_type_category_cr"
+            model="accountant.general_audit_worksheet_type_category"
+        >
+    <field name="name">Completion &amp; Reporting</field>
+    <field name="code">CR</field>
+    <field name="sequence" eval="40" />
+</record>
+</data>
+</odoo>

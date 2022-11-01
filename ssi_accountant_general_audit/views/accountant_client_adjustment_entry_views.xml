@@ -29,7 +29,7 @@
             <data>
                 <xpath expr="//field[@name='company_id']" position="after">
                     <field name="general_audit_id" />
-                    <field name="partner_id" />
+                    <field name="partner_id" widget="many2one_avatar" />
                     <field name="date_start" />
                     <field name="date_end" />
                     <field name="account_type_set_id" />
@@ -50,8 +50,8 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//field[@name='user_id']" position="after">
-                    <field name="general_audit_id" />
-                    <field name="partner_id" />
+                    <field name="general_audit_id" domain="[('state','=','open')]" />
+                    <field name="partner_id" widget="many2one_avatar" />
                     <field name="account_type_set_id" />
                     <field name="currency_id" />
                     <field name="adjustment_type" />
@@ -75,7 +75,6 @@
                                 <field name="name" />
                                 <field name="debit" />
                                 <field name="credit" />
-                                <field name="trial_balance_detail_id" />
                             </tree>
                         </field>
                     </page>

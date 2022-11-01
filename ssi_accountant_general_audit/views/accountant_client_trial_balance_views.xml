@@ -28,10 +28,11 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//field[@name='company_id']" position="after">
-                    <field name="partner_id" />
+                    <field name="partner_id" widget="many2one_avatar" />
                     <field name="date_start" />
                     <field name="date_end" />
                     <field name="account_type_set_id" />
+                    <field name="trial_balance_type" />
                 </xpath>
             </data>
         </field>
@@ -48,21 +49,17 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//field[@name='user_id']" position="after">
-                    <field
-                        name="general_audit_ids"
-                        invisible="1"
-                        widget="many2many_tags"
-                    />
-                    <field name="general_audit_id" required="1" />
-                    <field name="company_id" groups="base.group_multi_company" />
-                    <field name="partner_id" domain="[('parent_id','=',False)]" />
+                    <field name="general_audit_id" domain="[('state','=','open')]" />
+                    <field name="partner_id" widget="many2one_avatar" />
+                    <field name="currency_id" />
                     <field name="account_type_set_id" />
+                    <field name="trial_balance_type" />
                     <field
                         name="allowed_type_ids"
                         widget="many2many_tags"
                         invisible="1"
                     />
-                    <field name="currency_id" />
+
                 </xpath>
                 <xpath expr="//group[@name='header_right']" position="inside">
                     <field name="date_start" />
@@ -74,16 +71,25 @@
                 </xpath>
                 <xpath expr="//page[@name='note']" position="before">
                     <page string="Detail" name="details">
-                        <group name="detail_1">
-                            <button
-                                name="%(accountant_import_trial_balance_detail_action)d"
-                                type="action"
-                                string="Import Detail"
-                                states="draft"
-                            />
-                        </group>
+                        <button
+                            name="%(accountant_import_trial_balance_detail_action)d"
+                            type="action"
+                            string="Detail"
+                            class="oe_highlight"
+                            icon="fa-download"
+                            states="open"
+                            style="margin-right:4px"
+                        />
+                        <button
+                            name="action_reload_account"
+                            type="object"
+                            string="Account"
+                            class="oe_highlight"
+                            icon="fa-refresh"
+                            states="open"
+                        />
                         <field name="detail_ids" colspan="1" col="2" nolabel="1">
-                            <tree editable="bottom">
+                            <tree editable="top">
                                 <field name="sequence" widget="handle" />
                                 <field
                                     name="account_id"
@@ -93,11 +99,9 @@
                                     name="type_id"
                                     domain="[('id','in',parent.allowed_type_ids[0][2])]"
                                 />
-                                <field name="interim_balance" string="Interim" />
-                                <field name="balance" string="Home Statement" />
-                                <field name="adjustment_balance" string="Adjustment" />
-                                <field name="audited_balance" string="Audited" />
-                                <field name="previous_balance" string="Previous" />
+                                <field name="debit" />
+                                <field name="credit" />
+                                <field name="balance" />
                             </tree>
                         </field>
                     </page>
@@ -107,45 +111,36 @@
                             colspan="1"
                             col="2"
                             nolabel="1"
+                            force_save="1"
                         >
                             <tree>
                                 <field name="sequence" invisible="1" />
                                 <field name="type_id" />
-                                <field
-                                    name="extrapolation_balance"
-                                    string="Extrapolation"
-                                />
-                                <field name="balance" string="Home Statement" />
-                                <field name="audited_balance" string="Audited" />
-                                <field name="previous_balance" string="Previous" />
+                                <field name="balance" />
                             </tree>
                         </field>
                     </page>
                     <page string="Computation" name="computations">
                         <group name="computation_1">
                             <button
-                                name="action_recompute"
-                                string="Recompute"
+                                name="action_recompute_computation"
+                                string="Computation"
                                 type="object"
-                                states="draft"
+                                states="open"
+                                class="oe_highlight"
+                                icon="fa-calculator"
                             />
                         </group>
-                        <field name="computation_ids" colspan="1" col="2" nolabel="1">
+                        <field
+                            name="computation_ids"
+                            colspan="1"
+                            col="2"
+                            nolabel="1"
+                            force_save="1"
+                        >
                             <tree>
                                 <field name="computation_item_id" />
-                                <field
-                                    name="amount_extrapolation"
-                                    string="Extrapolation"
-                                />
-                                <field name="amount" string="Home Statement" />
-                                <field name="amount_audited" string="Audited" />
-                                <field name="amount_previous" string="Previous" />
-                                <button
-                                    name="action_recompute"
-                                    string="Recompute"
-                                    type="object"
-                                    icon="fa-gears"
-                                />
+                                <field name="amount" string="Amount" />
                             </tree>
                         </field>
                     </page>

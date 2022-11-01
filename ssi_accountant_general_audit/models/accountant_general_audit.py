@@ -3,7 +3,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html).
 
 from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from odoo.exceptions import UserError, ValidationError
 
 
 class AccountantGeneralAudit(models.Model):
@@ -94,12 +94,30 @@ class AccountantGeneralAudit(models.Model):
 
     @api.depends(
         "trial_balance_ids",
+        "trial_balance_ids.trial_balance_type",
     )
     def _compute_trial_balance_id(self):
         for document in self:
-            document.trial_balance_id = False
-            if len(document.trial_balance_ids) > 0:
-                document.trial_balance_id = document.trial_balance_ids[0]
+            home = interim = previous = False
+            homes = document.trial_balance_ids.filtered(
+                lambda r: r.trial_balance_type == "home"
+            )
+            if len(homes) > 0:
+                home = homes[0]
+            interims = document.trial_balance_ids.filtered(
+                lambda r: r.trial_balance_type == "interim"
+            )
+            if len(interims) > 0:
+                interim = interims[0]
+            previouses = document.trial_balance_ids.filtered(
+                lambda r: r.trial_balance_type == "previous"
+            )
+            if len(previouses) > 0:
+                previous = previouses[0]
+
+            document.home_trial_balance_id = home
+            document.interim_trial_balance_id = interim
+            document.previous_trial_balance_id = previous
 
     title = fields.Char(
         string="Title",
@@ -116,6 +134,17 @@ class AccountantGeneralAudit(models.Model):
     partner_id = fields.Many2one(
         string="Partner",
         comodel_name="res.partner",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    project_id = fields.Many2one(
+        string="Project",
+        comodel_name="project.project",
         required=True,
         readonly=True,
         states={
@@ -220,10 +249,10 @@ class AccountantGeneralAudit(models.Model):
     )
     opinion_id = fields.Many2one(
         string="Opinion",
-        comodel_name="accountant.general_audit_opinion",
+        comodel_name="accountant.opinion",
         readonly=True,
         states={
-            "draft": [
+            "open": [
                 ("readonly", False),
             ],
         },
@@ -294,9 +323,41 @@ class AccountantGeneralAudit(models.Model):
             ],
         },
     )
+    required_worksheet_type_ids = fields.Many2many(
+        string="Required Worksheet Type(s)",
+        comodel_name="accountant.general_audit_worksheet_type",
+        relation="rel_general_audit_2_required_worksheet_type",
+        column1="general_audit_id",
+        column2="worksheet_type_id",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    additional_worksheet_type_ids = fields.Many2many(
+        string="Additional Worksheet Type(s)",
+        comodel_name="accountant.general_audit_worksheet_type",
+        relation="rel_general_audit_2_additional_worksheet_type",
+        column1="general_audit_id",
+        column2="worksheet_type_id",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     worksheet_ids = fields.One2many(
         string="Worksheets",
         comodel_name="accountant.general_audit_worksheet",
+        inverse_name="general_audit_id",
+        readonly=True,
+    )
+    worksheet_control_ids = fields.One2many(
+        string="Controls",
+        comodel_name="accountant.general_audit_worksheet_control",
         inverse_name="general_audit_id",
         readonly=True,
     )
@@ -315,18 +376,55 @@ class AccountantGeneralAudit(models.Model):
         required=True,
         readonly=True,
     )
-    trial_balance_ids = fields.Many2many(
+    trial_balance_ids = fields.One2many(
         string="Trial Balance",
         comodel_name="accountant.client_trial_balance",
-        relation="rel_general_audit_2_trial_balance",
-        column1="general_audit_id",
-        column2="trial_balance_id",
+        inverse_name="general_audit_id",
+        readonly=True,
     )
-    trial_balance_id = fields.Many2one(
-        string="# Trial Balance",
+    home_trial_balance_id = fields.Many2one(
+        string="# Home Statement Trial Balance",
         comodel_name="accountant.client_trial_balance",
         compute="_compute_trial_balance_id",
         store=True,
+    )
+    interim_trial_balance_id = fields.Many2one(
+        string="# Interim Trial Balance",
+        comodel_name="accountant.client_trial_balance",
+        compute="_compute_trial_balance_id",
+        store=True,
+    )
+    previous_trial_balance_id = fields.Many2one(
+        string="# Previous Trial Balance",
+        comodel_name="accountant.client_trial_balance",
+        compute="_compute_trial_balance_id",
+        store=True,
+    )
+    standard_detail_ids = fields.One2many(
+        string="Standard Detail",
+        comodel_name="accountant.general_audit_standard_detail",
+        inverse_name="general_audit_id",
+        readonly=True,
+        copy=True,
+    )
+    computation_ids = fields.One2many(
+        string="Computations",
+        comodel_name="accountant.general_audit_computation",
+        inverse_name="general_audit_id",
+        readonly=True,
+        copy=True,
+    )
+    standard_adjustment_ids = fields.One2many(
+        string="Standard Adjustment",
+        comodel_name="accountant.general_audit_adjustment",
+        inverse_name="general_audit_id",
+        readonly=True,
+    )
+    adjustment_entry_ids = fields.One2many(
+        string="Adjustment Entri(es)",
+        comodel_name="accountant.client_adjustment_entry",
+        inverse_name="general_audit_id",
+        readonly=True,
     )
 
     @api.constrains("date_start", "date_end")
@@ -366,3 +464,123 @@ class AccountantGeneralAudit(models.Model):
                 )
                 if record.previous_date_end >= record.interim_date_start:
                     raise UserError(strWarning)
+
+    @api.onchange(
+        "partner_id",
+    )
+    def onchange_project_id(self):
+        self.project_id = False
+
+    @api.onchange("account_type_set_id")
+    def onchange_standard_detail_ids(self):
+        self.update({"standard_detail_ids": [(5, 0, 0)]})
+        if self.account_type_set_id:
+            result = []
+            for detail in self.account_type_set_id.detail_ids:
+                result.append(
+                    (
+                        0,
+                        0,
+                        {
+                            "sequence": detail.sequence,
+                            "type_id": detail.id,
+                        },
+                    )
+                )
+            self.update({"standard_detail_ids": result})
+
+    @api.onchange("account_type_set_id")
+    def onchange_computation_ids(self):
+        self.update({"computation_ids": [(5, 0, 0)]})
+        if self.account_type_set_id:
+            result = []
+            for detail in self.account_type_set_id.computation_ids:
+                result.append(
+                    (
+                        0,
+                        0,
+                        {
+                            "computation_item_id": detail.computation_id.id,
+                        },
+                    )
+                )
+            self.update({"computation_ids": result})
+
+    @api.constrains(
+        "state",
+    )
+    def _constrains_check_home_tb(self):
+        for record in self.sudo():
+            record._check_home_tb_exist()
+            record._check_home_tb_done()
+            record._check_previous_tb_exist()
+            record._check_previous_tb_done()
+            record._check_interim_tb_done()
+
+    def _check_home_tb_exist(self):
+        self.ensure_one()
+        if not self.home_trial_balance_id and self.state == "confirm":
+            error_message = """
+            Context: Confirming general audit
+            Database ID: %s
+            Problem: No home statement trial balance
+            Solution: Create home statement trial balance
+            """ % (
+                self.id
+            )
+            raise ValidationError(_(error_message))
+
+    def _check_home_tb_done(self):
+        self.ensure_one()
+        if self.home_trial_balance_id.state != "done":
+            error_message = """
+            Context: Confirming general audit
+            Database ID: %s
+            Problem: Home statement trial balance is not finished
+            Solution: Finish home statement trial balance
+            """ % (
+                self.id
+            )
+            raise ValidationError(_(error_message))
+
+    def _check_previous_tb_exist(self):
+        self.ensure_one()
+        if not self.previous_trial_balance_id and self.state == "confirm":
+            error_message = """
+            Context: Confirming general audit
+            Database ID: %s
+            Problem: No previous trial balance
+            Solution: Create previous trial balance
+            """ % (
+                self.id
+            )
+            raise ValidationError(_(error_message))
+
+    def _check_previous_tb_done(self):
+        self.ensure_one()
+        if self.previous_trial_balance_id.state != "done":
+            error_message = """
+            Context: Confirming general audit
+            Database ID: %s
+            Problem: Previous trial balance is not finished
+            Solution: Finish Previous trial balance
+            """ % (
+                self.id
+            )
+            raise ValidationError(_(error_message))
+
+    def _check_interim_tb_done(self):
+        self.ensure_one()
+        if (
+            self.interim_trial_balance_id
+            and self.interim_trial_balance_id.state != "done"
+        ):
+            error_message = """
+            Context: Confirming general audit
+            Database ID: %s
+            Problem: Interim trial balance is not finished
+            Solution: Finish interim trial balance
+            """ % (
+                self.id
+            )
+            raise ValidationError(_(error_message))

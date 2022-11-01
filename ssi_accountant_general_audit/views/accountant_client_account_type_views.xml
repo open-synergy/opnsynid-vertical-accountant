@@ -52,7 +52,12 @@
                 <xpath expr="//page[@name='note']" position="before">
                     <page name="page_computation" string="Computation">
                         <group name="group_computation_1" colspan="4" col="2">
-                            <field name="python_code" colspan="4" widget="ace" />
+                            <field
+                                name="python_code"
+                                colspan="2"
+                                widget="ace"
+                                nolabel="1"
+                            />
                         </group>
                     </page>
                 </xpath>

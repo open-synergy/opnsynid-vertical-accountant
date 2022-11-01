@@ -4,7 +4,7 @@
 # pylint: disable=locally-disabled, manifest-required-author
 {
     "name": "Accountant General Audit",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "category": "Administration",
     "website": "https://simetri-sinergi.id",
     "author": "OpenSynergy Indonesia, PT. Simetri Sinergi Indonesia",
@@ -18,6 +18,7 @@
         "ssi_transaction_cancel_mixin",
         "ssi_transaction_done_mixin",
         "ssi_transaction_open_mixin",
+        "ssi_project",
     ],
     "data": [
         "security/ir_module_category_data.xml",
@@ -31,6 +32,7 @@
         "data/accountant_client_account_group_data.xml",
         "data/accountant_client_account_type_data.xml",
         "data/accountant_trial_balance_computation_item_data.xml",
+        "data/accountant_general_audit_worksheet_type_category_data.xml",
         "menu.xml",
         "wizards/import_trial_balance_detail.xml",
         "views/accountant_general_audit_opinion_views.xml",
@@ -45,6 +47,7 @@
         "views/accountant_general_audit_views.xml",
         "views/accountant_client_trial_balance_views.xml",
         "views/accountant_client_adjustment_entry_views.xml",
+        "views/accountant_general_audit_worksheet_mixin_views.xml",
     ],
     "demo": [
         "demo/accountant_financial_accounting_standard_demo.xml",
