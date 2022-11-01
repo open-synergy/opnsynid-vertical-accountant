@@ -11,6 +11,34 @@
         sequence="50"
     />
 
+    <menuitem
+        id="menu_general_audit_preengagement"
+        name="Pre-engagement"
+        parent="menu_accountant_report_general_audit"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_general_audit_risk_assesment"
+        name="Risk Assesment"
+        parent="menu_accountant_report_general_audit"
+        sequence="20"
+    />
+
+    <menuitem
+        id="menu_general_audit_risk_responses"
+        name="Risk Responses"
+        parent="menu_accountant_report_general_audit"
+        sequence="30"
+    />
+
+    <menuitem
+        id="menu_general_audit_completion_reporting"
+        name="Completion &amp; Reporting"
+        parent="menu_accountant_report_general_audit"
+        sequence="40"
+    />
+
 
     <menuitem
         id="menu_accountant_configuration_general_audit"
@@ -32,5 +60,7 @@
         sequence="103"
         parent="ssi_accountant.menu_accountant_configuration"
     />
+
+
 
 </odoo>

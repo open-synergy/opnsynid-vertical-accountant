@@ -28,14 +28,18 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//field[@name='user_id']" position="after">
-                    <field name="title" />
-                    <field name="partner_id" />
+                    <field name="title" optional="hide" />
+                    <field name="partner_id" widget="many2one_avatar" />
+                    <field name="project_id" optional="hide" />
                     <field name="date_start" />
                     <field name="date_end" />
+                    <field name="previous_date_start" optional="hide" />
+                    <field name="previous_date_end" optional="hide" />
+                    <field name="interim_date_start" optional="hide" />
+                    <field name="interim_date_end" optional="hide" />
                     <field name="account_type_set_id" />
                     <field name="financial_accounting_standard_id" />
-                    <field name="user_id" />
-                    <field name="accountant_id" />
+                    <field name="accountant_id" widget="many2one_avatar" />
                     <field name="opinion_id" />
                 </xpath>
             </data>
@@ -52,10 +56,24 @@
         />
         <field name="arch" type="xml">
             <data>
-                <xpath expr="//field[@name='company_id']" position="after">
+                <xpath
+                    expr="/form/sheet/div[@class='oe_left']/div[@class='oe_title']/h1"
+                    position="after"
+                >
+                    <h2>
+                        <label for="opinion_id" string="Opinion:" />
+                        <field name="opinion_id" class="oe_inline" />
+                    </h2>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="after">
                     <field
                         name="partner_id"
                         domain="[('parent_id','=',False),('is_company','=',True)]"
+                        widget="many2one_avatar"
+                    />
+                    <field
+                        name="project_id"
+                        domain="[('partner_id', '=', partner_id)]"
                     />
                     <field name="account_type_set_id" />
                     <field name="financial_accounting_standard_id" />
@@ -63,10 +81,8 @@
                     <field
                         name="accountant_id"
                         domain="[('parent_id','=',False),('is_company','=',False)]"
+                        widget="many2one_avatar"
                     />
-                    <field name="num_of_consecutive_audit_firm" />
-                    <field name="num_of_consecutive_audit_accountant" />
-                    <field name="opinion_id" />
                 </xpath>
                 <xpath expr="//group[@name='header_right']" position="inside">
                     <field name="date_start" />
@@ -75,31 +91,154 @@
                     <field name="previous_date_end" />
                     <field name="interim_date_start" />
                     <field name="interim_date_end" />
-                    <field name="restatement_option" />
-                    <field
-                        name="previous_audit_id"
-                        attrs="{'invisible':[('restatement_option','!=','internal')],'required':[('restatement_option','=','internal')]}"
-                        domain="[('id','!=',id),('partner_id','=',partner_id),('state','=','valid')]"
-                    />
-                    <field
-                        name="previous_audit"
-                        attrs="{'invisible':[('restatement_option','!=','external')],'required':[('restatement_option','=','external')]}"
-                    />
+                </xpath>
+                <xpath expr="//group[@name='header_center']" position="inside">
+                    <field name="title" />
                 </xpath>
                 <xpath expr="//page[@name='note']" position="before">
-                    <page name="worksheet" string="Worksheets">
-                        <group name="worksheet_1" colspan="4" col="2">
-                            <field name="trial_balance_id" />
+                    <page name="other" string="Other Information">
+                        <group name="other_1" colspan="4" col="2">
+                            <group name="other_1_1" colspan="1" col="2">
+                                <field name="num_of_consecutive_audit_firm" />
+                                <field name="num_of_consecutive_audit_accountant" />
+                            </group>
+                            <group name="other_1_2" colspan="1" col="2">
+                                <field name="restatement_option" />
+                                <field
+                                    name="previous_audit_id"
+                                    attrs="{'invisible':[('restatement_option','!=','internal')],'required':[('restatement_option','=','internal')]}"
+                                    domain="[('id','!=',id),('partner_id','=',partner_id),('state','=','valid')]"
+                                />
+                                <field
+                                    name="previous_audit"
+                                    attrs="{'invisible':[('restatement_option','!=','external')],'required':[('restatement_option','=','external')]}"
+                                />
+                            </group>
                         </group>
-                        <field name="worksheet_ids">
-                            <tree>
-                                <field name="display_name" string="# Document" />
-                                <field name="parent_type_id" />
-                                <field name="user_id" />
-                                <field name="conclusion_id" />
-                                <field name="state" />
-                            </tree>
-                        </field>
+                    </page>
+                    <page name="trial_balance" string="Trial Balance">
+                        <group name="trial_balance_1" colspan="4" col="2">
+                            <field
+                                name="home_trial_balance_id"
+                                string="# Home Statement"
+                            />
+                            <field name="interim_trial_balance_id" string="# Interim" />
+                            <field
+                                name="previous_trial_balance_id"
+                                string="# Previous"
+                            />
+                        </group>
+                        <group name="trial_balance_2" colspan="4" col="2">
+                            <field name="trial_balance_ids" colspan="2" nolabel="1" />
+                        </group>
+                    </page>
+                    <page name="account_computation" string="Account &amp; Computation">
+                        <group name="account_computation_1" colspan="4" col="2">
+                            <field
+                                name="standard_detail_ids"
+                                colspan="1"
+                                col="2"
+                                nolabel="1"
+                                force_save="1"
+                            >
+                                <tree>
+                                    <field name="sequence" invisible="1" />
+                                    <field name="type_id" />
+                                    <field name="home_standard_line_id" invisible="1" />
+                                    <field
+                                        name="interim_standard_line_id"
+                                        invisible="1"
+                                    />
+                                    <field
+                                        name="previous_standard_line_id"
+                                        invisible="1"
+                                    />
+                                    <field
+                                        name="extrapolation_balance"
+                                        string="Extrapolation"
+                                    />
+                                    <field name="previous_balance" string="Previous" />
+                                    <field
+                                        name="home_statement_balance"
+                                        string="Home Statement"
+                                    />
+                                    <field
+                                        name="adjustment_balance"
+                                        string="Adjustment"
+                                    />
+                                    <field name="audited_balance" string="Audited" />
+                                </tree>
+                            </field>
+                        </group>
+                        <group name="account_computation_2" colspan="4" col="2">
+                            <field
+                                name="computation_ids"
+                                colspan="1"
+                                col="2"
+                                nolabel="1"
+                                force_save="1"
+                            >
+                                <tree>
+                                    <field name="computation_item_id" />
+                                    <field name="home_amount" />
+                                    <field name="interim_amount" />
+                                    <field name="previous_amount" />
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                    <page name="worksheet" string="Worksheets">
+                        <group
+                            name="worksheet_1"
+                            colspan="4"
+                            col="2"
+                            string="Required Worksheet(s)"
+                        >
+                            <field
+                                name="required_worksheet_type_ids"
+                                colspan="2"
+                                nolabel="1"
+                            >
+                                <tree>
+                                    <field name="name" />
+                                    <field name="code" />
+                                </tree>
+                            </field>
+                        </group>
+                        <group
+                            name="worksheet_2"
+                            colspan="4"
+                            col="2"
+                            string="Additional Worksheet(s)"
+                        >
+                            <field
+                                name="additional_worksheet_type_ids"
+                                colspan="2"
+                                nolabel="1"
+                            >
+                                <tree>
+                                    <field name="name" />
+                                    <field name="code" />
+                                </tree>
+                            </field>
+                        </group>
+                        <group
+                            name="worksheet_3"
+                            colspan="4"
+                            col="2"
+                            string="Worksheet(s)"
+                        >
+                            <field name="worksheet_control_ids" colspan="2" nolabel="1">
+                                <tree>
+                                    <field name="type_id" />
+                                    <field name="required" />
+                                    <field name="worksheet_id" />
+                                    <field name="user_id" />
+                                    <field name="conclusion_id" />
+                                    <field name="state" />
+                                </tree>
+                            </field>
+                        </group>
                     </page>
                 </xpath>
             </data>

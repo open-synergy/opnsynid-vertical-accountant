@@ -92,43 +92,16 @@ class AccountantClientTrialBalance(models.Model):
         _super = super(AccountantClientTrialBalance, self)
         _super._compute_policy()
 
-    @api.depends(
-        "general_audit_id",
-    )
-    def _inverse_general_audit(self):
-        for document in self:
-            if not document.general_audit_id:
-                continue
-            document.general_audit_ids = [(6, 0, [document.general_audit_id.id])]
-
-    @api.depends(
-        "general_audit_ids",
-    )
-    def _compute_general_audit_id(self):
-        for document in self:
-            document.general_audit_id = False
-            if len(document.general_audit_ids) > 0:
-                document.general_audit_id = document.general_audit_ids[0]
-
     general_audit_id = fields.Many2one(
         string="# General Audit",
         comodel_name="accountant.general_audit",
-        store=True,
-        compute="_compute_general_audit_id",
-        inverse="_inverse_general_audit",
+        required=True,
         readonly=True,
         states={
             "draft": [
                 ("readonly", False),
             ],
         },
-    )
-    general_audit_ids = fields.Many2many(
-        string="General Audits",
-        comodel_name="accountant.general_audit",
-        relation="rel_general_audit_2_trial_balance",
-        column1="trial_balance_id",
-        column2="general_audit_id",
     )
     partner_id = fields.Many2one(
         string="Partner",
@@ -186,6 +159,22 @@ class AccountantClientTrialBalance(models.Model):
         store=True,
         readonly=True,
     )
+    trial_balance_type = fields.Selection(
+        string="Trial Balance Type",
+        required=True,
+        selection=[
+            ("home", "Home Statement"),
+            ("interim", "Interim"),
+            ("previous", "Previous"),
+        ],
+        default="home",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
 
     @api.depends(
         "account_type_set_id",
@@ -211,7 +200,7 @@ class AccountantClientTrialBalance(models.Model):
         copy=True,
         readonly=True,
         states={
-            "draft": [
+            "open": [
                 ("readonly", False),
             ],
         },
@@ -322,3 +311,33 @@ class AccountantClientTrialBalance(models.Model):
                 )
                 if record.previous_date_end >= record.interim_date_start:
                     raise UserError(strWarning)
+
+    def action_reload_account(self):
+        for record in self.sudo():
+            record._reload_account()
+
+    def action_recompute_computation(self):
+        for record in self.sudo():
+            record._recompute_computation()
+
+    def _reload_account(self):
+        self.ensure_one()
+        ClientAccount = self.env["accountant.client_account"]
+        Detail = self.env["accountant.client_trial_balance_detail"]
+        criteria = [
+            ("partner_id", "=", self.partner_id.id),
+        ]
+        for account in ClientAccount.search(criteria):
+            details = self.detail_ids.filtered(lambda r: r.account_id.id == account.id)
+            if len(details) == 0:
+                Detail.create(
+                    {
+                        "account_id": account.id,
+                        "trial_balance_id": self.id,
+                    }
+                )
+
+    def _recompute_computation(self):
+        self.ensure_one()
+        for computation in self.computation_ids:
+            computation.action_recompute()

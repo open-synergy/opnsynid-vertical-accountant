@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record
+        id="accountant_general_audit_worksheet_mixin_view_search"
+        model="ir.ui.view"
+    >
+        <field name="name">accountant.general_audit_worksheet_mixin form</field>
+        <field name="model">accountant.general_audit_worksheet_mixin</field>
+        <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_worksheet_mixin_view_tree" model="ir.ui.view">
+        <field name="name">accountant.general_audit_worksheet_mixin tree</field>
+        <field name="model">accountant.general_audit_worksheet_mixin</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_tree"
+        />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="general_audit_id" />
+                    <field name="type_id" invisible="1" />
+                    <field name="partner_id" />
+                    <field name="date_start" />
+                    <field name="date_end" />
+                    <field name="conclusion_id" />
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_worksheet_mixin_view_form" model="ir.ui.view">
+        <field name="name">accountant.general_audit_worksheet_mixin form</field>
+        <field name="model">accountant.general_audit_worksheet_mixin</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_form"
+        />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//page[1]" position="before">
+                    <page name="conclusion" string="Conclusion">
+                        <group name="conclusion" colspan="4" col="2">
+                            <field name="conclusion_id" />
+                            <field name="conclusion" colspan="2" nolabel="1" />
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="type_id" invisible="1" />
+                    <field name="parent_type_id" invisible="1" />
+                    <field name="general_audit_id" />
+                    <field name="partner_id" />
+                    <field name="account_type_set_id" />
+                </xpath>
+                <xpath expr="//group[@name='header_right']" position="inside">
+                    <field name="date_start" />
+                    <field name="date_end" />
+                    <field name="interim_date_start" />
+                    <field name="interim_date_end" />
+                    <field name="previous_date_start" />
+                    <field name="previous_date_end" />
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>
