@@ -532,7 +532,7 @@ class AccountantGeneralAudit(models.Model):
 
     def _check_home_tb_done(self):
         self.ensure_one()
-        if self.home_trial_balance_id.state != "done":
+        if self.state == "confirm" and self.home_trial_balance_id.state != "done":
             error_message = """
             Context: Confirming general audit
             Database ID: %s
@@ -558,7 +558,7 @@ class AccountantGeneralAudit(models.Model):
 
     def _check_previous_tb_done(self):
         self.ensure_one()
-        if self.previous_trial_balance_id.state != "done":
+        if self.state == "confirm" and self.previous_trial_balance_id.state != "done":
             error_message = """
             Context: Confirming general audit
             Database ID: %s
@@ -574,6 +574,7 @@ class AccountantGeneralAudit(models.Model):
         if (
             self.interim_trial_balance_id
             and self.interim_trial_balance_id.state != "done"
+            and self.state == "confirm"
         ):
             error_message = """
             Context: Confirming general audit
