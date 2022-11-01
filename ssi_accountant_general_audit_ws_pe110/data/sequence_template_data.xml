@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<data noupdate="1">
+<record id="sequence_template_sequence_ws_pe1101" model="sequence.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1101"
+            />
+    <field name="sequence" eval="100" />
+    <field name="initial_string">/</field>
+    <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','name')]"
+            />
+    <field
+                name="date_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','date_start')]"
+            />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result=True</field>
+    <field name="sequence_id" ref="sequence_ws_pe1101" />
+    <field name="sequence_selection_method">use_sequence</field>
+    <field name="add_custom_prefix" eval="0" />
+    <field name="add_custom_suffix" eval="0" />
+</record>
+
+<record id="sequence_template_sequence_ws_pe1102" model="sequence.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1102"
+            />
+    <field name="sequence" eval="100" />
+    <field name="initial_string">/</field>
+    <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','name')]"
+            />
+    <field
+                name="date_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','date_start')]"
+            />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result=True</field>
+    <field name="sequence_id" ref="sequence_ws_pe1102" />
+    <field name="sequence_selection_method">use_sequence</field>
+    <field name="add_custom_prefix" eval="0" />
+    <field name="add_custom_suffix" eval="0" />
+</record>
+
+<record id="sequence_template_sequence_ws_pe110" model="sequence.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe110"
+            />
+    <field name="sequence" eval="100" />
+    <field name="initial_string">/</field>
+    <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','name')]"
+            />
+    <field
+                name="date_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','date_start')]"
+            />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result=True</field>
+    <field name="sequence_id" ref="sequence_ws_pe110" />
+    <field name="sequence_selection_method">use_sequence</field>
+    <field name="add_custom_prefix" eval="0" />
+    <field name="add_custom_suffix" eval="0" />
+</record>
+
+<record id="sequence_template_sequence_ws_pe11021" model="sequence.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe11021"
+            />
+    <field name="sequence" eval="100" />
+    <field name="initial_string">/</field>
+    <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','name')]"
+            />
+    <field
+                name="date_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','date_start')]"
+            />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result=True</field>
+    <field name="sequence_id" ref="sequence_ws_pe11021" />
+    <field name="sequence_selection_method">use_sequence</field>
+    <field name="add_custom_prefix" eval="0" />
+    <field name="add_custom_suffix" eval="0" />
+</record>
+
+<record id="sequence_template_sequence_ws_pe11022" model="sequence.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe11022"
+            />
+    <field name="sequence" eval="100" />
+    <field name="initial_string">/</field>
+    <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','name')]"
+            />
+    <field
+                name="date_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','date_start')]"
+            />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result=True</field>
+    <field name="sequence_id" ref="sequence_ws_pe11022" />
+    <field name="sequence_selection_method">use_sequence</field>
+    <field name="add_custom_prefix" eval="0" />
+    <field name="add_custom_suffix" eval="0" />
+</record>
+
+<record id="sequence_template_sequence_ws_pe1103" model="sequence.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1103"
+            />
+    <field name="sequence" eval="100" />
+    <field name="initial_string">/</field>
+    <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','name')]"
+            />
+    <field
+                name="date_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','date_start')]"
+            />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result=True</field>
+    <field name="sequence_id" ref="sequence_ws_pe1103" />
+    <field name="sequence_selection_method">use_sequence</field>
+    <field name="add_custom_prefix" eval="0" />
+    <field name="add_custom_suffix" eval="0" />
+</record>
+
+<record id="sequence_template_sequence_ws_pe1104" model="sequence.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1104"
+            />
+    <field name="sequence" eval="100" />
+    <field name="initial_string">/</field>
+    <field
+                name="sequence_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','name')]"
+            />
+    <field
+                name="date_field_id"
+                search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','date_start')]"
+            />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result=True</field>
+    <field name="sequence_id" ref="sequence_ws_pe1104" />
+    <field name="sequence_selection_method">use_sequence</field>
+    <field name="add_custom_prefix" eval="0" />
+    <field name="add_custom_suffix" eval="0" />
+</record>
+</data>
+</odoo>

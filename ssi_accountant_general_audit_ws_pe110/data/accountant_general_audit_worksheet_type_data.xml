@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2020 OpenSynergy Indonesia
+     Copyright 2020 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+<data>
+<record id="worksheet_type_pe110" model="accountant.general_audit_worksheet_type">
+    <field name="code">PE.110</field>
+    <field
+                name="name"
+            >Analisis Penerimaan dan Keberlanjutan Hubungan dengan Klien</field>
+    <field name="sequence" eval="11000" />
+    <field
+                name="category_id"
+                ref="ssi_accountant_general_audit.worksheet_type_category_pe"
+            />
+</record>
+
+<record id="worksheet_type_pe1101" model="accountant.general_audit_worksheet_type">
+    <field name="code">PE.1101</field>
+    <field name="name">Isu Pelaporan Keuangan Terdahulu</field>
+    <field name="sequence" eval="11010" />
+    <field name="parent_id" ref="worksheet_type_pe110" />
+    <field
+                name="category_id"
+                ref="ssi_accountant_general_audit.worksheet_type_category_pe"
+            />
+</record>
+
+<record id="worksheet_type_pe1102" model="accountant.general_audit_worksheet_type">
+    <field name="code">PE.1102</field>
+    <field name="name">Integritas Manajemen</field>
+    <field name="sequence" eval="11020" />
+    <field name="parent_id" ref="worksheet_type_pe110" />
+    <field
+                name="category_id"
+                ref="ssi_accountant_general_audit.worksheet_type_category_pe"
+            />
+</record>
+
+<record id="worksheet_type_pe11021" model="accountant.general_audit_worksheet_type">
+    <field name="code">PE.11021</field>
+    <field
+                name="name"
+            >Indikasi bahwa klien mungkin terlibat dalam pencucian uang</field>
+    <field name="sequence" eval="11021" />
+    <field name="parent_id" ref="worksheet_type_pe1102" />
+    <field
+                name="category_id"
+                ref="ssi_accountant_general_audit.worksheet_type_category_pe"
+            />
+</record>
+
+<record id="worksheet_type_pe11022" model="accountant.general_audit_worksheet_type">
+    <field name="code">PE.11022</field>
+    <field name="name">Customer due diligence</field>
+    <field name="sequence" eval="11022" />
+    <field name="parent_id" ref="worksheet_type_pe1102" />
+    <field
+                name="category_id"
+                ref="ssi_accountant_general_audit.worksheet_type_category_pe"
+            />
+</record>
+
+<record id="worksheet_type_pe1103" model="accountant.general_audit_worksheet_type">
+    <field name="code">PE.1103</field>
+    <field
+                name="name"
+            >Kompetensi, Ketersediaan Waktu, dan Independensi personel KAP untuk penunjukkan Tim Perikatan</field>
+    <field name="sequence" eval="11030" />
+    <field name="parent_id" ref="worksheet_type_pe110" />
+    <field
+                name="category_id"
+                ref="ssi_accountant_general_audit.worksheet_type_category_pe"
+            />
+</record>
+
+<record id="worksheet_type_pe1104" model="accountant.general_audit_worksheet_type">
+    <field name="code">PE.1104</field>
+    <field name="name">Komunikasi dengan Auditor Pendahulu</field>
+    <field name="sequence" eval="11040" />
+    <field name="parent_id" ref="worksheet_type_pe110" />
+    <field
+                name="category_id"
+                ref="ssi_accountant_general_audit.worksheet_type_category_pe"
+            />
+</record>
+</data>
+</odoo>

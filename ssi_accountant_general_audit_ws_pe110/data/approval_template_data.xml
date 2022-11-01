@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<data noupdate="1">
+<!-- PE.110 -->
+<record id="approval_template_pe110" model="approval.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe110"
+            />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_pe110" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_pe110" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe110_validator_group')])]"
+            />
+</record>
+
+<!-- PE.1101 -->
+<record id="approval_template_pe1101" model="approval.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1101"
+            />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_pe1101" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_pe1101" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1101_validator_group')])]"
+            />
+</record>
+
+<!-- PE.1102 -->
+<record id="approval_template_pe1102" model="approval.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1102"
+            />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_pe1102" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_pe1102" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1102_validator_group')])]"
+            />
+</record>
+
+<!-- PE.11021 -->
+<record id="approval_template_pe11021" model="approval.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe11021"
+            />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_pe11021" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_pe11021" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11021_validator_group')])]"
+            />
+</record>
+
+<!-- PE.11022 -->
+<record id="approval_template_pe11022" model="approval.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe11022"
+            />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_pe11022" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_pe11022" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11022_validator_group')])]"
+            />
+</record>
+
+<!-- PE.1103 -->
+<record id="approval_template_pe1103" model="approval.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1103"
+            />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_pe1103" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_pe1103" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1103_validator_group')])]"
+            />
+</record>
+
+<!-- PE.1104 -->
+<record id="approval_template_pe1104" model="approval.template">
+    <field name="name">Standard</field>
+    <field
+                name="model_id"
+                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1104"
+            />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_pe1104" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_pe1104" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1104_validator_group')])]"
+            />
+</record>
+
+</data>
+</odoo>
