@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- General Audit -->
+<record id="general_audit_internal_user_rule" model="ir.rule">
+    <field name="name">General Audit - Internal Users</field>
+    <field name="model_id" ref="model_accountant_general_audit" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+      ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="general_audit_company_rule" model="ir.rule">
+    <field name="name">General Audit - Responsible to company data</field>
+    <field name="model_id" ref="model_accountant_general_audit" />
+    <field name="groups" eval="[(4, ref('assurance_general_audit_company_group'))]" />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="general_audit_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >General Audit - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_accountant_general_audit" />
+    <field
+            name="groups"
+            eval="[(4, ref('assurance_general_audit_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="general_audit_all_rule" model="ir.rule">
+    <field name="name">General Audit - All</field>
+    <field name="model_id" ref="model_accountant_general_audit" />
+    <field name="groups" eval="[(4, ref('assurance_general_audit_all_group'))]" />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<!-- Trial Balance -->
+<record id="trial_balance_internal_user_rule" model="ir.rule">
+    <field name="name">Trial Balance - Internal Users</field>
+    <field name="model_id" ref="model_accountant_client_trial_balance" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+      ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="trial_balance_company_rule" model="ir.rule">
+    <field name="name">Trial Balance - Responsible to company data</field>
+    <field name="model_id" ref="model_accountant_client_trial_balance" />
+    <field name="groups" eval="[(4, ref('assurance_trial_balance_company_group'))]" />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="trial_balance_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Trial Balance - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_accountant_client_trial_balance" />
+    <field
+            name="groups"
+            eval="[(4, ref('assurance_trial_balance_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="trial_balance_all_rule" model="ir.rule">
+    <field name="name">Trial Balance - All</field>
+    <field name="model_id" ref="model_accountant_client_trial_balance" />
+    <field name="groups" eval="[(4, ref('assurance_trial_balance_all_group'))]" />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<!-- Adjustment Entry -->
+<record id="adjustment_entry_internal_user_rule" model="ir.rule">
+    <field name="name">Adjustment Entry - Internal Users</field>
+    <field name="model_id" ref="model_accountant_client_adjustment_entry" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+      ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="adjustment_entry_company_rule" model="ir.rule">
+    <field name="name">Adjustment Entry - Responsible to company data</field>
+    <field name="model_id" ref="model_accountant_client_adjustment_entry" />
+    <field
+            name="groups"
+            eval="[(4, ref('assurance_adjustment_entry_company_group'))]"
+        />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="adjustment_entry_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Adjustment Entry - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_accountant_client_adjustment_entry" />
+    <field
+            name="groups"
+            eval="[(4, ref('assurance_adjustment_entry_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="adjustment_entry_all_rule" model="ir.rule">
+    <field name="name">Adjustment Entry - All</field>
+    <field name="model_id" ref="model_accountant_client_adjustment_entry" />
+    <field name="groups" eval="[(4, ref('assurance_adjustment_entry_all_group'))]" />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+</odoo>

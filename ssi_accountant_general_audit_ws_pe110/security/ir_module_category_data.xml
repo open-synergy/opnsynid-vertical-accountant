@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- General Audit Worksheet PE.110 -->
+<record id="general_audit_ws_pe110_workflow_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet PE.110</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_pe110_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet PE.110</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet PE.1101 -->
+<record
+        id="general_audit_ws_pe1101_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet PE.1101</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_pe1101_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet PE.1101</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet PE.1102 -->
+<record
+        id="general_audit_ws_pe1102_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet PE.1102</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_pe1102_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet PE.1102</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet PE.11021 -->
+<record
+        id="general_audit_ws_pe11021_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet PE.11021</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_pe11021_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet PE.11021</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet PE.11022 -->
+<record
+        id="general_audit_ws_pe11022_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet PE.11022</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_pe11022_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet PE.11022</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet PE.1103 -->
+<record
+        id="general_audit_ws_pe1103_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet PE.1103</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_pe1103_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet PE.1103</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet PE.1104 -->
+<record
+        id="general_audit_ws_pe1104_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet PE.1104</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_pe1104_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet PE.1104</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+</odoo>
