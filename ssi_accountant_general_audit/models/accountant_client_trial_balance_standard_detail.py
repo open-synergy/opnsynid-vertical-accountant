@@ -46,11 +46,18 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         required=True,
         default=5,
     )
-    balance = fields.Float(
+    currency_id = fields.Many2one(
+        string="Currency",
+        comodel_name="res.currency",
+        related="trial_balance_id.currency_id",
+        store=True,
+    )
+    balance = fields.Monetary(
         string="Balance",
         required=False,
         compute="_compute_balance",
         store=True,
+        currency_field="currency_id",
     )
     trial_balance_id = fields.Many2one(
         string="Trial Balance",

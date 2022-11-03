@@ -130,31 +130,42 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         compute="_compute_standard_line",
         store=True,
     )
-    home_statement_balance = fields.Float(
+    currency_id = fields.Many2one(
+        string="Currency",
+        comodel_name="res.currency",
+        related="general_audit_id.currency_id",
+        store=True,
+    )
+    home_statement_balance = fields.Monetary(
         string="Home Statement Balance",
         related="home_standard_line_id.balance",
         store=True,
+        currency_field="currency_id",
     )
-    extrapolation_balance = fields.Float(
+    extrapolation_balance = fields.Monetary(
         string="Extrapolation Balance",
         related="interim_standard_line_id.balance",
         store=True,
+        currency_field="currency_id",
     )
-    previous_balance = fields.Float(
+    previous_balance = fields.Monetary(
         string="Extrapolation Balance",
         related="previous_standard_line_id.balance",
         store=True,
+        currency_field="currency_id",
     )
 
-    adjustment_debit = fields.Float(
+    adjustment_debit = fields.Monetary(
         string="Adjustment Debit",
         related="standard_adjustment_id.debit",
         store=True,
+        currency_field="currency_id",
     )
-    adjustment_credit = fields.Float(
+    adjustment_credit = fields.Monetary(
         string="Adjustment Credit",
         related="standard_adjustment_id.credit",
         store=True,
+        currency_field="currency_id",
     )
 
     @api.depends(

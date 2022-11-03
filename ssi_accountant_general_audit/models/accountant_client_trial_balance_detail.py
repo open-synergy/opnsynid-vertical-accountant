@@ -34,15 +34,23 @@ class AccountantClientTrialBalanceDetail(models.Model):
         related="account_id.type_id",
         store=True,
     )
-    debit = fields.Float(
+    currency_id = fields.Many2one(
+        string="Currency",
+        comodel_name="res.currency",
+        related="trial_balance_id.currency_id",
+        store=True,
+    )
+    debit = fields.Monetary(
         string="Debit",
         required=True,
         default=0.0,
+        currency_field="currency_id",
     )
-    credit = fields.Float(
+    credit = fields.Monetary(
         string="Credit",
         required=True,
         default=0.0,
+        currency_field="currency_id",
     )
 
     @api.depends(
@@ -60,8 +68,9 @@ class AccountantClientTrialBalanceDetail(models.Model):
                     result = record.credit - record.debit
             record.balance = result
 
-    balance = fields.Float(
+    balance = fields.Monetary(
         string="Balance",
         compute="_compute_balance",
         store=True,
+        currency_field="currency_id",
     )

@@ -117,6 +117,7 @@ class AccountantGeneralAuditWorksheet(models.Model):
         string="Conclusion",
         comodel_name="accountant.general_audit_worksheet_conclusion",
         required=False,
+        readonly=True,
         states={
             "draft": [
                 ("readonly", False),
@@ -125,6 +126,7 @@ class AccountantGeneralAuditWorksheet(models.Model):
     )
     conclusion = fields.Text(
         string="Conclusion Additional Explanation",
+        readonly=True,
         states={
             "draft": [
                 ("readonly", False),

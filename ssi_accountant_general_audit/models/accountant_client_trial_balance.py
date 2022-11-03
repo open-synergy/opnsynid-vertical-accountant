@@ -320,6 +320,12 @@ class AccountantClientTrialBalance(models.Model):
         for record in self.sudo():
             record._recompute_computation()
 
+    def action_confirm(self):
+        _super = super(AccountantClientTrialBalance, self)
+        _super.action_confirm()
+        for record in self.sudo():
+            record._recompute_computation()
+
     def _reload_account(self):
         self.ensure_one()
         ClientAccount = self.env["accountant.client_account"]
@@ -339,5 +345,34 @@ class AccountantClientTrialBalance(models.Model):
 
     def _recompute_computation(self):
         self.ensure_one()
+        additional_dict = self._get_account_type_dict()
         for computation in self.computation_ids:
-            computation.action_recompute()
+            additionaldict = computation._recompute(additional_dict)
+            additional_dict = additionaldict
+
+    def _get_account_type_dict(self):
+        self.ensure_one()
+        result = {
+            "account_type": {},
+            "account_group": {},
+        }
+        StandardDetail = self.env["accountant.client_trial_balance_standard_detail"]
+        criteria = [
+            ("trial_balance_id", "=", self.id),
+        ]
+        for standard in StandardDetail.search(criteria):
+            result["account_type"].update(
+                {
+                    standard.type_id.code: standard.balance,
+                }
+            )
+            account_group_amount = result["account_group"].get(
+                standard.type_id.group_id.code, 0.0
+            )
+            result["account_group"].update(
+                {
+                    standard.type_id.group_id.code: account_group_amount
+                    + standard.balance,
+                }
+            )
+        return result

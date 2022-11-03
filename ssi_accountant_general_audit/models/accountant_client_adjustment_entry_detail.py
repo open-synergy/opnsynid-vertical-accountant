@@ -26,13 +26,23 @@ class AccountantClientAdjustmentEntryDetail(models.Model):
         required=True,
         ondelete="restrict",
     )
-    debit = fields.Float(
+    currency_id = fields.Many2one(
+        string="Currency",
+        comodel_name="res.currency",
+        related="entry_id.currency_id",
+        store=True,
+    )
+    debit = fields.Monetary(
         string="Debit",
         required=True,
+        default=0.0,
+        currency_field="currency_id",
     )
-    credit = fields.Float(
+    credit = fields.Monetary(
         string="Credit",
         required=True,
+        default=0.0,
+        currency_field="currency_id",
     )
 
     @api.constrains(

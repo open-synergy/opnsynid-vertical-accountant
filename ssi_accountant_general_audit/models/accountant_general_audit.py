@@ -509,13 +509,15 @@ class AccountantGeneralAudit(models.Model):
     @api.constrains(
         "state",
     )
-    def _constrains_check_home_tb(self):
+    def _constrains_state_confirm(self):
         for record in self.sudo():
             record._check_home_tb_exist()
             record._check_home_tb_done()
             record._check_previous_tb_exist()
             record._check_previous_tb_done()
             record._check_interim_tb_done()
+            record._check_required_worksheet()
+            record._check_additional_worksheet()
 
     def _check_home_tb_exist(self):
         self.ensure_one()
@@ -581,6 +583,48 @@ class AccountantGeneralAudit(models.Model):
             Database ID: %s
             Problem: Interim trial balance is not finished
             Solution: Finish interim trial balance
+            """ % (
+                self.id
+            )
+            raise ValidationError(_(error_message))
+
+    def _check_required_worksheet(self):
+        self.ensure_one()
+        worksheet_state = True
+        for worksheet in self.worksheet_control_ids:
+            if worksheet.state != "done" and worksheet.required:
+                worksheet_state = False
+                break
+
+        if not worksheet_state and self.state == "confirm":
+            error_message = """
+            Context: Confirming general audit
+            Database ID: %s
+            Problem: One of the required worksheet not done
+            Solution: Create and finish required worksheet
+            """ % (
+                self.id
+            )
+            raise ValidationError(_(error_message))
+
+    def _check_additional_worksheet(self):
+        self.ensure_one()
+        worksheet_state = True
+        for worksheet in self.worksheet_control_ids:
+            if (
+                worksheet.state not in ["done", "cancel"]
+                and not worksheet.required
+                and worksheet.worksheet_id
+            ):
+                worksheet_state = False
+                break
+
+        if not worksheet_state and self.state == "confirm":
+            error_message = """
+            Context: Confirming general audit
+            Database ID: %s
+            Problem: One of the additional worksheet not done
+            Solution: Finish or cancel additional worksheet
             """ % (
                 self.id
             )
