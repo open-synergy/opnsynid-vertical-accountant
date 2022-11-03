@@ -19,11 +19,19 @@ class AccountantGeneralAuditAdjustment(models.Model):
         string="# General Audit",
         comodel_name="accountant.general_audit",
     )
-    debit = fields.Float(
-        string="Debit",
+    currency_id = fields.Many2one(
+        string="Currency",
+        comodel_name="res.currency",
+        related="general_audit_id.currency_id",
+        store=True,
     )
-    credit = fields.Float(
+    debit = fields.Monetary(
+        string="Debit",
+        currency_id="currency_id",
+    )
+    credit = fields.Monetary(
         string="Credit",
+        currency_id="currency_id",
     )
 
     def _select(self):

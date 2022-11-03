@@ -99,8 +99,9 @@
                                     name="type_id"
                                     domain="[('id','in',parent.allowed_type_ids[0][2])]"
                                 />
-                                <field name="debit" />
-                                <field name="credit" />
+                                <field name="currency_id" invisible="1" />
+                                <field name="debit" sum="Total Debit" />
+                                <field name="credit" sum="Total Credit" />
                                 <field name="balance" />
                             </tree>
                         </field>
@@ -116,6 +117,7 @@
                             <tree>
                                 <field name="sequence" invisible="1" />
                                 <field name="type_id" />
+                                <field name="currency_id" invisible="1" />
                                 <field name="balance" />
                             </tree>
                         </field>

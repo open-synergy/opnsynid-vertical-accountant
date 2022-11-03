@@ -157,6 +157,7 @@
                                         name="extrapolation_balance"
                                         string="Extrapolation"
                                     />
+                                    <field name="currency_id" invisible="1" />
                                     <field name="previous_balance" string="Previous" />
                                     <field
                                         name="home_statement_balance"
