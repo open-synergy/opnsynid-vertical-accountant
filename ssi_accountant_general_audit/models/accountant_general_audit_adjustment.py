@@ -23,7 +23,7 @@ class AccountantGeneralAuditAdjustment(models.Model):
         string="Currency",
         comodel_name="res.currency",
         related="general_audit_id.currency_id",
-        store=True,
+        store=False,
     )
     debit = fields.Monetary(
         string="Debit",
