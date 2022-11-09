@@ -186,15 +186,17 @@ class AccountantGeneralAuditStandardDetail(models.Model):
             record.audited_balance = audited
             record.adjustment_balance = adjustment
 
-    adjustment_balance = fields.Float(
+    adjustment_balance = fields.Monetary(
         string="Adjustment Balance",
         compute="_compute_adjustment_audited_balance",
         store=True,
+        currency_field="currency_id",
     )
-    audited_balance = fields.Float(
+    audited_balance = fields.Monetary(
         string="Audited Balance",
         compute="_compute_adjustment_audited_balance",
         store=True,
+        currency_field="currency_id",
     )
 
     def _get_localdict(
