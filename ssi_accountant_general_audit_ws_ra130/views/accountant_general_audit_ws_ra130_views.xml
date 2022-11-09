@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="accountant_general_audit_ws_ra130_view_search" model="ir.ui.view">
+        <field name="name">accountant.general_audit_ws_ra130 form</field>
+        <field name="model">accountant.general_audit_ws_ra130</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_ws_ra130_view_tree" model="ir.ui.view">
+        <field name="name">accountant.general_audit_ws_ra130 tree</field>
+        <field name="model">accountant.general_audit_ws_ra130</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_tree"
+        />
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_ws_ra130_view_form" model="ir.ui.view">
+        <field name="name">accountant.general_audit_ws_ra130 form</field>
+        <field name="model">accountant.general_audit_ws_ra130</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_form"
+        />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//page[1]" position="before">
+                    <page name="materiality" string="Materiality">
+                        <group
+                            name="materiality_1"
+                            colspan="4"
+                            col="2"
+                            string="Base Amount"
+                        >
+                            <field name="computation_item_id" />
+                            <field name="general_audit_computation_id" invisible="1" />
+                            <field name="other_amount_ok" />
+                            <field name="other_base_amount" />
+                            <field
+                                name="base_computation_amount"
+                                string="Base Amount"
+                            />
+                            <field
+                                name="base_computation_extrapolation_amount"
+                                string="Extrapolation Base Amount"
+                            />
+
+                        </group>
+                        <group
+                            name="materiality_2"
+                            colspan="4"
+                            col="2"
+                            string="Overall Materiality"
+                        >
+                            <field
+                                name="overall_materiality_percentage"
+                                string="Percentage"
+                            />
+                            <field name="overall_materiality" string="Amount" />
+                            <field
+                                name="overall_materiality_extrapolation"
+                                string="Extrapolation Amount"
+                            />
+                            <field
+                                name="overall_materiality_consideration"
+                                string="Consideration"
+                            />
+                        </group>
+                        <group
+                            name="materiality_3"
+                            colspan="4"
+                            col="2"
+                            string="Performance Materiality"
+                        >
+                            <field
+                                name="performance_materiality_percentage"
+                                string="Percentage"
+                            />
+                            <field name="performance_materiality" string="Amount" />
+                            <field
+                                name="performance_materiality_extrapolation"
+                                string="Extrapolation Amount"
+                            />
+                            <field
+                                name="performance_materiality_consideration"
+                                string="Consideration"
+                            />
+                        </group>
+                        <group
+                            name="materiality_4"
+                            colspan="4"
+                            col="2"
+                            string="Tolerable Misstatement"
+                        >
+                            <field
+                                name="tolerable_misstatement_percentage"
+                                string="Percentage"
+                            />
+                            <field name="tolerable_misstatement" string="Amount" />
+                            <field
+                                name="tolerable_misstatement_extrapolation"
+                                string="Extrapolation Amount"
+                            />
+                            <field
+                                name="tolerable_misstatement_consideration"
+                                string="Consideration"
+                            />
+                        </group>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_ws_ra130_action" model="ir.actions.act_window">
+        <field name="name">RA.130</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.general_audit_ws_ra130</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="accountant_general_audit_ws_ra130_menu"
+        name="RA.130"
+        parent="ssi_accountant_general_audit.menu_general_audit_risk_assesment"
+        action="accountant_general_audit_ws_ra130_action"
+        sequence="1300"
+        groups="accountant_general_audit_ws_ra130_viewer_group"
+    />
+
+
+</odoo>

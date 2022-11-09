@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="accountant_general_audit_ws_ra1301_view_search" model="ir.ui.view">
+        <field name="name">accountant.general_audit_ws_ra1301 form</field>
+        <field name="model">accountant.general_audit_ws_ra1301</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_ws_ra1301_view_tree" model="ir.ui.view">
+        <field name="name">accountant.general_audit_ws_ra1301 tree</field>
+        <field name="model">accountant.general_audit_ws_ra1301</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_tree"
+        />
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="accountant_general_audit_ws_ra1301_view_form" model="ir.ui.view">
+        <field name="name">accountant.general_audit_ws_ra1301 form</field>
+        <field name="model">accountant.general_audit_ws_ra1301</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_form"
+        />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//page[1]" position="before">
+                    <page name="materiality" string="Materiality">
+                        <group name="materiality_1" colspan="4" col="2">
+                            <field
+                                name="worksheet_ra130_id"
+                                domain="[('general_audit_id','=',general_audit_id)]"
+                            />
+                            <field name="materiality_type" />
+                        </group>
+                        <field name="materiality_mapping_ids" force_save="1">
+                            <tree editable="top">
+                                <field name="sequence" widget="handle" />
+                                <field name="standard_detail_id" invisible="1" />
+                                <field name="currency_id" invisible="1" />
+                                <field name="type_id" />
+                                <field name="balance" />
+                                <field name="extrapolation_balance" />
+                                <field name="materiality" />
+                                <field name="materiality_extrapolation" />
+                                <field name="use_specific_materiality" />
+                                <field name="specific_materiality" />
+                                <field name="final_materiality" />
+                                <field name="final_materiality_extrapolation" />
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record
+        id="accountant_general_audit_ws_ra1301_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">RA.130.1</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.general_audit_ws_ra1301</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="accountant_general_audit_ws_ra1301_menu"
+        name="RA.130.1"
+        parent="ssi_accountant_general_audit.menu_general_audit_risk_assesment"
+        action="accountant_general_audit_ws_ra1301_action"
+        sequence="1301"
+        groups="accountant_general_audit_ws_ra1301_viewer_group"
+    />
+
+
+</odoo>
