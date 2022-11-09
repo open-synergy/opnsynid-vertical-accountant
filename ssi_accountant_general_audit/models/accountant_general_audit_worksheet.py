@@ -90,6 +90,13 @@ class AccountantGeneralAuditWorksheet(models.Model):
         readonly=True,
         store=True,
     )
+    currency_id = fields.Many2one(
+        string="Currency",
+        comodel_name="res.currency",
+        related="general_audit_id.currency_id",
+        readonly=True,
+        store=True,
+    )
     account_type_set_id = fields.Many2one(
         string="Accoount Type Set",
         comodel_name="accountant.client_account_type_set",

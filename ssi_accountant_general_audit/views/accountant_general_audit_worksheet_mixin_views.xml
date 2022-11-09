@@ -66,6 +66,7 @@
                     <field name="general_audit_id" />
                     <field name="partner_id" />
                     <field name="account_type_set_id" />
+                    <field name="currency_id" />
                 </xpath>
                 <xpath expr="//group[@name='header_right']" position="inside">
                     <field name="date_start" />
