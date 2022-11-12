@@ -40,6 +40,12 @@ class AccountantClientTrialBalanceDetail(models.Model):
         related="trial_balance_id.currency_id",
         store=True,
     )
+    opening_balance = fields.Monetary(
+        string="Opening Balance",
+        required=True,
+        default=0.0,
+        currency_field="currency_id",
+    )
     debit = fields.Monetary(
         string="Debit",
         required=True,
@@ -57,15 +63,16 @@ class AccountantClientTrialBalanceDetail(models.Model):
         "debit",
         "credit",
         "account_id",
+        "opening_balance",
     )
     def _compute_balance(self):
         for record in self:
             result = 0.0
             if record.account_id:
                 if record.account_id.normal_balance == "dr":
-                    result = record.debit - record.credit
+                    result = record.opening_balance + record.debit - record.credit
                 else:
-                    result = record.credit - record.debit
+                    result = record.opening_balance + record.credit - record.debit
             record.balance = result
 
     balance = fields.Monetary(
