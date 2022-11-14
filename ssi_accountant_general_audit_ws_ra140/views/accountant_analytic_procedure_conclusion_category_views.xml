@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record
+        id="accountant_analytic_procedure_conclusion_category_view_search"
+        model="ir.ui.view"
+    >
+        <field
+            name="name"
+        >accountant.analytic_procedure_conclusion_category.search</field>
+        <field name="model">accountant.analytic_procedure_conclusion_category</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record
+        id="accountant_analytic_procedure_conclusion_category_view_tree"
+        model="ir.ui.view"
+    >
+        <field
+            name="name"
+        >accountant.analytic_procedure_conclusion_category.tree</field>
+        <field name="model">accountant.analytic_procedure_conclusion_category</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_tree"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='code']" position="before">
+                    <field name="sequence" widget="handle" />
+                </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="parent_id" />
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record
+        id="accountant_analytic_procedure_conclusion_category_view_form"
+        model="ir.ui.view"
+    >
+        <field
+            name="name"
+        >accountant.analytic_procedure_conclusion_category.form</field>
+        <field name="model">accountant.analytic_procedure_conclusion_category</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_form"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='code']" position="after">
+                    <field name="sequence" />
+                    <field name="parent_id" />
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record
+        id="accountant_analytic_procedure_conclusion_category_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Analytic Procedure Conclusion Category</field>
+        <field name="type">ir.actions.act_window</field>
+        <field
+            name="res_model"
+        >accountant.analytic_procedure_conclusion_category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="accountant_analytic_procedure_conclusion_category_menu"
+        name="Analytic Procedure Conclusion Category"
+        parent="ssi_accountant_general_audit.menu_accountant_configuration_general_audit"
+        action="accountant_analytic_procedure_conclusion_category_action"
+        sequence="201"
+        groups="accountant_analytic_procedure_conclusion_category_group"
+    />
+
+</odoo>
