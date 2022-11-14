@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<record id="accountant_client_trial_balance_detail_view_search" model="ir.ui.view">
+    <field name="name">accountant.client_trial_balance_detail - search</field>
+    <field name="model">accountant.client_trial_balance_detail</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <search />
+    </field>
+</record>
+
+<record id="accountant_client_trial_balance_detail_view_tree" model="ir.ui.view">
+    <field name="name">accountant.client_trial_balance_detail - tree</field>
+    <field name="model">accountant.client_trial_balance_detail</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <tree editable="top">
+            <field name="sequence" widget="handle" />
+            <field name="account_id" domain="[('partner_id','=',parent.partner_id)]" />
+            <field
+                    name="type_id"
+                    domain="[('id','in',parent.allowed_type_ids[0][2])]"
+                />
+            <field name="currency_id" invisible="1" />
+            <field
+                    name="opening_balance_debit"
+                    string="Opening Dr."
+                    sum="Total Opening Debit"
+                />
+            <field
+                    name="opening_balance_credit"
+                    string="Opening Cr."
+                    sum="Total Opening Credit"
+                />
+            <field name="debit" string="Dr." sum="Total Debit" />
+            <field name="credit" string="Cr." sum="Total Credit" />
+            <field
+                    name="ending_balance_debit"
+                    string="Ending Dr."
+                    sum="Total Ending Debit"
+                />
+            <field
+                    name="ending_balance_credit"
+                    string="Ending Dr."
+                    sum="Total Ending Credit"
+                />
+            <field name="balance" invisible="1" />
+        </tree>
+    </field>
+</record>
+
+<record id="accountant_client_trial_balance_detail_view_form" model="ir.ui.view">
+    <field name="name">accountant.client_trial_balance_detail - form</field>
+    <field name="model">accountant.client_trial_balance_detail</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group name="header" colspan="4" col="2">
+                    <group name="header1" colspan="1" col="2">
+                        <field name="sequence" />
+                        <field
+                                name="account_id"
+                                domain="[('partner_id','=',parent.partner_id)]"
+                            />
+                        <field
+                                name="type_id"
+                                domain="[('id','in',parent.allowed_type_ids[0][2])]"
+                            />
+                        <field name="currency_id" invisible="1" />
+                    </group>
+                    <group name="header2" colspan="1" col="2">
+                        <field name="opening_balance_debit" string="Opening Dr." />
+                        <field name="opening_balance_credit" string="Opening Cr." />
+                        <field name="debit" string="Debit" />
+                        <field name="credit" string="Credit" />
+                        <field name="ending_balance_debit" string="Ending Dr." />
+                        <field name="ending_balance_credit" string="Ending Dr." />
+                        <field name="balance" />
+                    </group>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+</odoo>
