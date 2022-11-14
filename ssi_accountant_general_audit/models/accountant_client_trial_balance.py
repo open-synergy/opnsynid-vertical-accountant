@@ -3,7 +3,9 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html).
 
 from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from odoo.exceptions import UserError, ValidationError
+
+from odoo.addons.ssi_decorator import ssi_decorator
 
 
 class AccountantClientTrialBalance(models.Model):
@@ -163,9 +165,10 @@ class AccountantClientTrialBalance(models.Model):
         string="Trial Balance Type",
         required=True,
         selection=[
-            ("home", "Home Statement"),
-            ("interim", "Interim"),
             ("previous", "Previous"),
+            ("interim", "Interim"),
+            ("extrapolation", "Extrapolation"),
+            ("home", "Home Statement"),
         ],
         default="home",
         readonly=True,
@@ -204,6 +207,63 @@ class AccountantClientTrialBalance(models.Model):
                 ("readonly", False),
             ],
         },
+    )
+
+    @api.depends(
+        "detail_ids",
+        "detail_ids.opening_balance_debit",
+        "detail_ids.opening_balance_credit",
+        "detail_ids.debit",
+        "detail_ids.credit",
+    )
+    def _compute_total_detail(self):
+        for record in self:
+            opening_debit = (
+                opening_credit
+            ) = debit = credit = ending_debit = ending_credit = 0.0
+            for detail in record.detail_ids:
+                opening_debit += detail.opening_balance_debit
+                opening_credit += detail.opening_balance_credit
+                debit += detail.debit
+                credit += detail.credit
+                ending_debit += detail.ending_balance_debit
+                ending_credit += detail.ending_balance_credit
+            record.opening_debit = opening_debit
+            record.opening_credit = opening_credit
+            record.debit = debit
+            record.credit = credit
+            record.ending_debit = ending_debit
+            record.ending_credit = ending_credit
+
+    opening_debit = fields.Monetary(
+        string="Opening Debit",
+        compute="_compute_total_detail",
+        store=True,
+    )
+    opening_credit = fields.Monetary(
+        string="Opening Credit",
+        compute="_compute_total_detail",
+        store=True,
+    )
+    debit = fields.Monetary(
+        string="Debit",
+        compute="_compute_total_detail",
+        store=True,
+    )
+    credit = fields.Monetary(
+        string="Credit",
+        compute="_compute_total_detail",
+        store=True,
+    )
+    ending_debit = fields.Monetary(
+        string="Ending Debit",
+        compute="_compute_total_detail",
+        store=True,
+    )
+    ending_credit = fields.Monetary(
+        string="Ending Credit",
+        compute="_compute_total_detail",
+        store=True,
     )
     standard_detail_ids = fields.One2many(
         string="Standard Detail",
@@ -320,11 +380,50 @@ class AccountantClientTrialBalance(models.Model):
         for record in self.sudo():
             record._recompute_computation()
 
-    def action_confirm(self):
-        _super = super(AccountantClientTrialBalance, self)
-        _super.action_confirm()
-        for record in self.sudo():
-            record._recompute_computation()
+    @ssi_decorator.pre_confirm_check()
+    def _check_ending_balance(self):
+        self.ensure_one()
+        if self.ending_debit != self.ending_credit:
+            error_message = _(
+                """
+            Context: Confirm trial balance
+            Database ID: %s
+            Problem: Ending balance debit is not equal to ending balance credit
+            Solution: Check detail
+            """
+                % (self.id)
+            )
+            raise ValidationError(error_message)
+
+    @ssi_decorator.pre_confirm_check()
+    def _check_opening_balance(self):
+        self.ensure_one()
+        if self.opening_debit != self.opening_credit:
+            error_message = _(
+                """
+            Context: Confirm trial balance
+            Database ID: %s
+            Problem: Opening balance debit is not equal to opening balance credit
+            Solution: Check detail
+            """
+                % (self.id)
+            )
+            raise ValidationError(error_message)
+
+    @ssi_decorator.pre_confirm_check()
+    def _check_debit_credit(self):
+        self.ensure_one()
+        if self.debit != self.credit:
+            error_message = _(
+                """
+            Context: Confirm trial balance
+            Database ID: %s
+            Problem: Debit is not equal to credit
+            Solution: Check detail
+            """
+                % (self.id)
+            )
+            raise ValidationError(error_message)
 
     def _reload_account(self):
         self.ensure_one()
@@ -343,6 +442,7 @@ class AccountantClientTrialBalance(models.Model):
                     }
                 )
 
+    @ssi_decorator.post_confirm_action()
     def _recompute_computation(self):
         self.ensure_one()
         additional_dict = self._get_account_type_dict()

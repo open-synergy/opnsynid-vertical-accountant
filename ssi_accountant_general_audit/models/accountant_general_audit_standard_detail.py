@@ -2,7 +2,6 @@
 # Copyright 2022 PT. Simetri Sinergi Indonesia
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html).
 
-from datetime import datetime
 
 from odoo import api, fields, models
 
@@ -34,11 +33,14 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         "general_audit_id.home_trial_balance_id",
         "general_audit_id.interim_trial_balance_id",
         "general_audit_id.previous_trial_balance_id",
+        "general_audit_id.extrapolation_trial_balance_id",
     )
     def _compute_standard_line(self):
         StandardDetail = self.env["accountant.client_trial_balance_standard_detail"]
         for record in self:
-            home_result = interim_result = previous_result = False
+            home_result = (
+                interim_result
+            ) = previous_result = extrapolation_result = False
             criteria = [
                 ("type_id", "=", record.type_id.id),
             ]
@@ -66,6 +68,18 @@ class AccountantGeneralAuditStandardDetail(models.Model):
                 if len(interim_results) > 0:
                     interim_result = interim_results[0]
 
+            if record.general_audit_id.extrapolation_trial_balance_id:
+                criteria_extrapolation = criteria + [
+                    (
+                        "trial_balance_id",
+                        "=",
+                        record.general_audit_id.extrapolation_trial_balance_id.id,
+                    )
+                ]
+                extrapolation_results = StandardDetail.search(criteria_extrapolation)
+                if len(extrapolation_results) > 0:
+                    extrapolation_result = extrapolation_results[0]
+
             if record.general_audit_id.previous_trial_balance_id:
                 criteria_previous = criteria + [
                     (
@@ -81,6 +95,7 @@ class AccountantGeneralAuditStandardDetail(models.Model):
             record.home_standard_line_id = home_result
             record.interim_standard_line_id = interim_result
             record.previous_standard_line_id = previous_result
+            record.extrapolation_standard_line_id = extrapolation_result
 
     @api.depends(
         "general_audit_id.adjustment_entry_ids",
@@ -123,6 +138,13 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         compute="_compute_standard_line",
         store=True,
     )
+    extrapolation_standard_line_id = fields.Many2one(
+        string="Extrapolation TB Standard Line",
+        comodel_name="accountant.client_trial_balance_standard_detail",
+        readonly=True,
+        compute="_compute_standard_line",
+        store=True,
+    )
     previous_standard_line_id = fields.Many2one(
         string="Previous TB Standard Line",
         comodel_name="accountant.client_trial_balance_standard_detail",
@@ -142,9 +164,15 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         store=True,
         currency_field="currency_id",
     )
+    interim_balance = fields.Monetary(
+        string="Interim Balance",
+        related="interim_standard_line_id.balance",
+        store=True,
+        currency_field="currency_id",
+    )
     extrapolation_balance = fields.Monetary(
         string="Extrapolation Balance",
-        related="interim_standard_line_id.balance",
+        related="extrapolation_standard_line_id.balance",
         store=True,
         currency_field="currency_id",
     )
@@ -198,54 +226,3 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         store=True,
         currency_field="currency_id",
     )
-
-    def _get_localdict(
-        self, previous_balance, balance, interim_balance, audited_balance
-    ):
-        self.ensure_one()
-        tb = self.trial_balance_id
-        date_start = (
-            tb.date_start
-            and datetime.strptime(str(tb.date_start), "%Y-%m-%d").date()
-            or False
-        )
-        date_end = (
-            tb.date_end
-            and datetime.strptime(str(tb.date_end), "%Y-%m-%d").date()
-            or False
-        )
-        previous_date_start = (
-            tb.previous_date_start
-            and datetime.strptime(str(tb.previous_date_start), "%Y-%m-%d").date()
-            or False
-        )
-        previous_date_end = (
-            tb.previous_date_end
-            and datetime.strptime(str(tb.previous_date_end), "%Y-%m-%d").date()
-            or False
-        )
-        interim_date_start = (
-            tb.interim_date_start
-            and datetime.strptime(str(tb.interim_date_start), "%Y-%m-%d").date()
-            or False
-        )
-        interim_date_end = (
-            tb.interim_date_end
-            and datetime.strptime(str(tb.interim_date_end), "%Y-%m-%d").date()
-            or False
-        )
-        return {
-            "env": self.env,
-            "document": self,
-            "previous_balance": previous_balance,
-            "interim_balance": interim_balance,
-            "audited_balance": audited_balance,
-            "balance": balance,
-            "datetime": datetime,
-            "date_start": date_start,
-            "date_end": date_end,
-            "previous_date_start": previous_date_start,
-            "previous_date_end": previous_date_end,
-            "interim_date_start": interim_date_start,
-            "interim_date_end": interim_date_end,
-        }

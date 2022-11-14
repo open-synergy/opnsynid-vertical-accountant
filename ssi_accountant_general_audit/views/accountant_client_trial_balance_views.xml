@@ -100,12 +100,39 @@
                                     domain="[('id','in',parent.allowed_type_ids[0][2])]"
                                 />
                                 <field name="currency_id" invisible="1" />
-                                <field name="opening_balance" sum="Total Debit" />
-                                <field name="debit" sum="Total Debit" />
-                                <field name="credit" sum="Total Credit" />
-                                <field name="balance" />
+                                <field
+                                    name="opening_balance_debit"
+                                    string="Opening Dr."
+                                    sum="Total Opening Debit"
+                                />
+                                <field
+                                    name="opening_balance_credit"
+                                    string="Opening Cr."
+                                    sum="Total Opening Credit"
+                                />
+                                <field name="debit" string="Dr." sum="Total Debit" />
+                                <field name="credit" string="Cr." sum="Total Credit" />
+                                <field
+                                    name="ending_balance_debit"
+                                    string="Ending Dr."
+                                    sum="Total Ending Debit"
+                                />
+                                <field
+                                    name="ending_balance_credit"
+                                    string="Ending Dr."
+                                    sum="Total Ending Credit"
+                                />
+                                <field name="balance" invisible="1" />
                             </tree>
                         </field>
+                        <group name="details_1" colspan="4" col="2">
+                            <field name="opening_debit" />
+                            <field name="opening_credit" />
+                            <field name="debit" />
+                            <field name="credit" />
+                            <field name="ending_debit" />
+                            <field name="ending_credit" />
+                        </group>
                     </page>
                     <page string="Standard Detail" name="standard_details">
                         <field

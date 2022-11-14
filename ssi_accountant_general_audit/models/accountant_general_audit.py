@@ -98,7 +98,7 @@ class AccountantGeneralAudit(models.Model):
     )
     def _compute_trial_balance_id(self):
         for document in self:
-            home = interim = previous = False
+            home = interim = previous = extrapolation = False
             homes = document.trial_balance_ids.filtered(
                 lambda r: r.trial_balance_type == "home"
             )
@@ -109,6 +109,11 @@ class AccountantGeneralAudit(models.Model):
             )
             if len(interims) > 0:
                 interim = interims[0]
+            extrapolations = document.trial_balance_ids.filtered(
+                lambda r: r.trial_balance_type == "extrapolation"
+            )
+            if len(extrapolations) > 0:
+                extrapolation = extrapolations[0]
             previouses = document.trial_balance_ids.filtered(
                 lambda r: r.trial_balance_type == "previous"
             )
@@ -117,6 +122,7 @@ class AccountantGeneralAudit(models.Model):
 
             document.home_trial_balance_id = home
             document.interim_trial_balance_id = interim
+            document.extrapolation_trial_balance_id = extrapolation
             document.previous_trial_balance_id = previous
 
     title = fields.Char(
@@ -390,6 +396,12 @@ class AccountantGeneralAudit(models.Model):
     )
     interim_trial_balance_id = fields.Many2one(
         string="# Interim Trial Balance",
+        comodel_name="accountant.client_trial_balance",
+        compute="_compute_trial_balance_id",
+        store=True,
+    )
+    extrapolation_trial_balance_id = fields.Many2one(
+        string="# Extrapolation Trial Balance",
         comodel_name="accountant.client_trial_balance",
         compute="_compute_trial_balance_id",
         store=True,
