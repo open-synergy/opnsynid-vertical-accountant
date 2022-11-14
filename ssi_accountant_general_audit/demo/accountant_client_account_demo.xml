@@ -103,4 +103,340 @@
     <field name="sequence" eval="11" />
 </record>
 
+<record id="demo_account12" model="accountant.client_account">
+    <field name="name">Purchase Advance</field>
+    <field name="code">15000</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t008" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="12" />
+</record>
+
+<record id="demo_account13" model="accountant.client_account">
+    <field name="name">Prepaid Rent</field>
+    <field name="code">15012</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t008" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="14" />
+</record>
+
+<record id="demo_account14" model="accountant.client_account">
+    <field name="name">Prepaid Insurance</field>
+    <field name="code">15013</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t008" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="15" />
+</record>
+
+<record id="demo_account15021" model="accountant.client_account">
+    <field name="name">VAT IN</field>
+    <field name="code">15021</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t007" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="16" />
+</record>
+
+<record id="demo_account15022" model="accountant.client_account">
+    <field name="name">Prepaid Art. 4</field>
+    <field name="code">15022</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t007" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="17" />
+</record>
+
+<record id="demo_account15023" model="accountant.client_account">
+    <field name="name">Prepaid Art. 21</field>
+    <field name="code">15023</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t007" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="18" />
+</record>
+
+<record id="demo_account15024" model="accountant.client_account">
+    <field name="name">Prepaid Art. 22</field>
+    <field name="code">15024</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t007" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="19" />
+</record>
+
+<record id="demo_account15025" model="accountant.client_account">
+    <field name="name">Prepaid Art. 23</field>
+    <field name="code">15025</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t007" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="20" />
+</record>
+
+<record id="demo_account15026" model="accountant.client_account">
+    <field name="name">Prepaid Art. 26</field>
+    <field name="code">15026</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t007" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="21" />
+</record>
+
+<record id="demo_account17010" model="accountant.client_account">
+    <field name="name">Computer Equipment at Cost</field>
+    <field name="code">17010</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t010" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="22" />
+</record>
+
+<record id="demo_account17011" model="accountant.client_account">
+    <field name="name">Computer Equipment Acc. Depr.</field>
+    <field name="code">17011</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t010" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="23" />
+</record>
+
+<record id="demo_account17020" model="accountant.client_account">
+    <field name="name">Vehicle at Cost</field>
+    <field name="code">17020</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t010" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="24" />
+</record>
+
+<record id="demo_account17021" model="accountant.client_account">
+    <field name="name">Vehicle Acc. Depr.</field>
+    <field name="code">17021</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t010" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="25" />
+</record>
+
+<record id="demo_account17030" model="accountant.client_account">
+    <field name="name">Computer Equipment at Cost</field>
+    <field name="code">17030</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t010" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="26" />
+</record>
+
+<record id="demo_account17031" model="accountant.client_account">
+    <field name="name">Computer Equipment Acc. Depr.</field>
+    <field name="code">17031</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t010" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="27" />
+</record>
+
+<record id="demo_account21010" model="accountant.client_account">
+    <field name="name">Account Payable</field>
+    <field name="code">21010</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t015" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="28" />
+</record>
+
+<record id="demo_account21021" model="accountant.client_account">
+    <field name="name">Employee Payable</field>
+    <field name="code">21021</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t017" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="29" />
+</record>
+
+<record id="demo_account21022" model="accountant.client_account">
+    <field name="name">Shareholder Payable</field>
+    <field name="code">21022</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t017" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="30" />
+</record>
+
+<record id="demo_account22031" model="accountant.client_account">
+    <field name="name">VAT Out</field>
+    <field name="code">22030</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t016" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="31" />
+</record>
+
+<record id="demo_account22032" model="accountant.client_account">
+    <field name="name">VAT Payable</field>
+    <field name="code">22032</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t016" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="32" />
+</record>
+
+<record id="demo_account22033" model="accountant.client_account">
+    <field name="name">Art. 4 Payable</field>
+    <field name="code">22033</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t016" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="33" />
+</record>
+
+<record id="demo_account22034" model="accountant.client_account">
+    <field name="name">Art. 21 Payable</field>
+    <field name="code">22034</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t016" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="34" />
+</record>
+
+<record id="demo_account22035" model="accountant.client_account">
+    <field name="name">Art. 22 Payable</field>
+    <field name="code">22035</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t016" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="35" />
+</record>
+
+<record id="demo_account22036" model="accountant.client_account">
+    <field name="name">Art. 23 Payable</field>
+    <field name="code">22036</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t016" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="36" />
+</record>
+
+<record id="demo_account22037" model="accountant.client_account">
+    <field name="name">Art. 26 Payable</field>
+    <field name="code">22037</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t016" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="37" />
+</record>
+
+<record id="demo_account31020" model="accountant.client_account">
+    <field name="name">Equity</field>
+    <field name="code">31020</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t022" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="38" />
+</record>
+
+<record id="demo_account32010" model="accountant.client_account">
+    <field name="name">Opening Balance</field>
+    <field name="code">32010</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t025" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="39" />
+</record>
+
+<record id="demo_account41010" model="accountant.client_account">
+    <field name="name">Sales - Goods</field>
+    <field name="code">41010</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t029" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="40" />
+</record>
+
+<record id="demo_account41020" model="accountant.client_account">
+    <field name="name">Sales - Service</field>
+    <field name="code">41020</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t030" />
+    <field name="normal_balance">cr</field>
+    <field name="sequence" eval="41" />
+</record>
+
+<record id="demo_account51010" model="accountant.client_account">
+    <field name="name">COGS - Inventory</field>
+    <field name="code">51010</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t035" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="42" />
+</record>
+
+<record id="demo_account52010" model="accountant.client_account">
+    <field name="name">COS - Consultant Fee</field>
+    <field name="code">52010</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t035" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="43" />
+</record>
+
+<record id="demo_account52020" model="accountant.client_account">
+    <field name="name">COS - Overtime</field>
+    <field name="code">52020</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t035" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="44" />
+</record>
+
+<record id="demo_account52011" model="accountant.client_account">
+    <field name="name">Utility Expense</field>
+    <field name="code">52011</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t038" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="45" />
+</record>
+
+<record id="demo_account52012" model="accountant.client_account">
+    <field name="name">Rent Expense</field>
+    <field name="code">52012</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t038" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="46" />
+</record>
+
+<record id="demo_account52013" model="accountant.client_account">
+    <field name="name">Office Expense</field>
+    <field name="code">52013</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t038" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="47" />
+</record>
+
+<record id="demo_account52021" model="accountant.client_account">
+    <field name="name">Salary</field>
+    <field name="code">52021</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t037" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="45" />
+</record>
+
+<record id="demo_account52022" model="accountant.client_account">
+    <field name="name">Other Allowance</field>
+    <field name="code">52022</field>
+    <field name="partner_id" ref="base.res_partner_2" />
+    <field name="type_id" ref="acc_type_t037" />
+    <field name="normal_balance">dr</field>
+    <field name="sequence" eval="46" />
+</record>
+
+
+
+
 </odoo>

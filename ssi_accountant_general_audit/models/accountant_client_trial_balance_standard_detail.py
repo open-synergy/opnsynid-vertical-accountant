@@ -36,6 +36,12 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
                 balance += detail.balance
             document.balance = balance
 
+    trial_balance_id = fields.Many2one(
+        string="Trial Balance",
+        comodel_name="accountant.client_trial_balance",
+        required=True,
+        ondelete="cascade",
+    )
     type_id = fields.Many2one(
         string="Account Type",
         comodel_name="accountant.client_account_type",
@@ -58,10 +64,4 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         compute="_compute_balance",
         store=True,
         currency_field="currency_id",
-    )
-    trial_balance_id = fields.Many2one(
-        string="Trial Balance",
-        comodel_name="accountant.client_trial_balance",
-        required=True,
-        ondelete="cascade",
     )

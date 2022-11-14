@@ -119,13 +119,17 @@
                     <page name="trial_balance" string="Trial Balance">
                         <group name="trial_balance_1" colspan="4" col="2">
                             <field
-                                name="home_trial_balance_id"
-                                string="# Home Statement"
+                                name="previous_trial_balance_id"
+                                string="# Previous"
                             />
                             <field name="interim_trial_balance_id" string="# Interim" />
                             <field
-                                name="previous_trial_balance_id"
-                                string="# Previous"
+                                name="extrapolation_trial_balance_id"
+                                string="# Extrapolation"
+                            />
+                            <field
+                                name="home_trial_balance_id"
+                                string="# Home Statement"
                             />
                         </group>
                         <group name="trial_balance_2" colspan="4" col="2">
@@ -150,15 +154,19 @@
                                         invisible="1"
                                     />
                                     <field
+                                        name="extrapolation_standard_line_id"
+                                        invisible="1"
+                                    />
+                                    <field
                                         name="previous_standard_line_id"
                                         invisible="1"
                                     />
+                                    <field name="currency_id" invisible="1" />
+                                    <field name="interim_balance" string="Interim" />
                                     <field
                                         name="extrapolation_balance"
                                         string="Extrapolation"
                                     />
-                                    <field name="currency_id" invisible="1" />
-                                    <field name="previous_balance" string="Previous" />
                                     <field
                                         name="home_statement_balance"
                                         string="Home Statement"
@@ -168,6 +176,7 @@
                                         string="Adjustment"
                                     />
                                     <field name="audited_balance" string="Audited" />
+                                    <field name="previous_balance" string="Previous" />
                                 </tree>
                             </field>
                         </group>
@@ -181,8 +190,9 @@
                             >
                                 <tree>
                                     <field name="computation_item_id" />
-                                    <field name="home_amount" />
                                     <field name="interim_amount" />
+                                    <field name="extrapolation_amount" />
+                                    <field name="home_amount" />
                                     <field name="previous_amount" />
                                 </tree>
                             </field>

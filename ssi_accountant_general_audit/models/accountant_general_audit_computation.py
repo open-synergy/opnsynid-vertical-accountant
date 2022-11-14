@@ -26,11 +26,14 @@ class AccountantGeneralAuditComputation(models.Model):
         "general_audit_id.home_trial_balance_id",
         "general_audit_id.interim_trial_balance_id",
         "general_audit_id.previous_trial_balance_id",
+        "general_audit_id.extrapolation_trial_balance_id",
     )
     def _compute_computation(self):
         Computation = self.env["accountant.client_trial_balance_computation"]
         for record in self:
-            home_result = interim_result = previous_result = False
+            home_result = (
+                interim_result
+            ) = previous_result = extrapolation_result = False
             criteria = [
                 ("computation_item_id", "=", record.computation_item_id.id),
             ]
@@ -58,6 +61,18 @@ class AccountantGeneralAuditComputation(models.Model):
                 if len(interim_results) > 0:
                     interim_result = interim_results[0]
 
+            if record.general_audit_id.extrapolation_trial_balance_id:
+                criteria_extrapolation = criteria + [
+                    (
+                        "trial_balance_id",
+                        "=",
+                        record.general_audit_id.extrapolation_trial_balance_id.id,
+                    )
+                ]
+                extrapolation_results = Computation.search(criteria_extrapolation)
+                if len(extrapolation_results) > 0:
+                    extrapolation_result = extrapolation_results[0]
+
             if record.general_audit_id.previous_trial_balance_id:
                 criteria_previous = criteria + [
                     (
@@ -73,6 +88,7 @@ class AccountantGeneralAuditComputation(models.Model):
             record.home_computation_id = home_result
             record.interim_computation_id = interim_result
             record.previous_computation_id = previous_result
+            record.extrapolation_computation_id = extrapolation_result
 
     home_computation_id = fields.Many2one(
         string="Home Statement Computation",
@@ -83,6 +99,13 @@ class AccountantGeneralAuditComputation(models.Model):
     )
     interim_computation_id = fields.Many2one(
         string="Interim Computation",
+        comodel_name="accountant.client_trial_balance_computation",
+        readonly=True,
+        compute="_compute_computation",
+        store=True,
+    )
+    extrapolation_computation_id = fields.Many2one(
+        string="Extrapolation Computation",
         comodel_name="accountant.client_trial_balance_computation",
         readonly=True,
         compute="_compute_computation",
@@ -100,6 +123,11 @@ class AccountantGeneralAuditComputation(models.Model):
         related="home_computation_id.amount",
         store=True,
     )
+    extrapolation_amount = fields.Float(
+        string="Extrapolation Amount",
+        related="extrapolation_computation_id.amount",
+        store=True,
+    )
     interim_amount = fields.Float(
         string="Interim Amount",
         related="interim_computation_id.amount",
@@ -110,3 +138,11 @@ class AccountantGeneralAuditComputation(models.Model):
         related="previous_computation_id.amount",
         store=True,
     )
+
+    def _get_localdict(self):
+        self.ensure_one()
+        return {
+            "env": self.env,
+            "document": self,
+            "tb": self.interim_standard_line_id.trial_balance_id,
+        }
