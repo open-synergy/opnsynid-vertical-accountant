@@ -144,41 +144,7 @@
                                 col="2"
                                 nolabel="1"
                                 force_save="1"
-                            >
-                                <tree>
-                                    <field name="sequence" invisible="1" />
-                                    <field name="type_id" />
-                                    <field name="home_standard_line_id" invisible="1" />
-                                    <field
-                                        name="interim_standard_line_id"
-                                        invisible="1"
-                                    />
-                                    <field
-                                        name="extrapolation_standard_line_id"
-                                        invisible="1"
-                                    />
-                                    <field
-                                        name="previous_standard_line_id"
-                                        invisible="1"
-                                    />
-                                    <field name="currency_id" invisible="1" />
-                                    <field name="interim_balance" string="Interim" />
-                                    <field
-                                        name="extrapolation_balance"
-                                        string="Extrapolation"
-                                    />
-                                    <field
-                                        name="home_statement_balance"
-                                        string="Home Statement"
-                                    />
-                                    <field
-                                        name="adjustment_balance"
-                                        string="Adjustment"
-                                    />
-                                    <field name="audited_balance" string="Audited" />
-                                    <field name="previous_balance" string="Previous" />
-                                </tree>
-                            </field>
+                            />
                         </group>
                         <group name="account_computation_2" colspan="4" col="2">
                             <field
@@ -187,15 +153,7 @@
                                 col="2"
                                 nolabel="1"
                                 force_save="1"
-                            >
-                                <tree>
-                                    <field name="computation_item_id" />
-                                    <field name="interim_amount" />
-                                    <field name="extrapolation_amount" />
-                                    <field name="home_amount" />
-                                    <field name="previous_amount" />
-                                </tree>
-                            </field>
+                            />
                         </group>
                     </page>
                     <page name="worksheet" string="Worksheets">

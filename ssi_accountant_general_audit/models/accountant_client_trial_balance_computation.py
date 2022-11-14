@@ -45,12 +45,6 @@ class AccountantClientTrialBalanceComputation(models.Model):
                     amount = 0.0
             document.amount = amount
 
-    name = fields.Char(
-        required=False,
-    )
-    code = fields.Char(
-        required=False,
-    )
     trial_balance_id = fields.Many2one(
         string="Trial Balance",
         comodel_name="accountant.client_trial_balance",

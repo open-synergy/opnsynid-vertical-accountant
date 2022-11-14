@@ -88,43 +88,7 @@
                             icon="fa-refresh"
                             states="open"
                         />
-                        <field name="detail_ids" colspan="1" col="2" nolabel="1">
-                            <tree editable="top">
-                                <field name="sequence" widget="handle" />
-                                <field
-                                    name="account_id"
-                                    domain="[('partner_id','=',parent.partner_id)]"
-                                />
-                                <field
-                                    name="type_id"
-                                    domain="[('id','in',parent.allowed_type_ids[0][2])]"
-                                />
-                                <field name="currency_id" invisible="1" />
-                                <field
-                                    name="opening_balance_debit"
-                                    string="Opening Dr."
-                                    sum="Total Opening Debit"
-                                />
-                                <field
-                                    name="opening_balance_credit"
-                                    string="Opening Cr."
-                                    sum="Total Opening Credit"
-                                />
-                                <field name="debit" string="Dr." sum="Total Debit" />
-                                <field name="credit" string="Cr." sum="Total Credit" />
-                                <field
-                                    name="ending_balance_debit"
-                                    string="Ending Dr."
-                                    sum="Total Ending Debit"
-                                />
-                                <field
-                                    name="ending_balance_credit"
-                                    string="Ending Dr."
-                                    sum="Total Ending Credit"
-                                />
-                                <field name="balance" invisible="1" />
-                            </tree>
-                        </field>
+                        <field name="detail_ids" colspan="1" col="2" nolabel="1" />
                         <group name="details_1" colspan="4" col="2">
                             <field name="opening_debit" />
                             <field name="opening_credit" />
@@ -141,14 +105,7 @@
                             col="2"
                             nolabel="1"
                             force_save="1"
-                        >
-                            <tree>
-                                <field name="sequence" invisible="1" />
-                                <field name="type_id" />
-                                <field name="currency_id" invisible="1" />
-                                <field name="balance" />
-                            </tree>
-                        </field>
+                        />
                     </page>
                     <page string="Computation" name="computations">
                         <group name="computation_1">
@@ -167,12 +124,7 @@
                             col="2"
                             nolabel="1"
                             force_save="1"
-                        >
-                            <tree>
-                                <field name="computation_item_id" />
-                                <field name="amount" string="Amount" />
-                            </tree>
-                        </field>
+                        />
                     </page>
                 </xpath>
             </data>

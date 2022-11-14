@@ -139,6 +139,39 @@ class AccountantGeneralAuditComputation(models.Model):
         store=True,
     )
 
+    @api.depends(
+        "home_amount",
+        "extrapolation_amount",
+        "interim_amount",
+        "previous_amount",
+    )
+    def _compute_average(self):
+        for record in self:
+            extrapolation = interim = home = 0.0
+            extrapolation = (record.extrapolation_amount + record.previous_amount) / 2.0
+            interim = (record.interim_amount + record.previous_amount) / 2.0
+            home = (record.home_amount + record.previous_amount) / 2.0
+
+            record.extrapolation_avg_amount = extrapolation
+            record.interim_avg_amount = interim
+            record.home_avg_amount = home
+
+    extrapolation_avg_amount = fields.Float(
+        string="Extrapolation Avg. Amount",
+        compute="_compute_average",
+        store=True,
+    )
+    interim_avg_amount = fields.Float(
+        string="Interim Avg. Amount",
+        compute="_compute_average",
+        store=True,
+    )
+    home_avg_amount = fields.Float(
+        string="Home Statement Avg. Amount",
+        compute="_compute_average",
+        store=True,
+    )
+
     def _get_localdict(self):
         self.ensure_one()
         return {
