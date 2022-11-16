@@ -3,45 +3,42 @@
      Copyright 2022 PT. Simetri Sinergi Indonesia
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
 <odoo>
-<record id="accountant_general_audit_standard_detail_view_search" model="ir.ui.view">
-    <field name="name">accountant.general_audit_standard_detail - search</field>
-    <field name="model">accountant.general_audit_standard_detail</field>
+<record id="accountant_general_audit_group_detail_view_search" model="ir.ui.view">
+    <field name="name">accountant.general_audit_group_detail - search</field>
+    <field name="model">accountant.general_audit_group_detail</field>
     <field name="mode">primary</field>
     <field name="arch" type="xml">
         <search />
     </field>
 </record>
 
-<record id="accountant_general_audit_standard_detail_view_tree" model="ir.ui.view">
-    <field name="name">accountant.general_audit_standard_detail - tree</field>
-    <field name="model">accountant.general_audit_standard_detail</field>
+<record id="accountant_general_audit_group_detail_view_tree" model="ir.ui.view">
+    <field name="name">accountant.general_audit_group_detail - tree</field>
+    <field name="model">accountant.general_audit_group_detail</field>
     <field name="mode">primary</field>
     <field name="arch" type="xml">
         <tree>
             <field name="sequence" invisible="1" />
-            <field name="type_id" />
-            <field name="home_standard_line_id" invisible="1" />
-            <field name="interim_standard_line_id" invisible="1" />
-            <field name="extrapolation_standard_line_id" invisible="1" />
-            <field name="previous_standard_line_id" invisible="1" />
+            <field name="group_id" />
+            <field name="home_group_line_id" invisible="1" />
+            <field name="interim_group_line_id" invisible="1" />
+            <field name="extrapolation_group_line_id" invisible="1" />
+            <field name="previous_group_line_id" invisible="1" />
             <field name="currency_id" invisible="1" />
             <field name="interim_balance" string="Interim" />
             <field name="extrapolation_balance" string="Extrapolation" />
             <field name="home_statement_balance" string="Home Statement" />
-            <field name="adjustment_balance" string="Adjustment" />
-            <field name="audited_balance" string="Audited" />
             <field name="previous_balance" string="Previous" />
             <field name="interim_avg" optional="hide" />
             <field name="extrapolation_avg" optional="hide" />
             <field name="home_statement_avg" optional="hide" />
-            <field name="audited_avg" optional="hide" />
         </tree>
     </field>
 </record>
 
-<record id="accountant_general_audit_standard_detail_view_form" model="ir.ui.view">
-    <field name="name">accountant.general_audit_standard_detail - form</field>
-    <field name="model">accountant.general_audit_standard_detail</field>
+<record id="accountant_general_audit_group_detail_view_form" model="ir.ui.view">
+    <field name="name">accountant.general_audit_group_detail - form</field>
+    <field name="model">accountant.general_audit_group_detail</field>
     <field name="mode">primary</field>
     <field name="arch" type="xml">
         <form>
@@ -49,16 +46,17 @@
                 <group name="header" colspan="4" col="2">
                     <group name="header1" colspan="1" col="2">
                         <field name="sequence" />
-                        <field name="type_id" />
+                        <field name="group_id" />
                         <field name="currency_id" invisible="1" />
                     </group>
                     <group name="header2" colspan="1" col="2">
                         <field name="interim_balance" string="Interim" />
                         <field name="extrapolation_balance" string="Extrapolation" />
                         <field name="home_statement_balance" string="Home Statement" />
-                        <field name="adjustment_balance" string="Adjustment" />
-                        <field name="audited_balance" string="Audited" />
                         <field name="previous_balance" string="Previous" />
+                        <field name="interim_avg" />
+                        <field name="extrapolation_avg" />
+                        <field name="home_statement_avg" />
                     </group>
                 </group>
             </sheet>

@@ -6,14 +6,14 @@
 from odoo import api, fields, models
 
 
-class AccountantGeneralAuditStandardDetail(models.Model):
-    _name = "accountant.general_audit_standard_detail"
-    _description = "Accountant General Audit Standard Detail"
+class AccountantGeneralAuditGroupDetail(models.Model):
+    _name = "accountant.general_audit_group_detail"
+    _description = "Accountant General Audit Group Detail"
     _order = "sequence, general_audit_id, id"
 
-    type_id = fields.Many2one(
+    group_id = fields.Many2one(
         string="Account Type",
-        comodel_name="accountant.client_account_type",
+        comodel_name="accountant.client_account_group",
         required=True,
     )
     sequence = fields.Integer(
@@ -35,14 +35,14 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         "general_audit_id.previous_trial_balance_id",
         "general_audit_id.extrapolation_trial_balance_id",
     )
-    def _compute_standard_line(self):
-        StandardDetail = self.env["accountant.client_trial_balance_standard_detail"]
+    def _compute_group_line(self):
+        GroupDetail = self.env["accountant.client_trial_balance_group_detail"]
         for record in self:
             home_result = (
                 interim_result
             ) = previous_result = extrapolation_result = False
             criteria = [
-                ("type_id", "=", record.type_id.id),
+                ("group_id", "=", record.group_id.id),
             ]
             if record.general_audit_id.home_trial_balance_id:
                 criteria_home = criteria + [
@@ -52,7 +52,7 @@ class AccountantGeneralAuditStandardDetail(models.Model):
                         record.general_audit_id.home_trial_balance_id.id,
                     )
                 ]
-                home_results = StandardDetail.search(criteria_home)
+                home_results = GroupDetail.search(criteria_home)
                 if len(home_results) > 0:
                     home_result = home_results[0]
 
@@ -64,7 +64,7 @@ class AccountantGeneralAuditStandardDetail(models.Model):
                         record.general_audit_id.interim_trial_balance_id.id,
                     )
                 ]
-                interim_results = StandardDetail.search(criteria_interim)
+                interim_results = GroupDetail.search(criteria_interim)
                 if len(interim_results) > 0:
                     interim_result = interim_results[0]
 
@@ -76,7 +76,7 @@ class AccountantGeneralAuditStandardDetail(models.Model):
                         record.general_audit_id.extrapolation_trial_balance_id.id,
                     )
                 ]
-                extrapolation_results = StandardDetail.search(criteria_extrapolation)
+                extrapolation_results = GroupDetail.search(criteria_extrapolation)
                 if len(extrapolation_results) > 0:
                     extrapolation_result = extrapolation_results[0]
 
@@ -88,68 +88,41 @@ class AccountantGeneralAuditStandardDetail(models.Model):
                         record.general_audit_id.previous_trial_balance_id.id,
                     )
                 ]
-                previous_results = StandardDetail.search(criteria_previous)
+                previous_results = GroupDetail.search(criteria_previous)
                 if len(previous_results) > 0:
                     previous_result = previous_results[0]
 
-            record.home_standard_line_id = home_result
-            record.interim_standard_line_id = interim_result
-            record.previous_standard_line_id = previous_result
-            record.extrapolation_standard_line_id = extrapolation_result
+            record.home_group_line_id = home_result
+            record.interim_group_line_id = interim_result
+            record.previous_group_line_id = previous_result
+            record.extrapolation_group_line_id = extrapolation_result
 
-    @api.depends(
-        "general_audit_id.adjustment_entry_ids",
-        "general_audit_id.adjustment_entry_ids.detail_ids.account_id",
-        "general_audit_id.adjustment_entry_ids.detail_ids.debit",
-        "general_audit_id.adjustment_entry_ids.detail_ids.credit",
-    )
-    def _compute_standard_adjustment_id(self):
-        StandardAdjustment = self.env["accountant.general_audit_adjustment"]
-        for record in self:
-            result = False
-            criteria = [
-                ("general_audit_id", "=", record.general_audit_id.id),
-                ("type_id", "=", record.type_id.id),
-            ]
-            standard_adjustments = StandardAdjustment.search(criteria)
-            if len(standard_adjustments) > 0:
-                result = standard_adjustments[0]
-            record.standard_adjustment_id = result
-
-    standard_adjustment_id = fields.Many2one(
-        string="Standard Adjustment",
-        comodel_name="accountant.general_audit_adjustment",
-        readonly=True,
-        compute="_compute_standard_adjustment_id",
-        store=True,
-    )
-
-    home_standard_line_id = fields.Many2one(
+    home_group_line_id = fields.Many2one(
         string="Home Statement TB Standard Line",
-        comodel_name="accountant.client_trial_balance_standard_detail",
+        comodel_name="accountant.client_trial_balance_group_detail",
         readonly=True,
-        compute="_compute_standard_line",
+        compute="_compute_group_line",
         store=True,
     )
-    interim_standard_line_id = fields.Many2one(
+    interim_group_line_id = fields.Many2one(
         string="Interim TB Standard Line",
-        comodel_name="accountant.client_trial_balance_standard_detail",
+        comodel_name="accountant.client_trial_balance_group_detail",
         readonly=True,
-        compute="_compute_standard_line",
+        compute="_compute_group_line",
         store=True,
     )
-    extrapolation_standard_line_id = fields.Many2one(
+    extrapolation_group_line_id = fields.Many2one(
         string="Extrapolation TB Standard Line",
-        comodel_name="accountant.client_trial_balance_standard_detail",
+        comodel_name="accountant.client_trial_balance_group_detail",
         readonly=True,
-        compute="_compute_standard_line",
+        compute="_compute_group_line",
         store=True,
     )
-    previous_standard_line_id = fields.Many2one(
+    previous_group_line_id = fields.Many2one(
         string="Previous TB Standard Line",
-        comodel_name="accountant.client_trial_balance_standard_detail",
+        comodel_name="accountant.client_trial_balance_group_detail",
         readonly=True,
-        compute="_compute_standard_line",
+        compute="_compute_group_line",
         store=True,
     )
     currency_id = fields.Many2one(
@@ -160,69 +133,25 @@ class AccountantGeneralAuditStandardDetail(models.Model):
     )
     home_statement_balance = fields.Monetary(
         string="Home Statement Balance",
-        related="home_standard_line_id.balance",
+        related="home_group_line_id.balance",
         store=True,
         currency_field="currency_id",
     )
     interim_balance = fields.Monetary(
         string="Interim Balance",
-        related="interim_standard_line_id.balance",
+        related="interim_group_line_id.balance",
         store=True,
         currency_field="currency_id",
     )
     extrapolation_balance = fields.Monetary(
         string="Extrapolation Balance",
-        related="extrapolation_standard_line_id.balance",
+        related="extrapolation_group_line_id.balance",
         store=True,
         currency_field="currency_id",
     )
     previous_balance = fields.Monetary(
         string="Extrapolation Balance",
-        related="previous_standard_line_id.balance",
-        store=True,
-        currency_field="currency_id",
-    )
-
-    adjustment_debit = fields.Monetary(
-        string="Adjustment Debit",
-        related="standard_adjustment_id.debit",
-        store=True,
-        currency_field="currency_id",
-    )
-    adjustment_credit = fields.Monetary(
-        string="Adjustment Credit",
-        related="standard_adjustment_id.credit",
-        store=True,
-        currency_field="currency_id",
-    )
-
-    @api.depends(
-        "type_id",
-        "adjustment_debit",
-        "adjustment_credit",
-        "home_statement_balance",
-    )
-    def _compute_adjustment_audited_balance(self):
-        for record in self:
-            adjustment = audited = 0.0
-            if record.type_id:
-                if record.type_id.normal_balance == "dr":
-                    adjustment = record.adjustment_debit - record.adjustment_credit
-                else:
-                    adjustment = record.adjustment_credit - record.adjustment_debit
-            audited = record.home_statement_balance + adjustment
-            record.audited_balance = audited
-            record.adjustment_balance = adjustment
-
-    adjustment_balance = fields.Monetary(
-        string="Adjustment Balance",
-        compute="_compute_adjustment_audited_balance",
-        store=True,
-        currency_field="currency_id",
-    )
-    audited_balance = fields.Monetary(
-        string="Audited Balance",
-        compute="_compute_adjustment_audited_balance",
+        related="previous_group_line_id.balance",
         store=True,
         currency_field="currency_id",
     )
@@ -232,7 +161,6 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         "extrapolation_balance",
         "previous_balance",
         "home_statement_balance",
-        "audited_balance",
     )
     def _compute_average(self):
         for record in self:
@@ -243,12 +171,10 @@ class AccountantGeneralAuditStandardDetail(models.Model):
             home_statement_avg = (
                 record.home_statement_balance + record.previous_balance
             ) / 2.0
-            audited_avg = (record.audited_balance + record.previous_balance) / 2.0
 
             record.interim_avg = interim_avg
             record.extrapolation_avg = extrapolation_avg
             record.home_statement_avg = home_statement_avg
-            record.audited_avg = audited_avg
 
     interim_avg = fields.Monetary(
         string="Interim Average",
@@ -264,12 +190,6 @@ class AccountantGeneralAuditStandardDetail(models.Model):
     )
     home_statement_avg = fields.Monetary(
         string="Home Statement Average",
-        compute="_compute_average",
-        store=True,
-        currency_field="currency_id",
-    )
-    audited_avg = fields.Monetary(
-        string="Audited Average",
         compute="_compute_average",
         store=True,
         currency_field="currency_id",

@@ -70,7 +70,11 @@
                     <field name="interim_date_end" />
                 </xpath>
                 <xpath expr="//page[@name='note']" position="before">
-                    <page string="Detail" name="details">
+                    <page
+                        string="Detail"
+                        name="details"
+                        attrs="{'invisible': [('trial_balance_type','=','extrapolation')]}"
+                    >
                         <button
                             name="%(accountant_import_trial_balance_detail_action)d"
                             type="action"
@@ -101,6 +105,15 @@
                     <page string="Standard Detail" name="standard_details">
                         <field
                             name="standard_detail_ids"
+                            colspan="1"
+                            col="2"
+                            nolabel="1"
+                            force_save="1"
+                        />
+                    </page>
+                    <page string="Group Detail" name="group_details">
+                        <field
+                            name="group_detail_ids"
                             colspan="1"
                             col="2"
                             nolabel="1"

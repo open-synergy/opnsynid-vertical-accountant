@@ -28,6 +28,10 @@ class AccountantClientAccountTypeComputationItem(models.Model):
         comodel_name="accountant.trial_balance_computation_item",
         required=True,
     )
+    use_default = fields.Boolean(
+        string="Use Default Computation",
+        default=True,
+    )
     python_code = fields.Text(
         string="Python Code",
         default="result = 0.0",

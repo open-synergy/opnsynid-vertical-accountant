@@ -266,8 +266,15 @@ class AccountantClientTrialBalance(models.Model):
         store=True,
     )
     standard_detail_ids = fields.One2many(
-        string="Standard Detail",
+        string="Standard Details",
         comodel_name="accountant.client_trial_balance_standard_detail",
+        inverse_name="trial_balance_id",
+        readonly=True,
+        copy=True,
+    )
+    group_detail_ids = fields.One2many(
+        string="Group Details",
+        comodel_name="accountant.client_trial_balance_group_detail",
         inverse_name="trial_balance_id",
         readonly=True,
         copy=True,
@@ -316,6 +323,26 @@ class AccountantClientTrialBalance(models.Model):
                     )
                 )
             self.update({"standard_detail_ids": result})
+
+    @api.onchange("account_type_set_id")
+    def onchange_group_detail_ids(self):
+        self.update({"group_detail_ids": [(5, 0, 0)]})
+        AccountGroup = self.env["accountant.client_account_group"]
+        if self.account_type_set_id:
+            result = []
+            criteria = []
+            for detail in AccountGroup.search(criteria):
+                result.append(
+                    (
+                        0,
+                        0,
+                        {
+                            "sequence": detail.sequence,
+                            "group_id": detail.id,
+                        },
+                    )
+                )
+            self.update({"group_detail_ids": result})
 
     @api.onchange("account_type_set_id")
     def onchange_computation_ids(self):

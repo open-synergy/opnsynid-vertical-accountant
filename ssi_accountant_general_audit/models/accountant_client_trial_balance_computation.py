@@ -30,7 +30,11 @@ class AccountantClientTrialBalanceComputation(models.Model):
             ]
             computations = obj_computation.search(criteria)
             if len(computations) > 0:
-                python_code = computations[0].python_code
+                computation = computations[0]
+                if computation.use_default:
+                    python_code = computation.computation_item_id.python_code
+                else:
+                    python_code = computations[0].python_code
 
                 localdict = document._get_localdict()
                 try:
@@ -79,7 +83,11 @@ class AccountantClientTrialBalanceComputation(models.Model):
         ]
         computations = obj_computation.search(criteria)
         if len(computations) > 0:
-            python_code = computations[0].python_code
+            computation = computations[0]
+            if computation.use_default:
+                python_code = computation.computation_id.python_code
+            else:
+                python_code = computations[0].python_code
 
             localdict = self._get_localdict()
             localdict.update(additional_dict)

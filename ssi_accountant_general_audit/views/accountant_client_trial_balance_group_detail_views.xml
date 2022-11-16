@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<record
+        id="accountant_client_trial_balance_group_detail_view_search"
+        model="ir.ui.view"
+    >
+    <field name="name">accountant.client_trial_balance_group_detail - search</field>
+    <field name="model">accountant.client_trial_balance_group_detail</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <search />
+    </field>
+</record>
+
+<record id="accountant_client_trial_balance_group_detail_view_tree" model="ir.ui.view">
+    <field name="name">accountant.client_trial_balance_group_detail - tree</field>
+    <field name="model">accountant.client_trial_balance_group_detail</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="sequence" invisible="1" />
+            <field name="group_id" />
+            <field name="currency_id" invisible="1" />
+            <field name="balance" />
+        </tree>
+    </field>
+</record>
+
+<record id="accountant_client_trial_balance_group_detail_view_form" model="ir.ui.view">
+    <field name="name">accountant.client_trial_balance_group_detail - form</field>
+    <field name="model">accountant.client_trial_balance_group_detail</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group name="header" colspan="4" col="2">
+                    <group name="header1" colspan="1" col="2">
+                        <field name="sequence" invisible="1" />
+                        <field name="group_id" />
+                        <field name="currency_id" invisible="1" />
+                    </group>
+                    <group name="header2" colspan="1" col="2">
+                        <field name="balance" />
+                    </group>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+</odoo>

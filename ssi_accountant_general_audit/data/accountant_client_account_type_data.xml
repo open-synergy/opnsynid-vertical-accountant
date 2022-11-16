@@ -13,8 +13,8 @@
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t002" model="accountant.client_account_type">
@@ -25,8 +25,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t003" model="accountant.client_account_type">
@@ -37,8 +37,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t004" model="accountant.client_account_type">
@@ -49,8 +49,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t005" model="accountant.client_account_type">
@@ -61,8 +61,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t006" model="accountant.client_account_type">
@@ -73,8 +73,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t007" model="accountant.client_account_type">
@@ -85,8 +85,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t008" model="accountant.client_account_type">
@@ -97,8 +97,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t009" model="accountant.client_account_type">
@@ -109,8 +109,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t010" model="accountant.client_account_type">
@@ -121,8 +121,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t011" model="accountant.client_account_type">
@@ -133,8 +133,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t012" model="accountant.client_account_type">
@@ -145,8 +145,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t013" model="accountant.client_account_type">
@@ -157,8 +157,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t014" model="accountant.client_account_type">
@@ -169,8 +169,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t015" model="accountant.client_account_type">
@@ -181,8 +181,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t016" model="accountant.client_account_type">
@@ -193,8 +193,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t017" model="accountant.client_account_type">
@@ -205,8 +205,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t018" model="accountant.client_account_type">
@@ -217,8 +217,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t019" model="accountant.client_account_type">
@@ -229,8 +229,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t020" model="accountant.client_account_type">
@@ -241,8 +241,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t021" model="accountant.client_account_type">
@@ -253,8 +253,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t022" model="accountant.client_account_type">
@@ -265,8 +265,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t023" model="accountant.client_account_type">
@@ -277,8 +277,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t024" model="accountant.client_account_type">
@@ -289,8 +289,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t025" model="accountant.client_account_type">
@@ -301,8 +301,8 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-delta_balance = document.interim_balance - document.previous_balance
-result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
+delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
+result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
 
     <record id="acc_type_t026" model="accountant.client_account_type">
@@ -310,7 +310,7 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field name="code">T026</field>
         <field name="group_id" ref="acc_group_t006" />
         <field name="normal_balance">cr</field>
-        <field name="python_code">result = document.interim_balance</field>
+        <field name="python_code">result = standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t027" model="accountant.client_account_type">
@@ -321,7 +321,7 @@ result = document.previous_balance + (365.0/delta_days) * delta_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t028" model="accountant.client_account_type">
@@ -332,7 +332,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t029" model="accountant.client_account_type">
@@ -343,7 +343,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t030" model="accountant.client_account_type">
@@ -354,7 +354,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t031" model="accountant.client_account_type">
@@ -365,7 +365,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t032" model="accountant.client_account_type">
@@ -376,7 +376,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t033" model="accountant.client_account_type">
@@ -387,7 +387,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t034" model="accountant.client_account_type">
@@ -398,7 +398,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t035" model="accountant.client_account_type">
@@ -409,7 +409,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t036" model="accountant.client_account_type">
@@ -420,7 +420,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t037" model="accountant.client_account_type">
@@ -431,7 +431,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t038" model="accountant.client_account_type">
@@ -442,7 +442,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t039" model="accountant.client_account_type">
@@ -453,7 +453,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t040" model="accountant.client_account_type">
@@ -464,7 +464,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t041" model="accountant.client_account_type">
@@ -475,7 +475,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t042" model="accountant.client_account_type">
@@ -486,7 +486,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
     <record id="acc_type_t043" model="accountant.client_account_type">
@@ -497,7 +497,7 @@ result = (365.0/delta_days) * document.interim_balance</field>
         <field
                 name="python_code"
             >delta_days = (tb.interim_date_end - tb.previous_date_end).days
-result = (365.0/delta_days) * document.interim_balance</field>
+result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 </data>
 </odoo>
