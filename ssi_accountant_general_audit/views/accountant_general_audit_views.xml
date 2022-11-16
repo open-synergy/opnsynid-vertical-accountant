@@ -137,24 +137,27 @@
                         </group>
                     </page>
                     <page name="account_computation" string="Account &amp; Computation">
-                        <group name="account_computation_1" colspan="4" col="2">
-                            <field
-                                name="standard_detail_ids"
-                                colspan="1"
-                                col="2"
-                                nolabel="1"
-                                force_save="1"
-                            />
-                        </group>
-                        <group name="account_computation_2" colspan="4" col="2">
-                            <field
-                                name="computation_ids"
-                                colspan="1"
-                                col="2"
-                                nolabel="1"
-                                force_save="1"
-                            />
-                        </group>
+                        <field
+                            name="standard_detail_ids"
+                            colspan="1"
+                            col="2"
+                            nolabel="1"
+                            force_save="1"
+                        />
+                        <field
+                            name="group_detail_ids"
+                            colspan="1"
+                            col="2"
+                            nolabel="1"
+                            force_save="1"
+                        />
+                        <field
+                            name="computation_ids"
+                            colspan="1"
+                            col="2"
+                            nolabel="1"
+                            force_save="1"
+                        />
                     </page>
                     <page name="worksheet" string="Worksheets">
                         <group

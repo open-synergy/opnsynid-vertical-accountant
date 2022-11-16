@@ -419,6 +419,13 @@ class AccountantGeneralAudit(models.Model):
         readonly=True,
         copy=True,
     )
+    group_detail_ids = fields.One2many(
+        string="Group Detail",
+        comodel_name="accountant.general_audit_group_detail",
+        inverse_name="general_audit_id",
+        readonly=True,
+        copy=True,
+    )
     computation_ids = fields.One2many(
         string="Computations",
         comodel_name="accountant.general_audit_computation",
@@ -429,6 +436,12 @@ class AccountantGeneralAudit(models.Model):
     standard_adjustment_ids = fields.One2many(
         string="Standard Adjustment",
         comodel_name="accountant.general_audit_adjustment",
+        inverse_name="general_audit_id",
+        readonly=True,
+    )
+    group_adjustment_ids = fields.One2many(
+        string="Group Adjustment",
+        comodel_name="accountant.general_audit_group_adjustment",
         inverse_name="general_audit_id",
         readonly=True,
     )
@@ -500,6 +513,26 @@ class AccountantGeneralAudit(models.Model):
                     )
                 )
             self.update({"standard_detail_ids": result})
+
+    @api.onchange("account_type_set_id")
+    def onchange_group_detail_ids(self):
+        self.update({"group_detail_ids": [(5, 0, 0)]})
+        AccountGroup = self.env["accountant.client_account_group"]
+        if self.account_type_set_id:
+            result = []
+            criteria = []
+            for detail in AccountGroup.search(criteria):
+                result.append(
+                    (
+                        0,
+                        0,
+                        {
+                            "sequence": detail.sequence,
+                            "group_id": detail.id,
+                        },
+                    )
+                )
+            self.update({"group_detail_ids": result})
 
     @api.onchange("account_type_set_id")
     def onchange_computation_ids(self):

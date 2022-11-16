@@ -56,10 +56,15 @@
                             >
                                 <tree>
                                     <field name="computation_id" />
+                                    <field name="use_default" />
                                 </tree>
                                 <form>
                                     <group name="computation_form" colspan="4" col="2">
                                         <field name="computation_id" />
+                                        <field
+                                            name="use_default"
+                                            widget="boolean_toggle"
+                                        />
                                         <field name="python_code" widget="ace" />
                                     </group>
                                 </form>

@@ -10,6 +10,7 @@ from . import (
     accountant_client_trial_balance,
     accountant_client_trial_balance_detail,
     accountant_client_trial_balance_standard_detail,
+    accountant_client_trial_balance_group_detail,
     accountant_client_trial_balance_computation,
     accountant_trial_balance_computation_item,
     accountant_client_account_type_set,
@@ -19,6 +20,7 @@ from . import (
     accountant_general_audit_worksheet_conclusion,
     accountant_general_audit,
     accountant_general_audit_standard_detail,
+    accountant_general_audit_group_detail,
     accountant_general_audit_computation,
     accountant_general_audit_worksheet,
     accountant_general_audit_worksheet_mixin,
@@ -28,4 +30,5 @@ from . import (
     accountant_client_adjustment_entry,
     accountant_client_adjustment_entry_detail,
     accountant_general_audit_adjustment,
+    accountant_general_audit_group_adjustment,
 )
