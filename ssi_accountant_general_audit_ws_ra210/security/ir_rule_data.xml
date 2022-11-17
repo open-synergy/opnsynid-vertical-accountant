@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- Worksheet RA.210 -->
+<record id="ws_ra210_internal_user_rule" model="ir.rule">
+    <field name="name">Worksheet RA.210 - Internal Users</field>
+    <field name="model_id" ref="model_ws_ra210" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+      ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra210_company_rule" model="ir.rule">
+    <field name="name">Worksheet RA.210 - Responsible to company data</field>
+    <field name="model_id" ref="model_ws_ra210" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra210_company_group'))]"
+        />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra210_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Worksheet RA.210 - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_ws_ra210" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra210_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra210_all_rule" model="ir.rule">
+    <field name="name">Worksheet RA.210 - All</field>
+    <field name="model_id" ref="model_ws_ra210" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra210_all_group'))]"
+        />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+</odoo>
