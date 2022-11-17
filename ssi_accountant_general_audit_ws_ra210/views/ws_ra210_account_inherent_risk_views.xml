@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<record id="ws_ra210_account_inherent_risk_view_search" model="ir.ui.view">
+    <field name="name">ws_ra210.account_inherent_risk - search</field>
+    <field name="model">ws_ra210.account_inherent_risk</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <search />
+    </field>
+</record>
+
+<record id="ws_ra210_account_inherent_risk_view_tree" model="ir.ui.view">
+    <field name="name">ws_ra210.account_inherent_risk - tree</field>
+    <field name="model">ws_ra210.account_inherent_risk</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <tree editable="top" create="false" delete="false">
+            <field name="sequence" invisible="1" />
+            <field name="standard_detail_id" invisible="1" />
+            <field name="currency_id" invisible="1" />
+            <field name="type_id" />
+            <field name="inherent_risk_factor_a" string="A" widget="boolean_toggle" />
+            <field name="inherent_risk_factor_b" string="B" widget="boolean_toggle" />
+            <field name="inherent_risk_factor_c" string="C" widget="boolean_toggle" />
+            <field name="inherent_risk_factor_d" string="D" widget="boolean_toggle" />
+            <field name="inherent_risk_factor_e" string="E" widget="boolean_toggle" />
+            <field name="inherent_risk_factor_f" string="F" widget="boolean_toggle" />
+            <field name="inherent_risk_factor_g" string="G" widget="boolean_toggle" />
+            <field name="inherent_risk_factor_h" string="H" widget="boolean_toggle" />
+            <field name="inherent_risk_factor_i" string="I" widget="boolean_toggle" />
+            <field name="inherent_risk_factor_j" string="J" widget="boolean_toggle" />
+            <field name="likelihood_risk_occuring" />
+            <field name="impact_of_risk" />
+            <field name="inherent_risk" />
+            <field name="other_significant_risk_factor" />
+            <field name="note" />
+        </tree>
+    </field>
+</record>
+
+<record id="ws_ra210_account_inherent_risk_view_form" model="ir.ui.view">
+    <field name="name">ws_ra210.account_inherent_risk - form</field>
+    <field name="model">ws_ra210.account_inherent_risk</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group name="header" colspan="4" col="2">
+                    <group name="header1" colspan="1" col="2">
+                        <field name="sequence" />
+                        <field name="type_id" />
+                        <field name="currency_id" invisible="1" />
+                    </group>
+                    <group name="header2" colspan="1" col="2">
+                        <field
+                                name="inherent_risk_factor_a"
+                                string="A"
+                                widget="boolean_toggle"
+                            />
+                        <field
+                                name="inherent_risk_factor_b"
+                                string="B"
+                                widget="boolean_toggle"
+                            />
+                        <field
+                                name="inherent_risk_factor_c"
+                                string="C"
+                                widget="boolean_toggle"
+                            />
+                        <field
+                                name="inherent_risk_factor_d"
+                                string="D"
+                                widget="boolean_toggle"
+                            />
+                        <field
+                                name="inherent_risk_factor_e"
+                                string="E"
+                                widget="boolean_toggle"
+                            />
+                        <field
+                                name="inherent_risk_factor_f"
+                                string="F"
+                                widget="boolean_toggle"
+                            />
+                        <field
+                                name="inherent_risk_factor_g"
+                                string="G"
+                                widget="boolean_toggle"
+                            />
+                        <field
+                                name="inherent_risk_factor_h"
+                                string="H"
+                                widget="boolean_toggle"
+                            />
+                        <field
+                                name="inherent_risk_factor_j"
+                                string="I"
+                                widget="boolean_toggle"
+                            />
+                        <field name="likelihood_risk_occuring" />
+                        <field name="impact_of_risk" />
+                        <field name="inherent_risk" />
+                        <field name="other_significant_risk_factor" />
+                        <field name="note" />
+                    </group>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+</odoo>
