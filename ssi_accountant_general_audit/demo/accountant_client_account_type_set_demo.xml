@@ -52,7 +52,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_004" />
-        <field name="python_code">result = account_group["T011"]</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -61,9 +61,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_005" />
-        <field
-            name="python_code"
-        >result = account_group["T008"] + account_group["T009"] + account_group["T010"] - account_group["T011"] - account_group["T012"] - account_group["T013"]</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -72,7 +70,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_006" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -81,9 +79,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_007" />
-        <field
-            name="python_code"
-        >result = account_group["T003"] + account_group["T004"]</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -92,7 +88,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_008" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -101,7 +97,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_009" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -110,7 +106,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_010" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -119,7 +115,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_011" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -128,7 +124,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_012" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -137,7 +133,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_013" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -146,7 +142,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_014" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -155,7 +151,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_015" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -164,7 +160,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_016" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -173,7 +169,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_017" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -182,7 +178,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_018" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -191,7 +187,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_019" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -200,7 +196,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_020" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -209,7 +205,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_021" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -218,7 +214,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_022" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -227,7 +223,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_023" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -236,7 +232,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_024" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -245,7 +241,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_025" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
     <record
@@ -254,7 +250,7 @@
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_026" />
-        <field name="python_code">result = 0.0</field>
+        <field name="use_default" eval="1" />
     </record>
 
 </odoo>
