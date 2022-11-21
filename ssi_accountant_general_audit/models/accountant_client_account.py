@@ -30,17 +30,14 @@ class AccountantClientAccount(models.Model):
     type_id = fields.Many2one(
         string="Type",
         comodel_name="accountant.client_account_type",
-        required=True,
+        required=False,
         ondelete="restrict",
     )
     normal_balance = fields.Selection(
         string="Normal Balance",
-        selection=[
-            ("dr", "Debit"),
-            ("cr", "Credit"),
-        ],
-        required=True,
-        default=False,
+        related="type_id.normal_balance",
+        stored=True,
+        required=False,
     )
 
     @api.onchange(
