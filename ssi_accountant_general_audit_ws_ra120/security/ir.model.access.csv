@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_accountant_general_audit_ws_ra1201_all,accountant.general_audit_ws_ra1201 - all,model_ws_ra1201,,1,0,0,0
+access_accountant_general_audit_ws_ra1201_viewer,accountant.general_audit_ws_ra1201 - viewer,model_ws_ra1201,accountant_general_audit_ws_ra1201_viewer_group,1,0,0,0
+access_accountant_general_audit_ws_ra1201_user,accountant.general_audit_ws_ra1201 - user,model_ws_ra1201,accountant_general_audit_ws_ra1201_user_group,1,1,1,1
+access_ws_ra1201_all,accountant.ws_ra1201_account_mapping - all,model_ws_ra1201_account_mapping,,1,0,0,0
+access_ws_ra1201_viewer,accountant.ws_ra1201_account_mapping - viewer,model_ws_ra1201_account_mapping,accountant_general_audit_ws_ra1201_viewer_group,1,0,0,0
+access_ws_ra1201_user,accountant.ws_ra1201_account_mapping - user,model_ws_ra1201_account_mapping,accountant_general_audit_ws_ra1201_user_group,1,1,1,1
