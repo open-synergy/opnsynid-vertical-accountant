@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<record id="ws_ra1204_extrapolation_adjustment_view_search" model="ir.ui.view">
+    <field name="name">ws_ra1204.extrapolation_adjustment - search</field>
+    <field name="model">ws_ra1204.extrapolation_adjustment</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <search />
+    </field>
+</record>
+
+<record id="ws_ra1204_extrapolation_adjustment_view_tree" model="ir.ui.view">
+    <field name="name">ws_ra1204.extrapolation_adjustment - tree</field>
+    <field name="model">ws_ra1204.extrapolation_adjustment</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <tree editable="top" create="false" delete="false">
+            <field name="sequence" invisible="1" />
+            <field name="standard_detail_id" invisible="1" />
+            <field name="type_id" />
+            <field name="currency_id" invisible="1" />
+            <field name="extrapolation_balance" />
+            <field name="extrapolation_adjustment" />
+            <field name="adjusted_extrapolation_balance" force_save="1" />
+            <field name="conclusion" />
+        </tree>
+    </field>
+</record>
+
+<record id="ws_ra1204_extrapolation_adjustment_view_form" model="ir.ui.view">
+    <field name="name">ws_ra1204.extrapolation_adjustment - form</field>
+    <field name="model">ws_ra1204.extrapolation_adjustment</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <form create="false" edit="false" delete="false">
+            <sheet>
+                <group name="header" colspan="4" col="2">
+                    <field name="sequence" invisible="1" />
+                    <field name="type_id" />
+                    <field name="currency_id" invisible="1" />
+                    <field name="extrapolation_balance" />
+                    <field name="extrapolation_adjustment" />
+                    <field name="adjusted_extrapolation_balance" />
+                    <field name="conclusion" />
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<record id="ws_ra1203_balance_diff_view_search" model="ir.ui.view">
+    <field name="name">ws_ra1203.balance_diff - search</field>
+    <field name="model">ws_ra1203.balance_diff</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <search />
+    </field>
+</record>
+
+<record id="ws_ra1203_balance_diff_view_tree" model="ir.ui.view">
+    <field name="name">ws_ra1203.balance_diff - tree</field>
+    <field name="model">ws_ra1203.balance_diff</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <tree editable="top" create="false" delete="false">
+            <field name="sequence" invisible="1" />
+            <field name="standard_detail_id" invisible="1" />
+            <field name="type_id" />
+            <field name="currency_id" invisible="1" />
+            <field name="interim_balance" />
+            <field name="interim_gl_balance" />
+            <field name="interim_sl_balance" />
+            <field name="gl_balance_diff" />
+            <field name="sl_balance_diff" />
+            <field name="conclusion" />
+        </tree>
+    </field>
+</record>
+
+<record id="ws_ra1203_balance_diff_view_form" model="ir.ui.view">
+    <field name="name">ws_ra1203.balance_diff - form</field>
+    <field name="model">ws_ra1203.balance_diff</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <form create="false" edit="false" delete="false">
+            <sheet>
+                <group name="header" colspan="4" col="2">
+                    <field name="sequence" invisible="1" />
+                    <field name="type_id" />
+                    <field name="currency_id" invisible="1" />
+                    <field name="interim_balance" />
+                    <field name="interim_gl_balance" />
+                    <field name="interim_sl_balance" />
+                    <field name="gl_balance_diff" />
+                    <field name="sl_balance_diff" />
+                    <field name="conclusion" />
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+</odoo>

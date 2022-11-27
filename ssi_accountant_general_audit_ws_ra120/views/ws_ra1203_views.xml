@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="ws_ra1203_view_search" model="ir.ui.view">
+        <field name="name">ws_ra1203 search</field>
+        <field name="model">ws_ra1203</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_ra1203_view_tree" model="ir.ui.view">
+        <field name="name">ws_ra1203 tree</field>
+        <field name="model">ws_ra1203</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_tree"
+        />
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_ra1203_view_form" model="ir.ui.view">
+        <field name="name">ws_ra1203 form</field>
+        <field name="model">ws_ra1203</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_form"
+        />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//page[1]" position="before">
+                    <page name="balance_diff" string="Balance Diff.">
+                        <field name="balance_diff_ids" force_save="1" />
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_ra1203_action" model="ir.actions.act_window">
+        <field name="name">RA.120.3</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ws_ra1203</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="ws_ra1203_menu"
+        name="RA.120.3"
+        parent="ssi_accountant_general_audit.menu_general_audit_risk_assesment"
+        action="ws_ra1203_action"
+        sequence="1203"
+        groups="accountant_general_audit_ws_ra1203_viewer_group"
+    />
+
+
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<record id="ws_ra1202_balance_diff_view_search" model="ir.ui.view">
+    <field name="name">ws_ra1202.balance_diff - search</field>
+    <field name="model">ws_ra1202.balance_diff</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <search />
+    </field>
+</record>
+
+<record id="ws_ra1202_balance_diff_view_tree" model="ir.ui.view">
+    <field name="name">ws_ra1202.balance_diff - tree</field>
+    <field name="model">ws_ra1202.balance_diff</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <tree editable="top" create="false" delete="false">
+            <field name="sequence" invisible="1" />
+            <field name="type_id" />
+            <field name="currency_id" invisible="1" />
+            <field name="interim_opening_balance" />
+            <field name="previous_balance" />
+            <field name="balance_diff" />
+            <field name="category_id" />
+            <field name="conclusion" />
+        </tree>
+    </field>
+</record>
+
+<record id="ws_ra1202_balance_diff_view_form" model="ir.ui.view">
+    <field name="name">ws_ra1202.balance_diff - form</field>
+    <field name="model">ws_ra1202.balance_diff</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <form create="false" edit="false" delete="false">
+            <sheet>
+                <group name="header" colspan="4" col="2">
+                    <field name="sequence" invisible="1" />
+                    <field name="standard_detail_id" invisible="1" />
+                    <field name="type_id" />
+                    <field name="currency_id" invisible="1" />
+                    <field name="interim_opening_balance" />
+                    <field name="previous_balance" />
+                    <field name="balance_diff" />
+                    <field name="category_id" />
+                    <field name="conclusion" />
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+</odoo>
