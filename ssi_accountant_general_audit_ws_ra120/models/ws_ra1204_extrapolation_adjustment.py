@@ -37,7 +37,7 @@ class WS1203ExtrapolationAdjustment(models.Model):
     )
     extrapolation_balance = fields.Monetary(
         string="Extrapolation Balance",
-        related="standard_detail_id.extrapolation_opening_balance",
+        related="standard_detail_id.extrapolation_balance",
         store=True,
         currency_field="currency_id",
     )
