@@ -13,5 +13,35 @@
     <field eval="1" name="number_increment" />
     <field name="use_date_range" eval="1" />
 </record>
+
+<record id="sequence_ws_ra1202" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.120.2</field>
+    <field name="code">accountant.general_audit_ws_ra1202</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.120.2/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra1203" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.120.3</field>
+    <field name="code">accountant.general_audit_ws_ra1203</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.120.3/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra1204" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.120.4</field>
+    <field name="code">accountant.general_audit_ws_ra1204</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.120.4/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
 </data>
 </odoo>
