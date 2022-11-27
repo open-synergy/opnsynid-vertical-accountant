@@ -82,11 +82,10 @@ class AccountantClientTrialBalanceDetail(models.Model):
     )
     def _compute_balance(self):
         for record in self:
-            result = opening = ending_balance_debit = ending_balance_credit = 0.0
+            result = (
+                opening_balance
+            ) = ending_balance_debit = ending_balance_credit = 0.0
             if record.account_id:
-                opening = abs(
-                    record.opening_balance_debit - record.opening_balance_credit
-                )
                 if record.account_id.normal_balance == "dr":
                     # TODO: Refactor
                     result = (
@@ -94,12 +93,18 @@ class AccountantClientTrialBalanceDetail(models.Model):
                         + record.debit
                         - record.credit
                     )
+                    opening_balance = (
+                        record.opening_balance_debit - record.opening_balance_credit
+                    )
                 else:
                     # TODO: Refactor
                     result = (
                         (record.opening_balance_credit - record.opening_balance_debit)
                         - record.debit
                         + record.credit
+                    )
+                    opening_balance = (
+                        record.opening_balance_credit - record.opening_balance_debit
                     )
                 balance = (record.opening_balance_debit + record.debit) - (
                     record.opening_balance_credit + record.credit
@@ -109,7 +114,7 @@ class AccountantClientTrialBalanceDetail(models.Model):
             record.balance = result
             record.ending_balance_debit = ending_balance_debit
             record.ending_balance_credit = ending_balance_credit
-            record.opening_balance = opening
+            record.opening_balance = opening_balance
 
     ending_balance_debit = fields.Monetary(
         string="Debit Ending Balance",
