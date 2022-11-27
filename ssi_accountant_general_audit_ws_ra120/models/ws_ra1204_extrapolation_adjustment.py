@@ -37,7 +37,7 @@ class WS1203ExtrapolationAdjustment(models.Model):
     )
     extrapolation_balance = fields.Monetary(
         string="Extrapolation Balance",
-        related="standard_detail_id.interim_opening_balance",
+        related="standard_detail_id.extrapolation_opening_balance",
         store=True,
         currency_field="currency_id",
     )
@@ -45,22 +45,24 @@ class WS1203ExtrapolationAdjustment(models.Model):
         string="Extrapolation Adjustment",
         currency_field="currency_id",
     )
+
+    @api.onchange(
+        "extrapolation_balance",
+        "extrapolation_adjustment",
+    )
+    def _compute_adjusted_extrapolation_balance(self):
+        for record in self:
+            result = record.extrapolation_balance + record.extrapolation_adjustment
+            record.adjusted_extrapolation_balance = result
+
     adjusted_extrapolation_balance = fields.Monetary(
         string="Adjusted Extrapolation Balance",
         currency_field="currency_id",
         related="standard_detail_id.adjusted_extrapolation_balance",
         readonly=True,
         store=True,
-        compute=False,
+        compute="_compute_adjusted_extrapolation_balance",
     )
     conclusion = fields.Text(
         string="Conclusion",
     )
-
-    @api.onchange(
-        "extrapolation_balance",
-        "extrapolation_adjustment",
-    )
-    def _onchange_adjusted_extrapolation_balance(self):
-        result = self.extrapolation_balance + self.extrapolation_adjustment
-        self.adjusted_extrapolation_balance = result

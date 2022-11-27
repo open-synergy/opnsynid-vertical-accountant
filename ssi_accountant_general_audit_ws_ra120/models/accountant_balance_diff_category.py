@@ -11,4 +11,3 @@ class AccountantBalanceDiffCategory(models.Model):
         "mixin.master_data",
     ]
     _description = "Balance Diff. Category"
-    _order = "sequence, id"
