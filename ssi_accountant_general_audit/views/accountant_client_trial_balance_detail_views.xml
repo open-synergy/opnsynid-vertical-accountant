@@ -20,10 +20,7 @@
         <tree editable="top">
             <field name="sequence" widget="handle" />
             <field name="account_id" domain="[('partner_id','=',parent.partner_id)]" />
-            <field
-                    name="type_id"
-                    domain="[('id','in',parent.allowed_type_ids[0][2])]"
-                />
+            <field name="type_id" />
             <field name="currency_id" invisible="1" />
             <field
                     name="opening_balance_debit"
@@ -35,6 +32,7 @@
                     string="Opening Cr."
                     sum="Total Opening Credit"
                 />
+            <field name="opening_balance" optional="hide" />
             <field name="debit" string="Dr." sum="Total Debit" />
             <field name="credit" string="Cr." sum="Total Credit" />
             <field
@@ -47,7 +45,7 @@
                     string="Ending Dr."
                     sum="Total Ending Credit"
                 />
-            <field name="balance" invisible="1" />
+            <field name="balance" optional="hide" />
         </tree>
     </field>
 </record>
@@ -66,15 +64,13 @@
                                 name="account_id"
                                 domain="[('partner_id','=',parent.partner_id)]"
                             />
-                        <field
-                                name="type_id"
-                                domain="[('id','in',parent.allowed_type_ids[0][2])]"
-                            />
+                        <field name="type_id" />
                         <field name="currency_id" invisible="1" />
                     </group>
                     <group name="header2" colspan="1" col="2">
                         <field name="opening_balance_debit" string="Opening Dr." />
                         <field name="opening_balance_credit" string="Opening Cr." />
+                        <field name="opening_balance" />
                         <field name="debit" string="Debit" />
                         <field name="credit" string="Credit" />
                         <field name="ending_balance_debit" string="Ending Dr." />

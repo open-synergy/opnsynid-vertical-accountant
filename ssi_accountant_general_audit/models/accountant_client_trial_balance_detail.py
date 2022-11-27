@@ -34,6 +34,7 @@ class AccountantClientTrialBalanceDetail(models.Model):
         comodel_name="accountant.client_account_type",
         related="account_id.type_id",
         store=True,
+        readonly=False,
     )
     currency_id = fields.Many2one(
         string="Currency",
@@ -81,7 +82,7 @@ class AccountantClientTrialBalanceDetail(models.Model):
     )
     def _compute_balance(self):
         for record in self:
-            result = ending_balance_debit = ending_balance_credit = 0.0
+            result = opening = ending_balance_debit = ending_balance_credit = 0.0
             if record.account_id:
                 opening = abs(
                     record.opening_balance_debit - record.opening_balance_credit
@@ -98,6 +99,7 @@ class AccountantClientTrialBalanceDetail(models.Model):
             record.balance = result
             record.ending_balance_debit = ending_balance_debit
             record.ending_balance_credit = ending_balance_credit
+            record.opening_balance = opening
 
     ending_balance_debit = fields.Monetary(
         string="Debit Ending Balance",
@@ -107,6 +109,12 @@ class AccountantClientTrialBalanceDetail(models.Model):
     )
     ending_balance_credit = fields.Monetary(
         string="Credit Ending Balance",
+        compute="_compute_balance",
+        store=True,
+        currency_field="currency_id",
+    )
+    opening_balance = fields.Monetary(
+        string="Opening Balance",
         compute="_compute_balance",
         store=True,
         currency_field="currency_id",

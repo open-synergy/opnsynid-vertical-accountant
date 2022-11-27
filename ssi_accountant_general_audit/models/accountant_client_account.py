@@ -12,6 +12,7 @@ class AccountantClientAccount(models.Model):
     ]
     _description = "Accountant Client Account"
     _order = "partner_id, sequence, code"
+    _show_code_on_display_name = True
 
     sequence = fields.Integer(
         string="Sequence",

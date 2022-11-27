@@ -158,9 +158,21 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         related="general_audit_id.currency_id",
         store=True,
     )
+    home_statement_opening_balance = fields.Monetary(
+        string="Home Statement Opening Balance",
+        related="home_standard_line_id.opening_balance",
+        store=True,
+        currency_field="currency_id",
+    )
     home_statement_balance = fields.Monetary(
         string="Home Statement Balance",
         related="home_standard_line_id.balance",
+        store=True,
+        currency_field="currency_id",
+    )
+    interim_opening_balance = fields.Monetary(
+        string="Interim Opening Balance",
+        related="interim_standard_line_id.opening_balance",
         store=True,
         currency_field="currency_id",
     )
@@ -170,14 +182,26 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         store=True,
         currency_field="currency_id",
     )
+    extrapolation_opening_balance = fields.Monetary(
+        string="Extrapolation Opening Balance",
+        related="extrapolation_standard_line_id.opening_balance",
+        store=True,
+        currency_field="currency_id",
+    )
     extrapolation_balance = fields.Monetary(
         string="Extrapolation Balance",
         related="extrapolation_standard_line_id.balance",
         store=True,
         currency_field="currency_id",
     )
+    previous_opening_balance = fields.Monetary(
+        string="Previous Opening Balance",
+        related="previous_standard_line_id.opening_balance",
+        store=True,
+        currency_field="currency_id",
+    )
     previous_balance = fields.Monetary(
-        string="Extrapolation Balance",
+        string="Previous Balance",
         related="previous_standard_line_id.balance",
         store=True,
         currency_field="currency_id",
