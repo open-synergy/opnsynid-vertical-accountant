@@ -51,10 +51,13 @@ class WS1202BalanceDiff(models.Model):
     @api.depends(
         "interim_opening_balance",
         "previous_balance",
+        "type_id",
     )
     def _compute_balance_diff(self):
         for record in self:
-            result = record.interim_opening_balance - record.previous_balance
+            result = 0.0
+            if record.type_id.compute_diff:
+                result = record.interim_opening_balance - record.previous_balance
             record.balance_diff = result
 
     balance_diff = fields.Monetary(
