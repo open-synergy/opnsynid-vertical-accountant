@@ -58,6 +58,8 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
 
             document.balance = balance
             document.opening_balance = opening_balance
+            document.debit = debit
+            document.credit = credit
 
     trial_balance_id = fields.Many2one(
         string="Trial Balance",

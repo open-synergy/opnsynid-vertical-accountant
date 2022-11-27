@@ -88,9 +88,19 @@ class AccountantClientTrialBalanceDetail(models.Model):
                     record.opening_balance_debit - record.opening_balance_credit
                 )
                 if record.account_id.normal_balance == "dr":
-                    result = opening + record.debit - record.credit
+                    # TODO: Refactor
+                    result = (
+                        (record.opening_balance_debit - record.opening_balance_credit)
+                        + record.debit
+                        - record.credit
+                    )
                 else:
-                    result = opening - record.debit + record.credit
+                    # TODO: Refactor
+                    result = (
+                        (record.opening_balance_credit - record.opening_balance_debit)
+                        - record.debit
+                        + record.credit
+                    )
                 balance = (record.opening_balance_debit + record.debit) - (
                     record.opening_balance_credit + record.credit
                 )
