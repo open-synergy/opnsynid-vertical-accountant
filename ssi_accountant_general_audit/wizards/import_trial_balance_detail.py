@@ -4,10 +4,9 @@
 
 import base64
 import csv
-from tempfile import TemporaryFile
+import io
 
-from odoo import _, api, fields, models
-from odoo.exceptions import Warning as UserError
+from odoo import api, fields, models
 
 
 class ImportTrialBalanceDetail(models.TransientModel):
@@ -29,46 +28,26 @@ class ImportTrialBalanceDetail(models.TransientModel):
 
     def button_import(self):
         self.ensure_one()
-        fileobj = TemporaryFile("w+")
-        fileobj.write(base64.decodestring(self.data))
-        fileobj.seek(0)
-        reader = csv.reader(fileobj, delimiter=",")
-        self.trial_balance_id.detail_ids.unlink()
+        csv_data = base64.b64decode(self.data)
+        data_file = io.StringIO(csv_data.decode("utf-8"))
+        data_file.seek(0)
+        reader = csv.reader(data_file, delimiter=",")
         for row in reader:
-            self._create_trial_balance_detail(row)
-
-        fileobj.close()
+            self._update_trial_balance_detail(row)
         return {"type": "ir.actions.act_window_close"}
 
-    def _create_trial_balance_detail(self, row):
+    def _update_trial_balance_detail(self, row):
         self.ensure_one()
-        obj_detail = self.env["accountant.client_trial_balance_detail"]
-        obj_detail.create(self._prepare_trial_balance_detail(row))
-
-    def _prepare_trial_balance_detail(self, row):
-        self.ensure_one()
-        account = self._get_account(row[1])
-
-        return {
-            "trial_balance_id": self.trial_balance_id.id,
-            "account_id": account.id,
-            "balance": row[3],
-            "interim_balance": row[4],
-            "previous_balance": row[5],
-        }
-
-    def _get_account(self, code):
-        self.ensure_one()
-        obj_account = self.env["accountant.client_account"]
-        partner = self.trial_balance_id.partner_id
+        Detail = self.env["accountant.client_trial_balance_detail"]
         criteria = [
-            ("code", "=", code),
-            ("partner_id.id", "=", partner.id),
+            ("trial_balance_id", "=", self.trial_balance_id.id),
+            ("account_id.code", "=", row[0]),
         ]
-        accounts = obj_account.search(criteria)
-        if len(accounts) > 0:
-            result = accounts[0]
-        else:
-            error_message = _("Invalid client account")
-            raise UserError(error_message)
-        return result
+        Detail.search(criteria).write(
+            {
+                "opening_balance_debit": row[2],
+                "opening_balance_credit": row[3],
+                "debit": row[4],
+                "credit": row[5],
+            }
+        )

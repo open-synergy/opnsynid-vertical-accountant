@@ -30,6 +30,9 @@
         />
         <field name="arch" type="xml">
             <data>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="reviewer_id" />
+                </xpath>
                 <xpath expr="//field[@name='company_id']" position="after">
                     <field name="general_audit_id" />
                     <field name="type_id" invisible="1" />
@@ -61,6 +64,7 @@
                     </page>
                 </xpath>
                 <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="reviewer_id" />
                     <field name="type_id" invisible="1" />
                     <field name="parent_type_id" invisible="1" />
                     <field name="general_audit_id" />

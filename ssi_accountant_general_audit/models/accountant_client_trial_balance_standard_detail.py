@@ -24,11 +24,14 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         "trial_balance_id.detail_ids",
         "trial_balance_id.detail_ids.type_id",
         "trial_balance_id.detail_ids.balance",
+        "trial_balance_id.detail_ids.opening_balance",
+        "trial_balance_id.detail_ids.debit",
+        "trial_balance_id.detail_ids.credit",
     )
     def _compute_balance(self):
         obj_detail = self.env["accountant.client_trial_balance_detail"]
         for document in self:
-            balance = 0.0
+            balance = opening_balance = debit = credit = 0.0
             if document.trial_balance_id.trial_balance_type == "extrapolation":
                 python_code = document.type_id.python_code
                 localdict = document._get_localdict()
@@ -41,15 +44,20 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
                     )
                     balance = localdict["result"]
                 except Exception:
-                    balance = 8.0
+                    balance = 0.0
             else:
                 criteria = [
                     ("trial_balance_id", "=", document.trial_balance_id.id),
                     ("type_id", "=", document.type_id.id),
                 ]
                 for detail in obj_detail.search(criteria):
+                    opening_balance += detail.opening_balance
+                    debit += detail.debit
+                    credit += detail.credit
                     balance += detail.balance
+
             document.balance = balance
+            document.opening_balance = opening_balance
 
     trial_balance_id = fields.Many2one(
         string="Trial Balance",
@@ -73,9 +81,26 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         related="trial_balance_id.currency_id",
         store=True,
     )
+    opening_balance = fields.Monetary(
+        string="Opening Balance",
+        compute="_compute_balance",
+        store=True,
+        currency_field="currency_id",
+    )
+    debit = fields.Monetary(
+        string="Debit",
+        compute="_compute_balance",
+        store=True,
+        currency_field="currency_id",
+    )
+    credit = fields.Monetary(
+        string="Credit",
+        compute="_compute_balance",
+        store=True,
+        currency_field="currency_id",
+    )
     balance = fields.Monetary(
         string="Balance",
-        required=False,
         compute="_compute_balance",
         store=True,
         currency_field="currency_id",

@@ -120,6 +120,17 @@ class AccountantGeneralAuditWorksheet(models.Model):
             ],
         },
     )
+    reviewer_id = fields.Many2one(
+        string="Reviewer",
+        comodel_name="res.users",
+        required=True,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     conclusion_id = fields.Many2one(
         string="Conclusion",
         comodel_name="accountant.general_audit_worksheet_conclusion",
