@@ -137,7 +137,7 @@ class AccountantGeneralAuditWorksheet(models.Model):
         required=False,
         readonly=True,
         states={
-            "draft": [
+            "open": [
                 ("readonly", False),
             ],
         },
@@ -146,7 +146,7 @@ class AccountantGeneralAuditWorksheet(models.Model):
         string="Conclusion Additional Explanation",
         readonly=True,
         states={
-            "draft": [
+            "open": [
                 ("readonly", False),
             ],
         },
