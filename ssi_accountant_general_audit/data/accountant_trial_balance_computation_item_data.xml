@@ -84,7 +84,7 @@
     <field name="code">T006</field>
     <field name="category">summary</field>
     <field name="sequence" eval="310" />
-    <field name="python_code">result = T005 + account_type["T039"] </field>
+    <field name="python_code">result = T005 + account_type["S523"] </field>
 </record>
 
 <record id="computation_item_008" model="accountant.trial_balance_computation_item">
@@ -94,7 +94,7 @@
     <field name="sequence" eval="320" />
     <field
                 name="python_code"
-            >result = T030 + account_type["T040"] + account_group["T042"] </field>
+            >result = T030 + account_type["S541"] + account_group["T042"] </field>
 </record>
 
 <record id="computation_item_009" model="accountant.trial_balance_computation_item">
