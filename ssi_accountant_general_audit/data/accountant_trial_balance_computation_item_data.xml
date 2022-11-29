@@ -15,6 +15,16 @@
     <field name="sequence" eval="250" />
 </record>
 
+<record id="computation_item_007" model="accountant.trial_balance_computation_item">
+    <field name="name">Total Liability</field>
+    <field name="code">T007</field>
+    <field name="category">summary</field>
+    <field name="sequence" eval="260" />
+    <field
+                name="python_code"
+            >result = account_group["T003"] - account_group["T004"]</field>
+</record>
+
 <record id="computation_item_002" model="accountant.trial_balance_computation_item">
     <field name="name">Net Asset</field>
     <field name="code">T002</field>
@@ -22,24 +32,21 @@
     <field
                 name="python_code"
             >result = T001 - account_group["T003"] - account_group["T004"]</field>
-    <field name="sequence" eval="260" />
+    <field name="sequence" eval="270" />
 </record>
 
-<record id="computation_item_007" model="accountant.trial_balance_computation_item">
-    <field name="name">Total Liability</field>
-    <field name="code">T007</field>
+<record id="computation_item_009" model="accountant.trial_balance_computation_item">
+    <field name="name">Working Capital</field>
+    <field name="code">T009</field>
     <field name="category">summary</field>
-    <field name="sequence" eval="270" />
-    <field
-                name="python_code"
-            >result = account_group["T003"] - account_group["T004"]</field>
+    <field name="sequence" eval="280" />
 </record>
 
 <record id="computation_item_003" model="accountant.trial_balance_computation_item">
     <field name="name">Revenue</field>
     <field name="code">T003</field>
     <field name="category">summary</field>
-    <field name="sequence" eval="280" />
+    <field name="sequence" eval="290" />
     <field
                 name="python_code"
             >result = account_group["T008"] + account_group["T009"] + account_group["T010"]</field>
@@ -49,33 +56,15 @@
     <field name="name">Cost of Revenue</field>
     <field name="code">T004</field>
     <field name="category">summary</field>
-    <field name="sequence" eval="290" />
+    <field name="sequence" eval="300" />
     <field name="python_code">result = account_group["T011"]</field>
-</record>
-
-<record id="computation_item_031" model="accountant.trial_balance_computation_item">
-    <field name="name">Gross Revenue</field>
-    <field name="code">T031</field>
-    <field name="category">summary</field>
-    <field name="sequence" eval="291" />
-    <field name="python_code">result = T003 - account_group["T011"]</field>
-</record>
-
-<record id="computation_item_030" model="accountant.trial_balance_computation_item">
-    <field name="name">Net Revenue</field>
-    <field name="code">T030</field>
-    <field name="category">summary</field>
-    <field name="sequence" eval="292" />
-    <field
-                name="python_code"
-            >result = T003 - account_group["T011"] - account_group["T012"] - account_group["T013"] - account_group["T014"]</field>
 </record>
 
 <record id="computation_item_005" model="accountant.trial_balance_computation_item">
     <field name="name">EBT</field>
     <field name="code">T005</field>
     <field name="category">summary</field>
-    <field name="sequence" eval="300" />
+    <field name="sequence" eval="310" />
     <field name="python_code">result = T030 + account_group["T014"]</field>
 </record>
 
@@ -83,7 +72,7 @@
     <field name="name">EBITDA</field>
     <field name="code">T006</field>
     <field name="category">summary</field>
-    <field name="sequence" eval="310" />
+    <field name="sequence" eval="320" />
     <field name="python_code">result = T005 + account_type["S523"] </field>
 </record>
 
@@ -91,18 +80,13 @@
     <field name="name">EBIT</field>
     <field name="code">T008</field>
     <field name="category">summary</field>
-    <field name="sequence" eval="320" />
+    <field name="sequence" eval="330" />
     <field
                 name="python_code"
             >result = T030 + account_type["S541"] + account_group["T042"] </field>
 </record>
 
-<record id="computation_item_009" model="accountant.trial_balance_computation_item">
-    <field name="name">Working Capital</field>
-    <field name="code">T009</field>
-    <field name="category">summary</field>
-    <field name="sequence" eval="330" />
-</record>
+
 
 <record id="computation_item_010" model="accountant.trial_balance_computation_item">
     <field name="name">EAT</field>

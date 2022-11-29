@@ -22,11 +22,16 @@
             <field name="type_id" />
             <field name="home_standard_line_id" invisible="1" />
             <field name="interim_standard_line_id" invisible="1" />
-            <field name="extrapolation_standard_line_id" invisible="1" />
             <field name="previous_standard_line_id" invisible="1" />
             <field name="currency_id" invisible="1" />
             <field name="interim_balance" string="Interim" />
-            <field name="extrapolation_balance" string="Extrapolation" />
+            <field
+                    name="extrapolation_balance"
+                    optional="hide"
+                    string="Extrapolation"
+                />
+            <field name="extrapolation_adjustment" optional="hide" />
+            <field name="adjusted_extrapolation_balance" />
             <field name="home_statement_balance" string="Home Statement" />
             <field name="adjustment_balance" string="Adjustment" />
             <field name="audited_balance" string="Audited" />
@@ -54,7 +59,9 @@
                     </group>
                     <group name="header2" colspan="1" col="2">
                         <field name="interim_balance" string="Interim" />
-                        <field name="extrapolation_balance" string="Extrapolation" />
+                        <field name="extrapolation_balance" />
+                        <field name="extrapolation_adjustment" />
+                        <field name="adjusted_extrapolation_balance" />
                         <field name="home_statement_balance" string="Home Statement" />
                         <field name="adjustment_balance" string="Adjustment" />
                         <field name="audited_balance" string="Audited" />

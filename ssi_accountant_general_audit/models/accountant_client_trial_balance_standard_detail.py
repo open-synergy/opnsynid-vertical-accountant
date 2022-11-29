@@ -4,7 +4,6 @@
 
 
 from odoo import api, fields, models
-from odoo.tools.safe_eval import safe_eval as eval  # pylint: disable=redefined-builtin
 
 
 class AccountantClientTrialBalanceStandardDetail(models.Model):
@@ -32,29 +31,15 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         obj_detail = self.env["accountant.client_trial_balance_detail"]
         for document in self:
             balance = opening_balance = debit = credit = 0.0
-            if document.trial_balance_id.trial_balance_type == "extrapolation":
-                python_code = document.type_id.python_code
-                localdict = document._get_localdict()
-                try:
-                    eval(
-                        python_code,
-                        localdict,
-                        mode="exec",
-                        nocopy=True,
-                    )
-                    balance = localdict["result"]
-                except Exception:
-                    balance = 0.0
-            else:
-                criteria = [
-                    ("trial_balance_id", "=", document.trial_balance_id.id),
-                    ("type_id", "=", document.type_id.id),
-                ]
-                for detail in obj_detail.search(criteria):
-                    opening_balance += detail.opening_balance
-                    debit += detail.debit
-                    credit += detail.credit
-                    balance += detail.balance
+            criteria = [
+                ("trial_balance_id", "=", document.trial_balance_id.id),
+                ("type_id", "=", document.type_id.id),
+            ]
+            for detail in obj_detail.search(criteria):
+                opening_balance += detail.opening_balance
+                debit += detail.debit
+                credit += detail.credit
+                balance += detail.balance
 
             document.balance = balance
             document.opening_balance = opening_balance
@@ -107,21 +92,3 @@ class AccountantClientTrialBalanceStandardDetail(models.Model):
         store=True,
         currency_field="currency_id",
     )
-
-    def _get_localdict(self):
-        self.ensure_one()
-        StandardDetail = self.env["accountant.general_audit_standard_detail"]
-        criteria = [
-            ("general_audit_id", "=", self.trial_balance_id.general_audit_id.id),
-            ("type_id", "=", self.type_id.id),
-        ]
-        standard_detail = False
-        standard_details = StandardDetail.search(criteria)
-        if len(standard_details) > 0:
-            standard_detail = standard_details[0]
-        return {
-            "env": self.env,
-            "document": self,
-            "standard_detail": standard_detail,
-            "tb": self.trial_balance_id,
-        }
