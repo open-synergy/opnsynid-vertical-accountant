@@ -49,19 +49,16 @@
                             col="2"
                             string="Base Amount"
                         >
+                            <field name="base_amount_source" />
                             <field name="computation_item_id" />
                             <field name="general_audit_computation_id" invisible="1" />
                             <field name="other_amount_ok" />
+                            <field name="other_amount_source" />
                             <field name="other_base_amount" />
                             <field
                                 name="base_computation_amount"
                                 string="Base Amount"
                             />
-                            <field
-                                name="base_computation_extrapolation_amount"
-                                string="Extrapolation Base Amount"
-                            />
-
                         </group>
                         <group
                             name="materiality_2"
@@ -74,10 +71,6 @@
                                 string="Percentage"
                             />
                             <field name="overall_materiality" string="Amount" />
-                            <field
-                                name="overall_materiality_extrapolation"
-                                string="Extrapolation Amount"
-                            />
                             <field
                                 name="overall_materiality_consideration"
                                 string="Consideration"
@@ -95,10 +88,6 @@
                             />
                             <field name="performance_materiality" string="Amount" />
                             <field
-                                name="performance_materiality_extrapolation"
-                                string="Extrapolation Amount"
-                            />
-                            <field
                                 name="performance_materiality_consideration"
                                 string="Consideration"
                             />
@@ -114,10 +103,6 @@
                                 string="Percentage"
                             />
                             <field name="tolerable_misstatement" string="Amount" />
-                            <field
-                                name="tolerable_misstatement_extrapolation"
-                                string="Extrapolation Amount"
-                            />
                             <field
                                 name="tolerable_misstatement_consideration"
                                 string="Consideration"

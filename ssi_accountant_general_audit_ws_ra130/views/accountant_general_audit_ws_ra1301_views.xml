@@ -57,13 +57,10 @@
                                 <field name="currency_id" invisible="1" />
                                 <field name="type_id" />
                                 <field name="balance" />
-                                <field name="extrapolation_balance" />
                                 <field name="materiality" />
-                                <field name="materiality_extrapolation" />
                                 <field name="use_specific_materiality" />
                                 <field name="specific_materiality" />
                                 <field name="final_materiality" />
-                                <field name="final_materiality_extrapolation" />
                             </tree>
                         </field>
                     </page>

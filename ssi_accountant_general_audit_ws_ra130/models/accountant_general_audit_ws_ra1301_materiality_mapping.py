@@ -11,58 +11,48 @@ class AccountantGeneralAuditWS1301MaterialityMapping(models.Model):
 
     @api.depends(
         "balance",
-        "extrapolation_balance",
         "worksheet_id.materiality_type",
         "use_specific_materiality",
         "specific_materiality",
         "worksheet_id.worksheet_ra130_id.overall_materiality",
-        "worksheet_id.worksheet_ra130_id.overall_materiality_extrapolation",
         "worksheet_id.worksheet_ra130_id.performance_materiality",
-        "worksheet_id.worksheet_ra130_id.performance_materiality_extrapolation",
+        "standard_detail_id",
     )
     def _compute_materiality(self):
         for document in self:
-            materiality = materiality_extrapolation = "im"
-            base = base_extrapolation = 0.0
+            materiality = "im"
+            base = balance = 0.0
             worksheet = document.worksheet_id
 
             if worksheet.worksheet_ra130_id:
                 worksheet_ra130 = worksheet.worksheet_ra130_id
+
+                if worksheet_ra130.base_amount_source == "interim":
+                    balance = document.standard_detail_id.interim_balance
+                elif worksheet_ra130.base_amount_source == "extrapolation":
+                    balance = document.standard_detail_id.adjusted_extrapolation_balance
+                elif worksheet_ra130.base_amount_source == "home":
+                    balance = document.standard_detail_id.home_statement_balance
+
                 if worksheet.materiality_type == "om":
                     base = worksheet_ra130.overall_materiality
-                    base_extrapolation = (
-                        worksheet_ra130.overall_materiality_extrapolation
-                    )
                 else:
                     base = worksheet_ra130.performance_materiality
-                    base_extrapolation = (
-                        worksheet_ra130.performance_materiality_extrapolation
-                    )
 
-                if document.balance > base:
+                if balance > base:
                     materiality = "m"
 
-                if document.extrapolation_balance > base_extrapolation:
-                    materiality_extrapolation = "m"
-
                 document.materiality = materiality
-                document.materiality_extrapolation = materiality_extrapolation
 
                 if document.use_specific_materiality:
                     specific_materiality = document.specific_materiality
                     base = (specific_materiality / 100.0) * base
-                    base_extrapolation = (
-                        specific_materiality / 100.0
-                    ) * base_extrapolation
 
-                if document.balance > base:
+                if balance > base:
                     materiality = "m"
 
-                if document.extrapolation_balance > base_extrapolation:
-                    materiality_extrapolation = "m"
-
             document.final_materiality = materiality
-            document.final_materiality_extrapolation = materiality_extrapolation
+            document.balance = balance
 
     worksheet_id = fields.Many2one(
         string="# RA.130.1",
@@ -94,24 +84,13 @@ class AccountantGeneralAuditWS1301MaterialityMapping(models.Model):
     )
     balance = fields.Monetary(
         string="Balance",
-        related="standard_detail_id.home_statement_balance",
-        store=True,
-        currency_field="currency_id",
-    )
-    extrapolation_balance = fields.Monetary(
-        string="Extrapolation Balance",
-        related="standard_detail_id.extrapolation_balance",
+        compute="_compute_materiality",
+        related=False,
         store=True,
         currency_field="currency_id",
     )
     materiality = fields.Selection(
         string="Materiality",
-        selection=[("m", "Material"), ("im", "Immaterial")],
-        compute="_compute_materiality",
-        store=True,
-    )
-    materiality_extrapolation = fields.Selection(
-        string="Materiality (Extrapolation)",
         selection=[("m", "Material"), ("im", "Immaterial")],
         compute="_compute_materiality",
         store=True,
@@ -128,12 +107,6 @@ class AccountantGeneralAuditWS1301MaterialityMapping(models.Model):
     )
     final_materiality = fields.Selection(
         string="Final Materiality",
-        selection=[("m", "Material"), ("im", "Immaterial")],
-        compute="_compute_materiality",
-        store=True,
-    )
-    final_materiality_extrapolation = fields.Selection(
-        string="Final Materiality (Extrapolation)",
         selection=[("m", "Material"), ("im", "Immaterial")],
         compute="_compute_materiality",
         store=True,
