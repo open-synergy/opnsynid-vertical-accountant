@@ -40,6 +40,8 @@ class WS1401VerticalHorizontalAnalysis(models.Model):
     computation_item_id = fields.Many2one(
         string="Base Figure Computation Item",
         comodel_name="accountant.trial_balance_computation_item",
+        related="type_id.analytic_procedure_computation_item_id",
+        store=True,
     )
 
     @api.depends(
