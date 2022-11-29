@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+<record id="accountant_client_account_type_view_form" model="ir.ui.view">
+    <field name="name">accountant.client.account.type.form</field>
+    <field name="model">accountant.client_account_type</field>
+    <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_client_account_type_view_form"
+        />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='normal_balance']" position="after">
+                <field name="analytic_procedure_computation_item_id" />
+            </xpath>
+        </data>
+    </field>
+</record>
+</odoo>
