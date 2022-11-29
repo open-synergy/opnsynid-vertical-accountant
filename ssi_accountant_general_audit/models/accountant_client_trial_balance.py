@@ -167,7 +167,6 @@ class AccountantClientTrialBalance(models.Model):
         selection=[
             ("previous", "Previous"),
             ("interim", "Interim"),
-            ("extrapolation", "Extrapolation"),
             ("home", "Home Statement"),
         ],
         default="home",
@@ -476,6 +475,8 @@ class AccountantClientTrialBalance(models.Model):
         for computation in self.computation_ids:
             additionaldict = computation._recompute(additional_dict)
             additional_dict = additionaldict
+
+        self.general_audit_id._recompute_extrapolation_computation()
 
     def _get_account_type_dict(self):
         self.ensure_one()

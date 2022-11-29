@@ -13,41 +13,59 @@
         />
     </record>
 
+    <!-- Total Asset -->
     <record
         id="demo_trading_set_computation_001"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
         <field name="computation_id" ref="computation_item_001" />
-        <field
-            name="python_code"
-        >result = account_group["T001"] + account_group["T002"]</field>
+        <field name="use_default" eval="1" />
     </record>
 
+    <!-- Total Liability -->
     <record
         id="demo_trading_set_computation_002"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
-        <field name="computation_id" ref="computation_item_002" />
-        <field
-            name="python_code"
-        >result = T001 - account_group["T003"] - account_group["T004"]</field>
+        <field name="computation_id" ref="computation_item_007" />
+        <field name="use_default" eval="1" />
     </record>
 
+    <!-- Net Asset -->
     <record
         id="demo_trading_set_computation_003"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
-        <field name="computation_id" ref="computation_item_003" />
-        <field
-            name="python_code"
-        >result = account_group["T008"] + account_group["T009"] + account_group["T010"]</field>
+        <field name="computation_id" ref="computation_item_002" />
+        <field name="use_default" eval="1" />
     </record>
 
+    <!-- Working Capital -->
     <record
         id="demo_trading_set_computation_004"
+        model="accountant.client_account_type_computation_item"
+    >
+        <field name="account_type_set_id" ref="demo_trading_set" />
+        <field name="computation_id" ref="computation_item_009" />
+        <field name="use_default" eval="1" />
+    </record>
+
+    <!-- Revenue -->
+    <record
+        id="demo_trading_set_computation_004"
+        model="accountant.client_account_type_computation_item"
+    >
+        <field name="account_type_set_id" ref="demo_trading_set" />
+        <field name="computation_id" ref="computation_item_003" />
+        <field name="use_default" eval="1" />
+    </record>
+
+    <!-- COR -->
+    <record
+        id="demo_trading_set_computation_005"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
@@ -55,15 +73,7 @@
         <field name="use_default" eval="1" />
     </record>
 
-    <record
-        id="demo_trading_set_computation_005"
-        model="accountant.client_account_type_computation_item"
-    >
-        <field name="account_type_set_id" ref="demo_trading_set" />
-        <field name="computation_id" ref="computation_item_005" />
-        <field name="use_default" eval="1" />
-    </record>
-
+    <!-- EBITDA -->
     <record
         id="demo_trading_set_computation_006"
         model="accountant.client_account_type_computation_item"
@@ -73,17 +83,9 @@
         <field name="use_default" eval="1" />
     </record>
 
+    <!-- EBIT -->
     <record
         id="demo_trading_set_computation_007"
-        model="accountant.client_account_type_computation_item"
-    >
-        <field name="account_type_set_id" ref="demo_trading_set" />
-        <field name="computation_id" ref="computation_item_007" />
-        <field name="use_default" eval="1" />
-    </record>
-
-    <record
-        id="demo_trading_set_computation_008"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
@@ -91,21 +93,23 @@
         <field name="use_default" eval="1" />
     </record>
 
+    <!-- EBT -->
     <record
-        id="demo_trading_set_computation_009"
+        id="demo_trading_set_computation_008"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
-        <field name="computation_id" ref="computation_item_009" />
+        <field name="computation_id" ref="computation_item_005" />
         <field name="use_default" eval="1" />
     </record>
 
+    <!-- EAT -->
     <record
-        id="demo_trading_set_computation_010"
+        id="demo_trading_set_computation_006"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
-        <field name="computation_id" ref="computation_item_010" />
+        <field name="computation_id" ref="computation_item_006" />
         <field name="use_default" eval="1" />
     </record>
 

@@ -22,7 +22,6 @@
             <field name="group_id" />
             <field name="home_group_line_id" invisible="1" />
             <field name="interim_group_line_id" invisible="1" />
-            <field name="extrapolation_group_line_id" invisible="1" />
             <field name="previous_group_line_id" invisible="1" />
             <field name="currency_id" invisible="1" />
             <field name="interim_balance" string="Interim" />

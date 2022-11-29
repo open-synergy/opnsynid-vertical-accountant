@@ -2,7 +2,8 @@
 # Copyright 2022 PT. Simetri Sinergi Indonesia
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html).
 
-from odoo import api, fields, models
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError
 
 
 class AccountantClientAccount(models.Model):
@@ -48,3 +49,16 @@ class AccountantClientAccount(models.Model):
         self.normal_balance = False
         if self.type_id:
             self.normal_balance = self.type_id.normal_balance
+
+    @api.constrains("code")
+    def _check_duplicate_code(self):
+        error_msg = _("Duplicate code not allowed")
+        for record in self:
+            criteria = [
+                ("code", "=", record.code),
+                ("id", "!=", record.id),
+                ("partner_id", "=", record.partner_id.id),
+            ]
+            count_duplicate = self.search_count(criteria)
+            if count_duplicate > 0:
+                raise UserError(error_msg)

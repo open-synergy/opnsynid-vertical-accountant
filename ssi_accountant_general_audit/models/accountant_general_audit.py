@@ -98,22 +98,23 @@ class AccountantGeneralAudit(models.Model):
     )
     def _compute_trial_balance_id(self):
         for document in self:
-            home = interim = previous = extrapolation = False
+            home = interim = previous = False
+
+            # Home statement
             homes = document.trial_balance_ids.filtered(
                 lambda r: r.trial_balance_type == "home"
             )
             if len(homes) > 0:
                 home = homes[0]
+
+            # Interim
             interims = document.trial_balance_ids.filtered(
                 lambda r: r.trial_balance_type == "interim"
             )
             if len(interims) > 0:
                 interim = interims[0]
-            extrapolations = document.trial_balance_ids.filtered(
-                lambda r: r.trial_balance_type == "extrapolation"
-            )
-            if len(extrapolations) > 0:
-                extrapolation = extrapolations[0]
+
+            # Previous
             previouses = document.trial_balance_ids.filtered(
                 lambda r: r.trial_balance_type == "previous"
             )
@@ -122,7 +123,6 @@ class AccountantGeneralAudit(models.Model):
 
             document.home_trial_balance_id = home
             document.interim_trial_balance_id = interim
-            document.extrapolation_trial_balance_id = extrapolation
             document.previous_trial_balance_id = previous
 
     title = fields.Char(
@@ -400,12 +400,6 @@ class AccountantGeneralAudit(models.Model):
         compute="_compute_trial_balance_id",
         store=True,
     )
-    extrapolation_trial_balance_id = fields.Many2one(
-        string="# Extrapolation Trial Balance",
-        comodel_name="accountant.client_trial_balance",
-        compute="_compute_trial_balance_id",
-        store=True,
-    )
     previous_trial_balance_id = fields.Many2one(
         string="# Previous Trial Balance",
         comodel_name="accountant.client_trial_balance",
@@ -674,3 +668,33 @@ class AccountantGeneralAudit(models.Model):
                 self.id
             )
             raise ValidationError(_(error_message))
+
+    def _recompute_extrapolation_computation(self):
+        self.ensure_one()
+        additional_dict = self._get_extrapolation_account_type_dict()
+        for computation in self.computation_ids:
+            additionaldict = computation._recompute_extrapolation(additional_dict)
+            additional_dict = additionaldict
+
+    def _get_extrapolation_account_type_dict(self):
+        self.ensure_one()
+        result = {
+            "account_type": {},
+            "account_group": {},
+        }
+        for standard in self.standard_detail_ids:
+            result["account_type"].update(
+                {
+                    standard.type_id.code: standard.adjusted_extrapolation_balance,
+                }
+            )
+            account_group_amount = result["account_group"].get(
+                standard.type_id.group_id.code, 0.0
+            )
+            result["account_group"].update(
+                {
+                    standard.type_id.group_id.code: account_group_amount
+                    + standard.adjusted_extrapolation_balance,
+                }
+            )
+        return result

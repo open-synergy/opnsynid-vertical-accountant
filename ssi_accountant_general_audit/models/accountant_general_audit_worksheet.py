@@ -47,6 +47,7 @@ class AccountantGeneralAuditWorksheet(models.Model):
         comodel_name="accountant.general_audit",
         readonly=True,
         required=True,
+        ondelete="cascade",
         states={
             "draft": [
                 ("readonly", False),

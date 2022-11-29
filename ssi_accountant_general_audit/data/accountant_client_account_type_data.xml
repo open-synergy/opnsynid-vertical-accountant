@@ -15,7 +15,7 @@
     <field name="group_id" ref="acc_group_t001" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -28,7 +28,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t001" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -41,7 +41,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t001" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -54,7 +54,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t001" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -67,7 +67,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t001" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -80,7 +80,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t001" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -93,7 +93,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t001" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -106,7 +106,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t001" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -119,7 +119,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t001" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -132,7 +132,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t002" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -145,7 +145,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t002" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -158,7 +158,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t002" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -171,7 +171,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t002" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -184,7 +184,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t002" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -197,7 +197,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t002" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -210,7 +210,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t002" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -223,7 +223,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t002" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -236,7 +236,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t002" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -249,7 +249,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t003" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -262,7 +262,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t003" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -275,7 +275,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t003" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -288,7 +288,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t003" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -301,7 +301,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t003" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -314,7 +314,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t003" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -327,7 +327,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t003" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -340,7 +340,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t003" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -353,7 +353,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t003" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -366,7 +366,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t004" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -379,7 +379,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t004" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -392,7 +392,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t004" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -405,7 +405,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t004" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -418,7 +418,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t004" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -431,7 +431,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t004" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -444,7 +444,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t004" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -457,7 +457,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t004" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -470,7 +470,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t004" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -483,7 +483,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t005" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -496,7 +496,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t005" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -509,7 +509,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t005" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -522,7 +522,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t005" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -535,7 +535,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t005" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -548,7 +548,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t005" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -579,7 +579,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="group_id" ref="acc_group_t006" />
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
 </record>
@@ -592,7 +592,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
     <field name="normal_balance">cr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -604,7 +604,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">cr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -616,7 +616,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">cr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -628,7 +628,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">cr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -640,7 +640,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">dr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -652,7 +652,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">dr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -664,7 +664,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">dr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -676,7 +676,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">dr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -688,7 +688,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">dr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -700,7 +700,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">dr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -712,7 +712,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">dr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -724,7 +724,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">dr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -736,7 +736,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">dr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -748,7 +748,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">cr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -760,7 +760,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
     <field name="normal_balance">cr</field>
     <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
 </record>
 
@@ -772,7 +772,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="group_id" ref="acc_group_t001" />
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -784,7 +784,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -796,7 +796,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -808,7 +808,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -820,7 +820,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -832,7 +832,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -844,7 +844,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -856,7 +856,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -868,7 +868,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -880,7 +880,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -892,7 +892,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -904,7 +904,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -916,7 +916,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -928,7 +928,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -940,7 +940,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -952,7 +952,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -964,7 +964,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -976,7 +976,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -988,7 +988,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -1000,7 +1000,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -1012,7 +1012,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -1024,7 +1024,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -1036,7 +1036,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -1048,7 +1048,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -1060,7 +1060,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 delta_balance = standard_detail.interim_balance - standard_detail.previous_balance
 result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</field>
     </record>
@@ -1080,7 +1080,7 @@ result = standard_detail.previous_balance + (365.0/delta_days) * delta_balance</
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1091,7 +1091,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1102,7 +1102,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1113,7 +1113,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1124,7 +1124,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1135,7 +1135,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1146,7 +1146,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1157,7 +1157,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">cr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1168,7 +1168,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1179,7 +1179,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1190,7 +1190,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1201,7 +1201,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1212,7 +1212,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1223,7 +1223,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1234,7 +1234,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1245,7 +1245,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 
@@ -1256,7 +1256,7 @@ result = (365.0/delta_days) * standard_detail.interim_balance</field>
         <field name="normal_balance">dr</field>
         <field
                 name="python_code"
-            >delta_days = (tb.interim_date_end - tb.previous_date_end).days
+            >delta_days = (ga.interim_date_end - ga.previous_date_end).days
 result = (365.0/delta_days) * standard_detail.interim_balance</field>
     </record>
 </data>

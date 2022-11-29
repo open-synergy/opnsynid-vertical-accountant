@@ -7,21 +7,18 @@ from odoo import api, fields, models
 
 class AccountantClientAccountTypeComputationItem(models.Model):
     _name = "accountant.client_account_type_computation_item"
-    _inherit = [
-        "mixin.master_data",
-    ]
     _description = "Accountant Client Account Type Computation Item"
+    _order = "account_type_set_id, sequence, id"
 
-    name = fields.Char(
-        required=False,
-    )
-    code = fields.Char(
-        required=False,
-    )
     account_type_set_id = fields.Many2one(
         string="Account Type Set",
         comodel_name="accountant.client_account_type_set",
         required=True,
+    )
+    sequence = fields.Integer(
+        string="Sequence",
+        related="computation_id.sequence",
+        store=True,
     )
     computation_id = fields.Many2one(
         string="Computation",

@@ -124,10 +124,6 @@
                             />
                             <field name="interim_trial_balance_id" string="# Interim" />
                             <field
-                                name="extrapolation_trial_balance_id"
-                                string="# Extrapolation"
-                            />
-                            <field
                                 name="home_trial_balance_id"
                                 string="# Home Statement"
                             />

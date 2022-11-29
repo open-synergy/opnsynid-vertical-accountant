@@ -33,14 +33,11 @@ class AccountantGeneralAuditGroupDetail(models.Model):
         "general_audit_id.home_trial_balance_id",
         "general_audit_id.interim_trial_balance_id",
         "general_audit_id.previous_trial_balance_id",
-        "general_audit_id.extrapolation_trial_balance_id",
     )
     def _compute_group_line(self):
         GroupDetail = self.env["accountant.client_trial_balance_group_detail"]
         for record in self:
-            home_result = (
-                interim_result
-            ) = previous_result = extrapolation_result = False
+            home_result = interim_result = previous_result = False
             criteria = [
                 ("group_id", "=", record.group_id.id),
             ]
@@ -68,18 +65,6 @@ class AccountantGeneralAuditGroupDetail(models.Model):
                 if len(interim_results) > 0:
                     interim_result = interim_results[0]
 
-            if record.general_audit_id.extrapolation_trial_balance_id:
-                criteria_extrapolation = criteria + [
-                    (
-                        "trial_balance_id",
-                        "=",
-                        record.general_audit_id.extrapolation_trial_balance_id.id,
-                    )
-                ]
-                extrapolation_results = GroupDetail.search(criteria_extrapolation)
-                if len(extrapolation_results) > 0:
-                    extrapolation_result = extrapolation_results[0]
-
             if record.general_audit_id.previous_trial_balance_id:
                 criteria_previous = criteria + [
                     (
@@ -95,7 +80,6 @@ class AccountantGeneralAuditGroupDetail(models.Model):
             record.home_group_line_id = home_result
             record.interim_group_line_id = interim_result
             record.previous_group_line_id = previous_result
-            record.extrapolation_group_line_id = extrapolation_result
 
     home_group_line_id = fields.Many2one(
         string="Home Statement TB Standard Line",
@@ -106,13 +90,6 @@ class AccountantGeneralAuditGroupDetail(models.Model):
     )
     interim_group_line_id = fields.Many2one(
         string="Interim TB Standard Line",
-        comodel_name="accountant.client_trial_balance_group_detail",
-        readonly=True,
-        compute="_compute_group_line",
-        store=True,
-    )
-    extrapolation_group_line_id = fields.Many2one(
-        string="Extrapolation TB Standard Line",
         comodel_name="accountant.client_trial_balance_group_detail",
         readonly=True,
         compute="_compute_group_line",
@@ -143,9 +120,30 @@ class AccountantGeneralAuditGroupDetail(models.Model):
         store=True,
         currency_field="currency_id",
     )
+
+    @api.depends(
+        "general_audit_id.standard_detail_ids",
+        "general_audit_id.standard_detail_ids.extrapolation_balance",
+        "general_audit_id.standard_detail_ids.adjusted_extrapolation_balance",
+        "general_audit_id.standard_detail_ids.extrapolation_adjustment",
+        "group_id",
+    )
+    def _compute_extrapolation_balance(self):
+        for record in self:
+            result = 0.0
+            if record.group_id:
+                ga = record.general_audit_id
+                for standard in ga.standard_detail_ids.filtered(
+                    lambda r: r.type_id.group_id.id == record.group_id.id
+                ):
+                    result += standard.adjusted_extrapolation_balance
+            record.extrapolation_balance = result
+
     extrapolation_balance = fields.Monetary(
         string="Extrapolation Balance",
-        related="extrapolation_group_line_id.balance",
+        related=False,
+        compute="_compute_extrapolation_balance",
+        compute_sudo=True,
         store=True,
         currency_field="currency_id",
     )

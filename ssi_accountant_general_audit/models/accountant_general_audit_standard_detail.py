@@ -4,6 +4,7 @@
 
 
 from odoo import api, fields, models
+from odoo.tools.safe_eval import safe_eval as eval  # pylint: disable=redefined-builtin
 
 
 class AccountantGeneralAuditStandardDetail(models.Model):
@@ -33,14 +34,11 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         "general_audit_id.home_trial_balance_id",
         "general_audit_id.interim_trial_balance_id",
         "general_audit_id.previous_trial_balance_id",
-        "general_audit_id.extrapolation_trial_balance_id",
     )
     def _compute_standard_line(self):
         StandardDetail = self.env["accountant.client_trial_balance_standard_detail"]
         for record in self:
-            home_result = (
-                interim_result
-            ) = previous_result = extrapolation_result = False
+            home_result = interim_result = previous_result = False
             criteria = [
                 ("type_id", "=", record.type_id.id),
             ]
@@ -68,18 +66,6 @@ class AccountantGeneralAuditStandardDetail(models.Model):
                 if len(interim_results) > 0:
                     interim_result = interim_results[0]
 
-            if record.general_audit_id.extrapolation_trial_balance_id:
-                criteria_extrapolation = criteria + [
-                    (
-                        "trial_balance_id",
-                        "=",
-                        record.general_audit_id.extrapolation_trial_balance_id.id,
-                    )
-                ]
-                extrapolation_results = StandardDetail.search(criteria_extrapolation)
-                if len(extrapolation_results) > 0:
-                    extrapolation_result = extrapolation_results[0]
-
             if record.general_audit_id.previous_trial_balance_id:
                 criteria_previous = criteria + [
                     (
@@ -95,7 +81,6 @@ class AccountantGeneralAuditStandardDetail(models.Model):
             record.home_standard_line_id = home_result
             record.interim_standard_line_id = interim_result
             record.previous_standard_line_id = previous_result
-            record.extrapolation_standard_line_id = extrapolation_result
 
     @api.depends(
         "general_audit_id.adjustment_entry_ids",
@@ -138,13 +123,6 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         compute="_compute_standard_line",
         store=True,
     )
-    extrapolation_standard_line_id = fields.Many2one(
-        string="Extrapolation TB Standard Line",
-        comodel_name="accountant.client_trial_balance_standard_detail",
-        readonly=True,
-        compute="_compute_standard_line",
-        store=True,
-    )
     previous_standard_line_id = fields.Many2one(
         string="Previous TB Standard Line",
         comodel_name="accountant.client_trial_balance_standard_detail",
@@ -182,18 +160,59 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         store=True,
         currency_field="currency_id",
     )
-    extrapolation_opening_balance = fields.Monetary(
-        string="Extrapolation Opening Balance",
-        related="extrapolation_standard_line_id.opening_balance",
-        store=True,
-        currency_field="currency_id",
+
+    @api.depends(
+        "interim_balance",
+        "previous_balance",
+        "type_id",
     )
+    def _compute_extrapolation_balance(self):
+        for record in self:
+            balance = 0.0
+            if record.type_id:
+                python_code = record.type_id.python_code
+                localdict = record._get_localdict()
+                try:
+                    eval(
+                        python_code,
+                        localdict,
+                        mode="exec",
+                        nocopy=True,
+                    )
+                    balance = localdict["result"]
+                except Exception:
+                    balance = 7.0
+            record.extrapolation_balance = balance
+
     extrapolation_balance = fields.Monetary(
         string="Extrapolation Balance",
-        related="extrapolation_standard_line_id.balance",
+        related=False,
+        compute="_compute_extrapolation_balance",
         store=True,
         currency_field="currency_id",
     )
+
+    extrapolation_adjustment = fields.Monetary(
+        string="Extrapolation Adjustment",
+        currency_field="currency_id",
+    )
+
+    @api.depends(
+        "extrapolation_balance",
+        "extrapolation_adjustment",
+    )
+    def _compute_adjusted_extrapolation_balance(self):
+        for record in self:
+            result = record.extrapolation_balance + record.extrapolation_adjustment
+            record.adjusted_extrapolation_balance = result
+
+    adjusted_extrapolation_balance = fields.Monetary(
+        string="Adjusted Extrapolation Balance",
+        currency_field="currency_id",
+        store=True,
+        compute="_compute_adjusted_extrapolation_balance",
+    )
+
     previous_opening_balance = fields.Monetary(
         string="Previous Opening Balance",
         related="previous_standard_line_id.opening_balance",
@@ -298,3 +317,12 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         store=True,
         currency_field="currency_id",
     )
+
+    def _get_localdict(self):
+        self.ensure_one()
+        return {
+            "env": self.env,
+            "document": self,
+            "standard_detail": self,
+            "ga": self.general_audit_id,
+        }
