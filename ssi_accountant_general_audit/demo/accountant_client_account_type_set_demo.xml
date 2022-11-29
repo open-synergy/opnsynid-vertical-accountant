@@ -55,7 +55,7 @@
 
     <!-- Revenue -->
     <record
-        id="demo_trading_set_computation_004"
+        id="demo_trading_set_computation_005"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
@@ -65,7 +65,7 @@
 
     <!-- COR -->
     <record
-        id="demo_trading_set_computation_005"
+        id="demo_trading_set_computation_006"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
@@ -75,7 +75,7 @@
 
     <!-- EBITDA -->
     <record
-        id="demo_trading_set_computation_006"
+        id="demo_trading_set_computation_007"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
@@ -85,7 +85,7 @@
 
     <!-- EBIT -->
     <record
-        id="demo_trading_set_computation_007"
+        id="demo_trading_set_computation_008"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
@@ -95,7 +95,7 @@
 
     <!-- EBT -->
     <record
-        id="demo_trading_set_computation_008"
+        id="demo_trading_set_computation_009"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
@@ -105,7 +105,7 @@
 
     <!-- EAT -->
     <record
-        id="demo_trading_set_computation_006"
+        id="demo_trading_set_computation_010"
         model="accountant.client_account_type_computation_item"
     >
         <field name="account_type_set_id" ref="demo_trading_set" />
