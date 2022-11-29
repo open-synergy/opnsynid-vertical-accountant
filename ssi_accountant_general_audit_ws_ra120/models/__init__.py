@@ -12,6 +12,5 @@ from . import (
     ws_ra1203_balance_diff,
     ws_ra1204,
     ws_ra1204_extrapolation_adjustment,
-    accountant_general_audit_standard_detail,
     accountant_client_account_type,
 )

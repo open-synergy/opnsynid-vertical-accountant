@@ -44,6 +44,9 @@ class WS1203ExtrapolationAdjustment(models.Model):
     extrapolation_adjustment = fields.Monetary(
         string="Extrapolation Adjustment",
         currency_field="currency_id",
+        related="standard_detail_id.extrapolation_adjustment",
+        store=True,
+        readonly=False,
     )
 
     @api.onchange(

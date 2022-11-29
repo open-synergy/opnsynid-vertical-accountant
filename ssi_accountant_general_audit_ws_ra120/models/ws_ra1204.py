@@ -4,6 +4,8 @@
 
 from odoo import api, fields, models
 
+from odoo.addons.ssi_decorator import ssi_decorator
+
 
 class WSAuditRA1204(models.Model):
     _name = "ws_ra1204"
@@ -41,3 +43,8 @@ class WSAuditRA1204(models.Model):
                     )
                 )
             self.update({"extrapolation_adjustment_ids": result})
+
+    @ssi_decorator.post_confirm_action()
+    def _recompute_extrapolation_computation(self):
+        self.ensure_one()
+        self.general_audit_id._recompute_extrapolation_computation()
