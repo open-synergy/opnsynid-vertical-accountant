@@ -43,7 +43,7 @@
             <data>
                 <xpath expr="//page[1]" position="before">
                     <page name="analysis" string="Analysis">
-                        <field name="analysis_ids">
+                        <field name="analysis_ids" force_save="1">
                             <tree editable="top">
                                 <field name="sequence" widget="handle" />
                                 <field name="standard_detail_id" invisible="1" />
