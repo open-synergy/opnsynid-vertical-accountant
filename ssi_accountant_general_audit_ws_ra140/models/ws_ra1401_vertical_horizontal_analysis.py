@@ -91,7 +91,7 @@ class WS1401VerticalHorizontalAnalysis(models.Model):
     )
     extrapolation_balance = fields.Monetary(
         string="Extrapolation Balance",
-        related="standard_detail_id.extrapolation_balance",
+        related="standard_detail_id.adjusted_extrapolation_balance",
         store=True,
     )
     previous_balance = fields.Monetary(
