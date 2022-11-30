@@ -25,6 +25,31 @@ class AccountantGeneralWSAuditRA1301(models.Model):
             ],
         },
     )
+
+    @api.depends(
+        "worksheet_ra130_id",
+        "materiality_type",
+    )
+    def _compute_base_amount(self):
+        for record in self:
+            base = 0.0
+            if record.worksheet_ra130_id:
+                worksheet_ra130 = record.worksheet_ra130_id
+
+                if record.materiality_type == "om":
+                    base = worksheet_ra130.overall_materiality
+                else:
+                    base = worksheet_ra130.performance_materiality
+
+            record.base_amount = base
+
+    base = fields.Monetary(
+        string="Balance",
+        compute="_compute_base_amount",
+        store=True,
+        currency_field="currency_id",
+    )
+
     materiality_type = fields.Selection(
         string="Materiality Type",
         selection=[

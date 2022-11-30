@@ -49,6 +49,7 @@
                                 domain="[('general_audit_id','=',general_audit_id)]"
                             />
                             <field name="materiality_type" />
+                            <field name="base" />
                         </group>
                         <field name="materiality_mapping_ids" force_save="1">
                             <tree editable="top">
@@ -60,6 +61,7 @@
                                 <field name="materiality" />
                                 <field name="use_specific_materiality" />
                                 <field name="specific_materiality" />
+                                <field name="specific_materiality_reason" />
                                 <field name="final_materiality" />
                             </tree>
                         </field>
