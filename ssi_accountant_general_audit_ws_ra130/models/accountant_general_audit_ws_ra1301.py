@@ -41,7 +41,7 @@ class AccountantGeneralWSAuditRA1301(models.Model):
                 else:
                     base = worksheet_ra130.performance_materiality
 
-            record.base_amount = base
+            record.base = base
 
     base = fields.Monetary(
         string="Balance",
