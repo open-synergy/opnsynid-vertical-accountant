@@ -39,16 +39,12 @@ class AccountantGeneralAuditWS1301MaterialityMapping(models.Model):
                 else:
                     base = worksheet_ra130.performance_materiality
 
-                if balance > base:
+                if balance >= base:
                     materiality = "m"
 
                 document.materiality = materiality
 
                 if document.use_specific_materiality:
-                    specific_materiality = document.specific_materiality
-                    base = (specific_materiality / 100.0) * base
-
-                if balance > base:
                     materiality = "m"
 
             document.final_materiality = materiality
@@ -110,4 +106,7 @@ class AccountantGeneralAuditWS1301MaterialityMapping(models.Model):
         selection=[("m", "Material"), ("im", "Immaterial")],
         compute="_compute_materiality",
         store=True,
+    )
+    specific_materiality_reason = fields.Text(
+        string="Specific Materiality Reason",
     )
