@@ -42,7 +42,14 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//page[1]" position="before">
-                    <page name="ratio" string="Ratios" invisible="1">
+                    <page name="ratio" string="Ratios">
+                        <button
+                            name="action_compute_ratio"
+                            type="object"
+                            string="Compute"
+                            icon="fa-calculator"
+                            class="oe_highlight"
+                        />
                         <field name="ratio_ids">
                             <tree
                                 editable="top"
@@ -50,107 +57,8 @@
                                 delete="false"
                                 create="false"
                             >
-                                <field name="computation_item_id" />
-                                <field
-                                    name="general_audit_computation_item_id"
-                                    invisible="1"
-                                />
-                                <field
-                                    name="extrapolation_amount"
-                                    string="Extrapolation"
-                                />
-                                <field name="interim_amount" string="Interim" />
-                                <field name="previous_amount" string="Previous" />
-                                <field name="industry_average" />
-                                <field name="analysis" />
-                            </tree>
-                        </field>
-                    </page>
-                    <page name="liquidity_ratio" string="Liquidity Ratios">
-                        <field name="liquidity_ratio_ids">
-                            <tree
-                                editable="top"
-                                force_save="1"
-                                delete="false"
-                                create="false"
-                            >
-                                <field name="computation_item_id" />
-                                <field
-                                    name="general_audit_computation_item_id"
-                                    invisible="1"
-                                />
-                                <field
-                                    name="extrapolation_amount"
-                                    string="Extrapolation"
-                                />
-                                <field name="interim_amount" string="Interim" />
-                                <field name="previous_amount" string="Previous" />
-                                <field name="industry_average" />
-                                <field name="analysis" />
-                            </tree>
-                        </field>
-                    </page>
-                    <page name="activity_ratio" string="Activity Ratios">
-                        <field name="activity_ratio_ids">
-                            <tree
-                                editable="top"
-                                force_save="1"
-                                delete="false"
-                                create="false"
-                            >
-                                <field name="computation_item_id" />
-                                <field
-                                    name="general_audit_computation_item_id"
-                                    invisible="1"
-                                />
-                                <field
-                                    name="extrapolation_amount"
-                                    string="Extrapolation"
-                                />
-                                <field name="interim_amount" string="Interim" />
-                                <field name="previous_amount" string="Previous" />
-                                <field name="industry_average" />
-                                <field name="analysis" />
-                            </tree>
-                        </field>
-                    </page>
-                    <page name="solvency_ratio" string="Solvency Ratios">
-                        <field name="solvency_ratio_ids">
-                            <tree
-                                editable="top"
-                                force_save="1"
-                                delete="false"
-                                create="false"
-                            >
-                                <field name="computation_item_id" />
-                                <field
-                                    name="general_audit_computation_item_id"
-                                    invisible="1"
-                                />
-                                <field
-                                    name="extrapolation_amount"
-                                    string="Extrapolation"
-                                />
-                                <field name="interim_amount" string="Interim" />
-                                <field name="previous_amount" string="Previous" />
-                                <field name="industry_average" />
-                                <field name="analysis" />
-                            </tree>
-                        </field>
-                    </page>
-                    <page name="profitability_ratio" string="Profitability Ratios">
-                        <field name="profitability_ratio_ids">
-                            <tree
-                                editable="top"
-                                force_save="1"
-                                delete="false"
-                                create="false"
-                            >
-                                <field name="computation_item_id" />
-                                <field
-                                    name="general_audit_computation_item_id"
-                                    invisible="1"
-                                />
+                                <field name="financial_ratio_id" />
+                                <field name="category" />
                                 <field
                                     name="extrapolation_amount"
                                     string="Extrapolation"

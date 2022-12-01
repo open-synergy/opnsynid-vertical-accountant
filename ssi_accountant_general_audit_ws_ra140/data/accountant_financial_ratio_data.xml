@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+<data noupdate="0">
+<record id="financial_ratio_110" model="accountant.financial_ratio">
+    <field name="name">Current Ratio</field>
+    <field name="code">T001</field>
+    <field name="category">liquidity</field>
+    <field name="sequence" eval="110" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+result_extrapolation = account_group["T001"]["extrapolation"] / account_group["T003"]["extrapolation"]
+result_interim = account_group["T001"]["interim"] / account_group["T003"]["interim"]
+result_previous = account_group["T001"]["previous"] / account_group["T003"]["previous"]
+</field>
+</record>
+
+<record id="financial_ratio_120" model="accountant.financial_ratio">
+    <field name="name">Cash Ratio</field>
+    <field name="code">T002</field>
+    <field name="category">liquidity</field>
+    <field name="sequence" eval="120" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = account_type["S111"]["extrapolation"] / account_group["T003"]["extrapolation"]
+    result_interim = account_type["S111"]["interim"] / account_group["T003"]["interim"]
+    result_previous = account_type["S111"]["previous"] / account_group["T003"]["previous"]
+    </field>
+</record>
+
+<record id="financial_ratio_130" model="accountant.financial_ratio">
+    <field name="name">Quick Ratio</field>
+    <field name="code">T003</field>
+    <field name="category">liquidity</field>
+    <field name="sequence" eval="130" />
+<field name="python_code">result_extrapolation = result_interim = result_previous = 0.0
+result_extrapolation = (account_group["T001"]["extrapolation"] - account_type["S116"]["extrapolation"]) / account_group["T003"]["extrapolation"]
+result_interim = (account_group["T001"]["interim"] - account_type["S116"]["interim"]) / account_group["T003"]["interim"]
+result_previous = (account_group["T001"]["previous"] - account_type["S116"]["previous"]) / account_group["T003"]["previous"]
+</field>
+</record>
+
+<record id="financial_ratio_140" model="accountant.financial_ratio">
+    <field name="name">Inventory Turnover Ratio</field>
+    <field name="code">T004</field>
+    <field name="category">activity</field>
+    <field name="sequence" eval="140" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = account_type["S511"]["extrapolation"] / account_type["S116"]["extrapolation_avg"]
+    result_interim = account_type["S511"]["interim"] / account_type["S116"]["interim_avg"]
+    </field>
+</record>
+
+<record id="financial_ratio_150" model="accountant.financial_ratio">
+    <field name="name">Account Receivable Turnover Ratio</field>
+    <field name="code">T005</field>
+    <field name="category">activity</field>
+    <field name="sequence" eval="150" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = account_group["T008"]["extrapolation"] / account_type["S112"]["extrapolation_avg"]
+    result_interim = account_group["T008"]["interim"] / account_type["S112"]["interim"]
+    </field>
+</record>
+
+<record id="financial_ratio_160" model="accountant.financial_ratio">
+    <field name="name">Total Assets Turnover Ratio</field>
+    <field name="code">T006</field>
+    <field name="category">activity</field>
+    <field name="sequence" eval="160" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = account_group["T008"]["extrapolation"] / (account_type["T001"]["extrapolation_avg"] + account_type["T002"]["extrapolation_avg"])
+    result_interim = account_group["T008"]["interim"] / (account_type["T001"]["interim_avg"] + account_type["T002"]["interim_avg"])
+    </field>
+</record>
+
+<record id="financial_ratio_170" model="accountant.financial_ratio">
+    <field name="name">Working Capital Turnover Ratio</field>
+    <field name="code">T007</field>
+    <field name="category">activity</field>
+    <field name="sequence" eval="170" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = account_group["T008"]["extrapolation"] / computation["T009"]["extrapolation_avg"]
+    result_interim = account_group["T008"]["interim"] / computation["T009"]["interim_avg"]
+    </field>
+</record>
+
+<record id="financial_ratio_180" model="accountant.financial_ratio">
+    <field name="name">Account Payable Turnover Ratio</field>
+    <field name="code">T008</field>
+    <field name="category">activity</field>
+    <field name="sequence" eval="180" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    </field>
+</record>
+
+<record id="financial_ratio_190" model="accountant.financial_ratio">
+    <field name="name">Days of Inventory on Hand</field>
+    <field name="code">T009</field>
+    <field name="category">activity</field>
+    <field name="sequence" eval="190" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = 365.0 / T004["extrapolation"]
+    result_interim = 365.0 / T004["interim"]
+    </field>
+
+</record>
+
+<record id="financial_ratio_200" model="accountant.financial_ratio">
+    <field name="name">Days of Receivable Outstanding</field>
+    <field name="code">T010</field>
+    <field name="category">activity</field>
+    <field name="sequence" eval="200" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = 365.0 / T005["extrapolation"]
+    result_interim = 365.0 / T005["interim"]
+    </field>
+</record>
+
+<record id="financial_ratio_210" model="accountant.financial_ratio">
+    <field name="name">Days of Payable Outstanding</field>
+    <field name="code">T011</field>
+    <field name="category">activity</field>
+    <field name="sequence" eval="210" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = 365.0 / T008["extrapolation"]
+    result_interim = 365.0 / T008["interim"]
+    </field>
+</record>
+
+<record id="financial_ratio_220" model="accountant.financial_ratio">
+    <field name="name">Cash Conversion Cycle</field>
+    <field name="code">T012</field>
+    <field name="category">activity</field>
+    <field name="sequence" eval="220" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = T010["extrapolation"] + T009["extrapolation"] - T011["extrapolation"]
+    result_interim = T010["interim"] + T009["interim"] - T011["interim"]
+    </field>
+</record>
+
+<record id="financial_ratio_230" model="accountant.financial_ratio">
+    <field name="name">Debt to Equity Ratio</field>
+    <field name="code">T013</field>
+    <field name="category">activity</field>
+    <field name="sequence" eval="230" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = (account_group["T003"]["extrapolation"] + account_group["T004"]["extrapolation"]) / account_type["S311"]["extrapolation"]
+    result_interim = (account_group["T003"]["interim"] + account_group["T004"]["interim"]) / account_type["S311"]["interim"]
+    result_previous = (account_group["T003"]["previous"] + account_group["T004"]["previous"]) / account_type["S311"]["previous"]
+    </field>
+</record>
+
+<record id="financial_ratio_240" model="accountant.financial_ratio">
+    <field name="name">Financial Leverage Ratio</field>
+    <field name="code">T014</field>
+    <field name="category">solvency</field>
+    <field name="sequence" eval="240" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = (account_group["T001"]["extrapolation"] + account_group["T002"]["extrapolation"]) / account_type["S311"]["extrapolation"]
+    result_interim = (account_group["T001"]["interim"] + account_group["T002"]["interim"]) / account_type["S311"]["interim"]
+    result_previous = (account_group["T001"]["previous"] + account_group["T002"]["previous"]) / account_type["S311"]["previous"]
+    </field>
+</record>
+
+<record id="financial_ratio_250" model="accountant.financial_ratio">
+    <field name="name">Interest Coverage Ratio</field>
+    <field name="code">T015</field>
+    <field name="category">solvency</field>
+    <field name="sequence" eval="250" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    </field>
+</record>
+
+<record id="financial_ratio_260" model="accountant.financial_ratio">
+    <field name="name">Net Profit Margin</field>
+    <field name="code">T016</field>
+    <field name="category">profitability</field>
+    <field name="sequence" eval="260" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = (account_group["T008"]["extrapolation"] + account_group["T009"]["extrapolation"]) / account_group["T008"]["extrapolation"]
+    result_interim = (account_group["T008"]["interim"] + account_group["T009"]["interim"]) / account_group["T008"]["interim"]
+    result_previous = (account_group["T008"]["previous"] + account_group["T009"]["previous"]) / account_group["T008"]["previous"]
+    </field>
+</record>
+
+<record id="financial_ratio_270" model="accountant.financial_ratio">
+    <field name="name">Gross Profit Margin</field>
+    <field name="code">T017</field>
+    <field name="category">profitability</field>
+    <field name="sequence" eval="270" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = computation["T010"]["extrapolation"] / account_group["T008"]["extrapolation"]
+    result_interim = computation["T010"]["interim"] / account_group["T008"]["interim"]
+    result_previous = computation["T010"]["previous"] / account_group["T008"]["previous"]
+    </field>
+</record>
+
+<record id="financial_ratio_280" model="accountant.financial_ratio">
+    <field name="name">ROA</field>
+    <field name="code">T018</field>
+    <field name="category">profitability</field>
+    <field name="sequence" eval="280" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = computation["T010"]["extrapolation"] / computation["T001"]["extrapolation"]
+    result_interim = computation["T010"]["interim"] / computation["T001"]["interim"]
+    result_previous = computation["T010"]["previous"] / computation["T001"]["previous"]
+    </field>
+</record>
+
+<record id="financial_ratio_290" model="accountant.financial_ratio">
+    <field name="name">ROE</field>
+    <field name="code">T019</field>
+    <field name="category">profitability</field>
+    <field name="sequence" eval="290" />
+    <field
+                name="python_code"
+            >result_extrapolation = result_interim = result_previous = 0.0
+    result_extrapolation = computation["T010"]["extrapolation"] / computation["T002"]["extrapolation"]
+    result_interim = computation["T010"]["interim"] / computation["T002"]["interim"]
+    result_previous = computation["T010"]["previous"] / computation["T002"]["previous"]
+    </field>
+</record>
+</data>
+</odoo>

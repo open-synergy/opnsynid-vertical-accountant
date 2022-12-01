@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="accountant_financial_ratio_view_search" model="ir.ui.view">
+        <field name="name">accountant.financial_ratio - search</field>
+        <field name="model">accountant.financial_ratio</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="accountant_financial_ratio_view_tree" model="ir.ui.view">
+        <field name="name">accountant.financial_ratio - tree</field>
+        <field name="model">accountant.financial_ratio</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_tree"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='code']" position="before">
+                    <field name="sequence" widget="handle" />
+                </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="category" />
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="accountant_financial_ratio_view_form" model="ir.ui.view">
+        <field name="name">accountant.financial_ratio.form</field>
+        <field name="model">accountant.financial_ratio</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_form"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='code']" position="after">
+                    <field name="sequence" />
+                    <field name="category" />
+                </xpath>
+                <xpath expr="//page[1]" position="before">
+                    <page name="python" string="Python Code">
+                        <field name="python_code" widget="ace" />
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="accountant_financial_ratio_action" model="ir.actions.act_window">
+        <field name="name">Financial Ratio</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.financial_ratio</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="accountant_financial_ratio_menu"
+        name="Financial Ratio"
+        parent="ssi_accountant_general_audit.menu_accountant_configuration_general_audit"
+        action="accountant_financial_ratio_action"
+        groups="accountant_financial_ratio_group"
+    />
+
+</odoo>

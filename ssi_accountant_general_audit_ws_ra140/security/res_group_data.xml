@@ -15,6 +15,18 @@
         />
 </record>
 
+<record id="accountant_financial_ratio_group" model="res.groups">
+    <field name="name">Financial Ratio</field>
+    <field
+            name="category_id"
+            ref="ssi_accountant.accountant_configurator_module_category"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
 <!-- Workflow: RA.140 -->
 <record id="accountant_general_audit_ws_ra140_viewer_group" model="res.groups">
     <field name="name">Viewer</field>
