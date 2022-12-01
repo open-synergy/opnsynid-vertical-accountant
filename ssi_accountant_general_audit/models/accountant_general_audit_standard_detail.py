@@ -281,7 +281,7 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         for record in self:
             interim_avg = (record.interim_balance + record.previous_balance) / 2.0
             extrapolation_avg = (
-                record.extrapolation_balance + record.previous_balance
+                record.adjusted_extrapolation_balance + record.previous_balance
             ) / 2.0
             home_statement_avg = (
                 record.home_statement_balance + record.previous_balance
