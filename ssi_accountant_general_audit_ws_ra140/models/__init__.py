@@ -4,6 +4,7 @@
 
 from . import (
     accountant_analytic_procedure_conclusion_category,
+    accountant_financial_ratio,
     accountant_client_account_type,
     ws_ra140,
     ws_ra140_analytic_procedure_conclusion,
