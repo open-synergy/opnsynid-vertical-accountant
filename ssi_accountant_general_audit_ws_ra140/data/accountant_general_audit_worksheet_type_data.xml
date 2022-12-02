@@ -6,7 +6,7 @@
 <data>
 <record id="worksheet_type_ra140" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.140</field>
-    <field name="name">Prosedur Analitis Awal - Simpulan</field>
+    <field name="name">Analytical Procedures - risk assessment</field>
     <field name="sequence" eval="14000" />
     <field
                 name="category_id"
@@ -16,9 +16,7 @@
 
 <record id="worksheet_type_ra1401" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.140.1</field>
-    <field
-                name="name"
-            >Prosedur Analitis Awal  - Analisis Vertikal dan Horisontal</field>
+    <field name="name">Analytical Procedures – vertical and horisontal analysis</field>
     <field name="sequence" eval="14010" />
     <field name="parent_id" ref="worksheet_type_ra140" />
     <field
@@ -29,7 +27,7 @@
 
 <record id="worksheet_type_ra1402" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.140.2</field>
-    <field name="name">Prosedur Analitis Awal - Rasio-rasio</field>
+    <field name="name">Analytical Procedures – rasio analysis</field>
     <field name="sequence" eval="14020" />
     <field name="parent_id" ref="worksheet_type_ra140" />
     <field
