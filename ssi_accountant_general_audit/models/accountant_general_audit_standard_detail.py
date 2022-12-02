@@ -11,6 +11,7 @@ class AccountantGeneralAuditStandardDetail(models.Model):
     _name = "accountant.general_audit_standard_detail"
     _description = "Accountant General Audit Standard Detail"
     _order = "sequence, general_audit_id, id"
+    _rec_name = "type_id"
 
     type_id = fields.Many2one(
         string="Account Type",
