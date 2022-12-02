@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="ws_ra1503_view_search" model="ir.ui.view">
+        <field name="name">ws_ra1503 search</field>
+        <field name="model">ws_ra1503</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_ra1503_view_tree" model="ir.ui.view">
+        <field name="name">ws_ra1503 tree</field>
+        <field name="model">ws_ra1503</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_tree"
+        />
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_ra1503_view_form" model="ir.ui.view">
+        <field name="name">ws_ra1503 form</field>
+        <field name="model">ws_ra1503</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_form"
+        />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//page[1]" position="before">
+                    <page name="business_process" string="Business Process">
+                        <field name="business_process_ids">
+                            <tree>
+                                <field name="sequence" widget="handle" />
+                                <field name="business_process_id" />
+                            </tree>
+                            <form>
+                                <group name="business_process_1" colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="business_process_id" />
+                                    <field name="description" />
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                    <page name="expert" string="Experts">
+                        <field name="expert_ids">
+                            <tree>
+                                <field name="expert_name" />
+                                <field name="job" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                                <field name="documentation" />
+                            </tree>
+                            <form>
+                                <group name="expert_1" colspan="4" col="2">
+                                    <field name="expert_name" />
+                                    <field name="job" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                    <field name="documentation" />
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                    <page
+                        name="other_significant_information"
+                        string="Other Significant Information"
+                    >
+                        <field name="other_significant_information_ids">
+                            <tree>
+                                <field name="summary" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                                <field name="documentation" />
+                            </tree>
+                            <form>
+                                <group
+                                    name="other_significant_information_1"
+                                    colspan="4"
+                                    col="2"
+                                >
+                                    <field name="summary" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                    <field name="documentation" />
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                    <page
+                        name="previous_significant_information"
+                        string="Previous Significant Information"
+                    >
+                        <field name="previous_significant_information_ids">
+                            <tree>
+                                <field name="summary" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                                <field name="documentation" />
+                            </tree>
+                            <form>
+                                <group
+                                    name="previous_significant_information_1"
+                                    colspan="4"
+                                    col="2"
+                                >
+                                    <field name="summary" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                    <field name="documentation" />
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_ra1503_action" model="ir.actions.act_window">
+        <field name="name">RA.150.3</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ws_ra1503</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="ws_ra1503_menu"
+        name="RA.150.3"
+        parent="ssi_accountant_general_audit.menu_general_audit_risk_assesment"
+        action="ws_ra1503_action"
+        sequence="1503"
+        groups="accountant_general_audit_ws_ra1503_viewer_group"
+    />
+
+
+</odoo>

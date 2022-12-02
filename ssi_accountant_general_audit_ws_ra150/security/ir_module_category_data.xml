@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- General Audit Worksheet RA.150 -->
+<record id="general_audit_ws_ra150_workflow_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.150</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra150_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.150</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.150.1 -->
+<record
+        id="general_audit_ws_ra1501_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.150.1</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra1501_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.150.1</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.150.2 -->
+<record
+        id="general_audit_ws_ra1502_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.150.2</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra1502_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.150.2</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.150.3 -->
+<record
+        id="general_audit_ws_ra1503_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.150.3</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra1503_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.150.3</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.150.4-->
+<record
+        id="general_audit_ws_ra1504_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.150.4</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra1504_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.150.4</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.150.5-->
+<record
+        id="general_audit_ws_ra1505_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.150.5</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra1505_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.150.5</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.150.6-->
+<record
+        id="general_audit_ws_ra1506_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.150.6</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra1506_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.150.6</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.150.7-->
+<record
+        id="general_audit_ws_ra1507_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.150.7</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra1507_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.150.7</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.150.8-->
+<record
+        id="general_audit_ws_ra1508_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.150.8</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra1508_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.150.8</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+</odoo>

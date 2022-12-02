@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2020 OpenSynergy Indonesia
+     Copyright 2020 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+<data>
+<record id="accountant_business_process_001" model="accountant.business_process">
+    <field name="code">T001</field>
+    <field name="name">Siklus penjualan, piutang usaha dan penerimaannya</field>
+</record>
+
+<record id="accountant_business_process_002" model="accountant.business_process">
+    <field name="code">T002</field>
+    <field name="name">Siklus pembelian, hutang usaha dan pembayarannya</field>
+</record>
+
+<record id="accountant_business_process_003" model="accountant.business_process">
+    <field name="code">T003</field>
+    <field name="name">Siklus persediaan dan produksi</field>
+</record>
+
+<record id="accountant_business_process_004" model="accountant.business_process">
+    <field name="code">T004</field>
+    <field
+                name="name"
+            >Siklus investasi - surat berharga, entitas anak, aset tetap, dll</field>
+</record>
+
+<record id="accountant_business_process_005" model="accountant.business_process">
+    <field name="code">T005</field>
+    <field name="name">Siklus pendanaan - hutang bank, leasing, modal</field>
+</record>
+
+<record id="accountant_business_process_006" model="accountant.business_process">
+    <field name="code">T006</field>
+    <field
+                name="name"
+            >Siklus lainnya - kas/bank, beban operasional, pajak, lainnya</field>
+</record>
+</data>
+</odoo>

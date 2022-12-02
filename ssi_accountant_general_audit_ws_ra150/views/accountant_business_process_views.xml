@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="accountant_business_process_view_search" model="ir.ui.view">
+        <field name="name">accountant.business_process - search</field>
+        <field name="model">accountant.business_process</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="accountant_business_process_view_tree" model="ir.ui.view">
+        <field name="name">accountant.business_process - tree</field>
+        <field name="model">accountant.business_process</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_tree"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="accountant_business_process_view_form" model="ir.ui.view">
+        <field name="name">accountant.business_process.form</field>
+        <field name="model">accountant.business_process</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_form"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="accountant_business_process_action" model="ir.actions.act_window">
+        <field name="name">Business Process</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.business_process</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="accountant_business_process_menu"
+        name="Business Process"
+        parent="ssi_accountant_general_audit.menu_accountant_configuration_general_audit"
+        action="accountant_business_process_action"
+        groups="accountant_business_process_group"
+    />
+
+</odoo>

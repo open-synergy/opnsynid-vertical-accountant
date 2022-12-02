@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- Configurator -->
+<record id="accountant_business_process_group" model="res.groups">
+    <field name="name">Business Process</field>
+    <field
+            name="category_id"
+            ref="ssi_accountant.accountant_configurator_module_category"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+<!-- Workflow: RA.150 -->
+<record id="accountant_general_audit_ws_ra150_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra150_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra150_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra150_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra150_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra150_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra150_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra150_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.150 -->
+<record id="accountant_general_audit_ws_ra150_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra150_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra150_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra150_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra150_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra150_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra150_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra150_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.150.1 -->
+<record id="accountant_general_audit_ws_ra1501_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra1501_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1501_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra1501_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1501_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1501_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra1501_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1501_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.150.1 -->
+<record id="accountant_general_audit_ws_ra1501_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra1501_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1501_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra1501_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1501_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1501_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra1501_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1501_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.150.2 -->
+<record id="accountant_general_audit_ws_ra1502_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra1502_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1502_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra1502_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1502_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1502_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra1502_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1502_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.150.2 -->
+<record id="accountant_general_audit_ws_ra1502_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra1502_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1502_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra1502_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1502_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1502_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra1502_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1502_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.150.3 -->
+<record id="accountant_general_audit_ws_ra1503_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra1503_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1503_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra1503_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1503_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1503_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra1503_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1503_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.150.3 -->
+<record id="accountant_general_audit_ws_ra1503_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra1503_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1503_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra1503_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1503_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1503_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra1503_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1503_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.150.4 -->
+<record id="accountant_general_audit_ws_ra1504_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra1504_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1504_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra1504_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1504_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1504_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra1504_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1504_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.150.4 -->
+<record id="accountant_general_audit_ws_ra1504_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra1504_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1504_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra1504_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1504_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1504_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra1504_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1504_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.150.5 -->
+<record id="accountant_general_audit_ws_ra1505_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra1505_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1505_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra1505_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1505_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1505_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra1505_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1505_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.150.5 -->
+<record id="accountant_general_audit_ws_ra1505_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra1505_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1505_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra1505_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1505_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1505_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra1505_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1505_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.150.6 -->
+<record id="accountant_general_audit_ws_ra1506_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra1506_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1506_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra1506_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1506_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1506_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra1506_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1506_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.150.6 -->
+<record id="accountant_general_audit_ws_ra1506_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra1506_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1506_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra1506_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1506_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1506_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra1506_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1506_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.150.7 -->
+<record id="accountant_general_audit_ws_ra1507_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra1507_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1507_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra1507_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1507_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1507_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra1507_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1507_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.150.7 -->
+<record id="accountant_general_audit_ws_ra1507_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra1507_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1507_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra1507_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1507_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1507_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra1507_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1507_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.150.8 -->
+<record id="accountant_general_audit_ws_ra1508_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra1508_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1508_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra1508_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1508_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1508_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra1508_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1508_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.150.8 -->
+<record id="accountant_general_audit_ws_ra1508_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra1508_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra1508_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra1508_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1508_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra1508_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra1508_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra1508_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+</odoo>
