@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<data noupdate="1">
+<!-- RA.150 -->
+<record id="approval_template_ra150" model="approval.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_ra150" />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_ra150" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_ra150" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_ra150_validator_group')])]"
+            />
+</record>
+
+<!-- RA.150.1 -->
+<record id="approval_template_ra1501" model="approval.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_ra1501" />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_ra1501" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_ra1501" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_ra1501_validator_group')])]"
+            />
+</record>
+
+<!-- RA.150.2 -->
+<record id="approval_template_ra1502" model="approval.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_ra1502" />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_ra1502" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_ra1502" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_ra1502_validator_group')])]"
+            />
+</record>
+
+<!-- RA.150.3 -->
+<record id="approval_template_ra1503" model="approval.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_ra1503" />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_ra1503" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_ra1503" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_ra1503_validator_group')])]"
+            />
+</record>
+
+<!-- RA.150.4 -->
+<record id="approval_template_ra1504" model="approval.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_ra1504" />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_ra1504" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_ra1504" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_ra1504_validator_group')])]"
+            />
+</record>
+
+<!-- RA.150.5 -->
+<record id="approval_template_ra1505" model="approval.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_ra1505" />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_ra1505" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_ra1505" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_ra1505_validator_group')])]"
+            />
+</record>
+
+<!-- RA.150.6 -->
+<record id="approval_template_ra1506" model="approval.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_ra1506" />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_ra1506" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_ra1506" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_ra1506_validator_group')])]"
+            />
+</record>
+
+<!-- RA.150.7 -->
+<record id="approval_template_ra1507" model="approval.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_ra1507" />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_ra1507" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_ra1507" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_ra1507_validator_group')])]"
+            />
+</record>
+
+<!-- RA.150.8 -->
+<record id="approval_template_ra1508" model="approval.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_ra1508" />
+    <field name="sequence" eval="100" />
+    <field name="computation_method">use_python</field>
+    <field name="python_code">result = True</field>
+    <field name="validate_sequence" eval="1" />
+</record>
+
+<record id="approval_template_detail_ra1508" model="approval.template_detail">
+    <field name="template_id" ref="approval_template_ra1508" />
+    <field name="approver_selection_method">use_group</field>
+    <field
+                name="approver_group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_ra1508_validator_group')])]"
+            />
+</record>
+
+
+</data>
+</odoo>

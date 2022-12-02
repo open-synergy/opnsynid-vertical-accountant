@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<data noupdate="1">
+<record id="sequence_ws_ra150" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.150</field>
+    <field name="code">accountant.general_audit_ws_ra150</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.150/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra1501" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.150.1</field>
+    <field name="code">accountant.general_audit_ws_ra1501</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.150.1/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra1502" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.150.2</field>
+    <field name="code">accountant.general_audit_ws_ra1502</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.150.2/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra1503" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.150.3</field>
+    <field name="code">accountant.general_audit_ws_ra1503</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.150.3/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra1504" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.150.4</field>
+    <field name="code">accountant.general_audit_ws_ra1504</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.150.4/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra1505" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.150.5</field>
+    <field name="code">accountant.general_audit_ws_ra1505</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.150.5/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra1506" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.150.6</field>
+    <field name="code">accountant.general_audit_ws_ra1506</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.150.6/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra1507" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.150.7</field>
+    <field name="code">accountant.general_audit_ws_ra1507</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.150.7/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra1508" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.150.8</field>
+    <field name="code">accountant.general_audit_ws_ra1508</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.150.8/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+</data>
+</odoo>
