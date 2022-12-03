@@ -13,7 +13,7 @@
     <field name="arch" type="xml">
         <data>
             <xpath expr="//group[@name='header2']" position="after">
-                <group name="header3" colspan="1" col="2">
+                <group name="header_ra1503" colspan="1" col="2" string="RA.150.3">
                     <field name="expert_ids" widget="many2many_tags" invisible="1" />
                     <field name="expert_ok" />
                     <field
@@ -28,6 +28,14 @@
                             invisible="1"
                         />
                     <field name="previous_significant_information_ok" />
+                </group>
+                <group name="header_ra1504" colspan="1" col="2" string="RA.150.4">
+                    <field
+                            name="relevant_regulation_ids"
+                            widget="many2many_tags"
+                            invisible="1"
+                        />
+                    <field name="relevant_regulation_ok" />
                 </group>
             </xpath>
         </data>

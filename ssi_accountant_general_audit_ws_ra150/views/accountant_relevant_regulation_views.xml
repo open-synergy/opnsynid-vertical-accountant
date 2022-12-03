@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="accountant_relevant_regulation_view_search" model="ir.ui.view">
+        <field name="name">accountant.relevant_regulation - search</field>
+        <field name="model">accountant.relevant_regulation</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data />
+        </field>
+    </record>
+
+    <record id="accountant_relevant_regulation_view_tree" model="ir.ui.view">
+        <field name="name">accountant.relevant_regulation - tree</field>
+        <field name="model">accountant.relevant_regulation</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_tree"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="accountant_relevant_regulation_view_form" model="ir.ui.view">
+        <field name="name">accountant.relevant_regulation.form</field>
+        <field name="model">accountant.relevant_regulation</field>
+        <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_form"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="accountant_relevant_regulation_action" model="ir.actions.act_window">
+        <field name="name">Relevant Regulations</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">accountant.relevant_regulation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="accountant_relevant_regulation_menu"
+        name="Relevant Regulations"
+        parent="ssi_accountant_general_audit.menu_accountant_configuration_general_audit"
+        action="accountant_relevant_regulation_action"
+        groups="accountant_relevant_regulation_group"
+    />
+
+</odoo>

@@ -79,3 +79,25 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         column1="standard_detail_id",
         column2="information_id",
     )
+
+    @api.depends(
+        "relevant_regulation_ids",
+        "relevant_regulation_ids.standard_detail_id",
+    )
+    def _compute_relevant_regulation_ok(self):
+        for record in self:
+            result = False
+            if len(record.relevant_regulation_ids) > 0:
+                result = True
+            record.relevant_regulation_ok = result
+
+    relevant_regulation_ok = fields.Boolean(
+        string="Relevant Regulation",
+        compute="_compute_relevant_regulation_ok",
+        store=True,
+    )
+    relevant_regulation_ids = fields.One2many(
+        string="Relevant Regulations",
+        comodel_name="ws_ra1504.relevant_regulation_account",
+        inverse_name="standard_detail_id",
+    )
