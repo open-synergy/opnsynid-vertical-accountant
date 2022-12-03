@@ -6,7 +6,7 @@
 <data>
 <record id="worksheet_type_ra130" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.130</field>
-    <field name="name">Materialitas Awal</field>
+    <field name="name">Materiality - risk assessment</field>
     <field name="sequence" eval="13000" />
     <field
                 name="category_id"
@@ -16,7 +16,7 @@
 
 <record id="worksheet_type_ra1301" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.130.1</field>
-    <field name="name">Mapping Akun-akun Material</field>
+    <field name="name">Material accounts mapping</field>
     <field name="sequence" eval="13010" />
     <field name="parent_id" ref="worksheet_type_ra130" />
     <field
