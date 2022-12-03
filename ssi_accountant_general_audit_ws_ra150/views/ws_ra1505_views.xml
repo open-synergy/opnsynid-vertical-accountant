@@ -42,6 +42,174 @@
         />
         <field name="arch" type="xml">
             <data>
+                <xpath expr="//page[1]" position="before">
+                    <page
+                        name="business_environment"
+                        string="Business Environment Understanding"
+                    >
+                        <separator string="Similar Business Trends" />
+                        <field name="trend_business_environment_ids">
+                            <tree>
+                                <field name="sequence" widget="handle" />
+                                <field name="understanding" />
+                                <field name="impact_to_financial_report" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                            </tree>
+                            <form>
+                                <group name="trend" colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="understanding" />
+                                    <field name="impact_to_financial_report" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                </group>
+                            </form>
+                        </field>
+                        <separator string="National Economic" />
+                        <field name="economic_business_environment_ids">
+                            <tree>
+                                <field name="sequence" widget="handle" />
+                                <field name="understanding" />
+                                <field name="impact_to_financial_report" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                            </tree>
+                            <form>
+                                <group name="economic" colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="understanding" />
+                                    <field name="impact_to_financial_report" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                </group>
+                            </form>
+                        </field>
+                        <separator string="Financial Accounting Standard Amendment" />
+                        <field name="ifrs_business_environment_ids">
+                            <tree>
+                                <field name="sequence" widget="handle" />
+                                <field name="understanding" />
+                                <field name="impact_to_financial_report" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                            </tree>
+                            <form>
+                                <group name="ifrs" colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="understanding" />
+                                    <field name="impact_to_financial_report" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                </group>
+                            </form>
+                        </field>
+                        <separator string="Regulation Change" />
+                        <field name="regulation_business_environment_ids">
+                            <tree>
+                                <field name="sequence" widget="handle" />
+                                <field name="understanding" />
+                                <field name="impact_to_financial_report" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                            </tree>
+                            <form>
+                                <group name="regulation" colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="understanding" />
+                                    <field name="impact_to_financial_report" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                </group>
+                            </form>
+                        </field>
+                        <separator string="Technology Advancement" />
+                        <field name="technology_business_environment_ids">
+                            <tree>
+                                <field name="sequence" widget="handle" />
+                                <field name="understanding" />
+                                <field name="impact_to_financial_report" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                            </tree>
+                            <form>
+                                <group name="technology" colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="understanding" />
+                                    <field name="impact_to_financial_report" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                </group>
+                            </form>
+                        </field>
+                        <separator string="Natural Cycle" />
+                        <field name="natural_business_environment_ids">
+                            <tree>
+                                <field name="sequence" widget="handle" />
+                                <field name="understanding" />
+                                <field name="impact_to_financial_report" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                            </tree>
+                            <form>
+                                <group name="natural" colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="understanding" />
+                                    <field name="impact_to_financial_report" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                </group>
+                            </form>
+                        </field>
+                        <separator string="Energy Availability &amp; Cost" />
+                        <field name="energy_business_environment_ids">
+                            <tree>
+                                <field name="sequence" widget="handle" />
+                                <field name="understanding" />
+                                <field name="impact_to_financial_report" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                            </tree>
+                            <form>
+                                <group name="energy" colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="understanding" />
+                                    <field name="impact_to_financial_report" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
             </data>
         </field>
     </record>

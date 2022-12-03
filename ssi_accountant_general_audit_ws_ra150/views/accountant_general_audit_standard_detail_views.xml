@@ -37,6 +37,15 @@
                         />
                     <field name="relevant_regulation_ok" />
                 </group>
+                <group name="header_ra1505" colspan="1" col="2" string="RA.150.5">
+                    <field name="trend_business_environment_ok" />
+                    <field name="economic_business_environment_ok" />
+                    <field name="ifrs_business_environment_ok" />
+                    <field name="regulation_business_environment_ok" />
+                    <field name="technology_business_environment_ok" />
+                    <field name="natural_business_environment_ok" />
+                    <field name="energy_business_environment_ok" />
+                </group>
             </xpath>
         </data>
     </field>
