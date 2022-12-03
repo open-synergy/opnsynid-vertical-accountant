@@ -46,6 +46,9 @@
                     <field name="natural_business_environment_ok" />
                     <field name="energy_business_environment_ok" />
                 </group>
+                <group name="header_ra1507" colspan="1" col="2" string="RA.150.7">
+                    <field name="financial_report_preparation_ok" />
+                </group>
             </xpath>
         </data>
     </field>

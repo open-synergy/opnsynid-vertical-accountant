@@ -6,6 +6,7 @@ from . import (
     accountant_business_process,
     accountant_general_audit,
     accountant_relevant_regulation,
+    accountant_financial_report_preparation,
     ws_ra150,
     ws_ra1501,
     ws_ra1502,
@@ -27,6 +28,7 @@ from . import (
     ws_ra1505_trend_business_environment,
     ws_ra1506,
     ws_ra1507,
+    ws_ra1507_financial_report_preparation,
     ws_ra1508,
     accountant_general_audit_standard_detail,
 )
