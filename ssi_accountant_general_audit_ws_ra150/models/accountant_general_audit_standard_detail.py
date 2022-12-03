@@ -262,3 +262,26 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         column1="standard_detail_id",
         column2="business_environment_id",
     )
+
+    @api.depends(
+        "financial_report_preparation_ids",
+    )
+    def _compute_financial_report_preparation_ok(self):
+        for record in self:
+            result = False
+            if len(record.financial_report_preparation_ids) > 0:
+                result = True
+            record.financial_report_preparation_ok = result
+
+    financial_report_preparation_ok = fields.Boolean(
+        string="Financial Report Preparation",
+        compute="_compute_financial_report_preparation_ok",
+        store=True,
+    )
+    financial_report_preparation_ids = fields.Many2many(
+        string="Financial Report Preparations",
+        comodel_name="ws_ra1507.financial_report_preparation",
+        relation="rel_financial_report_prep_2_standard_detail",
+        column1="standard_detail_id",
+        column2="praparation_id",
+    )
