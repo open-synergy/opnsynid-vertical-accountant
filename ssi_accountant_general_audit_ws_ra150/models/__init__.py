@@ -5,6 +5,7 @@
 from . import (
     accountant_business_process,
     accountant_general_audit,
+    accountant_relevant_regulation,
     ws_ra150,
     ws_ra1501,
     ws_ra1502,
@@ -14,6 +15,8 @@ from . import (
     ws_ra1503_other_significant_information,
     ws_ra1503_previous_significant_information,
     ws_ra1504,
+    ws_ra1504_relevant_regulation,
+    ws_ra1504_relevant_regulation_account,
     ws_ra1505,
     ws_ra1506,
     ws_ra1507,

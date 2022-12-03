@@ -15,6 +15,19 @@
             eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
         />
 </record>
+
+<record id="accountant_relevant_regulation_group" model="res.groups">
+    <field name="name">Relevant Regulation</field>
+    <field
+            name="category_id"
+            ref="ssi_accountant.accountant_configurator_module_category"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
 <!-- Workflow: RA.150 -->
 <record id="accountant_general_audit_ws_ra150_viewer_group" model="res.groups">
     <field name="name">Viewer</field>

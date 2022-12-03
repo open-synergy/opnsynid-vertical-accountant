@@ -42,6 +42,39 @@
         />
         <field name="arch" type="xml">
             <data>
+                <xpath expr="//page[1]" position="before">
+                    <page name="relevant_regulation" string="Relevant Requlation">
+                        <field name="relevant_regulation_ids">
+                            <tree>
+                                <field name="sequence" widget="handle" />
+                                <field name="relevant_regulation" />
+                                <field name="detail_regulation" />
+                            </tree>
+                            <form>
+                                <group name="relevant_regulation_1" colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="relevant_regulation_id" />
+                                    <field name="relevant_regulation" />
+                                    <field name="detail_regulation" />
+                                    <field name="account_ids">
+                                        <tree editable="top">
+                                            <field name="sequence" widget="handle" />
+                                            <field
+                                                name="general_audit_id"
+                                                invisible="1"
+                                            />
+                                            <field
+                                                name="standard_detail_id"
+                                                domain="[('general_audit_id','=',general_audit_id)]"
+                                            />
+                                            <field name="effect_to_entity" />
+                                        </tree>
+                                    </field>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
             </data>
         </field>
     </record>
