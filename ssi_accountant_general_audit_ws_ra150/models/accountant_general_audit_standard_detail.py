@@ -101,3 +101,164 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         comodel_name="ws_ra1504.relevant_regulation_account",
         inverse_name="standard_detail_id",
     )
+
+    @api.depends(
+        "trend_business_environment_ids",
+    )
+    def _compute_trend_business_environment_ok(self):
+        for record in self:
+            result = False
+            if len(record.trend_business_environment_ids) > 0:
+                result = True
+            record.trend_business_environment_ok = result
+
+    trend_business_environment_ok = fields.Boolean(
+        string="Similar Business Trends",
+        compute="_compute_trend_business_environment_ok",
+        store=True,
+    )
+    trend_business_environment_ids = fields.Many2many(
+        string="Similar Business Trends",
+        comodel_name="ws_ra1505.trend_business_environment",
+        relation="rel_trend_2_general_audit_standard_detail",
+        column1="standard_detail_id",
+        column2="business_environment_id",
+    )
+
+    @api.depends(
+        "economic_business_environment_ids",
+    )
+    def _compute_economic_business_environment_ok(self):
+        for record in self:
+            result = False
+            if len(record.economic_business_environment_ids) > 0:
+                result = True
+            record.economic_business_environment_ok = result
+
+    economic_business_environment_ok = fields.Boolean(
+        string="National Economic",
+        compute="_compute_economic_business_environment_ok",
+        store=True,
+    )
+    economic_business_environment_ids = fields.Many2many(
+        string="National Economics",
+        comodel_name="ws_ra1505.economic_business_environment",
+        relation="rel_economic_2_general_audit_standard_detail",
+        column1="standard_detail_id",
+        column2="business_environment_id",
+    )
+
+    @api.depends(
+        "ifrs_business_environment_ids",
+    )
+    def _compute_ifrs_business_environment_ok(self):
+        for record in self:
+            result = False
+            if len(record.ifrs_business_environment_ids) > 0:
+                result = True
+            record.ifrs_business_environment_ok = result
+
+    ifrs_business_environment_ok = fields.Boolean(
+        string="Financial Accounting Standard Amendment",
+        compute="_compute_ifrs_business_environment_ok",
+        store=True,
+    )
+    ifrs_business_environment_ids = fields.Many2many(
+        string="Financial Accounting Standard Amendments",
+        comodel_name="ws_ra1505.ifrs_business_environment",
+        relation="rel_ifrs_2_general_audit_standard_detail",
+        column1="standard_detail_id",
+        column2="business_environment_id",
+    )
+
+    @api.depends(
+        "regulation_business_environment_ids",
+    )
+    def _compute_regulation_business_environment_ok(self):
+        for record in self:
+            result = False
+            if len(record.regulation_business_environment_ids) > 0:
+                result = True
+            record.regulation_business_environment_ok = result
+
+    regulation_business_environment_ok = fields.Boolean(
+        string="Regulation Change",
+        compute="_compute_regulation_business_environment_ok",
+        store=True,
+    )
+    regulation_business_environment_ids = fields.Many2many(
+        string="Regulation Changes",
+        comodel_name="ws_ra1505.regulation_business_environment",
+        relation="rel_regulation_2_general_audit_standard_detail",
+        column1="standard_detail_id",
+        column2="business_environment_id",
+    )
+
+    @api.depends(
+        "technology_business_environment_ids",
+    )
+    def _compute_technology_business_environment_ok(self):
+        for record in self:
+            result = False
+            if len(record.technology_business_environment_ids) > 0:
+                result = True
+            record.technology_business_environment_ok = result
+
+    technology_business_environment_ok = fields.Boolean(
+        string="Technology Advancement",
+        compute="_compute_technology_business_environment_ok",
+        store=True,
+    )
+    technology_business_environment_ids = fields.Many2many(
+        string="Technology Advancements",
+        comodel_name="ws_ra1505.technology_business_environment",
+        relation="rel_technology_2_general_audit_standard_detail",
+        column1="standard_detail_id",
+        column2="business_environment_id",
+    )
+
+    @api.depends(
+        "natural_business_environment_ids",
+    )
+    def _compute_natural_business_environment_ok(self):
+        for record in self:
+            result = False
+            if len(record.natural_business_environment_ids) > 0:
+                result = True
+            record.natural_business_environment_ok = result
+
+    natural_business_environment_ok = fields.Boolean(
+        string="Natural Cycle",
+        compute="_compute_natural_business_environment_ok",
+        store=True,
+    )
+    natural_business_environment_ids = fields.Many2many(
+        string="Natural Cycles",
+        comodel_name="ws_ra1505.natural_business_environment",
+        relation="rel_natural_2_general_audit_standard_detail",
+        column1="standard_detail_id",
+        column2="business_environment_id",
+    )
+
+    @api.depends(
+        "energy_business_environment_ids",
+    )
+    def _compute_energy_business_environment_ok(self):
+        for record in self:
+            result = False
+            if len(record.energy_business_environment_ids) > 0:
+                result = True
+            record.energy_business_environment_ok = result
+
+    energy_business_environment_ok = fields.Boolean(
+        string="Energy Availability & Cost",
+        compute="_compute_energy_business_environment_ok",
+        store=True,
+    )
+    energy_business_environment_ids = fields.Many2many(
+        string="Energy Availability & Costs",
+        comodel_name="ws_ra1505.energy_business_environment",
+        relation="rel_energy_2_general_audit_standard_detail",
+        column1="standard_detail_id",
+        column2="business_environment_id",
+    )
