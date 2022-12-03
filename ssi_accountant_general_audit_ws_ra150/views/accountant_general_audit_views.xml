@@ -13,7 +13,11 @@
     <field name="arch" type="xml">
         <data>
             <xpath expr="//field[@name='accountant_id']" position="after">
-                <field name="business_process_ids" widget="many2many_tags" />
+                <field
+                        name="business_process_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
             </xpath>
         </data>
     </field>
