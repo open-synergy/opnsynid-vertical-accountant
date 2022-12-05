@@ -7,6 +7,7 @@ from . import (
     accountant_general_audit,
     accountant_relevant_regulation,
     accountant_financial_report_preparation,
+    accountant_fraud_factor,
     ws_ra150,
     ws_ra1501,
     ws_ra1502,
@@ -30,5 +31,8 @@ from . import (
     ws_ra1507,
     ws_ra1507_financial_report_preparation,
     ws_ra1508,
+    ws_ra1508_opportunity_fraud_factor,
+    ws_ra1508_preassure_fraud_factor,
+    ws_ra1508_rationalization_fraud_factor,
     accountant_general_audit_standard_detail,
 )

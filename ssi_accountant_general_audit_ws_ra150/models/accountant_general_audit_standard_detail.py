@@ -285,3 +285,72 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         column1="standard_detail_id",
         column2="praparation_id",
     )
+
+    @api.depends(
+        "preassure_ids",
+    )
+    def _compute_preassure_ok(self):
+        for record in self:
+            result = False
+            if len(record.preassure_ids) > 0:
+                result = True
+            record.preassure_ok = result
+
+    preassure_ok = fields.Boolean(
+        string="Preassure Fraud Factor",
+        compute="_compute_preassure_ok",
+        store=True,
+    )
+    preassure_ids = fields.Many2many(
+        string="Preassure Fraud Factors",
+        comodel_name="ws_ra1508.preassure_fraud_factor",
+        relation="rel_preassure_fraud_2_standard_detail",
+        column1="standard_detail_id",
+        column2="fraud_id",
+    )
+
+    @api.depends(
+        "opportunity_ids",
+    )
+    def _compute_opportunity_ok(self):
+        for record in self:
+            result = False
+            if len(record.opportunity_ids) > 0:
+                result = True
+            record.opportunity_ok = result
+
+    opportunity_ok = fields.Boolean(
+        string="Opportunity Fraud Factor",
+        compute="_compute_opportunity_ok",
+        store=True,
+    )
+    opportunity_ids = fields.Many2many(
+        string="Opportunity Fraud Factors",
+        comodel_name="ws_ra1508.opportunity_fraud_factor",
+        relation="rel_oppor_fraud_2_standard_detail",
+        column1="standard_detail_id",
+        column2="fraud_id",
+    )
+
+    @api.depends(
+        "rationalization_ids",
+    )
+    def _compute_rationalization_ok(self):
+        for record in self:
+            result = False
+            if len(record.rationalization_ids) > 0:
+                result = True
+            record.rationalization_ok = result
+
+    rationalization_ok = fields.Boolean(
+        string="Rationalization Fraud Factor",
+        compute="_compute_rationalization_ok",
+        store=True,
+    )
+    rationalization_ids = fields.Many2many(
+        string="Rationalization Fraud Factors",
+        comodel_name="ws_ra1508.rationalization_fraud_factor",
+        relation="rel_rationalization_fraud_2_standard_detail",
+        column1="standard_detail_id",
+        column2="fraud_id",
+    )
