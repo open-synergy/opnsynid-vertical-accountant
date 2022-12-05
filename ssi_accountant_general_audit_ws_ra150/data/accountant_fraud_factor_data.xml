@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2020 OpenSynergy Indonesia
+     Copyright 2020 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+<data>
+<record id="preassure_fraud_factor_001" model="accountant.fraud_factor">
+    <field name="code">A001</field>
+    <field name="sequence" eval="1" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Tingkat persaingan atau kejenuhan pasar yang tinggi yang bersamaan dengan timbulnya penurunan marjin keuntungan;</field>
+</record>
+
+<record id="preassure_fraud_factor_002" model="accountant.fraud_factor">
+    <field name="code">A002</field>
+    <field name="sequence" eval="2" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Kondisi yang rentan terhadap terjadinya perubahan yang sangat cepat, antara lain perubahan dalam aspek teknologi, keusangan produk, atau tingkat bunga;</field>
+</record>
+
+<record id="preassure_fraud_factor_003" model="accountant.fraud_factor">
+    <field name="code">A003</field>
+    <field name="sequence" eval="3" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Menurunnya permintaan pelanggan secara signifikan dan meningkatnya kegagalan bisnis baik dalam industri di mana enlitas beroperasi maupun dalam perekonomian secara keseluruhan;</field>
+</record>
+
+<record id="preassure_fraud_factor_004" model="accountant.fraud_factor">
+    <field name="code">A004</field>
+    <field name="sequence" eval="4" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Kerugian operasi yang menimbulkan ancaman kebangkrutan, penyitaan, atau pengambilalihan oleh pihak lain dalam waktu dekat;</field>
+</record>
+
+<record id="preassure_fraud_factor_005" model="accountant.fraud_factor">
+    <field name="code">A005</field>
+    <field name="sequence" eval="5" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Arus kas negatif dari operasi yang berulang atau terdapat ketidakmampuan untuk menghasilkan arus kas positif dari operasi, di lain pihak laporan keuangan menunjukkan bahwa terdapat laba dan pertumbuhan laba;</field>
+</record>
+
+<record id="preassure_fraud_factor_006" model="accountant.fraud_factor">
+    <field name="code">A006</field>
+    <field name="sequence" eval="6" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Pertumbuhan profitabilitas yang sangat cepat dan tidak lazim, terutama bila dibandingkan terhadap perusahaan-perusahaan lain yang bergerak dalam industri yang sama;</field>
+</record>
+
+<record id="preassure_fraud_factor_007" model="accountant.fraud_factor">
+    <field name="code">A007</field>
+    <field name="sequence" eval="7" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Syarat-syarat atau ketentuan yang waiib dipenuhi dari standar akuntansi atau peraturan Pemerintah yang baru terbit;</field>
+</record>
+
+<record id="opportunity_fraud_factor_001" model="accountant.fraud_factor">
+    <field name="code">B001</field>
+    <field name="sequence" eval="1" />
+    <field name="category">opportunity</field>
+    <field
+                name="name"
+            >Entitas memiliki transaksi signifikan dengan pihak yang mempunyai hubungan istimewa yang tidak lazim atau transaksi dengan pihak hubungan istimewa yang tidak diaudit atau diaudit oleh kantor akuntan lain;</field>
+</record>
+
+<record id="rationalization_fraud_factor_001" model="accountant.fraud_factor">
+    <field name="code">C001</field>
+    <field name="sequence" eval="1" />
+    <field name="category">rationalization</field>
+    <field
+                name="name"
+            >Ketidakefektifan komunikasi, implementasi, dukungan, atau penetapan standar etis atau nilai entitas oleh manajemen atau pengkomunikasian standar etis atau nilai yang tidak tepat;</field>
+</record>
+
+</data>
+</odoo>

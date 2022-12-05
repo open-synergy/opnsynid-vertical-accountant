@@ -42,6 +42,86 @@
         />
         <field name="arch" type="xml">
             <data>
+                <xpath expr="//page[1]" position="before">
+                    <page name="preassure" string="Preassure">
+                        <field name="preassure_ids" force_save="1">
+                            <tree>
+                                <field name="fraud_factor_id" />
+                                <field name="tcwg" />
+                                <field name="management" />
+                                <field name="other" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                            </tree>
+                            <form>
+                                <group name="preassure" colspan="4" col="2">
+                                    <field name="fraud_factor_id" />
+                                    <field name="tcwg" />
+                                    <field name="management" />
+                                    <field name="other" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                    <page name="opportunity" string="Opportunity">
+                        <field name="opportunity_ids" force_save="1">
+                            <tree>
+                                <field name="fraud_factor_id" />
+                                <field name="tcwg" />
+                                <field name="management" />
+                                <field name="other" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                            </tree>
+                            <form>
+                                <group name="opportunity" colspan="4" col="2">
+                                    <field name="fraud_factor_id" />
+                                    <field name="tcwg" />
+                                    <field name="management" />
+                                    <field name="other" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                    <page name="rationalization" string="Rationalization">
+                        <field name="rationalization_ids" force_save="1">
+                            <tree>
+                                <field name="fraud_factor_id" />
+                                <field name="tcwg" />
+                                <field name="management" />
+                                <field name="other" />
+                                <field
+                                    name="standard_detail_ids"
+                                    widget="many2many_tags"
+                                />
+                            </tree>
+                            <form>
+                                <group name="rationalization" colspan="4" col="2">
+                                    <field name="fraud_factor_id" />
+                                    <field name="tcwg" />
+                                    <field name="management" />
+                                    <field name="other" />
+                                    <field
+                                        name="standard_detail_ids"
+                                        widget="many2many_tags"
+                                    />
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
             </data>
         </field>
     </record>

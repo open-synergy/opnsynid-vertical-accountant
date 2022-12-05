@@ -49,6 +49,12 @@
                 <group name="header_ra1507" colspan="1" col="2" string="RA.150.7">
                     <field name="financial_report_preparation_ok" />
                 </group>
+
+                <group name="header_ra1508" colspan="1" col="2" string="RA.150.8">
+                    <field name="preassure_ok" />
+                    <field name="opportunity_ok" />
+                    <field name="rationalization_ok" />
+                </group>
             </xpath>
         </data>
     </field>

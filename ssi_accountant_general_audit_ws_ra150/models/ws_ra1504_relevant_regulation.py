@@ -31,7 +31,7 @@ class WSAuditRA1504RlevantRegulation(models.Model):
         required=True,
     )
     detail_regulation = fields.Char(
-        string="Detail Requlation",
+        string="Relevant Content",
         required=True,
     )
     account_ids = fields.One2many(
