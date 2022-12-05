@@ -39,7 +39,7 @@ class AccountantGeneralAuditWS1301MaterialityMapping(models.Model):
                 else:
                     base = worksheet_ra130.performance_materiality
 
-                if balance >= abs(base):
+                if abs(balance) >= base:
                     materiality = "m"
 
                 document.materiality = materiality
