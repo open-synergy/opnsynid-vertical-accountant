@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<data noupdate="1">
+<record id="sequence_ws_ra220" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.220</field>
+    <field name="code">accountant.general_audit_ws_ra220</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.220/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra2201" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.220.1</field>
+    <field name="code">accountant.general_audit_ws_ra2201</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.220.1/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra22011" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.220.1.1</field>
+    <field name="code">accountant.general_audit_ws_ra22011</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.220.1.1/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra22012" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.220.1.2</field>
+    <field name="code">accountant.general_audit_ws_ra22012</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.220.1.2/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra2202" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.220.2</field>
+    <field name="code">accountant.general_audit_ws_ra2202</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.220.2/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra22021" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.220.2.1</field>
+    <field name="code">accountant.general_audit_ws_ra22021</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.220.2.1/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_ra2203" model="ir.sequence">
+    <field name="name">General Audit Worksheet RA.220.3</field>
+    <field name="code">accountant.general_audit_ws_ra2203</field>
+    <field name="padding">6</field>
+    <field name="prefix">RA.220.3/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+</data>
+</odoo>

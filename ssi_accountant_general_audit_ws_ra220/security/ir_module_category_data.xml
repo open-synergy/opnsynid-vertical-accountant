@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- General Audit Worksheet RA.220 -->
+<record id="general_audit_ws_ra220_workflow_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.220</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra220_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.220</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.220.1 -->
+<record
+        id="general_audit_ws_ra2201_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.220.1</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra2201_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.220.1</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.220.1.1 -->
+<record
+        id="general_audit_ws_ra22011_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.220.1.1</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra22011_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.220.1.1</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.220.1.2 -->
+<record
+        id="general_audit_ws_ra22012_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.220.1.2</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra22012_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.220.1.2</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.220.2 -->
+<record
+        id="general_audit_ws_ra2202_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.220.2</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra2202_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.220.2</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.220.2.1 -->
+<record
+        id="general_audit_ws_ra22021_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.220.2.1</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra22021_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.220.2.1</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RA.220.3 -->
+<record
+        id="general_audit_ws_ra2203_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RA.220.3</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_ra2203_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RA.220.3</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+</odoo>

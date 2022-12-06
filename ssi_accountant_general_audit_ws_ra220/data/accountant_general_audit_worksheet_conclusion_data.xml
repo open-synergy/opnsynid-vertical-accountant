@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2020 OpenSynergy Indonesia
+     Copyright 2020 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+<data>
+<!-- RA.220 -->
+<record id="conslusion_ra220_001" model="accountant.general_audit_worksheet_conclusion">
+    <field name="code">RA.220-001</field>
+    <field name="name">Control risk sudah dievaluasi dengan memadai</field>
+    <field name="type_id" ref="worksheet_type_ra220" />
+</record>
+
+<record id="conslusion_ra220_002" model="accountant.general_audit_worksheet_conclusion">
+    <field name="code">RA.220-002</field>
+    <field name="name">Control risk belum dievaluasi dengan memadai</field>
+    <field name="type_id" ref="worksheet_type_ra220" />
+</record>
+
+<!-- RA.220.1 -->
+<record
+            id="conslusion_ra2201_001"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.1-001</field>
+    <field name="name">Pengendalian Internal tingkat entitas telah memadai</field>
+    <field name="type_id" ref="worksheet_type_ra2201" />
+</record>
+
+<record
+            id="conslusion_ra2201_002"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.1-002</field>
+    <field
+                name="name"
+            >Pengendalian Internal tingkat entitas belum sepenuhnya memadai</field>
+    <field name="type_id" ref="worksheet_type_ra2201" />
+</record>
+
+<record
+            id="conslusion_ra2201_003"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.1-003</field>
+    <field name="name">Pengendalian Internal tingkat entitas tidak memadai</field>
+    <field name="type_id" ref="worksheet_type_ra2201" />
+</record>
+
+<!-- RA.220.1.1 -->
+<record
+            id="conslusion_ra22011_001"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.1.1-001</field>
+    <field name="name">Evaluasi pemahaman pengendalian telah memadai</field>
+    <field name="type_id" ref="worksheet_type_ra22011" />
+</record>
+
+<record
+            id="conslusion_ra22011_002"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.1.1-002</field>
+    <field name="name">Evaluasi pemahaman pengendalian belum sepenuhnya memadai</field>
+    <field name="type_id" ref="worksheet_type_ra22011" />
+</record>
+
+<record
+            id="conslusion_ra22011_003"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.1.1-003</field>
+    <field name="name">Evaluasi pemahaman pengendalian tidak memadai</field>
+    <field name="type_id" ref="worksheet_type_ra22011" />
+</record>
+
+<!-- RA.220.1.2 -->
+<record
+            id="conslusion_ra22012_001"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.1.2-001</field>
+    <field name="name">Evaluasi pengendalian teknologi informasi telah memadai</field>
+    <field name="type_id" ref="worksheet_type_ra22012" />
+</record>
+
+<record
+            id="conslusion_ra22012_002"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.1.2-002</field>
+    <field
+                name="name"
+            >Evaluasi pengendalian teknologi informasi belum sepenuhnya memadai</field>
+    <field name="type_id" ref="worksheet_type_ra22012" />
+</record>
+
+<record
+            id="conslusion_ra22012_003"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.1.2-003</field>
+    <field name="name">Evaluasi pengendalian teknologi informasi tidak memadai</field>
+    <field name="type_id" ref="worksheet_type_ra22012" />
+</record>
+
+<!-- RA.220.2 -->
+<record
+            id="conslusion_ra2202_001"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.2-001</field>
+    <field name="name">Pengendalian Internal tingkat siklus telah memadai</field>
+    <field name="type_id" ref="worksheet_type_ra2202" />
+</record>
+
+<record
+            id="conslusion_ra2202_002"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.2-002</field>
+    <field
+                name="name"
+            >Pengendalian Internal tingkat siklus belum sepenuhnya memadai</field>
+    <field name="type_id" ref="worksheet_type_ra2202" />
+</record>
+
+<record
+            id="conslusion_ra2202_003"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.2-003</field>
+    <field name="name">Pengendalian Internal tingkat siklus tidak memadai</field>
+    <field name="type_id" ref="worksheet_type_ra2202" />
+</record>
+
+<!-- RA.220.2.1 -->
+<record
+            id="conslusion_ra22021_001"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.2.1-001</field>
+    <field name="name">Pengendalian Internal tingkat siklus telah memadai</field>
+    <field name="type_id" ref="worksheet_type_ra22021" />
+</record>
+
+<record
+            id="conslusion_ra22021_002"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.2.1-002</field>
+    <field
+                name="name"
+            >Pengendalian Internal tingkat siklus belum sepenuhnya memadai</field>
+    <field name="type_id" ref="worksheet_type_ra22021" />
+</record>
+
+<record
+            id="conslusion_ra22021_003"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.2.1-003</field>
+    <field name="name">Pengendalian Internal tingkat siklus tidak memadai</field>
+    <field name="type_id" ref="worksheet_type_ra22021" />
+</record>
+
+<!-- RA.220.3 -->
+<record
+            id="conslusion_ra2203_001"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.3-001</field>
+    <field name="name">Pengendalian Internal tingkat siklus telah memadai</field>
+    <field name="type_id" ref="worksheet_type_ra2203" />
+</record>
+
+<record
+            id="conslusion_ra2203_002"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.3-002</field>
+    <field
+                name="name"
+            >Pengendalian Internal tingkat siklus belum sepenuhnya memadai</field>
+    <field name="type_id" ref="worksheet_type_ra2203" />
+</record>
+
+<record
+            id="conslusion_ra2203_003"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RA.220.3-003</field>
+    <field name="name">Pengendalian Internal tingkat siklus tidak memadai</field>
+    <field name="type_id" ref="worksheet_type_ra2203" />
+</record>
+</data>
+</odoo>

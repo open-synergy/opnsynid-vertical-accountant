@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- Workflow: RA.220 -->
+<record id="accountant_general_audit_ws_ra220_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra220_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra220_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra220_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra220_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra220_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra220_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra220_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.220 -->
+<record id="accountant_general_audit_ws_ra220_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra220_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra220_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra220_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra220_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra220_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra220_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra220_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.220.1 -->
+<record id="accountant_general_audit_ws_ra2201_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra2201_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra2201_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra2201_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2201_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra2201_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra2201_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2201_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.220.1 -->
+<record id="accountant_general_audit_ws_ra2201_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra2201_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra2201_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra2201_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2201_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra2201_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra2201_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2201_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.220.1.1 -->
+<record id="accountant_general_audit_ws_ra22011_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra22011_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra22011_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra22011_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22011_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra22011_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra22011_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22011_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.220.1.1 -->
+<record id="accountant_general_audit_ws_ra22011_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra22011_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra22011_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra22011_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22011_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra22011_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra22011_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22011_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.220.1.2 -->
+<record id="accountant_general_audit_ws_ra22012_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra22012_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra22012_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra22012_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22012_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra22012_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra22012_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22012_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.220.1.2 -->
+<record id="accountant_general_audit_ws_ra22012_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra22012_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra22012_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra22012_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22012_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra22012_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra22012_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22012_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.220.2 -->
+<record id="accountant_general_audit_ws_ra2202_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra2202_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra2202_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra2202_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2202_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra2202_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra2202_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2202_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.220.2 -->
+<record id="accountant_general_audit_ws_ra2202_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra2202_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra2202_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra2202_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2202_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra2202_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra2202_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2202_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.220.2.1 -->
+<record id="accountant_general_audit_ws_ra22021_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra22021_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra22021_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra22021_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22021_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra22021_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra22021_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22021_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.220.2.1 -->
+<record id="accountant_general_audit_ws_ra22021_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra22021_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra22021_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra22021_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22021_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra22021_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra22021_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra22021_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: RA.220.3 -->
+<record id="accountant_general_audit_ws_ra2203_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="general_audit_ws_ra2203_workflow_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra2203_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="general_audit_ws_ra2203_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2203_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra2203_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="general_audit_ws_ra2203_workflow_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2203_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: RA.220.3 -->
+<record id="accountant_general_audit_ws_ra2203_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="general_audit_ws_ra2203_data_module_category" />
+</record>
+
+<record id="accountant_general_audit_ws_ra2203_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="general_audit_ws_ra2203_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2203_company_group'))]"
+        />
+</record>
+
+<record id="accountant_general_audit_ws_ra2203_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="general_audit_ws_ra2203_data_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_general_audit_ws_ra2203_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+</odoo>
