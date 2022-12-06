@@ -3,7 +3,9 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html).
 
 from . import (
+    accountant_assersion_type,
     ws_ra220,
+    ws_ra2202_control_risk,
     ws_ra2201,
     ws_ra22011,
     ws_ra22012,

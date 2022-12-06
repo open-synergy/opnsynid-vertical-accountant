@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+accountant_assersion_type_all,accountant.assersion_type - all,model_accountant_assersion_type,,1,0,0,0
 access_accountant_general_audit_ws_ra220_all,accountant.general_audit_ws_ra220 - all,model_ws_ra220,,1,0,0,0
 access_accountant_general_audit_ws_ra220_viewer,accountant.general_audit_ws_ra220 - viewer,model_ws_ra220,accountant_general_audit_ws_ra220_viewer_group,1,0,0,0
 access_accountant_general_audit_ws_ra220_user,accountant.general_audit_ws_ra220 - user,model_ws_ra220,accountant_general_audit_ws_ra220_user_group,1,1,1,1
@@ -14,6 +15,9 @@ access_accountant_general_audit_ws_ra22012_user,accountant.general_audit_ws_ra22
 access_accountant_general_audit_ws_ra2202_all,accountant.general_audit_ws_ra2202 - all,model_ws_ra2202,,1,0,0,0
 access_accountant_general_audit_ws_ra2202_viewer,accountant.general_audit_ws_ra2202 - viewer,model_ws_ra2202,accountant_general_audit_ws_ra2202_viewer_group,1,0,0,0
 access_accountant_general_audit_ws_ra2202_user,accountant.general_audit_ws_ra2202 - user,model_ws_ra2202,accountant_general_audit_ws_ra2202_user_group,1,1,1,1
+access_ws_ra2202_control_risk_all,ws_ra2202.control_risk - all,model_ws_ra2202_control_risk,,1,0,0,0
+access_ws_ra2202_control_risk_viewer,ws_ra2202.control_risk - viewer,model_ws_ra2202_control_risk,accountant_general_audit_ws_ra2202_viewer_group,1,0,0,0
+access_ws_ra2202_control_risk_user,ws_ra2202.control_risk - user,model_ws_ra2202_control_risk,accountant_general_audit_ws_ra2202_user_group,1,1,1,1
 access_accountant_general_audit_ws_ra22021_all,accountant.general_audit_ws_ra22021 - all,model_ws_ra22021,,1,0,0,0
 access_accountant_general_audit_ws_ra22021_viewer,accountant.general_audit_ws_ra22021 - viewer,model_ws_ra22021,accountant_general_audit_ws_ra22021_viewer_group,1,0,0,0
 access_accountant_general_audit_ws_ra22021_user,accountant.general_audit_ws_ra22021 - user,model_ws_ra22021,accountant_general_audit_ws_ra22021_user_group,1,1,1,1
