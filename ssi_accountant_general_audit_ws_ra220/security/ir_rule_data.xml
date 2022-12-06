@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- Worksheet RA.220 -->
+<record id="ws_ra220_internal_user_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220 - Internal Users</field>
+    <field name="model_id" ref="model_ws_ra220" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+      ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra220_company_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220 - Responsible to company data</field>
+    <field name="model_id" ref="model_ws_ra220" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra220_company_group'))]"
+        />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra220_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Worksheet RA.220 - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_ws_ra220" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra220_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra220_all_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220 - All</field>
+    <field name="model_id" ref="model_ws_ra220" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra220_all_group'))]"
+        />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<!-- Worksheet RA.220.1 -->
+<record id="ws_ra2201_internal_user_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.1 - Internal Users</field>
+    <field name="model_id" ref="model_ws_ra2201" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+      ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra2201_company_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.1 - Responsible to company data</field>
+    <field name="model_id" ref="model_ws_ra2201" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra2201_company_group'))]"
+        />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra2201_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Worksheet RA.220.1 - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_ws_ra2201" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra2201_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra2201_all_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.1 - All</field>
+    <field name="model_id" ref="model_ws_ra2201" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra2201_all_group'))]"
+        />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<!-- Worksheet RA.220.1.1 -->
+<record id="ws_ra22011_internal_user_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.1.1 - Internal Users</field>
+    <field name="model_id" ref="model_ws_ra22011" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+      ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra22011_company_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.1.1 - Responsible to company data</field>
+    <field name="model_id" ref="model_ws_ra22011" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra22011_company_group'))]"
+        />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra22011_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Worksheet RA.220.1.1 - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_ws_ra22011" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra22011_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra22011_all_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.1.1 - All</field>
+    <field name="model_id" ref="model_ws_ra22011" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra22011_all_group'))]"
+        />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<!-- Worksheet RA.220.1.2 -->
+<record id="ws_ra22012_internal_user_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.1.2 - Internal Users</field>
+    <field name="model_id" ref="model_ws_ra22012" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+      ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra22012_company_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.1.2 - Responsible to company data</field>
+    <field name="model_id" ref="model_ws_ra22012" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra22012_company_group'))]"
+        />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra22012_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Worksheet RA.220.1.2 - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_ws_ra22012" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra22012_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra22012_all_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.1.2 - All</field>
+    <field name="model_id" ref="model_ws_ra22012" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra22012_all_group'))]"
+        />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<!-- Worksheet RA.220.2 -->
+<record id="ws_ra2202_internal_user_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.2 - Internal Users</field>
+    <field name="model_id" ref="model_ws_ra2202" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+      ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra2202_company_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.2 - Responsible to company data</field>
+    <field name="model_id" ref="model_ws_ra2202" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra2202_company_group'))]"
+        />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra2202_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Worksheet RA.220.2 - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_ws_ra2202" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra2202_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra2202_all_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.2 - All</field>
+    <field name="model_id" ref="model_ws_ra2202" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra2202_all_group'))]"
+        />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<!-- Worksheet RA.220.2.1 -->
+<record id="ws_ra22021_internal_user_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.2.1 - Internal Users</field>
+    <field name="model_id" ref="model_ws_ra22021" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+      ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra22021_company_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.2.1 - Responsible to company data</field>
+    <field name="model_id" ref="model_ws_ra22021" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra22021_company_group'))]"
+        />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra22021_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Worksheet RA.220.2.1 - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_ws_ra22021" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra22021_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra22021_all_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.2.1 - All</field>
+    <field name="model_id" ref="model_ws_ra22021" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra22021_all_group'))]"
+        />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<!-- Worksheet RA.220.3 -->
+<record id="ws_ra2203_internal_user_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.3 - Internal Users</field>
+    <field name="model_id" ref="model_ws_ra2203" />
+    <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    <field name="domain_force">[
+      ('user_id','=',user.id),
+    ]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra2203_company_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.3 - Responsible to company data</field>
+    <field name="model_id" ref="model_ws_ra2203" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra2203_company_group'))]"
+        />
+    <field name="domain_force">[('company_id','=',user.company_id.id)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra2203_companies_rule" model="ir.rule">
+    <field
+            name="name"
+        >Worksheet RA.220.3 - Responsible to company and all child companies data</field>
+    <field name="model_id" ref="model_ws_ra2203" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra2203_company_child_group'))]"
+        />
+    <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+
+<record id="ws_ra2203_all_rule" model="ir.rule">
+    <field name="name">Worksheet RA.220.3 - All</field>
+    <field name="model_id" ref="model_ws_ra2203" />
+    <field
+            name="groups"
+            eval="[(4, ref('accountant_general_audit_ws_ra2203_all_group'))]"
+        />
+    <field name="domain_force">[(1,'=',1)]</field>
+    <field name="perm_unlink" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+</record>
+</odoo>
