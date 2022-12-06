@@ -17,26 +17,28 @@
     <field name="model">ws_ra210.account_inherent_risk</field>
     <field name="mode">primary</field>
     <field name="arch" type="xml">
-        <tree editable="top" create="false" delete="false">
+        <tree create="false" delete="false">
             <field name="sequence" invisible="1" />
             <field name="standard_detail_id" invisible="1" />
             <field name="currency_id" invisible="1" />
             <field name="type_id" />
-            <field name="inherent_risk_factor_a" string="A" widget="boolean_toggle" />
-            <field name="inherent_risk_factor_b" string="B" widget="boolean_toggle" />
-            <field name="inherent_risk_factor_c" string="C" widget="boolean_toggle" />
-            <field name="inherent_risk_factor_d" string="D" widget="boolean_toggle" />
-            <field name="inherent_risk_factor_e" string="E" widget="boolean_toggle" />
-            <field name="inherent_risk_factor_f" string="F" widget="boolean_toggle" />
-            <field name="inherent_risk_factor_g" string="G" widget="boolean_toggle" />
-            <field name="inherent_risk_factor_h" string="H" widget="boolean_toggle" />
-            <field name="inherent_risk_factor_i" string="I" widget="boolean_toggle" />
-            <field name="inherent_risk_factor_j" string="J" widget="boolean_toggle" />
-            <field name="likelihood_risk_occuring" />
-            <field name="impact_of_risk" />
-            <field name="inherent_risk" />
-            <field name="other_significant_risk_factor" />
-            <field name="note" />
+            <field name="inherent_risk_factor_a" string="A" optional="show" />
+            <field name="inherent_risk_factor_b" string="B" optional="show" />
+            <field name="inherent_risk_factor_c" string="C" optional="show" />
+            <field name="inherent_risk_factor_d" string="D" optional="show" />
+            <field name="inherent_risk_factor_e" string="E" optional="show" />
+            <field name="inherent_risk_factor_f" string="F" optional="show" />
+            <field name="inherent_risk_factor_g" string="G" optional="show" />
+            <field name="inherent_risk_factor_h" string="H" optional="show" />
+            <field name="inherent_risk_factor_i" string="I" optional="show" />
+            <field name="inherent_risk_factor_j" string="J" optional="show" />
+            <field name="fraud_risk" optional="show" />
+            <field name="likelihood_risk_occuring" optional="show" />
+            <field name="impact_of_risk" optional="show" />
+            <field name="inherent_risk" optional="show" />
+            <field name="other_significant_risk_factor" optional="show" />
+            <field name="significant_risk" optional="show" />
+            <field name="note" optional="show" />
         </tree>
     </field>
 </record>
@@ -48,6 +50,45 @@
     <field name="arch" type="xml">
         <form>
             <sheet>
+                <group name="header0" colspan="4" col="1">
+                    <label
+                            for="sequence"
+                            string="A. Merupakan transaksi yang tidak sering terjadi"
+                        />
+                    <label
+                            for="sequence"
+                            string="B. Salah saji yang dikoreksi pada perilde lalu (jika ada)"
+                        />
+                    <label
+                            for="sequence"
+                            string="C. Rentan terhadap perubahan lingkungan bisnis"
+                        />
+                    <label
+                            for="sequence"
+                            string="D. Terdapat kontijensi yang teridenti-fikasi"
+                        />
+                    <label for="sequence" string="E. Berdampak pada kerugian" />
+                    <label
+                            for="sequence"
+                            string="F. Akun mendapat perhatian khusus atas akuntansi pelaporan"
+                        />
+                    <label
+                            for="sequence"
+                            string="G. Akun yang memiliki kerumitan kompleks"
+                        />
+                    <label
+                            for="sequence"
+                            string="H. Akun transaksi dengan pihak berelasi yang signifikan"
+                        />
+                    <label
+                            for="sequence"
+                            string="I. Akun yang diukur mengguna-kan estimasi"
+                        />
+                    <label
+                            for="sequence"
+                            string="J. Akun yang signifikan yang tidak rutin"
+                        />
+                </group>
                 <group name="header" colspan="4" col="2">
                     <group name="header1" colspan="1" col="2">
                         <field name="sequence" />
@@ -100,12 +141,18 @@
                                 string="I"
                                 widget="boolean_toggle"
                             />
+                    </group>
+                    <group name="header3" colspan="1" col="2">
+                        <field name="fraud_risk" />
                         <field name="likelihood_risk_occuring" />
                         <field name="impact_of_risk" />
                         <field name="inherent_risk" />
                         <field name="other_significant_risk_factor" />
-                        <field name="note" />
+                        <field name="significant_risk" />
                     </group>
+                </group>
+                <group name="footer" colspan="4" col="2">
+                    <field name="note" />
                 </group>
             </sheet>
         </form>
