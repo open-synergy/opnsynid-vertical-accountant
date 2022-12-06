@@ -48,6 +48,48 @@
                             <field name="risk_material_missstatement" />
                             <field name="auditor_respons" />
                         </group>
+                        <group name="inherent_risk_2" colspan="4" col="1">
+                            <label
+                                for="account_inherent_risk_ids"
+                                string="A. Merupakan transaksi yang tidak sering terjadi"
+                            />
+                            <label
+                                for="account_inherent_risk_ids"
+                                string="B. Salah saji yang dikoreksi pada perilde lalu (jika ada)"
+                            />
+                            <label
+                                for="account_inherent_risk_ids"
+                                string="C. Rentan terhadap perubahan lingkungan bisnis"
+                            />
+                            <label
+                                for="account_inherent_risk_ids"
+                                string="D. Terdapat kontijensi yang teridenti-fikasi"
+                            />
+                            <label
+                                for="account_inherent_risk_ids"
+                                string="E. Berdampak pada kerugian"
+                            />
+                            <label
+                                for="account_inherent_risk_ids"
+                                string="F. Akun mendapat perhatian khusus atas akuntansi pelaporan"
+                            />
+                            <label
+                                for="account_inherent_risk_ids"
+                                string="G. Akun yang memiliki kerumitan kompleks"
+                            />
+                            <label
+                                for="account_inherent_risk_ids"
+                                string="H. Akun transaksi dengan pihak berelasi yang signifikan"
+                            />
+                            <label
+                                for="account_inherent_risk_ids"
+                                string="I. Akun yang diukur mengguna-kan estimasi"
+                            />
+                            <label
+                                for="account_inherent_risk_ids"
+                                string="J. Akun yang signifikan yang tidak rutin"
+                            />
+                        </group>
                         <field name="account_inherent_risk_ids" force_save="1" />
                     </page>
                 </xpath>

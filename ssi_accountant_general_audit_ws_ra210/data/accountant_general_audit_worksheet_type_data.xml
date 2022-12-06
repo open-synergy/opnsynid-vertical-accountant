@@ -6,7 +6,7 @@
 <data>
 <record id="worksheet_type_ra210" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.210</field>
-    <field name="name">Prosedur Analitis Awal - Simpulan</field>
+    <field name="name">Inherent risk</field>
     <field name="sequence" eval="14000" />
     <field
                 name="category_id"

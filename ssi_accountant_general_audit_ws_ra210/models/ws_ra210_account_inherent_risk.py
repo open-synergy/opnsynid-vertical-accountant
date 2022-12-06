@@ -1,7 +1,7 @@
 # Copyright 2021 PT Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class WS210AccountInherentRisk(models.Model):
@@ -77,11 +77,28 @@ class WS210AccountInherentRisk(models.Model):
         string="Inherent Risk Factor J",
         default=False,
     )
+
+    @api.depends(
+        "standard_detail_id",
+        "standard_detail_id.preassure_ok",
+        "standard_detail_id.opportunity_ok",
+        "standard_detail_id.rationalization_ok",
+    )
+    def _compute_fraud_risk(self):
+        for record in self:
+            result = False
+            std = record.standard_detail_id
+            if std.preassure_ok or std.opportunity_ok or std.rationalization_ok:
+                result = True
+            record.fraud_risk = result
+
+    fraud_risk = fields.Boolean(
+        string="Fraud Risk", store=True, compute="_compute_fraud_risk"
+    )
     likelihood_risk_occuring = fields.Selection(
         string="Likelihood of Risk Occuring",
         selection=[
             ("low", "Low"),
-            ("medium", "Medium"),
             ("high", "High"),
         ],
     )
@@ -89,10 +106,46 @@ class WS210AccountInherentRisk(models.Model):
         string="Magnitude/Impact of Risk",
         selection=[
             ("low", "Low"),
-            ("medium", "Medium"),
             ("high", "High"),
         ],
     )
+
+    @api.depends(
+        "likelihood_risk_occuring",
+        "impact_of_risk",
+        "inherent_risk_factor_f",
+        "inherent_risk_factor_g",
+        "inherent_risk_factor_h",
+        "inherent_risk_factor_i",
+        "inherent_risk_factor_j",
+        "fraud_risk",
+        "other_significant_risk_factor",
+    )
+    def _compute_risk(self):
+        for record in self:
+            inherent_risk = significant_risk = False
+            if record.likelihood_risk_occuring == "high":
+                if record.impact_of_risk == "high":
+                    inherent_risk = "high"
+                    if (
+                        record.inherent_risk_factor_f
+                        or record.inherent_risk_factor_g
+                        or record.inherent_risk_factor_h
+                        or record.inherent_risk_factor_i
+                        or record.inherent_risk_factor_j
+                        or record.fraud_risk
+                    ) or record.other_significant_risk_factor:
+                        significant_risk = True
+                elif record.impact_of_risk == "low":
+                    inherent_risk = "medium"
+            elif record.likelihood_risk_occuring == "low":
+                if record.impact_of_risk == "high":
+                    inherent_risk = "high"
+                elif record.impact_of_risk == "low":
+                    inherent_risk = "low"
+            record.inherent_risk = inherent_risk
+            record.significant_risk = significant_risk
+
     inherent_risk = fields.Selection(
         string="Inherent Risk",
         selection=[
@@ -100,7 +153,15 @@ class WS210AccountInherentRisk(models.Model):
             ("medium", "Medium"),
             ("high", "High"),
         ],
+        compute="_compute_risk",
+        store=True,
     )
+    significant_risk = fields.Boolean(
+        string="Significant Risk",
+        compute="_compute_risk",
+        store=True,
+    )
+
     other_significant_risk_factor = fields.Boolean(
         string="Other Significant Risk Factor",
         default=False,
