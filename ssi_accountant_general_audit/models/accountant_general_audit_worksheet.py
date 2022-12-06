@@ -110,6 +110,16 @@ class AccountantGeneralAuditWorksheet(models.Model):
         related="general_audit_id.partner_id",
         store=True,
     )
+    accountant_id = fields.Many2one(
+        string="Accountant",
+        related="general_audit_id.accountant_id",
+        store=True,
+    )
+    title = fields.Char(
+        string="Title",
+        related="general_audit_id.title",
+        store=True,
+    )
     parent_type_id = fields.Many2one(
         string="Type",
         comodel_name="accountant.general_audit_worksheet_type",
