@@ -65,6 +65,7 @@ class AccountantGeneralAuditWorksheetMixin(models.AbstractModel):
         string="# Worksheet",
         comodel_name="accountant.general_audit_worksheet",
         readonly=True,
+        ondelete="cascade",
     )
 
     @api.model

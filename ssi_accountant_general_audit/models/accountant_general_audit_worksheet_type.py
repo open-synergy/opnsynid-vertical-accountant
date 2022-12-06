@@ -12,6 +12,7 @@ class AccountantGeneralAuditWorksheetType(models.Model):
     ]
     _description = "General Audit Worksheet Type"
     _order = "category_id, sequence, code"
+    _show_code_on_display_name = True
 
     sequence = fields.Integer(
         string="Sequence",
