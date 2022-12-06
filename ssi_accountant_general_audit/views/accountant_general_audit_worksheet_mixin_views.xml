@@ -57,7 +57,10 @@
             <data>
                 <xpath expr="//group[@name='footer']" position="after">
                     <group name="conclusion" colspan="4" col="2">
-                        <field name="conclusion_id" />
+                        <field
+                            name="conclusion_id"
+                            domain="[('id','in',allowed_conclusion_ids)]"
+                        />
                         <field name="conclusion" colspan="2" nolabel="1" />
                     </group>
                 </xpath>
@@ -72,6 +75,11 @@
                     <field name="parent_type_id" invisible="1" />
                     <field name="account_type_set_id" invisible="1" />
                     <field name="currency_id" invisible="1" />
+                    <field
+                        name="allowed_conclusion_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
                 </xpath>
                 <xpath expr="//field[@name='user_id']" position="attributes">
                     <attribute name="invisible">True</attribute>

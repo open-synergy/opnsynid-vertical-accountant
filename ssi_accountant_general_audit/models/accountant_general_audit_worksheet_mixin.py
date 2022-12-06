@@ -104,6 +104,27 @@ class AccountantGeneralAuditWorksheetMixin(models.AbstractModel):
         readonly=True,
     )
 
+    @api.depends(
+        "type_id",
+    )
+    def _compute_allowed_conclusion_ids(self):
+        Conclusion = self.env["accountant.general_audit_worksheet_conclusion"]
+        for record in self:
+            result = []
+            if record.type_id:
+                criteria = [
+                    ("type_id", "=", self.type_id.id),
+                ]
+                result = Conclusion.search(criteria).ids
+            record.allowed_conclusion_ids = result
+
+    allowed_conclusion_ids = fields.Many2many(
+        string="Allowed Conclusion",
+        comodel_name="accountant.general_audit_worksheet_conclusion",
+        compute="_compute_allowed_conclusion_ids",
+        store=False,
+    )
+
     @api.model
     def _get_policy_field(self):
         res = super(AccountantGeneralAuditWorksheetMixin, self)._get_policy_field()
