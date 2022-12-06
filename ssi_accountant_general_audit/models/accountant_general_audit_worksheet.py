@@ -142,6 +142,7 @@ class AccountantGeneralAuditWorksheet(models.Model):
             ],
         },
     )
+
     conclusion_id = fields.Many2one(
         string="Conclusion",
         comodel_name="accountant.general_audit_worksheet_conclusion",
@@ -150,6 +151,7 @@ class AccountantGeneralAuditWorksheet(models.Model):
         states={
             "open": [
                 ("readonly", False),
+                ("required", True),
             ],
         },
     )
@@ -159,6 +161,7 @@ class AccountantGeneralAuditWorksheet(models.Model):
         states={
             "open": [
                 ("readonly", False),
+                ("required", True),
             ],
         },
     )
