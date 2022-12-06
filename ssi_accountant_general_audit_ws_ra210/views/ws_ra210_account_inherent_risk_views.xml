@@ -137,8 +137,13 @@
                                 widget="boolean_toggle"
                             />
                         <field
-                                name="inherent_risk_factor_j"
+                                name="inherent_risk_factor_i"
                                 string="I"
+                                widget="boolean_toggle"
+                            />
+                        <field
+                                name="inherent_risk_factor_j"
+                                string="J"
                                 widget="boolean_toggle"
                             />
                     </group>
