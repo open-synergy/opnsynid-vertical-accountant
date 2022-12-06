@@ -67,6 +67,87 @@
             >Syarat-syarat atau ketentuan yang waiib dipenuhi dari standar akuntansi atau peraturan Pemerintah yang baru terbit;</field>
 </record>
 
+<record id="preassure_fraud_factor_008" model="accountant.fraud_factor">
+    <field name="code">A008</field>
+    <field name="sequence" eval="8" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Ekspektasi atas profitabilitas atau tingkat tren tertentu dari para analis investasi, pemilik/penanam modal, kreditor penting, atau pihak luar lainnya (khususnya ekspektasi yang bersifat sangat agresif atau tidak realistis), termasuk ekspektasi yang diciptakan oleh manajemen sendiri, antara lain berupa siaran pers atau pesan-pesan yang disampaikan dalam laporan keuangan tahunan yang bersifat terlalu optimis;</field>
+</record>
+
+<record id="preassure_fraud_factor_009" model="accountant.fraud_factor">
+    <field name="code">A009</field>
+    <field name="sequence" eval="9" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Kebutuhan untuk memperoleh pembiayaan melalui hutang atau ekuitas untuk tetap bertahan dalam persaingan pasar, termasuk pembiayaan atas aktivitas penelitian dan pengembangan atau pembelanjaan modal dalam jumlah besar;</field>
+</record>
+
+<record id="preassure_fraud_factor_010" model="accountant.fraud_factor">
+    <field name="code">A010</field>
+    <field name="sequence" eval="10" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Kemampuan yang terbatas untuk memenuhi persyaratan bursa atau pembayaran hutang atau ketentuan hutang lainnya;</field>
+</record>
+
+<record id="preassure_fraud_factor_011" model="accountant.fraud_factor">
+    <field name="code">A011</field>
+    <field name="sequence" eval="11" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Transaksi penting yang belum terselesaikan, seperti penggabungan usaha atau kontrak, diperkirakan akan, atau telah berdampak negatif yakni mengakibatkan pelaporan hasil keuangan yang buruk.</field>
+</record>
+
+<record id="preassure_fraud_factor_012" model="accountant.fraud_factor">
+    <field name="code">A012</field>
+    <field name="sequence" eval="12" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Beban bunga dan keuangan signifikan yang ditanggung oleh entitas;</field>
+</record>
+
+<record id="preassure_fraud_factor_013" model="accountant.fraud_factor">
+    <field name="code">A013</field>
+    <field name="sequence" eval="13" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Sebagian besar porsi kompensasi manajemen atau personel tersebut (sebagai contoh bonus, opsi saham, dan penghasilan lainnya yang ditetapkan) sangat tergantung dari pencapaian target yang agresif atas harga pasar saham entitas, hasil operasi, posisi keuangan, atau arus kas;</field>
+</record>
+
+<record id="preassure_fraud_factor_014" model="accountant.fraud_factor">
+    <field name="code">A014</field>
+    <field name="sequence" eval="14" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Manaiemen atau personel tersebut memberikan jaminan pribadi atas hutang entitas;</field>
+</record>
+
+<record id="preassure_fraud_factor_015" model="accountant.fraud_factor">
+    <field name="code">A015</field>
+    <field name="sequence" eval="15" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Terdapat tekanan yang berlebihan terhadap manajemen atau personel operasional untuk memenuhi target keuangan yang ditetapkan oleh personel yang bertanggung jawab atas tata kelola entitas, termasuk target penjualan atau insentif laba;</field>
+</record>
+
+<record id="preassure_fraud_factor_016" model="accountant.fraud_factor">
+    <field name="code">A016</field>
+    <field name="sequence" eval="16" />
+    <field name="category">preassure</field>
+    <field
+                name="name"
+            >Manajemen menetapkan target dan ekspektasi keuangan yang sangat agresif terhadap personel operasional;</field>
+</record>
+
 <record id="opportunity_fraud_factor_001" model="accountant.fraud_factor">
     <field name="code">B001</field>
     <field name="sequence" eval="1" />
