@@ -64,6 +64,11 @@
                                     name="assersion_type_ids"
                                     widget="many2many_tags"
                                 />
+                                <field
+                                    name="oassersion_type_ids"
+                                    widget="many2many_tags"
+                                    invisible="1"
+                                />
                             </tree>
                             <form>
                                 <group name="control_risk_1" colspan="4" col="2">
@@ -75,6 +80,12 @@
                                         name="assersion_type_ids"
                                         widget="many2many_tags"
                                     />
+                                    <field
+                                        name="oassersion_type_ids"
+                                        widget="many2many_tags"
+                                        invisible="1"
+                                    />
+
                                 </group>
                             </form>
                         </field>

@@ -42,6 +42,53 @@
         />
         <field name="arch" type="xml">
             <data>
+                <xpath expr="//group[@name='header_center']" position="inside">
+                    <field
+                        name="business_process_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
+                    <field
+                        name="business_process_id"
+                        domain="[('id','in', business_process_ids)]"
+                    />
+                </xpath>
+                <xpath expr="//page[1]" position="before">
+                    <page name="cycle" string="Cycle Explanation">
+                        <separator string="Cycle Detail" colspan="4" />
+                        <field name="cycle_detail_ids">
+                            <tree>
+                                <field name="sequence" widget="handle" />
+                                <field name="name" />
+                                <field name="frequency" />
+                                <field name="risk_identification" />
+                                <field name="what_can_go_wrong" />
+                                <field name="activity_control_documentation" />
+                            </tree>
+                            <form>
+                                <group name="cycle_1" colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="name" />
+                                    <field name="frequency" />
+                                    <field name="risk_identification" />
+                                    <field name="what_can_go_wrong" />
+                                    <field name="activity_control_documentation" />
+                                </group>
+                            </form>
+                        </field>
+                        <separator string="Standard Account" colspan="4" />
+                        <field name="account_cycle_ids">
+                            <tree editable="top">
+                                <field name="sequence" invisible="1" />
+                                <field name="standard_detail_id" invisible="1" />
+                                <field name="type_id" />
+                                <field name="rely_on_control" />
+                                <field name="toc_analysis" />
+                                <field name="toc_result" force_save="1" />
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
             </data>
         </field>
     </record>
