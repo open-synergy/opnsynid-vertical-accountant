@@ -148,6 +148,7 @@
             >Manajemen menetapkan target dan ekspektasi keuangan yang sangat agresif terhadap personel operasional;</field>
 </record>
 
+<!-- Opportunity -->
 <record id="opportunity_fraud_factor_001" model="accountant.fraud_factor">
     <field name="code">B001</field>
     <field name="sequence" eval="1" />
@@ -155,6 +156,42 @@
     <field
                 name="name"
             >Entitas memiliki transaksi signifikan dengan pihak yang mempunyai hubungan istimewa yang tidak lazim atau transaksi dengan pihak hubungan istimewa yang tidak diaudit atau diaudit oleh kantor akuntan lain;</field>
+</record>
+
+<record id="opportunity_fraud_factor_002" model="accountant.fraud_factor">
+    <field name="code">B002</field>
+    <field name="sequence" eval="2" />
+    <field name="category">opportunity</field>
+    <field
+                name="name"
+            >Entitas memiliki posisi keuangan yang kuat atau kemampuan untuk mendominasi sektor industri tertentu, yang memungkinkan entitas untuk menentukan sendiri syarat dan ketentuan untuk pemasok atau pelanggan, yang berdampak pada timbulnya transaksi yang tidak wajar (non-arm's length transactions);</field>
+</record>
+
+<record id="opportunity_fraud_factor_003" model="accountant.fraud_factor">
+    <field name="code">B003</field>
+    <field name="sequence" eval="3" />
+    <field name="category">opportunity</field>
+    <field
+                name="name"
+            >Aset, liabilitas, pendapatan atau beban didasarkan pada estimasi signifikan yang merupakan hasil dari pertimbangan subjektif atau ketidakpastian, serta tidak terdapat fakta-fakta untuk menguatkan estimasi tersebut;</field>
+</record>
+
+<record id="opportunity_fraud_factor_004" model="accountant.fraud_factor">
+    <field name="code">B004</field>
+    <field name="sequence" eval="4" />
+    <field name="category">opportunity</field>
+    <field
+                name="name"
+            >Transaksi yang signifikan, tidak lazim atau sangat kompleks, khususnya transaksi yang dibukukan mendekati akhir tahun yang menimbulkan keraguan mengenai sifatt substansi mengungguli bentuk (substance over form) dari transaksi tersebut.</field>
+</record>
+
+<record id="opportunity_fraud_factor_005" model="accountant.fraud_factor">
+    <field name="code">B005</field>
+    <field name="sequence" eval="4" />
+    <field name="category">opportunity</field>
+    <field
+                name="name"
+            >Entitas memiliki operasi yang signifikan yang berlokasi atau dijalankan di berbagai negara dalam yurisdiksi dimana terdapat kebudayaan dan lingkungan bisnis yang berbeda;</field>
 </record>
 
 <record id="rationalization_fraud_factor_001" model="accountant.fraud_factor">

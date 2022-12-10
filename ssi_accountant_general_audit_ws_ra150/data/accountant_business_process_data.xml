@@ -6,36 +6,36 @@
 <data>
 <record id="accountant_business_process_001" model="accountant.business_process">
     <field name="code">T001</field>
-    <field name="name">Siklus penjualan, piutang usaha dan penerimaannya</field>
+    <field name="name">Sales and collection cycle</field>
 </record>
 
 <record id="accountant_business_process_002" model="accountant.business_process">
     <field name="code">T002</field>
-    <field name="name">Siklus pembelian, hutang usaha dan pembayarannya</field>
+    <field name="name">Acquisition and payment cycle</field>
 </record>
 
 <record id="accountant_business_process_003" model="accountant.business_process">
     <field name="code">T003</field>
-    <field name="name">Siklus persediaan dan produksi</field>
+    <field name="name">Warehousing and manufacturing cycle</field>
 </record>
 
 <record id="accountant_business_process_004" model="accountant.business_process">
     <field name="code">T004</field>
     <field
                 name="name"
-            >Siklus investasi - surat berharga, entitas anak, aset tetap, dll</field>
+            >Investment and return cycle - securities, subsidiary, fixed asset, etc.</field>
 </record>
 
 <record id="accountant_business_process_005" model="accountant.business_process">
     <field name="code">T005</field>
-    <field name="name">Siklus pendanaan - hutang bank, leasing, modal</field>
+    <field
+                name="name"
+            >Financial acquisition and repayment cycle - bank borrowing, leasing, capital</field>
 </record>
 
 <record id="accountant_business_process_006" model="accountant.business_process">
     <field name="code">T006</field>
-    <field
-                name="name"
-            >Siklus lainnya - kas/bank, beban operasional, pajak, lainnya</field>
+    <field name="name">Other Cycle - Cash/bank, taxes, others</field>
 </record>
 </data>
 </odoo>
