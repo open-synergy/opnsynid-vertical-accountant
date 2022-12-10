@@ -2,7 +2,7 @@
 # Copyright 2022 PT. Simetri Sinergi Indonesia
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html).
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class WSAuditRA2202ControlRisk(models.Model):
@@ -34,13 +34,26 @@ class WSAuditRA2202ControlRisk(models.Model):
     business_process_id = fields.Many2one(
         string="Business Process",
         comodel_name="accountant.business_process",
-        required=False,
-        ondelete="restrict",
+        related="standard_detail_id.business_process_id",
+        store=True,
+        readonly=False,
     )
     assersion_type_ids = fields.Many2many(
         string="Assersion Types",
         comodel_name="accountant.assersion_type",
-        rel="rel_control_risk_2_assersion_type",
+        relation="rel_control_risk_2_assersion_type",
         column1="control_risk_id",
         column2="assersion_type_id",
+    )
+
+    @api.onchange("assersion_type_ids")
+    def _onchange_oassersion_type_ids(self):
+        self.oassersion_type_ids = self.assersion_type_ids.ids
+
+    oassersion_type_ids = fields.Many2many(
+        string="Assersion Types",
+        comodel_name="accountant.assersion_type",
+        related="standard_detail_id.assersion_type_ids",
+        readonly=False,
+        compute=False,
     )
