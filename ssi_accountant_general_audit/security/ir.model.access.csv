@@ -1,4 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+accountant_audit_standard_all,accountant.audit_standard - all,model_accountant_audit_standard,,1,0,0,0
+accountant_audit_standard_configurator,accountant.audit_standard - configurator,model_accountant_audit_standard,accountant_audit_standard_group,1,1,1,1
+accountant_audit_standard_item_all,accountant.audit_standard_item - all,model_accountant_audit_standard_item,,1,0,0,0
+accountant_audit_standard_item_configurator,accountant.audit_standard_item - configurator,model_accountant_audit_standard_item,accountant_audit_standard_item_group,1,1,1,1
 accountant_general_audit_opinion_employee,accountant.general_audit_opinion - user,model_accountant_general_audit_opinion,base.group_user,1,1,1,1
 accountant_general_audit_opinion_all,accountant.general_audit_opinion - all,model_accountant_general_audit_opinion,,1,0,0,0
 accountant_client_account_group_configurator,accountant.client_account_group - configurator,model_accountant_client_account_group,accountant_client_account_group_group,1,1,1,1

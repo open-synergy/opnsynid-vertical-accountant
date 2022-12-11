@@ -40,3 +40,18 @@ class AccountantGeneralAuditWorksheetType(models.Model):
         string="Model Technical Name",
         related="model_id.model",
     )
+    standard_item_ids = fields.Many2many(
+        string="Relevant Audit Standard Items",
+        comodel_name="accountant.audit_standard_item",
+        relation="rel_worksheet_type_2_audit_std_item",
+        column1="type_id",
+        column2="audit_standard_item_id",
+    )
+    work_task_type_id = fields.Many2one(
+        string="Work Task Type",
+        comodel_name="task.type",
+    )
+    review_task_type_id = fields.Many2one(
+        string="Review Task Type",
+        comodel_name="task.type",
+    )

@@ -4,6 +4,30 @@
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <odoo>
 <!-- Configurator -->
+<record id="accountant_audit_standard_group" model="res.groups">
+    <field name="name">Audit Standard</field>
+    <field
+            name="category_id"
+            ref="ssi_accountant.accountant_configurator_module_category"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<record id="accountant_audit_standard_item_group" model="res.groups">
+    <field name="name">Audit Standard Item</field>
+    <field
+            name="category_id"
+            ref="ssi_accountant.accountant_configurator_module_category"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
 <record id="accountant_client_account_group_group" model="res.groups">
     <field name="name">Client Account Group</field>
     <field

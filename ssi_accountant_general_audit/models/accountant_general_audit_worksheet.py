@@ -165,6 +165,44 @@ class AccountantGeneralAuditWorksheet(models.Model):
             ],
         },
     )
+    manual_work_time = fields.Float(
+        string="Manual Work Time",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    manual_review_time = fields.Float(
+        string="Manual Review Time",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    work_task_id = fields.Many2one(
+        string="Work Task",
+        comodel_name="project.task",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    review_task_id = fields.Many2one(
+        string="Review Task",
+        comodel_name="project.task",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     state = fields.Selection(
         string="State",
         selection=[

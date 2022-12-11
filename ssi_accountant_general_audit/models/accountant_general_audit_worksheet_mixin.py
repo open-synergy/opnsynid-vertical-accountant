@@ -87,7 +87,30 @@ class AccountantGeneralAuditWorksheetMixin(models.AbstractModel):
             ],
         },
     )
-
+    standard_item_ids = fields.Many2many(
+        string="Audit Standard Items",
+        comodel_name="accountant.audit_standard_item",
+        related="type_id.standard_item_ids",
+        store=False,
+    )
+    work_task_type_id = fields.Many2one(
+        string="Work Task Type",
+        comodel_name="task.type",
+        related="type_id.work_task_type_id",
+        store=False,
+    )
+    review_task_type_id = fields.Many2one(
+        string="Review Task Type",
+        comodel_name="task.type",
+        related="type_id.review_task_type_id",
+        store=False,
+    )
+    project_id = fields.Many2one(
+        string="Project",
+        comodel_name="project.project",
+        related="general_audit_id.project_id",
+        store=False,
+    )
     state = fields.Selection(
         string="State",
         selection=[
