@@ -4,6 +4,8 @@
 
 from . import (
     accountant_general_audit_opinion,
+    accountant_audit_standard,
+    accountant_audit_standard_item,
     accountant_client_account_group,
     accountant_client_account_type,
     accountant_client_account,

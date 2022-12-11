@@ -70,6 +70,10 @@
                     <field name="partner_id" />
                     <field name="title" />
                     <field name="type_id" readonly="1" force_save="1" />
+                    <field name="standard_item_ids" widget="many2many_tags" />
+                    <field name="project_id" invisible="1" />
+                    <field name="work_task_type_id" invisible="1" />
+                    <field name="review_task_type_id" invisible="1" />
                 </xpath>
                 <xpath expr="//field[@name='user_id']" position="after">
                     <field name="parent_type_id" invisible="1" />
@@ -92,7 +96,17 @@
                     <field name="previous_date_start" invisible="1" />
                     <field name="previous_date_end" invisible="1" />
                     <field name="user_id" />
+                    <field
+                        name="work_task_id"
+                        domain="[('project_id','=',project_id),('type_id','=',work_task_type_id),('user_id','=',user_id)]"
+                    />
+                    <field name="manual_work_time" widget="float_time" />
                     <field name="reviewer_id" />
+                    <field
+                        name="review_task_id"
+                        domain="[('project_id','=',project_id),('type_id','=',review_task_type_id),('user_id','=',reviewer_id)]"
+                    />
+                    <field name="manual_review_time" widget="float_time" />
                 </xpath>
             </data>
         </field>

@@ -48,9 +48,12 @@
                     <field name="sequence" />
                     <field name="parent_id" />
                     <field name="category_id" />
+                    <field name="standard_item_ids" widget="many2many_tags" />
                     <field name="max_number_allowed" />
                     <field name="model_id" />
                     <field name="model" />
+                    <field name="work_task_type_id" />
+                    <field name="review_task_type_id" />
                 </xpath>
             </data>
         </field>
