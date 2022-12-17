@@ -22,6 +22,17 @@
                     <field name="toc_analysis" />
                     <field name="toc_result" />
                 </group>
+                <group name="header_ra2203" colspan="1" col="2" string="RA.220.3">
+                    <field
+                            name="significant_account_rely_on_control"
+                            string="Rely On Control"
+                        />
+                    <field
+                            name="significant_account_toc_analysis"
+                            string="ToC Analysis"
+                        />
+                    <field name="significant_account_toc_result" string="ToC Result" />
+                </group>
             </xpath>
         </data>
     </field>
