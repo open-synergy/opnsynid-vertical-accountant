@@ -109,6 +109,30 @@ class WS210AccountInherentRisk(models.Model):
             ("high", "High"),
         ],
     )
+    inherent_risk = fields.Selection(
+        string="Inherent Risk",
+        selection=[
+            ("low", "Low"),
+            ("medium", "Medium"),
+            ("high", "High"),
+        ],
+        compute="_compute_risk",
+        store=True,
+    )
+    significant_risk = fields.Boolean(
+        string="Significant Risk",
+        compute="_compute_risk",
+        inverse="_inverse_to_standard_detail",
+        store=True,
+    )
+
+    other_significant_risk_factor = fields.Boolean(
+        string="Other Significant Risk Factor",
+        default=False,
+    )
+    note = fields.Char(
+        string="Note",
+    )
 
     @api.depends(
         "likelihood_risk_occuring",
@@ -146,26 +170,11 @@ class WS210AccountInherentRisk(models.Model):
             record.inherent_risk = inherent_risk
             record.significant_risk = significant_risk
 
-    inherent_risk = fields.Selection(
-        string="Inherent Risk",
-        selection=[
-            ("low", "Low"),
-            ("medium", "Medium"),
-            ("high", "High"),
-        ],
-        compute="_compute_risk",
-        store=True,
-    )
-    significant_risk = fields.Boolean(
-        string="Significant Risk",
-        compute="_compute_risk",
-        store=True,
-    )
-
-    other_significant_risk_factor = fields.Boolean(
-        string="Other Significant Risk Factor",
-        default=False,
-    )
-    note = fields.Char(
-        string="Note",
-    )
+    def _inverse_to_standard_detail(self):
+        for record in self:
+            record.standard_detail_id.write(
+                {
+                    "inherent_risk": self.inherent_risk,
+                    "significant_risk": self.significant_risk,
+                }
+            )

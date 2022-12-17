@@ -4,7 +4,7 @@
 # pylint: disable=locally-disabled, manifest-required-author
 {
     "name": "General Audit Worksheet RA.210",
-    "version": "14.0.1.2.0",
+    "version": "14.0.1.3.0",
     "website": "https://simetri-sinergi.id",
     "author": "OpenSynergy Indonesia, PT. Simetri Sinergi Indonesia",
     "license": "LGPL-3",
@@ -23,6 +23,7 @@
         "data/approval_template_data.xml",
         "data/accountant_general_audit_worksheet_type_data.xml",
         "data/accountant_general_audit_worksheet_conclusion_data.xml",
+        "views/accountant_general_audit_standard_detail_views.xml",
         "views/ws_ra210_views.xml",
         "views/ws_ra210_account_inherent_risk_views.xml",
     ],
