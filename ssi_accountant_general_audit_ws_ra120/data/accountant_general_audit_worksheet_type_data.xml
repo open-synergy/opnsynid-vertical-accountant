@@ -16,7 +16,7 @@
 
 <record id="worksheet_type_ra1201" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.120.1</field>
-    <field name="name">Account Mapping</field>
+    <field name="name">Trial balance</field>
     <field name="sequence" eval="14000" />
     <field
                 name="category_id"
@@ -28,7 +28,7 @@
     <field name="code">RA.120.2</field>
     <field
                 name="name"
-            >Perbandingan saldo awal tahun ini dengan saldo akhir tahun lalu</field>
+            >Comparison of the balance at the beginning of the year with the balance at the end of last year</field>
     <field name="sequence" eval="14000" />
     <field
                 name="category_id"
@@ -38,7 +38,9 @@
 
 <record id="worksheet_type_ra1203" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.120.3</field>
-    <field name="name">Perbandingan data TB vs GL vs SL</field>
+    <field
+                name="name"
+            >Comparison of trial balance, general ledger, and subsidiary ledger</field>
     <field name="sequence" eval="14000" />
     <field
                 name="category_id"
@@ -48,7 +50,7 @@
 
 <record id="worksheet_type_ra1204" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.120.4</field>
-    <field name="name">Pengecekan saldo extrapolasi</field>
+    <field name="name">Extrapolation balance checking</field>
     <field name="sequence" eval="14000" />
     <field
                 name="category_id"
