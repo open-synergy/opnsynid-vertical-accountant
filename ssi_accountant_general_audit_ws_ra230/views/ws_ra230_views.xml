@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="ws_ra230_view_search" model="ir.ui.view">
+        <field name="name">ws_ra230 search</field>
+        <field name="model">ws_ra230</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_ra230_view_tree" model="ir.ui.view">
+        <field name="name">ws_ra230 tree</field>
+        <field name="model">ws_ra230</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_tree"
+        />
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_ra230_view_form" model="ir.ui.view">
+        <field name="name">ws_ra230 form</field>
+        <field name="model">ws_ra230</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_form"
+        />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//page[1]" position="before">
+                    <page name="romm" string="ROMM">
+                        <group
+                            name="romm_1"
+                            colspan="4"
+                            col="2"
+                            string="Financial Statement Level"
+                        >
+                            <field name="risk_material_missstatement" />
+                            <field name="auditor_respons" />
+                        </group>
+                        <group
+                            name="romm_2"
+                            colspan="4"
+                            col="2"
+                            string="Assersion Level"
+                        >
+                        </group>
+                        <field name="account_assersion_romm_ids" force_save="1">
+                            <tree editable="top" delete="false">
+                                <field name="sequence" invisible="1" />
+                                <field name="type_id" />
+                                <field
+                                    name="pr_assersion_type_ids"
+                                    string="Assersion Types"
+                                    widget="many2many_tags"
+                                />
+                                <field name="romm" string="ROMM" />
+                                <field
+                                    name="planned_response_analytic_procedure"
+                                    string="AP"
+                                />
+                                <field name="planned_response_tod" string="ToD" />
+                                <field name="planned_response_interim" string="I" />
+                                <field name="planned_response_ye" string="YE" />
+                            </tree>
+                            <form>
+                                <group name="romm_3" colspan="4" col="2">
+                                    <group name="romm_3_1" colspan="1" col="2">
+                                        <field name="sequence" />
+                                        <field
+                                            name="standard_detail_id"
+                                            invisible="1"
+                                        />
+                                        <field name="type_id" />
+                                        <field name="currency_id" invisible="1" />
+                                    </group>
+                                    <group name="romm_3_2" colspan="1" col="2">
+                                        <field
+                                            name="pr_assersion_type_ids"
+                                            widget="many2many_tags"
+                                        />
+                                        <field name="romm" />
+                                        <field
+                                            name="planned_response_analytic_procedure"
+                                            string="AP"
+                                        />
+                                        <field
+                                            name="planned_response_tod"
+                                            string="ToD"
+                                        />
+                                        <field
+                                            name="planned_response_interim"
+                                            string="I"
+                                        />
+                                        <field name="planned_response_ye" string="YE" />
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_ra230_action" model="ir.actions.act_window">
+        <field name="name">RA.230</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ws_ra230</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="ws_ra230_menu"
+        name="RA.230"
+        parent="ssi_accountant_general_audit.menu_general_audit_risk_assesment"
+        action="ws_ra230_action"
+        sequence="2300"
+        groups="accountant_general_audit_ws_ra230_viewer_group"
+    />
+
+
+</odoo>

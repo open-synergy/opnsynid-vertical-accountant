@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_accountant_general_audit_ws_ra230_all,accountant.general_audit_ws_ra230 - all,model_ws_ra230,,1,0,0,0
+access_accountant_general_audit_ws_ra230_viewer,accountant.general_audit_ws_ra230 - viewer,model_ws_ra230,accountant_general_audit_ws_ra230_viewer_group,1,0,0,0
+access_accountant_general_audit_ws_ra230_user,accountant.general_audit_ws_ra230 - user,model_ws_ra230,accountant_general_audit_ws_ra230_user_group,1,1,1,1
+access_ws_ra230_account_all,ws_ra230.account_assersion_level_romm - all,model_ws_ra230_account_assersion_level_romm,,1,0,0,0
+access_ws_ra230_account_viewer,ws_ra230.account_assersion_level_romm - viewer,model_ws_ra230_account_assersion_level_romm,accountant_general_audit_ws_ra230_viewer_group,1,0,0,0
+access_ws_ra230_account_user,ws_ra230.account_assersion_level_romm - user,model_ws_ra230_account_assersion_level_romm,accountant_general_audit_ws_ra230_user_group,1,1,1,1
