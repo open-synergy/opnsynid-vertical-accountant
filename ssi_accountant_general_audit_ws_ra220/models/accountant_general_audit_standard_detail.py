@@ -57,3 +57,41 @@ class AccountantGeneralAuditStandardDetail(models.Model):
         compute="_compute_toc_result",
         store=True,
     )
+
+    # RA.230.3
+    significant_account_rely_on_control = fields.Boolean(
+        string="significant_account - Rely on Control",
+        default=False,
+    )
+    significant_account_toc_analysis = fields.Selection(
+        string="ToC Analysis",
+        selection=[
+            ("effective", "Effective"),
+            ("not_effective", "Not Effective"),
+            ("not_exist", "Not Exist"),
+        ],
+    )
+
+    @api.depends(
+        "significant_account_rely_on_control",
+        "significant_account_toc_analysis",
+    )
+    def _compute_significant_account_toc_result(self):
+        for record in self:
+            result = "high"
+            if (
+                record.significant_account_rely_on_control
+                and record.significant_account_toc_analysis == "effective"
+            ):
+                result = "low"
+            record.significant_account_toc_result = result
+
+    significant_account_toc_result = fields.Selection(
+        string="ToC Result",
+        selection=[
+            ("low", "Low"),
+            ("high", "High"),
+        ],
+        compute="_compute_significant_account_toc_result",
+        store=True,
+    )

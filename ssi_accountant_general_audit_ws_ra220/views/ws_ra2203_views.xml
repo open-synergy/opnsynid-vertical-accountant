@@ -42,6 +42,53 @@
         />
         <field name="arch" type="xml">
             <data>
+                <xpath expr="//page[1]" position="before">
+                    <page name="control" string="Significant Account Control">
+                        <field name="account_cycle_ids">
+                            <tree create="true" delete="false">
+                                <field name="sequence" invisible="1" />
+                                <field name="standard_detail_id" invisible="1" />
+                                <field name="type_id" />
+                                <field name="rely_on_control" />
+                                <field name="toc_analysis" />
+                                <field name="toc_result" />
+                            </tree>
+                            <form>
+                                <group name="control_1" colspan="4" col="2">
+                                    <field name="sequence" invisible="1" />
+                                    <field name="standard_detail_id" invisible="1" />
+                                    <field name="type_id" />
+                                    <field name="rely_on_control" />
+                                    <field name="toc_analysis" />
+                                    <field name="toc_result" force_save="1" />
+                                </group>
+                                <field name="control_activity_ids">
+                                    <tree>
+                                        <field name="sequence" widget="handle" />
+                                        <field name="name" />
+                                        <field name="risk_identification" />
+                                        <field name="what_can_go_wrong" />
+                                        <field name="activity_control_documentation" />
+                                    </tree>
+                                    <form>
+                                        <group name="cycle_1" colspan="4" col="2">
+                                            <field name="sequence" />
+                                            <field name="name" />
+                                            <field name="risk_identification" />
+                                            <field name="what_can_go_wrong" />
+                                            <field
+                                                name="activity_control_documentation"
+                                            />
+                                        </group>
+                                    </form>
+                                </field>
+                            </form>
+
+
+
+                        </field>
+                    </page>
+                </xpath>
             </data>
         </field>
     </record>
