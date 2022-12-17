@@ -93,6 +93,7 @@
                     <group name="header1" colspan="1" col="2">
                         <field name="sequence" />
                         <field name="type_id" />
+                        <field name="standard_detail_id" />
                         <field name="currency_id" invisible="1" />
                     </group>
                     <group name="header2" colspan="1" col="2">
@@ -151,9 +152,9 @@
                         <field name="fraud_risk" />
                         <field name="likelihood_risk_occuring" />
                         <field name="impact_of_risk" />
-                        <field name="inherent_risk" />
+                        <field name="inherent_risk" force_save="1" />
                         <field name="other_significant_risk_factor" />
-                        <field name="significant_risk" />
+                        <field name="significant_risk" force_save="1" />
                     </group>
                 </group>
                 <group name="footer" colspan="4" col="2">
