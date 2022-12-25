@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<record id="accountant_general_audit_detail_view_search" model="ir.ui.view">
+    <field name="name">accountant.general_audit_detail - search</field>
+    <field name="model">accountant.general_audit_detail</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <search />
+    </field>
+</record>
+
+<record id="accountant_general_audit_detail_view_tree" model="ir.ui.view">
+    <field name="name">accountant.general_audit_detail - tree</field>
+    <field name="model">accountant.general_audit_detail</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <tree editable="top" delete="false">
+            <field name="sequence" invisible="1" />
+            <field name="account_id" />
+            <field name="type_id" />
+            <field name="home_line_id" invisible="1" />
+            <field name="interim_line_id" invisible="1" />
+            <field name="previous_line_id" invisible="1" />
+            <field name="currency_id" invisible="1" />
+            <field name="interim_balance" string="Interim" />
+            <field name="home_statement_balance" string="Home Statement" />
+            <field name="previous_balance" string="Previous" />
+        </tree>
+    </field>
+</record>
+
+<record id="accountant_general_audit_detail_view_form" model="ir.ui.view">
+    <field name="name">accountant.general_audit_detail - form</field>
+    <field name="model">accountant.general_audit_detail</field>
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group name="header" colspan="4" col="2">
+                    <group name="header1" colspan="1" col="2">
+                        <field name="sequence" />
+                        <field name="account_id" />
+                        <field name="type_id" />
+                        <field name="currency_id" invisible="1" />
+                    </group>
+                    <group name="header2" colspan="1" col="2">
+                        <field name="interim_balance" string="Interim" />
+                        <field name="home_statement_balance" string="Home Statement" />
+                        <field name="previous_balance" string="Previous" />
+                    </group>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+</odoo>

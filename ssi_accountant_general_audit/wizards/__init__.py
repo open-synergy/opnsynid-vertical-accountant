@@ -4,4 +4,5 @@
 
 from . import (
     import_trial_balance_detail,
+    import_client_account,
 )

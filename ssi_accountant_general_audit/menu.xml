@@ -3,11 +3,10 @@
      Copyright 2022 PT. Simetri Sinergi Indonesia
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
 <odoo>
-
     <menuitem
         id="menu_accountant_report_general_audit"
         name="General Audit"
-        parent="ssi_accountant.menu_root_accountant"
+        web_icon="ssi_accountant_general_audit,static/description/icon.png"
         sequence="50"
     />
 
@@ -39,26 +38,40 @@
         sequence="40"
     />
 
+    <menuitem
+        id="menu_accountant_general_audit_report"
+        name="Report"
+        parent="menu_accountant_report_general_audit"
+        sequence="98"
+    />
+
+    <menuitem
+        id="menu_accountant_general_audit_configuration"
+        name="Configuration"
+        parent="menu_accountant_report_general_audit"
+        sequence="99"
+    />
+
 
     <menuitem
         id="menu_accountant_configuration_general_audit"
         name="General Audit"
         sequence="101"
-        parent="ssi_accountant.menu_accountant_configuration"
+        parent="menu_accountant_general_audit_configuration"
     />
 
     <menuitem
         id="menu_accountant_configuration_trial_balance"
         name="Trial Balance"
         sequence="102"
-        parent="ssi_accountant.menu_accountant_configuration"
+        parent="menu_accountant_general_audit_configuration"
     />
 
     <menuitem
         id="menu_accountant_configuration_worksheet"
         name="Worksheet"
         sequence="103"
-        parent="ssi_accountant.menu_accountant_configuration"
+        parent="menu_accountant_general_audit_configuration"
     />
 
 

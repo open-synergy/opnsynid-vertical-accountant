@@ -4,7 +4,7 @@
 # pylint: disable=locally-disabled, manifest-required-author
 {
     "name": "Accountant General Audit",
-    "version": "14.0.2.0.0",
+    "version": "14.0.2.1.0",
     "category": "Administration",
     "website": "https://simetri-sinergi.id",
     "author": "OpenSynergy Indonesia, PT. Simetri Sinergi Indonesia",
@@ -36,6 +36,7 @@
         "data/accountant_general_audit_worksheet_type_category_data.xml",
         "menu.xml",
         "wizards/import_trial_balance_detail.xml",
+        "wizards/import_client_account.xml",
         "views/accountant_audit_standard_views.xml",
         "views/accountant_audit_standard_item_views.xml",
         "views/accountant_general_audit_opinion_views.xml",
@@ -47,6 +48,7 @@
         "views/accountant_general_audit_worksheet_type_category_views.xml",
         "views/accountant_general_audit_worksheet_type_views.xml",
         "views/accountant_general_audit_worksheet_conclusion_views.xml",
+        "views/accountant_general_audit_detail_views.xml",
         "views/accountant_general_audit_standard_detail_views.xml",
         "views/accountant_general_audit_group_detail_views.xml",
         "views/accountant_general_audit_computation_views.xml",

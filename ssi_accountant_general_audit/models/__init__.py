@@ -21,6 +21,7 @@ from . import (
     accountant_general_audit_worksheet_type,
     accountant_general_audit_worksheet_conclusion,
     accountant_general_audit,
+    accountant_general_audit_detail,
     accountant_general_audit_standard_detail,
     accountant_general_audit_group_detail,
     accountant_general_audit_computation,

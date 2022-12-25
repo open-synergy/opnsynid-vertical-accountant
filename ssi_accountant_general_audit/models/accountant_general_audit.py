@@ -406,6 +406,21 @@ class AccountantGeneralAudit(models.Model):
         compute="_compute_trial_balance_id",
         store=True,
     )
+    detail_ids = fields.One2many(
+        string="Detail",
+        comodel_name="accountant.general_audit_detail",
+        inverse_name="general_audit_id",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+            "open": [
+                ("readonly", False),
+            ],
+        },
+        copy=False,
+    )
     standard_detail_ids = fields.One2many(
         string="Standard Detail",
         comodel_name="accountant.general_audit_standard_detail",
@@ -490,43 +505,43 @@ class AccountantGeneralAudit(models.Model):
     def onchange_project_id(self):
         self.project_id = False
 
-    @api.onchange("account_type_set_id")
-    def onchange_standard_detail_ids(self):
-        self.update({"standard_detail_ids": [(5, 0, 0)]})
-        if self.account_type_set_id:
-            result = []
-            for detail in self.account_type_set_id.detail_ids:
-                result.append(
-                    (
-                        0,
-                        0,
-                        {
-                            "sequence": detail.sequence,
-                            "type_id": detail.id,
-                        },
-                    )
-                )
-            self.update({"standard_detail_ids": result})
+    # @api.onchange("account_type_set_id")
+    # def onchange_standard_detail_ids(self):
+    #     self.update({"standard_detail_ids": [(5, 0, 0)]})
+    #     if self.account_type_set_id:
+    #         result = []
+    #         for detail in self.account_type_set_id.detail_ids:
+    #             result.append(
+    #                 (
+    #                     0,
+    #                     0,
+    #                     {
+    #                         "sequence": detail.sequence,
+    #                         "type_id": detail.id,
+    #                     },
+    #                 )
+    #             )
+    #         self.update({"standard_detail_ids": result})
 
-    @api.onchange("account_type_set_id")
-    def onchange_group_detail_ids(self):
-        self.update({"group_detail_ids": [(5, 0, 0)]})
-        AccountGroup = self.env["accountant.client_account_group"]
-        if self.account_type_set_id:
-            result = []
-            criteria = []
-            for detail in AccountGroup.search(criteria):
-                result.append(
-                    (
-                        0,
-                        0,
-                        {
-                            "sequence": detail.sequence,
-                            "group_id": detail.id,
-                        },
-                    )
-                )
-            self.update({"group_detail_ids": result})
+    # @api.onchange("account_type_set_id")
+    # def onchange_group_detail_ids(self):
+    #     self.update({"group_detail_ids": [(5, 0, 0)]})
+    #     AccountGroup = self.env["accountant.client_account_group"]
+    #     if self.account_type_set_id:
+    #         result = []
+    #         criteria = []
+    #         for detail in AccountGroup.search(criteria):
+    #             result.append(
+    #                 (
+    #                     0,
+    #                     0,
+    #                     {
+    #                         "sequence": detail.sequence,
+    #                         "group_id": detail.id,
+    #                     },
+    #                 )
+    #             )
+    #         self.update({"group_detail_ids": result})
 
     @api.onchange("account_type_set_id")
     def onchange_computation_ids(self):
@@ -698,3 +713,57 @@ class AccountantGeneralAudit(models.Model):
                 }
             )
         return result
+
+    def action_reload_account(self):
+        for record in self.sudo():
+            record._reload_account()
+
+    def _reload_account(self):
+        self.ensure_one()
+        Account = self.env["accountant.client_account"]
+        Detail = self.env["accountant.general_audit_detail"]
+        criteria = [
+            ("partner_id", "=", self.partner_id.id),
+        ]
+        for account in Account.search(criteria):
+            Detail.create(
+                {
+                    "general_audit_id": self.id,
+                    "account_id": account.id,
+                }
+            )
+
+    def action_reload_standard_account(self):
+        for record in self.sudo():
+            record._reload_standard_account()
+
+    def _reload_standard_account(self):
+        self.ensure_one()
+        standard_details = self.detail_ids.mapped("account_id.type_id")
+        StandardDetail = self.env["accountant.general_audit_standard_detail"]
+        self.standard_detail_ids.unlink()
+        for standard_detail in standard_details:
+            StandardDetail.create(
+                {
+                    "general_audit_id": self.id,
+                    "type_id": standard_detail.id,
+                }
+            )
+        self._reload_group_account()
+
+    def action_reload_group_account(self):
+        for record in self.sudo():
+            record._reload_group_account()
+
+    def _reload_group_account(self):
+        self.ensure_one()
+        groups = self.detail_ids.mapped("account_id.type_id.group_id")
+        Group = self.env["accountant.general_audit_group_detail"]
+        self.group_detail_ids.unlink()
+        for group in groups:
+            Group.create(
+                {
+                    "general_audit_id": self.id,
+                    "group_id": group.id,
+                }
+            )
