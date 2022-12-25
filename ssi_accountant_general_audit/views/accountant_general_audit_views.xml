@@ -133,6 +133,41 @@
                         </group>
                     </page>
                     <page name="account_computation" string="Account &amp; Computation">
+                        <button
+                            name="action_reload_account"
+                            string="Reload"
+                            type="object"
+                            icon="fa-refresh"
+                            class="oe_highlight"
+                            style="margin-right:4px"
+                            attrs="{'invisible':[('state','not in',['draft','open'])]}"
+                        />
+                        <button
+                            name="%(import_client_account_action)s"
+                            type="action"
+                            string="Import"
+                            class="oe_highlight"
+                            icon="fa-download"
+                            attrs="{'invisible':[('state','not in',['draft','open'])]}"
+                        />
+                        <field
+                            name="detail_ids"
+                            colspan="1"
+                            col="2"
+                            nolabel="1"
+                            force_save="1"
+                            context="{'default_partner_id': partner_id}"
+                        />
+
+                        <button
+                            name="action_reload_standard_account"
+                            string="Reload"
+                            type="object"
+                            icon="fa-refresh"
+                            class="oe_highlight"
+                            style="margin-right:4px"
+                            attrs="{'invisible':[('state','not in',['draft','open'])]}"
+                        />
                         <field
                             name="standard_detail_ids"
                             colspan="1"
