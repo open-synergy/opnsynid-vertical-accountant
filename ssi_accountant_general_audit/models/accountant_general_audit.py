@@ -725,6 +725,7 @@ class AccountantGeneralAudit(models.Model):
         criteria = [
             ("partner_id", "=", self.partner_id.id),
         ]
+        self.detail_ids.unlink()
         for account in Account.search(criteria):
             Detail.create(
                 {
