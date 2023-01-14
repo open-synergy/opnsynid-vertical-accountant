@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<!-- General Audit Worksheet RR.110 -->
+<record id="general_audit_ws_rr110_workflow_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RR.110</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_rr110_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RR.110</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RR.110.1 -->
+<record
+        id="general_audit_ws_rr1101_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RR.110.1</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_rr1101_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RR.110.1</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+<!-- General Audit Worksheet RR.110.2 -->
+<record
+        id="general_audit_ws_rr1102_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">General Audit Worksheet RR.110.2</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record id="general_audit_ws_rr1102_data_module_category" model="ir.module.category">
+    <field name="name">General Audit Worksheet RR.110.2</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+</odoo>
