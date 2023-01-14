@@ -21,6 +21,10 @@ class AccountantGeneralAuditComputation(models.Model):
         comodel_name="accountant.trial_balance_computation_item",
         required=True,
     )
+    sequence = fields.Integer(
+        string="Sequence",
+        related="computation_item_id.sequence",
+    )
 
     @api.depends(
         "general_audit_id",
