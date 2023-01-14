@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2020 OpenSynergy Indonesia
+     Copyright 2020 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+<data>
+<!-- RR.110 -->
+<record id="conslusion_rr110_001" model="accountant.general_audit_worksheet_conclusion">
+    <field name="code">RR.110-001</field>
+    <field name="name">Lead schedule sudah memadai</field>
+    <field name="type_id" ref="worksheet_type_rr110" />
+</record>
+
+<record id="conslusion_rr110_002" model="accountant.general_audit_worksheet_conclusion">
+    <field name="code">RR.110-002</field>
+    <field name="name">Lead schedule kurang memadai</field>
+    <field name="type_id" ref="worksheet_type_rr110" />
+</record>
+
+<!-- RR.110.1 -->
+<record
+            id="conslusion_rr1101_001"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RR.110.1-001</field>
+    <field name="name">Analytical procedures atas akun ini telah dilakukan</field>
+    <field name="type_id" ref="worksheet_type_rr1101" />
+</record>
+
+<record
+            id="conslusion_rr1101_002"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RR.110.1-002</field>
+    <field name="name">Analytical procedures atas akun ini belum dilakukan</field>
+    <field name="type_id" ref="worksheet_type_rr1101" />
+</record>
+
+<!-- RR.110.2 -->
+<record
+            id="conslusion_rr1102_001"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RR.110.2-001</field>
+    <field name="name">Prosedur audit untuk akun ini telah ditetapkan</field>
+    <field name="type_id" ref="worksheet_type_rr1101" />
+</record>
+
+<record
+            id="conslusion_rr1102_002"
+            model="accountant.general_audit_worksheet_conclusion"
+        >
+    <field name="code">RR.110.2-002</field>
+    <field name="name">Prosedur audit untuk akun ini belum ditetapkan</field>
+    <field name="type_id" ref="worksheet_type_rr1101" />
+</record>
+
+
+</data>
+</odoo>

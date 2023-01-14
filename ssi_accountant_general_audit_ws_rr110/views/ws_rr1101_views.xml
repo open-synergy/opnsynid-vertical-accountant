@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+
+    <record id="ws_rr1101_view_search" model="ir.ui.view">
+        <field name="name">ws_rr1101 search</field>
+        <field name="model">ws_rr1101</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_search"
+        />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_rr1101_view_tree" model="ir.ui.view">
+        <field name="name">ws_rr1101 tree</field>
+        <field name="model">ws_rr1101</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_tree"
+        />
+        <field name="arch" type="xml">
+            <data>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_rr1101_view_form" model="ir.ui.view">
+        <field name="name">ws_rr1101 form</field>
+        <field name="model">ws_rr1101</field>
+        <field name="mode">primary</field>
+        <field
+            name="inherit_id"
+            ref="ssi_accountant_general_audit.accountant_general_audit_worksheet_mixin_view_form"
+        />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//group[@name='header_center']" position="inside">
+                    <field name="balance_type" />
+                    <field
+                        name="standard_detail_id"
+                        domain="[('general_audit_id','=',general_audit_id)]"
+                    />
+                    <field name="account_type_id" invisible="1" />
+                    <field name="result" />
+                    <field name="balance" />
+                    <field name="previous_balance" />
+                </xpath>
+                <xpath expr="//page[1]" position="before">
+                    <page name="comparison" string="Comparisons">
+                        <separator string="Accounts" colspan="4" col="2" />
+                        <field name="account_comparison_ids" force_save="1">
+                            <tree editable="top" create="false" delete="false">
+                                <field name="sequence" invisible="1" />
+                                <field name="currency_id" invisible="1" />
+                                <field
+                                    name="detail_id"
+                                    domain="[('type_id','=',parent.account_type_id)]"
+                                />
+                                <field name="balance" />
+                                <field name="balance_percentage" string="%-age" />
+                                <field name="previous_balance" />
+                                <field name="previous_percentage" string="%-age" />
+                                <field name="conclusion" />
+                            </tree>
+                            <form>
+                                <group name="account_comparison" colspan="4" col="2">
+                                    <field name="sequence" invisible="1" />
+                                    <field name="currency_id" invisible="1" />
+                                    <field name="detail_id" />
+                                    <field name="balance" />
+                                    <field name="balance_percentage" string="%-age" />
+                                    <field name="previous_balance" />
+                                    <field name="previous_percentage" string="%-age" />
+                                    <field name="conclusion" />
+                                </group>
+                            </form>
+                        </field>
+                        <separator string="Computations" colspan="4" col="2" />
+                        <field name="computation_comparison_ids" force_save="1">
+                            <tree editable="top" create="false" delete="false">
+                                <field name="sequence" invisible="1" />
+                                <field name="currency_id" invisible="1" />
+                                <field name="computation_id" />
+                                <field
+                                    name="balance"
+                                    widget="monetary"
+                                    options="{'currency_field':'currency_id'}"
+                                />
+                                <field name="balance_percentage" string="%-age" />
+                                <field
+                                    name="previous_balance"
+                                    options="{'currency_field':'currency_id'}"
+                                />
+                                <field name="previous_percentage" string="%-age" />
+                                <field name="conclusion" />
+                            </tree>
+                            <form>
+                                <group name="account_comparison" colspan="4" col="2">
+                                    <field name="sequence" invisible="1" />
+                                    <field name="currency_id" invisible="1" />
+                                    <field name="computation_id" />
+                                    <field name="balance" />
+                                    <field name="balance_percentage" string="%-age" />
+                                    <field name="previous_balance" />
+                                    <field name="previous_percentage" string="%-age" />
+                                    <field name="conclusion" />
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                    <page name="account" string="Accounts">
+                        <field name="account_ids" force_save="1">
+                            <tree editable="top" create="false" delete="false">
+                                <field name="sequence" invisible="1" />
+                                <field name="currency_id" invisible="1" />
+                                <field name="detail_id" />
+                                <field name="balance" />
+                                <field
+                                    name="balance_vertical_analysis"
+                                    string="Vertical Analysis"
+                                />
+                                <field name="previous_balance" />
+                                <field
+                                    name="previous_vertical_analysis"
+                                    string="Vertical Analysis"
+                                />
+                                <field name="percentage" string="%-age" />
+                                <field name="year_end_prediction" />
+                                <field
+                                    name="year_end_prediction_percentage"
+                                    string="%-age"
+                                />
+                                <field name="year_end_detail_control" />
+                                <field
+                                    name="year_end_detail_control_percentage"
+                                    string="%-age"
+                                />
+                                <field name="conclusion" />
+                            </tree>
+                            <form>
+                                <group name="account" colspan="4" col="2">
+                                    <field name="sequence" invisible="1" />
+                                    <field name="detail_id" />
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="ws_rr1101_action" model="ir.actions.act_window">
+        <field name="name">RR.110.1</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ws_rr1101</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="ws_rr1101_menu"
+        name="RR.110.1"
+        parent="ssi_accountant_general_audit.menu_general_audit_risk_responses"
+        action="ws_rr1101_action"
+        sequence="11010"
+        groups="accountant_general_audit_ws_rr1101_viewer_group"
+    />
+
+
+</odoo>

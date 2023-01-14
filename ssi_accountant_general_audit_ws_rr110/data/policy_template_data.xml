@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<data noupdate="1">
+<!-- RR.110 -->
+<record id="policy_template_rr110" model="policy.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_rr110" />
+    <field
+                name="state_field_id"
+                search="[('model_id.model','=','ws_rr110'),('name','=','state')]"
+            />
+    <field name="sequence" eval="100" />
+    <field name="python_code">result=True</field>
+</record>
+
+<!-- RR.110: Start -->
+<record id="policy_template_rr110_open" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr110" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr110'),('name','=','open_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr110'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr110_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110: Confirm -->
+<record id="policy_template_rr110_confirm" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr110" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr110'),('name','=','confirm_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr110'),('value','=','open')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr110_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110: Cancel -->
+<record id="policy_template_rr110_cancel" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr110" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr110'),('name','=','cancel_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr110'),('value','in',['draft','open','done'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr110_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110: Restart -->
+<record id="policy_template_rr110_restart" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr110" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr110'),('name','=','restart_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr110'),('value','in',['cancel','reject'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr110_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110: Reject -->
+<record id="policy_template_rr110_reject" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr110" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr110'),('name','=','reject_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr110'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  RR.110: Approve -->
+<record id="policy_template_rr110_approve" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr110" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr110'),('name','=','approve_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr110'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  RR.110: Manual Number -->
+<record id="policy_template_rr110_manual_number" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr110" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr110'),('name','=','manual_number_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr110'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr110_validator_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!-- RR.110.1 -->
+<record id="policy_template_rr1101" model="policy.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_rr1101" />
+    <field
+                name="state_field_id"
+                search="[('model_id.model','=','ws_rr1101'),('name','=','state')]"
+            />
+    <field name="sequence" eval="100" />
+    <field name="python_code">result=True</field>
+</record>
+
+<!-- RR.110.1: Start -->
+<record id="policy_template_rr1101_open" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1101" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1101'),('name','=','open_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1101'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr1101_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110.1: Confirm -->
+<record id="policy_template_rr1101_confirm" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1101" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1101'),('name','=','confirm_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1101'),('value','=','open')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr1101_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110.1: Cancel -->
+<record id="policy_template_rr1101_cancel" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1101" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1101'),('name','=','cancel_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1101'),('value','in',['draft','open','done'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr1101_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110.1: Restart -->
+<record id="policy_template_rr1101_restart" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1101" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1101'),('name','=','restart_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1101'),('value','in',['cancel','reject'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr1101_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110.1: Reject -->
+<record id="policy_template_rr1101_reject" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1101" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1101'),('name','=','reject_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1101'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  RR.110.1: Approve -->
+<record id="policy_template_rr1101_approve" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1101" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1101'),('name','=','approve_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1101'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  RR.110.1: Manual Number -->
+<record id="policy_template_rr1101_manual_number" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1101" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1101'),('name','=','manual_number_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1101'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr1101_validator_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!-- RR.110.2 -->
+<record id="policy_template_rr1102" model="policy.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_ws_rr1102" />
+    <field
+                name="state_field_id"
+                search="[('model_id.model','=','ws_rr1102'),('name','=','state')]"
+            />
+    <field name="sequence" eval="100" />
+    <field name="python_code">result=True</field>
+</record>
+
+<!-- RR.110.2: Start -->
+<record id="policy_template_rr1102_open" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1102" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1102'),('name','=','open_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1102'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr1102_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110.2: Confirm -->
+<record id="policy_template_rr1102_confirm" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1102" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1102'),('name','=','confirm_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1102'),('value','=','open')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr1102_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110.2: Cancel -->
+<record id="policy_template_rr1102_cancel" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1102" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1102'),('name','=','cancel_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1102'),('value','in',['draft','open','done'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr1102_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110.2: Restart -->
+<record id="policy_template_rr1102_restart" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1102" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1102'),('name','=','restart_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1102'),('value','in',['cancel','reject'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr1102_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<!--  RR.110.2: Reject -->
+<record id="policy_template_rr1102_reject" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1102" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1102'),('name','=','reject_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1102'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  RR.110.2: Approve -->
+<record id="policy_template_rr1102_approve" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1102" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1102'),('name','=','approve_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1102'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!--  RR.110.2: Manual Number -->
+<record id="policy_template_rr1102_manual_number" model="policy.template_detail">
+    <field name="template_id" ref="policy_template_rr1102" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','ws_rr1102'),('name','=','manual_number_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','ws_rr1102'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_general_audit_ws_rr1102_validator_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+</data>
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0-standalone.html). -->
+<odoo>
+<data noupdate="1">
+<record id="sequence_ws_rr110" model="ir.sequence">
+    <field name="name">General Audit Worksheet RR.110</field>
+    <field name="code">accountant.general_audit_ws_rr110</field>
+    <field name="padding">6</field>
+    <field name="prefix">RR.110/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_rr1101" model="ir.sequence">
+    <field name="name">General Audit Worksheet RR.110.1</field>
+    <field name="code">accountant.general_audit_ws_rr1101</field>
+    <field name="padding">6</field>
+    <field name="prefix">RR.110.1/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+
+<record id="sequence_ws_rr1102" model="ir.sequence">
+    <field name="name">General Audit Worksheet RR.110.2</field>
+    <field name="code">accountant.general_audit_ws_rr1102</field>
+    <field name="padding">6</field>
+    <field name="prefix">RR.110.2/%(range_year)s/</field>
+    <field eval="1" name="number_next" />
+    <field eval="1" name="number_increment" />
+    <field name="use_date_range" eval="1" />
+</record>
+</data>
+</odoo>
