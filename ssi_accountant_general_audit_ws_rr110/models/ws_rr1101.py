@@ -118,7 +118,7 @@ class WSAuditRA1101(models.Model):
                 result = record.standard_detail_id.interim_balance
             else:
                 result = record.standard_detail_id.home_statement_balance
-            return result
+            record.balance = result
 
     @api.onchange("general_audit_id")
     def onchange_standard_detail_id(self):
