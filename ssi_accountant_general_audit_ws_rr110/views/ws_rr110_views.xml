@@ -42,6 +42,22 @@
         />
         <field name="arch" type="xml">
             <data>
+               <xpath expr="//group[@name='header_center']" position="inside">
+                    <field name="balance_type" />
+                </xpath>
+                <xpath expr="//page[1]" position="before">
+                    <page name="account" string="Worksheets">
+                        <field name="account_ids">
+                            <tree editable="top">
+                                <field name="standard_detail_id" />
+                                <field name="r1101_id" />
+                                <field name="conclusion_id" />
+                                <field name="result" />
+                                <field name="conclusion" />
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
             </data>
         </field>
     </record>

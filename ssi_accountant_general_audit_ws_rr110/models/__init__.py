@@ -4,6 +4,7 @@
 
 from . import (
     ws_rr110,
+    ws_rr110_account,
     ws_rr1101,
     ws_rr1101_account,
     ws_rr1101_account_comparison,

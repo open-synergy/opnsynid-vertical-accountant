@@ -2,6 +2,9 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_accountant_general_audit_ws_rr110_all,accountant.general_audit_ws_rr110 - all,model_ws_rr110,,1,0,0,0
 access_accountant_general_audit_ws_rr110_viewer,accountant.general_audit_ws_rr110 - viewer,model_ws_rr110,accountant_general_audit_ws_rr110_viewer_group,1,0,0,0
 access_accountant_general_audit_ws_rr110_user,accountant.general_audit_ws_rr110 - user,model_ws_rr110,accountant_general_audit_ws_rr110_user_group,1,1,1,1
+access_ws_rr110_account_all,ws_rr110.account - all,model_ws_rr110_account,,1,0,0,0
+access_ws_rr110_account_viewer,ws_rr110.account - viewer,model_ws_rr110_account,accountant_general_audit_ws_rr110_viewer_group,1,0,0,0
+access_ws_rr110_account_user,ws_rr110.account - user,model_ws_rr110_account,accountant_general_audit_ws_rr110_user_group,1,1,1,1
 access_accountant_general_audit_ws_rr1101_all,accountant.general_audit_ws_rr1101 - all,model_ws_rr1101,,1,0,0,0
 access_accountant_general_audit_ws_rr1101_viewer,accountant.general_audit_ws_rr1101 - viewer,model_ws_rr1101,accountant_general_audit_ws_rr1101_viewer_group,1,0,0,0
 access_accountant_general_audit_ws_rr1101_user,accountant.general_audit_ws_rr1101 - user,model_ws_rr1101,accountant_general_audit_ws_rr1101_user_group,1,1,1,1
