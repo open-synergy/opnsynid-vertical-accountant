@@ -93,7 +93,7 @@ class WSRR1101Account(models.Model):
                 result = record.detail_id.interim_balance
             else:
                 result = record.detail_id.home_statement_balance
-            return result
+            record.balance = result
 
     @api.depends(
         "worksheet_id.balance",
