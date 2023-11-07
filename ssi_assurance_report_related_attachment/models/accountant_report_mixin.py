@@ -5,10 +5,10 @@
 from odoo import models
 
 
-class AccountantReportMixin(models.AbstractModel):
-    _name = "accountant.report_mixin"
+class AccountantAssuranceReport(models.Model):
+    _name = "accountant.assurance_report"
     _inherit = [
-        "accountant.report_mixin",
+        "accountant.assurance_report",
         "mixin.related_attachment",
     ]
     _related_attachment_create_page = True
