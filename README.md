@@ -30,6 +30,7 @@ addon | version | maintainers | summary
 [ssi_accountant_general_audit_ws_ra230](ssi_accountant_general_audit_ws_ra230/) | 14.0.1.0.1 |  | General Audit Worksheet RA.230
 [ssi_accountant_general_audit_ws_rr110](ssi_accountant_general_audit_ws_rr110/) | 14.0.1.3.1 |  | General Audit Worksheet RR.110
 [ssi_accountant_report](ssi_accountant_report/) | 14.0.1.0.1 |  | Manage Accountant Report
+[ssi_assurance_report_related_attachment](ssi_assurance_report_related_attachment/) | 14.0.1.0.0 |  | Assurance Report - Related Attachment Integration
 
 [//]: # (end addons)
 
