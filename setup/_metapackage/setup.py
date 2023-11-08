@@ -21,6 +21,7 @@ setuptools.setup(
         'odoo14-addon-ssi_accountant_general_audit_ws_rr110',
         'odoo14-addon-ssi_accountant_report',
         'odoo14-addon-ssi_assurance_report_related_attachment',
+        'odoo14-addon-ssi_non_assurance_report_quality_control',
     ],
     classifiers=[
         'Programming Language :: Python',
