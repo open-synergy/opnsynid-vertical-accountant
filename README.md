@@ -33,6 +33,7 @@ addon | version | maintainers | summary
 [ssi_assurance_report_quality_control](ssi_assurance_report_quality_control/) | 14.0.1.0.0 |  | Assurance Report - Quality Control Integration
 [ssi_assurance_report_related_attachment](ssi_assurance_report_related_attachment/) | 14.0.1.0.0 |  | Assurance Report - Related Attachment Integration
 [ssi_non_assurance_report_quality_control](ssi_non_assurance_report_quality_control/) | 14.0.1.0.0 |  | Non Assurance Report - Quality Control Integration
+[ssi_non_assurance_report_related_attachment](ssi_non_assurance_report_related_attachment/) | 14.0.1.0.0 |  | Accountant Non Assurance Report - Related Attachment Integration
 
 [//]: # (end addons)
 
