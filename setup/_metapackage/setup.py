@@ -23,6 +23,7 @@ setuptools.setup(
         'odoo14-addon-ssi_assurance_report_quality_control',
         'odoo14-addon-ssi_assurance_report_related_attachment',
         'odoo14-addon-ssi_non_assurance_report_quality_control',
+        'odoo14-addon-ssi_non_assurance_report_related_attachment',
     ],
     classifiers=[
         'Programming Language :: Python',
