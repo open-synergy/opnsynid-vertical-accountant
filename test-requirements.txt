@@ -1,2 +1,5 @@
 odoo14-addon-ssi-related-attachment-mixin
 odoo14-addon-ssi-quality-control
+odoo14-addon-ssi-custom-information-mixin
+odoo14-addon-ssi-state-change-constrain-mixin
+odoo14-addon-ssi-status-check-mixin
