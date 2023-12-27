@@ -34,7 +34,7 @@ addon | version | maintainers | summary
 [ssi_assurance_report_quality_control](ssi_assurance_report_quality_control/) | 14.0.1.0.0 |  | Assurance Report - Quality Control Integration
 [ssi_assurance_report_related_attachment](ssi_assurance_report_related_attachment/) | 14.0.1.0.0 |  | Assurance Report - Related Attachment Integration
 [ssi_assurance_report_state_change_constrain](ssi_assurance_report_state_change_constrain/) | 14.0.1.1.0 |  | Assurance Report + State Change Constrain Integration
-[ssi_non_assurance_report_custom_information](ssi_non_assurance_report_custom_information/) | 14.0.1.1.1 |  | Non-Assurance Report + Custom Information Integration
+[ssi_non_assurance_report_custom_information](ssi_non_assurance_report_custom_information/) | 14.0.1.2.0 |  | Non-Assurance Report + Custom Information Integration
 [ssi_non_assurance_report_quality_control](ssi_non_assurance_report_quality_control/) | 14.0.1.0.0 |  | Non Assurance Report - Quality Control Integration
 [ssi_non_assurance_report_related_attachment](ssi_non_assurance_report_related_attachment/) | 14.0.1.0.0 |  | Accountant Non Assurance Report - Related Attachment Integration
 [ssi_non_assurance_report_state_change_constrain](ssi_non_assurance_report_state_change_constrain/) | 14.0.1.1.0 |  | Non Assurance Report + State Change Constrain Integration
