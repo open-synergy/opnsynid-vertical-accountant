@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="accountant_assurance_report_view_form" model="ir.ui.view">
+    <field name="name">accountant.assurance_report - form</field>
+    <field name="model">accountant.assurance_report</field>
+    <field
+            name="inherit_id"
+            ref="ssi_accountant_report.accountant_assurance_report_view_form"
+        />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//page[1]" position="after">
+                <page name="project" string="Project">
+                    <group name="project_1" colspan="4" col="2">
+                        <field
+                                name="project_id"
+                                domain="[('partner_id','=',partner_id)]"
+                            />
+                    </group>
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+</odoo>
