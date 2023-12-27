@@ -6,7 +6,7 @@ from odoo import models
 
 
 class AccountantNonAssuranceReport(models.Model):
-    _name = "accountant.assurance_report"
+    _name = "accountant.nonassurance_report"
     _inherit = [
         "accountant.nonassurance_report",
         "mixin.custom_info",
