@@ -9,10 +9,10 @@ class AccountantReportMixin(models.AbstractModel):
     _name = "accountant.report_mixin"
     _description = "Accountant Report Mixin"
     _inherit = [
-        "mixin.transaction_ready",
-        "mixin.transaction_confirm",
-        "mixin.transaction_done",
         "mixin.transaction_cancel",
+        "mixin.transaction_done",
+        "mixin.transaction_confirm",
+        "mixin.transaction_ready",
         "mixin.date_duration",
     ]
     _order = "date desc, id"
@@ -102,6 +102,30 @@ class AccountantReportMixin(models.AbstractModel):
             ],
         },
     )
+    primary_sector_id = fields.Many2one(
+        string="Primary Sector",
+        required=True,
+        translate=False,
+        readonly=True,
+        comodel_name="res.partner.industry",
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    primary_creditor_id = fields.Many2one(
+        string="Primary Creditor",
+        required=True,
+        translate=False,
+        readonly=True,
+        comodel_name="res.partner",
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     signing_accountant_id = fields.Many2one(
         string="Signing Accountant",
         required=True,
@@ -155,6 +179,48 @@ class AccountantReportMixin(models.AbstractModel):
             ],
         },
     )
+    restatement = fields.Boolean(
+        string="Restatement?",
+        default=False,
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    restatement_option = fields.Selection(
+        string="Restatement Option",
+        selection=[
+            ("manual", "Manual"),
+            ("odoo", "Odoo"),
+        ],
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    restatement_number = fields.Char(
+        string="# Restatement (Manual)",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
+    restatement_id = fields.Many2one(
+        string="# Restatement",
+        comodel_name="accountant.report_mixin",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
     state = fields.Selection(
         string="State",
         required=True,
@@ -171,3 +237,7 @@ class AccountantReportMixin(models.AbstractModel):
         default="draft",
         copy=False,
     )
+
+    @api.onchange("restatement")
+    def onchange_restatement_option(self):
+        self.restatement_option = False

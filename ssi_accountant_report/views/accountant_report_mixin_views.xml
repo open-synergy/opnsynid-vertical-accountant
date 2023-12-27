@@ -44,16 +44,41 @@
     <field name="arch" type="xml">
         <data>
             <xpath expr="//field[@name='user_id']" position="after">
-                <field name="partner_id" />
+                <field name="service_id" />
                 <field name="date" />
+                <field name="partner_id" />
+                <field name="primary_sector_id" />
+                <field name="primary_creditor_id" />
             </xpath>
             <xpath expr="//group[@name='header_right']" position="inside">
-                <field name="service_id" />
-                <field name="signing_accountant_id" />
                 <field name="date_start" />
                 <field name="date_end" />
                 <field name="firm_subsequent_num" />
+                <field name="signing_accountant_id" />
                 <field name="accountant_subsequent_num" />
+                <field name="restatement" />
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page
+                        name="restatement"
+                        string="Restatement"
+                        attrs="{'invisible':[('restatement','=',False)]}"
+                    >
+                    <group name="restatement" colspan="4" col="2">
+                        <field
+                                name="restatement_option"
+                                attrs="{'required':[('restatement','=',True)]}"
+                            />
+                        <field
+                                name="restatement_number"
+                                attrs="{'invisible':[('restatement_option','!=','manual')],'required':[('restatement_option','=','manual')]}"
+                            />
+                        <field
+                                name="restatement_id"
+                                attrs="{'invisible':[('restatement_option','!=','odoo')],'required':[('restatement_option','=','odoo')]}"
+                            />
+                    </group>
+                </page>
             </xpath>
         </data>
     </field>
