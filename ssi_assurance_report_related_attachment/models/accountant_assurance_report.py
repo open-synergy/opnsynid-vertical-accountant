@@ -15,5 +15,8 @@ class AccountantAssuranceReport(models.Model):
 
     @api.onchange("service_id")
     def onchange_related_attachment_template_id(self):
-        self.related_attachment_template_id = self._get_template_related_attachment()
-        self.onchange_related_attachment_ids()
+        self.related_attachment_template_id = False
+        if self.service_id:
+            self.related_attachment_template_id = (
+                self._get_template_related_attachment()
+            )
