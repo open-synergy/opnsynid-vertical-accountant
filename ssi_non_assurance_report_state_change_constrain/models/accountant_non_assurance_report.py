@@ -17,14 +17,6 @@ class AccountantNonAssuranceReport(models.Model):
 
     @api.onchange("service_id")
     def onchange_status_check_template_id(self):
-        self.status_check_template_id = self._get_template_status_check()
-        self.onchange_status_check_ids()
-
-    @api.onchange(
-        "status_check_template_id",
-    )
-    def onchange_state_change_constrain_template_id(self):
-        self.state_change_constrain_template_id = False
-        if self.status_check_template_id:
-            template_id = self._get_template_state_change()
-            self.state_change_constrain_template_id = template_id
+        self.status_check_template_id = False
+        if self.service_id:
+            self.status_check_template_id = self._get_template_status_check()
