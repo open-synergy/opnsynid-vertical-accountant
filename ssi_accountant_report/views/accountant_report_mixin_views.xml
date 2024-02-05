@@ -46,15 +46,36 @@
             <xpath expr="//field[@name='user_id']" position="after">
                 <field name="service_id" />
                 <field name="date" />
-                <field name="partner_id" />
+                <field
+                        name="allowed_partner_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
+                <field name="partner_id" domain="[('id','in',allowed_partner_ids)]" />
                 <field name="primary_sector_id" />
-                <field name="primary_creditor_id" />
+                <field
+                        name="allowed_creditor_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
+                <field
+                        name="primary_creditor_id"
+                        domain="[('id','in',allowed_creditor_ids)]"
+                    />
             </xpath>
             <xpath expr="//group[@name='header_right']" position="inside">
                 <field name="date_start" />
                 <field name="date_end" />
                 <field name="firm_subsequent_num" />
-                <field name="signing_accountant_id" />
+                <field
+                        name="allowed_accountant_ids"
+                        widget="many2many_tags"
+                        invisible="1"
+                    />
+                <field
+                        name="signing_accountant_id"
+                        domain="[('id','in',allowed_accountant_ids)]"
+                    />
                 <field name="accountant_subsequent_num" />
                 <field name="restatement" />
             </xpath>
