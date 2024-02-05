@@ -14,6 +14,7 @@ class AccountantReportMixin(models.AbstractModel):
         "mixin.transaction_confirm",
         "mixin.transaction_ready",
         "mixin.date_duration",
+        "mixin.many2one_configurator",
     ]
     _order = "date desc, id"
 
@@ -90,6 +91,13 @@ class AccountantReportMixin(models.AbstractModel):
         res += policy_field
         return res
 
+    allowed_partner_ids = fields.Many2many(
+        comodel_name="res.partner",
+        string="Allowed Partners",
+        compute="_compute_allowed_partner_ids",
+        store=False,
+        compute_sudo=True,
+    )
     partner_id = fields.Many2one(
         string="Customer",
         required=True,
@@ -114,6 +122,13 @@ class AccountantReportMixin(models.AbstractModel):
             ],
         },
     )
+    allowed_creditor_ids = fields.Many2many(
+        comodel_name="res.partner",
+        string="Allowed Creditors",
+        compute="_compute_allowed_creditor_ids",
+        store=False,
+        compute_sudo=True,
+    )
     primary_creditor_id = fields.Many2one(
         string="Primary Creditor",
         required=True,
@@ -125,6 +140,13 @@ class AccountantReportMixin(models.AbstractModel):
                 ("readonly", False),
             ],
         },
+    )
+    allowed_accountant_ids = fields.Many2many(
+        comodel_name="res.partner",
+        string="Allowed Accountants",
+        compute="_compute_allowed_accountant_ids",
+        store=False,
+        compute_sudo=True,
     )
     signing_accountant_id = fields.Many2one(
         string="Signing Accountant",
@@ -238,6 +260,80 @@ class AccountantReportMixin(models.AbstractModel):
         copy=False,
     )
 
+    @api.depends(
+        "service_id",
+    )
+    def _compute_allowed_partner_ids(self):
+        for record in self:
+            result = False
+            if record.service_id:
+                result = record._m2o_configurator_get_filter(
+                    object_name="res.partner",
+                    method_selection=record.service_id.partner_selection_method,
+                    manual_recordset=record.service_id.partner_ids,
+                    domain=record.service_id.partner_domain,
+                    python_code=record.service_id.partner_python_code,
+                )
+            record.allowed_partner_ids = result
+
+    @api.depends(
+        "service_id",
+    )
+    def _compute_allowed_accountant_ids(self):
+        for record in self:
+            result = False
+            if record.service_id:
+                result = record._m2o_configurator_get_filter(
+                    object_name="res.partner",
+                    method_selection=record.service_id.accountant_selection_method,
+                    manual_recordset=record.service_id.accountant_ids,
+                    domain=record.service_id.accountant_domain,
+                    python_code=record.service_id.accountant_python_code,
+                )
+            record.allowed_accountant_ids = result
+
+    @api.depends(
+        "service_id",
+    )
+    def _compute_allowed_creditor_ids(self):
+        for record in self:
+            result = False
+            if record.service_id:
+                result = record._m2o_configurator_get_filter(
+                    object_name="res.partner",
+                    method_selection=record.service_id.creditor_selection_method,
+                    manual_recordset=record.service_id.creditor_ids,
+                    domain=record.service_id.creditor_domain,
+                    python_code=record.service_id.creditor_python_code,
+                )
+            record.allowed_creditor_ids = result
+
     @api.onchange("restatement")
     def onchange_restatement_option(self):
         self.restatement_option = False
+
+    @api.onchange(
+        "service_id",
+    )
+    def onchange_partner_id(self):
+        self.partner_id = False
+
+    @api.onchange(
+        "service_id",
+    )
+    def onchange_primary_creditor_id(self):
+        self.primary_creditor_id = False
+
+    @api.onchange(
+        "service_id",
+    )
+    def onchange_signing_accountant_id(self):
+        self.signing_accountant_id = False
+
+    @api.onchange(
+        "partner_id",
+    )
+    def onchange_primary_sector_id(self):
+        self.primary_sector_id = False
+        if self.partner_id:
+            self.primary_sector_id = self.partner_id.industry_id

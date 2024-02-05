@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+<record id="accountant_service_view_form" model="ir.ui.view">
+    <field name="name">accountant.service - form</field>
+    <field name="model">accountant.service</field>
+    <field name="inherit_id" ref="ssi_accountant.accountant_service_view_form" />
+    <field name="mode">extension</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//page[@name='note']" position="before">
+                <page name="partner" string="Partner">
+                    <group name="creditor_1" col="2" colspan="4" string="Creditor">
+                        <field
+                                name="creditor_selection_method"
+                                string="Selection Method"
+                            />
+                        <field
+                                name="creditor_ids"
+                                attrs="{'invisible':[('creditor_selection_method','!=','manual')]}"
+                                string="Accountants"
+                            />
+                        <field
+                                name="creditor_domain"
+                                widget="domain"
+                                options="{'model': 'res.partner', 'in_dialog': True}"
+                                attrs="{'invisible':[('creditor_selection_method','!=','domain')]}"
+                                string="Domain"
+                            />
+                        <field
+                                name="creditor_python_code"
+                                widget="ace"
+                                attrs="{'invisible':[('creditor_selection_method','!=','code')]}"
+                                string="Python Code"
+                            />
+                    </group>
+                </page>
+                <page name="accountant" string="Accountant">
+                    <group name="accountant_1" col="2" colspan="4" string="Accountant">
+                        <field
+                                name="accountant_selection_method"
+                                string="Selection Method"
+                            />
+                        <field
+                                name="accountant_ids"
+                                attrs="{'invisible':[('accountant_selection_method','!=','manual')]}"
+                                string="Accountants"
+                            />
+                        <field
+                                name="accountant_domain"
+                                widget="domain"
+                                options="{'model': 'res.partner', 'in_dialog': True}"
+                                attrs="{'invisible':[('accountant_selection_method','!=','domain')]}"
+                                string="Domain"
+                            />
+                        <field
+                                name="accountant_python_code"
+                                widget="ace"
+                                attrs="{'invisible':[('accountant_selection_method','!=','code')]}"
+                                string="Python Code"
+                            />
+                    </group>
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+</odoo>
