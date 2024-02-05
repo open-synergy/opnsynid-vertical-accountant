@@ -18,7 +18,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[ssi_accountant](ssi_accountant/) | 14.0.2.2.1 |  | Accountant
+[ssi_accountant](ssi_accountant/) | 14.0.2.3.0 |  | Accountant
 [ssi_accountant_general_audit](ssi_accountant_general_audit/) | 14.0.2.2.1 |  | Accountant General Audit
 [ssi_accountant_general_audit_ws_pe110](ssi_accountant_general_audit_ws_pe110/) | 14.0.1.0.1 |  | General Audit Worksheet PE.110
 [ssi_accountant_general_audit_ws_ra120](ssi_accountant_general_audit_ws_ra120/) | 14.0.1.6.1 |  | General Audit Worksheet RA.120
