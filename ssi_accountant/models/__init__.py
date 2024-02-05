@@ -8,4 +8,5 @@ from . import (
     accountant_financial_accounting_standard,
     accountant_service,
     accountant_opinion,
+    res_partner_industry,
 )

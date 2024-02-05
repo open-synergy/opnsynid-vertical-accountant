@@ -21,6 +21,7 @@
         "security/ir.model.access.csv",
         "menu.xml",
         "views/res_config_settings_views.xml",
+        "views/res_partner_industry_views.xml",
         "views/accountant_financial_accounting_standard_views.xml",
         "views/accountant_service_views.xml",
         "views/accountant_opinion_views.xml",
