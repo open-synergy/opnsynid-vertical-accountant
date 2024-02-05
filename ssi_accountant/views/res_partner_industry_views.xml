@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="res_partner_industry_view_tree" model="ir.ui.view">
+    <field name="name">res.partner.industry - tree</field>
+    <field name="model">res.partner.industry</field>
+    <field name="inherit_id" ref="base.res_partner_industry_view_tree" />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='full_name']" position="after">
+                <field name="accountant_service_code" />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+</odoo>
