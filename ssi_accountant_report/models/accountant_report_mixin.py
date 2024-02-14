@@ -112,7 +112,7 @@ class AccountantReportMixin(models.AbstractModel):
     )
     primary_sector_id = fields.Many2one(
         string="Primary Sector",
-        required=True,
+        required=False,
         translate=False,
         readonly=True,
         comodel_name="res.partner.industry",
@@ -321,12 +321,6 @@ class AccountantReportMixin(models.AbstractModel):
     @api.onchange(
         "service_id",
     )
-    def onchange_primary_creditor_id(self):
-        self.primary_creditor_id = False
-
-    @api.onchange(
-        "service_id",
-    )
     def onchange_signing_accountant_id(self):
         self.signing_accountant_id = False
 
@@ -337,3 +331,11 @@ class AccountantReportMixin(models.AbstractModel):
         self.primary_sector_id = False
         if self.partner_id:
             self.primary_sector_id = self.partner_id.industry_id
+
+    @api.onchange(
+        "partner_id",
+    )
+    def onchange_primary_creditor_id(self):
+        self.primary_creditor_id = False
+        if self.partner_id:
+            self.primary_creditor_id = self.partner_id.primary_creditor_id
