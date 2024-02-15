@@ -112,7 +112,7 @@ class AccountantReportMixin(models.AbstractModel):
     )
     primary_sector_id = fields.Many2one(
         string="Primary Sector",
-        required=False,
+        required=True,
         translate=False,
         readonly=True,
         comodel_name="res.partner.industry",
@@ -131,7 +131,7 @@ class AccountantReportMixin(models.AbstractModel):
     )
     primary_creditor_id = fields.Many2one(
         string="Primary Creditor",
-        required=True,
+        required=False,
         translate=False,
         readonly=True,
         comodel_name="res.partner",
