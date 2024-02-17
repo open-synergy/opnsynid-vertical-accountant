@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<odoo>
+<data>
+<record
+            model="res.partner.id_category"
+            id="partner_identification_accountant_cpa_firm_license"
+        >
+    <field name="name">CPA Firm License</field>
+    <field name="code">cpa_firm_license</field>
+</record>
+</data>
+</odoo>
