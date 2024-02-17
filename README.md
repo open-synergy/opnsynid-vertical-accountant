@@ -40,6 +40,9 @@ addon | version | maintainers | summary
 [ssi_non_assurance_report_quality_control](ssi_non_assurance_report_quality_control/) | 14.0.1.0.0 |  | Non Assurance Report - Quality Control Integration
 [ssi_non_assurance_report_related_attachment](ssi_non_assurance_report_related_attachment/) | 14.0.1.2.0 |  | Accountant Non Assurance Report - Related Attachment Integration
 [ssi_non_assurance_report_state_change_constrain](ssi_non_assurance_report_state_change_constrain/) | 14.0.1.3.0 |  | Non Assurance Report + State Change Constrain Integration
+[ssi_partner_identification_accountant_certification](ssi_partner_identification_accountant_certification/) | 14.0.1.0.0 |  | Partner Identification - Accountant Certification
+[ssi_partner_identification_cpa_firm_license](ssi_partner_identification_cpa_firm_license/) | 14.0.1.0.0 |  | Partner Identification - CPA Firm License
+[ssi_partner_identification_cpa_license](ssi_partner_identification_cpa_license/) | 14.0.1.0.0 |  | Partner Identification - CPA License
 
 [//]: # (end addons)
 
