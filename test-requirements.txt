@@ -4,5 +4,7 @@ odoo14-addon-ssi-custom-information-mixin
 odoo14-addon-ssi-state-change-constrain-mixin
 odoo14-addon-ssi-status-check-mixin
 odoo14-addon-ssi-work-log-mixin
+odoo14-addon-ssi-work-log-mixin
 odoo14-addon-partner-identification
 odoo14-addon-ssi-partner-identification
+odoo14-addon-ssi-transaction-date-duration-mixin
