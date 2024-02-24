@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<!-- Configurator -->
+<record id="accountant_stakeholder_report_type_group" model="res.groups">
+    <field name="name">Accountant Stakeholder Report Type</field>
+    <field
+            name="category_id"
+            ref="ssi_accountant.accountant_configurator_module_category"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Workflow: Accoutant Stakeholder Report -->
+<record id="accountant_stakeholder_report_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field
+            name="category_id"
+            ref="accountant_stakeholder_report_workflow_module_category"
+        />
+</record>
+
+<record id="accountant_stakeholder_report_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field
+            name="category_id"
+            ref="accountant_stakeholder_report_workflow_module_category"
+        />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_stakeholder_report_viewer_group'))]"
+        />
+</record>
+
+<record id="accountant_stakeholder_report_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field
+            name="category_id"
+            ref="accountant_stakeholder_report_workflow_module_category"
+        />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_stakeholder_report_user_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Data Ownership: Accoutant Stakeholder Report -->
+<record id="accountant_stakeholder_report_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field
+            name="category_id"
+            ref="accountant_stakeholder_report_data_module_category"
+        />
+</record>
+
+<record id="accountant_stakeholder_report_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field
+            name="category_id"
+            ref="accountant_stakeholder_report_data_module_category"
+        />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_stakeholder_report_company_group'))]"
+        />
+</record>
+
+<record id="accountant_stakeholder_report_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field
+            name="category_id"
+            ref="accountant_stakeholder_report_data_module_category"
+        />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('accountant_stakeholder_report_company_child_group'))]"
+        />
+</record>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0-standalone.html). -->
+<odoo>
+<menuitem
+        id="accountant_stakeholder_report_configuration_menu"
+        name="Stakeholder Report"
+        parent="ssi_accountant.menu_accountant_configuration"
+        sequence="20"
+    />
+</odoo>

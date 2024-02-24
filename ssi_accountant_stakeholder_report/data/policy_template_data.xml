@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0-standalone.html). -->
+<odoo>
+<data>
+<!-- Accountant Stakeholder Report -->
+<record id="policy_template_accountant_stakeholder_report" model="policy.template">
+    <field name="name">Standard</field>
+    <field name="model_id" ref="model_accountant_stakeholder_report" />
+    <field
+                name="state_field_id"
+                search="[('model_id.model','=','accountant_stakeholder_report'),('name','=','state')]"
+            />
+    <field name="sequence" eval="100" />
+    <field name="python_code">result=True</field>
+</record>
+
+<record
+            id="policy_template_naccountant_stakeholder_report_confirm"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_accountant_stakeholder_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant_stakeholder_report'),('name','=','confirm_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant_stakeholder_report'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_stakeholder_report_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<record
+            id="policy_template_accountant_stakeholder_report_cancel"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_accountant_stakeholder_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant_stakeholder_report'),('name','=','cancel_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant_stakeholder_report'),('value','in',['draft','confirm','done'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_stakeholder_report_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<record
+            id="policy_template_accountant_stakeholder_report_restart"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_accountant_stakeholder_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant_stakeholder_report'),('name','=','restart_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant_stakeholder_report'),('value','in',['cancel','reject'])]"
+            />
+            <field name="restrict_user" eval="1" />
+            <field name="computation_method">use_group</field>
+            <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_stakeholder_report_validator_group')])]"
+            />
+            <field name="restrict_additional" eval="0" />
+</record>
+
+<record
+            id="policy_template_accountant_stakeholder_report_reject"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_accountant_stakeholder_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant_stakeholder_report'),('name','=','reject_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant_stakeholder_report'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<record
+            id="policy_template_accountant_stakeholder_report_approve"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_accountant_stakeholder_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant_stakeholder_report'),('name','=','approve_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant_stakeholder_report'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<record
+            id="policy_template_accountant_stakeholder_report_manual_number"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_accountant_stakeholder_report" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','accountant_stakeholder_report'),('name','=','manual_number_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','accountant_stakeholder_report'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('accountant_stakeholder_report_validator_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+</data>
+</odoo>
