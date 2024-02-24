@@ -22,6 +22,7 @@ setuptools.setup(
         'odoo14-addon-ssi_accountant_report',
         'odoo14-addon-ssi_accountant_report_project',
         'odoo14-addon-ssi_accountant_report_work_log',
+        'odoo14-addon-ssi_accountant_stakeholder_report',
         'odoo14-addon-ssi_assurance_report_custom_information',
         'odoo14-addon-ssi_assurance_report_quality_control',
         'odoo14-addon-ssi_assurance_report_related_attachment',
