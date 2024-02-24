@@ -10,6 +10,7 @@
     "license": "AGPL-3",
     "depends": [
         "ssi_accountant_report",
+        "ssi_transaction_date_duration_mixin",
     ],
     "data": [
         "security/ir_module_category_data.xml",
