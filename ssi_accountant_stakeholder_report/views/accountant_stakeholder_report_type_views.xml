@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="accountant_stakeholder_report_type_view_search" model="ir.ui.view">
+    <field name="name">accountant_stakeholder_report_type - search</field>
+    <field name="model">accountant_stakeholder_report_type</field>
+    <field
+            name="inherit_id"
+            ref="ssi_master_data_mixin.mixin_master_data_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data />
+    </field>
+</record>
+
+<record id="accountant_stakeholder_report_type_view_tree" model="ir.ui.view">
+    <field name="name">accountant_stakeholder_report_type -tree</field>
+    <field name="model">accountant_stakeholder_report_type</field>
+    <field name="inherit_id" ref="ssi_master_data_mixin.mixin_master_data_view_tree" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data />
+    </field>
+</record>
+
+<record id="accountant_stakeholder_report_type_view_form" model="ir.ui.view">
+    <field name="name">accountant_stakeholder_report_type - form</field>
+    <field name="model">accountant_stakeholder_report_type</field>
+    <field name="inherit_id" ref="ssi_master_data_mixin.mixin_master_data_view_form" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//page[@name='note']" position="before">
+                <page name="accountant_report" string="Accountant Reports">
+                    <group name="service" col="2" colspan="4" string="Services">
+                        <field
+                                name="accountant_service_selection_method"
+                                string="Selection Method"
+                            />
+                        <field
+                                name="accountant_service_ids"
+                                attrs="{'invisible':[('accountant_service_selection_method','!=','manual')]}"
+                                string="Services"
+                            />
+                        <field
+                                name="accountant_service_domain"
+                                widget="domain"
+                                options="{'model': 'accountant.service', 'in_dialog': True}"
+                                attrs="{'invisible':[('accountant_service_selection_method','!=','domain')]}"
+                                string="Domain"
+                            />
+                        <field
+                                name="accountant_service_python_code"
+                                widget="ace"
+                                attrs="{'invisible':[('creditor_selection_method','!=','code')]}"
+                                string="Python Code"
+                            />
+                    </group>
+                </page>
+                <page name="partner" string="Partners">
+                    <group name="creditor" col="2" colspan="4" string="Creditor">
+                        <field
+                                name="creditor_selection_method"
+                                string="Selection Method"
+                            />
+                        <field
+                                name="creditor_ids"
+                                attrs="{'invisible':[('creditor_selection_method','!=','manual')]}"
+                                string="Accountants"
+                            />
+                        <field
+                                name="creditor_domain"
+                                widget="domain"
+                                options="{'model': 'res.partner', 'in_dialog': True}"
+                                attrs="{'invisible':[('creditor_selection_method','!=','domain')]}"
+                                string="Domain"
+                            />
+                        <field
+                                name="creditor_python_code"
+                                widget="ace"
+                                attrs="{'invisible':[('creditor_selection_method','!=','code')]}"
+                                string="Python Code"
+                            />
+                    </group>
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="accountant_stakeholder_report_type_action" model="ir.actions.act_window">
+    <field name="name">Accountant Stakeholder Report Types</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">accountant_stakeholder_report_type</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<menuitem
+        id="accountant_stakeholder_report_type_menu"
+        name="Types"
+        parent="accountant_stakeholder_report_configuration_menu"
+        action="accountant_stakeholder_report_type_action"
+        groups="accountant_stakeholder_report_type_group"
+        sequence="1"
+    />
+</odoo>

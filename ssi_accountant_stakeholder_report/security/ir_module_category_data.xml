@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 OpenSynergy Indonesia
+     Copyright 2024 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record
+        id="accountant_stakeholder_report_workflow_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">Accountant Stakeholder Report</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_workflow_module_category" />
+</record>
+
+<record
+        id="accountant_stakeholder_report_data_module_category"
+        model="ir.module.category"
+    >
+    <field name="name">Accountant Stakeholder Report</field>
+    <field name="parent_id" ref="ssi_accountant.accountant_data_module_category" />
+</record>
+
+</odoo>
