@@ -57,6 +57,7 @@
         parent="accountant_report_menu"
         action="accountant_nonassurance_report_action"
         sequence="2"
+        groups="nonassurance_report_viewer_group"
     />
 
 </odoo>
