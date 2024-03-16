@@ -63,6 +63,7 @@
         parent="accountant_report_menu"
         action="accountant_assurance_report_action"
         sequence="1"
+        groups="assurance_report_viewer_group"
     />
 
 </odoo>
