@@ -29,7 +29,7 @@ addon | version | maintainers | summary
 [ssi_accountant_general_audit_ws_ra220](ssi_accountant_general_audit_ws_ra220/) | 14.0.1.3.1 |  | General Audit Worksheet RA.220
 [ssi_accountant_general_audit_ws_ra230](ssi_accountant_general_audit_ws_ra230/) | 14.0.1.0.1 |  | General Audit Worksheet RA.230
 [ssi_accountant_general_audit_ws_rr110](ssi_accountant_general_audit_ws_rr110/) | 14.0.1.3.1 |  | General Audit Worksheet RR.110
-[ssi_accountant_report](ssi_accountant_report/) | 14.0.1.4.0 |  | Manage Accountant Report
+[ssi_accountant_report](ssi_accountant_report/) | 14.0.1.5.0 |  | Manage Accountant Report
 [ssi_accountant_report_project](ssi_accountant_report_project/) | 14.0.1.0.0 |  | Accountant Report + Project
 [ssi_accountant_report_work_log](ssi_accountant_report_work_log/) | 14.0.1.0.0 |  | Accountant Report - Work Log Integration
 [ssi_accountant_stakeholder_report](ssi_accountant_stakeholder_report/) | 14.0.1.0.0 |  | Stakeholder Report for Accountant
