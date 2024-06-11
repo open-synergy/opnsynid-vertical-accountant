@@ -259,6 +259,15 @@ class AccountantReportMixin(models.AbstractModel):
         default="draft",
         copy=False,
     )
+    go_public = fields.Boolean(
+        string="Go Public",
+        readonly=True,
+        states={
+            "draft": [
+                ("readonly", False),
+            ],
+        },
+    )
 
     @api.depends(
         "service_id",
@@ -307,6 +316,10 @@ class AccountantReportMixin(models.AbstractModel):
                     python_code=record.service_id.creditor_python_code,
                 )
             record.allowed_creditor_ids = result
+
+    @api.onchange("partner_id")
+    def onchange_go_public(self):
+        self.go_public = any(offer_id.p2pk_go_public for offer_id in self.partner_id.public_offering_ids)
 
     @api.onchange("restatement")
     def onchange_restatement_option(self):

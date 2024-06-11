@@ -110,6 +110,7 @@
                         name="primary_creditor_id"
                         domain="[('id','in',allowed_creditor_ids)]"
                     />
+                <field name="go_public" />
             </xpath>
             <xpath expr="//group[@name='header_right']" position="inside">
                 <field name="date_start" />
