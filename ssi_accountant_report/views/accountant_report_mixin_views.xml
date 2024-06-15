@@ -13,6 +13,26 @@
     <field name="mode">primary</field>
     <field name="arch" type="xml">
         <data>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="partner_id" />
+                <field name="service_id" />
+                <field name="date" />
+                <field name="primary_sector_id" />
+                <field name="primary_creditor_id" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="signing_accountant_id" />
+            </xpath>
+            <xpath expr="//group[@name='group_by']" position="inside">
+                <filter name="grp_partner" string="Customer" context="{'group_by':'partner_id'}" />
+                <filter name="grp_service" string="Service" context="{'group_by':'service_id'}" />
+                <filter name="grp_date" string="Date" context="{'group_by':'date'}" />
+                <filter name="grp_primary_sector" string="Primary Sector" context="{'group_by':'primary_sector_id'}" />
+                <filter name="grp_primary_creditor" string="Primary Creditor" context="{'group_by':'primary_creditor_id'}" />
+                <filter name="grp_date_start" string="Date Start" context="{'group_by':'date_start'}" />
+                <filter name="grp_date_end" string="Date End" context="{'group_by':'date_end'}" />
+                <filter name="grp_signing_accountant" string="Signing Accountant" context="{'group_by':'signing_accountant_id'}" />
+            </xpath>
         </data>
     </field>
 </record>
