@@ -31,6 +31,7 @@ addon | version | maintainers | summary
 [ssi_accountant_general_audit_ws_rr110](ssi_accountant_general_audit_ws_rr110/) | 14.0.1.3.1 |  | General Audit Worksheet RR.110
 [ssi_accountant_report](ssi_accountant_report/) | 14.0.1.5.0 |  | Manage Accountant Report
 [ssi_accountant_report_project](ssi_accountant_report_project/) | 14.0.1.0.0 |  | Accountant Report + Project
+[ssi_accountant_report_revenue_recognition](ssi_accountant_report_revenue_recognition/) | 14.0.1.0.0 |  | Accountant Report + Revenue Recognition Integration
 [ssi_accountant_report_work_log](ssi_accountant_report_work_log/) | 14.0.1.0.0 |  | Accountant Report - Work Log Integration
 [ssi_accountant_stakeholder_report](ssi_accountant_stakeholder_report/) | 14.0.1.0.0 |  | Stakeholder Report for Accountant
 [ssi_assurance_report_custom_information](ssi_assurance_report_custom_information/) | 14.0.1.2.0 |  | Assurance Report + Custom Information Integration
