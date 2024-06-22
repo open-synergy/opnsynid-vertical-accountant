@@ -13,7 +13,5 @@
         "ssi_accountant_report",
         "ssi_quality_control",
     ],
-    "data": [
-
-    ],
+    "data": [],
 }
