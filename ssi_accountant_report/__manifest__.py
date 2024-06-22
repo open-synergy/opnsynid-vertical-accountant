@@ -33,5 +33,6 @@
         "views/accountant_report_mixin_views.xml",
         "views/accountant_assurance_report_views.xml",
         "views/accountant_nonassurance_report_views.xml",
+        "views/company_public_offering_type_views.xml",
     ],
 }

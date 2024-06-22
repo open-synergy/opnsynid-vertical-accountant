@@ -7,4 +7,5 @@ from . import (
     accountant_assurance_report,
     accountant_nonassurance_report,
     accountant_service,
+    company_public_offering_type,
 )
