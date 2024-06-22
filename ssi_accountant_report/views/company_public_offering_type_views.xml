@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<record model="ir.ui.view" id="company_public_offering_type_view_form">
+    <field name="name">company_public_offering_type - go public form</field>
+    <field name="model">company_public_offering_type</field>
+    <field
+            name="inherit_id"
+            ref="ssi_partner_public_offering.company_public_offering_type_view_form"
+        />
+    <field name="arch" type="xml">
+        <xpath expr="//page[last()]" position="before">
+            <page name="accountant_report" string="Accountant Report">
+                <group name="group_1" colspan="4" col="2">
+                    <field name="p2pk_go_public" />
+                </group>
+            </page>
+        </xpath>
+    </field>
+</record>
+</odoo>

@@ -17,6 +17,7 @@
         "ssi_m2o_configurator_mixin",
         "ssi_res_partner_m2o_configurator_mixin",
         "ssi_partner_creditor_debitor",
+        "ssi_partner_public_offering",
     ],
     "data": [
         "security/ir_module_category_data.xml",
@@ -32,5 +33,6 @@
         "views/accountant_report_mixin_views.xml",
         "views/accountant_assurance_report_views.xml",
         "views/accountant_nonassurance_report_views.xml",
+        "views/company_public_offering_type_views.xml",
     ],
 }
