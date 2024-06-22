@@ -319,7 +319,9 @@ class AccountantReportMixin(models.AbstractModel):
 
     @api.onchange("partner_id")
     def onchange_go_public(self):
-        self.go_public = any(offer_id.p2pk_go_public for offer_id in self.partner_id.public_offering_ids)
+        self.go_public = any(
+            offer_id.p2pk_go_public for offer_id in self.partner_id.public_offering_ids
+        )
 
     @api.onchange("restatement")
     def onchange_restatement_option(self):
