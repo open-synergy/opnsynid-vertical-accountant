@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 OpenSynergy Indonesia
+     Copyright 2024 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+<record id="accountant_report_mixin_view_form" model="ir.ui.view">
+    <field name="name">accountant.report_mixin - form</field>
+    <field name="model">accountant.report_mixin</field>
+    <field
+            name="inherit_id"
+            ref="ssi_accountant_report.accountant_report_mixin_view_form"
+        />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//page[1]" position="before">
+                <page string="Revenue Recognition">
+                    <group>
+                        <group>
+                            <field
+                                    name="pob_id"
+                                    domain="[('analytic_partner_id', '=', partner_id)]"
+                                />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+</odoo>
