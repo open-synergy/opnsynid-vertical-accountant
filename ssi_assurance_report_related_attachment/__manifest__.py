@@ -13,7 +13,5 @@
         "ssi_accountant_report",
         "ssi_related_attachment_mixin",
     ],
-    "data": [
-
-    ],
+    "data": [],
 }
