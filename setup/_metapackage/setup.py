@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo14-addon-ssi_accountant_general_audit_ws_ra230',
         'odoo14-addon-ssi_accountant_general_audit_ws_rr110',
         'odoo14-addon-ssi_accountant_report',
+        'odoo14-addon-ssi_accountant_report_operating_unit',
         'odoo14-addon-ssi_accountant_report_project',
         'odoo14-addon-ssi_accountant_report_revenue_recognition',
         'odoo14-addon-ssi_accountant_report_work_log',
