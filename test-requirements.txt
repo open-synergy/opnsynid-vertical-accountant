@@ -9,3 +9,4 @@ odoo14-addon-partner-identification
 odoo14-addon-ssi-partner-identification
 odoo14-addon-ssi-transaction-date-duration-mixin
 odoo14-addon-ssi-revenue-recognition
+odoo14-addon-ssi-operating-unit-mixin
