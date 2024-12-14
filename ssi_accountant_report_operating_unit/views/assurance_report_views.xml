@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 OpenSynergy Indonesia
+     Copyright 2021 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="accountant_assurance_report_view_tree" model="ir.ui.view">
+    <field name="name">accountant.assurance_report tree</field>
+    <field name="model">accountant.assurance_report</field>
+    <field
+            name="inherit_id"
+            ref="ssi_accountant_report.accountant_assurance_report_view_tree"
+        />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field
+                        name="operating_unit_id"
+                        groups="operating_unit.group_multi_operating_unit"
+                        optional="hide"
+                    />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+
+
+
+<record id="accountant_assurance_report_view_search" model="ir.ui.view">
+    <field name="name">accountant.assurance_report search</field>
+    <field name="model">accountant.assurance_report</field>
+    <field
+            name="inherit_id"
+            ref="ssi_accountant_report.accountant_assurance_report_view_search"
+        />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field
+                        name="operating_unit_id"
+                        groups="operating_unit.group_multi_operating_unit"
+                        optional="hide"
+                    />
+            </xpath>
+            <xpath expr="//filter[@name='grp_company']" position="after">
+                <filter
+                        name="grp_ou"
+                        string="Operating Unit"
+                        context="{'group_by':'operating_unit_id'}"
+                        groups="operating_unit.group_multi_operating_unit"
+                    />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="accountant_assurance_report_view_form" model="ir.ui.view">
+    <field name="name">accountant.assurance_report form</field>
+    <field name="model">accountant.assurance_report</field>
+    <field
+            name="inherit_id"
+            ref="ssi_accountant_report.accountant_assurance_report_view_form"
+        />
+    <field name="arch" type="xml">
+      <data>
+          <xpath expr="//field[@name='company_id']" position="after">
+              <field
+                        name="operating_unit_id"
+                        groups="operating_unit.group_multi_operating_unit"
+                        optional="hide"
+                    />
+          </xpath>
+      </data>
+    </field>
+</record>
+</odoo>
