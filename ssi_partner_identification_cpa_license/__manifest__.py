@@ -4,7 +4,7 @@
 
 {
     "name": "Partner Identification - CPA License",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "author": "PT. Simetri Sinergi Indonesia, OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
