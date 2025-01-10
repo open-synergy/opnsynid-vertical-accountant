@@ -25,7 +25,7 @@ class AccountantReportMixin(models.AbstractModel):
     _after_approved_method = "action_done"
 
     # Attribute related to sequence
-    _create_sequence_state = "ready"
+    _create_sequence_state = "done"
 
     # Mixin duration attribute
     _date_start_readonly = True
