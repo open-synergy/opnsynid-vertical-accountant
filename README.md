@@ -29,7 +29,7 @@ addon | version | maintainers | summary
 [ssi_accountant_general_audit_ws_ra220](ssi_accountant_general_audit_ws_ra220/) | 14.0.1.3.1 |  | General Audit Worksheet RA.220
 [ssi_accountant_general_audit_ws_ra230](ssi_accountant_general_audit_ws_ra230/) | 14.0.1.0.1 |  | General Audit Worksheet RA.230
 [ssi_accountant_general_audit_ws_rr110](ssi_accountant_general_audit_ws_rr110/) | 14.0.1.3.1 |  | General Audit Worksheet RR.110
-[ssi_accountant_report](ssi_accountant_report/) | 14.0.2.0.0 |  | Manage Accountant Report
+[ssi_accountant_report](ssi_accountant_report/) | 14.0.2.0.1 |  | Manage Accountant Report
 [ssi_accountant_report_operating_unit](ssi_accountant_report_operating_unit/) | 14.0.1.1.0 |  | Accountant Report + Operating Unit
 [ssi_accountant_report_project](ssi_accountant_report_project/) | 14.0.1.0.0 |  | Accountant Report + Project
 [ssi_accountant_report_revenue_recognition](ssi_accountant_report_revenue_recognition/) | 14.0.1.0.0 |  | Accountant Report + Revenue Recognition Integration
