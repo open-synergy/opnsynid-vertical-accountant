@@ -1,0 +1,1047 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ssi_accountant_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__name
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__name
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__name
+msgid "# Document"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__restatement_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__restatement_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__restatement_id
+msgid "# Restatement"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__restatement_number
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__restatement_number
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__restatement_number
+msgid "# Restatement (Manual)"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_service_view_form
+msgid "Accountant"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model,name:ssi_accountant_report.model_accountant_assurance_report
+msgid "Accountant Assurance Report"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__accountant_domain
+msgid "Accountant Domain"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model,name:ssi_accountant_report.model_accountant_nonassurance_report
+msgid "Accountant Non-Assurance Report"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__accountant_python_code
+msgid "Accountant Python Code"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.ui.menu,name:ssi_accountant_report.accountant_report_menu
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.company_public_offering_type_view_form
+msgid "Accountant Report"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model,name:ssi_accountant_report.model_accountant_report_mixin
+msgid "Accountant Report Mixin"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__accountant_selection_method
+msgid "Accountant Selection Method"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model,name:ssi_accountant_report.model_accountant_service
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__service_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__service_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__service_id
+msgid "Accountant Service"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__accountant_subsequent_num
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__accountant_subsequent_num
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__accountant_subsequent_num
+msgid "Accountant Subsequent Job Num."
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__accountant_ids
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_service_view_form
+msgid "Accountants"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__active_approval_ids
+msgid "Active Approvals"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__active_approver_partner_ids
+msgid "Active Partners"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__active_approver_user_ids
+msgid "Active Users"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:res.groups,name:ssi_accountant_report.assurance_report_all_group
+#: model:res.groups,name:ssi_accountant_report.nonassurance_report_all_group
+msgid "All"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__allowed_accountant_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__allowed_accountant_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__allowed_accountant_ids
+msgid "Allowed Accountants"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__allowed_creditor_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__allowed_creditor_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__allowed_creditor_ids
+msgid "Allowed Creditors"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__allowed_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__allowed_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__allowed_partner_ids
+msgid "Allowed Partners"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__allowed_policy_template_ids
+msgid "Allowed Policy Templates"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__approval_template_id
+msgid "Approval Configuration"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__approval_template_id
+msgid "Approval Template"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__approval_ids
+msgid "Approvals"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__approve_ok
+msgid ""
+"Approve policy\n"
+"\n"
+"* If active user can see and execute 'Approve' button"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__approved
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__approved
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__approved
+msgid "Approved"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.module.category,name:ssi_accountant_report.assurance_report_data_module_category
+#: model:ir.module.category,name:ssi_accountant_report.assurance_report_workflow_module_category
+msgid "Assurance Report"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.actions.act_window,name:ssi_accountant_report.accountant_assurance_report_action
+msgid "Assurance Reports"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.ui.menu,name:ssi_accountant_report.accountant_assurance_report_menu
+msgid "Assurances"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__approve_ok
+msgid "Can Approve"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__cancel_ok
+msgid "Can Cancel"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__confirm_ok
+msgid "Can Confirm"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__done_ok
+msgid "Can Finished"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__manual_number_ok
+msgid "Can Input Manual Document Number"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__reject_ok
+msgid "Can Reject"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__restart_ok
+msgid "Can Restart"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__restart_approval_ok
+msgid "Can Restart Approval"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__ready_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__ready_ok
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__ready_ok
+msgid "Can Stagged"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_assurance_report__state__cancel
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_nonassurance_report__state__cancel
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_report_mixin__state__cancel
+msgid "Cancel"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__cancel_reason_id
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__cancel_ok
+msgid ""
+"Cancel policy\n"
+"\n"
+"* If active user can see and execute 'Cancel' button"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__company_id
+#: model:res.groups,name:ssi_accountant_report.assurance_report_company_group
+#: model:res.groups,name:ssi_accountant_report.nonassurance_report_company_group
+msgid "Company"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__company_partner_id
+msgid "Company Partner"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model,name:ssi_accountant_report.model_company_public_offering_type
+msgid "Company Public Offering Type"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:res.groups,name:ssi_accountant_report.assurance_report_company_child_group
+#: model:res.groups,name:ssi_accountant_report.nonassurance_report_company_child_group
+msgid "Company and All Child Companies"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__company_id
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__company_id
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__company_id
+msgid ""
+"Company that own the document\n"
+"\n"
+"* Automatically filled with user's company.\n"
+"  Default company can be changed"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__confirm_ok
+msgid ""
+"Confirm policy\n"
+"\n"
+"* If active user can see and execute 'Confirm' button"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_service_view_form
+msgid "Creditor"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__creditor_domain
+msgid "Creditor Domain"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__creditor_python_code
+msgid "Creditor Python Code"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__creditor_selection_method
+msgid "Creditor Selection Method"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__creditor_ids
+msgid "Creditors"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__partner_id
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_report_mixin_view_search
+msgid "Customer"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__date
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__date
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__date
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_report_mixin_view_search
+msgid "Date"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__date_end
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_report_mixin_view_search
+msgid "Date End"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__date_start
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_report_mixin_view_search
+msgid "Date Start"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_company_public_offering_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_service__accountant_selection_method__domain
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_service__creditor_selection_method__domain
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_service_view_form
+msgid "Domain"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_assurance_report__state__done
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_nonassurance_report__state__done
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_report_mixin__state__done
+msgid "Done"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__done_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__done_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__done_ok
+msgid ""
+"Done policy\n"
+"\n"
+"* If active user can see and execute 'Done' button"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_assurance_report__state__draft
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_nonassurance_report__state__draft
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_report_mixin__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__firm_subsequent_num
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__firm_subsequent_num
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__firm_subsequent_num
+msgid "Firm Subsequent Job Num."
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__go_public
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__go_public
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__go_public
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_company_public_offering_type__p2pk_go_public
+msgid "Go Public"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_company_public_offering_type__id
+msgid "ID"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__message_unread
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__message_unread
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_company_public_offering_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_assurance_report__restatement_option__manual
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_nonassurance_report__restatement_option__manual
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_report_mixin__restatement_option__manual
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_service__accountant_selection_method__manual
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_service__creditor_selection_method__manual
+msgid "Manual"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__manual_number_ok
+msgid ""
+"Manual number assignment policy\n"
+"\n"
+"* If active user can edit document number"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__need_validation
+msgid "Need Validation"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__next_approval_ids
+msgid "Next Approvals"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.module.category,name:ssi_accountant_report.nonassurance_report_data_module_category
+#: model:ir.module.category,name:ssi_accountant_report.nonassurance_report_workflow_module_category
+msgid "Non-Assurance Report"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.actions.act_window,name:ssi_accountant_report.accountant_nonassurance_report_action
+msgid "Non-Assurance Reports"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.ui.menu,name:ssi_accountant_report.accountant_nonassurance_report_menu
+msgid "Non-Assurances"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__note
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__note
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__note
+msgid "Note"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_assurance_report__restatement_option__odoo
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_nonassurance_report__restatement_option__odoo
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_report_mixin__restatement_option__odoo
+msgid "Odoo"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__opinion_id
+msgid "Opinion"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_service_view_form
+msgid "Partner"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__partner_domain
+msgid "Partner Domain"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__partner_python_code
+msgid "Partner Python Code"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__partner_selection_method
+msgid "Partner Selection Method"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_service__partner_ids
+msgid "Partners"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__policy_template_id
+msgid "Policy Template"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__primary_creditor_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__primary_creditor_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__primary_creditor_id
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_report_mixin_view_search
+msgid "Primary Creditor"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__primary_sector_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__primary_sector_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__primary_sector_id
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_report_mixin_view_search
+msgid "Primary Sector"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_service__accountant_selection_method__code
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_service__creditor_selection_method__code
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_service_view_form
+msgid "Python Code"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_assurance_report__state__ready
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_nonassurance_report__state__ready
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_report_mixin__state__ready
+msgid "Ready To Process"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__ready_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__ready_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__ready_ok
+msgid ""
+"Ready policy\n"
+"\n"
+"* If active user can see and execute 'Staged' button"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__reject_ok
+msgid ""
+"Reject policy\n"
+"\n"
+"* If active user can see and execute 'Reject' button"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__rejected
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_assurance_report__state__reject
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_nonassurance_report__state__reject
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_report_mixin__state__reject
+msgid "Rejected"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__user_id
+msgid "Responsible"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__restart_approval_ok
+msgid ""
+"Restart approval policy\n"
+"\n"
+"* If active user can see and execute 'Restart Approval' button"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__restart_ok
+msgid ""
+"Restart policy\n"
+"\n"
+"* If active user can see and execute 'Restart' button"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_report_mixin_view_form
+msgid "Restatement"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__restatement_option
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__restatement_option
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__restatement_option
+msgid "Restatement Option"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__restatement
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__restatement
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__restatement
+msgid "Restatement?"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__reviewer_id
+msgid "Reviewer"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_service_view_form
+msgid "Selection Method"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_report_mixin_view_search
+msgid "Service"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__signing_accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__signing_accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__signing_accountant_id
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_report.accountant_report_mixin_view_search
+msgid "Signing Accountant"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__state
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__state
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__state
+msgid "State"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__activity_state
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__activity_state
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__name
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__name
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__name
+msgid ""
+"Transaction/document number\n"
+"\n"
+"* Unique indentifer of transaction\n"
+"* Leave '/' to automatically generate number\n"
+"* Change '/' into any number/identifier to manually assign number.\n"
+"  Manual number assignment can be done in 'Draft' state\n"
+"  Only user with 'Can Manualy Assign Number' policy can manually assign number.\n"
+"* Transaction with number other than '/' can not be deleted."
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:res.groups,name:ssi_accountant_report.assurance_report_user_group
+#: model:res.groups,name:ssi_accountant_report.nonassurance_report_user_group
+msgid "User"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__user_id
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__user_id
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__user_id
+msgid ""
+"User that responsible for document\n"
+"\n"
+"* Create user can be different with responsible user\n"
+"* Automatically filled with user that initiate document creation.\n"
+"  Default responsible can be changed."
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__reviewer_id
+msgid ""
+"User that responsible to review document\n"
+"\n"
+"* Unless it configured to approve reviewer does not equal to approver"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__active_approver_user_ids
+msgid "Users that can approve/reject document"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:res.groups,name:ssi_accountant_report.assurance_report_validator_group
+#: model:res.groups,name:ssi_accountant_report.nonassurance_report_validator_group
+msgid "Validator"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:res.groups,name:ssi_accountant_report.assurance_report_viewer_group
+#: model:res.groups,name:ssi_accountant_report.nonassurance_report_viewer_group
+msgid "Viewer"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_assurance_report__state__confirm
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_nonassurance_report__state__confirm
+#: model:ir.model.fields.selection,name:ssi_accountant_report.selection__accountant_report_mixin__state__confirm
+msgid "Waiting for Approval"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_assurance_report__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_nonassurance_report__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_report.field_accountant_report_mixin__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ssi_accountant_report
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_assurance_report__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_nonassurance_report__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_report.field_accountant_report_mixin__website_message_ids
+msgid "Website communication history"
+msgstr ""
