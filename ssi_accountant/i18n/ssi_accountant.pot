@@ -1,0 +1,630 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ssi_accountant
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ssi_accountant
+#: model:ir.module.category,name:ssi_accountant.accountant_module_category
+#: model:ir.ui.menu,name:ssi_accountant.menu_root_accountant
+#: model_terms:ir.ui.view,arch_db:ssi_accountant.res_config_settings_view_form
+msgid "Accountant"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.module.category,name:ssi_accountant.accountant_configurator_module_category
+msgid "Accountant - Configurator"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.module.category,name:ssi_accountant.accountant_data_module_category
+msgid "Accountant - Data Ownership"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.module.category,name:ssi_accountant.accountant_reporting_module_category
+msgid "Accountant - Reporting"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.module.category,name:ssi_accountant.accountant_wizard_module_category
+msgid "Accountant - Wizard"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.module.category,name:ssi_accountant.accountant_workflow_module_category
+msgid "Accountant - Workflow"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model,name:ssi_accountant.model_accountant_opinion
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__name
+#: model:res.groups,name:ssi_accountant.accountant_opinion_group
+msgid "Accountant Opinion"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_config_settings__module_ssi_accountant_report
+msgid "Accountant Report"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model,name:ssi_accountant.model_accountant_service
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__name
+#: model:res.groups,name:ssi_accountant.accountant_service_group
+msgid "Accountant Service"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_partner_industry__accountant_service_code
+msgid "Accountant Service Code"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.actions.act_window,name:ssi_accountant.accountant_service_action
+msgid "Accountant Services"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_config_settings__module_ssi_accountant_stakeholder_report
+msgid "Accountant Stakeholder Report"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__active
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__active
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__active
+msgid "Active"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.opinion,name:ssi_accountant.demo_accountant_opinion3
+msgid "Adverse Opinion - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__allowed_opinion_ids
+msgid "Allowed Opinion"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__assurance
+msgid "Assurance Service?"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__code
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__code
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__code
+msgid "Code"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model,name:ssi_accountant.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_config_settings__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.service,name:ssi_accountant.demo_accountant_service3
+msgid "Complience Audit/Review - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model,name:ssi_accountant.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.ui.menu,name:ssi_accountant.menu_accountant_configuration
+msgid "Configuration"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__create_date
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__create_date
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.opinion,name:ssi_accountant.demo_accountant_opinion4
+msgid "Disclaimer of Opinion - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__display_name
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__display_name
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__display_name
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_company__display_name
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_partner_industry__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ssi_accountant
+#: model_terms:ir.ui.view,arch_db:ssi_accountant.res_config_settings_view_form
+msgid "Feature"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model,name:ssi_accountant.model_accountant_financial_accounting_standard
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__name
+#: model:res.groups,name:ssi_accountant.accountant_financial_accountant_standard_group
+msgid "Financial Accounting Standard"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.actions.act_window,name:ssi_accountant.accountant_financial_accounting_standard_action
+#: model:ir.ui.menu,name:ssi_accountant.accountant_financial_accounting_standard_menu
+msgid "Financial Accounting Standards"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.service,name:ssi_accountant.demo_accountant_service9
+msgid "Financial Due Dilligent - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ssi_accountant
+#: model_terms:ir.ui.view,arch_db:ssi_accountant.accountant_service_view_form
+msgid "General"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_config_settings__module_ssi_general_audit
+msgid "General Audit"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.service,name:ssi_accountant.demo_accountant_service1
+msgid "Historical Audit Service - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.service,name:ssi_accountant.demo_accountant_service2
+msgid "Historical Review Service - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__id
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__id
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__id
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_company__id
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_config_settings__id
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_partner_industry__id
+msgid "ID"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.financial_accounting_standard,name:ssi_accountant.demo_accountant_financial_accounting_standard1
+msgid "IFRS - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__message_needaction
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__message_unread
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__message_needaction
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__message_unread
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__message_needaction
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__message_has_error
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__message_has_error
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model,name:ssi_accountant.model_res_partner_industry
+msgid "Industry"
+msgstr ""
+
+#. module: ssi_accountant
+#: model_terms:ir.ui.view,arch_db:ssi_accountant.res_config_settings_view_form
+msgid "Integration"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.service,name:ssi_accountant.demo_accountant_service6
+msgid "Internal Audit - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.service,name:ssi_accountant.demo_accountant_service4
+msgid "Internal Control Audit/Review - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.service,name:ssi_accountant.demo_accountant_service8
+msgid "Investigative Audit - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard____last_update
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion____last_update
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service____last_update
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_company____last_update
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:ssi_accountant.field_res_partner_industry____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__write_date
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__write_date
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ssi_accountant
+#: model_terms:ir.ui.view,arch_db:ssi_accountant.res_config_settings_view_form
+msgid "Manage accountant report"
+msgstr ""
+
+#. module: ssi_accountant
+#: model_terms:ir.ui.view,arch_db:ssi_accountant.res_config_settings_view_form
+msgid "Manage accountant stakeholder report"
+msgstr ""
+
+#. module: ssi_accountant
+#: model_terms:ir.ui.view,arch_db:ssi_accountant.res_config_settings_view_form
+msgid "Manage general audit"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__active
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__active
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__active
+msgid ""
+"Master data status\n"
+"\n"
+"* Inactive data can not be selected when creating new transaction\n"
+"* Transaction with inactive master data can still be viewed\n"
+"* Set master data as inactive if master data no longger needed,\n"
+"but master data already used on transaction"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__code
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__code
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__code
+msgid ""
+"Master data unique identifier.\n"
+"\n"
+"* Fill with '/' if You do not need unique identifier\n"
+"* Click 'Generate Code' button to automatically assign code.\n"
+"  Sequence template mush be set to perform this action\n"
+"  Only master data with '/' code will be assign automatic code"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__note
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__note
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__note
+msgid "Note"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.actions.act_window,name:ssi_accountant.accountant_opinion_action
+#: model:ir.ui.menu,name:ssi_accountant.accountant_opinion_menu
+msgid "Opinions"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.service,name:ssi_accountant.demo_accountant_service7
+msgid "Performance Audit - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.service,name:ssi_accountant.demo_accountant_service5
+msgid "Prospective Examination - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.opinion,name:ssi_accountant.demo_accountant_opinion2
+msgid "Qualified Opinion - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.ui.menu,name:ssi_accountant.menu_accountant_report
+msgid "Report"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.financial_accounting_standard,name:ssi_accountant.demo_accountant_financial_accounting_standard2
+msgid "SAK - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.financial_accounting_standard,name:ssi_accountant.demo_accountant_financial_accounting_standard4
+msgid "SAK EMKM - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.financial_accounting_standard,name:ssi_accountant.demo_accountant_financial_accounting_standard3
+msgid "SAK ETAP - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.financial_accounting_standard,name:ssi_accountant.demo_accountant_financial_accounting_standard5
+msgid "SAK Syariah - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.ui.menu,name:ssi_accountant.accountant_service_menu
+msgid "Services"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.actions.act_window,name:ssi_accountant.res_config_settings_action
+#: model:ir.ui.menu,name:ssi_accountant.res_config_settings_menu
+msgid "Settings"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__activity_state
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__activity_state
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.service,name:ssi_accountant.demo_accountant_service10
+msgid "Tax Service - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ssi_accountant
+#: model:accountant.opinion,name:ssi_accountant.demo_accountant_opinion1
+msgid "Unqualified Opinion - (test)"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_financial_accounting_standard__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_opinion__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant.field_accountant_service__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ssi_accountant
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_financial_accounting_standard__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_opinion__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant.field_accountant_service__website_message_ids
+msgid "Website communication history"
+msgstr ""
