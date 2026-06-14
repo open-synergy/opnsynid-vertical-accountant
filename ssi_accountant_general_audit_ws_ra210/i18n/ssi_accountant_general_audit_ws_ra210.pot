@@ -1,0 +1,901 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ssi_accountant_general_audit_ws_ra210
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__name
+msgid "# Document"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__general_audit_id
+msgid "# General Audit"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__worksheet_id
+msgid "# RA.210"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__worksheet_id
+msgid "# Worksheet"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_account_inherent_risk_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_view_form
+msgid "A. Merupakan transaksi yang tidak sering terjadi"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__account_type_set_id
+msgid "Accoount Type Set"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__account_inherent_risk_ids
+msgid "Account Inherent Risk"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__type_id
+msgid "Account Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__accountant_id
+msgid "Accountant"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra210.model_accountant_general_audit_standard_detail
+msgid "Accountant General Audit Standard Detail"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__active_approval_ids
+msgid "Active Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__active_approver_partner_ids
+msgid "Active Partners"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__active_approver_user_ids
+msgid "Active Users"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra210.accountant_general_audit_ws_ra210_all_group
+msgid "All"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__allowed_conclusion_ids
+msgid "Allowed Conclusion"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__allowed_policy_template_ids
+msgid "Allowed Policy Templates"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra210.conslusion_ra210_001
+msgid "Analisis Inherent Risk Telah Dilakukan"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra210.conslusion_ra210_002
+msgid "Analisis Inherent Risk Tidak Dilakukan"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__approval_template_id
+msgid "Approval Configuration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__approval_template_id
+msgid "Approval Template"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__approval_ids
+msgid "Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__approve_ok
+msgid ""
+"Approve policy\n"
+"\n"
+"* If active user can see and execute 'Approve' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__approved
+msgid "Approved"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__standard_item_ids
+msgid "Audit Standard Items"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__auditor_respons
+msgid "Auditor Respons"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_account_inherent_risk_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_view_form
+msgid "B. Salah saji yang dikoreksi pada perilde lalu (jika ada)"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_accountant_general_audit_standard_detail__business_process_id
+msgid "Business Process"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_account_inherent_risk_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_view_form
+msgid "C. Rentan terhadap perubahan lingkungan bisnis"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__approve_ok
+msgid "Can Approve"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__cancel_ok
+msgid "Can Cancel"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__confirm_ok
+msgid "Can Confirm"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__done_ok
+msgid "Can Finished"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__manual_number_ok
+msgid "Can Input Manual Document Number"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__reject_ok
+msgid "Can Reject"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__restart_ok
+msgid "Can Restart"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__restart_approval_ok
+msgid "Can Restart Approval"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__open_ok
+msgid "Can Start"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__cancel_reason_id
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__cancel_ok
+msgid ""
+"Cancel policy\n"
+"\n"
+"* If active user can see and execute 'Cancel' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__company_id
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra210.accountant_general_audit_ws_ra210_company_group
+msgid "Company"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__company_partner_id
+msgid "Company Partner"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra210.accountant_general_audit_ws_ra210_company_child_group
+msgid "Company and All Child Companies"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__company_id
+msgid ""
+"Company that own the document\n"
+"\n"
+"* Automatically filled with user's company.\n"
+"  Default company can be changed"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__conclusion_id
+msgid "Conclusion"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__conclusion
+msgid "Conclusion Additional Explanation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__confirm_ok
+msgid ""
+"Confirm policy\n"
+"\n"
+"* If active user can see and execute 'Confirm' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_account_inherent_risk_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_view_form
+msgid "D. Terdapat kontijensi yang teridenti-fikasi"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_accountant_general_audit_standard_detail__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__done_ok
+msgid ""
+"Done policy\n"
+"\n"
+"* If active user can see and execute 'Done' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_account_inherent_risk_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_view_form
+msgid "E. Berdampak pada kerugian"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__date_end
+msgid "End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_account_inherent_risk_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_view_form
+msgid "F. Akun mendapat perhatian khusus atas akuntansi pelaporan"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__fraud_risk
+msgid "Fraud Risk"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_account_inherent_risk_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_view_form
+msgid "G. Akun yang memiliki kerumitan kompleks"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra210.model_ws_ra210
+msgid "General Audit WS RA.210"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra210.model_ws_ra210_account_inherent_risk
+msgid "General Audit WS RA.210 Account Inherent Risk"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra210.general_audit_ws_ra210_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra210.general_audit_ws_ra210_workflow_module_category
+msgid "General Audit Worksheet RA.210"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_account_inherent_risk_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_view_form
+msgid "H. Akun transaksi dengan pihak berelasi yang signifikan"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__accountant_general_audit_standard_detail__inherent_risk__high
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__ws_ra210__risk_material_missstatement__high
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__ws_ra210_account_inherent_risk__impact_of_risk__high
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__ws_ra210_account_inherent_risk__inherent_risk__high
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__ws_ra210_account_inherent_risk__likelihood_risk_occuring__high
+msgid "High"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_account_inherent_risk_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_view_form
+msgid "I. Akun yang diukur mengguna-kan estimasi"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_accountant_general_audit_standard_detail__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__id
+msgid "ID"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_accountant_general_audit_standard_detail__inherent_risk
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__inherent_risk
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_view_form
+msgid "Inherent Risk"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__inherent_risk_factor_a
+msgid "Inherent Risk Factor A"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__inherent_risk_factor_b
+msgid "Inherent Risk Factor B"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__inherent_risk_factor_c
+msgid "Inherent Risk Factor C"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__inherent_risk_factor_d
+msgid "Inherent Risk Factor D"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__inherent_risk_factor_e
+msgid "Inherent Risk Factor E"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__inherent_risk_factor_f
+msgid "Inherent Risk Factor F"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__inherent_risk_factor_g
+msgid "Inherent Risk Factor G"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__inherent_risk_factor_h
+msgid "Inherent Risk Factor H"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__inherent_risk_factor_i
+msgid "Inherent Risk Factor I"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__inherent_risk_factor_j
+msgid "Inherent Risk Factor J"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra210.worksheet_type_ra210
+msgid "Inherent risk"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__interim_date_end
+msgid "Interim End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__interim_date_start
+msgid "Interim Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_account_inherent_risk_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.ws_ra210_view_form
+msgid "J. Akun yang signifikan yang tidak rutin"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_accountant_general_audit_standard_detail____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__likelihood_risk_occuring
+msgid "Likelihood of Risk Occuring"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__accountant_general_audit_standard_detail__inherent_risk__low
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__ws_ra210__risk_material_missstatement__low
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__ws_ra210_account_inherent_risk__impact_of_risk__low
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__ws_ra210_account_inherent_risk__inherent_risk__low
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__ws_ra210_account_inherent_risk__likelihood_risk_occuring__low
+msgid "Low"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__impact_of_risk
+msgid "Magnitude/Impact of Risk"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__manual_review_time
+msgid "Manual Review Time"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__manual_work_time
+msgid "Manual Work Time"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__manual_number_ok
+msgid ""
+"Manual number assignment policy\n"
+"\n"
+"* If active user can edit document number"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__accountant_general_audit_standard_detail__inherent_risk__medium
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__ws_ra210__risk_material_missstatement__medium
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra210.selection__ws_ra210_account_inherent_risk__inherent_risk__medium
+msgid "Medium"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__need_validation
+msgid "Need Validation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__next_approval_ids
+msgid "Next Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__note
+msgid "Note"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__other_significant_risk_factor
+msgid "Other Significant Risk Factor"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__policy_template_id
+msgid "Policy Template"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__previous_date_end
+msgid "Previous End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__previous_date_start
+msgid "Previous Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__project_id
+msgid "Project"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra210.ws_ra210_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra210.ws_ra210_menu
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra210.accountant_general_audit_standard_detail_view_form
+msgid "RA.210"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__reject_ok
+msgid ""
+"Reject policy\n"
+"\n"
+"* If active user can see and execute 'Reject' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__user_id
+msgid "Responsible"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__restart_approval_ok
+msgid ""
+"Restart approval policy\n"
+"\n"
+"* If active user can see and execute 'Restart Approval' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__restart_ok
+msgid ""
+"Restart policy\n"
+"\n"
+"* If active user can see and execute 'Restart' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__review_task_id
+msgid "Review Task"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__review_task_type_id
+msgid "Review Task Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__reviewer_id
+msgid "Reviewer"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__risk_material_missstatement
+msgid "Risk Material Misstatement"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_accountant_general_audit_standard_detail__significant_risk
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__significant_risk
+msgid "Significant Risk"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210_account_inherent_risk__standard_detail_id
+msgid "Standard Detail"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__date_start
+msgid "Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__open_ok
+msgid ""
+"Start policy\n"
+"\n"
+"* If active user can see and execute 'Start' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__state
+msgid "State"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__title
+msgid "Title"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__name
+msgid ""
+"Transaction/document number\n"
+"\n"
+"* Unique indentifer of transaction\n"
+"* Leave '/' to automatically generate number\n"
+"* Change '/' into any number/identifier to manually assign number.\n"
+"  Manual number assignment can be done in 'Draft' state\n"
+"  Only user with 'Can Manualy Assign Number' policy can manually assign number.\n"
+"* Transaction with number other than '/' can not be deleted."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__type_id
+msgid "Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra210.accountant_general_audit_ws_ra210_user_group
+msgid "User"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__user_id
+msgid ""
+"User that responsible for document\n"
+"\n"
+"* Create user can be different with responsible user\n"
+"* Automatically filled with user that initiate document creation.\n"
+"  Default responsible can be changed."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__reviewer_id
+msgid ""
+"User that responsible to review document\n"
+"\n"
+"* Unless it configured to approve reviewer does not equal to approver"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__active_approver_user_ids
+msgid "Users that can approve/reject document"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra210.accountant_general_audit_ws_ra210_validator_group
+msgid "Validator"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra210.accountant_general_audit_ws_ra210_viewer_group
+msgid "Viewer"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__work_task_id
+msgid "Work Task"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra210
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra210.field_ws_ra210__work_task_type_id
+msgid "Work Task Type"
+msgstr ""
