@@ -2,15 +2,14 @@
 <!-- Copyright 2022 OpenSynergy Indonesia
      Copyright 2022 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0-standalone.html). -->
-<odoo>
-<data noupdate="1">
+<odoo noupdate="1">
 <!-- General Audit -->
 <record id="approval_template_general_audit" model="approval.template">
     <field name="name">Standard</field>
     <field
-                name="model_id"
-                ref="ssi_accountant_general_audit.model_accountant_general_audit"
-            />
+            name="model_id"
+            ref="ssi_accountant_general_audit.model_accountant_general_audit"
+        />
     <field name="sequence" eval="100" />
     <field name="computation_method">use_python</field>
     <field name="python_code">result = True</field>
@@ -20,18 +19,18 @@
     <field name="template_id" ref="approval_template_general_audit" />
     <field name="approver_selection_method">use_group</field>
     <field
-                name="approver_group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_general_audit_validator_group')])]"
-            />
+            name="approver_group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_general_audit_validator_group')])]"
+        />
 </record>
 
 <!-- Trial Balance -->
 <record id="approval_template_trial_balance" model="approval.template">
     <field name="name">Standard</field>
     <field
-                name="model_id"
-                ref="ssi_accountant_general_audit.model_accountant_client_trial_balance"
-            />
+            name="model_id"
+            ref="ssi_accountant_general_audit.model_accountant_client_trial_balance"
+        />
     <field name="sequence" eval="100" />
     <field name="computation_method">use_python</field>
     <field name="python_code">result = True</field>
@@ -41,18 +40,18 @@
     <field name="template_id" ref="approval_template_trial_balance" />
     <field name="approver_selection_method">use_group</field>
     <field
-                name="approver_group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_trial_balance_validator_group')])]"
-            />
+            name="approver_group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_trial_balance_validator_group')])]"
+        />
 </record>
 
 <!-- Adjustment Entry -->
 <record id="approval_template_adjustment_entry" model="approval.template">
     <field name="name">Standard</field>
     <field
-                name="model_id"
-                ref="ssi_accountant_general_audit.model_accountant_client_adjustment_entry"
-            />
+            name="model_id"
+            ref="ssi_accountant_general_audit.model_accountant_client_adjustment_entry"
+        />
     <field name="sequence" eval="100" />
     <field name="computation_method">use_python</field>
     <field name="python_code">result = True</field>
@@ -62,10 +61,9 @@
     <field name="template_id" ref="approval_template_adjustment_entry" />
     <field name="approver_selection_method">use_group</field>
     <field
-                name="approver_group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_adjustment_entry_validator_group')])]"
-            />
+            name="approver_group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit.assurance_adjustment_entry_validator_group')])]"
+        />
 </record>
 
-</data>
 </odoo>

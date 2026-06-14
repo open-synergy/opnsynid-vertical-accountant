@@ -2,9 +2,8 @@
 <!-- Copyright 2022 OpenSynergy Indonesia
      Copyright 2022 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0-standalone.html). -->
-<odoo>
+<odoo noupdate="1">
 
-<data noupdate="1">
     <record id="acc_group_t001" model="accountant.client_account_group">
         <field name="name">Current Asset</field>
         <field name="code">T001</field>
@@ -75,5 +74,4 @@
         <field name="code">T014</field>
     </record>
 
-</data>
 </odoo>
