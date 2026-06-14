@@ -1,0 +1,1362 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ssi_accountant_general_audit_ws_ra120
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__name
+msgid "# Document"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__general_audit_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__general_audit_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__general_audit_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__general_audit_id
+msgid "# General Audit"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__worksheet_id
+msgid "# RA.120.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__worksheet_id
+msgid "# RA.120.2"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__worksheet_id
+msgid "# RA.120.3"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__worksheet_id
+msgid "# RA.120.4"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__worksheet_id
+msgid "# Worksheet"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__account_type_set_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__account_type_set_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__account_type_set_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__account_type_set_id
+msgid "Accoount Type Set"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__account_id
+msgid "Account"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__account_mapping_ids
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra120.ws_ra1201_view_form
+msgid "Account Mappings"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__accountant_id
+msgid "Accountant"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra120.model_accountant_client_account_type
+msgid "Accountant Client Account Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__active
+msgid "Active"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__active_approval_ids
+msgid "Active Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__active_approver_partner_ids
+msgid "Active Partners"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__active_approver_user_ids
+msgid "Active Users"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__adjusted_extrapolation_balance
+msgid "Adjusted Extrapolation Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1201_all_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1202_all_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1203_all_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1204_all_group
+msgid "All"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__allowed_conclusion_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__allowed_conclusion_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__allowed_conclusion_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__allowed_conclusion_ids
+msgid "Allowed Conclusion"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__allowed_policy_template_ids
+msgid "Allowed Policy Templates"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__approval_template_id
+msgid "Approval Configuration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__approval_template_id
+msgid "Approval Template"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__approval_ids
+msgid "Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__approve_ok
+msgid ""
+"Approve policy\n"
+"\n"
+"* If active user can see and execute 'Approve' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__approved
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__approved
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__approved
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__approved
+msgid "Approved"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__standard_item_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__standard_item_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__standard_item_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__standard_item_ids
+msgid "Audit Standard Items"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__balance_diff_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__balance_diff
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__balance_diff_ids
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra120.ws_ra1202_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra120.ws_ra1203_view_form
+msgid "Balance Diff."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra120.accountant_balance_diff_category_action
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra120.model_accountant_balance_diff_category
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra120.accountant_balance_diff_category_menu
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_balance_diff_category_group
+msgid "Balance Diff. Category"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__approve_ok
+msgid "Can Approve"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__cancel_ok
+msgid "Can Cancel"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__confirm_ok
+msgid "Can Confirm"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__done_ok
+msgid "Can Finished"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__manual_number_ok
+msgid "Can Input Manual Document Number"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__reject_ok
+msgid "Can Reject"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__restart_ok
+msgid "Can Restart"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__restart_approval_ok
+msgid "Can Restart Approval"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__open_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__open_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__open_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__open_ok
+msgid "Can Start"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__cancel_reason_id
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__cancel_ok
+msgid ""
+"Cancel policy\n"
+"\n"
+"* If active user can see and execute 'Cancel' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__category_id
+msgid "Category"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__code
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__code
+msgid "Code"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__company_id
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1201_company_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1202_company_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1203_company_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1204_company_group
+msgid "Company"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__company_partner_id
+msgid "Company Partner"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1201_company_child_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1202_company_child_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1203_company_child_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1204_company_child_group
+msgid "Company and All Child Companies"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__company_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__company_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__company_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__company_id
+msgid ""
+"Company that own the document\n"
+"\n"
+"* Automatically filled with user's company.\n"
+"  Default company can be changed"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra120.worksheet_type_ra1202
+msgid ""
+"Comparison of the balance at the beginning of the year with the balance at "
+"the end of last year"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra120.worksheet_type_ra1203
+msgid "Comparison of trial balance, general ledger, and subsidiary ledger"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_client_account_type__compute_diff
+msgid "Compute Diff."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__conclusion_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__conclusion_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__conclusion_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__conclusion_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__conclusion
+msgid "Conclusion"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__conclusion
+msgid "Conclusion Additional Explanation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__confirm_ok
+msgid ""
+"Confirm policy\n"
+"\n"
+"* If active user can see and execute 'Confirm' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_client_account_type__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__done_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__done_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__done_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__done_ok
+msgid ""
+"Done policy\n"
+"\n"
+"* If active user can see and execute 'Done' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__date_end
+msgid "End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__extrapolation_adjustment_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__extrapolation_adjustment
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra120.ws_ra1204_view_form
+msgid "Extrapolation Adjustment"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__extrapolation_balance
+msgid "Extrapolation Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra120.worksheet_type_ra1204
+msgid "Extrapolation balance checking"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra120.model_ws_ra1201
+msgid "General Audit WS RA.120.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra120.model_ws_ra1201_account_mapping
+msgid "General Audit WS RA.120.1 Account Mapping"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra120.model_ws_ra1202
+msgid "General Audit WS RA.120.2"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra120.model_ws_ra1202_balance_diff
+msgid "General Audit WS RA.120.2 Balance Diff"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra120.model_ws_ra1203
+msgid "General Audit WS RA.120.3"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra120.model_ws_ra1203_balance_diff
+msgid "General Audit WS RA.120.3 Balance Diff"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra120.model_ws_ra1204
+msgid "General Audit WS RA.120.4"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra120.model_ws_ra1204_extrapolation_adjustment
+msgid "General Audit WS RA.120.4 Extrapolation Adjustment"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra120.general_audit_ws_ra1201_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra120.general_audit_ws_ra1201_workflow_module_category
+msgid "General Audit Worksheet RA.120.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra120.general_audit_ws_ra1202_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra120.general_audit_ws_ra1202_workflow_module_category
+msgid "General Audit Worksheet RA.120.2"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra120.general_audit_ws_ra1203_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra120.general_audit_ws_ra1203_workflow_module_category
+msgid "General Audit Worksheet RA.120.3"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra120.general_audit_ws_ra1204_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra120.general_audit_ws_ra1204_workflow_module_category
+msgid "General Audit Worksheet RA.120.4"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_client_account_type__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__id
+msgid "ID"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__interim_balance
+msgid "Interim Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__interim_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__interim_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__interim_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__interim_date_end
+msgid "Interim End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__interim_gl_balance
+msgid "Interim GL Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__interim_opening_balance
+msgid "Interim Opening Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__interim_sl_balance
+msgid "Interim SL Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__interim_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__interim_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__interim_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__interim_date_start
+msgid "Interim Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_client_account_type____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__manual_review_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__manual_review_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__manual_review_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__manual_review_time
+msgid "Manual Review Time"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__manual_work_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__manual_work_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__manual_work_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__manual_work_time
+msgid "Manual Work Time"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__manual_number_ok
+msgid ""
+"Manual number assignment policy\n"
+"\n"
+"* If active user can edit document number"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__active
+msgid ""
+"Master data status\n"
+"\n"
+"* Inactive data can not be selected when creating new transaction\n"
+"* Transaction with inactive master data can still be viewed\n"
+"* Set master data as inactive if master data no longger needed,\n"
+"but master data already used on transaction"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__code
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__code
+msgid ""
+"Master data unique identifier.\n"
+"\n"
+"* Fill with '/' if You do not need unique identifier\n"
+"* Click 'Generate Code' button to automatically assign code.\n"
+"  Sequence template mush be set to perform this action\n"
+"  Only master data with '/' code will be assign automatic code"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__name
+msgid "Name"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__need_validation
+msgid "Need Validation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__next_approval_ids
+msgid "Next Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__normal_balance
+msgid "Normal Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__note
+msgid "Note"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__policy_template_id
+msgid "Policy Template"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__previous_balance
+msgid "Previous Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__previous_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__previous_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__previous_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__previous_date_end
+msgid "Previous End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__previous_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__previous_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__previous_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__previous_date_start
+msgid "Previous Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__project_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__project_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__project_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__project_id
+msgid "Project"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra120.ws_ra1201_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra120.ws_ra1201_menu
+msgid "RA.120.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra120.ws_ra1202_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra120.ws_ra1202_menu
+msgid "RA.120.2"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra120.ws_ra1203_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra120.ws_ra1203_menu
+msgid "RA.120.3"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra120.ws_ra1204_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra120.ws_ra1204_menu
+msgid "RA.120.4"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__reject_ok
+msgid ""
+"Reject policy\n"
+"\n"
+"* If active user can see and execute 'Reject' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__user_id
+msgid "Responsible"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__restart_approval_ok
+msgid ""
+"Restart approval policy\n"
+"\n"
+"* If active user can see and execute 'Restart Approval' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__restart_ok
+msgid ""
+"Restart policy\n"
+"\n"
+"* If active user can see and execute 'Restart' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__review_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__review_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__review_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__review_task_id
+msgid "Review Task"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__review_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__review_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__review_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__review_task_type_id
+msgid "Review Task Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__reviewer_id
+msgid "Reviewer"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__sequence
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__sequence
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__sequence
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__standard_detail_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__standard_detail_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__standard_detail_id
+msgid "Standard Detail"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__date_start
+msgid "Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__open_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__open_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__open_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__open_ok
+msgid ""
+"Start policy\n"
+"\n"
+"* If active user can see and execute 'Start' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__state
+msgid "State"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__gl_balance_diff
+msgid "TB vs. GL Balance Diff."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__sl_balance_diff
+msgid "TB vs. SL Balance Diff."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__title
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__title
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__title
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__title
+msgid "Title"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__name
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__name
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__name
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__name
+msgid ""
+"Transaction/document number\n"
+"\n"
+"* Unique indentifer of transaction\n"
+"* Leave '/' to automatically generate number\n"
+"* Change '/' into any number/identifier to manually assign number.\n"
+"  Manual number assignment can be done in 'Draft' state\n"
+"  Only user with 'Can Manualy Assign Number' policy can manually assign number.\n"
+"* Transaction with number other than '/' can not be deleted."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra120.worksheet_type_ra120
+msgid "Trial Balance - Risk Assesment"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra120.worksheet_type_ra1201
+msgid "Trial balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201_account_mapping__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202_balance_diff__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203_balance_diff__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204_extrapolation_adjustment__type_id
+msgid "Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1201_user_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1202_user_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1203_user_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1204_user_group
+msgid "User"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__user_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__user_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__user_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__user_id
+msgid ""
+"User that responsible for document\n"
+"\n"
+"* Create user can be different with responsible user\n"
+"* Automatically filled with user that initiate document creation.\n"
+"  Default responsible can be changed."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__reviewer_id
+msgid ""
+"User that responsible to review document\n"
+"\n"
+"* Unless it configured to approve reviewer does not equal to approver"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__active_approver_user_ids
+msgid "Users that can approve/reject document"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1201_validator_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1202_validator_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1203_validator_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1204_validator_group
+msgid "Validator"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1201_viewer_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1202_viewer_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1203_viewer_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra120.accountant_general_audit_ws_ra1204_viewer_group
+msgid "Viewer"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_accountant_balance_diff_category__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__work_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__work_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__work_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__work_task_id
+msgid "Work Task"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra120
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1201__work_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1202__work_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1203__work_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra120.field_ws_ra1204__work_task_type_id
+msgid "Work Task Type"
+msgstr ""
