@@ -3,15 +3,14 @@
      Copyright 2020 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
 <odoo>
-<data>
 <record id="worksheet_type_ra120" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.120</field>
     <field name="name">Trial Balance - Risk Assesment</field>
     <field name="sequence" eval="14000" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1201" model="accountant.general_audit_worksheet_type">
@@ -19,33 +18,33 @@
     <field name="name">Trial balance</field>
     <field name="sequence" eval="14000" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1202" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.120.2</field>
     <field
-                name="name"
-            >Comparison of the balance at the beginning of the year with the balance at the end of last year</field>
+            name="name"
+        >Comparison of the balance at the beginning of the year with the balance at the end of last year</field>
     <field name="sequence" eval="14000" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1203" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.120.3</field>
     <field
-                name="name"
-            >Comparison of trial balance, general ledger, and subsidiary ledger</field>
+            name="name"
+        >Comparison of trial balance, general ledger, and subsidiary ledger</field>
     <field name="sequence" eval="14000" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1204" model="accountant.general_audit_worksheet_type">
@@ -53,9 +52,8 @@
     <field name="name">Extrapolation balance checking</field>
     <field name="sequence" eval="14000" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
-</data>
 </odoo>

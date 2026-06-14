@@ -3,7 +3,6 @@
      Copyright 2020 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
 <odoo>
-<data>
 <record id="accountant_business_process_001" model="accountant.business_process">
     <field name="code">T001</field>
     <field name="name">Sales and collection cycle</field>
@@ -22,20 +21,19 @@
 <record id="accountant_business_process_004" model="accountant.business_process">
     <field name="code">T004</field>
     <field
-                name="name"
-            >Investment and return cycle - securities, subsidiary, fixed asset, etc.</field>
+            name="name"
+        >Investment and return cycle - securities, subsidiary, fixed asset, etc.</field>
 </record>
 
 <record id="accountant_business_process_005" model="accountant.business_process">
     <field name="code">T005</field>
     <field
-                name="name"
-            >Financial acquisition and repayment cycle - bank borrowing, leasing, capital</field>
+            name="name"
+        >Financial acquisition and repayment cycle - bank borrowing, leasing, capital</field>
 </record>
 
 <record id="accountant_business_process_006" model="accountant.business_process">
     <field name="code">T006</field>
     <field name="name">Other Cycle - Cash/bank, taxes, others</field>
 </record>
-</data>
 </odoo>

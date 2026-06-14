@@ -2,8 +2,7 @@
 <!-- Copyright 2022 OpenSynergy Indonesia
      Copyright 2022 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0-standalone.html). -->
-<odoo>
-<data noupdate="1">
+<odoo noupdate="1">
 <record id="sequence_ws_ra140" model="ir.sequence">
     <field name="name">General Audit Worksheet RA.140</field>
     <field name="code">accountant.general_audit_ws_ra140</field>
@@ -33,5 +32,4 @@
     <field eval="1" name="number_increment" />
     <field name="use_date_range" eval="1" />
 </record>
-</data>
 </odoo>

@@ -2,21 +2,20 @@
 <!-- Copyright 2022 OpenSynergy Indonesia
      Copyright 2022 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0-standalone.html). -->
-<odoo>
-<data noupdate="1">
+<odoo noupdate="1">
 <record id="sequence_template_sequence_ws_ra1201" model="sequence.template">
     <field name="name">Standard</field>
     <field name="model_id" ref="model_ws_ra1201" />
     <field name="sequence" eval="100" />
     <field name="initial_string">/</field>
     <field
-                name="sequence_field_id"
-                search="[('model_id.model','=','ws_ra1201'),('name','=','name')]"
-            />
+            name="sequence_field_id"
+            search="[('model_id.model','=','ws_ra1201'),('name','=','name')]"
+        />
     <field
-                name="date_field_id"
-                search="[('model_id.model','=','ws_ra1201'),('name','=','date_start')]"
-            />
+            name="date_field_id"
+            search="[('model_id.model','=','ws_ra1201'),('name','=','date_start')]"
+        />
     <field name="computation_method">use_python</field>
     <field name="python_code">result=True</field>
     <field name="sequence_id" ref="sequence_ws_ra1201" />
@@ -31,13 +30,13 @@
     <field name="sequence" eval="100" />
     <field name="initial_string">/</field>
     <field
-                name="sequence_field_id"
-                search="[('model_id.model','=','ws_ra1202'),('name','=','name')]"
-            />
+            name="sequence_field_id"
+            search="[('model_id.model','=','ws_ra1202'),('name','=','name')]"
+        />
     <field
-                name="date_field_id"
-                search="[('model_id.model','=','ws_ra1202'),('name','=','date_start')]"
-            />
+            name="date_field_id"
+            search="[('model_id.model','=','ws_ra1202'),('name','=','date_start')]"
+        />
     <field name="computation_method">use_python</field>
     <field name="python_code">result=True</field>
     <field name="sequence_id" ref="sequence_ws_ra1202" />
@@ -52,13 +51,13 @@
     <field name="sequence" eval="100" />
     <field name="initial_string">/</field>
     <field
-                name="sequence_field_id"
-                search="[('model_id.model','=','ws_ra1203'),('name','=','name')]"
-            />
+            name="sequence_field_id"
+            search="[('model_id.model','=','ws_ra1203'),('name','=','name')]"
+        />
     <field
-                name="date_field_id"
-                search="[('model_id.model','=','ws_ra1203'),('name','=','date_start')]"
-            />
+            name="date_field_id"
+            search="[('model_id.model','=','ws_ra1203'),('name','=','date_start')]"
+        />
     <field name="computation_method">use_python</field>
     <field name="python_code">result=True</field>
     <field name="sequence_id" ref="sequence_ws_ra1203" />
@@ -73,13 +72,13 @@
     <field name="sequence" eval="100" />
     <field name="initial_string">/</field>
     <field
-                name="sequence_field_id"
-                search="[('model_id.model','=','ws_ra1204'),('name','=','name')]"
-            />
+            name="sequence_field_id"
+            search="[('model_id.model','=','ws_ra1204'),('name','=','name')]"
+        />
     <field
-                name="date_field_id"
-                search="[('model_id.model','=','ws_ra1204'),('name','=','date_start')]"
-            />
+            name="date_field_id"
+            search="[('model_id.model','=','ws_ra1204'),('name','=','date_start')]"
+        />
     <field name="computation_method">use_python</field>
     <field name="python_code">result=True</field>
     <field name="sequence_id" ref="sequence_ws_ra1204" />
@@ -87,5 +86,4 @@
     <field name="add_custom_prefix" eval="0" />
     <field name="add_custom_suffix" eval="0" />
 </record>
-</data>
 </odoo>

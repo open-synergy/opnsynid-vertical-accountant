@@ -3,15 +3,14 @@
      Copyright 2020 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
 <odoo>
-<data>
 <record id="worksheet_type_ra150" model="accountant.general_audit_worksheet_type">
     <field name="code">RA.150</field>
     <field name="name">Understanding of the Entity and Its Environment</field>
     <field name="sequence" eval="15000" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1501" model="accountant.general_audit_worksheet_type">
@@ -19,9 +18,9 @@
     <field name="name">General information and legal aspects</field>
     <field name="sequence" eval="15010" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1502" model="accountant.general_audit_worksheet_type">
@@ -29,9 +28,9 @@
     <field name="name">Structure Organization and Responsibilities</field>
     <field name="sequence" eval="15020" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1503" model="accountant.general_audit_worksheet_type">
@@ -39,9 +38,9 @@
     <field name="name">Main business activity processes</field>
     <field name="sequence" eval="15030" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1504" model="accountant.general_audit_worksheet_type">
@@ -49,9 +48,9 @@
     <field name="name">Understanding of relevant regulations</field>
     <field name="sequence" eval="15040" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1505" model="accountant.general_audit_worksheet_type">
@@ -59,9 +58,9 @@
     <field name="name">Understanding of the business environment</field>
     <field name="sequence" eval="15050" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1506" model="accountant.general_audit_worksheet_type">
@@ -69,9 +68,9 @@
     <field name="name">Going concern analysis</field>
     <field name="sequence" eval="15060" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1507" model="accountant.general_audit_worksheet_type">
@@ -79,9 +78,9 @@
     <field name="name">Understanding of preparation of LK</field>
     <field name="sequence" eval="15070" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
 
 <record id="worksheet_type_ra1508" model="accountant.general_audit_worksheet_type">
@@ -89,9 +88,8 @@
     <field name="name">Fraud factor analysis</field>
     <field name="sequence" eval="15080" />
     <field
-                name="category_id"
-                ref="ssi_accountant_general_audit.worksheet_type_category_ra"
-            />
+            name="category_id"
+            ref="ssi_accountant_general_audit.worksheet_type_category_ra"
+        />
 </record>
-</data>
 </odoo>

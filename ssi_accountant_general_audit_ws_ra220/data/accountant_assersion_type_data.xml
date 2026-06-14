@@ -3,7 +3,6 @@
      Copyright 2020 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0) -->
 <odoo>
-<data>
 <record id="accountant_assersion_type_001" model="accountant.assersion_type">
     <field name="code">C</field>
     <field name="name">Completeness</field>
@@ -23,5 +22,4 @@
     <field name="code">V</field>
     <field name="name">Valuation</field>
 </record>
-</data>
 </odoo>
