@@ -4,15 +4,14 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0-standalone.html). -->
 <odoo>
 
-<data noupdate="0">
 <record id="financial_ratio_110" model="accountant.financial_ratio">
     <field name="name">Current Ratio</field>
     <field name="code">T001</field>
     <field name="category">liquidity</field>
     <field name="sequence" eval="110" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = account_group["T001"]["extrapolation"] / account_group["T003"]["extrapolation"]
 result_interim = account_group["T001"]["interim"] / account_group["T003"]["interim"]
 result_previous = account_group["T001"]["previous"] / account_group["T003"]["previous"]
@@ -25,8 +24,8 @@ result_previous = account_group["T001"]["previous"] / account_group["T003"]["pre
     <field name="category">liquidity</field>
     <field name="sequence" eval="120" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = account_type["S111"]["extrapolation"] / account_group["T003"]["extrapolation"]
 result_interim = account_type["S111"]["interim"] / account_group["T003"]["interim"]
 result_previous = account_type["S111"]["previous"] / account_group["T003"]["previous"]
@@ -51,8 +50,8 @@ result_previous = (account_group["T001"]["previous"] - account_type["S116"]["pre
     <field name="category">activity</field>
     <field name="sequence" eval="140" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = account_type["S511"]["extrapolation"] / account_type["S116"]["extrapolation_avg"]
 result_interim = account_type["S511"]["interim"] / account_type["S116"]["interim_avg"]
     </field>
@@ -64,8 +63,8 @@ result_interim = account_type["S511"]["interim"] / account_type["S116"]["interim
     <field name="category">activity</field>
     <field name="sequence" eval="150" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = account_group["T008"]["extrapolation"] / account_type["S112"]["extrapolation_avg"]
 result_interim = account_group["T008"]["interim"] / account_type["S112"]["interim"]
     </field>
@@ -77,8 +76,8 @@ result_interim = account_group["T008"]["interim"] / account_type["S112"]["interi
     <field name="category">activity</field>
     <field name="sequence" eval="160" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = account_group["T008"]["extrapolation"] / (account_type["T001"]["extrapolation_avg"] + account_type["T002"]["extrapolation_avg"])
 result_interim = account_group["T008"]["interim"] / (account_type["T001"]["interim_avg"] + account_type["T002"]["interim_avg"])
     </field>
@@ -90,8 +89,8 @@ result_interim = account_group["T008"]["interim"] / (account_type["T001"]["inter
     <field name="category">activity</field>
     <field name="sequence" eval="170" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = account_group["T008"]["extrapolation"] / computation["T009"]["extrapolation_avg"]
 result_interim = account_group["T008"]["interim"] / computation["T009"]["interim_avg"]
     </field>
@@ -103,8 +102,8 @@ result_interim = account_group["T008"]["interim"] / computation["T009"]["interim
     <field name="category">activity</field>
     <field name="sequence" eval="180" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
     </field>
 </record>
 
@@ -114,8 +113,8 @@ result_interim = account_group["T008"]["interim"] / computation["T009"]["interim
     <field name="category">activity</field>
     <field name="sequence" eval="190" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = 365.0 / T004["extrapolation"]
 result_interim = 365.0 / T004["interim"]
     </field>
@@ -128,8 +127,8 @@ result_interim = 365.0 / T004["interim"]
     <field name="category">activity</field>
     <field name="sequence" eval="200" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = 365.0 / T005["extrapolation"]
 result_interim = 365.0 / T005["interim"]
     </field>
@@ -141,8 +140,8 @@ result_interim = 365.0 / T005["interim"]
     <field name="category">activity</field>
     <field name="sequence" eval="210" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = 365.0 / T008["extrapolation"]
 result_interim = 365.0 / T008["interim"]
     </field>
@@ -154,8 +153,8 @@ result_interim = 365.0 / T008["interim"]
     <field name="category">activity</field>
     <field name="sequence" eval="220" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = T010["extrapolation"] + T009["extrapolation"] - T011["extrapolation"]
 result_interim = T010["interim"] + T009["interim"] - T011["interim"]
     </field>
@@ -167,8 +166,8 @@ result_interim = T010["interim"] + T009["interim"] - T011["interim"]
     <field name="category">activity</field>
     <field name="sequence" eval="230" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = (account_group["T003"]["extrapolation"] + account_group["T004"]["extrapolation"]) / account_type["S311"]["extrapolation"]
 result_interim = (account_group["T003"]["interim"] + account_group["T004"]["interim"]) / account_type["S311"]["interim"]
 result_previous = (account_group["T003"]["previous"] + account_group["T004"]["previous"]) / account_type["S311"]["previous"]
@@ -181,8 +180,8 @@ result_previous = (account_group["T003"]["previous"] + account_group["T004"]["pr
     <field name="category">solvency</field>
     <field name="sequence" eval="240" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = (account_group["T001"]["extrapolation"] + account_group["T002"]["extrapolation"]) / account_type["S311"]["extrapolation"]
 result_interim = (account_group["T001"]["interim"] + account_group["T002"]["interim"]) / account_type["S311"]["interim"]
 result_previous = (account_group["T001"]["previous"] + account_group["T002"]["previous"]) / account_type["S311"]["previous"]
@@ -195,8 +194,8 @@ result_previous = (account_group["T001"]["previous"] + account_group["T002"]["pr
     <field name="category">solvency</field>
     <field name="sequence" eval="250" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
     </field>
 </record>
 
@@ -206,8 +205,8 @@ result_previous = (account_group["T001"]["previous"] + account_group["T002"]["pr
     <field name="category">profitability</field>
     <field name="sequence" eval="260" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = (account_group["T008"]["extrapolation"] + account_group["T009"]["extrapolation"]) / account_group["T008"]["extrapolation"]
 result_interim = (account_group["T008"]["interim"] + account_group["T009"]["interim"]) / account_group["T008"]["interim"]
 result_previous = (account_group["T008"]["previous"] + account_group["T009"]["previous"]) / account_group["T008"]["previous"]
@@ -220,8 +219,8 @@ result_previous = (account_group["T008"]["previous"] + account_group["T009"]["pr
     <field name="category">profitability</field>
     <field name="sequence" eval="270" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = computation["T010"]["extrapolation"] / account_group["T008"]["extrapolation"]
 result_interim = computation["T010"]["interim"] / account_group["T008"]["interim"]
 result_previous = computation["T010"]["previous"] / account_group["T008"]["previous"]
@@ -234,8 +233,8 @@ result_previous = computation["T010"]["previous"] / account_group["T008"]["previ
     <field name="category">profitability</field>
     <field name="sequence" eval="280" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = computation["T010"]["extrapolation"] / computation["T001"]["extrapolation"]
 result_interim = computation["T010"]["interim"] / computation["T001"]["interim"]
 result_previous = computation["T010"]["previous"] / computation["T001"]["previous"]
@@ -248,12 +247,11 @@ result_previous = computation["T010"]["previous"] / computation["T001"]["previou
     <field name="category">profitability</field>
     <field name="sequence" eval="290" />
     <field
-                name="python_code"
-            >result_extrapolation = result_interim = result_previous = 0.0
+            name="python_code"
+        >result_extrapolation = result_interim = result_previous = 0.0
 result_extrapolation = computation["T010"]["extrapolation"] / computation["T002"]["extrapolation"]
 result_interim = computation["T010"]["interim"] / computation["T002"]["interim"]
 result_previous = computation["T010"]["previous"] / computation["T002"]["previous"]
     </field>
 </record>
-</data>
 </odoo>

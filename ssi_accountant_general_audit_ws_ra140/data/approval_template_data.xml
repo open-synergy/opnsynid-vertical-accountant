@@ -2,8 +2,7 @@
 <!-- Copyright 2022 OpenSynergy Indonesia
      Copyright 2022 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0-standalone.html). -->
-<odoo>
-<data noupdate="1">
+<odoo noupdate="1">
 <!-- RA.140 -->
 <record id="approval_template_ra140" model="approval.template">
     <field name="name">Standard</field>
@@ -18,9 +17,9 @@
     <field name="template_id" ref="approval_template_ra140" />
     <field name="approver_selection_method">use_group</field>
     <field
-                name="approver_group_ids"
-                eval="[(6,0,[ref('accountant_general_audit_ws_ra140_validator_group')])]"
-            />
+            name="approver_group_ids"
+            eval="[(6,0,[ref('accountant_general_audit_ws_ra140_validator_group')])]"
+        />
 </record>
 
 <!-- RA.140.1 -->
@@ -37,9 +36,9 @@
     <field name="template_id" ref="approval_template_ra1401" />
     <field name="approver_selection_method">use_group</field>
     <field
-                name="approver_group_ids"
-                eval="[(6,0,[ref('accountant_general_audit_ws_ra1401_validator_group')])]"
-            />
+            name="approver_group_ids"
+            eval="[(6,0,[ref('accountant_general_audit_ws_ra1401_validator_group')])]"
+        />
 </record>
 
 <!-- RA.140.2 -->
@@ -56,9 +55,8 @@
     <field name="template_id" ref="approval_template_ra1402" />
     <field name="approver_selection_method">use_group</field>
     <field
-                name="approver_group_ids"
-                eval="[(6,0,[ref('accountant_general_audit_ws_ra1402_validator_group')])]"
-            />
+            name="approver_group_ids"
+            eval="[(6,0,[ref('accountant_general_audit_ws_ra1402_validator_group')])]"
+        />
 </record>
-</data>
 </odoo>
