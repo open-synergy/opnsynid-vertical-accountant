@@ -2,19 +2,18 @@
 <!-- Copyright 2022 OpenSynergy Indonesia
      Copyright 2022 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl-3.0-standalone.html). -->
-<odoo>
-<data noupdate="1">
+<odoo noupdate="1">
 <!-- PE.1101 -->
 <record id="policy_template_pe1101" model="policy.template">
     <field name="name">Standard</field>
     <field
-                name="model_id"
-                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1101"
-            />
+            name="model_id"
+            ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1101"
+        />
     <field
-                name="state_field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','state')]"
-            />
+            name="state_field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','state')]"
+        />
     <field name="sequence" eval="100" />
     <field name="python_code">result=True</field>
 </record>
@@ -23,20 +22,20 @@
 <record id="policy_template_pe1101_open" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1101" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','open_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','open_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1101_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1101_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -44,20 +43,20 @@
 <record id="policy_template_pe1101_confirm" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1101" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','confirm_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','confirm_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','=','open')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','=','open')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1101_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1101_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -65,20 +64,20 @@
 <record id="policy_template_pe1101_cancel" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1101" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','cancel_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','cancel_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','in',['draft','open','done'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','in',['draft','open','done'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1101_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1101_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -86,20 +85,20 @@
 <record id="policy_template_pe1101_restart" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1101" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','restart_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','restart_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','in',['cancel','reject'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','in',['cancel','reject'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1101_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1101_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -107,14 +106,14 @@
 <record id="policy_template_pe1101_reject" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1101" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','reject_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','reject_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -126,14 +125,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1101_approve" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1101" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','approve_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','approve_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -145,20 +144,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1101_manual_number" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1101" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','manual_number_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1101'),('name','=','manual_number_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1101'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1101_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1101_validator_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -166,13 +165,13 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1102" model="policy.template">
     <field name="name">Standard</field>
     <field
-                name="model_id"
-                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1102"
-            />
+            name="model_id"
+            ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1102"
+        />
     <field
-                name="state_field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','state')]"
-            />
+            name="state_field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','state')]"
+        />
     <field name="sequence" eval="100" />
     <field name="python_code">result=True</field>
 </record>
@@ -181,20 +180,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1102_open" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1102" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','open_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','open_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1102_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1102_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -202,20 +201,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1102_confirm" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1102" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','confirm_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','confirm_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','=','open')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','=','open')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1102_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1102_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -223,20 +222,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1102_cancel" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1102" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','cancel_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','cancel_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','in',['draft','open','done'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','in',['draft','open','done'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1102_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1102_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -244,20 +243,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1102_restart" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1102" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','restart_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','restart_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','in',['cancel','reject'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','in',['cancel','reject'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1102_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1102_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -265,14 +264,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1102_reject" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1102" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','reject_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','reject_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -284,14 +283,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1102_approve" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1102" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','approve_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','approve_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -303,20 +302,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1102_manual_number" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1102" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','manual_number_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1102'),('name','=','manual_number_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1102'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1102_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1102_validator_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -324,13 +323,13 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe110" model="policy.template">
     <field name="name">Standard</field>
     <field
-                name="model_id"
-                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe110"
-            />
+            name="model_id"
+            ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe110"
+        />
     <field
-                name="state_field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','state')]"
-            />
+            name="state_field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','state')]"
+        />
     <field name="sequence" eval="100" />
     <field name="python_code">result=True</field>
 </record>
@@ -339,20 +338,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe110_open" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe110" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','open_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','open_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe110_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe110_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -360,20 +359,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe110_confirm" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe110" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','confirm_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','confirm_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','=','open')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','=','open')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe110_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe110_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -381,20 +380,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe110_cancel" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe110" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','cancel_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','cancel_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','in',['draft','open','done'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','in',['draft','open','done'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe110_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe110_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -402,20 +401,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe110_restart" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe110" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','restart_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','restart_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','in',['cancel','reject'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','in',['cancel','reject'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe110_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe110_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -423,14 +422,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe110_reject" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe110" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','reject_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','reject_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -442,14 +441,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe110_approve" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe110" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','approve_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','approve_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -461,20 +460,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe110_manual_number" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe110" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','manual_number_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe110'),('name','=','manual_number_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe110'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe110_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe110_validator_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -482,13 +481,13 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11021" model="policy.template">
     <field name="name">Standard</field>
     <field
-                name="model_id"
-                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe11021"
-            />
+            name="model_id"
+            ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe11021"
+        />
     <field
-                name="state_field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','state')]"
-            />
+            name="state_field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','state')]"
+        />
     <field name="sequence" eval="100" />
     <field name="python_code">result=True</field>
 </record>
@@ -497,20 +496,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11021_open" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11021" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','open_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','open_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11021_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11021_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -518,20 +517,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11021_confirm" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11021" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','confirm_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','confirm_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','=','open')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','=','open')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11021_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11021_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -539,20 +538,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11021_cancel" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11021" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','cancel_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','cancel_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','in',['draft','open','done'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','in',['draft','open','done'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11021_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11021_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -560,20 +559,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11021_restart" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11021" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','restart_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','restart_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','in',['cancel','reject'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','in',['cancel','reject'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11021_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11021_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -581,14 +580,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11021_reject" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11021" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','reject_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','reject_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -600,14 +599,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11021_approve" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11021" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','approve_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','approve_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -619,20 +618,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11021_manual_number" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11021" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','manual_number_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11021'),('name','=','manual_number_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11021'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11021_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11021_validator_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -640,13 +639,13 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11022" model="policy.template">
     <field name="name">Standard</field>
     <field
-                name="model_id"
-                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe11022"
-            />
+            name="model_id"
+            ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe11022"
+        />
     <field
-                name="state_field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','state')]"
-            />
+            name="state_field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','state')]"
+        />
     <field name="sequence" eval="100" />
     <field name="python_code">result=True</field>
 </record>
@@ -655,20 +654,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11022_open" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11022" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','open_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','open_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11022_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11022_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -676,20 +675,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11022_confirm" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11022" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','confirm_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','confirm_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','=','open')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','=','open')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11022_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11022_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -697,20 +696,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11022_cancel" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11022" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','cancel_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','cancel_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','in',['draft','open','done'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','in',['draft','open','done'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11022_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11022_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -718,20 +717,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11022_restart" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11022" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','restart_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','restart_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','in',['cancel','reject'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','in',['cancel','reject'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11022_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11022_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -739,14 +738,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11022_reject" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11022" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','reject_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','reject_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -758,14 +757,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11022_approve" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11022" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','approve_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','approve_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -777,20 +776,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe11022_manual_number" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe11022" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','manual_number_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe11022'),('name','=','manual_number_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe11022'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11022_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe11022_validator_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -798,13 +797,13 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1103" model="policy.template">
     <field name="name">Standard</field>
     <field
-                name="model_id"
-                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1103"
-            />
+            name="model_id"
+            ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1103"
+        />
     <field
-                name="state_field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','state')]"
-            />
+            name="state_field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','state')]"
+        />
     <field name="sequence" eval="100" />
     <field name="python_code">result=True</field>
 </record>
@@ -813,20 +812,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1103_open" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1103" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','open_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','open_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1103_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1103_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -834,20 +833,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1103_confirm" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1103" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','confirm_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','confirm_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','=','open')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','=','open')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1103_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1103_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -855,20 +854,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1103_cancel" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1103" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','cancel_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','cancel_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','in',['draft','open','done'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','in',['draft','open','done'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1103_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1103_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -876,20 +875,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1103_restart" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1103" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','restart_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','restart_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','in',['cancel','reject'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','in',['cancel','reject'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1103_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1103_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -897,14 +896,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1103_reject" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1103" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','reject_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','reject_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -916,14 +915,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1103_approve" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1103" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','approve_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','approve_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -935,20 +934,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1103_manual_number" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1103" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','manual_number_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1103'),('name','=','manual_number_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1103'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1103_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1103_validator_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -956,13 +955,13 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1104" model="policy.template">
     <field name="name">Standard</field>
     <field
-                name="model_id"
-                ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1104"
-            />
+            name="model_id"
+            ref="ssi_accountant_general_audit_ws_pe110.model_accountant_general_audit_ws_pe1104"
+        />
     <field
-                name="state_field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','state')]"
-            />
+            name="state_field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','state')]"
+        />
     <field name="sequence" eval="100" />
     <field name="python_code">result=True</field>
 </record>
@@ -971,20 +970,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1104_open" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1104" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','open_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','open_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1104_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1104_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -992,20 +991,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1104_confirm" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1104" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','confirm_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','confirm_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','=','open')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','=','open')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1104_user_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1104_user_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
 
@@ -1013,20 +1012,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1104_cancel" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1104" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','cancel_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','cancel_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','in',['draft','open','done'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','in',['draft','open','done'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1104_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1104_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -1034,20 +1033,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1104_restart" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1104" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','restart_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','restart_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','in',['cancel','reject'])]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','in',['cancel','reject'])]"
+        />
             <field name="restrict_user" eval="1" />
             <field name="computation_method">use_group</field>
             <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1104_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1104_validator_group')])]"
+        />
             <field name="restrict_additional" eval="0" />
 </record>
 
@@ -1055,14 +1054,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1104_reject" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1104" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','reject_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','reject_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -1074,14 +1073,14 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1104_approve" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1104" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','approve_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','approve_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','=','confirm')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','=','confirm')]"
+        />
     <field name="restrict_user" eval="0" />
     <field name="restrict_additional" eval="1" />
     <field name="additional_python_code">result = False
@@ -1093,21 +1092,20 @@ if env.user.id in document.active_approver_user_ids.ids:
 <record id="policy_template_pe1104_manual_number" model="policy.template_detail">
     <field name="template_id" ref="policy_template_pe1104" />
     <field
-                name="field_id"
-                search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','manual_number_ok')]"
-            />
+            name="field_id"
+            search="[('model_id.model','=','accountant.general_audit_ws_pe1104'),('name','=','manual_number_ok')]"
+        />
     <field name="restrict_state" eval="1" />
     <field
-                name="state_ids"
-                search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','=','draft')]"
-            />
+            name="state_ids"
+            search="[('field_id.model_id.model','=','accountant.general_audit_ws_pe1104'),('value','=','draft')]"
+        />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
     <field
-                name="group_ids"
-                eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1104_validator_group')])]"
-            />
+            name="group_ids"
+            eval="[(6,0,[ref('ssi_accountant_general_audit_ws_pe110.accountant_general_audit_ws_pe1104_validator_group')])]"
+        />
     <field name="restrict_additional" eval="0" />
 </record>
-</data>
 </odoo>
