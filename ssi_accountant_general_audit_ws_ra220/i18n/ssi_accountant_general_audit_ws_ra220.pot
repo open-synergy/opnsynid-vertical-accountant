@@ -1,0 +1,1926 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ssi_accountant_general_audit_ws_ra220
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__name
+msgid "# Document"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__general_audit_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__general_audit_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__general_audit_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__general_audit_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__general_audit_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__general_audit_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__general_audit_id
+msgid "# General Audit"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__worksheet_id
+msgid "# Worksheet"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__account_type_set_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__account_type_set_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__account_type_set_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__account_type_set_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__account_type_set_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__account_type_set_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__account_type_set_id
+msgid "Accoount Type Set"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__account_cycle_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__account_cycle_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__account_id
+msgid "Account Cycle"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__type_id
+msgid "Account Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__accountant_id
+msgid "Accountant"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_accountant_assersion_type
+msgid "Accountant - Assersion Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_accountant_general_audit_standard_detail
+msgid "Accountant General Audit Standard Detail"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__active
+msgid "Active"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__active_approval_ids
+msgid "Active Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__active_approver_partner_ids
+msgid "Active Partners"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__active_approver_user_ids
+msgid "Active Users"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__activity_control_documentation
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__activity_control_documentation
+msgid "Activity Control Documentation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.assersion_type,name:ssi_accountant_general_audit_ws_ra220.accountant_assersion_type_003
+msgid "Acuracy & Cut-off"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22011_all_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22012_all_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2201_all_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22021_all_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2202_all_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2203_all_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra220_all_group
+msgid "All"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__business_process_ids
+msgid "Allowed Business Process"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__allowed_conclusion_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__allowed_conclusion_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__allowed_conclusion_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__allowed_conclusion_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__allowed_conclusion_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__allowed_conclusion_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__allowed_conclusion_ids
+msgid "Allowed Conclusion"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__allowed_policy_template_ids
+msgid "Allowed Policy Templates"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__approval_template_id
+msgid "Approval Configuration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__approval_template_id
+msgid "Approval Template"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__approval_ids
+msgid "Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__approve_ok
+msgid ""
+"Approve policy\n"
+"\n"
+"* If active user can see and execute 'Approve' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__approved
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__approved
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__approved
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__approved
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__approved
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__approved
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__approved
+msgid "Approved"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_general_audit_standard_detail__assersion_type_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__assersion_type_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__oassersion_type_ids
+msgid "Assersion Types"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__standard_item_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__standard_item_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__standard_item_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__standard_item_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__standard_item_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__standard_item_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__standard_item_ids
+msgid "Audit Standard Items"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_general_audit_standard_detail__business_process_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__business_process_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__business_process_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__business_process_id
+msgid "Business Process"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__approve_ok
+msgid "Can Approve"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__cancel_ok
+msgid "Can Cancel"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__confirm_ok
+msgid "Can Confirm"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__done_ok
+msgid "Can Finished"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__manual_number_ok
+msgid "Can Input Manual Document Number"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__reject_ok
+msgid "Can Reject"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__restart_ok
+msgid "Can Restart"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__restart_approval_ok
+msgid "Can Restart Approval"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__open_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__open_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__open_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__open_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__open_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__open_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__open_ok
+msgid "Can Start"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__cancel_reason_id
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__cancel_ok
+msgid ""
+"Cancel policy\n"
+"\n"
+"* If active user can see and execute 'Cancel' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__code
+msgid "Code"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__company_id
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22011_company_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22012_company_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2201_company_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22021_company_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2202_company_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2203_company_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra220_company_group
+msgid "Company"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__company_partner_id
+msgid "Company Partner"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22011_company_child_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22012_company_child_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2201_company_child_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22021_company_child_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2202_company_child_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2203_company_child_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra220_company_child_group
+msgid "Company and All Child Companies"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__company_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__company_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__company_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__company_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__company_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__company_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__company_id
+msgid ""
+"Company that own the document\n"
+"\n"
+"* Automatically filled with user's company.\n"
+"  Default company can be changed"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.assersion_type,name:ssi_accountant_general_audit_ws_ra220.accountant_assersion_type_001
+msgid "Completeness"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__conclusion_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__conclusion_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__conclusion_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__conclusion_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__conclusion_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__conclusion_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__conclusion_id
+msgid "Conclusion"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__conclusion
+msgid "Conclusion Additional Explanation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__confirm_ok
+msgid ""
+"Confirm policy\n"
+"\n"
+"* If active user can see and execute 'Confirm' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__control_activity_ids
+msgid "Control Activity"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__control_risk_ids
+msgid "Control Risk"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra220.ws_ra2202_view_form
+msgid "Control Risks"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra220.worksheet_type_ra220
+msgid "Control risk"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra220.worksheet_type_ra2202
+msgid "Control risk - cycle level"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra220.worksheet_type_ra2201
+msgid "Control risk - entity level"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra220.worksheet_type_ra22021
+msgid "Control risk - per cycle level"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra220_002
+msgid "Control risk belum dievaluasi dengan memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra220_001
+msgid "Control risk sudah dievaluasi dengan memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__cycle_detail_ids
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra220.ws_ra22021_view_form
+msgid "Cycle Detail"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra220.ws_ra22021_view_form
+msgid "Cycle Explanation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__name
+msgid "Cycle Item"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_general_audit_standard_detail__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__done_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__done_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__done_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__done_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__done_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__done_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__done_ok
+msgid ""
+"Done policy\n"
+"\n"
+"* If active user can see and execute 'Done' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra220.selection__accountant_general_audit_standard_detail__significant_account_toc_analysis__effective
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra220.selection__accountant_general_audit_standard_detail__toc_analysis__effective
+msgid "Effective"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__date_end
+msgid "End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra220.worksheet_type_ra22011
+msgid "Evaluasi Pemahaman Pengendalian"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra220.worksheet_type_ra22012
+msgid "Evaluasi Pengendalian Teknologi Informasi"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra22011_002
+msgid "Evaluasi pemahaman pengendalian belum sepenuhnya memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra22011_001
+msgid "Evaluasi pemahaman pengendalian telah memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra22011_003
+msgid "Evaluasi pemahaman pengendalian tidak memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra22012_002
+msgid "Evaluasi pengendalian teknologi informasi belum sepenuhnya memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra22012_001
+msgid "Evaluasi pengendalian teknologi informasi telah memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra22012_003
+msgid "Evaluasi pengendalian teknologi informasi tidak memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.assersion_type,name:ssi_accountant_general_audit_ws_ra220.accountant_assersion_type_002
+msgid "Existence"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__frequency
+msgid "Frequency"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra220
+msgid "General Audit WS RA.220"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra2201
+msgid "General Audit WS RA.220.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra22011
+msgid "General Audit WS RA.220.1.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra22012
+msgid "General Audit WS RA.220.1.2"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra2202
+msgid "General Audit WS RA.220.2"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra22021
+msgid "General Audit WS RA.220.2.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra2203
+msgid "General Audit WS RA.220.3"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra220_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra220_workflow_module_category
+msgid "General Audit Worksheet RA.220"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra2201_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra2201_workflow_module_category
+msgid "General Audit Worksheet RA.220.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra22011_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra22011_workflow_module_category
+msgid "General Audit Worksheet RA.220.1.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra22012_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra22012_workflow_module_category
+msgid "General Audit Worksheet RA.220.1.2"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra2202_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra2202_workflow_module_category
+msgid "General Audit Worksheet RA.220.2"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra22021_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra22021_workflow_module_category
+msgid "General Audit Worksheet RA.220.2.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra2203_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra220.general_audit_ws_ra2203_workflow_module_category
+msgid "General Audit Worksheet RA.220.3"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra220.selection__accountant_general_audit_standard_detail__significant_account_toc_result__high
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra220.selection__accountant_general_audit_standard_detail__toc_result__high
+msgid "High"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_general_audit_standard_detail__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__id
+msgid "ID"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__interim_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__interim_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__interim_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__interim_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__interim_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__interim_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__interim_date_end
+msgid "Interim End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__interim_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__interim_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__interim_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__interim_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__interim_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__interim_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__interim_date_start
+msgid "Interim Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_general_audit_standard_detail____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra220.selection__accountant_general_audit_standard_detail__significant_account_toc_result__low
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra220.selection__accountant_general_audit_standard_detail__toc_result__low
+msgid "Low"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__manual_review_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__manual_review_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__manual_review_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__manual_review_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__manual_review_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__manual_review_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__manual_review_time
+msgid "Manual Review Time"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__manual_work_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__manual_work_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__manual_work_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__manual_work_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__manual_work_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__manual_work_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__manual_work_time
+msgid "Manual Work Time"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__manual_number_ok
+msgid ""
+"Manual number assignment policy\n"
+"\n"
+"* If active user can edit document number"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__active
+msgid ""
+"Master data status\n"
+"\n"
+"* Inactive data can not be selected when creating new transaction\n"
+"* Transaction with inactive master data can still be viewed\n"
+"* Set master data as inactive if master data no longger needed,\n"
+"but master data already used on transaction"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__code
+msgid ""
+"Master data unique identifier.\n"
+"\n"
+"* Fill with '/' if You do not need unique identifier\n"
+"* Click 'Generate Code' button to automatically assign code.\n"
+"  Sequence template mush be set to perform this action\n"
+"  Only master data with '/' code will be assign automatic code"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__name
+msgid "Name"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__need_validation
+msgid "Need Validation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__next_approval_ids
+msgid "Next Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra220.selection__accountant_general_audit_standard_detail__significant_account_toc_analysis__not_effective
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra220.selection__accountant_general_audit_standard_detail__toc_analysis__not_effective
+msgid "Not Effective"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra220.selection__accountant_general_audit_standard_detail__significant_account_toc_analysis__not_exist
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra220.selection__accountant_general_audit_standard_detail__toc_analysis__not_exist
+msgid "Not Exist"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__note
+msgid "Note"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra2201_002
+msgid "Pengendalian Internal tingkat entitas belum sepenuhnya memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra2201_001
+msgid "Pengendalian Internal tingkat entitas telah memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra2201_003
+msgid "Pengendalian Internal tingkat entitas tidak memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra22021_002
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra2202_002
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra2203_002
+msgid "Pengendalian Internal tingkat siklus belum sepenuhnya memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra22021_001
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra2202_001
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra2203_001
+msgid "Pengendalian Internal tingkat siklus telah memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra22021_003
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra2202_003
+#: model:accountant.general_audit_worksheet_conclusion,name:ssi_accountant_general_audit_ws_ra220.conslusion_ra2203_003
+msgid "Pengendalian Internal tingkat siklus tidak memadai"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__policy_template_id
+msgid "Policy Template"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__previous_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__previous_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__previous_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__previous_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__previous_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__previous_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__previous_date_end
+msgid "Previous End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__previous_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__previous_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__previous_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__previous_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__previous_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__previous_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__previous_date_start
+msgid "Previous Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__project_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__project_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__project_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__project_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__project_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__project_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__project_id
+msgid "Project"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra220.ws_ra220_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra220.ws_ra220_menu
+msgid "RA.220"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra220.ws_ra2201_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra220.ws_ra2201_menu
+msgid "RA.220.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra220.ws_ra22011_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra220.ws_ra22011_menu
+msgid "RA.220.1.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra220.ws_ra22012_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra220.ws_ra22012_menu
+msgid "RA.220.1.2"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra220.ws_ra2202_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra220.ws_ra2202_menu
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_standard_detail_view_form
+msgid "RA.220.2"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra2202_control_risk
+msgid "RA.220.2 Control Risk"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra220.ws_ra22021_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra220.ws_ra22021_menu
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_standard_detail_view_form
+msgid "RA.220.2.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra22021_account_cycle
+msgid "RA.220.2.1 Account Cycle"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra22021_cycle_detail
+msgid "RA.220.2.1 Cycle Detail"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra220.ws_ra2203_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra220.ws_ra2203_menu
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_standard_detail_view_form
+msgid "RA.220.3"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra2203_account_control_activity
+msgid "RA.220.3 Account Control Activity"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra220.model_ws_ra2203_account_cycle
+msgid "RA.220.3 Account Cycle"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__reject_ok
+msgid ""
+"Reject policy\n"
+"\n"
+"* If active user can see and execute 'Reject' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_standard_detail_view_form
+msgid "Rely On Control"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_general_audit_standard_detail__rely_on_control
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__rely_on_control
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__rely_on_control
+msgid "Rely on Control"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__user_id
+msgid "Responsible"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__restart_approval_ok
+msgid ""
+"Restart approval policy\n"
+"\n"
+"* If active user can see and execute 'Restart Approval' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__restart_ok
+msgid ""
+"Restart policy\n"
+"\n"
+"* If active user can see and execute 'Restart' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__review_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__review_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__review_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__review_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__review_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__review_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__review_task_id
+msgid "Review Task"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__review_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__review_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__review_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__review_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__review_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__review_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__review_task_type_id
+msgid "Review Task Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__reviewer_id
+msgid "Reviewer"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__risk_identification
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__risk_identification
+msgid "Risk Identification"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__sequence
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__sequence
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__sequence
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__sequence
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra220.ws_ra2203_view_form
+msgid "Significant Account Control"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra220.worksheet_type_ra2203
+msgid "Significant Accounts Containing Significant Risks"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__standard_detail_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202_control_risk__standard_detail_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__standard_detail_id
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra220.ws_ra22021_view_form
+msgid "Standard Account"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__date_start
+msgid "Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__open_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__open_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__open_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__open_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__open_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__open_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__open_ok
+msgid ""
+"Start policy\n"
+"\n"
+"* If active user can see and execute 'Start' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__state
+msgid "State"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__title
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__title
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__title
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__title
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__title
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__title
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__title
+msgid "Title"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_general_audit_standard_detail__significant_account_toc_analysis
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_general_audit_standard_detail__toc_analysis
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__toc_analysis
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__toc_analysis
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_standard_detail_view_form
+msgid "ToC Analysis"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_general_audit_standard_detail__significant_account_toc_result
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_general_audit_standard_detail__toc_result
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_account_cycle__toc_result
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_cycle__toc_result
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_standard_detail_view_form
+msgid "ToC Result"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__name
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__name
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__name
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__name
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__name
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__name
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__name
+msgid ""
+"Transaction/document number\n"
+"\n"
+"* Unique indentifer of transaction\n"
+"* Leave '/' to automatically generate number\n"
+"* Change '/' into any number/identifier to manually assign number.\n"
+"  Manual number assignment can be done in 'Draft' state\n"
+"  Only user with 'Can Manualy Assign Number' policy can manually assign number.\n"
+"* Transaction with number other than '/' can not be deleted."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__type_id
+msgid "Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22011_user_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22012_user_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2201_user_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22021_user_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2202_user_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2203_user_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra220_user_group
+msgid "User"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__user_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__user_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__user_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__user_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__user_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__user_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__user_id
+msgid ""
+"User that responsible for document\n"
+"\n"
+"* Create user can be different with responsible user\n"
+"* Automatically filled with user that initiate document creation.\n"
+"  Default responsible can be changed."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__reviewer_id
+msgid ""
+"User that responsible to review document\n"
+"\n"
+"* Unless it configured to approve reviewer does not equal to approver"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__active_approver_user_ids
+msgid "Users that can approve/reject document"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22011_validator_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22012_validator_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2201_validator_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22021_validator_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2202_validator_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2203_validator_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra220_validator_group
+msgid "Validator"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:accountant.assersion_type,name:ssi_accountant_general_audit_ws_ra220.accountant_assersion_type_004
+msgid "Valuation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22011_viewer_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22012_viewer_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2201_viewer_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra22021_viewer_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2202_viewer_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra2203_viewer_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra220.accountant_general_audit_ws_ra220_viewer_group
+msgid "Viewer"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_accountant_assersion_type__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021_cycle_detail__what_can_go_wrong
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203_account_control_activity__what_can_go_wrong
+msgid "What Can Go Wrong"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__work_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__work_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__work_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__work_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__work_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__work_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__work_task_id
+msgid "Work Task"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22011__work_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22012__work_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2201__work_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra22021__work_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2202__work_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra2203__work_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_ws_ra220__work_task_type_id
+msgid "Work Task Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra220
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra220.field_accountant_general_audit_standard_detail__significant_account_rely_on_control
+msgid "significant_account - Rely on Control"
+msgstr ""
