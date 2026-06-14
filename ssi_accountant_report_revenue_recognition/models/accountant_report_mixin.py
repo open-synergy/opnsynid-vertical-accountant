@@ -11,7 +11,7 @@ class AccountantReportMixin(models.AbstractModel):
     pob_id = fields.Many2one(
         string="POB",
         required=False,
-        comodel_name="service_contract.performance_obligation",
+        comodel_name="performance_obligation",
         readonly=True,
         states={
             "draft": [
