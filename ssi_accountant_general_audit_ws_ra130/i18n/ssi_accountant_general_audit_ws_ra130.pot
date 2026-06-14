@@ -1,0 +1,1012 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ssi_accountant_general_audit_ws_ra130
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__name
+msgid "# Document"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__general_audit_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__general_audit_id
+msgid "# General Audit"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__worksheet_ra130_id
+msgid "# RA.130"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__worksheet_id
+msgid "# RA.130.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__worksheet_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__worksheet_id
+msgid "# Worksheet"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__account_type_set_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__account_type_set_id
+msgid "Accoount Type Set"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__type_id
+msgid "Account Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__accountant_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__accountant_id
+msgid "Accountant"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_needaction
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__active_approval_ids
+msgid "Active Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__active_approver_partner_ids
+msgid "Active Partners"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__active_approver_user_ids
+msgid "Active Users"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra1301_all_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_all_group
+msgid "All"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__allowed_conclusion_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__allowed_conclusion_ids
+msgid "Allowed Conclusion"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__allowed_policy_template_ids
+msgid "Allowed Policy Templates"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_view_form
+msgid "Amount"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__approval_template_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__approval_template_id
+msgid "Approval Configuration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__approval_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__approval_template_id
+msgid "Approval Template"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__approval_ids
+msgid "Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__approve_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__approve_ok
+msgid ""
+"Approve policy\n"
+"\n"
+"* If active user can see and execute 'Approve' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__approved
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__approved
+msgid "Approved"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__standard_item_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__standard_item_ids
+msgid "Audit Standard Items"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__base
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__balance
+msgid "Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__base_amount_source
+msgid "Balance Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_view_form
+msgid "Base Amount"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__base_computation_amount
+msgid "Base Amount for Materiality Computation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__approve_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__approve_ok
+msgid "Can Approve"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__cancel_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__cancel_ok
+msgid "Can Cancel"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__confirm_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__confirm_ok
+msgid "Can Confirm"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__done_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__done_ok
+msgid "Can Finished"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__manual_number_ok
+msgid "Can Input Manual Document Number"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__reject_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__reject_ok
+msgid "Can Reject"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__restart_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__restart_ok
+msgid "Can Restart"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__restart_approval_ok
+msgid "Can Restart Approval"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__open_ok
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__open_ok
+msgid "Can Start"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__cancel_reason_id
+msgid "Cancel Reason"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__cancel_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__cancel_ok
+msgid ""
+"Cancel policy\n"
+"\n"
+"* If active user can see and execute 'Cancel' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__company_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__company_id
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra1301_company_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_company_group
+msgid "Company"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__company_partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__company_partner_id
+msgid "Company Partner"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra1301_company_child_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_company_child_group
+msgid "Company and All Child Companies"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__company_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__company_id
+msgid ""
+"Company that own the document\n"
+"\n"
+"* Automatically filled with user's company.\n"
+"  Default company can be changed"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__computation_item_id
+msgid "Computation Item To Use"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__conclusion_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__conclusion_id
+msgid "Conclusion"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__conclusion
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__conclusion
+msgid "Conclusion Additional Explanation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__confirm_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__confirm_ok
+msgid ""
+"Confirm policy\n"
+"\n"
+"* If active user can see and execute 'Confirm' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_view_form
+msgid "Consideration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__create_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__create_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__currency_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__display_name
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__done_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__done_ok
+msgid ""
+"Done policy\n"
+"\n"
+"* If active user can see and execute 'Done' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__date_end
+msgid "End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra130.selection__accountant_general_audit_ws_ra130__base_amount_source__extrapolation
+msgid "Extrapolation Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__final_materiality
+msgid "Final Materiality"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_type_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__general_audit_computation_id
+msgid "General Audit Computation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra130.model_accountant_general_audit_ws_ra130
+msgid "General Audit WS RA.130"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra130.model_accountant_general_audit_ws_ra1301
+msgid "General Audit WS RA.130.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model,name:ssi_accountant_general_audit_ws_ra130.model_accountant_general_audit_ws_ra1301_materiality_mapping
+msgid "General Audit WS RA.130.1 Materiality Mapping"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra130.general_audit_ws_ra130_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra130.general_audit_ws_ra130_workflow_module_category
+msgid "General Audit Worksheet RA.130"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra130.general_audit_ws_ra1301_data_module_category
+#: model:ir.module.category,name:ssi_accountant_general_audit_ws_ra130.general_audit_ws_ra1301_workflow_module_category
+msgid "General Audit Worksheet RA.130.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra130.selection__accountant_general_audit_ws_ra130__base_amount_source__home
+msgid "Home Statement Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__id
+msgid "ID"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_exception_icon
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_unread
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_needaction
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_has_error
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra130.selection__accountant_general_audit_ws_ra1301_materiality_mapping__final_materiality__im
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra130.selection__accountant_general_audit_ws_ra1301_materiality_mapping__materiality__im
+msgid "Immaterial"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra130.selection__accountant_general_audit_ws_ra130__base_amount_source__interim
+msgid "Interim Balance"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__interim_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__interim_date_end
+msgid "Interim End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__interim_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__interim_date_start
+msgid "Interim Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_is_follower
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping____last_update
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__write_uid
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__write_date
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__manual_review_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__manual_review_time
+msgid "Manual Review Time"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__manual_work_time
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__manual_work_time
+msgid "Manual Work Time"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__manual_number_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__manual_number_ok
+msgid ""
+"Manual number assignment policy\n"
+"\n"
+"* If active user can edit document number"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra130.selection__accountant_general_audit_ws_ra1301_materiality_mapping__final_materiality__m
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra130.selection__accountant_general_audit_ws_ra1301_materiality_mapping__materiality__m
+msgid "Material"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra130.worksheet_type_ra1301
+msgid "Material accounts mapping"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__materiality
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra1301_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_view_form
+msgid "Materiality"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:accountant.general_audit_worksheet_type,name:ssi_accountant_general_audit_ws_ra130.worksheet_type_ra130
+msgid "Materiality - risk assessment"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__materiality_mapping_ids
+msgid "Materiality Mapping"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__materiality_type
+msgid "Materiality Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_has_error
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__need_validation
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__need_validation
+msgid "Need Validation"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_summary
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__next_approval_ids
+msgid "Next Approvals"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__note
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__note
+msgid "Note"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_needaction_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_has_error_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_unread_counter
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__other_amount_source
+msgid "Other Amount's Source"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__other_base_amount
+msgid "Other Base Amount"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__overall_materiality
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra130.selection__accountant_general_audit_ws_ra1301__materiality_type__om
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_view_form
+msgid "Overall Materiality"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__overall_materiality_consideration
+msgid "Overall Materiality Consideration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__overall_materiality_percentage
+msgid "Overall Materiality Percentage"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__partner_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_view_form
+msgid "Percentage"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__performance_materiality
+#: model:ir.model.fields.selection,name:ssi_accountant_general_audit_ws_ra130.selection__accountant_general_audit_ws_ra1301__materiality_type__pm
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_view_form
+msgid "Performance Materiality"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__performance_materiality_percentage
+msgid "Performance Materiality Percentage"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__performance_materiality_consideration
+msgid "Performence Materiality Consideration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__policy_template_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__policy_template_id
+msgid "Policy Template"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__previous_date_end
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__previous_date_end
+msgid "Previous End Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__previous_date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__previous_date_start
+msgid "Previous Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__project_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__project_id
+msgid "Project"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_menu
+msgid "RA.130"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.actions.act_window,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra1301_action
+#: model:ir.ui.menu,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra1301_menu
+msgid "RA.130.1"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__reject_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__reject_ok
+msgid ""
+"Reject policy\n"
+"\n"
+"* If active user can see and execute 'Reject' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__rejected
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__user_id
+msgid "Responsible"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_user_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__restart_approval_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__restart_approval_ok
+msgid ""
+"Restart approval policy\n"
+"\n"
+"* If active user can see and execute 'Restart Approval' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__restart_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__restart_ok
+msgid ""
+"Restart policy\n"
+"\n"
+"* If active user can see and execute 'Restart' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__review_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__review_task_id
+msgid "Review Task"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__review_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__review_task_type_id
+msgid "Review Task Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__reviewer_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__reviewer_id
+msgid "Reviewer"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__specific_materiality
+msgid "Specific Materiality"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__specific_materiality_reason
+msgid "Specific Materiality Reason"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__standard_detail_id
+msgid "Standard Detail"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__date_start
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__date_start
+msgid "Start Date"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__open_ok
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__open_ok
+msgid ""
+"Start policy\n"
+"\n"
+"* If active user can see and execute 'Start' button"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__state
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__state
+msgid "State"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_state
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__title
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__title
+msgid "Title"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__tolerable_misstatement
+#: model_terms:ir.ui.view,arch_db:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_view_form
+msgid "Tolerable Misstatement"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__tolerable_misstatement_consideration
+msgid "Tolerable Misstatement Consideration"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__tolerable_misstatement_percentage
+msgid "Tolerable Misstatement Percentage"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__name
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__name
+msgid ""
+"Transaction/document number\n"
+"\n"
+"* Unique indentifer of transaction\n"
+"* Leave '/' to automatically generate number\n"
+"* Change '/' into any number/identifier to manually assign number.\n"
+"  Manual number assignment can be done in 'Draft' state\n"
+"  Only user with 'Can Manualy Assign Number' policy can manually assign number.\n"
+"* Transaction with number other than '/' can not be deleted."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__parent_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__type_id
+msgid "Type"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_unread
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__other_amount_ok
+msgid "Use Other Amount"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301_materiality_mapping__use_specific_materiality
+msgid "Use Specific Materiality"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra1301_user_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_user_group
+msgid "User"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__user_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__user_id
+msgid ""
+"User that responsible for document\n"
+"\n"
+"* Create user can be different with responsible user\n"
+"* Automatically filled with user that initiate document creation.\n"
+"  Default responsible can be changed."
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__reviewer_id
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__reviewer_id
+msgid ""
+"User that responsible to review document\n"
+"\n"
+"* Unless it configured to approve reviewer does not equal to approver"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__active_approver_user_ids
+msgid "Users that can approve/reject document"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra1301_validator_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_validator_group
+msgid "Validator"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra1301_viewer_group
+#: model:res.groups,name:ssi_accountant_general_audit_ws_ra130.accountant_general_audit_ws_ra130_viewer_group
+msgid "Viewer"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__website_message_ids
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__website_message_ids
+#: model:ir.model.fields,help:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__work_task_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__work_task_id
+msgid "Work Task"
+msgstr ""
+
+#. module: ssi_accountant_general_audit_ws_ra130
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra1301__work_task_type_id
+#: model:ir.model.fields,field_description:ssi_accountant_general_audit_ws_ra130.field_accountant_general_audit_ws_ra130__work_task_type_id
+msgid "Work Task Type"
+msgstr ""
