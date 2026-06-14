@@ -1,0 +1,144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ssi_partner_identification_accountant_certification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:res.partner.id_category,name:ssi_partner_identification_accountant_certification.partner_identification_accountant_ca
+msgid "Certified Accountant (CA)"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__accountant_ca_license
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_users__accountant_ca_license
+msgid "Certified Accountant (CA) License"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:res.partner.id_category,name:ssi_partner_identification_accountant_certification.partner_identification_accountant_cba
+msgid "Certified Bank Auditor (CBA)"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__accountant_cba_license
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_users__accountant_cba_license
+msgid "Certified Bank Auditor (CBA) License"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:res.partner.id_category,name:ssi_partner_identification_accountant_certification.partner_identification_accountant_cfa
+msgid "Certified Financial Analyst (CFA)"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__accountant_cfa_license
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_users__accountant_cfa_license
+msgid "Certified Financial Analyst (CFA) License"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:res.partner.id_category,name:ssi_partner_identification_accountant_certification.partner_identification_accountant_cfe
+msgid "Certified Fraud Examiner (CFE)"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__accountant_cfe_license
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_users__accountant_cfe_license
+msgid "Certified Fraud Examiner (CFE) License"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:res.partner.id_category,name:ssi_partner_identification_accountant_certification.partner_identification_accountant_cgap
+msgid "Certified Government Audition Professional (CGAP)"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__accountant_cgap_license
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_users__accountant_cgap_license
+msgid "Certified Government Audition Professional (CGAP) License"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__accountant_cisa_license
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_users__accountant_cisa_license
+msgid "Certified Information System Auditor (CISA) License"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:res.partner.id_category,name:ssi_partner_identification_accountant_certification.partner_identification_accountant_cisa
+msgid "Certified Information Systems Auditor (CISA)"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:res.partner.id_category,name:ssi_partner_identification_accountant_certification.partner_identification_accountant_cia
+msgid "Certified Internal Auditor (CIA)"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__accountant_cia_license
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_users__accountant_cia_license
+msgid "Certified Internal Auditor (CIA) License"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:res.partner.id_category,name:ssi_partner_identification_accountant_certification.partner_identification_accountant_cma
+msgid "Certified Management Accountant (CMA)"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__accountant_cma_license
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_users__accountant_cma_license
+msgid "Certified Management Accountant (CMA) License"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:res.partner.id_category,name:ssi_partner_identification_accountant_certification.partner_identification_accountant_cpa
+msgid "Certified Public Accountant (CPA)"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__accountant_cpa_license
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_users__accountant_cpa_license
+msgid "Certified Public Accountant (CPA) License"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model,name:ssi_partner_identification_accountant_certification.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:res.partner.id_category,name:ssi_partner_identification_accountant_certification.partner_identification_accountant_ea
+msgid "Enrolled Agent (EA)"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__accountant_ea_license
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_users__accountant_ea_license
+msgid "Enrolled Agent (EA) License"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: ssi_partner_identification_accountant_certification
+#: model:ir.model.fields,field_description:ssi_partner_identification_accountant_certification.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr ""
